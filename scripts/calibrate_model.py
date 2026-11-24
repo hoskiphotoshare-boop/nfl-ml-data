@@ -19,6 +19,7 @@ import sys
 
 import numpy as np
 from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import KFold
 
 
 def logit(p: float, eps: float = 1e-6) -> float:
@@ -64,11 +65,23 @@ def main() -> None:
     rmse_before = float(np.sqrt(np.mean((np.array(before) - np.array(market)) ** 2)))
     rmse_after = float(np.sqrt(np.mean((np.array(after) - np.array(market)) ** 2)))
 
+    # Out-of-fold estimate so we only enable calibration when it generalises.
+    kf = KFold(n_splits=5, shuffle=True, random_state=42)
+    oof = np.zeros(len(games))
+    for train_idx, test_idx in kf.split(X):
+        fold = LinearRegression().fit(X[train_idx], y[train_idx])
+        oof[test_idx] = fold.predict(X[test_idx])
+    oof_prob = np.array([sigmoid(v) for v in oof])
+    rmse_cv = float(np.sqrt(np.mean((oof_prob - np.array(market)) ** 2)))
+    enabled = rmse_cv + 0.001 < rmse_before
+
     payload = {
         "a": round(a, 6),
         "b": round(b, 6),
         "n": len(games),
+        "enabled": bool(enabled),
         "rmse_before": round(rmse_before, 6),
+        "rmse_cv": round(rmse_cv, 6),
         "rmse_after": round(rmse_after, 6),
     }
 
@@ -81,17 +94,21 @@ def main() -> None:
         with open(upcoming_path, encoding="utf-8") as f:
             upcoming = json.load(f)
         for game in upcoming:
-            p = game.get("home_win_prob")
-            if p is not None:
-                game["calibrated_home_win_prob"] = round(
-                    sigmoid(a * logit(p) + b), 3
-                )
+            if enabled:
+                p = game.get("home_win_prob")
+                if p is not None:
+                    game["calibrated_home_win_prob"] = round(
+                        sigmoid(a * logit(p) + b), 3
+                    )
+            else:
+                game.pop("calibrated_home_win_prob", None)
         with open(upcoming_path, "w", encoding="utf-8") as f:
             json.dump(upcoming, f, indent=2)
 
     print(
         f"Calibration: a={a:.3f} b={b:.3f} n={len(games)} "
-        f"RMSE {rmse_before:.4f} → {rmse_after:.4f}"
+        f"RMSE before={rmse_before:.4f} cv={rmse_cv:.4f} after={rmse_after:.4f} "
+        f"enabled={enabled}"
     )
     print("Wrote models/calibration.json")
 
