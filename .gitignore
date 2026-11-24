@@ -1,0 +1,20 @@
+# Private/local only files
+README.md
+
+# Python
+__pycache__/
+*.pyc
+*.pyd
+.Python
+
+# Environment variables
+.env
+
+# Data dumps (raw data should not be committed)
+data/
+
+# IDE / editor stuff
+.vscode/
+.idea/
+*.swp
+*.swo
