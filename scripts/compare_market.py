@@ -39,7 +39,9 @@ def team_name_map() -> dict[str, str]:
 
 
 def main() -> None:
-    predictions = load_json("predictions/games_week.json")
+    predictions = load_json("predictions/upcoming_games.json") or load_json(
+        "predictions/games_week.json"
+    )
     odds = load_json("market/odds_latest.json")
     if predictions is None:
         print("No predictions found; skipping market comparison.")

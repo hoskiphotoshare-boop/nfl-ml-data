@@ -33,6 +33,9 @@ jobs:
       # Train baseline models and overwrite game/player predictions.
       - run: python scripts/train_models.py || true
 
+      # Predict upcoming games using the latest team features.
+      - run: python scripts/predict_upcoming.py || true
+
       # Fetch current NFL odds from The Odds API (secret only available here).
       - name: Fetch NFL odds
         env:

@@ -171,12 +171,20 @@ function setupTabs() {
   });
 }
 
+async function loadGames() {
+  try {
+    return await fetchJSON('upcoming_games.json');
+  } catch {
+    return fetchJSON('games_week.json');
+  }
+}
+
 async function loadAll() {
   setupTabs();
   renderPicks();
   try {
     const [games, players, playoffs] = await Promise.all([
-      fetchJSON('games_week.json'),
+      loadGames(),
       fetchJSON('players_week.json'),
       fetchJSON('playoffs.json'),
     ]);
