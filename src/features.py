@@ -932,14 +932,25 @@ def build_player_features(player_stats: pl.DataFrame) -> pl.DataFrame:
     if exprs:
         out = out.with_columns(exprs)
 
-    # Half-PPR fantasy points.
+    # Half-PPR fantasy points, including passing and rushing production.
     fp = pl.lit(0.0)
-    if "receptions" in out.columns:
-        fp = fp + pl.col("receptions").fill_null(0) * 0.5
-    if "yards" in out.columns:
-        fp = fp + pl.col("yards").fill_null(0) * 0.1
-    if "touchdowns" in out.columns:
-        fp = fp + pl.col("touchdowns").fill_null(0) * 6.0
+
+    def add(col: str, weight: float) -> None:
+        nonlocal fp
+        if col in out.columns:
+            fp = fp + pl.col(col).cast(pl.Float64, strict=False).fill_null(0.0) * weight
+
+    add("passing_yards", 0.04)
+    add("passing_tds", 4.0)
+    add("passing_interceptions", -2.0)
+    add("rushing_yards", 0.1)
+    add("rushing_tds", 6.0)
+    add("receptions", 0.5)
+    add("yards", 0.1)
+    add("touchdowns", 6.0)
+    add("fumbles_lost_total", -2.0)
+    add("special_teams_tds", 6.0)
+
     out = out.with_columns(fp.alias("fantasy_points"))
 
     if "targets" in out.columns and "receptions" in out.columns:
