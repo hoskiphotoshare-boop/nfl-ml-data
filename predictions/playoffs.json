@@ -3,151 +3,151 @@
     "team": "SF",
     "conference": "NFC",
     "playoff_prob": 1.0,
-    "conference_prob": 0.7808,
-    "super_bowl_prob": 0.448
+    "conference_prob": 0.7629,
+    "super_bowl_prob": 0.4395
   },
   {
     "team": "BUF",
     "conference": "AFC",
     "playoff_prob": 1.0,
-    "conference_prob": 0.5163,
-    "super_bowl_prob": 0.2833
+    "conference_prob": 0.5121,
+    "super_bowl_prob": 0.2851
   },
   {
     "team": "JAX",
     "conference": "AFC",
     "playoff_prob": 1.0,
-    "conference_prob": 0.2557,
-    "super_bowl_prob": 0.1163
+    "conference_prob": 0.2633,
+    "super_bowl_prob": 0.1213
   },
   {
     "team": "KC",
     "conference": "AFC",
     "playoff_prob": 1.0,
-    "conference_prob": 0.162,
-    "super_bowl_prob": 0.0727
+    "conference_prob": 0.1548,
+    "super_bowl_prob": 0.0716
   },
   {
     "team": "DET",
     "conference": "NFC",
     "playoff_prob": 1.0,
-    "conference_prob": 0.1511,
-    "super_bowl_prob": 0.0457
+    "conference_prob": 0.165,
+    "super_bowl_prob": 0.0496
   },
   {
     "team": "CIN",
     "conference": "AFC",
     "playoff_prob": 1.0,
-    "conference_prob": 0.0583,
-    "super_bowl_prob": 0.019
+    "conference_prob": 0.0618,
+    "super_bowl_prob": 0.0193
   },
   {
     "team": "CHI",
     "conference": "NFC",
     "playoff_prob": 1.0,
-    "conference_prob": 0.0412,
-    "super_bowl_prob": 0.01
-  },
-  {
-    "team": "MIN",
-    "conference": "NFC",
-    "playoff_prob": 0.9993,
-    "conference_prob": 0.0139,
-    "super_bowl_prob": 0.0025
+    "conference_prob": 0.045,
+    "super_bowl_prob": 0.0095
   },
   {
     "team": "DEN",
     "conference": "AFC",
     "playoff_prob": 1.0,
-    "conference_prob": 0.0072,
-    "super_bowl_prob": 0.0012
-  },
-  {
-    "team": "SEA",
-    "conference": "NFC",
-    "playoff_prob": 0.9833,
-    "conference_prob": 0.0065,
-    "super_bowl_prob": 0.0007
+    "conference_prob": 0.0075,
+    "super_bowl_prob": 0.0014
   },
   {
     "team": "LA",
     "conference": "NFC",
-    "playoff_prob": 0.969,
-    "conference_prob": 0.0055,
-    "super_bowl_prob": 0.0006
+    "playoff_prob": 0.9688,
+    "conference_prob": 0.0061,
+    "super_bowl_prob": 0.0011
+  },
+  {
+    "team": "SEA",
+    "conference": "NFC",
+    "playoff_prob": 0.982,
+    "conference_prob": 0.0072,
+    "super_bowl_prob": 0.0008
+  },
+  {
+    "team": "MIN",
+    "conference": "NFC",
+    "playoff_prob": 0.9986,
+    "conference_prob": 0.0123,
+    "super_bowl_prob": 0.0007
+  },
+  {
+    "team": "NYG",
+    "conference": "NFC",
+    "playoff_prob": 0.5945,
+    "conference_prob": 0.0009,
+    "super_bowl_prob": 0.0001
   },
   {
     "team": "PIT",
     "conference": "AFC",
-    "playoff_prob": 0.9876,
-    "conference_prob": 0.0004,
+    "playoff_prob": 0.9889,
+    "conference_prob": 0.0001,
     "super_bowl_prob": 0.0
   },
   {
     "team": "HOU",
     "conference": "AFC",
-    "playoff_prob": 0.929,
-    "conference_prob": 0.0001,
-    "super_bowl_prob": 0.0
-  },
-  {
-    "team": "NYG",
-    "conference": "NFC",
-    "playoff_prob": 0.5843,
+    "playoff_prob": 0.9318,
     "conference_prob": 0.0004,
     "super_bowl_prob": 0.0
   },
   {
     "team": "TB",
     "conference": "NFC",
-    "playoff_prob": 0.1962,
-    "conference_prob": 0.0,
+    "playoff_prob": 0.1948,
+    "conference_prob": 0.0003,
     "super_bowl_prob": 0.0
   },
   {
     "team": "DAL",
     "conference": "NFC",
-    "playoff_prob": 0.16,
+    "playoff_prob": 0.1552,
     "conference_prob": 0.0002,
     "super_bowl_prob": 0.0
   },
   {
     "team": "GB",
     "conference": "NFC",
-    "playoff_prob": 0.1001,
-    "conference_prob": 0.0003,
+    "playoff_prob": 0.0985,
+    "conference_prob": 0.0001,
     "super_bowl_prob": 0.0
   },
   {
     "team": "CLE",
     "conference": "AFC",
-    "playoff_prob": 0.0774,
+    "playoff_prob": 0.0737,
     "conference_prob": 0.0,
     "super_bowl_prob": 0.0
   },
   {
     "team": "CAR",
     "conference": "NFC",
-    "playoff_prob": 0.0074,
-    "conference_prob": 0.0001,
+    "playoff_prob": 0.0069,
+    "conference_prob": 0.0,
     "super_bowl_prob": 0.0
   },
   {
     "team": "NE",
     "conference": "AFC",
-    "playoff_prob": 0.006,
+    "playoff_prob": 0.0056,
     "conference_prob": 0.0,
     "super_bowl_prob": 0.0
   },
   {
     "team": "WAS",
     "conference": "NFC",
-    "playoff_prob": 0.0004,
+    "playoff_prob": 0.0007,
     "conference_prob": 0.0,
     "super_bowl_prob": 0.0
   },
   {
-    "team": "ATL",
+    "team": "PHI",
     "conference": "NFC",
     "playoff_prob": 0.0,
     "conference_prob": 0.0,
@@ -161,8 +161,8 @@
     "super_bowl_prob": 0.0
   },
   {
-    "team": "BAL",
-    "conference": "AFC",
+    "team": "NO",
+    "conference": "NFC",
     "playoff_prob": 0.0,
     "conference_prob": 0.0,
     "super_bowl_prob": 0.0
@@ -189,7 +189,7 @@
     "super_bowl_prob": 0.0
   },
   {
-    "team": "NYJ",
+    "team": "BAL",
     "conference": "AFC",
     "playoff_prob": 0.0,
     "conference_prob": 0.0,
@@ -203,6 +203,13 @@
     "super_bowl_prob": 0.0
   },
   {
+    "team": "NYJ",
+    "conference": "AFC",
+    "playoff_prob": 0.0,
+    "conference_prob": 0.0,
+    "super_bowl_prob": 0.0
+  },
+  {
     "team": "ARI",
     "conference": "NFC",
     "playoff_prob": 0.0,
@@ -210,14 +217,7 @@
     "super_bowl_prob": 0.0
   },
   {
-    "team": "NO",
-    "conference": "NFC",
-    "playoff_prob": 0.0,
-    "conference_prob": 0.0,
-    "super_bowl_prob": 0.0
-  },
-  {
-    "team": "PHI",
+    "team": "ATL",
     "conference": "NFC",
     "playoff_prob": 0.0,
     "conference_prob": 0.0,
