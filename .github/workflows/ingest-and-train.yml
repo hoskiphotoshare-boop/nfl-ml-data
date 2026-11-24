@@ -1,0 +1,36 @@
+name: Ingest & Predict
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * 1'   # every Monday at 06:00 UTC
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install polars nflreadpy || true
+
+      # Attempt to fetch real data. If the APIs are unreachable,
+      # the script exits 0 so the workflow can still build predictions.
+      - run: python scripts/download_data.py || true
+
+      # Build the small JSON files the frontend consumes.
+      - run: python scripts/build_predictions.py
+
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+      - run: |
+          git add predictions/
+          git commit -m "chore: update predictions JSON" || true
+
+      - run: |
+          git push origin main || true
