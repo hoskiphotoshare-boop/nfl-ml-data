@@ -94,13 +94,16 @@ function renderGames(games) {
 
     const marketGame = window.__marketById?.get(g.game_id);
     if (marketGame && marketGame.market_home_win_prob !== undefined) {
-      const edgePct = (marketGame.edge * 100).toFixed(1);
+      const edgeNum = marketGame.edge * 100;
+      const edgePct = edgeNum.toFixed(1);
+      const edgeClass =
+        Math.abs(edgeNum) >= 5 ? (edgeNum >= 0 ? 'prob' : 'prob low') : 'odds';
       card.appendChild(
         el(
           'p',
-          'odds',
+          edgeClass,
           `Market: ${(marketGame.market_home_win_prob * 100).toFixed(1)}% · Edge ${
-            edgePct >= 0 ? '+' : ''
+            edgeNum >= 0 ? '+' : ''
           }${edgePct}%`
         )
       );
@@ -139,6 +142,9 @@ function renderPlayers(players) {
     const card = el('div', 'card');
     card.appendChild(el('h3', '', `${p.name} (${p.position})`));
     card.appendChild(el('p', '', `${p.team}`));
+    if (p.injury_status) {
+      card.appendChild(el('p', 'injury', `Status: ${p.injury_status}`));
+    }
     card.appendChild(el('p', '', `Targets: ${p.projected_targets}`));
     card.appendChild(el('p', '', `Receptions: ${p.projected_receptions}`));
     card.appendChild(el('p', '', `Yards: ${p.projected_yards}`));

@@ -118,6 +118,12 @@ h2 {
   font-size: 0.95rem;
 }
 
+.injury {
+  color: var(--red);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 .picks {
   margin-top: 2rem;
   background: var(--panel);
