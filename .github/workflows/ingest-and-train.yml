@@ -59,6 +59,10 @@ jobs:
       - name: Compare model to market
         run: python scripts/compare_market.py || true
 
+      # Calibrate model probabilities to market-implied probabilities.
+      - name: Calibrate model to market
+        run: python scripts/calibrate_model.py || true
+
       # Run the Monte Carlo playoff / Super Bowl simulator.
       - run: python scripts/simulate_playoffs.py || true
 

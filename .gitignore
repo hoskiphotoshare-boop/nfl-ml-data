@@ -13,7 +13,7 @@ __pycache__/
 .env
 
 # Data dumps (raw data should not be committed)
-data/
+/data/
 
 # Local virtualenv
 .venv/

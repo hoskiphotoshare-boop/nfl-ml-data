@@ -18,6 +18,7 @@ jobs:
           python-version: "3.11"
 
       - run: pip install --upgrade pip
-      - run: pip install polars nflreadpy typer scikit-learn joblib
+      - run: pip install polars nflreadpy typer scikit-learn joblib pytest
 
       - run: python -c "import src; print('import ok')"
+      - run: pytest -q

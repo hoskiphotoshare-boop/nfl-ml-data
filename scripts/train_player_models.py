@@ -175,6 +175,65 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
     return records
 
 
+def apply_injury_adjustments(records: list[dict]) -> list[dict]:
+    path = "data/injuries_latest.parquet"
+    if not os.path.exists(path):
+        return records
+    try:
+        inj = pl.read_parquet(path)
+        required = {"season", "week"}
+        if not required.issubset(set(inj.columns)):
+            return records
+        latest_season = inj["season"].max()
+        latest_week = inj.filter(pl.col("season") == latest_season)["week"].max()
+        inj = inj.filter(
+            (pl.col("season") == latest_season) & (pl.col("week") == latest_week)
+        )
+        status_col = next((c for c in inj.columns if "status" in c.lower()), None)
+        id_col = next(
+            (c for c in ["gsis_id", "player_id", "full_name", "player_name"] if c in inj.columns),
+            None,
+        )
+        if status_col is None or id_col is None:
+            return records
+
+        status_map = {}
+        for row in inj.iter_rows(named=True):
+            pid = row.get(id_col)
+            if pid is None:
+                continue
+            status_map[pid] = str(row.get(status_col) or "").lower()
+
+        multipliers = {
+            "out": 0.0,
+            "doubtful": 0.25,
+            "questionable": 0.75,
+            "probable": 1.0,
+        }
+        stat_keys = [
+            "projected_targets",
+            "projected_receptions",
+            "projected_yards",
+            "projected_tds",
+            "projected_fantasy_points",
+            "projected_pass_yards",
+            "projected_pass_tds",
+        ]
+        for record in records:
+            status = status_map.get(record.get("player_id"))
+            if not status:
+                continue
+            mult = multipliers.get(status, 1.0)
+            record["injury_status"] = status
+            for key in stat_keys:
+                if record.get(key) is not None:
+                    record[key] = round(record[key] * mult, 2)
+        records.sort(key=lambda r: r.get("projected_fantasy_points", 0), reverse=True)
+    except Exception as exc:  # pragma: no cover
+        print(f"Injury adjustment skipped: {exc}")
+    return records
+
+
 def main() -> None:
     df = load_player_features()
     if df.height == 0:
@@ -198,6 +257,7 @@ def main() -> None:
         json.dump(metrics, f, indent=2)
 
     records = predict_latest(rolling, models, id_col)
+    records = apply_injury_adjustments(records)
     records = [r for r in records if r["projected_fantasy_points"] > 0][:250]
 
     os.makedirs("predictions", exist_ok=True)
