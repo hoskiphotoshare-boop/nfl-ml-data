@@ -253,3 +253,43 @@ def fetch_rosters(
     """
     df = get_rosters(season=season)
     return pl.from_pandas(df)
+
+
+# Optional tables that have separate licensing (CC‑BY‑SA 4.0 or CC‑BY 4.0).
+# Import them behind a try/except so the package remains functional if the
+# nflreadpy sub‑modules are not available (e.g. in restricted CI environments).
+try:
+    from nflreadpy import (
+        get_ftn_charting,
+        get_participation,  # noqa: F401  – imported for side‑effect registration if needed
+    )
+    FTN_CHARTING_AVAILABLE = True
+    PARTICIPATION_AVAILABLE = True
+except Exception:  # pragma: no cover – nflreadpy may not expose these functions
+    FTN_CHARTING_AVAILABLE = False
+    PARTICIPATION_AVAILABLE = False
+
+
+def fetch_ftn_charting(
+    season: int | None = None,
+    week: int | None = None,
+) -> pl.DataFrame:
+    """Fetch FTN charting data (cover‑grade, etc.).
+
+    This data is under CC‑BY‑SA 4.0; attribution is required when redistributing.
+    """
+    if not FTN_CHARTING_AVAILABLE:
+        raise RuntimeError("nflreadpy ftn_charting not available")
+    df = get_ftn_charting(season=season, week=week)
+    return pl.from_pandas(df)
+
+
+def fetch_participation(
+    season: int | None = None,
+    week: int | None = None,
+) -> pl.DataFrame:
+    """Fetch participation records (CC‑BY 4.0)."""
+    if not PARTICIPATION_AVAILABLE:
+        raise RuntimeError("nflreadpy participation not available")
+    df = get_participation(season=season, week=week)
+    return pl.from_pandas(df)

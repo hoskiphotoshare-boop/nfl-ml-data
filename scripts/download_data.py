@@ -12,10 +12,11 @@ import os
 import sys
 
 # Ensure the repo root is on the path so we can import src.
-sys.path.insert(0, os.path.dirname(__file__))  # dirname of scripts -> repo root
+sys.path.insert(0, os.path.dirname(__file__) + "/../")
 
 from src.ingest import fetch_schedules, fetch_pbp, fetch_player_stats, fetch_team_stats
 import polars as pl
+
 
 def main() -> None:
     # Create the data directory (git‑ignored, safe to mkdir –p)
