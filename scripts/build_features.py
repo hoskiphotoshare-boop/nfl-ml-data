@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.dirname(__file__) + "/../")
 import polars as pl
 
 from src.features import (
+    add_roster_continuity_features,
     add_team_rolling_features,
     build_match_features,
     build_player_features,
@@ -160,6 +161,11 @@ def main() -> None:
                     ],
                     prefix="pfr_def",
                 )
+
+            rosters_weekly_raw = load_table("rosters_weekly_latest")
+            match_features = add_roster_continuity_features(
+                match_features, rosters_weekly_raw
+            )
 
             match_features.write_parquet("features/match_features.parquet")
             print(f"Wrote features/match_features.parquet ({match_features.height} rows)")

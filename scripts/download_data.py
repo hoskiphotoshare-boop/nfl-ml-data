@@ -100,8 +100,8 @@ def main() -> None:
     trades.write_parquet("data/trades_latest.parquet")
     print(f"Wrote trades: {trades.shape[0]} rows x {trades.shape[1]} cols")
 
-    print(f"Fetching rosters_weekly ({current_season})…")
-    rosters = fetch_rosters_weekly(season=current_season)
+    print(f"Fetching rosters_weekly ({seasons_for_model})…")
+    rosters = fetch_rosters_weekly(season=seasons_for_model)
     rosters.write_parquet("data/rosters_weekly_latest.parquet")
     print(f"Wrote rosters_weekly: {rosters.shape[0]} rows x {rosters.shape[1]} cols")
 

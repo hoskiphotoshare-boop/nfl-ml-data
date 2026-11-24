@@ -667,6 +667,86 @@ def add_team_rolling_features(
     )
 
 
+def add_roster_continuity_features(
+    match_features: pl.DataFrame,
+    rosters_weekly: pl.DataFrame | None,
+) -> pl.DataFrame:
+    """Add week-over-week roster continuity from weekly rosters.
+
+    ``roster_continuity`` = fraction of a team's current players who were also on
+    the same team the previous week.  Week 1 defaults to 1.0.
+    """
+    if rosters_weekly is None or rosters_weekly.height == 0:
+        return match_features
+
+    id_col = next(
+        (c for c in ["gsis_id", "player_id", "full_name"] if c in rosters_weekly.columns),
+        None,
+    )
+    required = {"season", "week", "team"}
+    if id_col is None or not required.issubset(set(rosters_weekly.columns)):
+        print("Could not add roster continuity: missing columns.")
+        return match_features
+
+    r = (
+        rosters_weekly.select(
+            ["season", "week", pl.col("team").alias("team"), pl.col(id_col).alias("player_id")]
+        )
+        .unique()
+    )
+
+    current = r.group_by(["season", "week", "team"]).agg(
+        pl.len().alias("roster_size")
+    )
+
+    prev = (
+        r.with_columns((pl.col("week") - 1).alias("week"))
+        .rename({"player_id": "prev_player_id"})
+    )
+
+    joined = r.join(prev, on=["season", "week", "team"], how="left")
+    continuity = (
+        joined.group_by(["season", "week", "team"])
+        .agg((pl.col("prev_player_id").is_not_null()).sum().alias("returning_players"))
+        .join(current, on=["season", "week", "team"], how="left")
+        .with_columns(
+            pl.when(pl.col("week") <= 1)
+            .then(1.0)
+            .otherwise(pl.col("returning_players") / pl.col("roster_size"))
+            .clip(0.0, 1.0)
+            .alias("roster_continuity")
+        )
+    )
+
+    home = continuity.select(
+        "season",
+        "week",
+        pl.col("team").alias("home_team"),
+        pl.col("roster_continuity").alias("home_roster_continuity"),
+    )
+    away = continuity.select(
+        "season",
+        "week",
+        pl.col("team").alias("away_team"),
+        pl.col("roster_continuity").alias("away_roster_continuity"),
+    )
+
+    out = match_features.join(home, on=["season", "week", "home_team"], how="left").join(
+        away, on=["season", "week", "away_team"], how="left"
+    )
+    out = out.with_columns(
+        [
+            pl.col("home_roster_continuity").fill_null(1.0),
+            pl.col("away_roster_continuity").fill_null(1.0),
+        ]
+    ).with_columns(
+        (
+            pl.col("home_roster_continuity") - pl.col("away_roster_continuity")
+        ).alias("roster_continuity_diff")
+    )
+    return out
+
+
 def build_player_features(player_stats: pl.DataFrame) -> pl.DataFrame:
     """Build player-level features from a player-stats table.
 

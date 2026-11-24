@@ -59,3 +59,13 @@ Walk-forward backtest window: **2022–2026** (train on all prior seasons, test 
 - **Before (NGS model):** accuracy ~0.643, log loss ~0.633, Brier ~0.221, AUC ~0.690
 - **After (with PFR):** accuracy 0.638, log loss 0.637, Brier 0.223, AUC 0.684
 - **Decision:** ❌ **Reject** — every metric got worse; PFR adds noise on top of NGS.
+
+## 2026-11-24 — Roster continuity
+
+- **Features:** `home_roster_continuity`, `away_roster_continuity`, `roster_continuity_diff`
+  (week-over-week fraction of players retained).
+- **Before:** accuracy 0.6418, log loss 0.6300, Brier 0.2199, AUC 0.6924
+- **After:** accuracy 0.6379, log loss 0.6310, Brier 0.2200, AUC 0.6936
+- **Decision:** ❌ **Reject for now** — essentially neutral; AUC improves by +0.0012
+  but accuracy and log loss get slightly worse. Revisit with a longer continuity window
+  or trade-weighted roster changes.

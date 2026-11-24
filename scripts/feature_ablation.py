@@ -176,6 +176,12 @@ PFR = (
     + [f"away_pfr_def_{c}" for c in _PFR_DEF]
 )
 
+ROSTER = [
+    "home_roster_continuity",
+    "away_roster_continuity",
+    "roster_continuity_diff",
+]
+
 
 def uniq(seq: list[str]) -> list[str]:
     seen = set()
@@ -286,6 +292,17 @@ def main() -> None:
             + (team_stats_cols or [])
             + (nextgen_cols or [])
             + pfr_cols
+        )
+
+    roster_cols = [c for c in ROSTER if c in raw.columns and c not in already_used]
+    if roster_cols:
+        experiments["base+epa+rest+team_stats+nextgen+roster"] = uniq(
+            BASE
+            + EPA
+            + REST
+            + (team_stats_cols or [])
+            + (nextgen_cols or [])
+            + roster_cols
         )
 
     results = {}
