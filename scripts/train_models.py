@@ -245,20 +245,50 @@ def write_player_predictions() -> None:
 
     id_col = "gsis_id" if "gsis_id" in df.columns else ("player_id" if "player_id" in df.columns else "player_name")
 
-    # Baseline: per-player average fantasy points.
-    agg = (
-        df.group_by(id_col)
-        .agg(
-            pl.col("fantasy_points").mean().alias("projected_fantasy_points"),
-            pl.col("targets").mean().alias("projected_targets") if "targets" in df.columns else pl.lit(0.0).alias("projected_targets"),
-            pl.col("receptions").mean().alias("projected_receptions") if "receptions" in df.columns else pl.lit(0.0).alias("projected_receptions"),
-            pl.col("yards").mean().alias("projected_yards") if "yards" in df.columns else pl.lit(0.0).alias("projected_yards"),
-            pl.col("touchdowns").mean().alias("projected_tds") if "touchdowns" in df.columns else pl.lit(0.0).alias("projected_tds"),
-            pl.col("player_name").first().alias("player_name") if "player_name" in df.columns else pl.lit("").alias("player_name"),
-            pl.col("position").first().alias("position") if "position" in df.columns else pl.lit("").alias("position"),
-            pl.col("team").first().alias("team") if "team" in df.columns else pl.lit("").alias("team"),
+    # Weighted recent form: the current season counts double vs prior seasons.
+    max_season = int(df["season"].max()) if "season" in df.columns else None
+    if max_season is not None:
+        df = df.with_columns(
+            pl.when(pl.col("season") == max_season)
+            .then(2.0)
+            .otherwise(1.0)
+            .alias("_weight")
         )
+    else:
+        df = df.with_columns(pl.lit(1.0).alias("_weight"))
+
+    def wmean(col: str):
+        return (
+            (pl.col(col).cast(pl.Float64, strict=False).fill_null(0.0) * pl.col("_weight")).sum()
+            / pl.col("_weight").sum()
+        )
+
+    aliases = {
+        "targets": "projected_targets",
+        "receptions": "projected_receptions",
+        "yards": "projected_yards",
+        "touchdowns": "projected_tds",
+    }
+
+    agg_exprs = [wmean("fantasy_points").alias("projected_fantasy_points")]
+    for col, alias in aliases.items():
+        agg_exprs.append(
+            wmean(col).alias(alias) if col in df.columns else pl.lit(0.0).alias(alias)
+        )
+    agg_exprs.extend(
+        [
+            pl.col("player_name").first().alias("player_name")
+            if "player_name" in df.columns
+            else pl.lit("").alias("player_name"),
+            pl.col("position").first().alias("position")
+            if "position" in df.columns
+            else pl.lit("").alias("position"),
+            pl.col("team").first().alias("team")
+            if "team" in df.columns
+            else pl.lit("").alias("team"),
+        ]
     )
+    agg = df.group_by(id_col).agg(agg_exprs)
     records = []
     for row in agg.iter_rows(named=True):
         pid = row.get(id_col)
