@@ -176,14 +176,18 @@ def engineer_player_features(
 def build_match_features(
     schedules: pl.DataFrame,
     pbp: pl.DataFrame | None = None,
+    injuries: pl.DataFrame | None = None,
 ) -> pl.DataFrame:
-    """Build pre-game match features from schedules and (optionally) PBP.
+    """Build pre-game match features from schedules, PBP, and injuries.
 
     Expects schedules columns: ``game_id``, ``season``, ``week``, ``home_team``,
     ``away_team``, ``home_score``, ``away_score``.
 
     If ``pbp`` is provided, adds team-level EPA/success features for the home
     and away sides (offensive/defensive EPA, success rate, pass/rush EPA).
+
+    If ``injuries`` is provided, adds per-team weekly injury counts (Out,
+    Doubtful, Questionable, total) for both sides.
 
     The returned frame adds:
     - ``home_win`` (1 if the home team scored more, else 0; ties dropped)
@@ -309,6 +313,63 @@ def build_match_features(
             )
         except Exception as exc:  # pragma: no cover – defensive
             print(f"Could not add rest features: {exc}")
+
+    # Optional injury-report counts (per team, per week).
+    if injuries is not None and injuries.height > 0:
+        try:
+            inj = injuries
+            required_inj = {"season", "week", "team"}
+            if not required_inj.issubset(set(inj.columns)):
+                raise ValueError(f"injuries missing {required_inj - set(inj.columns)}")
+            status_col = next((c for c in inj.columns if "status" in c.lower()), None)
+            if status_col is None:
+                raise ValueError("injuries missing a status column")
+
+            inj = inj.with_columns(
+                pl.col(status_col).cast(pl.Utf8).str.to_lowercase().alias("_status")
+            )
+            agg = (
+                inj.group_by(["season", "week", "team"])
+                .agg(
+                    (pl.col("_status") == "out").sum().alias("inj_out"),
+                    (pl.col("_status") == "doubtful").sum().alias("inj_doubtful"),
+                    (pl.col("_status") == "questionable").sum().alias("inj_questionable"),
+                    pl.len().alias("inj_total"),
+                )
+            )
+
+            home_inj = agg.select(
+                "season", "week",
+                pl.col("team").alias("home_team"),
+                pl.col("inj_out").alias("home_inj_out"),
+                pl.col("inj_doubtful").alias("home_inj_doubtful"),
+                pl.col("inj_questionable").alias("home_inj_questionable"),
+                pl.col("inj_total").alias("home_inj_total"),
+            )
+            away_inj = agg.select(
+                "season", "week",
+                pl.col("team").alias("away_team"),
+                pl.col("inj_out").alias("away_inj_out"),
+                pl.col("inj_doubtful").alias("away_inj_doubtful"),
+                pl.col("inj_questionable").alias("away_inj_questionable"),
+                pl.col("inj_total").alias("away_inj_total"),
+            )
+
+            out = out.join(home_inj, on=["season", "week", "home_team"], how="left").join(
+                away_inj, on=["season", "week", "away_team"], how="left"
+            )
+
+            inj_cols = [
+                "home_inj_out", "home_inj_doubtful", "home_inj_questionable", "home_inj_total",
+                "away_inj_out", "away_inj_doubtful", "away_inj_questionable", "away_inj_total",
+            ]
+            out = out.with_columns([pl.col(c).fill_null(0) for c in inj_cols])
+            out = out.with_columns(
+                (pl.col("home_inj_out") - pl.col("away_inj_out")).alias("inj_out_diff"),
+                (pl.col("home_inj_total") - pl.col("away_inj_total")).alias("inj_total_diff"),
+            )
+        except Exception as exc:  # pragma: no cover – defensive
+            print(f"Could not add injury features: {exc}")
 
     # Optional PBP-derived team features (pre-game rolling EPA/success).
     if pbp is not None and pbp.height > 0:

@@ -17,7 +17,13 @@ sys.path.insert(0, os.path.dirname(__file__) + "/../")
 
 from nflreadpy import get_current_season, get_current_week
 
-from src.ingest import fetch_schedules, fetch_pbp, fetch_player_stats, fetch_team_stats
+from src.ingest import (
+    fetch_schedules,
+    fetch_pbp,
+    fetch_player_stats,
+    fetch_team_stats,
+    fetch_injuries,
+)
 import polars as pl
 
 
@@ -54,6 +60,12 @@ def main() -> None:
     teams = fetch_team_stats(season=seasons_for_model)
     teams.write_parquet("data/team_stats_latest.parquet")
     print(f"Wrote team_stats: {teams.shape[0]} rows x {teams.shape[1]} cols")
+
+    # 5) Injury reports for the recent seasons.
+    print(f"Fetching injuries ({seasons_for_model})…")
+    injuries = fetch_injuries(season=seasons_for_model)
+    injuries.write_parquet("data/injuries_latest.parquet")
+    print(f"Wrote injuries: {injuries.shape[0]} rows x {injuries.shape[1]} cols")
 
     print("Latest data downloaded and written to data/.")
 

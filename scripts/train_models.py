@@ -63,6 +63,17 @@ def prepare_match_matrix(df: pl.DataFrame):
         "rest_diff",
         "home_short_week",
         "away_short_week",
+        # Injury context
+        "home_inj_out",
+        "home_inj_doubtful",
+        "home_inj_questionable",
+        "home_inj_total",
+        "away_inj_out",
+        "away_inj_doubtful",
+        "away_inj_questionable",
+        "away_inj_total",
+        "inj_out_diff",
+        "inj_total_diff",
         # Context
         "week",
         "season",

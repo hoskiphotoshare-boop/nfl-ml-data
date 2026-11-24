@@ -40,7 +40,8 @@ def main() -> None:
     else:
         try:
             pbp = load_table("pbp_latest")
-            match_features = build_match_features(schedules, pbp=pbp)
+            injuries = load_table("injuries_latest")
+            match_features = build_match_features(schedules, pbp=pbp, injuries=injuries)
             match_features.write_parquet("features/match_features.parquet")
             print(f"Wrote features/match_features.parquet ({match_features.height} rows)")
         except Exception as exc:  # pragma: no cover – defensive
