@@ -182,7 +182,9 @@ def main() -> None:
         except Exception as exc:  # pragma: no cover – defensive
             print(f"Could not build match features: {exc}")
 
-    player_stats = load_table("player_stats_latest") or load_table("player_stats_2024_week1")
+    player_stats = load_table("player_stats_latest")
+    if player_stats is None:
+        player_stats = load_table("player_stats_2024_week1")
     if player_stats is None:
         print("No player_stats table found; skipping player features.")
     else:
