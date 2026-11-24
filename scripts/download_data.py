@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Download NFL data using nflreadpy and write Parquet files.
+"""Download the latest NFL data using nflreadpy and write Parquet files.
 
-This script is intended to be run in GitHub Actions (or locally) to fetch
-selected nflverse tables and persist them as Parquet files under ./data/.
-The ./data/ directory is git‑ignored so raw data never pollutes history.
+The script discovers the current NFL season (2026 for the 2026/27 season) and
+fetches the most recent schedules, play-by-play, player stats, and team stats.
+It writes ``*_latest.parquet`` files under ``data/`` so downstream feature
+engineering always uses the freshest data.
 """
 
 from __future__ import annotations
@@ -12,47 +13,53 @@ from __future__ import annotations
 import os
 import sys
 
-# Ensure the repo root is on the path so we can import src.
 sys.path.insert(0, os.path.dirname(__file__) + "/../")
+
+from nflreadpy import get_current_season, get_current_week
 
 from src.ingest import fetch_schedules, fetch_pbp, fetch_player_stats, fetch_team_stats
 import polars as pl
 
 
 def main() -> None:
-    # Create the data directory (git‑ignored, safe to mkdir –p)
     os.makedirs("data", exist_ok=True)
 
-    # Schedules (all seasons)
-    print("Fetching schedules…")
-    df = fetch_schedules()
-    df.write_parquet("data/schedules.parquet")
-    print(f"Wrote schedules: {df.shape[0]} rows x {df.shape[1]} cols")
+    current_season = get_current_season()
+    current_week = get_current_week()
+    print(f"Current NFL season: {current_season}, week: {current_week}")
 
-    # PBP for 2024 week 1
-    print("Fetching pbp (2024 wk1)…")
-    df2 = fetch_pbp(season=2024, week=1)
-    df2.write_parquet("data/pbp_2024_week1.parquet")
-    print(f"Wrote pbp: {df2.shape[0]} rows x {df2.shape[1]} cols")
+    # 1) Schedules: all seasons (1999-present) so the match model has history.
+    print("Fetching schedules (all seasons)…")
+    schedules = fetch_schedules()
+    schedules.write_parquet("data/schedules.parquet")
+    print(f"Wrote schedules: {schedules.shape[0]} rows x {schedules.shape[1]} cols")
 
-    # Player stats for 2024 week 1
-    print("Fetching player_stats (2024 wk1)…")
-    df3 = fetch_player_stats(season=2024, week=1)
-    df3.write_parquet("data/player_stats_2024_week1.parquet")
-    print(f"Wrote player_stats: {df3.shape[0]} rows x {df3.shape[1]} cols")
+    # 2) Play-by-play for the current season (all available weeks).
+    print(f"Fetching pbp ({current_season})…")
+    pbp = fetch_pbp(season=current_season)
+    pbp.write_parquet("data/pbp_latest.parquet")
+    print(f"Wrote pbp: {pbp.shape[0]} rows x {pbp.shape[1]} cols")
 
-    # Team stats for 2024 week 1
-    print("Fetching team_stats (2024 wk1)…")
-    df4 = fetch_team_stats(season=2024, week=1)
-    df4.write_parquet("data/team_stats_2024_week1.parquet")
-    print(f"Wrote team_stats: {df4.shape[0]} rows x {df4.shape[1]} cols")
+    # 3) Player stats for the current and two prior seasons, giving the player
+    #    baseline more than a single week of history.
+    seasons_for_players = list(range(max(current_season - 2, 1999), current_season + 1))
+    print(f"Fetching player_stats ({seasons_for_players})…")
+    players = fetch_player_stats(season=seasons_for_players)
+    players.write_parquet("data/player_stats_latest.parquet")
+    print(f"Wrote player_stats: {players.shape[0]} rows x {players.shape[1]} cols")
 
-    print("All data downloaded and written to data/.")
+    # 4) Team stats for the current season.
+    print(f"Fetching team_stats ({current_season})…")
+    teams = fetch_team_stats(season=current_season)
+    teams.write_parquet("data/team_stats_latest.parquet")
+    print(f"Wrote team_stats: {teams.shape[0]} rows x {teams.shape[1]} cols")
+
+    print("Latest data downloaded and written to data/.")
 
 
 if __name__ == "__main__":
     try:
         main()
-    except Exception as e:
-        print(f"Error during data download: {e}")
+    except Exception as exc:  # pragma: no cover
+        print(f"Error during data download: {exc}")
     sys.exit(0)
