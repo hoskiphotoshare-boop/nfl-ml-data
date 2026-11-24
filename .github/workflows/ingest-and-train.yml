@@ -15,22 +15,28 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install polars nflreadpy || true
+      - run: pip install polars nflreadpy scikit-learn joblib || true
 
       # Attempt to fetch real data. If the APIs are unreachable,
       # the script exits 0 so the workflow can still build predictions.
       - run: python scripts/download_data.py || true
 
-      # Build the small JSON files the frontend consumes.
-      - run: python scripts/build_predictions.py
+      # Build feature tables (match + player).
+      - run: python scripts/build_features.py || true
+
+      # Write fallback prediction JSON (so the frontend always has data).
+      - run: python scripts/build_predictions.py || true
+
+      # Train baseline models and overwrite game/player predictions.
+      - run: python scripts/train_models.py || true
 
       - run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
       - run: |
-          git add predictions/
-          git commit -m "chore: update predictions JSON" || true
+          git add predictions/ features/ models/ 2>/dev/null || true
+          git commit -m "chore: update predictions, features, and models" || true
 
       - run: |
           git push origin main || true

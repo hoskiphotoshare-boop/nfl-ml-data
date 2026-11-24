@@ -1,19 +1,5 @@
 """Data ingestion module using nflreadpy.
 
-
-.. NOTE: This module is intended to be used programmatically or as a CLI
-    entry point via ``nfl-ml-ingest``.
-"""
-
-
-def main() -> None:
-    """Entry point for ``nfl-ml-ingest`` CLI script."""
-    print("nfl-ml-data ingestion module — use the API or run ``nfl-ml-ingest``.")
-
-
-if __name__ == "__main__":
-    main()
-
 Fetches NFL open datasets dynamically at runtime. No raw data is committed
 to Git history; all data is fetched fresh on each CI run or local execution.
 """
@@ -293,3 +279,11 @@ def fetch_participation(
         raise RuntimeError("nflreadpy participation not available")
     df = get_participation(season=season, week=week)
     return pl.from_pandas(df)
+
+def main() -> None:
+    """Entry point for the ingestion module."""
+    print("nfl-ml-data ingestion module — use the API.")
+
+
+if __name__ == "__main__":
+    main()

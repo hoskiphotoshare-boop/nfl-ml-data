@@ -1,19 +1,5 @@
 """Feature-engineering module using Polars.
 
-
-.. NOTE: This module is intended to be used programmatically or as a CLI
-    entry point via ``nfl-ml-features``.
-"""
-
-
-def main() -> None:
-    """Entry point for ``nfl-ml-features`` CLI script."""
-    print("nfl-ml-data feature engineering module — use the API.")
-
-
-if __name__ == "__main__":
-    main()
-
 Transforms raw NFL tables (fetched via ``nflreadpy``) into feature-ready
 DataFrames for predictive modeling of match outcomes, player game stats, and
 playoff outcomes.
@@ -22,6 +8,11 @@ playoff outcomes.
 from __future__ import annotations
 
 import polars as pl
+
+
+def main() -> None:
+    """Entry point for ``nfl-ml-features`` CLI script."""
+    print("nfl-ml-data feature engineering module — use the API.")
 
 
 def add_epa_wpa(df: pl.DataFrame) -> pl.DataFrame:
@@ -180,3 +171,145 @@ def engineer_player_features(
         )
 
     return out
+
+
+def build_match_features(schedules: pl.DataFrame) -> pl.DataFrame:
+    """Build pre-game match features from a schedules table.
+
+    Expects columns: ``game_id``, ``season``, ``week``, ``home_team``,
+    ``away_team``, ``home_score``, ``away_score``.
+
+    The returned frame adds:
+    - ``home_win`` (1 if the home team scored more, else 0; ties dropped)
+    - ``point_diff`` / ``total_points``
+    - rolling pre-game team averages: ``home_avg_points``,
+      ``home_avg_allowed``, ``away_avg_points``, ``away_avg_allowed``
+    """
+    required = {"game_id", "season", "week", "home_team", "away_team", "home_score", "away_score"}
+    if not required.issubset(set(schedules.columns)):
+        raise ValueError(f"schedules missing columns: {required - set(schedules.columns)}")
+
+    # Drop unplayed games (null scores) and ties.
+    sched = schedules.filter(
+        pl.col("home_score").is_not_null()
+        & pl.col("away_score").is_not_null()
+        & (pl.col("home_score") != pl.col("away_score"))
+    )
+
+    if sched.height == 0:
+        return sched.with_columns(
+            pl.lit(0).alias("home_win"),
+            pl.lit(0).alias("point_diff"),
+            pl.lit(0).alias("total_points"),
+        )
+
+    sched = sched.with_columns(
+        (pl.col("home_score") > pl.col("away_score")).cast(pl.Int8).alias("home_win"),
+        (pl.col("home_score") - pl.col("away_score")).alias("point_diff"),
+        (pl.col("home_score") + pl.col("away_score")).alias("total_points"),
+    ).sort(["season", "week", "game_id"])
+
+    # Long format: one row per team per game.
+    home = sched.select(
+        "game_id", "season", "week",
+        pl.col("home_team").alias("team"),
+        pl.col("away_team").alias("opponent"),
+        pl.col("home_score").alias("points"),
+        pl.col("away_score").alias("points_allowed"),
+    )
+    away = sched.select(
+        "game_id", "season", "week",
+        pl.col("away_team").alias("team"),
+        pl.col("home_team").alias("opponent"),
+        pl.col("away_score").alias("points"),
+        pl.col("home_score").alias("points_allowed"),
+    )
+    long = pl.concat([home, away]).sort(["season", "week", "game_id", "team"])
+
+    # Cumulative pre-game averages per team.
+    long = long.with_columns(
+        pl.col("points").cum_sum().over("team").alias("cum_points"),
+        pl.col("points_allowed").cum_sum().over("team").alias("cum_allowed"),
+        pl.int_range(1, pl.len() + 1).over("team").alias("game_num"),
+    ).with_columns(
+        ((pl.col("cum_points") - pl.col("points")) / (pl.col("game_num") - 1).clip(1)).alias("avg_points"),
+        ((pl.col("cum_allowed") - pl.col("points_allowed")) / (pl.col("game_num") - 1).clip(1)).alias("avg_allowed"),
+    )
+
+    home_feats = long.filter(pl.col("team") == pl.col("team")).join(
+        sched.select("game_id", "home_team"), on="game_id"
+    ).filter(pl.col("team") == pl.col("home_team")).select(
+        "game_id",
+        pl.col("avg_points").alias("home_avg_points"),
+        pl.col("avg_allowed").alias("home_avg_allowed"),
+    ).unique(subset=["game_id"])
+
+    away_feats = long.join(
+        sched.select("game_id", "away_team"), on="game_id"
+    ).filter(pl.col("team") == pl.col("away_team")).select(
+        "game_id",
+        pl.col("avg_points").alias("away_avg_points"),
+        pl.col("avg_allowed").alias("away_avg_allowed"),
+    ).unique(subset=["game_id"])
+
+    out = sched.join(home_feats, on="game_id", how="left").join(away_feats, on="game_id", how="left")
+    return out
+
+
+def build_player_features(player_stats: pl.DataFrame) -> pl.DataFrame:
+    """Build player-level features from a player-stats table.
+
+    Expects columns such as ``gsis_id``, ``game_id``, ``team``, ``positions``,
+    ``receptions``, ``targets``, ``yards``, ``touchdowns``.
+
+    Adds ``fantasy_points`` using half-PPR scoring and ``target_conversion_rate``.
+    """
+    if player_stats.height == 0:
+        return player_stats
+
+    # Normalise common column names that nflreadpy uses.
+    col_map = {
+        "receiving_receptions": "receptions",
+        "receiving_targets": "targets",
+        "receiving_yards": "yards",
+        "receiving_tds": "touchdowns",
+    }
+    for old, new in col_map.items():
+        if old in player_stats.columns and new not in player_stats.columns:
+            player_stats = player_stats.rename({old: new})
+
+    cols = player_stats.columns
+    exprs = []
+    if "receptions" in cols:
+        exprs.append(pl.col("receptions").fill_null(0).alias("receptions"))
+    if "targets" in cols:
+        exprs.append(pl.col("targets").fill_null(0).alias("targets"))
+    if "yards" in cols:
+        exprs.append(pl.col("yards").fill_null(0).alias("yards"))
+    if "touchdowns" in cols:
+        exprs.append(pl.col("touchdowns").fill_null(0).alias("touchdowns"))
+
+    out = player_stats
+    if exprs:
+        out = out.with_columns(exprs)
+
+    # Half-PPR fantasy points.
+    fp = pl.lit(0.0)
+    if "receptions" in out.columns:
+        fp = fp + pl.col("receptions").fill_null(0) * 0.5
+    if "yards" in out.columns:
+        fp = fp + pl.col("yards").fill_null(0) * 0.1
+    if "touchdowns" in out.columns:
+        fp = fp + pl.col("touchdowns").fill_null(0) * 6.0
+    out = out.with_columns(fp.alias("fantasy_points"))
+
+    if "targets" in out.columns and "receptions" in out.columns:
+        out = out.with_columns(
+            (pl.col("receptions") / pl.col("targets").cast(pl.Float64, strict=False))
+            .fill_null(0)
+            .alias("target_conversion_rate")
+        )
+    return out
+
+if __name__ == "__main__":
+    main()

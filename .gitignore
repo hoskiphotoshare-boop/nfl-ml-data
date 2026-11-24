@@ -19,3 +19,7 @@ __pycache__/
 .idea/
 *.swp
 *.swo
+
+# Local deployment artifacts
+.wrangler/
+frontend.zip
