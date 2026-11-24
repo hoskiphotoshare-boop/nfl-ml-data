@@ -30,6 +30,11 @@ function el(tag, className, text) {
   return node;
 }
 
+function decimalOdds(prob) {
+  if (prob === undefined || prob === null || prob <= 0 || prob >= 1) return null;
+  return (1 / prob).toFixed(2);
+}
+
 function savePicks() {
   localStorage.setItem(PICKS_KEY, JSON.stringify(picks));
 }
@@ -71,12 +76,12 @@ function renderGames(games) {
     const card = el('div', 'card');
     card.appendChild(el('h3', '', `${g.away_team} @ ${g.home_team}`));
     card.appendChild(el('p', '', `Week ${g.week} · ${g.season}`));
-    const prob = el(
-      'p',
-      'prob' + (g.home_win_prob < 0.5 ? ' low' : ''),
-      `Home win: ${(g.home_win_prob * 100).toFixed(0)}%`
-    );
-    card.appendChild(prob);
+    const homeOdds = decimalOdds(g.home_win_prob);
+    const awayOdds = decimalOdds(1 - g.home_win_prob);
+    const homeLine = `Home: ${(g.home_win_prob * 100).toFixed(0)}%${homeOdds ? ` (${homeOdds})` : ''}`;
+    const awayLine = `Away: ${((1 - g.home_win_prob) * 100).toFixed(0)}%${awayOdds ? ` (${awayOdds})` : ''}`;
+    card.appendChild(el('p', 'prob' + (g.home_win_prob < 0.5 ? ' low' : ''), homeLine));
+    card.appendChild(el('p', 'odds', awayLine));
     card.appendChild(el('p', '', `Spread: ${g.spread > 0 ? '+' : ''}${g.spread}`));
     card.appendChild(el('p', '', `Total: ${g.total}`));
 
@@ -134,11 +139,13 @@ function renderPlayoffs(data) {
   data.forEach((t) => {
     const card = el('div', 'card');
     card.appendChild(el('h3', '', t.team));
+    const po = decimalOdds(t.playoff_prob);
+    const sbo = decimalOdds(t.super_bowl_prob);
     card.appendChild(
-      el('p', 'prob' + (t.playoff_prob < 0.5 ? ' low' : ''), `Playoff: ${(t.playoff_prob * 100).toFixed(0)}%`)
+      el('p', 'prob' + (t.playoff_prob < 0.5 ? ' low' : ''), `Playoff: ${(t.playoff_prob * 100).toFixed(0)}%${po ? ` (${po})` : ''}`)
     );
     card.appendChild(
-      el('p', 'prob' + (t.super_bowl_prob < 0.1 ? ' low' : ''), `Super Bowl: ${(t.super_bowl_prob * 100).toFixed(0)}%`)
+      el('p', 'prob' + (t.super_bowl_prob < 0.1 ? ' low' : ''), `Super Bowl: ${(t.super_bowl_prob * 100).toFixed(0)}%${sbo ? ` (${sbo})` : ''}`)
     );
     container.appendChild(card);
   });
