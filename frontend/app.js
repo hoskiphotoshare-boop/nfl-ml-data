@@ -16,8 +16,9 @@ try {
 }
 
 async function fetchJSON(name) {
-  const url = `${BASE}/${name}`;
-  const res = await fetch(url);
+  // Cache-bust so the browser always gets the latest predictions.
+  const url = `${BASE}/${name}?t=${Date.now()}`;
+  const res = await fetch(url, { cache: 'no-store' });
   if (!res.ok) throw new Error(`Failed to load ${name}: ${res.status}`);
   return res.json();
 }
