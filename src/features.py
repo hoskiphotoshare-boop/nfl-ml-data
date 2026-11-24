@@ -230,7 +230,7 @@ def build_match_features(schedules: pl.DataFrame) -> pl.DataFrame:
     long = long.with_columns(
         pl.col("points").cum_sum().over("team").alias("cum_points"),
         pl.col("points_allowed").cum_sum().over("team").alias("cum_allowed"),
-        pl.int_range(1, pl.len() + 1).over("team").alias("game_num"),
+        pl.col("points").cum_count().over("team").alias("game_num"),
     ).with_columns(
         ((pl.col("cum_points") - pl.col("points")) / (pl.col("game_num") - 1).clip(1)).alias("avg_points"),
         ((pl.col("cum_allowed") - pl.col("points_allowed")) / (pl.col("game_num") - 1).clip(1)).alias("avg_allowed"),
