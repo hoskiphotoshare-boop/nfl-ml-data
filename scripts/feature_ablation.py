@@ -182,6 +182,19 @@ ROSTER = [
     "roster_continuity_diff",
 ]
 
+_PART = [
+    "part_pass_rushers",
+    "part_pressure_rate",
+    "part_time_to_throw",
+    "part_air_yards",
+    "part_defenders_box",
+    "part_man_rate",
+    "part_zone_rate",
+]
+PARTICIPATION = (
+    [f"home_{c}" for c in _PART] + [f"away_{c}" for c in _PART]
+)
+
 
 def uniq(seq: list[str]) -> list[str]:
     seen = set()
@@ -303,6 +316,19 @@ def main() -> None:
             + (team_stats_cols or [])
             + (nextgen_cols or [])
             + roster_cols
+        )
+
+    part_cols = [
+        c for c in PARTICIPATION if c in raw.columns and c not in already_used
+    ]
+    if part_cols:
+        experiments["base+epa+rest+team_stats+nextgen+participation"] = uniq(
+            BASE
+            + EPA
+            + REST
+            + (team_stats_cols or [])
+            + (nextgen_cols or [])
+            + part_cols
         )
 
     results = {}

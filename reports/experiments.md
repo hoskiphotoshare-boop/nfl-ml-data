@@ -69,3 +69,13 @@ Walk-forward backtest window: **2022–2026** (train on all prior seasons, test 
 - **Decision:** ❌ **Reject for now** — essentially neutral; AUC improves by +0.0012
   but accuracy and log loss get slightly worse. Revisit with a longer continuity window
   or trade-weighted roster changes.
+
+## 2026-11-24 — Participation features
+
+- **Features:** pre-game rolling team averages from play participation:
+  pass rushers faced, pressure rate, time to throw, air yards, defenders in box,
+  man/zone coverage rates.
+- **Before (2022–2026):** accuracy 0.6418, log loss 0.6300, Brier 0.2199, AUC 0.6924
+- **After:** accuracy 0.6387, log loss 0.6403, Brier 0.2235, AUC 0.6899
+- **Decision:** ❌ **Reject** — worse across all metrics; participation adds noise
+  on top of NGS and team stats.

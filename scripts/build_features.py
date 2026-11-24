@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.dirname(__file__) + "/../")
 import polars as pl
 
 from src.features import (
+    add_participation_features,
     add_roster_continuity_features,
     add_team_rolling_features,
     build_match_features,
@@ -165,6 +166,11 @@ def main() -> None:
             rosters_weekly_raw = load_table("rosters_weekly_latest")
             match_features = add_roster_continuity_features(
                 match_features, rosters_weekly_raw
+            )
+
+            participation_raw = load_table("participation_latest")
+            match_features = add_participation_features(
+                match_features, participation_raw, schedules
             )
 
             match_features.write_parquet("features/match_features.parquet")

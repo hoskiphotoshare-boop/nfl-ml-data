@@ -30,6 +30,7 @@ from src.ingest import (
     fetch_snap_counts,
     fetch_nextgen_stats,
     fetch_pfr_advstats,
+    fetch_participation,
 )
 import polars as pl
 
@@ -88,7 +89,18 @@ def main() -> None:
         pfr.write_parquet(f"data/pfr_{stat_type}_latest.parquet")
         print(f"Wrote pfr_{stat_type}: {pfr.shape[0]} rows x {pfr.shape[1]} cols")
 
-    # 8) Injury reports for the recent seasons.
+    # 8) Participation (may only be available through the previous season).
+    print("Fetching participation…")
+    try:
+        part = fetch_participation(season=seasons_for_model)
+    except Exception as exc:
+        fallback = seasons_for_model[:-1]
+        print(f"Full participation unavailable ({exc}); falling back to {fallback}")
+        part = fetch_participation(season=fallback)
+    part.write_parquet("data/participation_latest.parquet")
+    print(f"Wrote participation: {part.shape[0]} rows x {part.shape[1]} cols")
+
+    # 9) Injury reports for the recent seasons.
     print(f"Fetching injuries ({seasons_for_model})…")
     injuries = fetch_injuries(season=seasons_for_model)
     injuries.write_parquet("data/injuries_latest.parquet")

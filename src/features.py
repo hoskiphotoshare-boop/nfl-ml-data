@@ -747,6 +747,95 @@ def add_roster_continuity_features(
     return out
 
 
+def add_participation_features(
+    match_features: pl.DataFrame,
+    participation: pl.DataFrame | None,
+    schedules: pl.DataFrame,
+) -> pl.DataFrame:
+    """Add pre-game rolling team features from play participation data."""
+    if participation is None or participation.height == 0:
+        return match_features
+
+    p = participation
+    game_col = next((c for c in ["nflverse_game_id", "game_id"] if c in p.columns), None)
+    team_col = next((c for c in ["possession_team", "posteam"] if c in p.columns), None)
+    if game_col is None or team_col is None:
+        print("Could not add participation features: missing game/team columns.")
+        return match_features
+
+    sched = schedules.select("game_id", "season", "week")
+    if game_col != "game_id":
+        p = p.rename({game_col: "game_id"})
+    p = p.join(sched, on="game_id", how="left")
+
+    expr = []
+    if "number_of_pass_rushers" in p.columns:
+        expr.append(pl.col("number_of_pass_rushers").mean().alias("part_pass_rushers"))
+    if "was_pressure" in p.columns:
+        expr.append(pl.col("was_pressure").cast(pl.Int8).mean().alias("part_pressure_rate"))
+    if "time_to_throw" in p.columns:
+        expr.append(pl.col("time_to_throw").mean().alias("part_time_to_throw"))
+    if "ngs_air_yards" in p.columns:
+        expr.append(pl.col("ngs_air_yards").mean().alias("part_air_yards"))
+    if "defenders_in_box" in p.columns:
+        expr.append(pl.col("defenders_in_box").mean().alias("part_defenders_box"))
+    if "defense_man_zone_type" in p.columns:
+        expr.append(
+            pl.col("defense_man_zone_type")
+            .cast(pl.Utf8)
+            .str.to_lowercase()
+            .str.contains("man")
+            .cast(pl.Int8)
+            .mean()
+            .alias("part_man_rate")
+        )
+    if "defense_coverage_type" in p.columns:
+        expr.append(
+            pl.col("defense_coverage_type")
+            .cast(pl.Utf8)
+            .str.to_lowercase()
+            .str.contains("zone")
+            .cast(pl.Int8)
+            .mean()
+            .alias("part_zone_rate")
+        )
+
+    if not expr:
+        return match_features
+
+    agg = (
+        p.group_by(["season", "week", pl.col(team_col).alias("team")])
+        .agg(expr)
+        .sort(["team", "season", "week"])
+    )
+
+    metric_cols = [c for c in agg.columns if c not in {"season", "week", "team"}]
+    agg = agg.with_columns(
+        [pl.col(c).cum_sum().over("team").alias(f"cum_{c}") for c in metric_cols]
+        + [pl.col(metric_cols[0]).cum_count().over("team").alias("game_num")]
+    )
+    for c in metric_cols:
+        agg = agg.with_columns(
+            ((pl.col(f"cum_{c}") - pl.col(c)) / (pl.col("game_num") - 1).clip(1)).alias(c)
+        )
+
+    home = agg.select(
+        "season",
+        "week",
+        pl.col("team").alias("home_team"),
+        *[pl.col(c).alias(f"home_{c}") for c in metric_cols],
+    )
+    away = agg.select(
+        "season",
+        "week",
+        pl.col("team").alias("away_team"),
+        *[pl.col(c).alias(f"away_{c}") for c in metric_cols],
+    )
+    return match_features.join(home, on=["season", "week", "home_team"], how="left").join(
+        away, on=["season", "week", "away_team"], how="left"
+    )
+
+
 def build_player_features(player_stats: pl.DataFrame) -> pl.DataFrame:
     """Build player-level features from a player-stats table.
 
