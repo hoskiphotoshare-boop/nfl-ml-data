@@ -31,6 +31,7 @@ from src.ingest import (
     fetch_nextgen_stats,
     fetch_pfr_advstats,
     fetch_participation,
+    fetch_ftn_charting,
 )
 import polars as pl
 
@@ -100,7 +101,18 @@ def main() -> None:
     part.write_parquet("data/participation_latest.parquet")
     print(f"Wrote participation: {part.shape[0]} rows x {part.shape[1]} cols")
 
-    # 9) Injury reports for the recent seasons.
+    # 9) FTN charting (may only be available through the previous season).
+    print("Fetching FTN charting…")
+    try:
+        ftn = fetch_ftn_charting(season=seasons_for_model)
+    except Exception as exc:
+        fallback = seasons_for_model[:-1]
+        print(f"Full FTN charting unavailable ({exc}); falling back to {fallback}")
+        ftn = fetch_ftn_charting(season=fallback)
+    ftn.write_parquet("data/ftn_charting_latest.parquet")
+    print(f"Wrote FTN charting: {ftn.shape[0]} rows x {ftn.shape[1]} cols")
+
+    # 10) Injury reports for the recent seasons.
     print(f"Fetching injuries ({seasons_for_model})…")
     injuries = fetch_injuries(season=seasons_for_model)
     injuries.write_parquet("data/injuries_latest.parquet")

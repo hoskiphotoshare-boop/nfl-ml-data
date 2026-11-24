@@ -79,3 +79,12 @@ Walk-forward backtest window: **2022–2026** (train on all prior seasons, test 
 - **After:** accuracy 0.6387, log loss 0.6403, Brier 0.2235, AUC 0.6899
 - **Decision:** ❌ **Reject** — worse across all metrics; participation adds noise
   on top of NGS and team stats.
+
+## 2026-11-24 — FTN charting
+
+- **Features:** pre-game rolling team averages from FTN charting:
+  motion, play action, screen, RPO, no huddle, QB out of pocket,
+  blitzers, pass rushers, defenders in box, offense backfield.
+- **Before (2022–2026):** accuracy 0.6410, log loss 0.6307, Brier 0.2201, AUC 0.6929
+- **After:** accuracy 0.6418, log loss 0.6314, Brier 0.2205, AUC 0.6915
+- **Decision:** ❌ **Reject** — negligible accuracy gain; log loss, Brier, and AUC all got worse.

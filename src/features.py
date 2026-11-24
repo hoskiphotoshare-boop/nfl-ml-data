@@ -836,6 +836,65 @@ def add_participation_features(
     )
 
 
+def add_ftn_features(
+    match_features: pl.DataFrame,
+    ftn: pl.DataFrame | None,
+    pbp: pl.DataFrame | None,
+) -> pl.DataFrame:
+    """Add pre-game rolling team features from FTN charting.
+
+    FTN charting lacks a team column, so it is joined to PBP on game/play id to
+    recover ``posteam`` before aggregation.
+    """
+    if ftn is None or pbp is None or ftn.height == 0 or pbp.height == 0:
+        return match_features
+
+    required_ftn = {"nflverse_game_id", "nflverse_play_id", "season", "week"}
+    if not required_ftn.issubset(set(ftn.columns)):
+        print("Could not add FTN features: missing FTN columns.")
+        return match_features
+    if not {"game_id", "play_id", "posteam"}.issubset(set(pbp.columns)):
+        print("Could not add FTN features: PBP missing game/play/team columns.")
+        return match_features
+
+    pbp_small = pbp.select(
+        "game_id",
+        pl.col("play_id").cast(pl.Int64, strict=False).alias("play_id"),
+        "posteam",
+    )
+    f = ftn.with_columns(
+        pl.col("nflverse_play_id").cast(pl.Int64, strict=False).alias("play_id")
+    )
+    f = f.join(
+        pbp_small,
+        left_on=["nflverse_game_id", "play_id"],
+        right_on=["game_id", "play_id"],
+        how="left",
+    )
+
+    cols = [
+        "is_motion",
+        "is_play_action",
+        "is_screen_pass",
+        "is_rpo",
+        "is_no_huddle",
+        "is_qb_out_of_pocket",
+        "n_blitzers",
+        "n_pass_rushers",
+        "n_defense_box",
+        "n_offense_backfield",
+    ]
+    present = [c for c in cols if c in f.columns]
+    if not present:
+        return match_features
+    f = f.with_columns([pl.col(c).cast(pl.Int8).alias(c) for c in present])
+
+    team_df = f.filter(pl.col("posteam").is_not_null()).select(
+        ["season", "week", pl.col("posteam").alias("team")] + present
+    )
+    return add_team_rolling_features(match_features, team_df, "team", present, "ftn")
+
+
 def build_player_features(player_stats: pl.DataFrame) -> pl.DataFrame:
     """Build player-level features from a player-stats table.
 

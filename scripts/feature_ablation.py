@@ -195,6 +195,23 @@ PARTICIPATION = (
     [f"home_{c}" for c in _PART] + [f"away_{c}" for c in _PART]
 )
 
+_FTN = [
+    "is_motion",
+    "is_play_action",
+    "is_screen_pass",
+    "is_rpo",
+    "is_no_huddle",
+    "is_qb_out_of_pocket",
+    "n_blitzers",
+    "n_pass_rushers",
+    "n_defense_box",
+    "n_offense_backfield",
+]
+FTN = (
+    [f"home_ftn_{c}" for c in _FTN]
+    + [f"away_ftn_{c}" for c in _FTN]
+)
+
 
 def uniq(seq: list[str]) -> list[str]:
     seen = set()
@@ -329,6 +346,17 @@ def main() -> None:
             + (team_stats_cols or [])
             + (nextgen_cols or [])
             + part_cols
+        )
+
+    ftn_cols = [c for c in FTN if c in raw.columns and c not in already_used]
+    if ftn_cols:
+        experiments["base+epa+rest+team_stats+nextgen+ftn"] = uniq(
+            BASE
+            + EPA
+            + REST
+            + (team_stats_cols or [])
+            + (nextgen_cols or [])
+            + ftn_cols
         )
 
     results = {}

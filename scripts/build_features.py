@@ -18,6 +18,7 @@ sys.path.insert(0, os.path.dirname(__file__) + "/../")
 import polars as pl
 
 from src.features import (
+    add_ftn_features,
     add_participation_features,
     add_roster_continuity_features,
     add_team_rolling_features,
@@ -172,6 +173,9 @@ def main() -> None:
             match_features = add_participation_features(
                 match_features, participation_raw, schedules
             )
+
+            ftn_raw = load_table("ftn_charting_latest")
+            match_features = add_ftn_features(match_features, ftn_raw, pbp)
 
             match_features.write_parquet("features/match_features.parquet")
             print(f"Wrote features/match_features.parquet ({match_features.height} rows)")
