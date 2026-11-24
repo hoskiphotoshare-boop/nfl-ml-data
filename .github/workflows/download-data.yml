@@ -13,63 +13,9 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install polars
+      - run: pip install polars nflreadpy
 
-      - run: python -c "
-          import polars as pl
-          import os
-          os.makedirs('data', exist_ok=True)
-
-          # Schedules placeholder
-          schedules = pl.DataFrame({
-              'game_id': [0, 1],
-              'season': [2024, 2024],
-              'week': [1, 2],
-              'home_team': ['Team A', 'Team B'],
-              'away_team': ['Team C', 'Team D'],
-              'home_score': [0, 0],
-              'away_score': [0, 0],
-              'date': ['2024-09-05', '2024-09-12']
-          })
-          schedules.write_parquet('data/schedules.parquet')
-
-          # PBP placeholder
-          pbp = pl.DataFrame({
-              'play_id': [0, 1],
-              'game_id': [0, 1],
-              'quarter': [1, 1],
-              'down': [1, 2],
-              'distance': [10, 5],
-              'yardline': [50, 45],
-              'epa': [0.0, -0.5],
-              'wpa': [0.0, -0.2]
-          })
-          pbp.write_parquet('data/pbp_2024_week1.parquet')
-
-          # Player stats placeholder
-          player = pl.DataFrame({
-              'gsis_id': ['0000', '0001'],
-              'game_id': [0, 1],
-              'team': ['Team A', 'Team B'],
-              'positions': ['WR', 'QB'],
-              'receptions': [5, 0],
-              'targets': [8, 2],
-              'yards': [65, 0],
-              'touchdowns': [1, 0]
-          })
-          player.write_parquet('data/player_stats_2024_week1.parquet')
-
-          # Team stats placeholder
-          team = pl.DataFrame({
-              'team': ['Team A', 'Team B'],
-              'pts': [21, 17],
-              'first_downs': [20, 15],
-              'total_yards': [350, 300]
-          })
-          team.write_parquet('data/team_stats_2024_week1.parquet')
-
-          print('Placeholder Parquet files created.')
-        "
+      - run: python scripts/download_data.py
 
       - run: |
           git config user.name "github-actions"
@@ -77,7 +23,7 @@ jobs:
 
       - run: |
           git add data/
-          git commit -m "chore: add placeholder NFL data Parquet files for training" || true
+          git commit -m "chore: add latest NFL data Parquet files for training" || true
 
       - run: |
           git push origin main || true
