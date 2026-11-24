@@ -33,6 +33,16 @@ jobs:
       # Train baseline models and overwrite game/player predictions.
       - run: python scripts/train_models.py || true
 
+      # Fetch current NFL odds from The Odds API (secret only available here).
+      - name: Fetch NFL odds
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/fetch_odds.py || true
+
+      # Compare model probabilities with market-implied probabilities.
+      - name: Compare model to market
+        run: python scripts/compare_market.py || true
+
       # Run the Monte Carlo playoff / Super Bowl simulator.
       - run: python scripts/simulate_playoffs.py || true
 
@@ -47,7 +57,7 @@ jobs:
           git config user.email "actions@github.com"
 
       - run: |
-          git add predictions/ features/ models/ reports/ 2>/dev/null || true
+          git add predictions/ features/ models/ reports/ market/ 2>/dev/null || true
           git commit -m "chore: update predictions, features, and models" || true
 
       - run: |
