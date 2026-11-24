@@ -57,6 +57,12 @@ def prepare_match_matrix(df: pl.DataFrame):
         "away_success_rate",
         "away_pass_epa",
         "away_rush_epa",
+        # Rest / schedule context
+        "home_rest_days",
+        "away_rest_days",
+        "rest_diff",
+        "home_short_week",
+        "away_short_week",
         # Context
         "week",
         "season",

@@ -40,6 +40,11 @@ FEATURE_COLS = [
     "away_success_rate",
     "away_pass_epa",
     "away_rush_epa",
+    "home_rest_days",
+    "away_rest_days",
+    "rest_diff",
+    "home_short_week",
+    "away_short_week",
     "week",
     "season",
 ]

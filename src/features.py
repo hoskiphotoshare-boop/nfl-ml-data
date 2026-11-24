@@ -262,6 +262,54 @@ def build_match_features(
 
     out = sched.join(home_feats, on="game_id", how="left").join(away_feats, on="game_id", how="left")
 
+    # Rest-day features (days since each team's previous game).
+    date_col = "gameday" if "gameday" in sched.columns else ("date" if "date" in sched.columns else None)
+    if date_col:
+        try:
+            sched = sched.with_columns(
+                pl.col(date_col).cast(pl.Utf8).str.to_date(strict=False).alias("_game_date")
+            )
+            home_rest = sched.select(
+                "game_id", "season", "week",
+                pl.col("home_team").alias("team"),
+                pl.col("_game_date").alias("game_date"),
+            )
+            away_rest = sched.select(
+                "game_id", "season", "week",
+                pl.col("away_team").alias("team"),
+                pl.col("_game_date").alias("game_date"),
+            )
+            rest_long = (
+                pl.concat([home_rest, away_rest])
+                .sort(["team", "game_date", "game_id"])
+                .with_columns(
+                    pl.col("game_date").diff().dt.total_days().over("team").alias("rest_days")
+                )
+                .with_columns(pl.col("rest_days").fill_null(7).clip(0, 21))
+            )
+            home_rest_feats = (
+                rest_long.join(sched.select("game_id", "home_team"), on="game_id")
+                .filter(pl.col("team") == pl.col("home_team"))
+                .select("game_id", pl.col("rest_days").alias("home_rest_days"))
+                .unique("game_id")
+            )
+            away_rest_feats = (
+                rest_long.join(sched.select("game_id", "away_team"), on="game_id")
+                .filter(pl.col("team") == pl.col("away_team"))
+                .select("game_id", pl.col("rest_days").alias("away_rest_days"))
+                .unique("game_id")
+            )
+            out = out.join(home_rest_feats, on="game_id", how="left").join(
+                away_rest_feats, on="game_id", how="left"
+            )
+            out = out.with_columns(
+                (pl.col("home_rest_days") - pl.col("away_rest_days")).alias("rest_diff"),
+                (pl.col("home_rest_days") <= 4).cast(pl.Int8).alias("home_short_week"),
+                (pl.col("away_rest_days") <= 4).cast(pl.Int8).alias("away_short_week"),
+            )
+        except Exception as exc:  # pragma: no cover – defensive
+            print(f"Could not add rest features: {exc}")
+
     # Optional PBP-derived team features (pre-game rolling EPA/success).
     if pbp is not None and pbp.height > 0:
         try:
