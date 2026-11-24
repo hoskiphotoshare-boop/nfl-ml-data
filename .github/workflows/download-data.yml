@@ -1,0 +1,41 @@
+name: Download NFL Data
+
+on:
+  workflow_dispatch:
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install polars nflreadpy
+
+      - run: |
+          from src.ingest import fetch_schedules, fetch_pbp, fetch_player_stats, fetch_team_stats
+          import polars as pl
+
+          # Schedules
+          df = fetch_schedules()
+          df.write_parquet("data/schedules.parquet")
+
+          # PBP for 2024 week 1
+          df2 = fetch_pbp(season=2024, week=1)
+          df2.write_parquet("data/pbp_2024_week1.parquet")
+
+          # Player stats
+          df3 = fetch_player_stats(season=2024, week=1)
+          df3.write_parquet("data/player_stats_2024_week1.parquet")
+
+          # Team stats
+          df4 = fetch_team_stats(season=2024, week=1)
+          df4.write_parquet("data/team_stats_2024_week1.parquet")
+
+      - upload-artifact@v3:
+          name: nfl-data
+          path: data/
+          retention-days: 7
