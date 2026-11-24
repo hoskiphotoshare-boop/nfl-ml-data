@@ -42,4 +42,5 @@ jobs:
           git commit -m "chore: update predictions, features, and models" || true
 
       - run: |
+          git pull --rebase origin main || true
           git push origin main || true
