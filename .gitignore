@@ -1,6 +1,7 @@
 # Private/local only files (root README)
 README.md
 !frontend/README.md
+!worker/README.md
 
 # Python
 __pycache__/

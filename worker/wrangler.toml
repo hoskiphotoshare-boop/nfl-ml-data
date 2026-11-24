@@ -1,0 +1,13 @@
+name = "nfl-ml-picks-api"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "nfl_ml_picks"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"
+
+# Optional: KV namespace for caching leaderboard results.
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
