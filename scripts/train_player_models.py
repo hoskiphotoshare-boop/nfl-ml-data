@@ -53,6 +53,47 @@ def load_player_features() -> pl.DataFrame:
     return pl.read_parquet(path)
 
 
+def enrich_context(df: pl.DataFrame) -> pl.DataFrame:
+    path = None
+    for candidate in ["data/schedules.parquet", "data/schedules.csv"]:
+        if os.path.exists(candidate):
+            path = candidate
+            break
+    if path is None:
+        return df
+
+    sched = pl.read_parquet(path) if path.endswith(".parquet") else pl.read_csv(path)
+    date_col = "gameday" if "gameday" in sched.columns else ("date" if "date" in sched.columns else None)
+    if date_col is None or "game_id" not in sched.columns:
+        return df
+
+    sched = sched.with_columns(
+        pl.col(date_col).cast(pl.Utf8).str.to_date(strict=False).alias("_game_date")
+    ).select("game_id", "home_team", "away_team", "_game_date")
+
+    out = df.join(sched, on="game_id", how="left")
+    out = out.with_columns(
+        (pl.col("team") == pl.col("home_team")).cast(pl.Int8).alias("is_home")
+    )
+
+    home = sched.select(
+        "game_id", pl.col("home_team").alias("team"), pl.col("_game_date").alias("game_date")
+    )
+    away = sched.select(
+        "game_id", pl.col("away_team").alias("team"), pl.col("_game_date").alias("game_date")
+    )
+    rest = (
+        pl.concat([home, away])
+        .sort(["team", "game_date", "game_id"])
+        .with_columns(
+            pl.col("game_date").diff().dt.total_days().over("team").alias("rest_days")
+        )
+        .with_columns(pl.col("rest_days").fill_null(7).clip(0, 21))
+        .select("game_id", "team", "rest_days")
+    )
+    return out.join(rest, on=["game_id", "team"], how="left")
+
+
 def build_rolling(df: pl.DataFrame) -> tuple[pl.DataFrame, str]:
     id_col = "player_id" if "player_id" in df.columns else ("gsis_id" if "gsis_id" in df.columns else "player_name")
     df = df.sort([id_col, "season", "week"])
@@ -79,6 +120,9 @@ def build_rolling(df: pl.DataFrame) -> tuple[pl.DataFrame, str]:
 
 def feature_cols(df: pl.DataFrame) -> list[str]:
     cols = [c for c in df.columns if c.startswith("roll_")]
+    for extra in ["is_home", "rest_days"]:
+        if extra in df.columns:
+            cols.append(extra)
     return cols
 
 
@@ -146,8 +190,15 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
         stats = row
         if model is not None:
             cols = feature_cols(df)
-            x = [[float(stats.get(c) or 0.0) for c in cols]]
-            fantasy = float(model.predict(x)[0])
+            values = []
+            for c in cols:
+                if c == "is_home":
+                    values.append(0.5)
+                elif c == "rest_days":
+                    values.append(7.0)
+                else:
+                    values.append(float(stats.get(c) or 0.0))
+            fantasy = float(model.predict([values])[0])
         else:
             fantasy = float(stats.get("roll_fantasy_points") or 0.0)
 
@@ -240,6 +291,7 @@ def main() -> None:
         print("No player features found; skipping player models.")
         return
 
+    df = enrich_context(df)
     rolling, id_col = build_rolling(df)
     models = {}
     metrics = {}

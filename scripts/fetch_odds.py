@@ -66,47 +66,70 @@ def fetch_odds(api_key: str) -> list[dict]:
     return data
 
 
+def best_ml(entries):
+    return max(entries, key=lambda x: x[0]) if entries else None
+
+
+def best_spread_entry(entries):
+    if not entries:
+        return None
+    best_point = max(e[0] for e in entries)
+    same = [e for e in entries if e[0] == best_point]
+    return max(same, key=lambda x: x[1])
+
+
+def best_total_entry(entries, side: str):
+    if not entries:
+        return None
+    target = min(e[0] for e in entries) if side == "over" else max(e[0] for e in entries)
+    same = [e for e in entries if e[0] == target]
+    return max(same, key=lambda x: x[1])
+
+
 def summarise_event(event: dict) -> dict:
     home = event["home_team"]
     away = event["away_team"]
 
-    home_spreads: list[float] = []
-    away_spreads: list[float] = []
-    totals: list[float] = []
-    home_prices: list[float] = []
-    away_prices: list[float] = []
+    home_ml_entries = []
+    away_ml_entries = []
+    home_spread_entries = []
+    away_spread_entries = []
+    over_entries = []
+    under_entries = []
     books: set[str] = set()
 
     for bookmaker in event.get("bookmakers", []):
-        books.add(bookmaker.get("key", "unknown"))
+        book = bookmaker.get("key", "unknown")
+        books.add(book)
         for market in bookmaker.get("markets", []):
             key = market.get("key")
-            outcomes = market.get("outcomes", [])
-            if key == "spreads":
-                for o in outcomes:
-                    if o.get("name") == home and o.get("point") is not None:
-                        home_spreads.append(float(o["point"]))
-                    elif o.get("name") == away and o.get("point") is not None:
-                        away_spreads.append(float(o["point"]))
-            elif key == "totals":
-                for o in outcomes:
-                    if o.get("point") is not None:
-                        totals.append(float(o["point"]))
-            elif key == "h2h":
-                for o in outcomes:
-                    price = o.get("price")
-                    if price is None:
-                        continue
-                    if o.get("name") == home:
-                        home_prices.append(float(price))
-                    elif o.get("name") == away:
-                        away_prices.append(float(price))
+            for o in market.get("outcomes", []):
+                name = o.get("name")
+                price = o.get("price")
+                point = o.get("point")
+                if price is None:
+                    continue
+                if key == "h2h":
+                    if name == home:
+                        home_ml_entries.append((float(price), book))
+                    elif name == away:
+                        away_ml_entries.append((float(price), book))
+                elif key == "spreads" and point is not None:
+                    if name == home:
+                        home_spread_entries.append((float(point), float(price), book))
+                    elif name == away:
+                        away_spread_entries.append((float(point), float(price), book))
+                elif key == "totals" and point is not None:
+                    if str(name).lower() == "over":
+                        over_entries.append((float(point), float(price), book))
+                    elif str(name).lower() == "under":
+                        under_entries.append((float(point), float(price), book))
 
-    home_spread = median(home_spreads)
-    away_spread = median(away_spreads)
-    total = median(totals)
-    home_ml = median(home_prices)
-    away_ml = median(away_prices)
+    home_spread = median([e[0] for e in home_spread_entries])
+    away_spread = median([e[0] for e in away_spread_entries])
+    total = median([e[0] for e in over_entries + under_entries])
+    home_ml = median([e[0] for e in home_ml_entries])
+    away_ml = median([e[0] for e in away_ml_entries])
 
     market_home_prob = None
     if home_ml and away_ml and home_ml > 0 and away_ml > 0:
@@ -115,6 +138,27 @@ def summarise_event(event: dict) -> dict:
         total_raw = raw_home + raw_away
         if total_raw > 0:
             market_home_prob = raw_home / total_raw
+
+    best_home_ml = best_ml(home_ml_entries)
+    best_away_ml = best_ml(away_ml_entries)
+    best_home_spread = best_spread_entry(home_spread_entries)
+    best_away_spread = best_spread_entry(away_spread_entries)
+    best_over = best_total_entry(over_entries, "over")
+    best_under = best_total_entry(under_entries, "under")
+
+    def spread_payload(entry):
+        return (
+            {"point": entry[0], "price": entry[1], "bookmaker": entry[2]}
+            if entry
+            else None
+        )
+
+    def total_payload(entry):
+        return (
+            {"point": entry[0], "price": entry[1], "bookmaker": entry[2]}
+            if entry
+            else None
+        )
 
     return {
         "commence_time": event.get("commence_time"),
@@ -126,6 +170,16 @@ def summarise_event(event: dict) -> dict:
         "home_moneyline": home_ml,
         "away_moneyline": away_ml,
         "market_home_win_prob": round(market_home_prob, 4) if market_home_prob else None,
+        "best_home_ml": {"price": best_home_ml[0], "bookmaker": best_home_ml[1]}
+        if best_home_ml
+        else None,
+        "best_away_ml": {"price": best_away_ml[0], "bookmaker": best_away_ml[1]}
+        if best_away_ml
+        else None,
+        "best_home_spread": spread_payload(best_home_spread),
+        "best_away_spread": spread_payload(best_away_spread),
+        "best_over": total_payload(best_over),
+        "best_under": total_payload(best_under),
         "bookmakers": sorted(books),
     }
 

@@ -212,7 +212,9 @@ function renderMarket(data) {
     summaryEl.appendChild(card);
   });
 
-  const games = data.games || [];
+  const games = [...(data.games || [])].sort(
+    (a, b) => (b.best_ev ?? -999) - (a.best_ev ?? -999)
+  );
   if (!games.length) {
     listEl.appendChild(el('p', 'muted', 'No model-vs-market games available yet.'));
     return;
@@ -220,8 +222,12 @@ function renderMarket(data) {
 
   games.forEach((g) => {
     const card = el('div', 'card');
+    const start = g.commence_time
+      ? new Date(g.commence_time).toLocaleString()
+      : 'Start time TBD';
     card.appendChild(el('h3', '', `${g.away_team} @ ${g.home_team}`));
-    card.appendChild(el('p', '', `Week ${g.week} · ${g.season}`));
+    card.appendChild(el('p', '', `Week ${g.week} · ${g.season} · ${start}`));
+
     card.appendChild(
       el('p', 'prob', `Model: ${(g.model_home_win_prob * 100).toFixed(1)}%`)
     );
@@ -229,16 +235,87 @@ function renderMarket(data) {
       el('p', 'odds', `Market: ${(g.market_home_win_prob * 100).toFixed(1)}%`)
     );
     const edge = g.edge * 100;
-    const edgeClass = Math.abs(edge) >= 10 ? 'prob low' : 'prob';
+    const edgeClass = Math.abs(edge) >= 5 ? (edge >= 0 ? 'prob' : 'prob low') : 'odds';
     card.appendChild(
-      el('p', edgeClass, `Edge: ${edge >= 0 ? '+' : ''}${edge.toFixed(1)}%`)
+      el('p', edgeClass, `ML edge: ${edge >= 0 ? '+' : ''}${edge.toFixed(1)}%`)
     );
-    if (g.model_spread !== null && g.market_spread !== null) {
-      card.appendChild(el('p', '', `Spread: model ${g.model_spread} · market ${g.market_spread}`));
+
+    const mlHome = g.best_home_ml;
+    const mlAway = g.best_away_ml;
+    if (mlHome || mlAway) {
+      const parts = [];
+      if (mlHome) parts.push(`Home ${mlHome.price.toFixed(2)} (${mlHome.bookmaker})`);
+      if (mlAway) parts.push(`Away ${mlAway.price.toFixed(2)} (${mlAway.bookmaker})`);
+      card.appendChild(el('p', 'odds', `Best ML: ${parts.join(' · ')}`));
     }
-    if (g.model_total !== null && g.market_total !== null) {
-      card.appendChild(el('p', '', `Total: model ${g.model_total} · market ${g.market_total}`));
+
+    const sh = g.best_home_spread;
+    const sa = g.best_away_spread;
+    if (sh || sa) {
+      const parts = [];
+      if (sh) {
+        parts.push(
+          `${g.home_team} ${sh.point > 0 ? '+' : ''}${sh.point} (${sh.price.toFixed(2)})`
+        );
+      }
+      if (sa) {
+        parts.push(
+          `${g.away_team} ${sa.point > 0 ? '+' : ''}${sa.point} (${sa.price.toFixed(2)})`
+        );
+      }
+      card.appendChild(el('p', 'odds', `Best spread: ${parts.join(' · ')}`));
     }
+
+    const bo = g.best_over;
+    const bu = g.best_under;
+    if (bo || bu) {
+      const parts = [];
+      if (bo) parts.push(`Over ${bo.point} (${bo.price.toFixed(2)})`);
+      if (bu) parts.push(`Under ${bu.point} (${bu.price.toFixed(2)})`);
+      card.appendChild(el('p', 'odds', `Best total: ${parts.join(' · ')}`));
+    }
+
+    if (g.best_ev !== null && g.best_ev !== undefined) {
+      const evClass = g.best_ev >= 0 ? 'prob' : 'prob low';
+      card.appendChild(
+        el(
+          'p',
+          evClass,
+          `+EV: ${g.best_ev >= 0 ? '+' : ''}${g.best_ev.toFixed(1)}% on ${
+            g.best_ev_side || ''
+          } ML`
+        )
+      );
+    }
+
+    if (g.spread_edge !== null && g.spread_edge !== undefined) {
+      const side = g.spread_edge >= 0 ? g.home_team : g.away_team;
+      const cls = Math.abs(g.spread_edge) >= 1 ? 'prob' : 'odds';
+      card.appendChild(
+        el(
+          'p',
+          cls,
+          `Spread edge: ${g.spread_edge >= 0 ? '+' : ''}${g.spread_edge.toFixed(
+            1
+          )} pts on ${side}`
+        )
+      );
+    }
+
+    if (g.total_edge !== null && g.total_edge !== undefined) {
+      const side = g.total_edge >= 0 ? 'Over' : 'Under';
+      const cls = Math.abs(g.total_edge) >= 1 ? 'prob' : 'odds';
+      card.appendChild(
+        el(
+          'p',
+          cls,
+          `Total edge: ${g.total_edge >= 0 ? '+' : ''}${g.total_edge.toFixed(
+            1
+          )} pts on ${side}`
+        )
+      );
+    }
+
     listEl.appendChild(card);
   });
 }
