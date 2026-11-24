@@ -4,7 +4,7 @@
 // Picks are stored in localStorage; an optional Cloudflare Worker API can be
 // enabled by setting `window.NFL_API_BASE` before this script loads.
 
-const BASE = 'https://cdn.jsdelivr.net/gh/hoskiphotoshare-boop/nfl-ml-data@main/predictions';
+const BASE = 'https://raw.githubusercontent.com/hoskiphotoshare-boop/nfl-ml-data/main/predictions';
 const API_BASE = window.NFL_API_BASE || null;
 const PICKS_KEY = 'nfl_ml_picks';
 
