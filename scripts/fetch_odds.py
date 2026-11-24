@@ -14,12 +14,37 @@ import statistics
 import sys
 import urllib.error
 import urllib.request
+from datetime import datetime, timezone
 
 SPORT = "americanfootball_nfl"
 REGIONS = "us"
 MARKETS = "h2h,spreads,totals"
 ODDS_FORMAT = "decimal"
 BASE_URL = "https://api.the-odds-api.com/v4/sports"
+META_PATH = "market/odds_meta.json"
+CACHE_HOURS = float(os.environ.get("ODDS_CACHE_HOURS", "6"))
+
+
+def recent_cache() -> bool:
+    """Return True when a recent odds snapshot exists and force-fetch is off."""
+    if os.environ.get("FORCE_ODDS_FETCH") == "1":
+        return False
+    if not os.path.exists(META_PATH):
+        return False
+    try:
+        with open(META_PATH, encoding="utf-8") as f:
+            meta = json.load(f)
+        fetched_at = datetime.fromisoformat(meta["fetched_at"])
+        age_hours = (datetime.now(timezone.utc) - fetched_at).total_seconds() / 3600
+        if age_hours < CACHE_HOURS:
+            print(
+                f"Odds cache is {age_hours:.1f}h old (< {CACHE_HOURS:g}h); "
+                "skipping Odds API call."
+            )
+            return True
+    except Exception:
+        pass
+    return False
 
 
 def median(values: list[float]) -> float | None:
@@ -111,6 +136,9 @@ def main() -> None:
         print("ODDS_API_KEY not set; skipping odds fetch.")
         return
 
+    if recent_cache():
+        return
+
     try:
         data = fetch_odds(api_key)
     except urllib.error.HTTPError as exc:
@@ -124,6 +152,15 @@ def main() -> None:
     os.makedirs("market", exist_ok=True)
     with open("market/odds_latest.json", "w", encoding="utf-8") as f:
         json.dump(events, f, indent=2)
+    with open(META_PATH, "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "fetched_at": datetime.now(timezone.utc).isoformat(),
+                "events": len(events),
+            },
+            f,
+            indent=2,
+        )
     print(f"Wrote market/odds_latest.json ({len(events)} events)")
 
 

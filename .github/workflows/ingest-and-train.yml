@@ -2,6 +2,11 @@ name: Ingest & Predict
 
 on:
   workflow_dispatch:
+    inputs:
+      fetch_odds:
+        description: "Fetch fresh Odds API data (uses one API request)"
+        type: boolean
+        default: false
   schedule:
     - cron: '0 6 * * 1'   # every Monday at 06:00 UTC
 
@@ -38,6 +43,7 @@ jobs:
 
       # Fetch current NFL odds from The Odds API (secret only available here).
       - name: Fetch NFL odds
+        if: github.event_name == 'schedule' || github.event.inputs.fetch_odds == 'true'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python scripts/fetch_odds.py || true
