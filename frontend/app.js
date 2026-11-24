@@ -5,6 +5,7 @@
 // enabled by setting `window.NFL_API_BASE` before this script loads.
 
 const BASE = 'https://raw.githubusercontent.com/hoskiphotoshare-boop/nfl-ml-data/main/predictions';
+const REPORTS_BASE = 'https://raw.githubusercontent.com/hoskiphotoshare-boop/nfl-ml-data/main/reports';
 const API_BASE = window.NFL_API_BASE || null;
 const PICKS_KEY = 'nfl_ml_picks';
 
@@ -18,6 +19,13 @@ try {
 async function fetchJSON(name) {
   // Cache-bust so the browser always gets the latest predictions.
   const url = `${BASE}/${name}?t=${Date.now()}`;
+  const res = await fetch(url, { cache: 'no-store' });
+  if (!res.ok) throw new Error(`Failed to load ${name}: ${res.status}`);
+  return res.json();
+}
+
+async function fetchReport(name) {
+  const url = `${REPORTS_BASE}/${name}?t=${Date.now()}`;
   const res = await fetch(url, { cache: 'no-store' });
   if (!res.ok) throw new Error(`Failed to load ${name}: ${res.status}`);
   return res.json();
@@ -158,6 +166,60 @@ function renderPlayoffs(data) {
   });
 }
 
+function renderMarket(data) {
+  const summaryEl = document.getElementById('market-summary');
+  const listEl = document.getElementById('market-list');
+  if (!summaryEl || !listEl) return;
+
+  summaryEl.innerHTML = '';
+  listEl.innerHTML = '';
+
+  const summary = data.summary || {};
+  const summaryItems = [
+    ['Games compared', summary.games_compared ?? '—'],
+    ['Mean edge', summary.mean_edge !== undefined ? `${(summary.mean_edge * 100).toFixed(1)}%` : '—'],
+    ['Mean abs edge', summary.mean_abs_edge !== undefined ? `${(summary.mean_abs_edge * 100).toFixed(1)}%` : '—'],
+    ['Max abs edge', summary.max_abs_edge !== undefined ? `${(summary.max_abs_edge * 100).toFixed(1)}%` : '—'],
+  ];
+  summaryItems.forEach(([label, value]) => {
+    const card = el('div', 'card');
+    card.appendChild(el('h3', '', label));
+    card.appendChild(el('p', 'prob', String(value)));
+    summaryEl.appendChild(card);
+  });
+
+  const games = data.games || [];
+  if (!games.length) {
+    listEl.appendChild(el('p', 'muted', 'No model-vs-market games available yet.'));
+    return;
+  }
+
+  games.forEach((g) => {
+    const card = el('div', 'card');
+    card.appendChild(el('h3', '', `${g.away_team} @ ${g.home_team}`));
+    card.appendChild(el('p', '', `Week ${g.week} · ${g.season}`));
+    card.appendChild(
+      el('p', 'prob', `Model: ${(g.model_home_win_prob * 100).toFixed(1)}%`)
+    );
+    card.appendChild(
+      el('p', 'odds', `Market: ${(g.market_home_win_prob * 100).toFixed(1)}%`)
+    );
+    const edge = g.edge * 100;
+    const edgeClass = Math.abs(edge) >= 10 ? 'prob low' : 'prob';
+    card.appendChild(
+      el('p', edgeClass, `Edge: ${edge >= 0 ? '+' : ''}${edge.toFixed(1)}%`)
+    );
+    if (g.model_spread !== null && g.market_spread !== null) {
+      card.appendChild(el('p', '', `Spread: model ${g.model_spread} · market ${g.market_spread}`));
+    }
+    if (g.model_total !== null && g.market_total !== null) {
+      card.appendChild(el('p', '', `Total: model ${g.model_total} · market ${g.market_total}`));
+    }
+    listEl.appendChild(card);
+  });
+}
+
+
 function setupTabs() {
   const tabs = document.querySelectorAll('.tab');
   const panels = document.querySelectorAll('.tab-panel');
@@ -183,14 +245,16 @@ async function loadAll() {
   setupTabs();
   renderPicks();
   try {
-    const [games, players, playoffs] = await Promise.all([
+    const [games, players, playoffs, market] = await Promise.all([
       loadGames(),
       fetchJSON('players_week.json'),
       fetchJSON('playoffs.json'),
+      fetchReport('market_comparison.json').catch(() => null),
     ]);
     renderGames(games);
     renderPlayers(players);
     renderPlayoffs(playoffs);
+    if (market) renderMarket(market);
   } catch (err) {
     console.error(err);
     const container = document.getElementById('games-list');
