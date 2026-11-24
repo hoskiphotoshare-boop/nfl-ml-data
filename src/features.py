@@ -950,6 +950,9 @@ def build_player_features(player_stats: pl.DataFrame) -> pl.DataFrame:
     add("touchdowns", 6.0)
     add("fumbles_lost_total", -2.0)
     add("special_teams_tds", 6.0)
+    # Kicking
+    add("fg_made", 3.0)
+    add("pat_made", 1.0)
 
     out = out.with_columns(fp.alias("fantasy_points"))
 

@@ -43,6 +43,10 @@ ROLL_COLS = [
     "carries",
     "attempts",
     "completions",
+    "fg_made",
+    "fg_att",
+    "pat_made",
+    "pat_att",
 ]
 
 

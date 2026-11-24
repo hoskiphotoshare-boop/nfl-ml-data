@@ -81,18 +81,38 @@ function renderGames(games) {
   }
   games.forEach((g) => {
     const card = el('div', 'card');
+    const marketGame = window.__marketById?.get(g.game_id);
+
     card.appendChild(el('h3', '', `${g.away_team} @ ${g.home_team}`));
     card.appendChild(el('p', '', `Week ${g.week} · ${g.season}`));
+
+    const startParts = [];
+    if (g.gameday) startParts.push(g.gameday);
+    if (g.gametime) startParts.push(g.gametime);
+    const startText =
+      startParts.length > 0
+        ? startParts.join(' ')
+        : marketGame?.commence_time
+        ? new Date(marketGame.commence_time).toLocaleString()
+        : null;
+    if (startText) card.appendChild(el('p', 'odds', `Start: ${startText}`));
+    const venue = g.stadium || (g.location && g.location !== 'Home' ? g.location : null);
+    if (venue) card.appendChild(el('p', 'odds', `Venue: ${venue}`));
+    if (g.roof || g.surface) {
+      card.appendChild(
+        el('p', 'odds', [g.roof, g.surface].filter(Boolean).join(' · '))
+      );
+    }
+
     const homeOdds = decimalOdds(g.home_win_prob);
     const awayOdds = decimalOdds(1 - g.home_win_prob);
     const homeLine = `Home: ${(g.home_win_prob * 100).toFixed(0)}%${homeOdds ? ` (${homeOdds})` : ''}`;
     const awayLine = `Away: ${((1 - g.home_win_prob) * 100).toFixed(0)}%${awayOdds ? ` (${awayOdds})` : ''}`;
     card.appendChild(el('p', 'prob' + (g.home_win_prob < 0.5 ? ' low' : ''), homeLine));
     card.appendChild(el('p', 'odds', awayLine));
-    card.appendChild(el('p', '', `Spread: ${g.spread > 0 ? '+' : ''}${g.spread}`));
-    card.appendChild(el('p', '', `Total: ${g.total}`));
+    card.appendChild(el('p', '', `Model spread: ${g.spread > 0 ? '+' : ''}${g.spread}`));
+    card.appendChild(el('p', '', `Model total: ${g.total}`));
 
-    const marketGame = window.__marketById?.get(g.game_id);
     if (marketGame && marketGame.market_home_win_prob !== undefined) {
       const edgeNum = marketGame.edge * 100;
       const edgePct = edgeNum.toFixed(1);
@@ -102,12 +122,89 @@ function renderGames(games) {
         el(
           'p',
           edgeClass,
-          `Market: ${(marketGame.market_home_win_prob * 100).toFixed(1)}% · Edge ${
+          `Market: ${(marketGame.market_home_win_prob * 100).toFixed(1)}% · ML edge ${
             edgeNum >= 0 ? '+' : ''
           }${edgePct}%`
         )
       );
+
+      const mlHome = marketGame.best_home_ml;
+      const mlAway = marketGame.best_away_ml;
+      if (mlHome || mlAway) {
+        const parts = [];
+        if (mlHome) parts.push(`Home ${mlHome.price.toFixed(2)} (${mlHome.bookmaker})`);
+        if (mlAway) parts.push(`Away ${mlAway.price.toFixed(2)} (${mlAway.bookmaker})`);
+        card.appendChild(el('p', 'odds', `Best ML: ${parts.join(' · ')}`));
+      }
+
+      const sh = marketGame.best_home_spread;
+      const sa = marketGame.best_away_spread;
+      if (sh || sa) {
+        const parts = [];
+        if (sh) {
+          parts.push(
+            `${g.home_team} ${sh.point > 0 ? '+' : ''}${sh.point} (${sh.price.toFixed(2)})`
+          );
+        }
+        if (sa) {
+          parts.push(
+            `${g.away_team} ${sa.point > 0 ? '+' : ''}${sa.point} (${sa.price.toFixed(2)})`
+          );
+        }
+        card.appendChild(el('p', 'odds', `Best spread: ${parts.join(' · ')}`));
+      }
+
+      const bo = marketGame.best_over;
+      const bu = marketGame.best_under;
+      if (bo || bu) {
+        const parts = [];
+        if (bo) parts.push(`Over ${bo.point} (${bo.price.toFixed(2)})`);
+        if (bu) parts.push(`Under ${bu.point} (${bu.price.toFixed(2)})`);
+        card.appendChild(el('p', 'odds', `Best total: ${parts.join(' · ')}`));
+      }
+
+      if (marketGame.best_ev !== null && marketGame.best_ev !== undefined) {
+        const evClass = marketGame.best_ev >= 0 ? 'prob' : 'prob low';
+        card.appendChild(
+          el(
+            'p',
+            evClass,
+            `+EV: ${marketGame.best_ev >= 0 ? '+' : ''}${marketGame.best_ev.toFixed(
+              1
+            )}% on ${marketGame.best_ev_side || ''} ML`
+          )
+        );
+      }
+
+      if (marketGame.spread_edge !== null && marketGame.spread_edge !== undefined) {
+        const side = marketGame.spread_edge >= 0 ? g.home_team : g.away_team;
+        const cls = Math.abs(marketGame.spread_edge) >= 1 ? 'prob' : 'odds';
+        card.appendChild(
+          el(
+            'p',
+            cls,
+            `Spread edge: ${marketGame.spread_edge >= 0 ? '+' : ''}${marketGame.spread_edge.toFixed(
+              1
+            )} pts on ${side}`
+          )
+        );
+      }
+
+      if (marketGame.total_edge !== null && marketGame.total_edge !== undefined) {
+        const side = marketGame.total_edge >= 0 ? 'Over' : 'Under';
+        const cls = Math.abs(marketGame.total_edge) >= 1 ? 'prob' : 'odds';
+        card.appendChild(
+          el(
+            'p',
+            cls,
+            `Total edge: ${marketGame.total_edge >= 0 ? '+' : ''}${marketGame.total_edge.toFixed(
+              1
+            )} pts on ${side}`
+          )
+        );
+      }
     }
+
     if (g.calibrated_home_win_prob !== undefined) {
       card.appendChild(
         el('p', 'odds', `Calibrated: ${(g.calibrated_home_win_prob * 100).toFixed(1)}%`)

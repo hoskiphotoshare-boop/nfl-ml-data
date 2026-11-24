@@ -8,6 +8,13 @@
     "home_win_prob": 0.495,
     "spread": -0.5,
     "total": 46.5,
+    "gameday": "2026-11-25",
+    "gametime": "20:00",
+    "location": "Home",
+    "stadium": "SoFi Stadium",
+    "roof": "dome",
+    "surface": "matrixturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.534
   },
   {
@@ -19,6 +26,13 @@
     "home_win_prob": 0.473,
     "spread": -0.8,
     "total": 44.4,
+    "gameday": "2026-11-26",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Ford Field",
+    "roof": "dome",
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.528
   },
   {
@@ -30,6 +44,13 @@
     "home_win_prob": 0.511,
     "spread": -1.0,
     "total": 45.2,
+    "gameday": "2026-11-26",
+    "gametime": "16:30",
+    "location": "Home",
+    "stadium": "AT&T Stadium",
+    "roof": null,
+    "surface": "matrixturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.538
   },
   {
@@ -41,6 +62,13 @@
     "home_win_prob": 0.577,
     "spread": -0.9,
     "total": 44.8,
+    "gameday": "2026-11-26",
+    "gametime": "20:20",
+    "location": "Home",
+    "stadium": "Highmark Stadium",
+    "roof": "outdoors",
+    "surface": "a_turf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.556
   },
   {
@@ -52,6 +80,13 @@
     "home_win_prob": 0.376,
     "spread": 1.1,
     "total": 43.3,
+    "gameday": "2026-11-27",
+    "gametime": "15:00",
+    "location": "Home",
+    "stadium": "Acrisure Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.502
   },
   {
@@ -63,6 +98,13 @@
     "home_win_prob": 0.315,
     "spread": -1.5,
     "total": 46.1,
+    "gameday": "2026-11-29",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Paycor Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.484
   },
   {
@@ -74,6 +116,13 @@
     "home_win_prob": 0.505,
     "spread": -0.5,
     "total": 43.8,
+    "gameday": "2026-11-29",
+    "gametime": "20:20",
+    "location": "Home",
+    "stadium": "Huntington Bank Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.537
   },
   {
@@ -85,6 +134,13 @@
     "home_win_prob": 0.393,
     "spread": -3.1,
     "total": 42.8,
+    "gameday": "2026-11-29",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Reliant Stadium",
+    "roof": null,
+    "surface": "astroturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.507
   },
   {
@@ -96,6 +152,13 @@
     "home_win_prob": 0.582,
     "spread": 1.7,
     "total": 45.4,
+    "gameday": "2026-11-29",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Lucas Oil Stadium",
+    "roof": null,
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.557
   },
   {
@@ -107,6 +170,13 @@
     "home_win_prob": 0.77,
     "spread": 0.6,
     "total": 42.0,
+    "gameday": "2026-11-29",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Hard Rock Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.613
   },
   {
@@ -118,6 +188,13 @@
     "home_win_prob": 0.687,
     "spread": 0.8,
     "total": 45.1,
+    "gameday": "2026-11-29",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "U.S. Bank Stadium",
+    "roof": "dome",
+    "surface": "sportturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.586
   },
   {
@@ -129,6 +206,13 @@
     "home_win_prob": 0.717,
     "spread": -0.1,
     "total": 43.3,
+    "gameday": "2026-11-29",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "EverBank Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.596
   },
   {
@@ -140,6 +224,13 @@
     "home_win_prob": 0.179,
     "spread": -0.4,
     "total": 44.0,
+    "gameday": "2026-11-29",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "State Farm Stadium",
+    "roof": null,
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.435
   },
   {
@@ -151,6 +242,13 @@
     "home_win_prob": 0.634,
     "spread": -1.4,
     "total": 44.4,
+    "gameday": "2026-11-29",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "Levi's Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.571
   },
   {
@@ -162,6 +260,13 @@
     "home_win_prob": 0.366,
     "spread": -2.9,
     "total": 45.0,
+    "gameday": "2026-11-29",
+    "gametime": "16:05",
+    "location": "Home",
+    "stadium": "SoFi Stadium",
+    "roof": "dome",
+    "surface": "matrixturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.499
   },
   {
@@ -173,6 +278,13 @@
     "home_win_prob": 0.762,
     "spread": 0.8,
     "total": 43.2,
+    "gameday": "2026-11-30",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "Raymond James Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.61
   },
   {
@@ -184,6 +296,13 @@
     "home_win_prob": 0.437,
     "spread": 0.0,
     "total": 46.0,
+    "gameday": "2026-12-03",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "SoFi Stadium",
+    "roof": "dome",
+    "surface": "matrixturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.519
   },
   {
@@ -195,6 +314,13 @@
     "home_win_prob": 0.475,
     "spread": 0.8,
     "total": 46.0,
+    "gameday": "2026-12-06",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Mercedes-Benz Stadium",
+    "roof": null,
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.529
   },
   {
@@ -206,6 +332,13 @@
     "home_win_prob": 0.937,
     "spread": 0.3,
     "total": 42.3,
+    "gameday": "2026-12-06",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Soldier Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.702
   },
   {
@@ -217,6 +350,13 @@
     "home_win_prob": 0.542,
     "spread": -2.0,
     "total": 42.8,
+    "gameday": "2026-12-06",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Huntington Bank Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.546
   },
   {
@@ -228,6 +368,13 @@
     "home_win_prob": 0.385,
     "spread": -1.0,
     "total": 47.3,
+    "gameday": "2026-12-06",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Caesars Superdome",
+    "roof": "dome",
+    "surface": "sportturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.504
   },
   {
@@ -239,6 +386,13 @@
     "home_win_prob": 0.255,
     "spread": -0.7,
     "total": 44.1,
+    "gameday": "2026-12-06",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "MetLife Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.465
   },
   {
@@ -250,6 +404,13 @@
     "home_win_prob": 0.506,
     "spread": -0.3,
     "total": 44.1,
+    "gameday": "2026-12-06",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Raymond James Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.537
   },
   {
@@ -261,6 +422,13 @@
     "home_win_prob": 0.443,
     "spread": 0.6,
     "total": 43.6,
+    "gameday": "2026-12-06",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Nissan Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.52
   },
   {
@@ -272,6 +440,13 @@
     "home_win_prob": 0.109,
     "spread": -3.4,
     "total": 44.8,
+    "gameday": "2026-12-06",
+    "gametime": "16:05",
+    "location": "Home",
+    "stadium": "State Farm Stadium",
+    "roof": null,
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.398
   },
   {
@@ -283,6 +458,13 @@
     "home_win_prob": 0.552,
     "spread": 1.3,
     "total": 43.4,
+    "gameday": "2026-12-06",
+    "gametime": "16:05",
+    "location": "Home",
+    "stadium": "Empower Field at Mile High",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.549
   },
   {
@@ -294,6 +476,13 @@
     "home_win_prob": 0.781,
     "spread": 1.1,
     "total": 44.2,
+    "gameday": "2026-12-06",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "U.S. Bank Stadium",
+    "roof": "dome",
+    "surface": "sportturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.617
   },
   {
@@ -305,6 +494,13 @@
     "home_win_prob": 0.457,
     "spread": 2.8,
     "total": 44.3,
+    "gameday": "2026-12-06",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "Gillette Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.524
   },
   {
@@ -316,6 +512,13 @@
     "home_win_prob": 0.311,
     "spread": 2.5,
     "total": 43.0,
+    "gameday": "2026-12-06",
+    "gametime": "20:20",
+    "location": "Home",
+    "stadium": "Acrisure Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.483
   },
   {
@@ -327,6 +530,13 @@
     "home_win_prob": 0.555,
     "spread": 0.7,
     "total": 44.9,
+    "gameday": "2026-12-07",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "Lumen Field",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.55
   },
   {
@@ -338,6 +548,13 @@
     "home_win_prob": 0.575,
     "spread": 2.8,
     "total": 44.9,
+    "gameday": "2026-12-10",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "Gillette Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.555
   },
   {
@@ -349,6 +566,13 @@
     "home_win_prob": 0.687,
     "spread": 2.1,
     "total": 42.4,
+    "gameday": "2026-12-13",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "M&T Bank Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.586
   },
   {
@@ -360,6 +584,13 @@
     "home_win_prob": 0.416,
     "spread": -1.6,
     "total": 45.6,
+    "gameday": "2026-12-13",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Bank of America Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.513
   },
   {
@@ -371,6 +602,13 @@
     "home_win_prob": 0.496,
     "spread": -2.1,
     "total": 43.3,
+    "gameday": "2026-12-13",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Huntington Bank Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.534
   },
   {
@@ -382,6 +620,13 @@
     "home_win_prob": 0.746,
     "spread": -0.6,
     "total": 45.4,
+    "gameday": "2026-12-13",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Ford Field",
+    "roof": "dome",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.605
   },
   {
@@ -393,6 +638,13 @@
     "home_win_prob": 0.478,
     "spread": -0.3,
     "total": 42.2,
+    "gameday": "2026-12-13",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Hard Rock Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.53
   },
   {
@@ -404,6 +656,13 @@
     "home_win_prob": 0.494,
     "spread": -1.9,
     "total": 43.0,
+    "gameday": "2026-12-13",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "MetLife Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.534
   },
   {
@@ -415,6 +674,13 @@
     "home_win_prob": 0.733,
     "spread": 0.6,
     "total": 46.0,
+    "gameday": "2026-12-13",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Lincoln Financial Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.601
   },
   {
@@ -426,6 +692,13 @@
     "home_win_prob": 0.48,
     "spread": -0.4,
     "total": 43.6,
+    "gameday": "2026-12-13",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Northwest Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.53
   },
   {
@@ -437,6 +710,13 @@
     "home_win_prob": 0.331,
     "spread": -2.5,
     "total": 45.8,
+    "gameday": "2026-12-13",
+    "gametime": "16:05",
+    "location": "Home",
+    "stadium": "Allegiant Stadium",
+    "roof": "dome",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.489
   },
   {
@@ -448,6 +728,13 @@
     "home_win_prob": 0.172,
     "spread": -1.9,
     "total": 45.0,
+    "gameday": "2026-12-13",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "Paycor Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.432
   },
   {
@@ -459,6 +746,13 @@
     "home_win_prob": 0.666,
     "spread": 2.1,
     "total": 43.9,
+    "gameday": "2026-12-13",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "Lumen Field",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.58
   },
   {
@@ -470,6 +764,13 @@
     "home_win_prob": 0.767,
     "spread": -1.4,
     "total": 45.5,
+    "gameday": "2026-12-13",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "Levi's Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.612
   },
   {
@@ -481,6 +782,13 @@
     "home_win_prob": 0.608,
     "spread": 1.4,
     "total": 45.3,
+    "gameday": "2026-12-13",
+    "gametime": "20:20",
+    "location": "Home",
+    "stadium": "Lambeau Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.564
   },
   {
@@ -492,6 +800,13 @@
     "home_win_prob": 0.821,
     "spread": -2.4,
     "total": 42.3,
+    "gameday": "2026-12-14",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "EverBank Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.633
   },
   {
@@ -503,6 +818,13 @@
     "home_win_prob": 0.334,
     "spread": 0.4,
     "total": 44.9,
+    "gameday": "2026-12-17",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "SoFi Stadium",
+    "roof": "dome",
+    "surface": "matrixturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.49
   },
   {
@@ -514,6 +836,13 @@
     "home_win_prob": 0.601,
     "spread": 0.3,
     "total": 44.5,
+    "gameday": "2026-12-19",
+    "gametime": "17:00",
+    "location": "Home",
+    "stadium": "Lincoln Financial Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.562
   },
   {
@@ -525,6 +854,13 @@
     "home_win_prob": 0.617,
     "spread": 0.9,
     "total": 42.9,
+    "gameday": "2026-12-19",
+    "gametime": "20:20",
+    "location": "Home",
+    "stadium": "Highmark Stadium",
+    "roof": "outdoors",
+    "surface": "a_turf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.566
   },
   {
@@ -536,6 +872,13 @@
     "home_win_prob": 0.567,
     "spread": -0.1,
     "total": 43.9,
+    "gameday": "2026-12-20",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Bank of America Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.553
   },
   {
@@ -547,6 +890,13 @@
     "home_win_prob": 0.723,
     "spread": 2.7,
     "total": 44.6,
+    "gameday": "2026-12-20",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Lambeau Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.597
   },
   {
@@ -558,6 +908,13 @@
     "home_win_prob": 0.556,
     "spread": -0.1,
     "total": 43.2,
+    "gameday": "2026-12-20",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Reliant Stadium",
+    "roof": null,
+    "surface": "astroturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.55
   },
   {
@@ -569,6 +926,13 @@
     "home_win_prob": 0.593,
     "spread": 1.8,
     "total": 42.4,
+    "gameday": "2026-12-20",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "MetLife Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.56
   },
   {
@@ -580,6 +944,13 @@
     "home_win_prob": 0.199,
     "spread": -0.6,
     "total": 42.0,
+    "gameday": "2026-12-20",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Acrisure Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.444
   },
   {
@@ -591,6 +962,13 @@
     "home_win_prob": 0.567,
     "spread": -0.8,
     "total": 45.4,
+    "gameday": "2026-12-20",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Raymond James Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.553
   },
   {
@@ -602,6 +980,13 @@
     "home_win_prob": 0.43,
     "spread": -1.7,
     "total": 45.6,
+    "gameday": "2026-12-20",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Nissan Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.517
   },
   {
@@ -613,6 +998,13 @@
     "home_win_prob": 0.6,
     "spread": -0.9,
     "total": 44.3,
+    "gameday": "2026-12-20",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Northwest Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.562
   },
   {
@@ -624,6 +1016,13 @@
     "home_win_prob": 0.279,
     "spread": -0.3,
     "total": 43.2,
+    "gameday": "2026-12-20",
+    "gametime": "16:05",
+    "location": "Home",
+    "stadium": "State Farm Stadium",
+    "roof": null,
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.473
   },
   {
@@ -635,6 +1034,13 @@
     "home_win_prob": 0.56,
     "spread": 0.7,
     "total": 46.0,
+    "gameday": "2026-12-20",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "SoFi Stadium",
+    "roof": "dome",
+    "surface": "matrixturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.551
   },
   {
@@ -646,6 +1052,13 @@
     "home_win_prob": 0.443,
     "spread": -2.6,
     "total": 45.4,
+    "gameday": "2026-12-20",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "Allegiant Stadium",
+    "roof": "dome",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.52
   },
   {
@@ -657,6 +1070,13 @@
     "home_win_prob": 0.48,
     "spread": 1.6,
     "total": 45.9,
+    "gameday": "2026-12-20",
+    "gametime": "20:20",
+    "location": "Home",
+    "stadium": "U.S. Bank Stadium",
+    "roof": "dome",
+    "surface": "sportturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.53
   },
   {
@@ -668,6 +1088,13 @@
     "home_win_prob": 0.524,
     "spread": -1.9,
     "total": 45.3,
+    "gameday": "2026-12-21",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "GEHA Field at Arrowhead Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.542
   },
   {
@@ -679,6 +1106,13 @@
     "home_win_prob": 0.716,
     "spread": 2.5,
     "total": 44.4,
+    "gameday": "2026-12-24",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "Lincoln Financial Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.595
   },
   {
@@ -690,6 +1124,13 @@
     "home_win_prob": 0.897,
     "spread": -2.3,
     "total": 44.4,
+    "gameday": "2026-12-25",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Soldier Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.671
   },
   {
@@ -701,6 +1142,13 @@
     "home_win_prob": 0.426,
     "spread": 0.1,
     "total": 44.1,
+    "gameday": "2026-12-25",
+    "gametime": "16:30",
+    "location": "Home",
+    "stadium": "Empower Field at Mile High",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.516
   },
   {
@@ -712,6 +1160,13 @@
     "home_win_prob": 0.649,
     "spread": 0.0,
     "total": 45.3,
+    "gameday": "2026-12-25",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "Lumen Field",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.575
   },
   {
@@ -723,6 +1178,13 @@
     "home_win_prob": 0.542,
     "spread": -0.6,
     "total": 44.2,
+    "gameday": "2026-12-27",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Mercedes-Benz Stadium",
+    "roof": null,
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.546
   },
   {
@@ -734,6 +1196,13 @@
     "home_win_prob": 0.818,
     "spread": 4.8,
     "total": 41.5,
+    "gameday": "2026-12-27",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "M&T Bank Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.631
   },
   {
@@ -745,6 +1214,13 @@
     "home_win_prob": 0.69,
     "spread": 1.6,
     "total": 45.8,
+    "gameday": "2026-12-27",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Lucas Oil Stadium",
+    "roof": null,
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.587
   },
   {
@@ -756,6 +1232,13 @@
     "home_win_prob": 0.581,
     "spread": -1.1,
     "total": 43.8,
+    "gameday": "2026-12-27",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Hard Rock Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.557
   },
   {
@@ -767,6 +1250,13 @@
     "home_win_prob": 0.616,
     "spread": 1.7,
     "total": 44.1,
+    "gameday": "2026-12-27",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "U.S. Bank Stadium",
+    "roof": "dome",
+    "surface": "sportturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.566
   },
   {
@@ -778,6 +1268,13 @@
     "home_win_prob": 0.818,
     "spread": 2.6,
     "total": 46.3,
+    "gameday": "2026-12-27",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Caesars Superdome",
+    "roof": "dome",
+    "surface": "sportturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.631
   },
   {
@@ -789,6 +1286,13 @@
     "home_win_prob": 0.264,
     "spread": -4.6,
     "total": 43.2,
+    "gameday": "2026-12-27",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "MetLife Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.468
   },
   {
@@ -800,6 +1304,13 @@
     "home_win_prob": 0.545,
     "spread": 2.3,
     "total": 42.8,
+    "gameday": "2026-12-27",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Acrisure Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.547
   },
   {
@@ -811,6 +1322,13 @@
     "home_win_prob": 0.519,
     "spread": -1.4,
     "total": 45.2,
+    "gameday": "2026-12-27",
+    "gametime": "16:05",
+    "location": "Home",
+    "stadium": "Allegiant Stadium",
+    "roof": "dome",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.54
   },
   {
@@ -822,6 +1340,13 @@
     "home_win_prob": 0.487,
     "spread": 1.3,
     "total": 45.2,
+    "gameday": "2026-12-27",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "GEHA Field at Arrowhead Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.532
   },
   {
@@ -833,6 +1358,13 @@
     "home_win_prob": 0.63,
     "spread": 1.3,
     "total": 44.1,
+    "gameday": "2026-12-27",
+    "gametime": "20:20",
+    "location": "Home",
+    "stadium": "AT&T Stadium",
+    "roof": null,
+    "surface": "matrixturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.57
   },
   {
@@ -844,6 +1376,13 @@
     "home_win_prob": 0.669,
     "spread": -0.5,
     "total": 45.2,
+    "gameday": "2026-12-28",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "Ford Field",
+    "roof": "dome",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.581
   },
   {
@@ -855,6 +1394,13 @@
     "home_win_prob": 0.193,
     "spread": -2.8,
     "total": 43.1,
+    "gameday": "2026-12-31",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "Paycor Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.441
   },
   {
@@ -866,6 +1412,13 @@
     "home_win_prob": 0.591,
     "spread": -1.3,
     "total": 46.6,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Mercedes-Benz Stadium",
+    "roof": null,
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.559
   },
   {
@@ -877,6 +1430,13 @@
     "home_win_prob": 0.289,
     "spread": -2.0,
     "total": 43.8,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Bank of America Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.476
   },
   {
@@ -888,6 +1448,13 @@
     "home_win_prob": 0.403,
     "spread": -3.6,
     "total": 44.2,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Huntington Bank Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.509
   },
   {
@@ -899,6 +1466,13 @@
     "home_win_prob": 0.669,
     "spread": 1.4,
     "total": 44.6,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "AT&T Stadium",
+    "roof": null,
+    "surface": "matrixturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.581
   },
   {
@@ -910,6 +1484,13 @@
     "home_win_prob": 0.624,
     "spread": 0.6,
     "total": 42.9,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "EverBank Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.568
   },
   {
@@ -921,6 +1502,13 @@
     "home_win_prob": 0.364,
     "spread": -0.9,
     "total": 45.4,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "SoFi Stadium",
+    "roof": "dome",
+    "surface": "matrixturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.499
   },
   {
@@ -932,6 +1520,13 @@
     "home_win_prob": 0.472,
     "spread": -1.2,
     "total": 43.1,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Hard Rock Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.528
   },
   {
@@ -943,6 +1538,13 @@
     "home_win_prob": 0.68,
     "spread": 2.7,
     "total": 44.6,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Gillette Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.584
   },
   {
@@ -954,6 +1556,13 @@
     "home_win_prob": 0.388,
     "spread": -1.8,
     "total": 43.3,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "MetLife Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.505
   },
   {
@@ -965,6 +1574,13 @@
     "home_win_prob": 0.585,
     "spread": -1.2,
     "total": 44.7,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Raymond James Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.558
   },
   {
@@ -976,6 +1592,13 @@
     "home_win_prob": 0.693,
     "spread": -2.3,
     "total": 43.1,
+    "gameday": "2027-01-03",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Nissan Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.588
   },
   {
@@ -987,6 +1610,13 @@
     "home_win_prob": 0.243,
     "spread": 0.4,
     "total": 45.6,
+    "gameday": "2027-01-03",
+    "gametime": "16:05",
+    "location": "Home",
+    "stadium": "State Farm Stadium",
+    "roof": null,
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.46
   },
   {
@@ -998,6 +1628,13 @@
     "home_win_prob": 0.907,
     "spread": 0.8,
     "total": 44.4,
+    "gameday": "2027-01-03",
+    "gametime": "16:25",
+    "location": "Home",
+    "stadium": "Soldier Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.678
   },
   {
@@ -1009,6 +1646,13 @@
     "home_win_prob": 0.657,
     "spread": -1.6,
     "total": 44.7,
+    "gameday": "2027-01-03",
+    "gametime": "20:20",
+    "location": "Home",
+    "stadium": "Levi's Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.578
   },
   {
@@ -1020,6 +1664,13 @@
     "home_win_prob": 0.744,
     "spread": 2.8,
     "total": 45.3,
+    "gameday": "2027-01-04",
+    "gametime": "20:15",
+    "location": "Home",
+    "stadium": "Lambeau Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 0,
     "calibrated_home_win_prob": 0.604
   },
   {
@@ -1031,6 +1682,13 @@
     "home_win_prob": 0.074,
     "spread": -1.7,
     "total": 44.7,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "State Farm Stadium",
+    "roof": null,
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.371
   },
   {
@@ -1042,6 +1700,13 @@
     "home_win_prob": 0.892,
     "spread": 0.6,
     "total": 42.0,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "M&T Bank Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.668
   },
   {
@@ -1053,6 +1718,13 @@
     "home_win_prob": 0.857,
     "spread": 1.8,
     "total": 42.7,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Highmark Stadium",
+    "roof": "outdoors",
+    "surface": "a_turf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.649
   },
   {
@@ -1064,6 +1736,13 @@
     "home_win_prob": 0.523,
     "spread": -0.2,
     "total": 44.3,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Bank of America Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.541
   },
   {
@@ -1075,6 +1754,13 @@
     "home_win_prob": 0.439,
     "spread": 2.0,
     "total": 42.8,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Paycor Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.519
   },
   {
@@ -1086,6 +1772,13 @@
     "home_win_prob": 0.537,
     "spread": 0.2,
     "total": 44.7,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Empower Field at Mile High",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.545
   },
   {
@@ -1097,6 +1790,13 @@
     "home_win_prob": 0.664,
     "spread": 3.1,
     "total": 46.7,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Lambeau Field",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.58
   },
   {
@@ -1108,6 +1808,13 @@
     "home_win_prob": 0.686,
     "spread": -0.2,
     "total": 43.9,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Reliant Stadium",
+    "roof": null,
+    "surface": "astroturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.586
   },
   {
@@ -1119,6 +1826,13 @@
     "home_win_prob": 0.547,
     "spread": 1.7,
     "total": 44.9,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Lucas Oil Stadium",
+    "roof": null,
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.548
   },
   {
@@ -1130,6 +1844,13 @@
     "home_win_prob": 0.793,
     "spread": 3.4,
     "total": 46.1,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "GEHA Field at Arrowhead Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.622
   },
   {
@@ -1141,6 +1862,13 @@
     "home_win_prob": 0.499,
     "spread": -0.0,
     "total": 45.3,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "SoFi Stadium",
+    "roof": "dome",
+    "surface": "matrixturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.535
   },
   {
@@ -1152,6 +1880,13 @@
     "home_win_prob": 0.435,
     "spread": 0.9,
     "total": 43.5,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "U.S. Bank Stadium",
+    "roof": "dome",
+    "surface": "sportturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.518
   },
   {
@@ -1163,6 +1898,13 @@
     "home_win_prob": 0.59,
     "spread": 4.0,
     "total": 43.7,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Gillette Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.559
   },
   {
@@ -1174,6 +1916,13 @@
     "home_win_prob": 0.479,
     "spread": 0.8,
     "total": 45.4,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Caesars Superdome",
+    "roof": "dome",
+    "surface": "sportturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.53
   },
   {
@@ -1185,6 +1934,13 @@
     "home_win_prob": 0.351,
     "spread": -2.4,
     "total": 44.2,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "MetLife Stadium",
+    "roof": "outdoors",
+    "surface": "fieldturf",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.495
   },
   {
@@ -1196,6 +1952,13 @@
     "home_win_prob": 0.421,
     "spread": -1.9,
     "total": 44.5,
+    "gameday": "2027-01-10",
+    "gametime": "13:00",
+    "location": "Home",
+    "stadium": "Northwest Stadium",
+    "roof": "outdoors",
+    "surface": "grass",
+    "div_game": 1,
     "calibrated_home_win_prob": 0.514
   }
 ]

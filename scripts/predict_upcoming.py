@@ -135,6 +135,13 @@ def main() -> None:
                 "home_win_prob": round(proba, 3),
                 "spread": round(spread, 1) if spread is not None else None,
                 "total": round(total, 1) if total is not None else None,
+                "gameday": str(row.get("gameday")) if row.get("gameday") is not None else None,
+                "gametime": str(row.get("gametime")) if row.get("gametime") is not None else None,
+                "location": row.get("location"),
+                "stadium": row.get("stadium"),
+                "roof": row.get("roof"),
+                "surface": row.get("surface"),
+                "div_game": row.get("div_game"),
             }
         )
 
