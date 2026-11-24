@@ -27,6 +27,7 @@ from src.ingest import (
     fetch_rosters_weekly,
     fetch_depth_charts,
     fetch_players,
+    fetch_snap_counts,
 )
 import polars as pl
 
@@ -65,7 +66,13 @@ def main() -> None:
     teams.write_parquet("data/team_stats_latest.parquet")
     print(f"Wrote team_stats: {teams.shape[0]} rows x {teams.shape[1]} cols")
 
-    # 5) Injury reports for the recent seasons.
+    # 5) Snap counts for the recent seasons.
+    print(f"Fetching snap_counts ({seasons_for_model})…")
+    snaps = fetch_snap_counts(season=seasons_for_model)
+    snaps.write_parquet("data/snap_counts_latest.parquet")
+    print(f"Wrote snap_counts: {snaps.shape[0]} rows x {snaps.shape[1]} cols")
+
+    # 6) Injury reports for the recent seasons.
     print(f"Fetching injuries ({seasons_for_model})…")
     injuries = fetch_injuries(season=seasons_for_model)
     injuries.write_parquet("data/injuries_latest.parquet")

@@ -178,8 +178,9 @@ def build_match_features(
     pbp: pl.DataFrame | None = None,
     injuries: pl.DataFrame | None = None,
     team_stats: pl.DataFrame | None = None,
+    snap_counts: pl.DataFrame | None = None,
 ) -> pl.DataFrame:
-    """Build pre-game match features from schedules, PBP, injuries, and team stats.
+    """Build pre-game match features from schedules, PBP, injuries, team stats, and snaps.
 
     Expects schedules columns: ``game_id``, ``season``, ``week``, ``home_team``,
     ``away_team``, ``home_score``, ``away_score``.
@@ -192,6 +193,9 @@ def build_match_features(
 
     If ``team_stats`` is provided, adds team-week numeric stats (EPA, points,
     success rates, etc.) for both sides.
+
+    If ``snap_counts`` is provided, adds team-week snap-count aggregates
+    (total snaps, players with ≥50% snap share, mean snap percentage).
 
     The returned frame adds:
     - ``home_win`` (1 if the home team scored more, else 0; ties dropped)
@@ -530,6 +534,82 @@ def build_match_features(
             )
         except Exception as exc:  # pragma: no cover – defensive
             print(f"Could not add team-stats features: {exc}")
+
+    # Optional snap-count features (pre-game rolling team aggregates).
+    if snap_counts is not None and snap_counts.height > 0:
+        try:
+            sc = snap_counts
+            team_col = next(
+                (c for c in ["team", "team_abbr", "club_code"] if c in sc.columns),
+                None,
+            )
+            required_sc = {"season", "week"}
+            if team_col is None or not required_sc.issubset(set(sc.columns)):
+                raise ValueError("snap_counts missing season/week/team columns")
+
+            agg_exprs = [pl.len().alias("snap_players")]
+            if "offense_snaps" in sc.columns:
+                agg_exprs.append(pl.col("offense_snaps").sum().alias("snap_off_total"))
+            if "defense_snaps" in sc.columns:
+                agg_exprs.append(pl.col("defense_snaps").sum().alias("snap_def_total"))
+            if "offense_pct" in sc.columns:
+                agg_exprs.extend(
+                    [
+                        pl.col("offense_pct").mean().alias("snap_off_mean_pct"),
+                        (pl.col("offense_pct") >= 0.5).sum().alias("snap_off_players_50"),
+                    ]
+                )
+            if "defense_pct" in sc.columns:
+                agg_exprs.extend(
+                    [
+                        pl.col("defense_pct").mean().alias("snap_def_mean_pct"),
+                        (pl.col("defense_pct") >= 0.5).sum().alias("snap_def_players_50"),
+                    ]
+                )
+
+            agg = (
+                sc.select(
+                    ["season", "week", pl.col(team_col).alias("team")]
+                    + [
+                        c
+                        for c in ["offense_snaps", "defense_snaps", "offense_pct", "defense_pct"]
+                        if c in sc.columns
+                    ]
+                )
+                .group_by(["season", "week", "team"])
+                .agg(agg_exprs)
+                .sort(["team", "season", "week"])
+            )
+
+            metric_cols = [c for c in agg.columns if c not in {"season", "week", "team"}]
+            agg = agg.with_columns(
+                [pl.col(c).cum_sum().over("team").alias(f"cum_{c}") for c in metric_cols]
+                + [pl.col(metric_cols[0]).cum_count().over("team").alias("game_num")]
+            )
+            for c in metric_cols:
+                agg = agg.with_columns(
+                    ((pl.col(f"cum_{c}") - pl.col(c)) / (pl.col("game_num") - 1).clip(1))
+                    .alias(c)
+                )
+
+            home_sc = agg.select(
+                "season",
+                "week",
+                pl.col("team").alias("home_team"),
+                *[pl.col(c).alias(f"home_{c}") for c in metric_cols],
+            )
+            away_sc = agg.select(
+                "season",
+                "week",
+                pl.col("team").alias("away_team"),
+                *[pl.col(c).alias(f"away_{c}") for c in metric_cols],
+            )
+
+            out = out.join(home_sc, on=["season", "week", "home_team"], how="left").join(
+                away_sc, on=["season", "week", "away_team"], how="left"
+            )
+        except Exception as exc:  # pragma: no cover – defensive
+            print(f"Could not add snap-count features: {exc}")
 
     return out
 

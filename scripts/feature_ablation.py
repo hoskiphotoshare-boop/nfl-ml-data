@@ -101,6 +101,22 @@ TEAM_STATS = [
     "home_rush_epa_per_play",
     "away_rush_epa_per_play",
 ]
+SNAP = [
+    "home_snap_players",
+    "away_snap_players",
+    "home_snap_off_total",
+    "away_snap_off_total",
+    "home_snap_def_total",
+    "away_snap_def_total",
+    "home_snap_off_mean_pct",
+    "away_snap_off_mean_pct",
+    "home_snap_off_players_50",
+    "away_snap_off_players_50",
+    "home_snap_def_mean_pct",
+    "away_snap_def_mean_pct",
+    "home_snap_def_players_50",
+    "away_snap_def_players_50",
+]
 
 
 def uniq(seq: list[str]) -> list[str]:
@@ -189,6 +205,11 @@ def main() -> None:
     }
     if team_stats_cols:
         experiments["base+epa+rest+team_stats"] = uniq(BASE + EPA + REST + team_stats_cols)
+
+    snap_cols = [c for c in SNAP if c in raw.columns and c not in already_used]
+    if snap_cols:
+        base_with_snaps = BASE + EPA + REST + (team_stats_cols or []) + snap_cols
+        experiments["base+epa+rest+team_stats+snap_counts"] = uniq(base_with_snaps)
 
     results = {}
     for name, features in experiments.items():

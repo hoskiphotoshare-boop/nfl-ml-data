@@ -27,3 +27,13 @@ Walk-forward backtest window: **2022–2026** (train on all prior seasons, test 
 - **Before:** accuracy 0.5986, log loss 0.6640, Brier 0.2358, AUC 0.6264
 - **After:** accuracy 0.6048, log loss 0.6615, Brier 0.2345, AUC 0.6356
 - **Decision:** ✅ **Accept** — consistent improvement across all metrics.
+
+## 2026-11-24 — Snap-count features
+
+- **Features:** team-week snap aggregates:
+  `home/away_snap_players`, `snap_off_total`, `snap_def_total`,
+  `snap_off_mean_pct`, `snap_off_players_50`, `snap_def_mean_pct`,
+  `snap_def_players_50` (all pre-game rolling).
+- **Before:** accuracy 0.6048, log loss 0.6615, Brier 0.2345, AUC 0.6356
+- **After:** accuracy 0.6071, log loss 0.6632, Brier 0.2354, AUC 0.6299
+- **Decision:** ❌ **Reject** — accuracy improved marginally, but log loss, Brier, and AUC all got worse.

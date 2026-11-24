@@ -42,8 +42,13 @@ def main() -> None:
             pbp = load_table("pbp_latest")
             injuries = load_table("injuries_latest")
             team_stats_raw = load_table("team_stats_latest")
+            snap_counts_raw = load_table("snap_counts_latest")
             match_features = build_match_features(
-                schedules, pbp=pbp, injuries=injuries, team_stats=team_stats_raw
+                schedules,
+                pbp=pbp,
+                injuries=injuries,
+                team_stats=team_stats_raw,
+                snap_counts=snap_counts_raw,
             )
             match_features.write_parquet("features/match_features.parquet")
             print(f"Wrote features/match_features.parquet ({match_features.height} rows)")
