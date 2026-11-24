@@ -101,10 +101,15 @@ def write_games_predictions(df: pl.DataFrame, model, feature_cols) -> None:
             home_prob = 0.5 + (home_avg - away_avg) * 0.02
             home_prob = min(max(home_prob, 0.05), 0.95)
 
-        home_score = row.get("home_score")
-        away_score = row.get("away_score")
-        total = (float(home_score) + float(away_score)) if home_score is not None and away_score is not None else None
-        spread = (float(home_score) - float(away_score)) if home_score is not None and away_score is not None else None
+        # Baseline projected scores from pre-game team averages.
+        home_avg = float(row.get("home_avg_points") or 0.0)
+        away_avg = float(row.get("away_avg_points") or 0.0)
+        home_allowed = float(row.get("home_avg_allowed") or 0.0)
+        away_allowed = float(row.get("away_avg_allowed") or 0.0)
+        proj_home = (home_avg + away_allowed) / 2.0 if home_avg and away_allowed else None
+        proj_away = (away_avg + home_allowed) / 2.0 if away_avg and home_allowed else None
+        spread = (proj_home - proj_away) if proj_home is not None and proj_away is not None else None
+        total = (proj_home + proj_away) if proj_home is not None and proj_away is not None else None
 
         records.append(
             {
@@ -165,6 +170,17 @@ def write_player_predictions() -> None:
                 "projected_fantasy_points": round(float(row.get("projected_fantasy_points") or 0), 1),
             }
         )
+
+    # Keep only fantasy-relevant players and cap the list for the frontend.
+    records = [
+        r for r in records
+        if r.get("projected_fantasy_points", 0) > 0
+        or r.get("projected_targets", 0) > 0
+        or r.get("projected_receptions", 0) > 0
+        or r.get("projected_yards", 0) > 0
+    ]
+    records.sort(key=lambda r: r.get("projected_fantasy_points", 0), reverse=True)
+    records = records[:250]
 
     os.makedirs("predictions", exist_ok=True)
     with open("predictions/players_week.json", "w", encoding="utf-8") as f:
