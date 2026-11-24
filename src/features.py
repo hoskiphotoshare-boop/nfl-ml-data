@@ -177,8 +177,9 @@ def build_match_features(
     schedules: pl.DataFrame,
     pbp: pl.DataFrame | None = None,
     injuries: pl.DataFrame | None = None,
+    team_stats: pl.DataFrame | None = None,
 ) -> pl.DataFrame:
-    """Build pre-game match features from schedules, PBP, and injuries.
+    """Build pre-game match features from schedules, PBP, injuries, and team stats.
 
     Expects schedules columns: ``game_id``, ``season``, ``week``, ``home_team``,
     ``away_team``, ``home_score``, ``away_score``.
@@ -188,6 +189,9 @@ def build_match_features(
 
     If ``injuries`` is provided, adds per-team weekly injury counts (Out,
     Doubtful, Questionable, total) for both sides.
+
+    If ``team_stats`` is provided, adds team-week numeric stats (EPA, points,
+    success rates, etc.) for both sides.
 
     The returned frame adds:
     - ``home_win`` (1 if the home team scored more, else 0; ties dropped)
@@ -456,6 +460,64 @@ def build_match_features(
             )
         except Exception as exc:  # pragma: no cover – defensive
             print(f"Could not add PBP features: {exc}")
+
+    # Optional team-level stats (points, EPA, success rates).
+    if team_stats is not None and team_stats.height > 0:
+        try:
+            ts = team_stats
+            team_col = next(
+                (c for c in ["team", "posteam", "team_abbr", "club_code"] if c in ts.columns),
+                None,
+            )
+            required_ts = {"season", "week"}
+            if team_col is None or not required_ts.issubset(set(ts.columns)):
+                raise ValueError("team_stats missing season/week/team columns")
+
+            candidate_cols = [
+                "points",
+                "points_allowed",
+                "offensive_epa",
+                "defensive_epa",
+                "passing_epa",
+                "rushing_epa",
+                "special_teams_epa",
+                "success_rate",
+                "pass_success_rate",
+                "rush_success_rate",
+                "cpoe",
+                "wpa",
+                "epa_per_play",
+                "pass_epa_per_play",
+                "rush_epa_per_play",
+            ]
+            present_cols = [c for c in candidate_cols if c in ts.columns]
+            if not present_cols:
+                raise ValueError("team_stats has no numeric stat columns")
+
+            agg = (
+                ts.select(["season", "week", pl.col(team_col).alias("team")] + present_cols)
+                .group_by(["season", "week", "team"])
+                .agg([pl.col(c).mean().alias(c) for c in present_cols])
+            )
+
+            home_ts = agg.select(
+                "season",
+                "week",
+                pl.col("team").alias("home_team"),
+                *[pl.col(c).alias(f"home_{c}") for c in present_cols],
+            )
+            away_ts = agg.select(
+                "season",
+                "week",
+                pl.col("team").alias("away_team"),
+                *[pl.col(c).alias(f"away_{c}") for c in present_cols],
+            )
+
+            out = out.join(home_ts, on=["season", "week", "home_team"], how="left").join(
+                away_ts, on=["season", "week", "away_team"], how="left"
+            )
+        except Exception as exc:  # pragma: no cover – defensive
+            print(f"Could not add team-stats features: {exc}")
 
     return out
 

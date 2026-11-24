@@ -69,6 +69,38 @@ INJURIES = [
     "inj_out_diff",
     "inj_total_diff",
 ]
+TEAM_STATS = [
+    "home_points",
+    "away_points",
+    "home_points_allowed",
+    "away_points_allowed",
+    "home_offensive_epa",
+    "away_offensive_epa",
+    "home_defensive_epa",
+    "away_defensive_epa",
+    "home_passing_epa",
+    "away_passing_epa",
+    "home_rushing_epa",
+    "away_rushing_epa",
+    "home_special_teams_epa",
+    "away_special_teams_epa",
+    "home_success_rate",
+    "away_success_rate",
+    "home_pass_success_rate",
+    "away_pass_success_rate",
+    "home_rush_success_rate",
+    "away_rush_success_rate",
+    "home_cpoe",
+    "away_cpoe",
+    "home_wpa",
+    "away_wpa",
+    "home_epa_per_play",
+    "away_epa_per_play",
+    "home_pass_epa_per_play",
+    "away_pass_epa_per_play",
+    "home_rush_epa_per_play",
+    "away_rush_epa_per_play",
+]
 
 
 def load_features() -> pl.DataFrame:
@@ -133,6 +165,7 @@ def backtest(df: pl.DataFrame, features: list[str]) -> dict:
 
 def main() -> None:
     raw = load_features()
+    team_stats_cols = [c for c in TEAM_STATS if c in raw.columns]
 
     experiments = {
         "base": BASE,
@@ -141,6 +174,8 @@ def main() -> None:
         "base+epa+rest": BASE + EPA + REST,
         "base+epa+rest+injuries": BASE + EPA + REST + INJURIES,
     }
+    if team_stats_cols:
+        experiments["base+epa+rest+team_stats"] = BASE + EPA + REST + team_stats_cols
 
     results = {}
     for name, features in experiments.items():
