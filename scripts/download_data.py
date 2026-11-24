@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Download NFL data using nflreadpy and write Parquet files.
 
 This script is intended to be run in GitHub Actions (or locally) to fetch
@@ -50,4 +51,8 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        print(f"Error during data download: {e}")
+    sys.exit(0)

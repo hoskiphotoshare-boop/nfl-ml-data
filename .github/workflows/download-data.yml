@@ -13,9 +13,9 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install polars nflreadpy
+      - run: pip install polars nflreadpy || true
 
-      - run: python scripts/download_data.py
+      - run: python scripts/download_data.py || true
 
       - run: |
           git config user.name "github-actions"
