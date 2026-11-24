@@ -1,7 +1,7 @@
 {
   "summary": {
     "games_compared": 32,
-    "mean_edge": -0.0196,
+    "mean_edge": -0.0195,
     "mean_abs_edge": 0.1805,
     "max_abs_edge": 0.505
   },
@@ -10,481 +10,1601 @@
       "game_id": "2026_12_GB_LA",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-26T01:00:00Z",
       "home_team": "LA",
       "away_team": "GB",
       "model_home_win_prob": 0.495,
       "market_home_win_prob": 0.5527,
       "edge": -0.0577,
       "abs_edge": 0.0577,
+      "ev_home_ml": -13.87,
+      "ev_away_ml": 11.1,
+      "best_ev": 11.1,
+      "best_ev_side": "away",
       "model_spread": -0.5,
       "market_spread": -2.5,
+      "spread_edge": -2.0,
       "model_total": 46.5,
-      "market_total": 44.0
+      "market_total": 44.0,
+      "total_edge": 2.5,
+      "best_home_ml": {
+        "price": 1.74,
+        "bookmaker": "draftkings"
+      },
+      "best_away_ml": {
+        "price": 2.2,
+        "bookmaker": "fanduel"
+      },
+      "best_home_spread": {
+        "point": -1.5,
+        "price": 1.82,
+        "bookmaker": "betonlineag"
+      },
+      "best_away_spread": {
+        "point": 2.5,
+        "price": 1.97,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 43.5,
+        "price": 1.88,
+        "bookmaker": "betrivers"
+      },
+      "best_under": {
+        "point": 44.5,
+        "price": 1.83,
+        "bookmaker": "fanduel"
+      }
     },
     {
       "game_id": "2026_12_CHI_DET",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-26T18:00:00Z",
       "home_team": "DET",
       "away_team": "CHI",
       "model_home_win_prob": 0.473,
-      "market_home_win_prob": 0.445,
-      "edge": 0.028,
-      "abs_edge": 0.028,
+      "market_home_win_prob": 0.4553,
+      "edge": 0.0177,
+      "abs_edge": 0.0177,
+      "ev_home_ml": 2.641,
+      "ev_away_ml": -5.667,
+      "best_ev": 2.641,
+      "best_ev_side": "home",
       "model_spread": -0.8,
-      "market_spread": 2.5,
+      "market_spread": 2.25,
+      "spread_edge": 3.05,
       "model_total": 44.4,
-      "market_total": 55.5
+      "market_total": 55.5,
+      "total_edge": -11.1,
+      "best_home_ml": {
+        "price": 2.17,
+        "bookmaker": "betrivers"
+      },
+      "best_away_ml": {
+        "price": 1.79,
+        "bookmaker": "fanduel"
+      },
+      "best_home_spread": {
+        "point": 2.5,
+        "price": 1.92,
+        "bookmaker": "betrivers"
+      },
+      "best_away_spread": {
+        "point": -1.0,
+        "price": 1.87,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 55.0,
+        "price": 1.91,
+        "bookmaker": "betmgm"
+      },
+      "best_under": {
+        "point": 55.5,
+        "price": 1.91,
+        "bookmaker": "betrivers"
+      }
     },
     {
       "game_id": "2026_12_PHI_DAL",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-26T21:30:00Z",
       "home_team": "DAL",
       "away_team": "PHI",
       "model_home_win_prob": 0.511,
       "market_home_win_prob": 0.7867,
       "edge": -0.2757,
       "abs_edge": 0.2757,
+      "ev_home_ml": -37.147,
+      "ev_away_ml": 134.72,
+      "best_ev": 134.72,
+      "best_ev_side": "away",
       "model_spread": -1.0,
       "market_spread": -8.5,
+      "spread_edge": -7.5,
       "model_total": 45.2,
-      "market_total": 48.0
+      "market_total": 48.0,
+      "total_edge": -2.8,
+      "best_home_ml": {
+        "price": 1.23,
+        "bookmaker": "betus"
+      },
+      "best_away_ml": {
+        "price": 4.8,
+        "bookmaker": "fanduel"
+      },
+      "best_home_spread": {
+        "point": -8.5,
+        "price": 1.93,
+        "bookmaker": "betmgm"
+      },
+      "best_away_spread": {
+        "point": 10.0,
+        "price": 1.79,
+        "bookmaker": "betonlineag"
+      },
+      "best_over": {
+        "point": 47.5,
+        "price": 1.87,
+        "bookmaker": "draftkings"
+      },
+      "best_under": {
+        "point": 48.5,
+        "price": 1.87,
+        "bookmaker": "fanduel"
+      }
     },
     {
       "game_id": "2026_12_KC_BUF",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-27T01:20:00Z",
       "home_team": "BUF",
       "away_team": "KC",
       "model_home_win_prob": 0.577,
       "market_home_win_prob": 0.574,
       "edge": 0.003,
       "abs_edge": 0.003,
+      "ev_home_ml": -2.487,
+      "ev_away_ml": -3.556,
+      "best_ev": -2.487,
+      "best_ev_side": "home",
       "model_spread": -0.9,
       "market_spread": -2.5,
+      "spread_edge": -1.6,
       "model_total": 44.8,
-      "market_total": 47.5
+      "market_total": 47.5,
+      "total_edge": -2.7,
+      "best_home_ml": {
+        "price": 1.69,
+        "bookmaker": "betonlineag"
+      },
+      "best_away_ml": {
+        "price": 2.28,
+        "bookmaker": "fanduel"
+      },
+      "best_home_spread": {
+        "point": -2.0,
+        "price": 1.83,
+        "bookmaker": "betus"
+      },
+      "best_away_spread": {
+        "point": 3.0,
+        "price": 1.87,
+        "bookmaker": "betrivers"
+      },
+      "best_over": {
+        "point": 47.0,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_under": {
+        "point": 47.5,
+        "price": 1.92,
+        "bookmaker": "betrivers"
+      }
     },
     {
       "game_id": "2026_12_DEN_PIT",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-27T20:00:00Z",
       "home_team": "PIT",
       "away_team": "DEN",
       "model_home_win_prob": 0.376,
       "market_home_win_prob": 0.4161,
       "edge": -0.0401,
       "abs_edge": 0.0401,
+      "ev_home_ml": -12.768,
+      "ev_away_ml": 3.584,
+      "best_ev": 3.584,
+      "best_ev_side": "away",
       "model_spread": 1.1,
       "market_spread": 3.0,
+      "spread_edge": 1.9,
       "model_total": 43.3,
-      "market_total": 37.5
+      "market_total": 37.5,
+      "total_edge": 5.8,
+      "best_home_ml": {
+        "price": 2.32,
+        "bookmaker": "draftkings"
+      },
+      "best_away_ml": {
+        "price": 1.66,
+        "bookmaker": "betonlineag"
+      },
+      "best_home_spread": {
+        "point": 3.0,
+        "price": 1.87,
+        "bookmaker": "betrivers"
+      },
+      "best_away_spread": {
+        "point": -2.5,
+        "price": 1.86,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 37.5,
+        "price": 1.98,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 38.0,
+        "price": 1.88,
+        "bookmaker": "betrivers"
+      }
     },
     {
       "game_id": "2026_12_NO_CIN",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-29T18:00:00Z",
       "home_team": "CIN",
       "away_team": "NO",
       "model_home_win_prob": 0.315,
       "market_home_win_prob": 0.82,
       "edge": -0.505,
       "abs_edge": 0.505,
+      "ev_home_ml": -62.83,
+      "ev_away_ml": 276.75,
+      "best_ev": 276.75,
+      "best_ev_side": "away",
       "model_spread": -1.5,
       "market_spread": -10.0,
+      "spread_edge": -8.5,
       "model_total": 46.1,
-      "market_total": 50.5
+      "market_total": 50.5,
+      "total_edge": -4.4,
+      "best_home_ml": {
+        "price": 1.18,
+        "bookmaker": "betus"
+      },
+      "best_away_ml": {
+        "price": 5.5,
+        "bookmaker": "betmgm"
+      },
+      "best_home_spread": {
+        "point": -9.5,
+        "price": 1.83,
+        "bookmaker": "fanduel"
+      },
+      "best_away_spread": {
+        "point": 10.0,
+        "price": 1.91,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 50.5,
+        "price": 1.93,
+        "bookmaker": "draftkings"
+      },
+      "best_under": {
+        "point": 50.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      }
     },
     {
       "game_id": "2026_12_LV_CLE",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-30T01:20:00Z",
       "home_team": "CLE",
       "away_team": "LV",
       "model_home_win_prob": 0.505,
       "market_home_win_prob": 0.6709,
       "edge": -0.1659,
       "abs_edge": 0.1659,
+      "ev_home_ml": -26.27,
+      "ev_away_ml": 48.5,
+      "best_ev": 48.5,
+      "best_ev_side": "away",
       "model_spread": -0.5,
       "market_spread": -4.5,
+      "spread_edge": -4.0,
       "model_total": 43.8,
-      "market_total": 40.75
+      "market_total": 40.75,
+      "total_edge": 3.05,
+      "best_home_ml": {
+        "price": 1.46,
+        "bookmaker": "draftkings"
+      },
+      "best_away_ml": {
+        "price": 3.0,
+        "bookmaker": "betus"
+      },
+      "best_home_spread": {
+        "point": -4.5,
+        "price": 1.95,
+        "bookmaker": "draftkings"
+      },
+      "best_away_spread": {
+        "point": 4.5,
+        "price": 1.95,
+        "bookmaker": "fanduel"
+      },
+      "best_over": {
+        "point": 40.0,
+        "price": 1.92,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 41.5,
+        "price": 1.91,
+        "bookmaker": "betrivers"
+      }
     },
     {
       "game_id": "2026_12_BAL_HOU",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-29T18:00:00Z",
       "home_team": "HOU",
       "away_team": "BAL",
       "model_home_win_prob": 0.393,
       "market_home_win_prob": 0.7308,
       "edge": -0.3378,
       "abs_edge": 0.3378,
+      "ev_home_ml": -48.124,
+      "ev_away_ml": 124.59,
+      "best_ev": 124.59,
+      "best_ev_side": "away",
       "model_spread": -3.1,
       "market_spread": -7.0,
+      "spread_edge": -3.9,
       "model_total": 42.8,
-      "market_total": 47.0
+      "market_total": 47.0,
+      "total_edge": -4.2,
+      "best_home_ml": {
+        "price": 1.32,
+        "bookmaker": "betus"
+      },
+      "best_away_ml": {
+        "price": 3.7,
+        "bookmaker": "fanduel"
+      },
+      "best_home_spread": {
+        "point": -6.5,
+        "price": 1.88,
+        "bookmaker": "betrivers"
+      },
+      "best_away_spread": {
+        "point": 7.0,
+        "price": 1.91,
+        "bookmaker": "mybookieag"
+      },
+      "best_over": {
+        "point": 46.5,
+        "price": 1.85,
+        "bookmaker": "betrivers"
+      },
+      "best_under": {
+        "point": 47.5,
+        "price": 1.87,
+        "bookmaker": "fanduel"
+      }
     },
     {
       "game_id": "2026_12_NYG_IND",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-29T18:00:00Z",
       "home_team": "IND",
       "away_team": "NYG",
       "model_home_win_prob": 0.582,
       "market_home_win_prob": 0.2719,
       "edge": 0.3101,
       "abs_edge": 0.3101,
+      "ev_home_ml": 118.25,
+      "ev_away_ml": -44.824,
+      "best_ev": 118.25,
+      "best_ev_side": "home",
       "model_spread": 1.7,
       "market_spread": 6.5,
+      "spread_edge": 4.8,
       "model_total": 45.4,
-      "market_total": 41.5
+      "market_total": 41.5,
+      "total_edge": 3.9,
+      "best_home_ml": {
+        "price": 3.75,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.32,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 6.5,
+        "price": 1.96,
+        "bookmaker": "draftkings"
+      },
+      "best_away_spread": {
+        "point": -6.5,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 41.0,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_under": {
+        "point": 42.5,
+        "price": 1.83,
+        "bookmaker": "fanduel"
+      }
     },
     {
       "game_id": "2026_12_NYJ_MIA",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-29T18:00:00Z",
       "home_team": "MIA",
       "away_team": "NYJ",
       "model_home_win_prob": 0.77,
       "market_home_win_prob": 0.3584,
       "edge": 0.4116,
       "abs_edge": 0.4116,
+      "ev_home_ml": 112.52,
+      "ev_away_ml": -65.27,
+      "best_ev": 112.52,
+      "best_ev_side": "home",
       "model_spread": 0.6,
       "market_spread": 3.5,
+      "spread_edge": 2.9,
       "model_total": 42.0,
-      "market_total": 41.0
+      "market_total": 41.0,
+      "total_edge": 1.0,
+      "best_home_ml": {
+        "price": 2.76,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.51,
+        "bookmaker": "lowvig"
+      },
+      "best_home_spread": {
+        "point": 4.0,
+        "price": 1.89,
+        "bookmaker": "betmgm"
+      },
+      "best_away_spread": {
+        "point": -3.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 40.5,
+        "price": 1.91,
+        "bookmaker": "fanduel"
+      },
+      "best_under": {
+        "point": 41.0,
+        "price": 1.91,
+        "bookmaker": "lowvig"
+      }
     },
     {
       "game_id": "2026_12_ATL_MIN",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-29T18:00:00Z",
       "home_team": "MIN",
       "away_team": "ATL",
       "model_home_win_prob": 0.687,
       "market_home_win_prob": 0.734,
       "edge": -0.047,
       "abs_edge": 0.047,
+      "ev_home_ml": -9.316,
+      "ev_away_ml": 16.749,
+      "best_ev": 16.749,
+      "best_ev_side": "away",
       "model_spread": 0.8,
       "market_spread": -7.0,
+      "spread_edge": -7.8,
       "model_total": 45.1,
-      "market_total": 41.5
+      "market_total": 41.5,
+      "total_edge": 3.6,
+      "best_home_ml": {
+        "price": 1.32,
+        "bookmaker": "betrivers"
+      },
+      "best_away_ml": {
+        "price": 3.73,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": -7.0,
+        "price": 2.06,
+        "bookmaker": "lowvig"
+      },
+      "best_away_spread": {
+        "point": 7.0,
+        "price": 1.87,
+        "bookmaker": "fanduel"
+      },
+      "best_over": {
+        "point": 41.5,
+        "price": 1.98,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 42.5,
+        "price": 1.89,
+        "bookmaker": "betrivers"
+      }
     },
     {
       "game_id": "2026_12_TEN_JAX",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-29T18:00:00Z",
       "home_team": "JAX",
       "away_team": "TEN",
       "model_home_win_prob": 0.717,
-      "market_home_win_prob": 0.8875,
-      "edge": -0.1705,
-      "abs_edge": 0.1705,
+      "market_home_win_prob": 0.8873,
+      "edge": -0.1703,
+      "abs_edge": 0.1703,
+      "ev_home_ml": -21.847,
+      "ev_away_ml": 149.04,
+      "best_ev": 149.04,
+      "best_ev_side": "away",
       "model_spread": -0.1,
       "market_spread": -14.5,
+      "spread_edge": -14.4,
       "model_total": 43.3,
-      "market_total": 48.5
+      "market_total": 48.5,
+      "total_edge": -5.2,
+      "best_home_ml": {
+        "price": 1.09,
+        "bookmaker": "betmgm"
+      },
+      "best_away_ml": {
+        "price": 8.8,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": -14.0,
+        "price": 1.91,
+        "bookmaker": "mybookieag"
+      },
+      "best_away_spread": {
+        "point": 14.5,
+        "price": 2.01,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 47.5,
+        "price": 1.87,
+        "bookmaker": "betrivers"
+      },
+      "best_under": {
+        "point": 48.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      }
     },
     {
       "game_id": "2026_12_WAS_ARI",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-29T21:25:00Z",
       "home_team": "ARI",
       "away_team": "WAS",
       "model_home_win_prob": 0.179,
       "market_home_win_prob": 0.2476,
       "edge": -0.0686,
       "abs_edge": 0.0686,
+      "ev_home_ml": -28.4,
+      "ev_away_ml": 5.909,
+      "best_ev": 5.909,
+      "best_ev_side": "away",
       "model_spread": -0.4,
       "market_spread": 7.0,
+      "spread_edge": 7.4,
       "model_total": 44.0,
-      "market_total": 41.5
+      "market_total": 41.5,
+      "total_edge": 2.5,
+      "best_home_ml": {
+        "price": 4.0,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.29,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 7.0,
+        "price": 1.95,
+        "bookmaker": "fanduel"
+      },
+      "best_away_spread": {
+        "point": -7.0,
+        "price": 1.97,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 41.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 42.0,
+        "price": 1.91,
+        "bookmaker": "betus"
+      }
     },
     {
       "game_id": "2026_12_SEA_SF",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-29T21:25:00Z",
       "home_team": "SF",
       "away_team": "SEA",
       "model_home_win_prob": 0.634,
-      "market_home_win_prob": 0.6162,
-      "edge": 0.0178,
-      "abs_edge": 0.0178,
+      "market_home_win_prob": 0.6139,
+      "edge": 0.0201,
+      "abs_edge": 0.0201,
+      "ev_home_ml": 3.342,
+      "ev_away_ml": -5.938,
+      "best_ev": 3.342,
+      "best_ev_side": "home",
       "model_spread": -1.4,
       "market_spread": -3.0,
+      "spread_edge": -1.6,
       "model_total": 44.4,
-      "market_total": 45.0
+      "market_total": 45.0,
+      "total_edge": -0.6,
+      "best_home_ml": {
+        "price": 1.63,
+        "bookmaker": "betrivers"
+      },
+      "best_away_ml": {
+        "price": 2.57,
+        "bookmaker": "lowvig"
+      },
+      "best_home_spread": {
+        "point": -3.0,
+        "price": 1.93,
+        "bookmaker": "betrivers"
+      },
+      "best_away_spread": {
+        "point": 3.5,
+        "price": 1.85,
+        "bookmaker": "draftkings"
+      },
+      "best_over": {
+        "point": 45.0,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 46.0,
+        "price": 1.89,
+        "bookmaker": "betrivers"
+      }
     },
     {
       "game_id": "2026_12_NE_LAC",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-11-29T21:05:00Z",
       "home_team": "LAC",
       "away_team": "NE",
       "model_home_win_prob": 0.366,
       "market_home_win_prob": 0.5091,
       "edge": -0.1431,
       "abs_edge": 0.1431,
+      "ev_home_ml": -30.826,
+      "ev_away_ml": 24.264,
+      "best_ev": 24.264,
+      "best_ev_side": "away",
       "model_spread": -2.9,
       "market_spread": -0.75,
+      "spread_edge": 2.15,
       "model_total": 45.0,
-      "market_total": 35.5
+      "market_total": 35.5,
+      "total_edge": 9.5,
+      "best_home_ml": {
+        "price": 1.89,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.96,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 0.0,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_away_spread": {
+        "point": 1.5,
+        "price": 1.87,
+        "bookmaker": "fanduel"
+      },
+      "best_over": {
+        "point": 35.0,
+        "price": 1.91,
+        "bookmaker": "betmgm"
+      },
+      "best_under": {
+        "point": 35.5,
+        "price": 1.93,
+        "bookmaker": "fanduel"
+      }
     },
     {
       "game_id": "2026_12_CAR_TB",
       "season": 2026,
       "week": 12,
+      "commence_time": "2026-12-01T01:15:00Z",
       "home_team": "TB",
       "away_team": "CAR",
       "model_home_win_prob": 0.762,
       "market_home_win_prob": 0.5823,
       "edge": 0.1797,
       "abs_edge": 0.1797,
+      "ev_home_ml": 27.254,
+      "ev_away_ml": -42.642,
+      "best_ev": 27.254,
+      "best_ev_side": "home",
       "model_spread": 0.8,
       "market_spread": -3.0,
+      "spread_edge": -3.8,
       "model_total": 43.2,
-      "market_total": 43.5
+      "market_total": 43.5,
+      "total_edge": -0.3,
+      "best_home_ml": {
+        "price": 1.67,
+        "bookmaker": "betus"
+      },
+      "best_away_ml": {
+        "price": 2.41,
+        "bookmaker": "lowvig"
+      },
+      "best_home_spread": {
+        "point": -3.0,
+        "price": 2.0,
+        "bookmaker": "betus"
+      },
+      "best_away_spread": {
+        "point": 3.0,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 43.5,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 43.5,
+        "price": 1.95,
+        "bookmaker": "fanduel"
+      }
     },
     {
       "game_id": "2026_13_KC_LA",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-04T01:15:00Z",
       "home_team": "LA",
       "away_team": "KC",
       "model_home_win_prob": 0.437,
       "market_home_win_prob": 0.4889,
       "edge": -0.0519,
       "abs_edge": 0.0519,
+      "ev_home_ml": -11.726,
+      "ev_away_ml": 8.659,
+      "best_ev": 8.659,
+      "best_ev_side": "away",
       "model_spread": 0.0,
       "market_spread": 0.0,
+      "spread_edge": 0.0,
       "model_total": 46.0,
-      "market_total": 45.5
+      "market_total": 45.5,
+      "total_edge": 0.5,
+      "best_home_ml": {
+        "price": 2.02,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.93,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 1.5,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_away_spread": {
+        "point": 1.5,
+        "price": 1.82,
+        "bookmaker": "draftkings"
+      },
+      "best_over": {
+        "point": 44.5,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_under": {
+        "point": 46.5,
+        "price": 1.88,
+        "bookmaker": "draftkings"
+      }
     },
     {
       "game_id": "2026_13_DET_ATL",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T18:00:00Z",
       "home_team": "ATL",
       "away_team": "DET",
       "model_home_win_prob": 0.475,
       "market_home_win_prob": 0.3701,
       "edge": 0.1049,
       "abs_edge": 0.1049,
+      "ev_home_ml": 24.45,
+      "ev_away_ml": -19.675,
+      "best_ev": 24.45,
+      "best_ev_side": "home",
       "model_spread": 0.8,
       "market_spread": 3.5,
+      "spread_edge": 2.7,
       "model_total": 46.0,
-      "market_total": 50.5
+      "market_total": 50.5,
+      "total_edge": -4.5,
+      "best_home_ml": {
+        "price": 2.62,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.53,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 4.0,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_away_spread": {
+        "point": -3.5,
+        "price": 1.96,
+        "bookmaker": "draftkings"
+      },
+      "best_over": {
+        "point": 49.5,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_under": {
+        "point": 50.5,
+        "price": 1.98,
+        "bookmaker": "lowvig"
+      }
     },
     {
       "game_id": "2026_13_JAX_CHI",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T18:00:00Z",
       "home_team": "CHI",
       "away_team": "JAX",
       "model_home_win_prob": 0.937,
       "market_home_win_prob": 0.5756,
       "edge": 0.3614,
       "abs_edge": 0.3614,
+      "ev_home_ml": 58.353,
+      "ev_away_ml": -85.447,
+      "best_ev": 58.353,
+      "best_ev_side": "home",
       "model_spread": 0.3,
       "market_spread": -3.0,
+      "spread_edge": -3.3,
       "model_total": 42.3,
-      "market_total": 50.0
+      "market_total": 50.0,
+      "total_edge": -7.7,
+      "best_home_ml": {
+        "price": 1.69,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 2.31,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": -2.5,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_away_spread": {
+        "point": 3.0,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 49.5,
+        "price": 1.87,
+        "bookmaker": "draftkings"
+      },
+      "best_under": {
+        "point": 50.5,
+        "price": 1.87,
+        "bookmaker": "fanduel"
+      }
     },
     {
       "game_id": "2026_13_CIN_CLE",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T18:00:00Z",
       "home_team": "CLE",
       "away_team": "CIN",
       "model_home_win_prob": 0.542,
       "market_home_win_prob": 0.3154,
       "edge": 0.2266,
       "abs_edge": 0.2266,
+      "ev_home_ml": 69.104,
+      "ev_away_ml": -34.964,
+      "best_ev": 69.104,
+      "best_ev_side": "home",
       "model_spread": -2.0,
       "market_spread": 4.5,
+      "spread_edge": 6.5,
       "model_total": 42.8,
-      "market_total": 47.5
+      "market_total": 47.5,
+      "total_edge": -4.7,
+      "best_home_ml": {
+        "price": 3.12,
+        "bookmaker": "draftkings"
+      },
+      "best_away_ml": {
+        "price": 1.42,
+        "bookmaker": "fanduel"
+      },
+      "best_home_spread": {
+        "point": 6.0,
+        "price": 1.91,
+        "bookmaker": "draftkings"
+      },
+      "best_away_spread": {
+        "point": -4.5,
+        "price": 1.91,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 46.5,
+        "price": 1.88,
+        "bookmaker": "draftkings"
+      },
+      "best_under": {
+        "point": 47.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      }
     },
     {
       "game_id": "2026_13_GB_NO",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T18:00:00Z",
       "home_team": "NO",
       "away_team": "GB",
       "model_home_win_prob": 0.385,
       "market_home_win_prob": 0.322,
       "edge": 0.063,
       "abs_edge": 0.063,
+      "ev_home_ml": 17.81,
+      "ev_away_ml": -12.055,
+      "best_ev": 17.81,
+      "best_ev_side": "home",
       "model_spread": -1.0,
       "market_spread": 5.5,
+      "spread_edge": 6.5,
       "model_total": 47.3,
-      "market_total": 46.0
+      "market_total": 46.0,
+      "total_edge": 1.3,
+      "best_home_ml": {
+        "price": 3.06,
+        "bookmaker": "draftkings"
+      },
+      "best_away_ml": {
+        "price": 1.43,
+        "bookmaker": "fanduel"
+      },
+      "best_home_spread": {
+        "point": 5.5,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_away_spread": {
+        "point": -5.0,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_over": {
+        "point": 45.5,
+        "price": 1.87,
+        "bookmaker": "fanduel"
+      },
+      "best_under": {
+        "point": 46.5,
+        "price": 1.91,
+        "bookmaker": "draftkings"
+      }
     },
     {
       "game_id": "2026_13_SF_NYG",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T18:00:00Z",
       "home_team": "NYG",
       "away_team": "SF",
       "model_home_win_prob": 0.255,
       "market_home_win_prob": 0.2749,
       "edge": -0.0199,
       "abs_edge": 0.0199,
+      "ev_home_ml": -8.2,
+      "ev_away_ml": -0.17,
+      "best_ev": -0.17,
+      "best_ev_side": "away",
       "model_spread": -0.7,
       "market_spread": 6.0,
+      "spread_edge": 6.7,
       "model_total": 44.1,
-      "market_total": 47.5
+      "market_total": 47.5,
+      "total_edge": -3.4,
+      "best_home_ml": {
+        "price": 3.6,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.34,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 6.5,
+        "price": 1.91,
+        "bookmaker": "draftkings"
+      },
+      "best_away_spread": {
+        "point": -6.0,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 47.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 48.0,
+        "price": 1.91,
+        "bookmaker": "betus"
+      }
     },
     {
       "game_id": "2026_13_LAC_TB",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T18:00:00Z",
       "home_team": "TB",
       "away_team": "LAC",
       "model_home_win_prob": 0.506,
-      "market_home_win_prob": 0.6954,
-      "edge": -0.1894,
-      "abs_edge": 0.1894,
+      "market_home_win_prob": 0.6957,
+      "edge": -0.1897,
+      "abs_edge": 0.1897,
+      "ev_home_ml": -29.666,
+      "ev_away_ml": 58.08,
+      "best_ev": 58.08,
+      "best_ev_side": "away",
       "model_spread": -0.3,
       "market_spread": -5.5,
+      "spread_edge": -5.2,
       "model_total": 44.1,
-      "market_total": 40.5
+      "market_total": 40.5,
+      "total_edge": 3.6,
+      "best_home_ml": {
+        "price": 1.39,
+        "bookmaker": "draftkings"
+      },
+      "best_away_ml": {
+        "price": 3.2,
+        "bookmaker": "fanduel"
+      },
+      "best_home_spread": {
+        "point": -5.5,
+        "price": 1.91,
+        "bookmaker": "draftkings"
+      },
+      "best_away_spread": {
+        "point": 5.5,
+        "price": 2.0,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 40.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 41.5,
+        "price": 1.91,
+        "bookmaker": "betus"
+      }
     },
     {
       "game_id": "2026_13_WAS_TEN",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T18:00:00Z",
       "home_team": "TEN",
       "away_team": "WAS",
       "model_home_win_prob": 0.443,
       "market_home_win_prob": 0.3459,
       "edge": 0.0971,
       "abs_edge": 0.0971,
+      "ev_home_ml": 24.04,
+      "ev_away_ml": -18.121,
+      "best_ev": 24.04,
+      "best_ev_side": "home",
       "model_spread": 0.6,
       "market_spread": 4.0,
+      "spread_edge": 3.4,
       "model_total": 43.6,
-      "market_total": 46.5
+      "market_total": 46.5,
+      "total_edge": -2.9,
+      "best_home_ml": {
+        "price": 2.8,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.47,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 4.5,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_away_spread": {
+        "point": -3.5,
+        "price": 1.88,
+        "bookmaker": "draftkings"
+      },
+      "best_over": {
+        "point": 46.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 47.5,
+        "price": 1.91,
+        "bookmaker": "draftkings"
+      }
     },
     {
       "game_id": "2026_13_PHI_ARI",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T21:05:00Z",
       "home_team": "ARI",
       "away_team": "PHI",
       "model_home_win_prob": 0.109,
       "market_home_win_prob": 0.4129,
       "edge": -0.3039,
       "abs_edge": 0.3039,
+      "ev_home_ml": -74.494,
+      "ev_away_ml": 46.124,
+      "best_ev": 46.124,
+      "best_ev_side": "away",
       "model_spread": -3.4,
       "market_spread": 2.5,
+      "spread_edge": 5.9,
       "model_total": 44.8,
-      "market_total": 36.5
+      "market_total": 36.5,
+      "total_edge": 8.3,
+      "best_home_ml": {
+        "price": 2.34,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.64,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 3.0,
+        "price": 1.92,
+        "bookmaker": "draftkings"
+      },
+      "best_away_spread": {
+        "point": -2.5,
+        "price": 1.91,
+        "bookmaker": "betus"
+      },
+      "best_over": {
+        "point": 36.5,
+        "price": 1.95,
+        "bookmaker": "fanduel"
+      },
+      "best_under": {
+        "point": 36.5,
+        "price": 1.96,
+        "bookmaker": "draftkings"
+      }
     },
     {
       "game_id": "2026_13_MIA_DEN",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T18:00:00Z",
       "home_team": "DEN",
       "away_team": "MIA",
       "model_home_win_prob": 0.552,
       "market_home_win_prob": 0.8896,
       "edge": -0.3376,
       "abs_edge": 0.3376,
+      "ev_home_ml": -39.832,
+      "ev_away_ml": 316.64,
+      "best_ev": 316.64,
+      "best_ev_side": "away",
       "model_spread": 1.3,
       "market_spread": -14.0,
+      "spread_edge": -15.3,
       "model_total": 43.4,
-      "market_total": 39.5
+      "market_total": 39.5,
+      "total_edge": 3.9,
+      "best_home_ml": {
+        "price": 1.09,
+        "bookmaker": "draftkings"
+      },
+      "best_away_ml": {
+        "price": 9.3,
+        "bookmaker": "fanduel"
+      },
+      "best_home_spread": {
+        "point": -14.0,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_away_spread": {
+        "point": 14.5,
+        "price": 1.91,
+        "bookmaker": "fanduel"
+      },
+      "best_over": {
+        "point": 38.5,
+        "price": 1.87,
+        "bookmaker": "fanduel"
+      },
+      "best_under": {
+        "point": 39.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      }
     },
     {
       "game_id": "2026_13_CAR_MIN",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T21:25:00Z",
       "home_team": "MIN",
       "away_team": "CAR",
       "model_home_win_prob": 0.781,
       "market_home_win_prob": 0.6777,
       "edge": 0.1033,
       "abs_edge": 0.1033,
+      "ev_home_ml": 11.683,
+      "ev_away_ml": -33.205,
+      "best_ev": 11.683,
+      "best_ev_side": "home",
       "model_spread": 1.1,
       "market_spread": -4.5,
+      "spread_edge": -5.6,
       "model_total": 44.2,
-      "market_total": 42.0
+      "market_total": 42.0,
+      "total_edge": 2.2,
+      "best_home_ml": {
+        "price": 1.43,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 3.05,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": -4.5,
+        "price": 1.91,
+        "bookmaker": "lowvig"
+      },
+      "best_away_spread": {
+        "point": 5.5,
+        "price": 1.91,
+        "bookmaker": "draftkings"
+      },
+      "best_over": {
+        "point": 42.0,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 43.5,
+        "price": 1.87,
+        "bookmaker": "draftkings"
+      }
     },
     {
       "game_id": "2026_13_BUF_NE",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-06T21:25:00Z",
       "home_team": "NE",
       "away_team": "BUF",
       "model_home_win_prob": 0.457,
       "market_home_win_prob": 0.1415,
       "edge": 0.3155,
       "abs_edge": 0.3155,
+      "ev_home_ml": 224.47,
+      "ev_away_ml": -38.641,
+      "best_ev": 224.47,
+      "best_ev_side": "home",
       "model_spread": 2.8,
       "market_spread": 13.5,
+      "spread_edge": 10.7,
       "model_total": 44.3,
-      "market_total": 44.5
+      "market_total": 44.5,
+      "total_edge": -0.2,
+      "best_home_ml": {
+        "price": 7.1,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 1.13,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 13.5,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_away_spread": {
+        "point": -12.5,
+        "price": 1.92,
+        "bookmaker": "draftkings"
+      },
+      "best_over": {
+        "point": 44.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 44.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      }
     },
     {
       "game_id": "2026_13_HOU_PIT",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-07T01:20:00Z",
       "home_team": "PIT",
       "away_team": "HOU",
       "model_home_win_prob": 0.311,
       "market_home_win_prob": 0.4141,
       "edge": -0.1031,
       "abs_edge": 0.1031,
+      "ev_home_ml": -27.848,
+      "ev_away_ml": 12.996,
+      "best_ev": 12.996,
+      "best_ev_side": "away",
       "model_spread": 2.5,
       "market_spread": 3.0,
+      "spread_edge": 0.5,
       "model_total": 43.0,
-      "market_total": 43.5
+      "market_total": 43.5,
+      "total_edge": -0.5,
+      "best_home_ml": {
+        "price": 2.32,
+        "bookmaker": "draftkings"
+      },
+      "best_away_ml": {
+        "price": 1.64,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": 3.0,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_away_spread": {
+        "point": -3.0,
+        "price": 1.95,
+        "bookmaker": "betus"
+      },
+      "best_over": {
+        "point": 42.5,
+        "price": 1.88,
+        "bookmaker": "draftkings"
+      },
+      "best_under": {
+        "point": 43.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      }
     },
     {
       "game_id": "2026_13_DAL_SEA",
       "season": 2026,
       "week": 13,
+      "commence_time": "2026-12-08T01:15:00Z",
       "home_team": "SEA",
       "away_team": "DAL",
       "model_home_win_prob": 0.555,
       "market_home_win_prob": 0.6932,
       "edge": -0.1382,
       "abs_edge": 0.1382,
+      "ev_home_ml": -22.855,
+      "ev_away_ml": 40.62,
+      "best_ev": 40.62,
+      "best_ev_side": "away",
       "model_spread": 0.7,
       "market_spread": -6.0,
+      "spread_edge": -6.7,
       "model_total": 44.9,
-      "market_total": 50.5
+      "market_total": 50.5,
+      "total_edge": -5.6,
+      "best_home_ml": {
+        "price": 1.39,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 3.16,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": -5.5,
+        "price": 1.91,
+        "bookmaker": "fanduel"
+      },
+      "best_away_spread": {
+        "point": 6.0,
+        "price": 1.95,
+        "bookmaker": "lowvig"
+      },
+      "best_over": {
+        "point": 50.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 51.5,
+        "price": 1.91,
+        "bookmaker": "fanduel"
+      }
     },
     {
       "game_id": "2026_17_DET_CHI",
       "season": 2026,
       "week": 17,
+      "commence_time": "2026-11-26T18:00:00Z",
       "home_team": "CHI",
       "away_team": "DET",
       "model_home_win_prob": 0.907,
-      "market_home_win_prob": 0.555,
-      "edge": 0.352,
-      "abs_edge": 0.352,
+      "market_home_win_prob": 0.5447,
+      "edge": 0.3623,
+      "abs_edge": 0.3623,
+      "ev_home_ml": 62.353,
+      "ev_away_ml": -79.819,
+      "best_ev": 62.353,
+      "best_ev_side": "home",
       "model_spread": 0.8,
-      "market_spread": -2.5,
+      "market_spread": -2.25,
+      "spread_edge": -3.05,
       "model_total": 44.4,
-      "market_total": 55.5
+      "market_total": 55.5,
+      "total_edge": -11.1,
+      "best_home_ml": {
+        "price": 1.79,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 2.17,
+        "bookmaker": "betrivers"
+      },
+      "best_home_spread": {
+        "point": -1.0,
+        "price": 1.87,
+        "bookmaker": "lowvig"
+      },
+      "best_away_spread": {
+        "point": 2.5,
+        "price": 1.92,
+        "bookmaker": "betrivers"
+      },
+      "best_over": {
+        "point": 55.0,
+        "price": 1.91,
+        "bookmaker": "betmgm"
+      },
+      "best_under": {
+        "point": 55.5,
+        "price": 1.91,
+        "bookmaker": "betrivers"
+      }
     },
     {
       "game_id": "2026_18_CLE_CIN",
       "season": 2026,
       "week": 18,
+      "commence_time": "2026-12-06T18:00:00Z",
       "home_team": "CIN",
       "away_team": "CLE",
       "model_home_win_prob": 0.439,
       "market_home_win_prob": 0.6846,
       "edge": -0.2456,
       "abs_edge": 0.2456,
+      "ev_home_ml": -37.662,
+      "ev_away_ml": 75.032,
+      "best_ev": 75.032,
+      "best_ev_side": "away",
       "model_spread": 2.0,
       "market_spread": -4.5,
+      "spread_edge": -6.5,
       "model_total": 42.8,
-      "market_total": 47.5
+      "market_total": 47.5,
+      "total_edge": -4.7,
+      "best_home_ml": {
+        "price": 1.42,
+        "bookmaker": "fanduel"
+      },
+      "best_away_ml": {
+        "price": 3.12,
+        "bookmaker": "draftkings"
+      },
+      "best_home_spread": {
+        "point": -4.5,
+        "price": 1.91,
+        "bookmaker": "lowvig"
+      },
+      "best_away_spread": {
+        "point": 6.0,
+        "price": 1.91,
+        "bookmaker": "draftkings"
+      },
+      "best_over": {
+        "point": 46.5,
+        "price": 1.88,
+        "bookmaker": "draftkings"
+      },
+      "best_under": {
+        "point": 47.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
+      }
     }
   ]
 }

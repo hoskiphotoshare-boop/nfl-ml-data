@@ -53,6 +53,47 @@ def load_player_features() -> pl.DataFrame:
     return pl.read_parquet(path)
 
 
+def add_position_group(df: pl.DataFrame) -> pl.DataFrame:
+    expr = pl.lit("OTHER")
+    for group, positions in POSITION_GROUPS.items():
+        expr = (
+            pl.when(pl.col("position").is_in(positions))
+            .then(pl.lit(group))
+            .otherwise(expr)
+        )
+    return df.with_columns(expr.alias("pos_group"))
+
+
+def enrich_defense_rating(df: pl.DataFrame) -> pl.DataFrame:
+    if "pos_group" not in df.columns:
+        return df
+
+    agg = (
+        df.filter(pl.col("fantasy_points").is_not_null())
+        .group_by(["season", "week", "opponent_team", "pos_group"])
+        .agg(pl.col("fantasy_points").mean().alias("pts_allowed"))
+        .sort(["opponent_team", "pos_group", "season", "week"])
+    )
+    agg = agg.with_columns(
+        pl.col("pts_allowed")
+        .shift(1)
+        .rolling_mean(window_size=4, min_samples=1)
+        .over(["opponent_team", "pos_group"])
+        .alias("opp_def_rating")
+    )
+    means = agg.group_by("pos_group").agg(pl.col("pts_allowed").mean().alias("_mean"))
+    agg = (
+        agg.join(means, on="pos_group", how="left")
+        .with_columns(pl.col("opp_def_rating").fill_null(pl.col("_mean")))
+        .drop("_mean")
+    )
+    return df.join(
+        agg.select("season", "week", "opponent_team", "pos_group", "opp_def_rating"),
+        on=["season", "week", "opponent_team", "pos_group"],
+        how="left",
+    )
+
+
 def enrich_context(df: pl.DataFrame) -> pl.DataFrame:
     path = None
     for candidate in ["data/schedules.parquet", "data/schedules.csv"]:
@@ -120,7 +161,7 @@ def build_rolling(df: pl.DataFrame) -> tuple[pl.DataFrame, str]:
 
 def feature_cols(df: pl.DataFrame) -> list[str]:
     cols = [c for c in df.columns if c.startswith("roll_")]
-    for extra in ["is_home", "rest_days"]:
+    for extra in ["is_home", "rest_days", "opp_def_rating"]:
         if extra in df.columns:
             cols.append(extra)
     return cols
@@ -292,6 +333,8 @@ def main() -> None:
         return
 
     df = enrich_context(df)
+    df = add_position_group(df)
+    df = enrich_defense_rating(df)
     rolling, id_col = build_rolling(df)
     models = {}
     metrics = {}
