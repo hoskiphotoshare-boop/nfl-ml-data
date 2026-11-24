@@ -115,6 +115,9 @@ function renderPlayers(players) {
       card.appendChild(el('p', '', `Pass yards: ${p.projected_pass_yards}`));
       card.appendChild(el('p', '', `Pass TDs: ${p.projected_pass_tds}`));
     }
+    if (p.projected_fantasy_points !== undefined) {
+      card.appendChild(el('p', '', `Fantasy pts: ${p.projected_fantasy_points}`));
+    }
     container.appendChild(card);
   });
 }
