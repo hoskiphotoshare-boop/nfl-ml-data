@@ -36,12 +36,15 @@ jobs:
       # Run the Monte Carlo playoff / Super Bowl simulator.
       - run: python scripts/simulate_playoffs.py || true
 
+      # Walk-forward backtest of the match model.
+      - run: python scripts/backtest.py || true
+
       - run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
 
       - run: |
-          git add predictions/ features/ models/ 2>/dev/null || true
+          git add predictions/ features/ models/ reports/ 2>/dev/null || true
           git commit -m "chore: update predictions, features, and models" || true
 
       - run: |
