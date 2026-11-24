@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install --upgrade pip
+      - run: pip install polars nflreadpy
+
+      - run: python -c "
+          from src.ingest import fetch_schedules, fetch_pbp, fetch_player_stats, fetch_team_stats
+          s = fetch_schedules()
+          print('schedules:', s.shape)
+          p = fetch_pbp(season=2024, week=1)
+          print('pbp (2024 wk1):', p.shape)
+          pl = fetch_player_stats(season=2024, week=1)
+          print('player_stats (2024 wk1):', pl.shape)
+          t = fetch_team_stats(season=2024, week=1)
+          print('team_stats (2024 wk1):', t.shape)
+        "
