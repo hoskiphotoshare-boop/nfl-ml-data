@@ -12,7 +12,11 @@ __pycache__/
 # Environment variables
 .env
 
-# Data dumps (raw data should not be committed) # (removed to allow committing generated parquet files)
+# Data dumps (raw data should not be committed)
+data/
+
+# Local virtualenv
+.venv/
 
 # IDE / editor stuff
 .vscode/
