@@ -22,6 +22,7 @@ import polars as pl
 
 try:
     from sklearn.linear_model import LogisticRegression
+    from sklearn.ensemble import HistGradientBoostingClassifier
     from sklearn.metrics import accuracy_score, log_loss
     from sklearn.model_selection import train_test_split
     import joblib
@@ -40,10 +41,23 @@ def load_features() -> pl.DataFrame | None:
 
 def prepare_match_matrix(df: pl.DataFrame):
     feature_cols = [
+        # Rolling pre-game team averages
         "home_avg_points",
         "home_avg_allowed",
         "away_avg_points",
         "away_avg_allowed",
+        # PBP-derived team features
+        "home_off_epa",
+        "home_def_epa",
+        "home_success_rate",
+        "home_pass_epa",
+        "home_rush_epa",
+        "away_off_epa",
+        "away_def_epa",
+        "away_success_rate",
+        "away_pass_epa",
+        "away_rush_epa",
+        # Context
         "week",
         "season",
     ]
@@ -64,19 +78,67 @@ def train_match_model(df: pl.DataFrame):
         print("Not enough data (or sklearn missing) – using heuristic match predictions.")
         return None, feature_cols
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42, stratify=y if len(set(y)) > 1 else None
-    )
-    model = LogisticRegression(max_iter=2000)
-    model.fit(X_train, y_train)
-    preds = model.predict_proba(X_test)[:, 1]
-    print(f"Match model accuracy: {accuracy_score(y_test, model.predict(X_test)):.3f}")
-    print(f"Match model log loss: {log_loss(y_test, preds):.3f}")
+    # Prefer a time-based split: train on all seasons before the latest, test
+    # on the latest season.  Fall back to a random split if there is not
+    # enough history.
+    X_train = X_test = y_train = y_test = None
+    if "season" in df.columns:
+        seasons = df["season"].drop_nulls().unique().sort()
+        if len(seasons) >= 2:
+            test_season = int(seasons[-1])
+            train_df = df.filter(pl.col("season") < test_season)
+            test_df = df.filter(pl.col("season") == test_season)
+            if train_df.height >= 20 and test_df.height >= 10:
+                X_train = train_df.select(
+                    [pl.col(c).cast(pl.Float64, strict=False).fill_null(0.0) for c in feature_cols]
+                ).to_numpy()
+                y_train = train_df["home_win"].cast(pl.Int8).to_numpy()
+                X_test = test_df.select(
+                    [pl.col(c).cast(pl.Float64, strict=False).fill_null(0.0) for c in feature_cols]
+                ).to_numpy()
+                y_test = test_df["home_win"].cast(pl.Int8).to_numpy()
+                print(f"Time-based split: train < {test_season}, test == {test_season}")
 
+    if X_train is None:
+        X_train, X_test, y_train, y_test = train_test_split(
+            X, y, test_size=0.2, random_state=42, stratify=y if len(set(y)) > 1 else None
+        )
+        print("Using random 80/20 split (not enough seasons for time-based split).")
+
+    candidates = [
+        ("logistic", LogisticRegression(max_iter=2000)),
+        ("hist_gradient_boosting", HistGradientBoostingClassifier(max_iter=200, random_state=42)),
+    ]
+
+    best_name = None
+    best_model = None
+    best_loss = None
+    for name, model in candidates:
+        try:
+            model.fit(X_train, y_train)
+            preds = model.predict_proba(X_test)[:, 1]
+            loss = log_loss(y_test, preds)
+            acc = accuracy_score(y_test, model.predict(X_test))
+            print(f"{name}: accuracy={acc:.3f} log_loss={loss:.3f}")
+            if best_loss is None or loss < best_loss:
+                best_loss = loss
+                best_model = model
+                best_name = name
+        except Exception as exc:  # pragma: no cover
+            print(f"{name} failed: {exc}")
+
+    if best_model is None:
+        print("No model trained; falling back to heuristic.")
+        return None, feature_cols
+
+    print(f"Selected model: {best_name} (log loss {best_loss:.3f})")
     os.makedirs("models", exist_ok=True)
-    joblib.dump({"model": model, "features": feature_cols}, "models/match_model.joblib")
+    joblib.dump(
+        {"model": best_model, "features": feature_cols, "name": best_name},
+        "models/match_model.joblib",
+    )
     print("Saved models/match_model.joblib")
-    return model, feature_cols
+    return best_model, feature_cols
 
 
 def write_games_predictions(df: pl.DataFrame, model, feature_cols) -> None:

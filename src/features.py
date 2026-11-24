@@ -173,17 +173,25 @@ def engineer_player_features(
     return out
 
 
-def build_match_features(schedules: pl.DataFrame) -> pl.DataFrame:
-    """Build pre-game match features from a schedules table.
+def build_match_features(
+    schedules: pl.DataFrame,
+    pbp: pl.DataFrame | None = None,
+) -> pl.DataFrame:
+    """Build pre-game match features from schedules and (optionally) PBP.
 
-    Expects columns: ``game_id``, ``season``, ``week``, ``home_team``,
+    Expects schedules columns: ``game_id``, ``season``, ``week``, ``home_team``,
     ``away_team``, ``home_score``, ``away_score``.
+
+    If ``pbp`` is provided, adds team-level EPA/success features for the home
+    and away sides (offensive/defensive EPA, success rate, pass/rush EPA).
 
     The returned frame adds:
     - ``home_win`` (1 if the home team scored more, else 0; ties dropped)
     - ``point_diff`` / ``total_points``
     - rolling pre-game team averages: ``home_avg_points``,
       ``home_avg_allowed``, ``away_avg_points``, ``away_avg_allowed``
+    - optional PBP aggregates: ``home_off_epa``, ``home_def_epa``,
+      ``home_success_rate``, ``home_pass_epa``, ``home_rush_epa`` (and away equivalents)
     """
     required = {"game_id", "season", "week", "home_team", "away_team", "home_score", "away_score"}
     if not required.issubset(set(schedules.columns)):
@@ -253,6 +261,70 @@ def build_match_features(schedules: pl.DataFrame) -> pl.DataFrame:
     ).unique(subset=["game_id"])
 
     out = sched.join(home_feats, on="game_id", how="left").join(away_feats, on="game_id", how="left")
+
+    # Optional PBP-derived team features (EPA, success rate, pass/rush EPA).
+    if pbp is not None and pbp.height > 0:
+        try:
+            p = pbp
+            required_pbp = {"game_id", "posteam", "defteam", "epa"}
+            if not required_pbp.issubset(set(p.columns)):
+                raise ValueError(f"pbp missing {required_pbp - set(p.columns)}")
+
+            if "play_type" in p.columns:
+                pass_epa = pl.col("epa").filter(pl.col("play_type") == "pass").mean()
+                rush_epa = pl.col("epa").filter(pl.col("play_type") == "run").mean()
+            else:
+                pass_epa = pl.lit(None, dtype=pl.Float64)
+                rush_epa = pl.lit(None, dtype=pl.Float64)
+
+            off = (
+                p.filter(pl.col("posteam").is_not_null())
+                .group_by(["game_id", "posteam"])
+                .agg(
+                    pl.col("epa").mean().alias("off_epa"),
+                    (pl.col("epa") > 0).mean().alias("success_rate"),
+                    pass_epa.alias("pass_epa"),
+                    rush_epa.alias("rush_epa"),
+                    pl.len().alias("plays"),
+                )
+                .rename({"posteam": "team"})
+            )
+
+            deff = (
+                p.filter(pl.col("defteam").is_not_null())
+                .group_by(["game_id", "defteam"])
+                .agg(pl.col("epa").mean().alias("def_epa"))
+                .rename({"defteam": "team"})
+            )
+
+            team_stats = off.join(deff, on=["game_id", "team"], how="left")
+
+            home_stats = team_stats.select(
+                "game_id",
+                pl.col("team").alias("home_team"),
+                pl.col("off_epa").alias("home_off_epa"),
+                pl.col("def_epa").alias("home_def_epa"),
+                pl.col("success_rate").alias("home_success_rate"),
+                pl.col("pass_epa").alias("home_pass_epa"),
+                pl.col("rush_epa").alias("home_rush_epa"),
+            )
+
+            away_stats = team_stats.select(
+                "game_id",
+                pl.col("team").alias("away_team"),
+                pl.col("off_epa").alias("away_off_epa"),
+                pl.col("def_epa").alias("away_def_epa"),
+                pl.col("success_rate").alias("away_success_rate"),
+                pl.col("pass_epa").alias("away_pass_epa"),
+                pl.col("rush_epa").alias("away_rush_epa"),
+            )
+
+            out = out.join(home_stats, on=["game_id", "home_team"], how="left").join(
+                away_stats, on=["game_id", "away_team"], how="left"
+            )
+        except Exception as exc:  # pragma: no cover – defensive
+            print(f"Could not add PBP features: {exc}")
+
     return out
 
 
