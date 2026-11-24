@@ -1,0 +1,22 @@
+[
+  {
+    "team": "Team A",
+    "playoff_prob": 0.78,
+    "super_bowl_prob": 0.12
+  },
+  {
+    "team": "Team B",
+    "playoff_prob": 0.65,
+    "super_bowl_prob": 0.08
+  },
+  {
+    "team": "Team C",
+    "playoff_prob": 0.42,
+    "super_bowl_prob": 0.03
+  },
+  {
+    "team": "Team D",
+    "playoff_prob": 0.31,
+    "super_bowl_prob": 0.01
+  }
+]

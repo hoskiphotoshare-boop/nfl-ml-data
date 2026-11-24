@@ -1,0 +1,22 @@
+[
+  {
+    "game_id": 0,
+    "season": 2024,
+    "week": 1,
+    "home_team": "Team A",
+    "away_team": "Team C",
+    "home_win_prob": 0.62,
+    "spread": -3.5,
+    "total": 45.5
+  },
+  {
+    "game_id": 1,
+    "season": 2024,
+    "week": 2,
+    "home_team": "Team B",
+    "away_team": "Team D",
+    "home_win_prob": 0.48,
+    "spread": 1.5,
+    "total": 42.0
+  }
+]

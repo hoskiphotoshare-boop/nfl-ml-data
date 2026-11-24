@@ -1,0 +1,24 @@
+[
+  {
+    "player_id": "0000",
+    "name": "Player One",
+    "team": "Team A",
+    "position": "WR",
+    "projected_targets": 8.2,
+    "projected_receptions": 5.4,
+    "projected_yards": 72.5,
+    "projected_tds": 0.6
+  },
+  {
+    "player_id": "0001",
+    "name": "Player Two",
+    "team": "Team B",
+    "position": "QB",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_pass_yards": 245.0,
+    "projected_pass_tds": 1.8
+  }
+]
