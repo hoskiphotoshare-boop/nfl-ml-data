@@ -1,0 +1,83 @@
+{
+  "feature_set": [
+    "home_avg_points",
+    "home_avg_allowed",
+    "away_avg_points",
+    "away_avg_allowed",
+    "home_off_epa",
+    "home_def_epa",
+    "home_success_rate",
+    "home_pass_epa",
+    "home_rush_epa",
+    "away_off_epa",
+    "away_def_epa",
+    "away_success_rate",
+    "away_pass_epa",
+    "away_rush_epa",
+    "week",
+    "season"
+  ],
+  "per_season": [
+    {
+      "season": 2022,
+      "games": 282,
+      "accuracy": 0.5673758865248227,
+      "log_loss": 0.6835300581669795,
+      "brier": 0.24507466976333891,
+      "auc": 0.5430327868852459,
+      "home_baseline_accuracy": 0.5673758865248227,
+      "home_baseline_log_loss": 0.6840432785095006,
+      "home_baseline_brier": 0.24546186304169954
+    },
+    {
+      "season": 2023,
+      "games": 285,
+      "accuracy": 0.5894736842105263,
+      "log_loss": 0.667145446710831,
+      "brier": 0.23714090634574292,
+      "auc": 0.6059907834101381,
+      "home_baseline_accuracy": 0.5649122807017544,
+      "home_baseline_log_loss": 0.6846998114744255,
+      "home_baseline_brier": 0.24578820047632408
+    },
+    {
+      "season": 2024,
+      "games": 285,
+      "accuracy": 0.631578947368421,
+      "log_loss": 0.6372436892159349,
+      "brier": 0.22329649124676648,
+      "auc": 0.6942456768038163,
+      "home_baseline_accuracy": 0.5473684210526316,
+      "home_baseline_log_loss": 0.6893724428853849,
+      "home_baseline_brier": 0.24811080252294246
+    },
+    {
+      "season": 2025,
+      "games": 284,
+      "accuracy": 0.6161971830985915,
+      "log_loss": 0.6647585832453665,
+      "brier": 0.23598415019201044,
+      "auc": 0.6352173046251993,
+      "home_baseline_accuracy": 0.5352112676056338,
+      "home_baseline_log_loss": 0.6925147756604523,
+      "home_baseline_brier": 0.24967329415687245
+    },
+    {
+      "season": 2026,
+      "games": 162,
+      "accuracy": 0.5617283950617284,
+      "log_loss": 0.6791444066442915,
+      "brier": 0.24296305958212827,
+      "auc": 0.6159829190178435,
+      "home_baseline_accuracy": 0.5123456790123457,
+      "home_baseline_log_loss": 0.6982811911178621,
+      "home_baseline_brier": 0.2525413675416632
+    }
+  ],
+  "pooled": {
+    "accuracy": 0.5963020030816641,
+    "log_loss": 0.6651149550541416,
+    "brier": 0.23629832780736712,
+    "auc": 0.6243624650074779
+  }
+}
