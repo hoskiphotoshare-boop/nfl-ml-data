@@ -138,12 +138,19 @@ function renderPlayoffs(data) {
   }
   data.forEach((t) => {
     const card = el('div', 'card');
-    card.appendChild(el('h3', '', t.team));
+    const title = t.conference ? `${t.team} (${t.conference})` : t.team;
+    card.appendChild(el('h3', '', title));
     const po = decimalOdds(t.playoff_prob);
+    const cpo = decimalOdds(t.conference_prob);
     const sbo = decimalOdds(t.super_bowl_prob);
     card.appendChild(
       el('p', 'prob' + (t.playoff_prob < 0.5 ? ' low' : ''), `Playoff: ${(t.playoff_prob * 100).toFixed(0)}%${po ? ` (${po})` : ''}`)
     );
+    if (t.conference_prob !== undefined) {
+      card.appendChild(
+        el('p', 'prob' + (t.conference_prob < 0.25 ? ' low' : ''), `Conference: ${(t.conference_prob * 100).toFixed(0)}%${cpo ? ` (${cpo})` : ''}`)
+      );
+    }
     card.appendChild(
       el('p', 'prob' + (t.super_bowl_prob < 0.1 ? ' low' : ''), `Super Bowl: ${(t.super_bowl_prob * 100).toFixed(0)}%${sbo ? ` (${sbo})` : ''}`)
     );
