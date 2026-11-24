@@ -72,6 +72,7 @@ def compute_standings(schedules: pl.DataFrame) -> tuple[pl.DataFrame | None, int
             pl.col("pf").sum().alias("pf"),
             pl.col("pa").sum().alias("pa"),
         )
+        .filter(pl.col("games") > 0)
         .with_columns(
             (pl.col("wins") / pl.col("games")).alias("win_pct"),
             (pl.col("pf") - pl.col("pa")).alias("point_diff"),
