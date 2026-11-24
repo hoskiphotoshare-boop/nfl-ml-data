@@ -57,6 +57,11 @@ def prepare_match_matrix(df: pl.DataFrame):
         "away_success_rate",
         "away_pass_epa",
         "away_rush_epa",
+        # Pre-game rolling team stats
+        "home_passing_epa",
+        "away_passing_epa",
+        "home_rushing_epa",
+        "away_rushing_epa",
         # Rest / schedule context
         "home_rest_days",
         "away_rest_days",

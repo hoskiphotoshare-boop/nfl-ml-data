@@ -498,7 +498,19 @@ def build_match_features(
                 ts.select(["season", "week", pl.col(team_col).alias("team")] + present_cols)
                 .group_by(["season", "week", "team"])
                 .agg([pl.col(c).mean().alias(c) for c in present_cols])
+                .sort(["team", "season", "week"])
             )
+
+            # Convert same-game team stats into pre-game rolling averages.
+            agg = agg.with_columns(
+                [pl.col(c).cum_sum().over("team").alias(f"cum_{c}") for c in present_cols]
+                + [pl.col(present_cols[0]).cum_count().over("team").alias("game_num")]
+            )
+            for c in present_cols:
+                agg = agg.with_columns(
+                    ((pl.col(f"cum_{c}") - pl.col(c)) / (pl.col("game_num") - 1).clip(1))
+                    .alias(c)
+                )
 
             home_ts = agg.select(
                 "season",

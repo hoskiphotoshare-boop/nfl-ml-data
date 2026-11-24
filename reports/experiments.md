@@ -19,3 +19,11 @@ Walk-forward backtest window: **2022–2026** (train on all prior seasons, test 
 - **Decision:** ❌ **Reject** — degraded every metric; the model fell back to home-team baseline.
 - **Note:** injury data ingestion is retained for future player-level experiments, but the
   match model ignores these features.
+
+## 2026-11-24 — Rolling team-stats features
+
+- **Features:** `home_passing_epa`, `away_passing_epa`, `home_rushing_epa`, `away_rushing_epa`
+- **Important:** computed as **pre-game rolling averages** from `team_stats`, not same-game stats.
+- **Before:** accuracy 0.5986, log loss 0.6640, Brier 0.2358, AUC 0.6264
+- **After:** accuracy 0.6048, log loss 0.6615, Brier 0.2345, AUC 0.6356
+- **Decision:** ✅ **Accept** — consistent improvement across all metrics.

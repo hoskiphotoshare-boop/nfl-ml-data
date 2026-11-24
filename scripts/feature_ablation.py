@@ -103,6 +103,16 @@ TEAM_STATS = [
 ]
 
 
+def uniq(seq: list[str]) -> list[str]:
+    seen = set()
+    out = []
+    for item in seq:
+        if item not in seen:
+            seen.add(item)
+            out.append(item)
+    return out
+
+
 def load_features() -> pl.DataFrame:
     path = "features/match_features.parquet"
     if not os.path.exists(path):
@@ -165,17 +175,20 @@ def backtest(df: pl.DataFrame, features: list[str]) -> dict:
 
 def main() -> None:
     raw = load_features()
-    team_stats_cols = [c for c in TEAM_STATS if c in raw.columns]
+    already_used = set(BASE + EPA + REST)
+    team_stats_cols = [
+        c for c in TEAM_STATS if c in raw.columns and c not in already_used
+    ]
 
     experiments = {
-        "base": BASE,
-        "base+epa": BASE + EPA,
-        "base+rest": BASE + REST,
-        "base+epa+rest": BASE + EPA + REST,
-        "base+epa+rest+injuries": BASE + EPA + REST + INJURIES,
+        "base": uniq(BASE),
+        "base+epa": uniq(BASE + EPA),
+        "base+rest": uniq(BASE + REST),
+        "base+epa+rest": uniq(BASE + EPA + REST),
+        "base+epa+rest+injuries": uniq(BASE + EPA + REST + INJURIES),
     }
     if team_stats_cols:
-        experiments["base+epa+rest+team_stats"] = BASE + EPA + REST + team_stats_cols
+        experiments["base+epa+rest+team_stats"] = uniq(BASE + EPA + REST + team_stats_cols)
 
     results = {}
     for name, features in experiments.items():
