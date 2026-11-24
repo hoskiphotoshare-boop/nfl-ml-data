@@ -39,6 +39,9 @@ jobs:
       # Walk-forward backtest of the match model.
       - run: python scripts/backtest.py || true
 
+      # Feature-group ablation study.
+      - run: python scripts/feature_ablation.py || true
+
       - run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
