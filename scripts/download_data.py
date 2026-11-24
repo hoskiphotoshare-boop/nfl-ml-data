@@ -23,6 +23,10 @@ from src.ingest import (
     fetch_player_stats,
     fetch_team_stats,
     fetch_injuries,
+    fetch_trades,
+    fetch_rosters_weekly,
+    fetch_depth_charts,
+    fetch_players,
 )
 import polars as pl
 
@@ -66,6 +70,27 @@ def main() -> None:
     injuries = fetch_injuries(season=seasons_for_model)
     injuries.write_parquet("data/injuries_latest.parquet")
     print(f"Wrote injuries: {injuries.shape[0]} rows x {injuries.shape[1]} cols")
+
+    # 6) Trades, weekly rosters, depth charts, and player metadata.
+    print("Fetching trades…")
+    trades = fetch_trades()
+    trades.write_parquet("data/trades_latest.parquet")
+    print(f"Wrote trades: {trades.shape[0]} rows x {trades.shape[1]} cols")
+
+    print(f"Fetching rosters_weekly ({current_season})…")
+    rosters = fetch_rosters_weekly(season=current_season)
+    rosters.write_parquet("data/rosters_weekly_latest.parquet")
+    print(f"Wrote rosters_weekly: {rosters.shape[0]} rows x {rosters.shape[1]} cols")
+
+    print(f"Fetching depth_charts ({current_season})…")
+    depth = fetch_depth_charts(season=current_season)
+    depth.write_parquet("data/depth_charts_latest.parquet")
+    print(f"Wrote depth_charts: {depth.shape[0]} rows x {depth.shape[1]} cols")
+
+    print("Fetching players…")
+    players_master = fetch_players()
+    players_master.write_parquet("data/players_latest.parquet")
+    print(f"Wrote players: {players_master.shape[0]} rows x {players_master.shape[1]} cols")
 
     print("Latest data downloaded and written to data/.")
 

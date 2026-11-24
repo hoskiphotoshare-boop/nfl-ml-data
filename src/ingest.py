@@ -21,6 +21,8 @@ from nflreadpy import (
     load_injuries,
     load_rosters_weekly,
     load_rosters,
+    load_trades,
+    load_players,
 )
 
 try:  # optional tables
@@ -201,6 +203,16 @@ def fetch_participation(
     if week is not None and "week" in df.columns:
         df = df.filter(pl.col("week") == week)
     return df
+
+
+def fetch_trades() -> pl.DataFrame:
+    """Fetch NFL trades (players, teams, draft picks)."""
+    return load_trades()
+
+
+def fetch_players() -> pl.DataFrame:
+    """Fetch player metadata and cross-platform ID mappings."""
+    return load_players()
 
 
 def main() -> None:
