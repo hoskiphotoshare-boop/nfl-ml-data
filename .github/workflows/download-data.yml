@@ -15,8 +15,15 @@ jobs:
 
       - run: pip install polars nflreadpy
 
-      - run: python scripts/download_data.py || true
+      - run: python scripts/download_data.py
 
-      # Note: the `data/` folder is git‑ignored (see .gitignore), so raw
-      # NFL data never pollutes the repository history.  The artifact step
-      # has been omitted until the script reliably produces parquet files.
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+
+      - run: |
+          git add data/
+          git commit -m "chore: add NFL data Parquet files for training" || true
+
+      - run: |
+          git push origin main || true
