@@ -17,7 +17,11 @@ sys.path.insert(0, os.path.dirname(__file__) + "/../")
 
 import polars as pl
 
-from src.features import build_match_features, build_player_features
+from src.features import (
+    add_team_rolling_features,
+    build_match_features,
+    build_player_features,
+)
 
 
 def load_table(name: str) -> pl.DataFrame | None:
@@ -50,6 +54,56 @@ def main() -> None:
                 team_stats=team_stats_raw,
                 snap_counts=snap_counts_raw,
             )
+
+            ng_pass = load_table("nextgen_passing_latest")
+            if ng_pass is not None:
+                match_features = add_team_rolling_features(
+                    match_features,
+                    ng_pass,
+                    team_col="team_abbr",
+                    stat_cols=[
+                        "avg_time_to_throw",
+                        "avg_completed_air_yards",
+                        "avg_intended_air_yards",
+                        "aggressiveness",
+                        "completion_percentage_above_expectation",
+                        "passer_rating",
+                    ],
+                    prefix="ng_pass",
+                )
+
+            ng_rush = load_table("nextgen_rushing_latest")
+            if ng_rush is not None:
+                match_features = add_team_rolling_features(
+                    match_features,
+                    ng_rush,
+                    team_col="team_abbr",
+                    stat_cols=[
+                        "efficiency",
+                        "percent_attempts_gte_eight_defenders",
+                        "avg_time_to_los",
+                        "rush_yards_over_expected_per_att",
+                        "rush_pct_over_expected",
+                    ],
+                    prefix="ng_rush",
+                )
+
+            ng_rec = load_table("nextgen_receiving_latest")
+            if ng_rec is not None:
+                match_features = add_team_rolling_features(
+                    match_features,
+                    ng_rec,
+                    team_col="team_abbr",
+                    stat_cols=[
+                        "avg_cushion",
+                        "avg_separation",
+                        "percent_share_of_intended_air_yards",
+                        "catch_percentage",
+                        "avg_yac_above_expectation",
+                    ],
+                    prefix="ng_rec",
+                )
+
             match_features.write_parquet("features/match_features.parquet")
             print(f"Wrote features/match_features.parquet ({match_features.height} rows)")
         except Exception as exc:  # pragma: no cover – defensive

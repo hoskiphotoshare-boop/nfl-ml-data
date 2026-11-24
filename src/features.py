@@ -614,6 +614,59 @@ def build_match_features(
     return out
 
 
+def add_team_rolling_features(
+    match_features: pl.DataFrame,
+    df: pl.DataFrame,
+    team_col: str,
+    stat_cols: list[str],
+    prefix: str,
+) -> pl.DataFrame:
+    """Merge pre-game rolling team-week averages from a player-level dataset.
+
+    ``df`` must contain ``season``, ``week``, ``team_col`` and the requested
+    ``stat_cols``.  The resulting columns are named
+    ``home_<prefix>_<stat>`` / ``away_<prefix>_<stat>``.
+    """
+    if df.height == 0 or team_col not in df.columns:
+        return match_features
+
+    present = [c for c in stat_cols if c in df.columns]
+    if not present:
+        return match_features
+
+    agg = (
+        df.select(["season", "week", pl.col(team_col).alias("team")] + present)
+        .group_by(["season", "week", "team"])
+        .agg([pl.col(c).mean().alias(c) for c in present])
+        .sort(["team", "season", "week"])
+    )
+
+    agg = agg.with_columns(
+        [pl.col(c).cum_sum().over("team").alias(f"cum_{c}") for c in present]
+        + [pl.col(present[0]).cum_count().over("team").alias("game_num")]
+    )
+    for c in present:
+        agg = agg.with_columns(
+            ((pl.col(f"cum_{c}") - pl.col(c)) / (pl.col("game_num") - 1).clip(1)).alias(c)
+        )
+
+    home = agg.select(
+        "season",
+        "week",
+        pl.col("team").alias("home_team"),
+        *[pl.col(c).alias(f"home_{prefix}_{c}") for c in present],
+    )
+    away = agg.select(
+        "season",
+        "week",
+        pl.col("team").alias("away_team"),
+        *[pl.col(c).alias(f"away_{prefix}_{c}") for c in present],
+    )
+    return match_features.join(home, on=["season", "week", "home_team"], how="left").join(
+        away, on=["season", "week", "away_team"], how="left"
+    )
+
+
 def build_player_features(player_stats: pl.DataFrame) -> pl.DataFrame:
     """Build player-level features from a player-stats table.
 

@@ -28,6 +28,7 @@ from src.ingest import (
     fetch_depth_charts,
     fetch_players,
     fetch_snap_counts,
+    fetch_nextgen_stats,
 )
 import polars as pl
 
@@ -72,7 +73,14 @@ def main() -> None:
     snaps.write_parquet("data/snap_counts_latest.parquet")
     print(f"Wrote snap_counts: {snaps.shape[0]} rows x {snaps.shape[1]} cols")
 
-    # 6) Injury reports for the recent seasons.
+    # 6) Next-gen stats (passing, rushing, receiving).
+    for stat_type in ["passing", "rushing", "receiving"]:
+        print(f"Fetching nextgen_stats ({stat_type}, {seasons_for_model})…")
+        ng = fetch_nextgen_stats(season=seasons_for_model, stat_type=stat_type)
+        ng.write_parquet(f"data/nextgen_{stat_type}_latest.parquet")
+        print(f"Wrote nextgen_{stat_type}: {ng.shape[0]} rows x {ng.shape[1]} cols")
+
+    # 7) Injury reports for the recent seasons.
     print(f"Fetching injuries ({seasons_for_model})…")
     injuries = fetch_injuries(season=seasons_for_model)
     injuries.write_parquet("data/injuries_latest.parquet")

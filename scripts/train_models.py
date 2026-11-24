@@ -30,6 +30,37 @@ try:
 except Exception:  # pragma: no cover – sklearn is optional at runtime
     SKLEARN_AVAILABLE = False
 
+NG_PASS = [
+    "avg_time_to_throw",
+    "avg_completed_air_yards",
+    "avg_intended_air_yards",
+    "aggressiveness",
+    "completion_percentage_above_expectation",
+    "passer_rating",
+]
+NG_RUSH = [
+    "efficiency",
+    "percent_attempts_gte_eight_defenders",
+    "avg_time_to_los",
+    "rush_yards_over_expected_per_att",
+    "rush_pct_over_expected",
+]
+NG_REC = [
+    "avg_cushion",
+    "avg_separation",
+    "percent_share_of_intended_air_yards",
+    "catch_percentage",
+    "avg_yac_above_expectation",
+]
+NG_FEATURES = (
+    [f"home_ng_pass_{c}" for c in NG_PASS]
+    + [f"away_ng_pass_{c}" for c in NG_PASS]
+    + [f"home_ng_rush_{c}" for c in NG_RUSH]
+    + [f"away_ng_rush_{c}" for c in NG_RUSH]
+    + [f"home_ng_rec_{c}" for c in NG_REC]
+    + [f"away_ng_rec_{c}" for c in NG_REC]
+)
+
 
 def load_features() -> pl.DataFrame | None:
     path = "features/match_features.parquet"
@@ -72,6 +103,7 @@ def prepare_match_matrix(df: pl.DataFrame):
         "week",
         "season",
     ]
+    feature_cols += NG_FEATURES
     feature_cols = [c for c in feature_cols if c in df.columns]
     if not feature_cols:
         return None, None, feature_cols

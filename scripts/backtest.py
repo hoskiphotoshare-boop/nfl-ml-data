@@ -40,6 +40,10 @@ FEATURE_COLS = [
     "away_success_rate",
     "away_pass_epa",
     "away_rush_epa",
+    "home_passing_epa",
+    "away_passing_epa",
+    "home_rushing_epa",
+    "away_rushing_epa",
     "home_rest_days",
     "away_rest_days",
     "rest_diff",
@@ -48,6 +52,38 @@ FEATURE_COLS = [
     "week",
     "season",
 ]
+
+NG_PASS = [
+    "avg_time_to_throw",
+    "avg_completed_air_yards",
+    "avg_intended_air_yards",
+    "aggressiveness",
+    "completion_percentage_above_expectation",
+    "passer_rating",
+]
+NG_RUSH = [
+    "efficiency",
+    "percent_attempts_gte_eight_defenders",
+    "avg_time_to_los",
+    "rush_yards_over_expected_per_att",
+    "rush_pct_over_expected",
+]
+NG_REC = [
+    "avg_cushion",
+    "avg_separation",
+    "percent_share_of_intended_air_yards",
+    "catch_percentage",
+    "avg_yac_above_expectation",
+]
+NG_FEATURES = (
+    [f"home_ng_pass_{c}" for c in NG_PASS]
+    + [f"away_ng_pass_{c}" for c in NG_PASS]
+    + [f"home_ng_rush_{c}" for c in NG_RUSH]
+    + [f"away_ng_rush_{c}" for c in NG_RUSH]
+    + [f"home_ng_rec_{c}" for c in NG_REC]
+    + [f"away_ng_rec_{c}" for c in NG_REC]
+)
+FEATURE_COLS += NG_FEATURES
 
 
 def load_features() -> pl.DataFrame:

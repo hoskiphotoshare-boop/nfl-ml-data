@@ -37,3 +37,13 @@ Walk-forward backtest window: **2022–2026** (train on all prior seasons, test 
 - **Before:** accuracy 0.6048, log loss 0.6615, Brier 0.2345, AUC 0.6356
 - **After:** accuracy 0.6071, log loss 0.6632, Brier 0.2354, AUC 0.6299
 - **Decision:** ❌ **Reject** — accuracy improved marginally, but log loss, Brier, and AUC all got worse.
+
+## 2026-11-24 — Next-gen stats (rolling team aggregates)
+
+- **Features:** team-week rolling averages from NGS passing, rushing, and receiving:
+  - passing: time-to-throw, completed/intended air yards, aggressiveness, CPOE, passer rating
+  - rushing: efficiency, 8+ defender rate, time-to-LOS, RYOE/attempt, RYOE%
+  - receiving: cushion, separation, air-yard share, catch %, YAC above expectation
+- **Before:** accuracy 0.6048, log loss 0.6615, Brier 0.2345, AUC 0.6356
+- **After:** accuracy 0.6379, log loss 0.6316, Brier 0.2204, AUC 0.6908
+- **Decision:** ✅ **Accept** — large, consistent improvement across all metrics.
