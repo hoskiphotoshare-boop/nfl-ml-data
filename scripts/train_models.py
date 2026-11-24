@@ -81,6 +81,14 @@ def train_match_model(df: pl.DataFrame):
 
 def write_games_predictions(df: pl.DataFrame, model, feature_cols) -> None:
     os.makedirs("predictions", exist_ok=True)
+
+    # Limit to the most recent week available so the frontend stays lightweight.
+    if "season" in df.columns and "week" in df.columns and df.height > 0:
+        max_season = df["season"].max()
+        season_df = df.filter(pl.col("season") == max_season)
+        max_week = season_df["week"].max()
+        df = season_df.filter(pl.col("week") == max_week)
+
     records = []
 
     for row in df.iter_rows(named=True):
@@ -125,25 +133,31 @@ def write_player_predictions() -> None:
     if df.height == 0:
         return
 
+    id_col = "gsis_id" if "gsis_id" in df.columns else ("player_id" if "player_id" in df.columns else "player_name")
+
     # Baseline: per-player average fantasy points.
     agg = (
-        df.group_by("gsis_id")
+        df.group_by(id_col)
         .agg(
             pl.col("fantasy_points").mean().alias("projected_fantasy_points"),
             pl.col("targets").mean().alias("projected_targets") if "targets" in df.columns else pl.lit(0.0).alias("projected_targets"),
             pl.col("receptions").mean().alias("projected_receptions") if "receptions" in df.columns else pl.lit(0.0).alias("projected_receptions"),
             pl.col("yards").mean().alias("projected_yards") if "yards" in df.columns else pl.lit(0.0).alias("projected_yards"),
             pl.col("touchdowns").mean().alias("projected_tds") if "touchdowns" in df.columns else pl.lit(0.0).alias("projected_tds"),
+            pl.col("player_name").first().alias("player_name") if "player_name" in df.columns else pl.lit("").alias("player_name"),
+            pl.col("position").first().alias("position") if "position" in df.columns else pl.lit("").alias("position"),
+            pl.col("team").first().alias("team") if "team" in df.columns else pl.lit("").alias("team"),
         )
     )
     records = []
     for row in agg.iter_rows(named=True):
+        pid = row.get(id_col)
         records.append(
             {
-                "player_id": row.get("gsis_id"),
-                "name": row.get("gsis_id"),
-                "team": "",
-                "position": "",
+                "player_id": pid,
+                "name": row.get("player_name") or pid,
+                "team": row.get("team") or "",
+                "position": row.get("position") or "",
                 "projected_targets": round(float(row.get("projected_targets") or 0), 1),
                 "projected_receptions": round(float(row.get("projected_receptions") or 0), 1),
                 "projected_yards": round(float(row.get("projected_yards") or 0), 1),
