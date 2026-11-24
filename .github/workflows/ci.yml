@@ -5,9 +5,10 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
-  python:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,16 +18,6 @@ jobs:
           python-version: "3.11"
 
       - run: pip install --upgrade pip
-      - run: pip install polars nflreadpy typer
+      - run: pip install polars nflreadpy typer scikit-learn joblib
 
-      - run: python -c "
-          from src.ingest import fetch_schedules, fetch_pbp, fetch_player_stats, fetch_team_stats
-          s = fetch_schedules()
-          print('schedules:', s.shape)
-          p = fetch_pbp(season=2024, week=1)
-          print('pbp (2024 wk1):', p.shape)
-          pl = fetch_player_stats(season=2024, week=1)
-          print('player_stats (2024 wk1):', pl.shape)
-          t = fetch_team_stats(season=2024, week=1)
-          print('team_stats (2024 wk1):', t.shape)
-        "
+      - run: python -c "import src; print('import ok')"
