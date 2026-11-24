@@ -1,22 +1,132 @@
 [
   {
-    "game_id": 0,
-    "season": 2024,
-    "week": 1,
-    "home_team": "Team A",
-    "away_team": "Team C",
-    "home_win_prob": 0.62,
-    "spread": -3.5,
-    "total": 45.5
+    "game_id": "2026_11_ARI_KC",
+    "season": 2026,
+    "week": 11,
+    "home_team": "KC",
+    "away_team": "ARI",
+    "home_win_prob": 0.662,
+    "spread": 27.0,
+    "total": 41.0
   },
   {
-    "game_id": 1,
-    "season": 2024,
-    "week": 2,
-    "home_team": "Team B",
-    "away_team": "Team D",
+    "game_id": "2026_11_BAL_CAR",
+    "season": 2026,
+    "week": 11,
+    "home_team": "CAR",
+    "away_team": "BAL",
     "home_win_prob": 0.48,
-    "spread": 1.5,
+    "spread": 2.0,
+    "total": 68.0
+  },
+  {
+    "game_id": "2026_11_CIN_WAS",
+    "season": 2026,
+    "week": 11,
+    "home_team": "WAS",
+    "away_team": "CIN",
+    "home_win_prob": 0.539,
+    "spread": 2.0,
     "total": 42.0
+  },
+  {
+    "game_id": "2026_11_IND_HOU",
+    "season": 2026,
+    "week": 11,
+    "home_team": "HOU",
+    "away_team": "IND",
+    "home_win_prob": 0.497,
+    "spread": 23.0,
+    "total": 29.0
+  },
+  {
+    "game_id": "2026_11_JAX_NYG",
+    "season": 2026,
+    "week": 11,
+    "home_team": "NYG",
+    "away_team": "JAX",
+    "home_win_prob": 0.569,
+    "spread": 5.0,
+    "total": 41.0
+  },
+  {
+    "game_id": "2026_11_LV_DEN",
+    "season": 2026,
+    "week": 11,
+    "home_team": "DEN",
+    "away_team": "LV",
+    "home_win_prob": 0.642,
+    "spread": 14.0,
+    "total": 62.0
+  },
+  {
+    "game_id": "2026_11_MIA_BUF",
+    "season": 2026,
+    "week": 11,
+    "home_team": "BUF",
+    "away_team": "MIA",
+    "home_win_prob": 0.609,
+    "spread": 17.0,
+    "total": 35.0
+  },
+  {
+    "game_id": "2026_11_MIN_SF",
+    "season": 2026,
+    "week": 11,
+    "home_team": "SF",
+    "away_team": "MIN",
+    "home_win_prob": 0.553,
+    "spread": 25.0,
+    "total": 45.0
+  },
+  {
+    "game_id": "2026_11_NO_CHI",
+    "season": 2026,
+    "week": 11,
+    "home_team": "CHI",
+    "away_team": "NO",
+    "home_win_prob": 0.508,
+    "spread": 8.0,
+    "total": 34.0
+  },
+  {
+    "game_id": "2026_11_NYJ_LAC",
+    "season": 2026,
+    "week": 11,
+    "home_team": "LAC",
+    "away_team": "NYJ",
+    "home_win_prob": 0.631,
+    "spread": -3.0,
+    "total": 51.0
+  },
+  {
+    "game_id": "2026_11_PIT_PHI",
+    "season": 2026,
+    "week": 11,
+    "home_team": "PHI",
+    "away_team": "PIT",
+    "home_win_prob": 0.578,
+    "spread": 3.0,
+    "total": 35.0
+  },
+  {
+    "game_id": "2026_11_TB_DET",
+    "season": 2026,
+    "week": 11,
+    "home_team": "DET",
+    "away_team": "TB",
+    "home_win_prob": 0.532,
+    "spread": 10.0,
+    "total": 52.0
+  },
+  {
+    "game_id": "2026_11_TEN_DAL",
+    "season": 2026,
+    "week": 11,
+    "home_team": "DAL",
+    "away_team": "TEN",
+    "home_win_prob": 0.612,
+    "spread": 21.0,
+    "total": 81.0
   }
 ]
