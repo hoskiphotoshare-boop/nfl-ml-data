@@ -262,7 +262,7 @@ def build_match_features(
 
     out = sched.join(home_feats, on="game_id", how="left").join(away_feats, on="game_id", how="left")
 
-    # Optional PBP-derived team features (EPA, success rate, pass/rush EPA).
+    # Optional PBP-derived team features (pre-game rolling EPA/success).
     if pbp is not None and pbp.height > 0:
         try:
             p = pbp
@@ -297,26 +297,49 @@ def build_match_features(
                 .rename({"defteam": "team"})
             )
 
-            team_stats = off.join(deff, on=["game_id", "team"], how="left")
-
-            home_stats = team_stats.select(
-                "game_id",
-                pl.col("team").alias("home_team"),
-                pl.col("off_epa").alias("home_off_epa"),
-                pl.col("def_epa").alias("home_def_epa"),
-                pl.col("success_rate").alias("home_success_rate"),
-                pl.col("pass_epa").alias("home_pass_epa"),
-                pl.col("rush_epa").alias("home_rush_epa"),
+            team_game = off.join(deff, on=["game_id", "team"], how="left")
+            team_game = team_game.join(
+                sched.select("game_id", "season", "week"),
+                on="game_id",
+                how="left",
             )
 
-            away_stats = team_stats.select(
+            metric_cols = ["off_epa", "def_epa", "success_rate", "pass_epa", "rush_epa"]
+            team_game = team_game.with_columns(
+                [pl.col(c).cast(pl.Float64).fill_null(0.0) for c in metric_cols]
+            ).sort(["season", "week", "game_id", "team"])
+
+            team_game = team_game.with_columns(
+                [pl.col(c).cum_sum().over("team").alias(f"cum_{c}") for c in metric_cols]
+                + [pl.col("off_epa").cum_count().over("team").alias("game_num")]
+            )
+
+            # Pre-game average = (cumulative through current game - current game)
+            # divided by the number of prior games.
+            for c in metric_cols:
+                team_game = team_game.with_columns(
+                    ((pl.col(f"cum_{c}") - pl.col(c)) / (pl.col("game_num") - 1).clip(1))
+                    .alias(f"pre_{c}")
+                )
+
+            home_stats = team_game.select(
+                "game_id",
+                pl.col("team").alias("home_team"),
+                pl.col("pre_off_epa").alias("home_off_epa"),
+                pl.col("pre_def_epa").alias("home_def_epa"),
+                pl.col("pre_success_rate").alias("home_success_rate"),
+                pl.col("pre_pass_epa").alias("home_pass_epa"),
+                pl.col("pre_rush_epa").alias("home_rush_epa"),
+            )
+
+            away_stats = team_game.select(
                 "game_id",
                 pl.col("team").alias("away_team"),
-                pl.col("off_epa").alias("away_off_epa"),
-                pl.col("def_epa").alias("away_def_epa"),
-                pl.col("success_rate").alias("away_success_rate"),
-                pl.col("pass_epa").alias("away_pass_epa"),
-                pl.col("rush_epa").alias("away_rush_epa"),
+                pl.col("pre_off_epa").alias("away_off_epa"),
+                pl.col("pre_def_epa").alias("away_def_epa"),
+                pl.col("pre_success_rate").alias("away_success_rate"),
+                pl.col("pre_pass_epa").alias("away_pass_epa"),
+                pl.col("pre_rush_epa").alias("away_rush_epa"),
             )
 
             out = out.join(home_stats, on=["game_id", "home_team"], how="left").join(
