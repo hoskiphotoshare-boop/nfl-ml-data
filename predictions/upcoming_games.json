@@ -5,7 +5,7 @@
     "week": 12,
     "home_team": "LA",
     "away_team": "GB",
-    "home_win_prob": 0.489,
+    "home_win_prob": 0.495,
     "spread": -0.5,
     "total": 46.5
   },
@@ -15,7 +15,7 @@
     "week": 12,
     "home_team": "DET",
     "away_team": "CHI",
-    "home_win_prob": 0.499,
+    "home_win_prob": 0.473,
     "spread": -0.8,
     "total": 44.4
   },
@@ -25,7 +25,7 @@
     "week": 12,
     "home_team": "DAL",
     "away_team": "PHI",
-    "home_win_prob": 0.526,
+    "home_win_prob": 0.511,
     "spread": -1.0,
     "total": 45.2
   },
@@ -35,7 +35,7 @@
     "week": 12,
     "home_team": "BUF",
     "away_team": "KC",
-    "home_win_prob": 0.556,
+    "home_win_prob": 0.577,
     "spread": -0.9,
     "total": 44.8
   },
@@ -45,7 +45,7 @@
     "week": 12,
     "home_team": "PIT",
     "away_team": "DEN",
-    "home_win_prob": 0.387,
+    "home_win_prob": 0.376,
     "spread": 1.1,
     "total": 43.3
   },
@@ -55,7 +55,7 @@
     "week": 12,
     "home_team": "CIN",
     "away_team": "NO",
-    "home_win_prob": 0.324,
+    "home_win_prob": 0.315,
     "spread": -1.5,
     "total": 46.1
   },
@@ -65,7 +65,7 @@
     "week": 12,
     "home_team": "CLE",
     "away_team": "LV",
-    "home_win_prob": 0.503,
+    "home_win_prob": 0.505,
     "spread": -0.5,
     "total": 43.8
   },
@@ -75,7 +75,7 @@
     "week": 12,
     "home_team": "HOU",
     "away_team": "BAL",
-    "home_win_prob": 0.376,
+    "home_win_prob": 0.393,
     "spread": -3.1,
     "total": 42.8
   },
@@ -85,7 +85,7 @@
     "week": 12,
     "home_team": "IND",
     "away_team": "NYG",
-    "home_win_prob": 0.577,
+    "home_win_prob": 0.582,
     "spread": 1.7,
     "total": 45.4
   },
@@ -95,7 +95,7 @@
     "week": 12,
     "home_team": "MIA",
     "away_team": "NYJ",
-    "home_win_prob": 0.763,
+    "home_win_prob": 0.77,
     "spread": 0.6,
     "total": 42.0
   },
@@ -105,7 +105,7 @@
     "week": 12,
     "home_team": "MIN",
     "away_team": "ATL",
-    "home_win_prob": 0.674,
+    "home_win_prob": 0.687,
     "spread": 0.8,
     "total": 45.1
   },
@@ -115,7 +115,7 @@
     "week": 12,
     "home_team": "JAX",
     "away_team": "TEN",
-    "home_win_prob": 0.707,
+    "home_win_prob": 0.717,
     "spread": -0.1,
     "total": 43.3
   },
@@ -125,7 +125,7 @@
     "week": 12,
     "home_team": "ARI",
     "away_team": "WAS",
-    "home_win_prob": 0.184,
+    "home_win_prob": 0.179,
     "spread": -0.4,
     "total": 44.0
   },
@@ -135,7 +135,7 @@
     "week": 12,
     "home_team": "SF",
     "away_team": "SEA",
-    "home_win_prob": 0.63,
+    "home_win_prob": 0.634,
     "spread": -1.4,
     "total": 44.4
   },
@@ -145,7 +145,7 @@
     "week": 12,
     "home_team": "LAC",
     "away_team": "NE",
-    "home_win_prob": 0.365,
+    "home_win_prob": 0.366,
     "spread": -2.9,
     "total": 45.0
   },
@@ -155,7 +155,7 @@
     "week": 12,
     "home_team": "TB",
     "away_team": "CAR",
-    "home_win_prob": 0.773,
+    "home_win_prob": 0.762,
     "spread": 0.8,
     "total": 43.2
   },
@@ -165,7 +165,7 @@
     "week": 13,
     "home_team": "LA",
     "away_team": "KC",
-    "home_win_prob": 0.429,
+    "home_win_prob": 0.437,
     "spread": 0.0,
     "total": 46.0
   },
@@ -175,7 +175,7 @@
     "week": 13,
     "home_team": "ATL",
     "away_team": "DET",
-    "home_win_prob": 0.474,
+    "home_win_prob": 0.475,
     "spread": 0.8,
     "total": 46.0
   },
@@ -185,7 +185,7 @@
     "week": 13,
     "home_team": "CHI",
     "away_team": "JAX",
-    "home_win_prob": 0.923,
+    "home_win_prob": 0.937,
     "spread": 0.3,
     "total": 42.3
   },
@@ -195,7 +195,7 @@
     "week": 13,
     "home_team": "CLE",
     "away_team": "CIN",
-    "home_win_prob": 0.535,
+    "home_win_prob": 0.542,
     "spread": -2.0,
     "total": 42.8
   },
@@ -205,7 +205,7 @@
     "week": 13,
     "home_team": "NO",
     "away_team": "GB",
-    "home_win_prob": 0.383,
+    "home_win_prob": 0.385,
     "spread": -1.0,
     "total": 47.3
   },
@@ -215,7 +215,7 @@
     "week": 13,
     "home_team": "NYG",
     "away_team": "SF",
-    "home_win_prob": 0.258,
+    "home_win_prob": 0.255,
     "spread": -0.7,
     "total": 44.1
   },
@@ -225,7 +225,7 @@
     "week": 13,
     "home_team": "TB",
     "away_team": "LAC",
-    "home_win_prob": 0.523,
+    "home_win_prob": 0.506,
     "spread": -0.3,
     "total": 44.1
   },
@@ -245,7 +245,7 @@
     "week": 13,
     "home_team": "ARI",
     "away_team": "PHI",
-    "home_win_prob": 0.114,
+    "home_win_prob": 0.109,
     "spread": -3.4,
     "total": 44.8
   },
@@ -255,7 +255,7 @@
     "week": 13,
     "home_team": "DEN",
     "away_team": "MIA",
-    "home_win_prob": 0.576,
+    "home_win_prob": 0.552,
     "spread": 1.3,
     "total": 43.4
   },
@@ -265,7 +265,7 @@
     "week": 13,
     "home_team": "MIN",
     "away_team": "CAR",
-    "home_win_prob": 0.77,
+    "home_win_prob": 0.781,
     "spread": 1.1,
     "total": 44.2
   },
@@ -275,7 +275,7 @@
     "week": 13,
     "home_team": "NE",
     "away_team": "BUF",
-    "home_win_prob": 0.451,
+    "home_win_prob": 0.457,
     "spread": 2.8,
     "total": 44.3
   },
@@ -285,7 +285,7 @@
     "week": 13,
     "home_team": "PIT",
     "away_team": "HOU",
-    "home_win_prob": 0.331,
+    "home_win_prob": 0.311,
     "spread": 2.5,
     "total": 43.0
   },
@@ -295,7 +295,7 @@
     "week": 13,
     "home_team": "SEA",
     "away_team": "DAL",
-    "home_win_prob": 0.542,
+    "home_win_prob": 0.555,
     "spread": 0.7,
     "total": 44.9
   },
@@ -305,7 +305,7 @@
     "week": 14,
     "home_team": "NE",
     "away_team": "MIN",
-    "home_win_prob": 0.587,
+    "home_win_prob": 0.575,
     "spread": 2.8,
     "total": 44.9
   },
@@ -315,7 +315,7 @@
     "week": 14,
     "home_team": "BAL",
     "away_team": "TB",
-    "home_win_prob": 0.667,
+    "home_win_prob": 0.687,
     "spread": 2.1,
     "total": 42.4
   },
@@ -325,7 +325,7 @@
     "week": 14,
     "home_team": "CAR",
     "away_team": "NO",
-    "home_win_prob": 0.42,
+    "home_win_prob": 0.416,
     "spread": -1.6,
     "total": 45.6
   },
@@ -335,7 +335,7 @@
     "week": 14,
     "home_team": "CLE",
     "away_team": "ATL",
-    "home_win_prob": 0.489,
+    "home_win_prob": 0.496,
     "spread": -2.1,
     "total": 43.3
   },
@@ -345,7 +345,7 @@
     "week": 14,
     "home_team": "DET",
     "away_team": "TEN",
-    "home_win_prob": 0.749,
+    "home_win_prob": 0.746,
     "spread": -0.6,
     "total": 45.4
   },
@@ -355,7 +355,7 @@
     "week": 14,
     "home_team": "MIA",
     "away_team": "CHI",
-    "home_win_prob": 0.486,
+    "home_win_prob": 0.478,
     "spread": -0.3,
     "total": 42.2
   },
@@ -365,7 +365,7 @@
     "week": 14,
     "home_team": "NYJ",
     "away_team": "DEN",
-    "home_win_prob": 0.505,
+    "home_win_prob": 0.494,
     "spread": -1.9,
     "total": 43.0
   },
@@ -375,7 +375,7 @@
     "week": 14,
     "home_team": "PHI",
     "away_team": "IND",
-    "home_win_prob": 0.728,
+    "home_win_prob": 0.733,
     "spread": 0.6,
     "total": 46.0
   },
@@ -385,7 +385,7 @@
     "week": 14,
     "home_team": "WAS",
     "away_team": "HOU",
-    "home_win_prob": 0.489,
+    "home_win_prob": 0.48,
     "spread": -0.4,
     "total": 43.6
   },
@@ -395,7 +395,7 @@
     "week": 14,
     "home_team": "LV",
     "away_team": "LAC",
-    "home_win_prob": 0.341,
+    "home_win_prob": 0.331,
     "spread": -2.5,
     "total": 45.8
   },
@@ -405,7 +405,7 @@
     "week": 14,
     "home_team": "CIN",
     "away_team": "KC",
-    "home_win_prob": 0.174,
+    "home_win_prob": 0.172,
     "spread": -1.9,
     "total": 45.0
   },
@@ -415,7 +415,7 @@
     "week": 14,
     "home_team": "SEA",
     "away_team": "NYG",
-    "home_win_prob": 0.667,
+    "home_win_prob": 0.666,
     "spread": 2.1,
     "total": 43.9
   },
@@ -425,7 +425,7 @@
     "week": 14,
     "home_team": "SF",
     "away_team": "LA",
-    "home_win_prob": 0.764,
+    "home_win_prob": 0.767,
     "spread": -1.4,
     "total": 45.5
   },
@@ -435,7 +435,7 @@
     "week": 14,
     "home_team": "GB",
     "away_team": "BUF",
-    "home_win_prob": 0.597,
+    "home_win_prob": 0.608,
     "spread": 1.4,
     "total": 45.3
   },
@@ -445,7 +445,7 @@
     "week": 14,
     "home_team": "JAX",
     "away_team": "PIT",
-    "home_win_prob": 0.815,
+    "home_win_prob": 0.821,
     "spread": -2.4,
     "total": 42.3
   },
@@ -455,7 +455,7 @@
     "week": 15,
     "home_team": "LAC",
     "away_team": "SF",
-    "home_win_prob": 0.342,
+    "home_win_prob": 0.334,
     "spread": 0.4,
     "total": 44.9
   },
@@ -465,7 +465,7 @@
     "week": 15,
     "home_team": "PHI",
     "away_team": "SEA",
-    "home_win_prob": 0.598,
+    "home_win_prob": 0.601,
     "spread": 0.3,
     "total": 44.5
   },
@@ -475,7 +475,7 @@
     "week": 15,
     "home_team": "BUF",
     "away_team": "CHI",
-    "home_win_prob": 0.619,
+    "home_win_prob": 0.617,
     "spread": 0.9,
     "total": 42.9
   },
@@ -485,7 +485,7 @@
     "week": 15,
     "home_team": "CAR",
     "away_team": "CIN",
-    "home_win_prob": 0.568,
+    "home_win_prob": 0.567,
     "spread": -0.1,
     "total": 43.9
   },
@@ -495,7 +495,7 @@
     "week": 15,
     "home_team": "GB",
     "away_team": "MIA",
-    "home_win_prob": 0.731,
+    "home_win_prob": 0.723,
     "spread": 2.7,
     "total": 44.6
   },
@@ -505,7 +505,7 @@
     "week": 15,
     "home_team": "HOU",
     "away_team": "JAX",
-    "home_win_prob": 0.546,
+    "home_win_prob": 0.556,
     "spread": -0.1,
     "total": 43.2
   },
@@ -515,7 +515,7 @@
     "week": 15,
     "home_team": "NYG",
     "away_team": "CLE",
-    "home_win_prob": 0.597,
+    "home_win_prob": 0.593,
     "spread": 1.8,
     "total": 42.4
   },
@@ -525,7 +525,7 @@
     "week": 15,
     "home_team": "PIT",
     "away_team": "BAL",
-    "home_win_prob": 0.203,
+    "home_win_prob": 0.199,
     "spread": -0.6,
     "total": 42.0
   },
@@ -535,7 +535,7 @@
     "week": 15,
     "home_team": "TB",
     "away_team": "NO",
-    "home_win_prob": 0.585,
+    "home_win_prob": 0.567,
     "spread": -0.8,
     "total": 45.4
   },
@@ -545,7 +545,7 @@
     "week": 15,
     "home_team": "TEN",
     "away_team": "IND",
-    "home_win_prob": 0.434,
+    "home_win_prob": 0.43,
     "spread": -1.7,
     "total": 45.6
   },
@@ -555,7 +555,7 @@
     "week": 15,
     "home_team": "WAS",
     "away_team": "ATL",
-    "home_win_prob": 0.598,
+    "home_win_prob": 0.6,
     "spread": -0.9,
     "total": 44.3
   },
@@ -565,7 +565,7 @@
     "week": 15,
     "home_team": "ARI",
     "away_team": "NYJ",
-    "home_win_prob": 0.29,
+    "home_win_prob": 0.279,
     "spread": -0.3,
     "total": 43.2
   },
@@ -575,7 +575,7 @@
     "week": 15,
     "home_team": "LA",
     "away_team": "DAL",
-    "home_win_prob": 0.544,
+    "home_win_prob": 0.56,
     "spread": 0.7,
     "total": 46.0
   },
@@ -585,7 +585,7 @@
     "week": 15,
     "home_team": "LV",
     "away_team": "DEN",
-    "home_win_prob": 0.454,
+    "home_win_prob": 0.443,
     "spread": -2.6,
     "total": 45.4
   },
@@ -595,7 +595,7 @@
     "week": 15,
     "home_team": "MIN",
     "away_team": "DET",
-    "home_win_prob": 0.467,
+    "home_win_prob": 0.48,
     "spread": 1.6,
     "total": 45.9
   },
@@ -615,7 +615,7 @@
     "week": 16,
     "home_team": "PHI",
     "away_team": "HOU",
-    "home_win_prob": 0.719,
+    "home_win_prob": 0.716,
     "spread": 2.5,
     "total": 44.4
   },
@@ -625,7 +625,7 @@
     "week": 16,
     "home_team": "CHI",
     "away_team": "GB",
-    "home_win_prob": 0.873,
+    "home_win_prob": 0.897,
     "spread": -2.3,
     "total": 44.4
   },
@@ -635,7 +635,7 @@
     "week": 16,
     "home_team": "DEN",
     "away_team": "BUF",
-    "home_win_prob": 0.429,
+    "home_win_prob": 0.426,
     "spread": 0.1,
     "total": 44.1
   },
@@ -645,7 +645,7 @@
     "week": 16,
     "home_team": "SEA",
     "away_team": "LA",
-    "home_win_prob": 0.65,
+    "home_win_prob": 0.649,
     "spread": 0.0,
     "total": 45.3
   },
@@ -655,7 +655,7 @@
     "week": 16,
     "home_team": "ATL",
     "away_team": "TB",
-    "home_win_prob": 0.53,
+    "home_win_prob": 0.542,
     "spread": -0.6,
     "total": 44.2
   },
@@ -665,7 +665,7 @@
     "week": 16,
     "home_team": "BAL",
     "away_team": "CLE",
-    "home_win_prob": 0.814,
+    "home_win_prob": 0.818,
     "spread": 4.8,
     "total": 41.5
   },
@@ -675,7 +675,7 @@
     "week": 16,
     "home_team": "IND",
     "away_team": "CIN",
-    "home_win_prob": 0.683,
+    "home_win_prob": 0.69,
     "spread": 1.6,
     "total": 45.8
   },
@@ -685,7 +685,7 @@
     "week": 16,
     "home_team": "MIA",
     "away_team": "LAC",
-    "home_win_prob": 0.57,
+    "home_win_prob": 0.581,
     "spread": -1.1,
     "total": 43.8
   },
@@ -695,7 +695,7 @@
     "week": 16,
     "home_team": "MIN",
     "away_team": "WAS",
-    "home_win_prob": 0.596,
+    "home_win_prob": 0.616,
     "spread": 1.7,
     "total": 44.1
   },
@@ -705,7 +705,7 @@
     "week": 16,
     "home_team": "NO",
     "away_team": "ARI",
-    "home_win_prob": 0.813,
+    "home_win_prob": 0.818,
     "spread": 2.6,
     "total": 46.3
   },
@@ -715,7 +715,7 @@
     "week": 16,
     "home_team": "NYJ",
     "away_team": "NE",
-    "home_win_prob": 0.27,
+    "home_win_prob": 0.264,
     "spread": -4.6,
     "total": 43.2
   },
@@ -725,7 +725,7 @@
     "week": 16,
     "home_team": "PIT",
     "away_team": "CAR",
-    "home_win_prob": 0.556,
+    "home_win_prob": 0.545,
     "spread": 2.3,
     "total": 42.8
   },
@@ -735,7 +735,7 @@
     "week": 16,
     "home_team": "LV",
     "away_team": "TEN",
-    "home_win_prob": 0.528,
+    "home_win_prob": 0.519,
     "spread": -1.4,
     "total": 45.2
   },
@@ -745,7 +745,7 @@
     "week": 16,
     "home_team": "KC",
     "away_team": "SF",
-    "home_win_prob": 0.497,
+    "home_win_prob": 0.487,
     "spread": 1.3,
     "total": 45.2
   },
@@ -755,7 +755,7 @@
     "week": 16,
     "home_team": "DAL",
     "away_team": "JAX",
-    "home_win_prob": 0.646,
+    "home_win_prob": 0.63,
     "spread": 1.3,
     "total": 44.1
   },
@@ -765,7 +765,7 @@
     "week": 16,
     "home_team": "DET",
     "away_team": "NYG",
-    "home_win_prob": 0.676,
+    "home_win_prob": 0.669,
     "spread": -0.5,
     "total": 45.2
   },
@@ -775,7 +775,7 @@
     "week": 17,
     "home_team": "CIN",
     "away_team": "BAL",
-    "home_win_prob": 0.195,
+    "home_win_prob": 0.193,
     "spread": -2.8,
     "total": 43.1
   },
@@ -785,7 +785,7 @@
     "week": 17,
     "home_team": "ATL",
     "away_team": "NO",
-    "home_win_prob": 0.589,
+    "home_win_prob": 0.591,
     "spread": -1.3,
     "total": 46.6
   },
@@ -795,7 +795,7 @@
     "week": 17,
     "home_team": "CAR",
     "away_team": "SEA",
-    "home_win_prob": 0.293,
+    "home_win_prob": 0.289,
     "spread": -2.0,
     "total": 43.8
   },
@@ -805,7 +805,7 @@
     "week": 17,
     "home_team": "CLE",
     "away_team": "IND",
-    "home_win_prob": 0.396,
+    "home_win_prob": 0.403,
     "spread": -3.6,
     "total": 44.2
   },
@@ -815,7 +815,7 @@
     "week": 17,
     "home_team": "DAL",
     "away_team": "NYG",
-    "home_win_prob": 0.683,
+    "home_win_prob": 0.669,
     "spread": 1.4,
     "total": 44.6
   },
@@ -825,7 +825,7 @@
     "week": 17,
     "home_team": "JAX",
     "away_team": "WAS",
-    "home_win_prob": 0.609,
+    "home_win_prob": 0.624,
     "spread": 0.6,
     "total": 42.9
   },
@@ -835,7 +835,7 @@
     "week": 17,
     "home_team": "LAC",
     "away_team": "KC",
-    "home_win_prob": 0.362,
+    "home_win_prob": 0.364,
     "spread": -0.9,
     "total": 45.4
   },
@@ -845,7 +845,7 @@
     "week": 17,
     "home_team": "MIA",
     "away_team": "BUF",
-    "home_win_prob": 0.455,
+    "home_win_prob": 0.472,
     "spread": -1.2,
     "total": 43.1
   },
@@ -855,7 +855,7 @@
     "week": 17,
     "home_team": "NE",
     "away_team": "DEN",
-    "home_win_prob": 0.679,
+    "home_win_prob": 0.68,
     "spread": 2.7,
     "total": 44.6
   },
@@ -865,7 +865,7 @@
     "week": 17,
     "home_team": "NYJ",
     "away_team": "MIN",
-    "home_win_prob": 0.411,
+    "home_win_prob": 0.388,
     "spread": -1.8,
     "total": 43.3
   },
@@ -875,7 +875,7 @@
     "week": 17,
     "home_team": "TB",
     "away_team": "LA",
-    "home_win_prob": 0.604,
+    "home_win_prob": 0.585,
     "spread": -1.2,
     "total": 44.7
   },
@@ -885,7 +885,7 @@
     "week": 17,
     "home_team": "TEN",
     "away_team": "PIT",
-    "home_win_prob": 0.696,
+    "home_win_prob": 0.693,
     "spread": -2.3,
     "total": 43.1
   },
@@ -895,7 +895,7 @@
     "week": 17,
     "home_team": "ARI",
     "away_team": "LV",
-    "home_win_prob": 0.255,
+    "home_win_prob": 0.243,
     "spread": 0.4,
     "total": 45.6
   },
@@ -905,7 +905,7 @@
     "week": 17,
     "home_team": "CHI",
     "away_team": "DET",
-    "home_win_prob": 0.887,
+    "home_win_prob": 0.907,
     "spread": 0.8,
     "total": 44.4
   },
@@ -915,7 +915,7 @@
     "week": 17,
     "home_team": "SF",
     "away_team": "PHI",
-    "home_win_prob": 0.649,
+    "home_win_prob": 0.657,
     "spread": -1.6,
     "total": 44.7
   },
@@ -925,7 +925,7 @@
     "week": 17,
     "home_team": "GB",
     "away_team": "HOU",
-    "home_win_prob": 0.748,
+    "home_win_prob": 0.744,
     "spread": 2.8,
     "total": 45.3
   },
@@ -935,7 +935,7 @@
     "week": 18,
     "home_team": "ARI",
     "away_team": "SF",
-    "home_win_prob": 0.08,
+    "home_win_prob": 0.074,
     "spread": -1.7,
     "total": 44.7
   },
@@ -945,7 +945,7 @@
     "week": 18,
     "home_team": "BAL",
     "away_team": "PIT",
-    "home_win_prob": 0.887,
+    "home_win_prob": 0.892,
     "spread": 0.6,
     "total": 42.0
   },
@@ -955,7 +955,7 @@
     "week": 18,
     "home_team": "BUF",
     "away_team": "NYJ",
-    "home_win_prob": 0.848,
+    "home_win_prob": 0.857,
     "spread": 1.8,
     "total": 42.7
   },
@@ -965,7 +965,7 @@
     "week": 18,
     "home_team": "CAR",
     "away_team": "ATL",
-    "home_win_prob": 0.525,
+    "home_win_prob": 0.523,
     "spread": -0.2,
     "total": 44.3
   },
@@ -975,7 +975,7 @@
     "week": 18,
     "home_team": "CIN",
     "away_team": "CLE",
-    "home_win_prob": 0.454,
+    "home_win_prob": 0.439,
     "spread": 2.0,
     "total": 42.8
   },
@@ -985,7 +985,7 @@
     "week": 18,
     "home_team": "DEN",
     "away_team": "LAC",
-    "home_win_prob": 0.546,
+    "home_win_prob": 0.537,
     "spread": 0.2,
     "total": 44.7
   },
@@ -995,7 +995,7 @@
     "week": 18,
     "home_team": "GB",
     "away_team": "DET",
-    "home_win_prob": 0.66,
+    "home_win_prob": 0.664,
     "spread": 3.1,
     "total": 46.7
   },
@@ -1005,7 +1005,7 @@
     "week": 18,
     "home_team": "HOU",
     "away_team": "TEN",
-    "home_win_prob": 0.673,
+    "home_win_prob": 0.686,
     "spread": -0.2,
     "total": 43.9
   },
@@ -1015,7 +1015,7 @@
     "week": 18,
     "home_team": "IND",
     "away_team": "JAX",
-    "home_win_prob": 0.541,
+    "home_win_prob": 0.547,
     "spread": 1.7,
     "total": 44.9
   },
@@ -1025,7 +1025,7 @@
     "week": 18,
     "home_team": "KC",
     "away_team": "LV",
-    "home_win_prob": 0.798,
+    "home_win_prob": 0.793,
     "spread": 3.4,
     "total": 46.1
   },
@@ -1035,7 +1035,7 @@
     "week": 18,
     "home_team": "LA",
     "away_team": "SEA",
-    "home_win_prob": 0.498,
+    "home_win_prob": 0.499,
     "spread": -0.0,
     "total": 45.3
   },
@@ -1045,7 +1045,7 @@
     "week": 18,
     "home_team": "MIN",
     "away_team": "CHI",
-    "home_win_prob": 0.439,
+    "home_win_prob": 0.435,
     "spread": 0.9,
     "total": 43.5
   },
@@ -1055,7 +1055,7 @@
     "week": 18,
     "home_team": "NE",
     "away_team": "MIA",
-    "home_win_prob": 0.603,
+    "home_win_prob": 0.59,
     "spread": 4.0,
     "total": 43.7
   },
@@ -1065,7 +1065,7 @@
     "week": 18,
     "home_team": "NO",
     "away_team": "TB",
-    "home_win_prob": 0.47,
+    "home_win_prob": 0.479,
     "spread": 0.8,
     "total": 45.4
   },
@@ -1075,7 +1075,7 @@
     "week": 18,
     "home_team": "NYG",
     "away_team": "PHI",
-    "home_win_prob": 0.348,
+    "home_win_prob": 0.351,
     "spread": -2.4,
     "total": 44.2
   },
@@ -1085,7 +1085,7 @@
     "week": 18,
     "home_team": "WAS",
     "away_team": "DAL",
-    "home_win_prob": 0.407,
+    "home_win_prob": 0.421,
     "spread": -1.9,
     "total": 44.5
   }

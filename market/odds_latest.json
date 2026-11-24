@@ -28,8 +28,8 @@
     "away_spread": -2.5,
     "total": 55.5,
     "home_moneyline": 2.145,
-    "away_moneyline": 1.73,
-    "market_home_win_prob": 0.4465,
+    "away_moneyline": 1.72,
+    "market_home_win_prob": 0.445,
     "bookmakers": [
       "betmgm",
       "betonlineag",
@@ -45,8 +45,8 @@
     "commence_time": "2026-11-26T21:30:00Z",
     "home_team": "Dallas Cowboys",
     "away_team": "Philadelphia Eagles",
-    "home_spread": -8.75,
-    "away_spread": 8.75,
+    "home_spread": -8.5,
+    "away_spread": 8.5,
     "total": 48.0,
     "home_moneyline": 1.22,
     "away_moneyline": 4.5,
@@ -58,8 +58,7 @@
       "betus",
       "draftkings",
       "fanduel",
-      "lowvig",
-      "mybookieag"
+      "lowvig"
     ]
   },
   {
@@ -505,8 +504,8 @@
     "away_spread": -2.5,
     "total": 36.5,
     "home_moneyline": 2.325,
-    "away_moneyline": 1.64,
-    "market_home_win_prob": 0.4136,
+    "away_moneyline": 1.6349999999999998,
+    "market_home_win_prob": 0.4129,
     "bookmakers": [
       "betonlineag",
       "betus",
@@ -541,8 +540,8 @@
     "away_spread": 4.5,
     "total": 42.0,
     "home_moneyline": 1.415,
-    "away_moneyline": 2.9699999999999998,
-    "market_home_win_prob": 0.6773,
+    "away_moneyline": 2.9749999999999996,
+    "market_home_win_prob": 0.6777,
     "bookmakers": [
       "betonlineag",
       "betus",
@@ -577,8 +576,8 @@
     "away_spread": 6.0,
     "total": 50.5,
     "home_moneyline": 1.3849999999999998,
-    "away_moneyline": 3.135,
-    "market_home_win_prob": 0.6936,
+    "away_moneyline": 3.13,
+    "market_home_win_prob": 0.6932,
     "bookmakers": [
       "betonlineag",
       "betus",
