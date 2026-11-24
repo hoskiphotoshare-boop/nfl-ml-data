@@ -451,17 +451,6 @@
     "projected_fantasy_points": 8.9
   },
   {
-    "player_id": "00-0038124",
-    "name": "C.Watson",
-    "team": "GB",
-    "position": "WR",
-    "projected_targets": 5.0,
-    "projected_receptions": 3.0,
-    "projected_yards": 13.0,
-    "projected_tds": 1.0,
-    "projected_fantasy_points": 8.8
-  },
-  {
     "player_id": "00-0039338",
     "name": "B.Bowers",
     "team": "LV",
@@ -470,6 +459,17 @@
     "projected_receptions": 6.0,
     "projected_yards": 58.0,
     "projected_tds": 0.0,
+    "projected_fantasy_points": 8.8
+  },
+  {
+    "player_id": "00-0038124",
+    "name": "C.Watson",
+    "team": "GB",
+    "position": "WR",
+    "projected_targets": 5.0,
+    "projected_receptions": 3.0,
+    "projected_yards": 13.0,
+    "projected_tds": 1.0,
     "projected_fantasy_points": 8.8
   },
   {
@@ -814,17 +814,6 @@
     "projected_fantasy_points": 5.8
   },
   {
-    "player_id": "00-0037744",
-    "name": "T.McBride",
-    "team": "ARI",
-    "position": "TE",
-    "projected_targets": 9.0,
-    "projected_receptions": 5.0,
-    "projected_yards": 30.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 5.5
-  },
-  {
     "player_id": "00-0037267",
     "name": "J.Ford",
     "team": "CLE",
@@ -832,6 +821,17 @@
     "projected_targets": 7.0,
     "projected_receptions": 6.0,
     "projected_yards": 25.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 5.5
+  },
+  {
+    "player_id": "00-0037744",
+    "name": "T.McBride",
+    "team": "ARI",
+    "position": "TE",
+    "projected_targets": 9.0,
+    "projected_receptions": 5.0,
+    "projected_yards": 30.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.5
   },
@@ -847,17 +847,6 @@
     "projected_fantasy_points": 5.5
   },
   {
-    "player_id": "00-0038977",
-    "name": "T.Dell",
-    "team": "HOU",
-    "position": "WR",
-    "projected_targets": 7.0,
-    "projected_receptions": 3.0,
-    "projected_yards": 40.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 5.5
-  },
-  {
     "player_id": "00-0039075",
     "name": "P.Nacua",
     "team": "LA",
@@ -865,6 +854,17 @@
     "projected_targets": 4.0,
     "projected_receptions": 4.0,
     "projected_yards": 35.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 5.5
+  },
+  {
+    "player_id": "00-0038977",
+    "name": "T.Dell",
+    "team": "HOU",
+    "position": "WR",
+    "projected_targets": 7.0,
+    "projected_receptions": 3.0,
+    "projected_yards": 40.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.5
   },
@@ -1408,10 +1408,10 @@
     "projected_fantasy_points": 2.8
   },
   {
-    "player_id": "00-0035659",
-    "name": "T.McLaurin",
-    "team": "WAS",
-    "position": "WR",
+    "player_id": "00-0036251",
+    "name": "Z.Moss",
+    "team": "CIN",
+    "position": "RB",
     "projected_targets": 4.0,
     "projected_receptions": 2.0,
     "projected_yards": 17.0,
@@ -1430,10 +1430,10 @@
     "projected_fantasy_points": 2.7
   },
   {
-    "player_id": "00-0036251",
-    "name": "Z.Moss",
-    "team": "CIN",
-    "position": "RB",
+    "player_id": "00-0035659",
+    "name": "T.McLaurin",
+    "team": "WAS",
+    "position": "WR",
     "projected_targets": 4.0,
     "projected_receptions": 2.0,
     "projected_yards": 17.0,
@@ -1474,22 +1474,22 @@
     "projected_fantasy_points": 2.6
   },
   {
-    "player_id": "00-0033246",
-    "name": "J.Mundt",
-    "team": "MIN",
-    "position": "TE",
-    "projected_targets": 3.0,
+    "player_id": "00-0033282",
+    "name": "C.Samuel",
+    "team": "BUF",
+    "position": "WR",
+    "projected_targets": 2.0,
     "projected_receptions": 2.0,
     "projected_yards": 15.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 2.5
   },
   {
-    "player_id": "00-0033282",
-    "name": "C.Samuel",
-    "team": "BUF",
-    "position": "WR",
-    "projected_targets": 2.0,
+    "player_id": "00-0033246",
+    "name": "J.Mundt",
+    "team": "MIN",
+    "position": "TE",
+    "projected_targets": 3.0,
     "projected_receptions": 2.0,
     "projected_yards": 15.0,
     "projected_tds": 0.0,
@@ -1507,22 +1507,22 @@
     "projected_fantasy_points": 2.5
   },
   {
-    "player_id": "00-0037238",
-    "name": "D.London",
-    "team": "ATL",
+    "player_id": "00-0036988",
+    "name": "J.Palmer",
+    "team": "LAC",
     "position": "WR",
-    "projected_targets": 3.0,
+    "projected_targets": 4.0,
     "projected_receptions": 2.0,
     "projected_yards": 15.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 2.5
   },
   {
-    "player_id": "00-0036988",
-    "name": "J.Palmer",
-    "team": "LAC",
+    "player_id": "00-0037238",
+    "name": "D.London",
+    "team": "ATL",
     "position": "WR",
-    "projected_targets": 4.0,
+    "projected_targets": 3.0,
     "projected_receptions": 2.0,
     "projected_yards": 15.0,
     "projected_tds": 0.0,
@@ -1749,17 +1749,6 @@
     "projected_fantasy_points": 2.0
   },
   {
-    "player_id": "00-0033589",
-    "name": "D.Moore",
-    "team": "CAR",
-    "position": "WR",
-    "projected_targets": 3.0,
-    "projected_receptions": 1.0,
-    "projected_yards": 14.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 1.9
-  },
-  {
     "player_id": "00-0033045",
     "name": "E.Elliott",
     "team": "DAL",
@@ -1767,6 +1756,17 @@
     "projected_targets": 2.0,
     "projected_receptions": 2.0,
     "projected_yards": 9.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 1.9
+  },
+  {
+    "player_id": "00-0033589",
+    "name": "D.Moore",
+    "team": "CAR",
+    "position": "WR",
+    "projected_targets": 3.0,
+    "projected_receptions": 1.0,
+    "projected_yards": 14.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 1.9
   },
@@ -1804,10 +1804,10 @@
     "projected_fantasy_points": 1.9
   },
   {
-    "player_id": "00-0033948",
-    "name": "Ja.Williams",
-    "team": "NO",
-    "position": "RB",
+    "player_id": "00-0034159",
+    "name": "W.Dissly",
+    "team": "LAC",
+    "position": "TE",
     "projected_targets": 1.0,
     "projected_receptions": 1.0,
     "projected_yards": 13.0,
@@ -1815,10 +1815,10 @@
     "projected_fantasy_points": 1.8
   },
   {
-    "player_id": "00-0034159",
-    "name": "W.Dissly",
-    "team": "LAC",
-    "position": "TE",
+    "player_id": "00-0033948",
+    "name": "Ja.Williams",
+    "team": "NO",
+    "position": "RB",
     "projected_targets": 1.0,
     "projected_receptions": 1.0,
     "projected_yards": 13.0,
@@ -2035,22 +2035,22 @@
     "projected_fantasy_points": 1.2
   },
   {
-    "player_id": "00-0031549",
-    "name": "N.Agholor",
-    "team": "BAL",
+    "player_id": "00-0031763",
+    "name": "D.Carter",
+    "team": "CHI",
     "position": "WR",
-    "projected_targets": 1.0,
+    "projected_targets": 2.0,
     "projected_receptions": 1.0,
     "projected_yards": 6.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 1.1
   },
   {
-    "player_id": "00-0031763",
-    "name": "D.Carter",
-    "team": "CHI",
+    "player_id": "00-0031549",
+    "name": "N.Agholor",
+    "team": "BAL",
     "position": "WR",
-    "projected_targets": 2.0,
+    "projected_targets": 1.0,
     "projected_receptions": 1.0,
     "projected_yards": 6.0,
     "projected_tds": 0.0,
@@ -2068,22 +2068,22 @@
     "projected_fantasy_points": 1.1
   },
   {
-    "player_id": "00-0035341",
-    "name": "T.Irwin",
-    "team": "CIN",
-    "position": "WR",
-    "projected_targets": 2.0,
+    "player_id": "00-0036139",
+    "name": "R.Dowdle",
+    "team": "DAL",
+    "position": "RB",
+    "projected_targets": 1.0,
     "projected_receptions": 1.0,
     "projected_yards": 6.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 1.1
   },
   {
-    "player_id": "00-0036139",
-    "name": "R.Dowdle",
-    "team": "DAL",
-    "position": "RB",
-    "projected_targets": 1.0,
+    "player_id": "00-0035341",
+    "name": "T.Irwin",
+    "team": "CIN",
+    "position": "WR",
+    "projected_targets": 2.0,
     "projected_receptions": 1.0,
     "projected_yards": 6.0,
     "projected_tds": 0.0,
@@ -2178,22 +2178,22 @@
     "projected_fantasy_points": 1.0
   },
   {
-    "player_id": "00-0038576",
-    "name": "C.Jones",
-    "team": "CIN",
-    "position": "WR",
-    "projected_targets": 1.0,
+    "player_id": "00-0039384",
+    "name": "T.Tracy",
+    "team": "NYG",
+    "position": "RB",
+    "projected_targets": 3.0,
     "projected_receptions": 1.0,
     "projected_yards": 5.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 1.0
   },
   {
-    "player_id": "00-0039384",
-    "name": "T.Tracy",
-    "team": "NYG",
-    "position": "RB",
-    "projected_targets": 3.0,
+    "player_id": "00-0038576",
+    "name": "C.Jones",
+    "team": "CIN",
+    "position": "WR",
+    "projected_targets": 1.0,
     "projected_receptions": 1.0,
     "projected_yards": 5.0,
     "projected_tds": 0.0,
@@ -2299,9 +2299,9 @@
     "projected_fantasy_points": 0.8
   },
   {
-    "player_id": "00-0038979",
-    "name": "C.Tillman",
-    "team": "CLE",
+    "player_id": "00-0038606",
+    "name": "P.Washington",
+    "team": "JAX",
     "position": "WR",
     "projected_targets": 1.0,
     "projected_receptions": 1.0,
@@ -2310,9 +2310,9 @@
     "projected_fantasy_points": 0.8
   },
   {
-    "player_id": "00-0038606",
-    "name": "P.Washington",
-    "team": "JAX",
+    "player_id": "00-0038979",
+    "name": "C.Tillman",
+    "team": "CLE",
     "position": "WR",
     "projected_targets": 1.0,
     "projected_receptions": 1.0,
@@ -2453,6 +2453,28 @@
     "projected_fantasy_points": 0.4
   },
   {
+    "player_id": "00-0031299",
+    "name": "J.Matthews",
+    "team": "CAR",
+    "position": "TE",
+    "projected_targets": 1.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 0.0
+  },
+  {
+    "player_id": "00-0033217",
+    "name": "M.Alie-Cox",
+    "team": "IND",
+    "position": "TE",
+    "projected_targets": 1.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 0.0
+  },
+  {
     "player_id": "00-0032764",
     "name": "D.Henry",
     "team": "BAL",
@@ -2486,65 +2508,10 @@
     "projected_fantasy_points": 0.0
   },
   {
-    "player_id": "00-0033217",
-    "name": "M.Alie-Cox",
-    "team": "IND",
-    "position": "TE",
-    "projected_targets": 1.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 0.0
-  },
-  {
-    "player_id": "00-0031299",
-    "name": "J.Matthews",
-    "team": "CAR",
-    "position": "TE",
-    "projected_targets": 1.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 0.0
-  },
-  {
     "player_id": "00-0034419",
     "name": "B.Berrios",
     "team": "MIA",
     "position": "WR",
-    "projected_targets": 2.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 0.0
-  },
-  {
-    "player_id": "00-0034798",
-    "name": "D.Smythe",
-    "team": "MIA",
-    "position": "TE",
-    "projected_targets": 3.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 0.0
-  },
-  {
-    "player_id": "00-0035537",
-    "name": "Ty.Johnson",
-    "team": "BUF",
-    "position": "RB",
-    "projected_targets": 1.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 0.0
-  },
-  {
-    "player_id": "00-0035243",
-    "name": "M.Sanders",
-    "team": "CAR",
-    "position": "RB",
     "projected_targets": 2.0,
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
@@ -2563,10 +2530,43 @@
     "projected_fantasy_points": 0.0
   },
   {
+    "player_id": "00-0034798",
+    "name": "D.Smythe",
+    "team": "MIA",
+    "position": "TE",
+    "projected_targets": 3.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 0.0
+  },
+  {
+    "player_id": "00-0035243",
+    "name": "M.Sanders",
+    "team": "CAR",
+    "position": "RB",
+    "projected_targets": 2.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 0.0
+  },
+  {
     "player_id": "00-0035406",
     "name": "L.Humphrey",
     "team": "DEN",
     "position": "WR",
+    "projected_targets": 1.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 0.0
+  },
+  {
+    "player_id": "00-0035537",
+    "name": "Ty.Johnson",
+    "team": "BUF",
+    "position": "RB",
     "projected_targets": 1.0,
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
@@ -2588,17 +2588,6 @@
     "player_id": "00-0036422",
     "name": "A.Trautman",
     "team": "DEN",
-    "position": "TE",
-    "projected_targets": 1.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 0.0
-  },
-  {
-    "player_id": "00-0036876",
-    "name": "K.Granson",
-    "team": "IND",
     "position": "TE",
     "projected_targets": 1.0,
     "projected_receptions": 0.0,
@@ -2629,6 +2618,17 @@
     "projected_fantasy_points": 0.0
   },
   {
+    "player_id": "00-0036876",
+    "name": "K.Granson",
+    "team": "IND",
+    "position": "TE",
+    "projected_targets": 1.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 0.0
+  },
+  {
     "player_id": "00-0037741",
     "name": "J.Dotson",
     "team": "PHI",
@@ -2645,17 +2645,6 @@
     "team": "DAL",
     "position": "WR",
     "projected_targets": 1.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 0.0
-  },
-  {
-    "player_id": "00-0038393",
-    "name": "D.Wicks",
-    "team": "GB",
-    "position": "WR",
-    "projected_targets": 3.0,
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
@@ -2684,11 +2673,22 @@
     "projected_fantasy_points": 0.0
   },
   {
-    "player_id": "00-0039144",
-    "name": "L.Musgrave",
+    "player_id": "00-0039236",
+    "name": "J.Wilson",
+    "team": "PHI",
+    "position": "WR",
+    "projected_targets": 1.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 0.0
+  },
+  {
+    "player_id": "00-0038393",
+    "name": "D.Wicks",
     "team": "GB",
-    "position": "TE",
-    "projected_targets": 2.0,
+    "position": "WR",
+    "projected_targets": 3.0,
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
@@ -2698,6 +2698,17 @@
     "player_id": "00-0039386",
     "name": "B.Means",
     "team": "NO",
+    "position": "WR",
+    "projected_targets": 1.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 0.0
+  },
+  {
+    "player_id": "00-0038976",
+    "name": "M.Mims",
+    "team": "DEN",
     "position": "WR",
     "projected_targets": 1.0,
     "projected_receptions": 0.0,
@@ -2717,22 +2728,11 @@
     "projected_fantasy_points": 0.0
   },
   {
-    "player_id": "00-0039236",
-    "name": "J.Wilson",
-    "team": "PHI",
-    "position": "WR",
-    "projected_targets": 1.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 0.0
-  },
-  {
-    "player_id": "00-0038976",
-    "name": "M.Mims",
-    "team": "DEN",
-    "position": "WR",
-    "projected_targets": 1.0,
+    "player_id": "00-0039144",
+    "name": "L.Musgrave",
+    "team": "GB",
+    "position": "TE",
+    "projected_targets": 2.0,
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
