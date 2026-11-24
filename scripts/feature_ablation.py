@@ -150,6 +150,32 @@ NEXTGEN = (
     + [f"away_ng_rec_{c}" for c in _NG_REC]
 )
 
+_PFR_PASS = ["passing_drop_pct", "passing_bad_throw_pct", "times_pressured_pct"]
+_PFR_RUSH = [
+    "rushing_yards_before_contact_avg",
+    "rushing_yards_after_contact_avg",
+]
+_PFR_REC = ["receiving_drop_pct", "receiving_rat"]
+_PFR_DEF = [
+    "def_completion_pct",
+    "def_yards_allowed_per_tgt",
+    "def_passer_rating_allowed",
+    "def_missed_tackle_pct",
+    "def_pressures",
+    "def_sacks",
+]
+
+PFR = (
+    [f"home_pfr_pass_{c}" for c in _PFR_PASS]
+    + [f"away_pfr_pass_{c}" for c in _PFR_PASS]
+    + [f"home_pfr_rush_{c}" for c in _PFR_RUSH]
+    + [f"away_pfr_rush_{c}" for c in _PFR_RUSH]
+    + [f"home_pfr_rec_{c}" for c in _PFR_REC]
+    + [f"away_pfr_rec_{c}" for c in _PFR_REC]
+    + [f"home_pfr_def_{c}" for c in _PFR_DEF]
+    + [f"away_pfr_def_{c}" for c in _PFR_DEF]
+)
+
 
 def uniq(seq: list[str]) -> list[str]:
     seen = set()
@@ -249,6 +275,17 @@ def main() -> None:
     if nextgen_cols:
         experiments["base+epa+rest+team_stats+nextgen"] = uniq(
             BASE + EPA + REST + (team_stats_cols or []) + nextgen_cols
+        )
+
+    pfr_cols = [c for c in PFR if c in raw.columns and c not in already_used]
+    if pfr_cols:
+        experiments["base+epa+rest+team_stats+nextgen+pfr"] = uniq(
+            BASE
+            + EPA
+            + REST
+            + (team_stats_cols or [])
+            + (nextgen_cols or [])
+            + pfr_cols
         )
 
     results = {}

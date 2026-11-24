@@ -47,3 +47,15 @@ Walk-forward backtest window: **2022–2026** (train on all prior seasons, test 
 - **Before:** accuracy 0.6048, log loss 0.6615, Brier 0.2345, AUC 0.6356
 - **After:** accuracy 0.6379, log loss 0.6316, Brier 0.2204, AUC 0.6908
 - **Decision:** ✅ **Accept** — large, consistent improvement across all metrics.
+
+## 2026-11-24 — PFR advanced stats
+
+- **Features:** team-week rolling averages from PFR advanced stats:
+  - pass: drop %, bad-throw %, pressure %
+  - rush: yards before/after contact averages
+  - rec: drop %, receiver rating
+  - def: completion %, yards allowed/target, passer rating allowed, missed-tackle %,
+    pressures, sacks
+- **Before (NGS model):** accuracy ~0.643, log loss ~0.633, Brier ~0.221, AUC ~0.690
+- **After (with PFR):** accuracy 0.638, log loss 0.637, Brier 0.223, AUC 0.684
+- **Decision:** ❌ **Reject** — every metric got worse; PFR adds noise on top of NGS.

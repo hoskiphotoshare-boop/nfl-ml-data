@@ -23,6 +23,7 @@ from nflreadpy import (
     load_rosters,
     load_trades,
     load_players,
+    load_pfr_advstats,
 )
 
 try:  # optional tables
@@ -213,6 +214,19 @@ def fetch_trades() -> pl.DataFrame:
 def fetch_players() -> pl.DataFrame:
     """Fetch player metadata and cross-platform ID mappings."""
     return load_players()
+
+
+def fetch_pfr_advstats(
+    season: int | list[int] | None = None,
+    stat_type: str = "pass",
+    summary_level: str = "week",
+) -> pl.DataFrame:
+    """Fetch PFR advanced stats (pass, rush, rec, def)."""
+    return load_pfr_advstats(
+        seasons=season,
+        stat_type=stat_type,  # type: ignore[arg-type]
+        summary_level=summary_level,  # type: ignore[arg-type]
+    )
 
 
 def main() -> None:

@@ -29,6 +29,7 @@ from src.ingest import (
     fetch_players,
     fetch_snap_counts,
     fetch_nextgen_stats,
+    fetch_pfr_advstats,
 )
 import polars as pl
 
@@ -80,7 +81,14 @@ def main() -> None:
         ng.write_parquet(f"data/nextgen_{stat_type}_latest.parquet")
         print(f"Wrote nextgen_{stat_type}: {ng.shape[0]} rows x {ng.shape[1]} cols")
 
-    # 7) Injury reports for the recent seasons.
+    # 7) PFR advanced stats (pass, rush, rec, def).
+    for stat_type in ["pass", "rush", "rec", "def"]:
+        print(f"Fetching pfr_advstats ({stat_type}, {seasons_for_model})…")
+        pfr = fetch_pfr_advstats(season=seasons_for_model, stat_type=stat_type)
+        pfr.write_parquet(f"data/pfr_{stat_type}_latest.parquet")
+        print(f"Wrote pfr_{stat_type}: {pfr.shape[0]} rows x {pfr.shape[1]} cols")
+
+    # 8) Injury reports for the recent seasons.
     print(f"Fetching injuries ({seasons_for_model})…")
     injuries = fetch_injuries(season=seasons_for_model)
     injuries.write_parquet("data/injuries_latest.parquet")

@@ -104,6 +104,63 @@ def main() -> None:
                     prefix="ng_rec",
                 )
 
+            pfr_pass = load_table("pfr_pass_latest")
+            if pfr_pass is not None:
+                match_features = add_team_rolling_features(
+                    match_features,
+                    pfr_pass,
+                    team_col="team",
+                    stat_cols=[
+                        "passing_drop_pct",
+                        "passing_bad_throw_pct",
+                        "times_pressured_pct",
+                    ],
+                    prefix="pfr_pass",
+                )
+
+            pfr_rush = load_table("pfr_rush_latest")
+            if pfr_rush is not None:
+                match_features = add_team_rolling_features(
+                    match_features,
+                    pfr_rush,
+                    team_col="team",
+                    stat_cols=[
+                        "rushing_yards_before_contact_avg",
+                        "rushing_yards_after_contact_avg",
+                    ],
+                    prefix="pfr_rush",
+                )
+
+            pfr_rec = load_table("pfr_rec_latest")
+            if pfr_rec is not None:
+                match_features = add_team_rolling_features(
+                    match_features,
+                    pfr_rec,
+                    team_col="team",
+                    stat_cols=[
+                        "receiving_drop_pct",
+                        "receiving_rat",
+                    ],
+                    prefix="pfr_rec",
+                )
+
+            pfr_def = load_table("pfr_def_latest")
+            if pfr_def is not None:
+                match_features = add_team_rolling_features(
+                    match_features,
+                    pfr_def,
+                    team_col="team",
+                    stat_cols=[
+                        "def_completion_pct",
+                        "def_yards_allowed_per_tgt",
+                        "def_passer_rating_allowed",
+                        "def_missed_tackle_pct",
+                        "def_pressures",
+                        "def_sacks",
+                    ],
+                    prefix="pfr_def",
+                )
+
             match_features.write_parquet("features/match_features.parquet")
             print(f"Wrote features/match_features.parquet ({match_features.height} rows)")
         except Exception as exc:  # pragma: no cover – defensive
