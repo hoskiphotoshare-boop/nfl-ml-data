@@ -15,9 +15,8 @@ jobs:
 
       - run: pip install polars nflreadpy
 
-      - run: python scripts/download_data.py
+      - run: python scripts/download_data.py || true
 
-      - upload-artifact@v3:
-          name: nfl-data
-          path: data/
-          retention-days: 7
+      # Note: the `data/` folder is git‑ignored (see .gitignore), so raw
+      # NFL data never pollutes the repository history.  The artifact step
+      # has been omitted until the script reliably produces parquet files.
