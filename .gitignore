@@ -14,6 +14,7 @@ __pycache__/
 
 # Data dumps (raw data should not be committed)
 /data/
+/frontend/data/
 
 # Local virtualenv
 .venv/

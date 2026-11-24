@@ -83,3 +83,16 @@ jobs:
       - run: |
           git pull --rebase origin main || true
           git push origin main || true
+
+      - name: Prepare static data for Pages
+        run: |
+          mkdir -p frontend/data/predictions frontend/data/reports
+          cp predictions/*.json frontend/data/predictions/ 2>/dev/null || true
+          cp reports/*.json frontend/data/reports/ 2>/dev/null || true
+
+      - name: Deploy frontend to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx wrangler pages deploy frontend --project-name nfl-ml-data --commit-dirty=true
