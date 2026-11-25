@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T22:49:37.688634+00:00",
+  "generated_at": "2026-11-25T23:04:05.598917+00:00",
   "match_backtest": {
     "accuracy": 0.6440677966101694,
     "log_loss": 0.6430025716450639,
@@ -28,12 +28,12 @@
       "2026_13_HOU_PIT",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.1135,
+    "mean_abs_edge": 0.1096,
     "max_abs_edge": 0.2498
   },
   "futures": {
-    "mean_abs_edge": 0.0076,
-    "max_abs_edge": 0.0336,
+    "mean_abs_edge": 0.0074,
+    "max_abs_edge": 0.0342,
     "teams_matched": 32
   },
   "score_models": {
@@ -97,8 +97,8 @@
       2026
     ],
     "latest_season": 2026,
-    "latest_week": 11,
-    "rows": 27045
+    "latest_week": 12,
+    "rows": 27149
   },
   "odds": {
     "fetched_at": "2026-11-25T21:12:59.980655+00:00",
