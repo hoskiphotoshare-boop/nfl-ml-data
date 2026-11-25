@@ -290,6 +290,14 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
         "touchdowns",
         "passing_yards",
         "passing_tds",
+        "passing_interceptions",
+        "completions",
+        "attempts",
+        "rushing_yards",
+        "rushing_tds",
+        "fg_made",
+        "fg_att",
+        "pat_made",
     ]
     recent = (
         df.sort(["season", "week"])
@@ -375,6 +383,26 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
                 else None,
                 "projected_pass_tds": round(float(stats.get("roll_passing_tds") or 0.0), 2)
                 if pos == "QB"
+                else None,
+                "projected_interceptions": round(
+                    float(stats.get("roll_passing_interceptions") or 0.0), 2
+                )
+                if pos == "QB"
+                else None,
+                "projected_rush_yards": round(float(stats.get("roll_rushing_yards") or 0.0), 1)
+                if pos == "QB"
+                else None,
+                "projected_rush_tds": round(float(stats.get("roll_rushing_tds") or 0.0), 2)
+                if pos == "QB"
+                else None,
+                "projected_fg": round(float(stats.get("roll_fg_made") or 0.0), 1)
+                if pos == "K"
+                else None,
+                "projected_fg_att": round(float(stats.get("roll_fg_att") or 0.0), 1)
+                if pos == "K"
+                else None,
+                "projected_xp": round(float(stats.get("roll_pat_made") or 0.0), 1)
+                if pos == "K"
                 else None,
                 "recent_fantasy_points": recent_stats.get("fantasy_points", []),
                 "recent_stats": recent_stats,

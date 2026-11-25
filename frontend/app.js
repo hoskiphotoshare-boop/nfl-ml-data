@@ -448,6 +448,12 @@ const GLOSSARY = {
     ],
     ['Tgt', 'Targets: passes thrown in the player’s direction.'],
     ['Rec', 'Receptions.'],
+    ['INT', 'Interceptions thrown by the quarterback.'],
+    ['Rush yds', 'Rushing yards.'],
+    ['Rush TD', 'Rushing touchdowns.'],
+    ['FG', 'Field goals made.'],
+    ['FG att', 'Field-goal attempts.'],
+    ['XP', 'Extra points made.'],
     [
       'Proj bar',
       'Relative size of the projection against the highest projection in the current filter.',
@@ -1113,14 +1119,52 @@ function renderGames() {
   });
 }
 
-function playerStatColumns(player) {
-  const isQB = player.position === 'QB';
-  return {
-    ydsLabel: isQB ? 'Pass yds' : 'Yds',
-    yds: isQB ? player.projected_pass_yards : player.projected_yards,
-    tdLabel: isQB ? 'Pass TD' : 'TD',
-    td: isQB ? player.projected_pass_tds : player.projected_tds,
-  };
+const STAT_HISTORY_TIP = 'Small numbers below are the last six games, oldest to newest.';
+
+const SKILL_COLUMNS = [
+  { key: 'targets', valueKey: 'projected_targets', label: 'Tgt', digits: 1, hist: 0, tip: 'Projected targets.' },
+  { key: 'receptions', valueKey: 'projected_receptions', label: 'Rec', digits: 1, hist: 0, tip: 'Projected receptions.' },
+  { key: 'yards', valueKey: 'projected_yards', label: 'Yds', digits: 1, hist: 0, tip: 'Projected yards (passing for quarterbacks).' },
+  { key: 'touchdowns', valueKey: 'projected_tds', label: 'TD', digits: 2, hist: 0, tip: 'Projected touchdowns (passing for quarterbacks).' },
+];
+
+const QB_COLUMNS = [
+  { key: 'passing_yards', valueKey: 'projected_pass_yards', label: 'Pass yds', digits: 1, hist: 0, tip: 'Projected passing yards.' },
+  { key: 'passing_tds', valueKey: 'projected_pass_tds', label: 'Pass TD', digits: 2, hist: 0, tip: 'Projected passing touchdowns.' },
+  { key: 'passing_interceptions', valueKey: 'projected_interceptions', label: 'INT', digits: 2, hist: 0, tip: 'Projected interceptions thrown.' },
+  { key: 'rushing_yards', valueKey: 'projected_rush_yards', label: 'Rush yds', digits: 1, hist: 0, tip: 'Projected rushing yards.' },
+  { key: 'rushing_tds', valueKey: 'projected_rush_tds', label: 'Rush TD', digits: 2, hist: 0, tip: 'Projected rushing touchdowns.' },
+];
+
+const KICKER_COLUMNS = [
+  { key: 'fg_made', valueKey: 'projected_fg', label: 'FG', digits: 1, hist: 0, tip: 'Projected field goals made.' },
+  { key: 'fg_att', valueKey: 'projected_fg_att', label: 'FG att', digits: 1, hist: 0, tip: 'Projected field-goal attempts.' },
+  { key: 'pat_made', valueKey: 'projected_xp', label: 'XP', digits: 1, hist: 0, tip: 'Projected extra points made.' },
+];
+
+function playerColumns(mode) {
+  if (mode === 'QB') return QB_COLUMNS;
+  if (mode === 'K') return KICKER_COLUMNS;
+  return SKILL_COLUMNS;
+}
+
+function resolveStat(player, column, mode) {
+  const pos = player.position;
+  if (mode !== 'all') {
+    return { value: player[column.valueKey], histKey: column.key, skip: false };
+  }
+  if (pos === 'QB') {
+    if (column.key === 'targets' || column.key === 'receptions') return { skip: true };
+    if (column.key === 'yards') {
+      return { value: player.projected_pass_yards, histKey: 'passing_yards', skip: false };
+    }
+    if (column.key === 'touchdowns') {
+      return { value: player.projected_pass_tds, histKey: 'passing_tds', skip: false };
+    }
+    return { value: player[column.valueKey], histKey: column.key, skip: false };
+  }
+  if (pos === 'K') return { skip: true };
+  return { value: player[column.valueKey], histKey: column.key, skip: false };
 }
 
 function injuryPill(status) {
@@ -1240,7 +1284,7 @@ function renderPlayers() {
   const table = el('table', 'dtable');
   const thead = el('thead');
   const headRow = el('tr');
-  headRow.appendChild(el('th', '', 'Player'));
+  headRow.appendChild(el('th', 'sticky-col', 'Player'));
   const matchupTh = el('th', 'hide-sm', 'Matchup');
   matchupTh.title = 'Opponent and kickoff time for this week’s game.';
   headRow.appendChild(matchupTh);
@@ -1248,19 +1292,13 @@ function renderPlayers() {
   projTh.title =
     'Projected fantasy points (standard scoring, 4-pt passing TD). “Range” is the 80% projection interval; the small numbers are the last six games.';
   headRow.appendChild(projTh);
-  const tgtTh = el('th', 'num hide-sm col-tgt', 'Tgt');
-  tgtTh.title = 'Projected targets. Small numbers below are the last six games.';
-  headRow.appendChild(tgtTh);
-  const recTh = el('th', 'num hide-sm col-rec', 'Rec');
-  recTh.title = 'Projected receptions. Small numbers below are the last six games.';
-  headRow.appendChild(recTh);
-  const ydsTh = el('th', 'num hide-sm col-yds', 'Yds');
-  ydsTh.title = 'Projected yards (passing yards for quarterbacks). Small numbers below are the last six games.';
-  headRow.appendChild(ydsTh);
-  const tdTh = el('th', 'num hide-sm col-td', 'TD');
-  tdTh.title = 'Projected touchdowns (passing TDs for quarterbacks). Small numbers below are the last six games.';
-  headRow.appendChild(tdTh);
-  const statusTh = el('th', 'hide-sm', 'Status');
+  const columns = playerColumns(state.playersPos);
+  columns.forEach((column) => {
+    const th = el('th', `num col-${column.key}`, column.label);
+    th.title = `${column.tip} ${STAT_HISTORY_TIP}`;
+    headRow.appendChild(th);
+  });
+  const statusTh = el('th', '', 'Status');
   statusTh.title = 'Injury report status: Q questionable, D doubtful, O out, IR injured reserve.';
   headRow.appendChild(statusTh);
   thead.appendChild(headRow);
@@ -1270,7 +1308,7 @@ function renderPlayers() {
   const maxProj = Math.max(...list.map(proj), 1);
   list.forEach((player) => {
     const tr = el('tr');
-    const playerTd = el('td');
+    const playerTd = el('td', 'sticky-col');
     const pwrap = el('div', 'player');
     pwrap.appendChild(teamBadge(player.team, true));
     const info = el('div');
@@ -1323,29 +1361,15 @@ function renderPlayers() {
     projTd.appendChild(historyRow(player, 'fantasy_points', 1));
     tr.appendChild(projTd);
 
-    const isQB = player.position === 'QB';
-    const isK = player.position === 'K';
-    const statCell = (value, key, cls, valueDigits, histDigits, skip) => {
-      const td = el('td', `num hide-sm ${cls}`);
-      td.appendChild(el('div', 'stat-val', fmtStat(value, skip, valueDigits)));
-      if (!skip) td.appendChild(historyRow(player, key, histDigits));
-      return td;
-    };
-    const cols = playerStatColumns(player);
-    tr.appendChild(
-      statCell(player.projected_targets, 'targets', 'col-tgt', 1, 0, isQB || isK)
-    );
-    tr.appendChild(
-      statCell(player.projected_receptions, 'receptions', 'col-rec', 1, 0, isQB || isK)
-    );
-    tr.appendChild(
-      statCell(cols.yds, isQB ? 'passing_yards' : 'yards', 'col-yds', 1, 0, isK)
-    );
-    tr.appendChild(
-      statCell(cols.td, isQB ? 'passing_tds' : 'touchdowns', 'col-td', 2, 0, isK)
-    );
+    columns.forEach((column) => {
+      const stat = resolveStat(player, column, state.playersPos);
+      const td = el('td', `num col-${column.key}`);
+      td.appendChild(el('div', 'stat-val', fmtStat(stat.value, stat.skip, column.digits)));
+      if (!stat.skip) td.appendChild(historyRow(player, stat.histKey, column.hist));
+      tr.appendChild(td);
+    });
 
-    const statusTd = el('td', 'hide-sm');
+    const statusTd = el('td');
     statusTd.appendChild(injuryPill(player.injury_status));
     tr.appendChild(statusTd);
 
@@ -1353,17 +1377,9 @@ function renderPlayers() {
   });
   table.appendChild(tbody);
 
-  // Trim columns that add no information for the selected position.
-  if (state.playersPos === 'QB') {
-    table.querySelectorAll('.col-tgt, .col-rec').forEach((node) => node.remove());
-    const ydsHead = table.querySelector('thead .col-yds');
-    const tdHead = table.querySelector('thead .col-td');
-    if (ydsHead) ydsHead.textContent = 'Pass yds';
-    if (tdHead) tdHead.textContent = 'Pass TD';
-  } else if (state.playersPos === 'K') {
-    table.querySelectorAll('.col-tgt, .col-rec, .col-yds, .col-td').forEach((node) => node.remove());
-  }
-
+  wrap.appendChild(
+    el('p', 'scroll-hint only-sm', 'Swipe the table sideways for all stats and status →')
+  );
   const scroll = el('div', 'table-scroll');
   scroll.appendChild(table);
   const box = el('div', 'table-wrap');
@@ -1531,24 +1547,24 @@ function renderPlayoffs() {
   const thead = el('thead');
   const headRow = el('tr');
   headRow.appendChild(el('th', '', '#'));
-  headRow.appendChild(el('th', '', 'Team'));
+  headRow.appendChild(el('th', 'sticky-col', 'Team'));
   const confTh = el('th', 'hide-sm', 'Conf');
   confTh.title = 'AFC or NFC.';
   headRow.appendChild(confTh);
   const playoffTh = el('th', '', 'Playoff');
   playoffTh.title = 'Probability of reaching the playoffs in the simulated seasons.';
   headRow.appendChild(playoffTh);
-  const confTitleTh = el('th', 'hide-sm', 'Conf. title');
+  const confTitleTh = el('th', '', 'Conf. title');
   confTitleTh.title = 'Probability of winning the conference championship.';
   headRow.appendChild(confTitleTh);
   const sbTh = el('th', '', 'Super Bowl');
   sbTh.title = 'Probability of winning the Super Bowl.';
   headRow.appendChild(sbTh);
-  const marketTh = el('th', 'hide-sm', 'Market');
+  const marketTh = el('th', '', 'Market');
   marketTh.title =
     'Vig-free market Super Bowl probability, normalized across teams, with the best available decimal price.';
   headRow.appendChild(marketTh);
-  const edgeTh = el('th', 'num hide-sm', 'Edge');
+  const edgeTh = el('th', 'num', 'Edge');
   edgeTh.title =
     'Model probability minus vig-free market probability, in percentage points. Positive means the model is higher than the market.';
   headRow.appendChild(edgeTh);
@@ -1562,7 +1578,7 @@ function renderPlayoffs() {
     const tr = el('tr');
     tr.appendChild(el('td', 'muted-2', String(index + 1)));
 
-    const teamTd = el('td');
+    const teamTd = el('td', 'sticky-col');
     const identity = el('div', 'player');
     identity.appendChild(teamBadge(team.team, true));
     const info = el('div');
@@ -1591,7 +1607,7 @@ function renderPlayoffs() {
     tapeCell(
       tr,
       team.conference_prob,
-      'hide-sm',
+      '',
       'Chance to win the conference championship.'
     );
     tapeCell(
@@ -1601,7 +1617,7 @@ function renderPlayoffs() {
       'Chance to win the Super Bowl.'
     );
 
-    const marketTd = el('td', 'hide-sm');
+    const marketTd = el('td');
     if (futures && futures.market_sb_prob !== null && futures.market_sb_prob !== undefined) {
       marketTd.appendChild(
         el('div', 'proj', `${pct(futures.market_sb_prob, 1)}${decSuffix(futures.market_sb_prob)}`)
@@ -1621,7 +1637,7 @@ function renderPlayoffs() {
     }
     tr.appendChild(marketTd);
 
-    const edgeTd = el('td', 'num hide-sm');
+    const edgeTd = el('td', 'num');
     if (edge !== null && edge !== undefined) {
       edgeTd.appendChild(
         el(
@@ -1638,6 +1654,9 @@ function renderPlayoffs() {
   });
   table.appendChild(tbody);
 
+  wrap.appendChild(
+    el('p', 'scroll-hint only-sm', 'Swipe the table sideways for conference title, market and edge →')
+  );
   const scroll = el('div', 'table-scroll');
   scroll.appendChild(table);
   const box = el('div', 'table-wrap');

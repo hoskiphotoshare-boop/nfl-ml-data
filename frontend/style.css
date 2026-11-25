@@ -1165,6 +1165,13 @@ h2 {
   display: none;
 }
 
+.scroll-hint {
+  margin: 0.45rem 0 0;
+  font-size: 0.72rem;
+  color: var(--muted-2);
+  text-align: right;
+}
+
 /* ---------- last-six history ---------- */
 
 .stat-val {
@@ -1845,10 +1852,46 @@ footer .odds {
 
   .table-wrap {
     border-radius: var(--radius);
+    position: relative;
+  }
+
+  .table-wrap::after {
+    content: '';
+    position: absolute;
+    inset: 0 0 0 auto;
+    width: 22px;
+    pointer-events: none;
+    background: linear-gradient(to left, var(--surface), transparent);
+    border-radius: 0 var(--radius) var(--radius) 0;
+  }
+
+  .table-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
   }
 
   .dtable {
+    width: max-content;
+    min-width: 100%;
     font-size: 0.82rem;
+  }
+
+  .dtable .sticky-col {
+    position: sticky;
+    left: 0;
+    z-index: 3;
+    background: var(--surface);
+    box-shadow: 1px 0 0 var(--line), 6px 0 10px -10px rgba(16, 27, 45, 0.5);
+  }
+
+  .dtable thead th.sticky-col {
+    z-index: 4;
+    background: var(--surface-2);
+  }
+
+  .dtable tbody tr:hover td.sticky-col {
+    background: var(--hover);
   }
 
   .dtable td,
