@@ -79,7 +79,43 @@ function renderGames(games) {
     container.appendChild(el('p', 'muted', 'No games available yet.'));
     return;
   }
-  games.forEach((g) => {
+
+  const weekSelect = document.getElementById('games-week-filter');
+  const teamInput = document.getElementById('games-team-filter');
+  if (weekSelect && weekSelect.options.length <= 1) {
+    const weeks = [...new Set(games.map((g) => g.week).filter((w) => w !== undefined && w !== null))].sort(
+      (a, b) => a - b
+    );
+    weeks.forEach((w) => {
+      const opt = document.createElement('option');
+      opt.value = String(w);
+      opt.textContent = `Week ${w}`;
+      weekSelect.appendChild(opt);
+    });
+    weekSelect.addEventListener('change', () => renderGames(window.__games || []));
+    if (teamInput) {
+      teamInput.addEventListener('input', () => renderGames(window.__games || []));
+    }
+  }
+
+  const weekVal = weekSelect?.value || 'all';
+  const teamVal = (teamInput?.value || '').trim().toLowerCase();
+  const filtered = games.filter((g) => {
+    const weekOk = weekVal === 'all' || String(g.week) === weekVal;
+    const teamOk =
+      !teamVal ||
+      (g.home_team || '').toLowerCase().includes(teamVal) ||
+      (g.away_team || '').toLowerCase().includes(teamVal);
+    return weekOk && teamOk;
+  });
+
+  if (!filtered.length) {
+    container.appendChild(el('p', 'muted', 'No games match the current filter.'));
+    renderPicks();
+    return;
+  }
+
+  filtered.forEach((g) => {
     const card = el('div', 'card');
     const marketGame = window.__marketById?.get(g.game_id);
 
@@ -309,11 +345,41 @@ function renderMarket(data) {
     summaryEl.appendChild(card);
   });
 
-  const games = [...(data.games || [])].sort(
-    (a, b) => (b.best_ev ?? -999) - (a.best_ev ?? -999)
-  );
+  window.__marketData = data;
+  const allGames = data.games || [];
+  const weekSelect = document.getElementById('market-week-filter');
+  const teamInput = document.getElementById('market-team-filter');
+  if (weekSelect && weekSelect.options.length <= 1) {
+    const weeks = [...new Set(allGames.map((g) => g.week).filter((w) => w !== undefined && w !== null))].sort(
+      (a, b) => a - b
+    );
+    weeks.forEach((w) => {
+      const opt = document.createElement('option');
+      opt.value = String(w);
+      opt.textContent = `Week ${w}`;
+      weekSelect.appendChild(opt);
+    });
+    weekSelect.addEventListener('change', () => renderMarket(window.__marketData));
+    if (teamInput) {
+      teamInput.addEventListener('input', () => renderMarket(window.__marketData));
+    }
+  }
+
+  const weekVal = weekSelect?.value || 'all';
+  const teamVal = (teamInput?.value || '').trim().toLowerCase();
+  const games = [...allGames]
+    .filter((g) => {
+      const weekOk = weekVal === 'all' || String(g.week) === weekVal;
+      const teamOk =
+        !teamVal ||
+        (g.home_team || '').toLowerCase().includes(teamVal) ||
+        (g.away_team || '').toLowerCase().includes(teamVal);
+      return weekOk && teamOk;
+    })
+    .sort((a, b) => (b.best_ev ?? -999) - (a.best_ev ?? -999));
+
   if (!games.length) {
-    listEl.appendChild(el('p', 'muted', 'No model-vs-market games available yet.'));
+    listEl.appendChild(el('p', 'muted', 'No games match the current filter.'));
     return;
   }
 
