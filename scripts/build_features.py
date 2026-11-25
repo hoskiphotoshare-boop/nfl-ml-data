@@ -190,6 +190,36 @@ def main() -> None:
     else:
         try:
             player_features = build_player_features(player_stats)
+
+            snaps = load_table("snap_counts_latest")
+            players = load_table("players_latest")
+            if (
+                snaps is not None
+                and players is not None
+                and "pfr_player_id" in snaps.columns
+                and "pfr_id" in players.columns
+                and "gsis_id" in players.columns
+            ):
+                id_map = players.select(
+                    pl.col("pfr_id").alias("pfr_player_id"), "gsis_id"
+                )
+                snaps = snaps.join(id_map, on="pfr_player_id", how="left")
+                snap_cols = [
+                    "offense_snaps",
+                    "offense_pct",
+                    "defense_snaps",
+                    "defense_pct",
+                    "st_snaps",
+                    "st_pct",
+                ]
+                snap_cols = [c for c in snap_cols if c in snaps.columns]
+                snaps = snaps.select(
+                    "game_id", pl.col("gsis_id").alias("player_id"), *snap_cols
+                )
+                player_features = player_features.join(
+                    snaps, on=["game_id", "player_id"], how="left"
+                )
+
             player_features.write_parquet("features/player_features.parquet")
             print(f"Wrote features/player_features.parquet ({player_features.height} rows)")
         except Exception as exc:  # pragma: no cover

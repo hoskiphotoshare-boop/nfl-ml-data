@@ -47,6 +47,12 @@ ROLL_COLS = [
     "fg_att",
     "pat_made",
     "pat_att",
+    "offense_snaps",
+    "offense_pct",
+    "defense_snaps",
+    "defense_pct",
+    "st_snaps",
+    "st_pct",
 ]
 
 
