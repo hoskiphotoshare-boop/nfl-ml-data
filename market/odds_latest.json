@@ -229,9 +229,9 @@
       "bookmaker": "lowvig"
     },
     "best_under": {
-      "point": 38.5,
-      "price": 1.85,
-      "bookmaker": "draftkings"
+      "point": 38.0,
+      "price": 1.88,
+      "bookmaker": "betrivers"
     },
     "bookmakers": [
       "betmgm",
@@ -693,8 +693,8 @@
     "away_spread": 4.5,
     "total": 40.75,
     "home_moneyline": 1.43,
-    "away_moneyline": 2.915,
-    "market_home_win_prob": 0.6709,
+    "away_moneyline": 2.925,
+    "market_home_win_prob": 0.6716,
     "best_home_ml": {
       "price": 1.46,
       "bookmaker": "draftkings"
@@ -720,7 +720,7 @@
     },
     "best_under": {
       "point": 41.5,
-      "price": 1.91,
+      "price": 1.88,
       "bookmaker": "betrivers"
     },
     "bookmakers": [
