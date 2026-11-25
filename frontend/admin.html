@@ -367,7 +367,7 @@
         ]));
         const intervals = h.player_intervals || {};
         elm.appendChild(card("Player ranges", [
-          `80% coverage ${Object.entries(intervals).map(([k, v]) => `${k} ${v.coverage_80 ?? "—"}`).join(" · ") || "—"}`,
+          `80% coverage ${Object.entries(intervals).map(([k, v]) => `${k} ${v.coverage_80 != null ? (v.coverage_80 * 100).toFixed(0) + "%" : "—"}`).join(" · ") || "—"}`,
           `${h.players?.with_ranges ?? 0} of ${h.players?.count ?? 0} projections`,
           `${h.players?.active ?? 0} active-roster players`,
         ]));
