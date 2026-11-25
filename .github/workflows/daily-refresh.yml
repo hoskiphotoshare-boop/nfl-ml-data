@@ -3,7 +3,7 @@ name: Daily Refresh
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *'   # daily data refresh; odds stay on the weekly Ingest run
+    - cron: '0 6 * * *'   # daily data refresh; odds are refreshed by Odds Refresh
 
 permissions:
   contents: write

@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       fetch_odds:
-        description: "Fetch fresh Odds API data (uses one API request)"
+        description: "Fetch fresh Odds API data (uses 3 credits)"
         type: boolean
         default: false
       create_report:
@@ -59,6 +59,8 @@ jobs:
         if: github.event_name == 'schedule' || github.event.inputs.fetch_odds == 'true'
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_REQUIRE_GAME_WITHIN_DAYS: "10"
+          ODDS_MIN_REMAINING: "12"
         run: python scripts/fetch_odds.py || true
 
       # Compare model probabilities with market-implied probabilities.

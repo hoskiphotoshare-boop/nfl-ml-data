@@ -1,0 +1,101 @@
+name: Odds Refresh
+
+# Budget: The Odds API free tier is 500 credits/month and one request
+# (h2h + spreads + totals × us) costs 3 credits. This schedule spends
+# roughly 220 credits/month (~45%), including buffer for retries.
+#
+# Times are chosen for line freshness and are stable across US daylight
+# saving changes:
+#   * two weekday updates (morning + evening ET)
+#   * five Sunday updates, ending just before each kickoff window
+#   * one Thursday and one Monday pre-game update for primetime games
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Bypass cache and fetch now"
+        type: boolean
+        default: true
+  schedule:
+    - cron: '0 12 * * 1-6'        # ~07:00 ET Mon–Sat (overnight moves)
+    - cron: '30 22 * * 2,3,5,6'   # ~17:30 ET Tue/Wed/Fri/Sat (evening news)
+    - cron: '0 13 * * 0'          # ~08:00 ET Sunday (London window + overnight)
+    - cron: '30 16 * * 0'         # ~11:30 ET Sunday (inactives, pre-1PM)
+    - cron: '30 19 * * 0'         # ~14:30 ET Sunday (pre-4:05 window)
+    - cron: '15 20 * * 0'         # ~15:15 ET Sunday (pre-4:25 window)
+    - cron: '50 23 * * 0'         # ~19:50 ET Sunday (pre-SNF)
+    - cron: '45 23 * * 4'         # ~18:45 ET Thursday (pre-TNF)
+    - cron: '45 23 * * 1'         # ~18:45 ET Monday (pre-MNF)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-and-train
+  cancel-in-progress: false
+
+jobs:
+  odds:
+    runs-on: ubuntu-latest
+    env:
+      ODDS_CACHE_HOURS: "0.4"                 # avoid duplicate calls within ~25 min
+      ODDS_REQUIRE_GAME_WITHIN_DAYS: "10"     # no NFL games → no credits
+      ODDS_MIN_REMAINING: "12"                # keep a small reserve
+      FORCE_ODDS_FETCH: ${{ inputs.force && '1' || '0' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Fetch NFL odds
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/fetch_odds.py || true
+
+      - name: Check for new odds
+        id: changes
+        run: |
+          if [ -n "$(git status --porcelain market reports)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Compare model to market
+        if: steps.changes.outputs.changed == 'true'
+        run: python scripts/compare_market.py || true
+
+      - name: Track line movement
+        if: steps.changes.outputs.changed == 'true'
+        run: python scripts/backtest_market.py || true
+
+      - name: Commit odds and reports
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add market/ reports/ predictions/ 2>/dev/null || true
+          git commit -m "chore: odds refresh" || true
+          git pull --rebase origin main || true
+          git push origin main || true
+
+      - run: python scripts/build_team_pages.py || true
+        if: steps.changes.outputs.changed == 'true'
+
+      - name: Prepare static data for Pages
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          mkdir -p frontend/data/predictions frontend/data/reports
+          cp predictions/*.json frontend/data/predictions/ 2>/dev/null || true
+          cp reports/*.json frontend/data/reports/ 2>/dev/null || true
+
+      - name: Deploy frontend to Cloudflare Pages
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx wrangler pages deploy frontend --project-name nfl-ml-data --commit-dirty=true

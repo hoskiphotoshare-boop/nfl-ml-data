@@ -2,6 +2,7 @@
   "snapshots": [],
   "games": 0,
   "summary": {
-    "note": "Need at least two snapshots for line movement."
-  }
+    "note": "No odds history yet; the next fetch starts it."
+  },
+  "movements": []
 }

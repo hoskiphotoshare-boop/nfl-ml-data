@@ -4,6 +4,17 @@
 Requires the ``ODDS_API_KEY`` environment variable (GitHub Actions secret).
 If the key is missing or the API call fails, the script exits 0 so the rest of
 the pipeline can continue.
+
+Quota model (free tier): a request costs ``markets × regions`` credits, so the
+three markets used here (h2h, spreads, totals) in one region cost 3 credits.
+The scheduled workflow is budgeted to stay around half of the 500 credits/month.
+
+Optional guards (set by the workflow) keep off-season and bye-week runs from
+burning credits:
+
+- ``ODDS_REQUIRE_GAME_WITHIN_DAYS``: skip unless a game kicks off soon.
+- ``ODDS_REQUIRE_GAME_WITHIN_HOURS``: tighter guard for pre-game runs.
+- ``ODDS_MIN_REMAINING``: skip when the last known quota is nearly exhausted.
 """
 
 from __future__ import annotations
@@ -14,7 +25,7 @@ import statistics
 import sys
 import urllib.error
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 SPORT = "americanfootball_nfl"
 REGIONS = "us"
@@ -22,28 +33,116 @@ MARKETS = "h2h,spreads,totals"
 ODDS_FORMAT = "decimal"
 BASE_URL = "https://api.the-odds-api.com/v4/sports"
 META_PATH = "market/odds_meta.json"
+PREDICTIONS_PATH = "predictions/upcoming_games.json"
+
 CACHE_HOURS = float(os.environ.get("ODDS_CACHE_HOURS", "6"))
+MIN_REMAINING = int(os.environ.get("ODDS_MIN_REMAINING", "12"))
+REQUIRE_DAYS = os.environ.get("ODDS_REQUIRE_GAME_WITHIN_DAYS")
+REQUIRE_HOURS = os.environ.get("ODDS_REQUIRE_GAME_WITHIN_HOURS")
+CREDIT_COST = len([m for m in MARKETS.split(",") if m]) * len(REGIONS.split(","))
+
+
+def read_json(path: str, default):
+    if not os.path.exists(path):
+        return default
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return default
+
+
+def game_datetime_utc(game: dict) -> datetime | None:
+    day = game.get("gameday")
+    if not day:
+        return None
+    clock = game.get("gametime") or "00:00"
+    try:
+        local = datetime.strptime(f"{day} {clock}", "%Y-%m-%d %H:%M")
+    except ValueError:
+        try:
+            local = datetime.strptime(str(day), "%Y-%m-%d")
+        except ValueError:
+            return None
+    try:
+        from zoneinfo import ZoneInfo
+
+        local = local.replace(tzinfo=ZoneInfo("America/New_York"))
+    except Exception:  # pragma: no cover - tzdata fallback
+        local = local.replace(tzinfo=timezone(timedelta(hours=-4)))
+    return local.astimezone(timezone.utc)
+
+
+def next_kickoff() -> datetime | None:
+    games = read_json(PREDICTIONS_PATH, [])
+    now = datetime.now(timezone.utc)
+    upcoming = [dt for dt in (game_datetime_utc(g) for g in games) if dt and dt >= now]
+    return min(upcoming) if upcoming else None
+
+
+def guard_allows_fetch() -> bool:
+    """Return False when the current run should not spend credits."""
+    kickoff = next_kickoff()
+    now = datetime.now(timezone.utc)
+
+    if REQUIRE_DAYS:
+        limit = timedelta(days=float(REQUIRE_DAYS))
+        if kickoff is None or kickoff - now > limit:
+            print(
+                f"Odds guard: no kickoff within {float(REQUIRE_DAYS):g} days "
+                "(off-season or stale predictions); skipping API call."
+            )
+            return False
+
+    if REQUIRE_HOURS:
+        limit = timedelta(hours=float(REQUIRE_HOURS))
+        if kickoff is None or kickoff - now > limit:
+            print(
+                f"Odds guard: next kickoff is "
+                f"{'none' if kickoff is None else f'{(kickoff - now).total_seconds() / 3600:.1f}h away'}"
+                f" (> {float(REQUIRE_HOURS):g}h); skipping API call."
+            )
+            return False
+
+    return True
 
 
 def recent_cache() -> bool:
     """Return True when a recent odds snapshot exists and force-fetch is off."""
     if os.environ.get("FORCE_ODDS_FETCH") == "1":
         return False
-    if not os.path.exists(META_PATH):
+    meta = read_json(META_PATH, {})
+    fetched_at = meta.get("fetched_at")
+    if not fetched_at:
         return False
     try:
-        with open(META_PATH, encoding="utf-8") as f:
-            meta = json.load(f)
-        fetched_at = datetime.fromisoformat(meta["fetched_at"])
-        age_hours = (datetime.now(timezone.utc) - fetched_at).total_seconds() / 3600
-        if age_hours < CACHE_HOURS:
-            print(
-                f"Odds cache is {age_hours:.1f}h old (< {CACHE_HOURS:g}h); "
-                "skipping Odds API call."
-            )
-            return True
+        age_hours = (datetime.now(timezone.utc) - datetime.fromisoformat(fetched_at)).total_seconds() / 3600
     except Exception:
-        pass
+        return False
+    if age_hours < CACHE_HOURS:
+        print(
+            f"Odds cache is {age_hours * 60:.0f}m old (< {CACHE_HOURS * 60:g}m); "
+            "skipping Odds API call."
+        )
+        return True
+    return False
+
+
+def budget_exhausted() -> bool:
+    meta = read_json(META_PATH, {})
+    remaining = meta.get("requests_remaining")
+    if remaining is None:
+        return False
+    try:
+        remaining = int(remaining)
+    except Exception:
+        return False
+    if remaining < MIN_REMAINING:
+        print(
+            f"Odds quota low ({remaining} credits left, floor {MIN_REMAINING}); "
+            "skipping API call to preserve the monthly allowance."
+        )
+        return True
     return False
 
 
@@ -51,7 +150,7 @@ def median(values: list[float]) -> float | None:
     return statistics.median(values) if values else None
 
 
-def fetch_odds(api_key: str) -> list[dict]:
+def fetch_odds(api_key: str) -> tuple[list[dict], str | None, str | None]:
     url = (
         f"{BASE_URL}/{SPORT}/odds/"
         f"?apiKey={api_key}&regions={REGIONS}&markets={MARKETS}"
@@ -62,8 +161,8 @@ def fetch_odds(api_key: str) -> list[dict]:
         remaining = resp.headers.get("x-requests-remaining")
         used = resp.headers.get("x-requests-used")
         data = json.load(resp)
-    print(f"Odds API requests — used: {used}, remaining: {remaining}")
-    return data
+    print(f"Odds API requests — used: {used}, remaining: {remaining} (cost {CREDIT_COST})")
+    return data, used, remaining
 
 
 def best_ml(entries):
@@ -184,17 +283,34 @@ def summarise_event(event: dict) -> dict:
     }
 
 
+def compact(event: dict) -> dict:
+    """Small snapshot record used for line-movement history."""
+    return {
+        "commence_time": event.get("commence_time"),
+        "home_team": event.get("home_team"),
+        "away_team": event.get("away_team"),
+        "home_spread": event.get("home_spread"),
+        "away_spread": event.get("away_spread"),
+        "total": event.get("total"),
+        "home_moneyline": event.get("home_moneyline"),
+        "away_moneyline": event.get("away_moneyline"),
+    }
+
+
 def main() -> None:
     api_key = os.environ.get("ODDS_API_KEY")
     if not api_key:
         print("ODDS_API_KEY not set; skipping odds fetch.")
         return
 
-    if recent_cache():
+    if not guard_allows_fetch():
+        return
+
+    if recent_cache() or budget_exhausted():
         return
 
     try:
-        data = fetch_odds(api_key)
+        data, used, remaining = fetch_odds(api_key)
     except urllib.error.HTTPError as exc:
         print(f"Odds API HTTP error: {exc.code} {exc.reason}")
         return
@@ -203,14 +319,18 @@ def main() -> None:
         return
 
     events = [summarise_event(e) for e in data]
+    now = datetime.now(timezone.utc)
     os.makedirs("market", exist_ok=True)
     with open("market/odds_latest.json", "w", encoding="utf-8") as f:
         json.dump(events, f, indent=2)
     with open(META_PATH, "w", encoding="utf-8") as f:
         json.dump(
             {
-                "fetched_at": datetime.now(timezone.utc).isoformat(),
+                "fetched_at": now.isoformat(),
                 "events": len(events),
+                "credits": CREDIT_COST,
+                "requests_used": used,
+                "requests_remaining": remaining,
             },
             f,
             indent=2,
@@ -218,11 +338,14 @@ def main() -> None:
 
     history_dir = "market/history"
     os.makedirs(history_dir, exist_ok=True)
-    date_key = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-    with open(f"{history_dir}/{date_key}.json", "w", encoding="utf-8") as f:
-        json.dump(events, f, indent=2)
+    stamp = now.strftime("%Y-%m-%dT%H%MZ")
+    with open(f"{history_dir}/{stamp}.json", "w", encoding="utf-8") as f:
+        json.dump([compact(e) for e in events], f, indent=2)
 
-    print(f"Wrote market/odds_latest.json ({len(events)} events)")
+    print(
+        f"Wrote market/odds_latest.json ({len(events)} events) and "
+        f"history/{stamp}.json (cost {CREDIT_COST} credits)"
+    )
 
 
 if __name__ == "__main__":

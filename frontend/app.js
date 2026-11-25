@@ -1059,6 +1059,19 @@ function renderMarket() {
   const count = $('#market-count');
   if (count) count.textContent = `${games.length} game${games.length === 1 ? '' : 's'}`;
 
+  const freshness = $('#market-freshness');
+  if (freshness) {
+    const meta = state.market || {};
+    if (meta.odds_fetched_at) {
+      freshness.textContent = `Odds updated ${relativeTime(meta.odds_fetched_at)} · ${
+        meta.odds_events ?? (meta.games || []).length
+      } games priced${meta.odds_requests_remaining ? ` · ${meta.odds_requests_remaining} API credits left` : ''}`;
+      freshness.title = new Date(meta.odds_fetched_at).toLocaleString();
+    } else {
+      freshness.textContent = '';
+    }
+  }
+
   renderDistribution(filtered);
 
   if (!games.length) {

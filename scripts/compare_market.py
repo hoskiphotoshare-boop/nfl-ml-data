@@ -203,7 +203,21 @@ def main() -> None:
         "max_abs_edge": round(max(abs_edges), 4),
     }
 
-    report = {"summary": summary, "games": comparisons}
+    odds_meta = {}
+    if os.path.exists("market/odds_meta.json"):
+        try:
+            with open("market/odds_meta.json", encoding="utf-8") as f:
+                odds_meta = json.load(f)
+        except Exception:
+            odds_meta = {}
+
+    report = {
+        "summary": summary,
+        "odds_fetched_at": odds_meta.get("fetched_at"),
+        "odds_events": odds_meta.get("events"),
+        "odds_requests_remaining": odds_meta.get("requests_remaining"),
+        "games": comparisons,
+    }
     os.makedirs("reports", exist_ok=True)
     with open("reports/market_comparison.json", "w", encoding="utf-8") as f:
         json.dump(report, f, indent=2)

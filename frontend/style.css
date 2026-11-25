@@ -411,6 +411,12 @@ h2 {
   max-width: 62ch;
 }
 
+.panel-note {
+  margin: -0.35rem 0 0.8rem;
+  font-size: 0.78rem;
+  color: var(--muted-2);
+}
+
 .section-title {
   display: flex;
   align-items: center;
