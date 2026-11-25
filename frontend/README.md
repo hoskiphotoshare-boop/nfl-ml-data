@@ -49,7 +49,7 @@ output directory `frontend`.
 | Path | Contents |
 |---|---|
 | `/data/predictions/upcoming_games.json` | Upcoming games: probabilities, spread, total, records/form, kickoff, venue, roof/surface, weather |
-| `/data/predictions/players_week.json` | Player projections: stats, matchup, recent points, floor/ceiling, injury/roster status |
+| `/data/predictions/players_week.json` | Player projections: stats, matchup, last-six history per stat, 80% floor/ceiling range, injury/roster status |
 | `/data/predictions/playoffs.json` | Playoff, conference and Super Bowl probabilities |
 | `/data/predictions/meta.json` | Generated timestamp, season, week |
 | `/data/reports/market_comparison.json` | Model vs market by game/market, outlier flag |
@@ -68,8 +68,14 @@ output directory `frontend`.
   addressable via the URL hash (`#games`, `#players`, `#playoffs`); week/team
   filters are not persisted across reloads.
 - **Model outliers**: games with a 20+ percentage-point disagreement on any
-  market are flagged amber, ranked last in the edges view, and excluded from
-  best-edge stats. Treat them as missing-information flags, not picks.
+  market are flagged amber. They stay in their sorted position and in the edge
+  stats, and the card shows the top SHAP drivers for the specific market
+  (winner, margin or total). Treat them as missing-information flags, not picks.
+- **Player table**: the small numbers under each stat are the last six games,
+  oldest to newest (bold = most recent). “Range” under Proj is the 80%
+  projection interval (floor 10th percentile to ceiling 90th percentile).
+- **Glossary**: each tab has a collapsible legend for its abbreviations,
+  symbols and model terms.
 - **Picks** (`nfl_ml_picks`) and theme (`nfl_theme`) live in `localStorage`.
 - **Admin** is a client-side gate only. The underlying JSON remains public.
 - **Team pages** are generated at deploy time by `scripts/build_team_pages.py`.

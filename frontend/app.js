@@ -171,6 +171,7 @@ function formDots(form) {
   if (!form) return null;
   const wrap = el('span', 'form');
   wrap.setAttribute('aria-label', `Last five: ${form.split('').join(' ')}`);
+  wrap.title = 'Last five results: W win, L loss, T tie (oldest → newest).';
   form.split('').slice(-5).forEach((raw) => {
     const letter = raw.toUpperCase();
     const cls = letter === 'W' ? 'w' : letter === 'T' ? 't' : 'l';
@@ -216,8 +217,9 @@ function relativeTime(iso) {
 
 /* ---------------- shared components ---------------- */
 
-function statTile({ label, value, sub, cls = '' }) {
+function statTile({ label, value, sub, cls = '', title = '' }) {
   const tile = el('div', `stat ${cls}`.trim());
+  if (title) tile.title = title;
   tile.appendChild(el('div', 'k', label));
   const v = el('div', 'v');
   v.textContent = value ?? '—';
@@ -230,21 +232,28 @@ function statTile({ label, value, sub, cls = '' }) {
   return tile;
 }
 
-function sparkline(values, max) {
-  const wrap = el('div', 'spark');
-  if (!values || !values.length) {
-    wrap.appendChild(el('span', 'muted-2', '—'));
-    return wrap;
+function recentStatValues(player, key) {
+  const stats = player.recent_stats;
+  if (stats && Array.isArray(stats[key])) return stats[key].slice(-6);
+  if (key === 'fantasy_points') return (player.recent_fantasy_points || []).slice(-6);
+  return [];
+}
+
+function historyRow(player, key, digits = 1) {
+  const values = recentStatValues(player, key);
+  const row = el('div', 'hist');
+  row.title = 'Last six games, oldest to newest';
+  if (!values.length) {
+    row.appendChild(el('span', 'muted-2', '—'));
+    return row;
   }
-  const top = max || Math.max(...values, 1);
-  values.slice(-6).forEach((value, index, arr) => {
-    const bar = el('span', `bar${index === arr.length - 1 ? ' hi' : ''}`);
-    bar.style.height = `${Math.max(3, (Math.max(0, value) / top) * 24)}px`;
-    bar.title = `${value.toFixed(1)} pts`;
-    bar.setAttribute('aria-hidden', 'true');
-    wrap.appendChild(bar);
+  values.forEach((value, index) => {
+    const text = Number(value)
+      .toFixed(digits)
+      .replace(/\.0+$/, '');
+    row.appendChild(el('span', index === values.length - 1 ? 'last' : '', text));
   });
-  return wrap;
+  return row;
 }
 
 function meter(value, cls = '') {
@@ -295,6 +304,206 @@ function spreadLine(game) {
 
 const MARKET_LABEL = { ml: 'Moneyline', spread: 'Spread', total: 'Total' };
 const MARKET_SHORT = { ml: 'ML', spread: 'SPR', total: 'TOT' };
+
+const FEATURE_HELP = {
+  avg_points: 'Average points scored per game before this week.',
+  avg_allowed: 'Average points allowed per game before this week.',
+  off_epa: 'Offensive EPA per play (expected points added). Higher is better.',
+  def_epa: 'Defensive EPA per play allowed. Lower is better.',
+  success_rate: 'Share of plays that gain positive expected points.',
+  pass_epa: 'Passing EPA per play.',
+  rush_epa: 'Rushing EPA per play.',
+  passing_epa: 'Passing EPA accumulated before this week.',
+  rushing_epa: 'Rushing EPA accumulated before this week.',
+  rest_days: 'Days of rest since the previous game.',
+  rest_diff: 'Rest-day difference, home minus away.',
+  short_week: '1 if the team is on a short week (e.g. Thursday game).',
+  div_game: '1 if both teams are in the same division.',
+  prior_games: 'Games already played this season.',
+  win_pct: 'Win percentage before this week.',
+  diff_pg: 'Point differential per game before this week.',
+  win_pct_diff: 'Win-percentage difference, home minus away.',
+  diff_pg_diff: 'Point-differential-per-game difference, home minus away.',
+  qb_prior_epa: 'Trailing EPA per attempt for the starting quarterback.',
+  qb_starts: 'Career starts by the listed starting quarterback.',
+  qb_changed: '1 if the starting quarterback changed from last week.',
+  qb_missing: '1 if the usual starting quarterback is unavailable.',
+  inj_impact:
+    'Weighted injury impact: report status severity × position importance, summed over players on the report.',
+  inj_impact_diff: 'Injury-impact difference, home minus away.',
+  inj_missing: '1 if no injury report was available.',
+};
+
+function driverHelp(driver) {
+  const base = String(driver.feature || '').replace(/^(home|away)_/, '');
+  return FEATURE_HELP[base] || '';
+}
+
+const GLOSSARY = {
+  common: [
+    ['pp', 'Percentage points. The gap between two probabilities: 60% vs 55% is +5 pp.'],
+    [
+      'Decimal odds',
+      'Total return per 1 unit staked, including the stake. 2.50 means a 1-unit bet returns 2.50.',
+    ],
+    ['Fair odds', 'The model’s own decimal price: 1 ÷ probability.'],
+    ['#', 'A rank or depth-chart position, depending on the column.'],
+    ['—', 'No data available for that item.'],
+    [
+      '+ / −',
+      'For odds or probabilities, + means the model rates that side above the market; − means below.',
+    ],
+    [
+      'Team codes',
+      'Official NFL abbreviations: KC = Chiefs, LA = Rams, LAC = Chargers, LV = Raiders, SF = 49ers, TB = Buccaneers, WAS = Commanders.',
+    ],
+  ],
+  games: [
+    ['ML (moneyline)', 'Pick the outright winner. No point spread applies.'],
+    [
+      'SPR (spread)',
+      'Point handicap. “KC -3” means Kansas City must win by more than 3 for that side to cash.',
+    ],
+    ['TOT (total)', 'Combined points scored by both teams, with an over/under line.'],
+    ['O/U', 'Over or under the posted total.'],
+    ['Pick’em', 'A spread at (or very near) zero — no team is favoured.'],
+    [
+      'Form dots',
+      'The last five results: W win, L loss, T tie, newest on the right.',
+    ],
+    [
+      'Mkt',
+      'Best available market decimal price for that team’s moneyline.',
+    ],
+    [
+      'Rank (#)',
+      'Position in the current sort. In the edges view, #1 has the largest best edge.',
+    ],
+    [
+      'Win bar',
+      'Model win probability split between the two teams; the wider side is more likely to win.',
+    ],
+    ['Weather', 'Forecast temperature (°F) and wind (mph) at kickoff for outdoor games.'],
+    ['API credits', 'Remaining requests on the free odds-data plan, shown on the odds line.'],
+    [
+      'Model spread',
+      'The model’s projected point margin. Positive favours the home team; negative favours the away team.',
+    ],
+    ['Model total', 'The model’s projected combined points for both teams.'],
+    [
+      'Lean vs 50%',
+      'How far the model’s win probability is from a coin flip, in percentage points. 0 = pick’em; 30 pts = an 80% vs 20% split.',
+    ],
+    [
+      'Edge',
+      'Model probability minus the vig-free market probability, in percentage points. Positive means the model rates that side higher than the market.',
+    ],
+    [
+      'Vig / overround',
+      'The bookmaker margin built into prices. We remove it before comparing model and market, so probabilities add to 100%.',
+    ],
+    ['Priced game', 'A game with at least one market line from a sportsbook.'],
+    [
+      'EV',
+      'Expected value per 1 unit staked at the best available price: model probability × price − 1.',
+    ],
+    ['Best price', 'The highest decimal price available across the books we track.'],
+    [
+      'Div',
+      'Division game. These average slightly fewer points and a smaller home-field advantage, and the models use that flag.',
+    ],
+    [
+      'EPA',
+      'Expected points added. A play-quality measure: positive EPA is better for the offense, negative for the defense.',
+    ],
+    [
+      'SHAP (driver)',
+      'How much a feature moved this game’s prediction, in log-odds for the winner model or points for spread/total. Positive pushes the pick up, negative pulls it down.',
+    ],
+    [
+      'Rest days',
+      'Days since the team’s previous game. Short weeks (e.g. Thursday games) are flagged separately.',
+    ],
+  ],
+  players: [
+    [
+      'Proj',
+      'Projected fantasy points for this week under standard scoring (4-point passing TD, no PPR).',
+    ],
+    [
+      'Range',
+      'The 80% projection interval: floor (10th percentile) to ceiling (90th percentile). Roughly 4 in 5 outcomes should land inside it.',
+    ],
+    [
+      'Last six',
+      'The small numbers under each stat are that player’s last six games, oldest to newest. The bold value is the most recent game.',
+    ],
+    ['Tgt', 'Targets: passes thrown in the player’s direction.'],
+    ['Rec', 'Receptions.'],
+    [
+      'Proj bar',
+      'Relative size of the projection against the highest projection in the current filter.',
+    ],
+    ['Recent form', 'Sorts by average fantasy points over the last three games.'],
+    ['Depth chart', 'Sorts by listed depth-chart rank, #1 first.'],
+    ['Yds', 'Yards. For quarterbacks this is passing yards; for skill players it is receiving/rushing yards.'],
+    ['TD', 'Touchdowns. For quarterbacks this is passing touchdowns.'],
+    ['QB / RB / WR / TE / K', 'Quarterback, running back, wide receiver, tight end, kicker.'],
+    ['# (depth)', 'Depth-chart rank at the player’s position. #1 is the starter.'],
+    ['Matchup', 'Opponent and kickoff time for this week’s game.'],
+    ['Status', 'Injury-report designation for this week.'],
+    ['Q / D / O / IR', 'Questionable · Doubtful · Out · Injured reserve.'],
+    ['Standard scoring', '4 points per passing TD, 6 per rushing/receiving TD, no points per reception.'],
+  ],
+  playoffs: [
+    ['Playoff', 'Probability of reaching the postseason in the simulated seasons.'],
+    ['Conf. title', 'Probability of winning the AFC or NFC championship.'],
+    ['Super Bowl', 'Probability of winning the Super Bowl.'],
+    [
+      'Market',
+      'Vig-free market Super Bowl probability, normalized so all teams add to 100%, with the best available decimal price.',
+    ],
+    [
+      'Edge',
+      'Model probability minus vig-free market probability, in percentage points. Positive means the model is higher than the market.',
+    ],
+    ['AFC / NFC', 'The two conferences.'],
+    [
+      'Overround',
+      'The bookmaker margin: implied probabilities add up to more than 100%. We normalize them to remove it.',
+    ],
+    [
+      'Probability meter',
+      'The bar and percentage show the simulated probability; the decimal in parentheses is fair odds.',
+    ],
+    ['Lock', 'A team with at least a 99% simulated chance to reach the playoffs.'],
+    [
+      'Monte Carlo',
+      'The remaining schedule and bracket are played out thousands of times; each outcome is a simulated season.',
+    ],
+    [
+      'SRS',
+      'Simple rating system: an opponent-adjusted point-differential rating. The simulator blends it 50/50 with the match model.',
+    ],
+    [
+      'Simulation noise',
+      'Each simulated season gets a random team-strength adjustment, so injuries, form and coaching uncertainty are reflected.',
+    ],
+  ],
+};
+
+function renderLegend(id, groups) {
+  const node = document.getElementById(id);
+  if (!node) return;
+  clear(node);
+  const entries = [...GLOSSARY.common, ...groups.flatMap((group) => GLOSSARY[group] || [])];
+  entries.forEach(([term, definition]) => {
+    const item = el('div', 'legend-item');
+    item.appendChild(el('dt', 'legend-term', term));
+    item.appendChild(el('dd', 'legend-def', definition));
+    node.appendChild(item);
+  });
+}
 
 function bestMarket(market) {
   if (!market || !market.markets) return null;
@@ -352,9 +561,16 @@ function edgeGrid(market, best) {
       valueRow.appendChild(el('span', 'price', entry.price.toFixed(2)));
     }
     cell.appendChild(valueRow);
-    cell.title = `Model ${pct(entry.model_prob, 1)} vs market ${pct(entry.market_prob, 1)}${
-      entry.price ? ` · best ${entry.price.toFixed(2)} at ${entry.bookmaker}` : ''
-    }${entry.ev !== null && entry.ev !== undefined ? ` · EV ${formatEv(entry.ev)}` : ''}`;
+    cell.title = `${MARKET_LABEL[key]} · model ${pct(entry.model_prob, 1)} vs vig-free market ${pct(
+      entry.market_prob,
+      1
+    )}. Edge ${edgePoints(entry.edge)} = model minus market, in percentage points (pp).${
+      entry.price ? `\nBest decimal price ${entry.price.toFixed(2)} at ${entry.bookmaker}.` : ''
+    }${
+      entry.ev !== null && entry.ev !== undefined
+        ? `\nExpected value ${formatEv(entry.ev)} per 1 unit staked.`
+        : ''
+    }`;
     grid.appendChild(cell);
   });
   return grid;
@@ -388,15 +604,23 @@ function gameCard(game, rank) {
     top.appendChild(w);
   }
   top.appendChild(el('span', 'spacer'));
-  if (game.div_game) top.appendChild(el('span', 'tag div', 'Div'));
+  if (game.div_game) {
+    const divTag = el('span', 'tag div', 'Div');
+    divTag.title =
+      'Division game — lower-scoring on average and a smaller home-field advantage.';
+    top.appendChild(divTag);
+  }
   if (best) {
-    top.appendChild(
-      el(
-        'span',
-        `tag edge-tag ${market.outlier ? 'amber' : best.market.edge >= 0.02 ? 'edge' : 'neutral'}`,
-        `${MARKET_SHORT[best.key]} ${shortMarketTag(best.market)} ${edgePoints(best.market.edge)}`
-      )
+    const bestTag = el(
+      'span',
+      `tag edge-tag ${market.outlier ? 'amber' : best.market.edge >= 0.02 ? 'edge' : 'neutral'}`,
+      `${MARKET_SHORT[best.key]} ${shortMarketTag(best.market)} ${edgePoints(best.market.edge)}`
     );
+    bestTag.title = `${MARKET_LABEL[best.key]} · model ${pct(
+      best.market.model_prob,
+      1
+    )} vs vig-free market ${pct(best.market.market_prob, 1)}. Edge = model − market, in percentage points.`;
+    top.appendChild(bestTag);
   }
   card.appendChild(top);
 
@@ -420,7 +644,9 @@ function gameCard(game, rank) {
     const bestMl = row.team === game.home_team ? market?.best_home_ml : market?.best_away_ml;
     if (bestMl && bestMl.price) {
       const oddsLine = el('div', 'team-sub', `mkt ${bestMl.price.toFixed(2)}`);
-      oddsLine.title = `${bestMl.bookmaker || 'Market'} decimal price`;
+      oddsLine.title = `Best available market decimal price for ${teamAbbr(
+        row.team
+      )} moneyline (${bestMl.bookmaker || 'market'}).`;
       names.appendChild(oddsLine);
     }
     line.appendChild(names);
@@ -459,13 +685,28 @@ function gameCard(game, rank) {
 
   const meta = el('div', 'meta-grid');
   [
-    ['Model spread', spreadLine(game)],
-    ['Model total', game.total !== null && game.total !== undefined ? game.total.toFixed(1) : '—'],
-    ['Lean vs 50%', home === null ? '—' : `${(Math.abs(home - 0.5) * 100).toFixed(1)} pts`],
-  ].forEach(([k, v]) => {
+    {
+      label: 'Model spread',
+      value: spreadLine(game),
+      title:
+        'The model’s projected point margin. A positive spread means the home team is favoured; negative means the home team is the underdog.',
+    },
+    {
+      label: 'Model total',
+      value: game.total !== null && game.total !== undefined ? game.total.toFixed(1) : '—',
+      title: 'The model’s projected combined points for both teams.',
+    },
+    {
+      label: 'Lean vs 50%',
+      value: home === null ? '—' : `${(Math.abs(home - 0.5) * 100).toFixed(1)} pts`,
+      title:
+        'How far the model’s win probability is from a coin flip, in percentage points. 0 = pick’em; 30 pts = a 80% vs 20% split. Bigger lean = more confident.',
+    },
+  ].forEach(({ label, value, title }) => {
     const cell = el('div', 'meta-cell');
-    cell.appendChild(el('div', 'k', k));
-    cell.appendChild(el('div', 'v', v));
+    if (title) cell.title = title;
+    cell.appendChild(el('div', 'k', label));
+    cell.appendChild(el('div', 'v', value));
     meta.appendChild(cell);
   });
   card.appendChild(meta);
@@ -494,7 +735,13 @@ function gameCard(game, rank) {
           `tag ${driver.shap >= 0 ? 'edge' : 'neg'}`,
           `${driver.label} ${driver.shap >= 0 ? '+' : ''}${driver.shap.toFixed(2)}${unit}`
         );
-        tag.title = `SHAP ${driver.shap.toFixed(3)}${unit ? ' points' : ' log-odds'} · feature value ${driver.value}`;
+        tag.title = `${driver.label}\nSHAP ${driver.shap >= 0 ? '+' : ''}${driver.shap.toFixed(
+          2
+        )} ${unit ? 'points' : 'log-odds'} — ${
+          driver.shap >= 0 ? 'pushes the projection up' : 'pulls the projection down'
+        }.\nFeature value ${driver.value}.${
+          driverHelp(driver) ? `\n${driverHelp(driver)}` : ''
+        }`;
         tags.appendChild(tag);
       });
       block.appendChild(tags);
@@ -652,13 +899,22 @@ function renderGameStats(list) {
     const edges = ranked.map((item) => item.best.market.edge);
     const sorted = [...edges].sort((a, b) => a - b);
     const median = sorted.length ? sorted[Math.floor(sorted.length / 2)] : null;
-    row.appendChild(statTile({ label: 'Priced games', value: list.length, sub: 'with a market line' }));
+    row.appendChild(
+      statTile({
+        label: 'Priced games',
+        value: list.length,
+        sub: 'with a market line',
+        title: 'Games in this filter that have at least one market line from a sportsbook.',
+      })
+    );
     row.appendChild(
       statTile({
         label: 'Best edge',
         value: top ? edgePoints(top.best.market.edge) : '—',
         sub: top ? `${marketPick(top.best.market)} ${MARKET_LABEL[top.best.key].toLowerCase()}` : '',
         cls: top ? 'good' : '',
+        title:
+          'Largest gap between the model probability and the vig-free market probability across all priced games.',
       })
     );
     row.appendChild(
@@ -667,6 +923,7 @@ function renderGameStats(list) {
         value: `${edges.filter((e) => e >= 0.05).length}/${edges.length}`,
         sub: '5+ probability points',
         cls: edges.some((e) => e >= 0.05) ? 'good' : '',
+        title: 'Priced games whose best edge is at least 5 percentage points.',
       })
     );
     row.appendChild(
@@ -674,6 +931,7 @@ function renderGameStats(list) {
         label: 'Median edge',
         value: median !== null ? edgePoints(median) : '—',
         sub: 'best market per game',
+        title: 'Median of each game’s best edge, in percentage points.',
       })
     );
     return;
@@ -684,7 +942,14 @@ function renderGameStats(list) {
     .sort((a, b) => b.edge - a.edge)[0];
   const totals = list.map((g) => g.total).filter((t) => t !== null && t !== undefined);
 
-  row.appendChild(statTile({ label: 'Games', value: list.length, sub: 'in current filter' }));
+  row.appendChild(
+    statTile({
+      label: 'Games',
+      value: list.length,
+      sub: 'in current filter',
+      title: 'Games in the current week and team filter.',
+    })
+  );
   row.appendChild(
     statTile({
       label: 'Strongest lean',
@@ -698,6 +963,8 @@ function renderGameStats(list) {
           : '—',
       sub: pick ? `${pick.game.away_team} @ ${pick.game.home_team}` : '',
       cls: 'good',
+      title:
+        'The game where the model’s win probability is furthest from a coin flip (50%), with fair decimal odds.',
     })
   );
   row.appendChild(
@@ -705,6 +972,7 @@ function renderGameStats(list) {
       label: 'Average total',
       value: totals.length ? (totals.reduce((a, b) => a + b, 0) / totals.length).toFixed(1) : '—',
       sub: `${totals.length} games with a line`,
+      title: 'Average model-projected combined points across games with a total.',
     })
   );
   row.appendChild(
@@ -715,6 +983,8 @@ function renderGameStats(list) {
         ? `${marketPick(top.best.market)} · ${MARKET_LABEL[top.best.key].toLowerCase()}`
         : 'odds load daily',
       cls: top ? 'good' : '',
+      title:
+        'Largest gap between model probability and vig-free market probability; positive means the model rates that side higher than the market.',
     })
   );
 }
@@ -904,13 +1174,21 @@ function renderPlayers() {
     clear(stats);
     const top = [...list].sort((a, b) => proj(b) - proj(a))[0];
     const injured = list.filter((p) => p.injury_status).length;
-    stats.appendChild(statTile({ label: 'Players', value: list.length, sub: 'matching filter' }));
+    stats.appendChild(
+      statTile({
+        label: 'Players',
+        value: list.length,
+        sub: 'matching filter',
+        title: 'Players in the current position and team filter.',
+      })
+    );
     stats.appendChild(
       statTile({
         label: 'Top projection',
         value: top ? `${proj(top).toFixed(1)}` : '—',
         sub: top ? `${top.name} · ${top.team}` : '',
         cls: 'good',
+        title: 'Highest projected fantasy points in the current filter.',
       })
     );
     stats.appendChild(
@@ -920,6 +1198,7 @@ function renderPlayers() {
           ? (list.reduce((a, b) => a + proj(b), 0) / list.length).toFixed(1)
           : '—',
         sub: 'fantasy points',
+        title: 'Average projected fantasy points across the current filter.',
       })
     );
     stats.appendChild(
@@ -928,6 +1207,7 @@ function renderPlayers() {
         value: injured,
         sub: 'players with an injury status',
         cls: injured ? 'warn' : '',
+        title: 'Players carrying any injury-report status (Q, D, O or IR).',
       })
     );
   }
@@ -953,15 +1233,28 @@ function renderPlayers() {
   const thead = el('thead');
   const headRow = el('tr');
   headRow.appendChild(el('th', '', 'Player'));
-  headRow.appendChild(el('th', 'hide-sm', 'Matchup'));
+  const matchupTh = el('th', 'hide-sm', 'Matchup');
+  matchupTh.title = 'Opponent and kickoff time for this week’s game.';
+  headRow.appendChild(matchupTh);
   const projTh = el('th', 'num', 'Proj');
+  projTh.title =
+    'Projected fantasy points (standard scoring, 4-pt passing TD). “Range” is the 80% projection interval; the small numbers are the last six games.';
   headRow.appendChild(projTh);
-  headRow.appendChild(el('th', 'num hide-sm col-tgt', 'Tgt'));
-  headRow.appendChild(el('th', 'num hide-sm col-rec', 'Rec'));
-  headRow.appendChild(el('th', 'num hide-sm col-yds', 'Yds'));
-  headRow.appendChild(el('th', 'num hide-sm col-td', 'TD'));
-  headRow.appendChild(el('th', 'hide-sm', 'Last 6'));
-  headRow.appendChild(el('th', 'hide-sm', 'Status'));
+  const tgtTh = el('th', 'num hide-sm col-tgt', 'Tgt');
+  tgtTh.title = 'Projected targets. Small numbers below are the last six games.';
+  headRow.appendChild(tgtTh);
+  const recTh = el('th', 'num hide-sm col-rec', 'Rec');
+  recTh.title = 'Projected receptions. Small numbers below are the last six games.';
+  headRow.appendChild(recTh);
+  const ydsTh = el('th', 'num hide-sm col-yds', 'Yds');
+  ydsTh.title = 'Projected yards (passing yards for quarterbacks). Small numbers below are the last six games.';
+  headRow.appendChild(ydsTh);
+  const tdTh = el('th', 'num hide-sm col-td', 'TD');
+  tdTh.title = 'Projected touchdowns (passing TDs for quarterbacks). Small numbers below are the last six games.';
+  headRow.appendChild(tdTh);
+  const statusTh = el('th', 'hide-sm', 'Status');
+  statusTh.title = 'Injury report status: Q questionable, D doubtful, O out, IR injured reserve.';
+  headRow.appendChild(statusTh);
   thead.appendChild(headRow);
   table.appendChild(thead);
 
@@ -1008,24 +1301,41 @@ function renderPlayers() {
     bar.appendChild(fill);
     projTd.appendChild(bar);
     if (player.floor_fantasy_points !== undefined && player.ceiling_fantasy_points !== undefined) {
-      projTd.appendChild(
-        el('div', 'tm', `${player.floor_fantasy_points}–${player.ceiling_fantasy_points}`)
+      const range = el('div', 'stat-sub');
+      range.appendChild(el('span', 'micro', 'Range '));
+      range.appendChild(
+        document.createTextNode(
+          `${player.floor_fantasy_points}–${player.ceiling_fantasy_points}`
+        )
       );
+      range.title =
+        '80% projection interval: floor (10th percentile) to ceiling (90th percentile).';
+      projTd.appendChild(range);
     }
-    if (player.recent_fantasy_points && player.recent_fantasy_points.length) {
-      projTd.appendChild(el('div', 'tm only-sm', `L3 ${recentAvg(player).toFixed(1)}`));
-    }
+    projTd.appendChild(historyRow(player, 'fantasy_points', 1));
     tr.appendChild(projTd);
 
+    const isQB = player.position === 'QB';
+    const isK = player.position === 'K';
+    const statCell = (value, key, cls, valueDigits, histDigits, skip) => {
+      const td = el('td', `num hide-sm ${cls}`);
+      td.appendChild(el('div', 'stat-val', fmtStat(value, skip, valueDigits)));
+      if (!skip) td.appendChild(historyRow(player, key, histDigits));
+      return td;
+    };
     const cols = playerStatColumns(player);
-    tr.appendChild(el('td', 'num hide-sm col-tgt', fmtStat(player.projected_targets, player.position === 'QB' || player.position === 'K')));
-    tr.appendChild(el('td', 'num hide-sm col-rec', fmtStat(player.projected_receptions, player.position === 'QB' || player.position === 'K')));
-    tr.appendChild(el('td', 'num hide-sm col-yds', fmtStat(cols.yds, false)));
-    tr.appendChild(el('td', 'num hide-sm col-td', fmtStat(cols.td, false, 2)));
-
-    const trendTd = el('td', 'hide-sm');
-    trendTd.appendChild(sparkline(player.recent_fantasy_points));
-    tr.appendChild(trendTd);
+    tr.appendChild(
+      statCell(player.projected_targets, 'targets', 'col-tgt', 1, 0, isQB || isK)
+    );
+    tr.appendChild(
+      statCell(player.projected_receptions, 'receptions', 'col-rec', 1, 0, isQB || isK)
+    );
+    tr.appendChild(
+      statCell(cols.yds, isQB ? 'passing_yards' : 'yards', 'col-yds', 1, 0, isK)
+    );
+    tr.appendChild(
+      statCell(cols.td, isQB ? 'passing_tds' : 'touchdowns', 'col-td', 2, 0, isK)
+    );
 
     const statusTd = el('td', 'hide-sm');
     statusTd.appendChild(injuryPill(player.injury_status));
@@ -1038,6 +1348,10 @@ function renderPlayers() {
   // Trim columns that add no information for the selected position.
   if (state.playersPos === 'QB') {
     table.querySelectorAll('.col-tgt, .col-rec').forEach((node) => node.remove());
+    const ydsHead = table.querySelector('thead .col-yds');
+    const tdHead = table.querySelector('thead .col-td');
+    if (ydsHead) ydsHead.textContent = 'Pass yds';
+    if (tdHead) tdHead.textContent = 'Pass TD';
   } else if (state.playersPos === 'K') {
     table.querySelectorAll('.col-tgt, .col-rec, .col-yds, .col-td').forEach((node) => node.remove());
   }
@@ -1119,7 +1433,14 @@ function renderPlayoffs() {
       (a, b) => (b.futures.market_sb_prob ?? 0) - (a.futures.market_sb_prob ?? 0)
     )[0];
 
-    stats.appendChild(statTile({ label: 'Teams', value: state.playoffs.length, sub: 'simulated' }));
+    stats.appendChild(
+      statTile({
+        label: 'Teams',
+        value: state.playoffs.length,
+        sub: 'simulated',
+        title: 'Teams included in the Monte Carlo simulation.',
+      })
+    );
     stats.appendChild(
       statTile({
         label: 'Title favourite',
@@ -1131,6 +1452,8 @@ function renderPlayoffs() {
             )}${decSuffix(futuresFor(fav.team)?.market_sb_prob)} market`
           : '',
         cls: 'good',
+        title:
+          'Team with the highest simulated Super Bowl probability. Model and market are shown as probabilities with fair decimal odds.',
       })
     );
     if (bestEdge) {
@@ -1142,6 +1465,8 @@ function renderPlayoffs() {
             bestEdge.team.super_bowl_prob
           )} vs market ${pct(bestEdge.futures.market_sb_prob, 1)}${decSuffix(bestEdge.futures.market_sb_prob)}`,
           cls: bestEdge.futures.edge >= 0.02 ? 'good' : '',
+          title:
+            'Largest model-minus-market gap on the Super Bowl winner market, in percentage points after removing the bookmaker overround.',
         })
       );
       stats.appendChild(
@@ -1153,11 +1478,27 @@ function renderPlayoffs() {
                 marketFav.futures.market_sb_prob
               )} · ${marketFav.futures.best_price ? marketFav.futures.best_price.toFixed(2) : '—'}`
             : '',
+          title:
+            'Team with the highest vig-free market Super Bowl probability, with the best available decimal price.',
         })
       );
     } else {
-      stats.appendChild(statTile({ label: 'Playoff locks', value: state.playoffs.filter((t) => (t.playoff_prob ?? 0) >= 0.99).length, sub: '≥ 99% to qualify' }));
-      stats.appendChild(statTile({ label: 'Futures', value: '—', sub: 'waiting for market odds' }));
+      stats.appendChild(
+        statTile({
+          label: 'Playoff locks',
+          value: state.playoffs.filter((t) => (t.playoff_prob ?? 0) >= 0.99).length,
+          sub: '≥ 99% to qualify',
+          title: 'Teams the simulation sends to the playoffs in at least 99% of runs.',
+        })
+      );
+      stats.appendChild(
+        statTile({
+          label: 'Futures',
+          value: '—',
+          sub: 'waiting for market odds',
+          title: 'Super Bowl futures prices have not loaded yet.',
+        })
+      );
     }
   }
 
@@ -1183,12 +1524,26 @@ function renderPlayoffs() {
   const headRow = el('tr');
   headRow.appendChild(el('th', '', '#'));
   headRow.appendChild(el('th', '', 'Team'));
-  headRow.appendChild(el('th', 'hide-sm', 'Conf'));
-  headRow.appendChild(el('th', '', 'Playoff'));
-  headRow.appendChild(el('th', 'hide-sm', 'Conf. title'));
-  headRow.appendChild(el('th', '', 'Super Bowl'));
-  headRow.appendChild(el('th', 'hide-sm', 'Market'));
-  headRow.appendChild(el('th', 'num hide-sm', 'Edge'));
+  const confTh = el('th', 'hide-sm', 'Conf');
+  confTh.title = 'AFC or NFC.';
+  headRow.appendChild(confTh);
+  const playoffTh = el('th', '', 'Playoff');
+  playoffTh.title = 'Probability of reaching the playoffs in the simulated seasons.';
+  headRow.appendChild(playoffTh);
+  const confTitleTh = el('th', 'hide-sm', 'Conf. title');
+  confTitleTh.title = 'Probability of winning the conference championship.';
+  headRow.appendChild(confTitleTh);
+  const sbTh = el('th', '', 'Super Bowl');
+  sbTh.title = 'Probability of winning the Super Bowl.';
+  headRow.appendChild(sbTh);
+  const marketTh = el('th', 'hide-sm', 'Market');
+  marketTh.title =
+    'Vig-free market Super Bowl probability, normalized across teams, with the best available decimal price.';
+  headRow.appendChild(marketTh);
+  const edgeTh = el('th', 'num hide-sm', 'Edge');
+  edgeTh.title =
+    'Model probability minus vig-free market probability, in percentage points. Positive means the model is higher than the market.';
+  headRow.appendChild(edgeTh);
   thead.appendChild(headRow);
   table.appendChild(thead);
 
@@ -1219,9 +1574,24 @@ function renderPlayoffs() {
     tr.appendChild(teamTd);
 
     tr.appendChild(el('td', 'muted hide-sm', team.conference || '—'));
-    tapeCell(tr, team.playoff_prob, (team.playoff_prob ?? 0) >= 0.8 ? 'green' : '');
-    tapeCell(tr, team.conference_prob, 'hide-sm');
-    tapeCell(tr, team.super_bowl_prob, (team.super_bowl_prob ?? 0) >= 0.1 ? 'green' : 'dim');
+    tapeCell(
+      tr,
+      team.playoff_prob,
+      (team.playoff_prob ?? 0) >= 0.8 ? 'green' : '',
+      'Chance to reach the playoffs in the simulated seasons.'
+    );
+    tapeCell(
+      tr,
+      team.conference_prob,
+      'hide-sm',
+      'Chance to win the conference championship.'
+    );
+    tapeCell(
+      tr,
+      team.super_bowl_prob,
+      (team.super_bowl_prob ?? 0) >= 0.1 ? 'green' : 'dim',
+      'Chance to win the Super Bowl.'
+    );
 
     const marketTd = el('td', 'hide-sm');
     if (futures && futures.market_sb_prob !== null && futures.market_sb_prob !== undefined) {
@@ -1267,8 +1637,9 @@ function renderPlayoffs() {
   wrap.appendChild(box);
 }
 
-function tapeCell(tr, value, cls) {
+function tapeCell(tr, value, cls, title = '') {
   const td = el('td', cls.includes('hide-sm') ? 'hide-sm' : '');
+  if (title) td.title = title;
   td.appendChild(meter(value ?? 0, cls.replace('hide-sm', '').trim()));
   tr.appendChild(td);
 }
@@ -1594,6 +1965,9 @@ async function loadAll() {
     renderGames();
     renderPlayers();
     renderPlayoffs();
+    renderLegend('games-legend', ['games']);
+    renderLegend('players-legend', ['players']);
+    renderLegend('playoffs-legend', ['playoffs']);
 
     // Refresh header metadata now that the week and game list are known.
     applyMeta(state.meta);

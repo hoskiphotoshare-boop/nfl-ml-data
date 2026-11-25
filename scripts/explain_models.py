@@ -61,6 +61,13 @@ TOP_DRIVERS = 8
 
 MATCH_ACRONYMS = {
     "epa": "EPA",
+    "qb": "QB",
+    "ol": "OL",
+    "rb": "RB",
+    "wr": "WR",
+    "te": "TE",
+    "inj": "Injury",
+    "pg": "PG",
     "ng": "NG",
     "td": "TD",
     "tds": "TDs",
@@ -68,6 +75,13 @@ MATCH_ACRONYMS = {
     "yac": "YAC",
     "pct": "Pct",
     "att": "Att",
+}
+
+SPECIAL_LABELS = {
+    "diff_pg_diff": "Point diff (home − away)",
+    "win_pct_diff": "Win pct (home − away)",
+    "rest_diff": "Rest days (home − away)",
+    "inj_impact_diff": "Injury impact (home − away)",
 }
 
 
@@ -79,6 +93,8 @@ def pretty(name: str) -> str:
 
 
 def match_label(feature: str) -> str:
+    if feature in SPECIAL_LABELS:
+        return SPECIAL_LABELS[feature]
     if feature.startswith("home_"):
         return f"Home · {pretty(feature[5:])}"
     if feature.startswith("away_"):

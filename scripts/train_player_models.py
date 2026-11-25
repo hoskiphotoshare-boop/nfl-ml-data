@@ -282,15 +282,27 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
         .agg(pl.all().last())
     )
 
+    recent_cols = [
+        "fantasy_points",
+        "targets",
+        "receptions",
+        "yards",
+        "touchdowns",
+        "passing_yards",
+        "passing_tds",
+    ]
     recent = (
         df.sort(["season", "week"])
         .group_by(id_col)
-        .agg(pl.col("fantasy_points").tail(6).alias("recent_fantasy_points"))
+        .agg(
+            [
+                pl.col(col).tail(6).alias(f"recent_{col}")
+                for col in recent_cols
+                if col in df.columns
+            ]
+        )
     )
-    recent_map = {
-        row[id_col]: row["recent_fantasy_points"]
-        for row in recent.iter_rows(named=True)
-    }
+    recent_map = {row[id_col]: row for row in recent.iter_rows(named=True)}
 
     records = []
     for row in latest.iter_rows(named=True):
@@ -337,6 +349,14 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
             except Exception:
                 pass
 
+        recent_row = recent_map.get(stats.get(id_col)) or {}
+        recent_stats = {}
+        for col in recent_cols:
+            values = recent_row.get(f"recent_{col}") or []
+            recent_stats[col] = [
+                round(float(value), 1) if value is not None else 0.0 for value in values
+            ]
+
         records.append(
             {
                 "player_id": stats.get(id_col),
@@ -356,10 +376,8 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
                 "projected_pass_tds": round(float(stats.get("roll_passing_tds") or 0.0), 2)
                 if pos == "QB"
                 else None,
-                "recent_fantasy_points": [
-                    round(float(v), 1) if v is not None else 0.0
-                    for v in (recent_map.get(stats.get(id_col)) or [])
-                ],
+                "recent_fantasy_points": recent_stats.get("fantasy_points", []),
+                "recent_stats": recent_stats,
             }
         )
 
