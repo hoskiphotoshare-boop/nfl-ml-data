@@ -11,8 +11,9 @@ on:
         description: "Create or comment on the weekly model report issue"
         type: boolean
         default: false
-  schedule:
-    - cron: '0 11 * * 2'   # Tuesday after MNF; retry if the week is incomplete
+
+# Scheduling is handled by the Google Apps Script project in gas/.
+# This workflow only executes when dispatched or run manually.
 
 permissions:
   contents: write

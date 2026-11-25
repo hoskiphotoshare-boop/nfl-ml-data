@@ -17,16 +17,13 @@ on:
         description: "Bypass cache and fetch now"
         type: boolean
         default: true
-  schedule:
-    - cron: '0 12 * * 1-6'        # ~07:00 ET Mon–Sat (overnight moves)
-    - cron: '30 22 * * 2,3,5,6'   # ~17:30 ET Tue/Wed/Fri/Sat (evening news)
-    - cron: '0 13 * * 0'          # ~08:00 ET Sunday (London window + overnight)
-    - cron: '30 16 * * 0'         # ~11:30 ET Sunday (inactives, pre-1PM)
-    - cron: '30 19 * * 0'         # ~14:30 ET Sunday (pre-4:05 window)
-    - cron: '15 20 * * 0'         # ~15:15 ET Sunday (pre-4:25 window)
-    - cron: '50 23 * * 0'         # ~19:50 ET Sunday (pre-SNF)
-    - cron: '45 23 * * 4'         # ~18:45 ET Thursday (pre-TNF)
-    - cron: '45 23 * * 1'         # ~18:45 ET Monday (pre-MNF)
+      refresh_inference:
+        description: "Refresh predictions/context before fetching odds"
+        type: boolean
+        default: false
+
+# Scheduling is handled by the Google Apps Script project in gas/.
+# The scheduler dispatches this workflow at the odds windows below.
 
 permissions:
   contents: write
@@ -54,20 +51,8 @@ jobs:
       - run: pip install --upgrade pip
       - run: pip install polars nflreadpy scikit-learn joblib shap
 
-      - name: Decide whether to refresh inference
-        id: inference
-        run: |
-          case "${{ github.event.schedule }}" in
-            "0 13 * * 0"|"30 16 * * 0"|"30 19 * * 0"|"15 20 * * 0"|"50 23 * * 0"|"45 23 * * 4"|"45 23 * * 1")
-              echo "run=1" >> "$GITHUB_OUTPUT"
-              ;;
-            *)
-              echo "run=0" >> "$GITHUB_OUTPUT"
-              ;;
-          esac
-
       - name: Refresh inference context
-        if: steps.inference.outputs.run == '1' || github.event_name == 'workflow_dispatch'
+        if: inputs.refresh_inference == 'true' || inputs.refresh_inference == true
         run: |
           python scripts/download_data.py || true
           python scripts/build_features.py || true
