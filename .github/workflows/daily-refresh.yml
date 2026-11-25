@@ -3,7 +3,7 @@ name: Daily Inference
 on:
   workflow_dispatch:
   schedule:
-    # Tuesday is the full retrain (Ingest & Predict). This is inference-only.
+    # Tuesday is the full retrain (Weekly Retrain). This is inference-only.
     - cron: '0 11 * * 0,1,3-6'   # Wed–Mon 11:00 UTC; odds refresh at 12:00
 
 permissions:
