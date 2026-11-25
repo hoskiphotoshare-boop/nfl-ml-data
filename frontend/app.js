@@ -316,6 +316,9 @@ function renderPlayers(players) {
     const card = el('div', 'card');
     card.appendChild(el('h3', '', `${p.name} (${p.position})`));
     card.appendChild(el('p', '', `${p.team}`));
+    if (p.depth_rank) {
+      card.appendChild(el('p', 'odds', `Depth: #${p.depth_rank}`));
+    }
     if (p.injury_status) {
       card.appendChild(el('p', 'injury', `Status: ${p.injury_status}`));
     }

@@ -336,6 +336,49 @@ def apply_injury_adjustments(records: list[dict]) -> list[dict]:
     return records
 
 
+def apply_depth_chart_adjustments(records: list[dict]) -> list[dict]:
+    path = "data/depth_charts_latest.parquet"
+    if not os.path.exists(path):
+        return records
+    try:
+        dc = pl.read_parquet(path)
+        if "gsis_id" not in dc.columns or "pos_rank" not in dc.columns or "dt" not in dc.columns:
+            return records
+
+        latest = dc.filter(pl.col("dt") == dc["dt"].max())
+        rank_map = {}
+        for row in latest.iter_rows(named=True):
+            pid = row.get("gsis_id")
+            rank = row.get("pos_rank")
+            if pid is None or rank is None:
+                continue
+            rank_map[pid] = int(rank)
+
+        multipliers = {1: 1.0, 2: 0.7, 3: 0.4}
+        stat_keys = [
+            "projected_targets",
+            "projected_receptions",
+            "projected_yards",
+            "projected_tds",
+            "projected_fantasy_points",
+            "projected_pass_yards",
+            "projected_pass_tds",
+        ]
+        for record in records:
+            rank = rank_map.get(record.get("player_id"))
+            if rank is None:
+                continue
+            mult = multipliers.get(rank, 0.2)
+            record["depth_rank"] = rank
+            for key in stat_keys:
+                if record.get(key) is not None:
+                    record[key] = round(record[key] * mult, 2)
+        records.sort(key=lambda r: r.get("projected_fantasy_points", 0), reverse=True)
+    except Exception as exc:  # pragma: no cover
+        print(f"Depth-chart adjustment skipped: {exc}")
+    return records
+
+
 def main() -> None:
     df = load_player_features()
     if df.height == 0:
@@ -362,6 +405,7 @@ def main() -> None:
         json.dump(metrics, f, indent=2)
 
     records = predict_latest(rolling, models, id_col)
+    records = apply_depth_chart_adjustments(records)
     records = apply_injury_adjustments(records)
     records = [r for r in records if r["projected_fantasy_points"] > 0][:250]
 
