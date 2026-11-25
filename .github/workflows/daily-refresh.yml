@@ -3,7 +3,8 @@ name: Daily Refresh
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 6 * * *'   # daily data refresh; odds are refreshed by Odds Refresh
+    # Monday is covered by Ingest & Predict (full pipeline + backtests).
+    - cron: '0 6 * * 0,2-6'   # daily data refresh; odds are refreshed by Odds Refresh
 
 permissions:
   contents: write
