@@ -11,6 +11,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(__file__) + "/../")
 
@@ -251,21 +252,77 @@ def train_group(df: pl.DataFrame, group: str, positions: list[str]):
 
 
 def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict | None = None) -> list[dict]:
-    upcoming_div = {}
+    upcoming_ctx: dict[str, dict] = {}
     try:
         schedules = pl.read_parquet("data/schedules.parquet")
         if {"season", "home_team", "away_team", "div_game"}.issubset(set(schedules.columns)):
             current = schedules["season"].max()
+            team_dates: dict[str, list[datetime]] = {}
+            for scheduled in schedules.filter(pl.col("season") == current).iter_rows(
+                named=True
+            ):
+                day = scheduled.get("gameday")
+                if not day:
+                    continue
+                try:
+                    game_day = datetime.fromisoformat(str(day)[:10])
+                except ValueError:
+                    continue
+                for team in (scheduled["home_team"], scheduled["away_team"]):
+                    team_dates.setdefault(team, []).append(game_day)
+            for team in team_dates:
+                team_dates[team] = sorted(set(team_dates[team]))
+
             unplayed = schedules.filter(
                 (pl.col("season") == current)
                 & (pl.col("home_score").is_null() | pl.col("away_score").is_null())
-            )
+            ).sort(["week", "gameday"] if "gameday" in schedules.columns else ["week"])
             for game in unplayed.iter_rows(named=True):
-                value = int(game.get("div_game") or 0)
-                upcoming_div[game["home_team"]] = value
-                upcoming_div[game["away_team"]] = value
+                day = game.get("gameday")
+                try:
+                    game_day = datetime.fromisoformat(str(day)[:10]) if day else None
+                except ValueError:
+                    game_day = None
+                for team, opponent, is_home in (
+                    (game["home_team"], game["away_team"], 1),
+                    (game["away_team"], game["home_team"], 0),
+                ):
+                    # Keep the next game only; later weeks should not overwrite it.
+                    if team in upcoming_ctx:
+                        continue
+                    rest = 7
+                    if game_day is not None:
+                        prior = [
+                            prior_day
+                            for prior_day in team_dates.get(team, [])
+                            if prior_day < game_day
+                        ]
+                        if prior:
+                            rest = max(0, min(21, (game_day - prior[-1]).days))
+                    upcoming_ctx[team] = {
+                        "opponent": opponent,
+                        "is_home": is_home,
+                        "rest_days": rest,
+                        "div_game": int(game.get("div_game") or 0),
+                        "gameday": str(day) if day else None,
+                    }
     except Exception:
-        upcoming_div = {}
+        upcoming_ctx = {}
+
+    # Latest opponent-position rating, used for the upcoming matchup rather
+    # than the player's previous opponent.
+    rating_map: dict[tuple[str, str], float] = {}
+    if {"opponent_team", "pos_group", "opp_def_rating"}.issubset(set(df.columns)):
+        ratings = (
+            df.filter(pl.col("opp_def_rating").is_not_null())
+            .sort(["season", "week"])
+            .group_by(["opponent_team", "pos_group"])
+            .agg(pl.col("opp_def_rating").last())
+        )
+        rating_map = {
+            (row["opponent_team"], row["pos_group"]): float(row["opp_def_rating"])
+            for row in ratings.iter_rows(named=True)
+        }
 
     intervals = {}
     path = "models/player_intervals.json"
@@ -313,6 +370,7 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
     recent_map = {row[id_col]: row for row in recent.iter_rows(named=True)}
 
     records = []
+    feature_vectors: dict[str, dict] = {}
     for row in latest.iter_rows(named=True):
         pos = row.get("position") or ""
         group = next((g for g, ps in POSITION_GROUPS.items() if pos in ps), None)
@@ -321,20 +379,33 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
 
         model = models.get(group)
         stats = row
+        ctx = upcoming_ctx.get(stats.get("team"), {})
         values = None
         if model is not None:
             cols = feature_cols(df)
             values = []
             for c in cols:
                 if c == "is_home":
-                    values.append(0.5)
+                    values.append(float(ctx.get("is_home", 0.5)))
                 elif c == "rest_days":
-                    values.append(7.0)
+                    values.append(float(ctx.get("rest_days", 7.0)))
+                elif c == "opp_def_rating":
+                    values.append(
+                        float(
+                            rating_map.get(
+                                (ctx.get("opponent"), stats.get("pos_group")), 0.0
+                            )
+                            or 0.0
+                        )
+                    )
                 elif c == "div_game":
-                    values.append(float(upcoming_div.get(stats.get("team"), stats.get(c) or 0)))
+                    values.append(float(ctx.get("div_game", 0.0)))
                 else:
                     values.append(float(stats.get(c) or 0.0))
             fantasy = float(model.predict([values])[0])
+            feature_vectors[str(stats.get(id_col))] = {
+                c: float(v) for c, v in zip(cols, values)
+            }
         else:
             fantasy = float(stats.get("roll_fantasy_points") or 0.0)
 
@@ -410,6 +481,17 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
         )
 
     records.sort(key=lambda r: r["projected_fantasy_points"], reverse=True)
+    os.makedirs("models", exist_ok=True)
+    with open("models/player_feature_vectors.json", "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+                "features": feature_cols(df),
+                "players": feature_vectors,
+            },
+            f,
+            indent=2,
+        )
     return records
 
 

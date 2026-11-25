@@ -730,14 +730,17 @@ function gameCard(game, rank) {
     const marketKey = market.outlier_market;
     let drivers = [];
     let unit = '';
-    if (marketKey === 'total' || marketKey === 'spread') {
+    // The displayed spread is derived from the win probability, so the match
+    // model (not the margin regressor) explains spread disagreements. Only the
+    // total uses the total regressor.
+    if (marketKey === 'total') {
       const scoreGame = state.scoreExplanationById?.get(game.game_id);
-      const entry = scoreGame?.[marketKey === 'total' ? 'total' : 'margin'];
-      drivers = entry?.drivers?.slice(0, 3) || [];
-      unit = ' pts';
+      drivers = scoreGame?.total?.drivers?.slice(0, 3) || [];
+      if (drivers.length) unit = ' pts';
     }
     if (!drivers.length) {
       drivers = state.explanationById?.get(game.game_id)?.drivers?.slice(0, 3) || [];
+      unit = '';
     }
     if (drivers.length) {
       const block = el('div', 'driver-block');

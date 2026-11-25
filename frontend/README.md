@@ -61,6 +61,7 @@ output directory `frontend`.
 | `/data/reports/model_health.json` | Calibration, outliers, data freshness, budget |
 | `/data/reports/line_movement.json` | Opening-to-latest movement by game |
 | `/data/reports/feature_ablation.json` | Feature-set comparison |
+| `/data/reports/weather_ablation.json` | Historical weather ablation by model (not used in the UI) |
 
 ## Behaviour notes
 
@@ -80,6 +81,9 @@ output directory `frontend`.
   projection interval (floor 10th percentile to ceiling 90th percentile).
 - **Glossary**: each tab has a collapsible legend for its abbreviations,
   symbols and model terms.
+- **Mobile tables**: stat and playoff columns stay reachable by swiping the
+  table sideways; the player/team column is pinned and a hint appears above
+  the table.
 - **Picks** (`nfl_ml_picks`) and theme (`nfl_theme`) live in `localStorage`.
 - **Admin** is a client-side gate only. The underlying JSON remains public.
 - **Team pages** are generated at deploy time by `scripts/build_team_pages.py`.

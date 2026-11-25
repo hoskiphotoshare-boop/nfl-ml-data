@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Compare model predictions with market odds.
 
-Reads ``predictions/games_week.json`` and ``market/odds_latest.json`` and writes
+Reads ``predictions/upcoming_games.json`` (falling back to
+``predictions/games_week.json``) and ``market/odds_latest.json`` and writes
 ``reports/market_comparison.json`` with per-game edges and summary statistics.
 """
 

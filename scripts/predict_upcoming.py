@@ -378,7 +378,38 @@ def main() -> None:
     qb_context = current_qb_context(current_season)
     injury_context = current_injury_context(current_season)
     roster_context = current_roster_context(current_season)
-    predictions = []
+
+    # Actual rest days for the upcoming game, using the previous scheduled game
+    # (including unplayed weeks) so future weeks do not all look like long rests.
+    team_dates: dict[str, list[datetime]] = {}
+    season_games = schedules.filter(pl.col("season") == current_season)
+    for scheduled in season_games.iter_rows(named=True):
+        day = scheduled.get("gameday")
+        if not day:
+            continue
+        try:
+            game_day = datetime.fromisoformat(str(day)[:10])
+        except ValueError:
+            continue
+        for team in (scheduled["home_team"], scheduled["away_team"]):
+            team_dates.setdefault(team, []).append(game_day)
+    for team in team_dates:
+        team_dates[team] = sorted(set(team_dates[team]))
+
+    def rest_days(team: str, gameday) -> int:
+        if not gameday:
+            return 7
+        try:
+            game_day = datetime.fromisoformat(str(gameday)[:10])
+        except ValueError:
+            return 7
+        prior = [day for day in team_dates.get(team, []) if day < game_day]
+        if not prior:
+            return 7
+        return max(0, min(21, (game_day - prior[-1]).days))
+
+    prediction_rows = []
+    feature_vectors: dict[str, dict] = {}
     for row in upcoming.iter_rows(named=True):
         home = row["home_team"]
         away = row["away_team"]
@@ -388,7 +419,6 @@ def main() -> None:
             stats_cache[home] = team_stats_from_row(
                 team_latest_row(features_df, home), home
             )
-            stats_cache[home]["div_game"] = int(row.get("div_game") or 0)
             stats_cache[home].update(team_records.get(home, {}))
             stats_cache[home].update(qb_context.get(home, {}))
             stats_cache[home].update(injury_context.get(home, {}))
@@ -396,16 +426,36 @@ def main() -> None:
             stats_cache[away] = team_stats_from_row(
                 team_latest_row(features_df, away), away
             )
-            stats_cache[away]["div_game"] = int(row.get("div_game") or 0)
             stats_cache[away].update(team_records.get(away, {}))
             stats_cache[away].update(qb_context.get(away, {}))
             stats_cache[away].update(injury_context.get(away, {}))
-            stats_cache[away].update(roster_context.get(away, {}))
-            stats_cache[home].update(roster_context.get(home, {}))
+
+        # These change every week, so set them for both teams on every row.
+        home_rest = rest_days(home, row.get("gameday"))
+        away_rest = rest_days(away, row.get("gameday"))
+        stats_cache[home].update(
+            {
+                "div_game": int(row.get("div_game") or 0),
+                "rest_days": home_rest,
+                "short_week": int(home_rest <= 4),
+                **roster_context.get(home, {}),
+            }
+        )
+        stats_cache[away].update(
+            {
+                "div_game": int(row.get("div_game") or 0),
+                "rest_days": away_rest,
+                "short_week": int(away_rest <= 4),
+                **roster_context.get(away, {}),
+            }
+        )
 
         x = build_feature_vector(
             feature_names, stats_cache[home], stats_cache[away], week, current_season
         )
+        feature_vectors[str(row.get("game_id"))] = {
+            name: float(value) for name, value in zip(feature_names, x)
+        }
         raw_proba = float(model.predict_proba([x])[0, 1])
         proba = apply_platt(raw_proba, platt)
 
@@ -442,7 +492,7 @@ def main() -> None:
             except Exception:
                 pass
 
-        predictions.append(
+        prediction_rows.append(
             {
                 "game_id": row.get("game_id"),
                 "season": current_season,
@@ -471,18 +521,31 @@ def main() -> None:
 
     os.makedirs("predictions", exist_ok=True)
     with open("predictions/upcoming_games.json", "w", encoding="utf-8") as f:
-        json.dump(predictions, f, indent=2)
-    with open("predictions/meta.json", "w", encoding="utf-8") as f:
+        json.dump(prediction_rows, f, indent=2)
+    os.makedirs("models", exist_ok=True)
+    with open("models/upcoming_feature_vectors.json", "w", encoding="utf-8") as f:
         json.dump(
             {
                 "generated_at": datetime.now(timezone.utc).isoformat(),
-                "games": len(predictions),
                 "season": current_season,
+                "features": feature_names,
+                "games": feature_vectors,
             },
             f,
             indent=2,
         )
-    print(f"Wrote predictions/upcoming_games.json ({len(predictions)} games)")
+    with open("predictions/meta.json", "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+                "games": len(prediction_rows),
+                "season": current_season,
+                "week": int(prediction_rows[0]["week"]) if prediction_rows else None,
+            },
+            f,
+            indent=2,
+        )
+    print(f"Wrote predictions/upcoming_games.json ({len(prediction_rows)} games)")
 
 
 if __name__ == "__main__":

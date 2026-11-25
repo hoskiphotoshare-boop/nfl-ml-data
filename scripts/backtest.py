@@ -176,7 +176,7 @@ def main() -> None:
         pooled = evaluate(np.array(pooled_y), np.array(pooled_proba))
 
     report = {
-        "feature_set": FEATURE_COLS,
+        "feature_set": list(features),
         "per_season": results,
         "pooled": pooled,
     }

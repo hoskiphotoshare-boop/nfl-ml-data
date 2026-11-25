@@ -221,6 +221,11 @@ class ModelProbabilities:
             team: team_stats_from_row(team_latest_row(frames, team), team)
             for team in teams
         }
+        # Simulated games are future weeks; the last played game's rest and
+        # short-week flags are stale. Use a neutral week for every team.
+        for stats in self.stats.values():
+            stats["rest_days"] = 7
+            stats["short_week"] = 0
         self.cache: dict[tuple[str, str, int], float] = {}
         self.platt = None
         if os.path.exists("models/platt.json"):

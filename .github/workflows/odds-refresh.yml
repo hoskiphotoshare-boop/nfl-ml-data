@@ -51,6 +51,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - run: pip install --upgrade pip
+      - run: pip install polars nflreadpy scikit-learn joblib
+
       - name: Fetch NFL odds
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}

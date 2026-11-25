@@ -16,16 +16,19 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install polars nflreadpy scikit-learn joblib || true
+      - run: pip install polars nflreadpy scikit-learn joblib shap || true
 
       - run: python scripts/download_data.py || true
       - run: python scripts/build_features.py || true
       - run: python scripts/train_player_models.py || true
+      - run: python scripts/add_player_matchups.py || true
+      - run: python scripts/explain_models.py || true
+      - run: python scripts/build_health_report.py || true
 
       - run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add predictions/players_week.json features/ reports/player_backtest.json models/player_models.joblib 2>/dev/null || true
+          git add predictions/players_week.json predictions/meta.json features/ models/ reports/player_backtest.json reports/model_health.json reports/model_explanations.json 2>/dev/null || true
           git commit -m "chore: update player model backtest" || true
           git pull --rebase origin main || true
           git push origin main || true

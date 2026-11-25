@@ -33,8 +33,10 @@ except Exception as exc:  # pragma: no cover - shap is optional
     raise SystemExit(0)
 
 from predict_upcoming import (
+    apply_platt,
     build_feature_vector,
     load_match_features,
+    load_platt,
     team_latest_row,
     team_stats_from_row,
 )
@@ -58,6 +60,18 @@ PLAYER_SAMPLE = 60
 LOCAL_GAMES = 200
 LOCAL_PLAYERS = 6
 TOP_DRIVERS = 8
+INFERENCE_VECTORS = "models/upcoming_feature_vectors.json"
+PLAYER_VECTORS = "models/player_feature_vectors.json"
+
+
+def load_inference_vectors(path: str) -> dict:
+    if not os.path.exists(path):
+        return {}
+    try:
+        with open(path, encoding="utf-8") as handle:
+            return json.load(handle).get("games", {})
+    except Exception:
+        return {}
 
 MATCH_ACRONYMS = {
     "epa": "EPA",
@@ -169,33 +183,41 @@ def match_explanations() -> dict | None:
     upcoming = json.load(open(PREDICTIONS, encoding="utf-8")) if os.path.exists(PREDICTIONS) else []
     upcoming = sorted(upcoming, key=lambda g: (g.get("gameday") or "", g.get("gametime") or ""))[:LOCAL_GAMES]
     if upcoming:
+        stored = load_inference_vectors(INFERENCE_VECTORS)
         stats = {}
+        rows = []
         for game in upcoming:
+            vector = stored.get(str(game.get("game_id")))
+            if vector:
+                rows.append([float(vector.get(feature, 0.0)) for feature in features])
+                continue
             for team in (game["home_team"], game["away_team"]):
                 if team not in stats:
                     stats[team] = team_stats_from_row(team_latest_row(frame, team), team)
-        rows = [
-            build_feature_vector(
-                features,
-                stats[game["home_team"]],
-                stats[game["away_team"]],
-                int(game.get("week") or 0),
-                int(game.get("season") or 0),
+            rows.append(
+                build_feature_vector(
+                    features,
+                    stats[game["home_team"]],
+                    stats[game["away_team"]],
+                    int(game.get("week") or 0),
+                    int(game.get("season") or 0),
+                )
             )
-            for game in upcoming
-        ]
         game_values = np.asarray(explainer.shap_values(np.asarray(rows)))
         if game_values.ndim == 1:
             game_values = game_values.reshape(1, -1)
+        platt = load_platt()
         for game, row, shap_row in zip(upcoming, rows, game_values):
             logit = base_raw + float(shap_row.sum())
+            raw_probability = float(1.0 / (1.0 + np.exp(-logit)))
             games.append(
                 {
                     "game_id": game.get("game_id"),
                     "matchup": f"{game['away_team']} @ {game['home_team']}",
                     "week": game.get("week"),
                     "home_team": game["home_team"],
-                    "prediction": round(float(1.0 / (1.0 + np.exp(-logit))), 4),
+                    "prediction": round(apply_platt(raw_probability, platt), 4),
+                    "raw_prediction": round(raw_probability, 4),
                     "base_probability": round(float(base_probability), 4),
                     "drivers": short_features(features, np.asarray(row), shap_row, match_label),
                 }
@@ -262,12 +284,16 @@ def score_explanations() -> dict | None:
         return output
 
     stats = {}
+    rows = []
+    stored = load_inference_vectors(INFERENCE_VECTORS)
     for game in upcoming:
+        vector = stored.get(str(game.get("game_id")))
+        if vector:
+            rows.append([float(vector.get(feature, 0.0)) for feature in features])
+            continue
         for team in (game["home_team"], game["away_team"]):
             if team not in stats:
                 stats[team] = team_stats_from_row(team_latest_row(frame, team), team)
-    rows = []
-    for game in upcoming:
         stats[game["home_team"]]["div_game"] = int(game.get("div_game") or 0)
         stats[game["away_team"]]["div_game"] = int(game.get("div_game") or 0)
         rows.append(
@@ -318,6 +344,21 @@ def player_explanations() -> dict:
     team_col = "team" if "team" in rolling.columns else None
 
     output = {}
+    player_records = []
+    if os.path.exists("predictions/players_week.json"):
+        try:
+            with open("predictions/players_week.json", encoding="utf-8") as handle:
+                player_records = json.load(handle)
+        except Exception:
+            player_records = []
+    player_vectors = {}
+    if os.path.exists(PLAYER_VECTORS):
+        try:
+            with open(PLAYER_VECTORS, encoding="utf-8") as handle:
+                player_vectors = json.load(handle).get("players", {})
+        except Exception:
+            player_vectors = {}
+
     for group, positions in POSITION_GROUPS.items():
         model = models.get(group)
         if model is None:
@@ -351,26 +392,64 @@ def player_explanations() -> dict:
             for i in order
         ]
 
-        latest = latest_player_rows(data, id_col)
-        latest_matrix = np.nan_to_num(latest.select(features).to_numpy(), nan=0.0)
-        predictions = model.predict(latest_matrix)
-        top_idx = np.argsort(predictions)[::-1][:LOCAL_PLAYERS]
-        top_matrix = latest_matrix[top_idx]
-        top_rows = latest.select([id_col, name_col] + ([team_col] if team_col else [])).to_numpy()
+        chosen = []
+        if player_vectors:
+            candidates = [
+                record
+                for record in player_records
+                if record.get("position") in positions
+                and str(record.get("player_id")) in player_vectors
+            ]
+            candidates.sort(
+                key=lambda record: record.get("projected_fantasy_points") or 0,
+                reverse=True,
+            )
+            chosen = candidates[:LOCAL_PLAYERS]
+
+        if chosen:
+            top_matrix = np.asarray(
+                [
+                    [
+                        float(player_vectors[str(record["player_id"])].get(feature, 0.0))
+                        for feature in features
+                    ]
+                    for record in chosen
+                ]
+            )
+            predictions = model.predict(top_matrix)
+            top_rows = [
+                (record.get("player_id"), record.get("name"), record.get("team"))
+                for record in chosen
+            ]
+        else:
+            latest = latest_player_rows(data, id_col)
+            latest_matrix = np.nan_to_num(latest.select(features).to_numpy(), nan=0.0)
+            predictions = model.predict(latest_matrix)
+            top_idx = np.argsort(predictions)[::-1][:LOCAL_PLAYERS]
+            top_matrix = latest_matrix[top_idx]
+            latest_rows = latest.select(
+                [id_col, name_col] + ([team_col] if team_col else [])
+            ).to_numpy()
+            top_rows = [
+                (
+                    latest_rows[index][0],
+                    latest_rows[index][1] if len(latest_rows[index]) > 1 else str(latest_rows[index][0]),
+                    latest_rows[index][2] if len(latest_rows[index]) > 2 and team_col else "",
+                )
+                for index in top_idx
+            ]
+
         explanation = explainer(top_matrix)
         local_values = np.asarray(explanation.values)
 
         players = []
-        for position, index in enumerate(top_idx):
-            row = top_rows[index]
-            name = row[1] if len(row) > 1 else str(row[0])
-            team = row[2] if len(row) > 2 and team_col else ""
+        for position, (player_id, name, team) in enumerate(top_rows):
             players.append(
                 {
-                    "player_id": str(row[0]),
+                    "player_id": str(player_id),
                     "name": str(name),
                     "team": str(team),
-                    "prediction": round(float(predictions[index]), 2),
+                    "prediction": round(float(predictions[position]), 2),
                     "drivers": short_features(
                         features, top_matrix[position], local_values[position], player_label
                     ),
