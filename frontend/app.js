@@ -1839,7 +1839,9 @@ function renderPlayoffs() {
     tr.appendChild(el('td', 'muted-2', String(index + 1)));
 
     const teamTd = el('td', 'sticky-col');
-    const identity = el('div', 'player');
+    const identity = el('a', 'player team-link');
+    identity.href = `/teams/${team.team}.html`;
+    identity.title = `Open ${teamFull(team.team)} team page`;
     identity.appendChild(teamBadge(team.team, true));
     const info = el('div');
     info.appendChild(el('div', 'nm', teamAbbr(team.team)));

@@ -2,7 +2,8 @@
 """Generate static team pages for SEO and sharing.
 
 Reads ``predictions/playoffs.json`` and ``predictions/upcoming_games.json`` and
-writes ``frontend/teams/index.html`` plus one page per team.
+writes ``frontend/teams/index.html`` (a team directory), one page per team, and
+``frontend/sitemap.xml``.
 """
 
 from __future__ import annotations
@@ -129,13 +130,19 @@ def kickoff(gameday, gametime) -> str:
     return label
 
 
-def page(title: str, description: str, body: str) -> str:
+def page(title: str, description: str, body: str, canonical: str, updated: str = "") -> str:
+    updated_line = (
+        f'<div class="foot-row"><span>Updated {html.escape(updated)}</span></div>'
+        if updated
+        else ""
+    )
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{html.escape(description)}" />
+  <link rel="canonical" href="{html.escape(canonical)}" />
   <meta name="theme-color" content="#f3f6fb" />
   <script>
     (function () {{
@@ -187,6 +194,7 @@ def page(title: str, description: str, body: str) -> str:
   </main>
   <footer>
     <div class="foot-row"><span>Model-implied probabilities · not betting advice</span></div>
+    {updated_line}
     <div class="foot-row"><span>Data: nflverse (CC-BY 4.0)</span></div>
   </footer>
   <script src="../theme.js"></script>
@@ -221,52 +229,98 @@ def meter(value, cls: str = "") -> str:
     )
 
 
+SITE = "https://nfl-ml-data.pages.dev"
+
+
+def updated_info(meta: dict) -> tuple[str, str]:
+    stamp = meta.get("generated_at")
+    try:
+        dt = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
+    except Exception:
+        return "", datetime.now().strftime("%Y-%m-%d")
+    return dt.strftime("%b %d, %Y %H:%M UTC"), dt.date().isoformat()
+
+
 def main() -> None:
     playoffs = load_json("predictions/playoffs.json", [])
     games = load_json("predictions/upcoming_games.json", [])
+    meta = load_json("predictions/meta.json", {})
     if not playoffs:
         print("No playoff predictions found; skipping team pages.")
         return
 
     out_dir = "frontend/teams"
     os.makedirs(out_dir, exist_ok=True)
+    updated, lastmod = updated_info(meta)
 
     ordered = sorted(playoffs, key=lambda t: (t.get("super_bowl_prob") or 0), reverse=True)
-    rows = []
-    for index, team in enumerate(ordered, start=1):
+    next_game: dict[str, dict] = {}
+    for game in games:
+        week = game.get("week") or 0
+        for team in (game.get("home_team"), game.get("away_team")):
+            if not team:
+                continue
+            current = next_game.get(team)
+            key = (week, str(game.get("gameday") or ""))
+            if current is None or key < (
+                current.get("week") or 0,
+                str(current.get("gameday") or ""),
+            ):
+                next_game[team] = game
+
+    def team_card(team: dict) -> str:
         abbr = team.get("team", "")
-        conf = team.get("conference") or "—"
-        rows.append(
-            f'<tr><td class="muted-2">{index}</td>'
-            f'<td><div class="player">{badge(abbr, True)}<div><div class="nm">'
-            f'<a href="{html.escape(abbr)}.html">{html.escape(abbr)}</a></div>'
-            f'<div class="tm">{html.escape(full_name(abbr))}</div></div></div></td>'
-            f'<td class="hide-sm muted">{html.escape(conf)}</td>'
-            f'<td>{meter(team.get("playoff_prob"), "green")}</td>'
-            f'<td class="hide-sm">{meter(team.get("conference_prob"))}</td>'
-            f'<td>{meter(team.get("super_bowl_prob"), "green")}</td>'
-            f'<td class="num hide-sm muted">{fair_decimal(team.get("super_bowl_prob"))}</td></tr>'
+        game = next_game.get(abbr)
+        if game:
+            home = game.get("home_team") == abbr
+            opponent = game.get("away_team") if home else game.get("home_team")
+            next_label = (
+                f"Next: {'vs' if home else '@'} {html.escape(str(opponent))} · "
+                f"{kickoff(game.get('gameday'), None)}"
+            )
+        else:
+            next_label = "No remaining games"
+        return (
+            f'<a class="team-card" href="{html.escape(abbr)}.html">'
+            f"{badge(abbr, True)}"
+            f'<div><div class="nm">{html.escape(abbr)}</div>'
+            f'<div class="tm">{html.escape(full_name(abbr))}</div>'
+            f'<div class="next">{next_label}</div></div></a>'
+        )
+
+    groups: dict[str, list[dict]] = {"AFC": [], "NFC": [], "OTHER": []}
+    for team in sorted(ordered, key=lambda item: item.get("team") or ""):
+        conf = team.get("conference") or "OTHER"
+        groups.setdefault(conf, []).append(team)
+
+    sections = []
+    for conf in ("AFC", "NFC", "OTHER"):
+        if not groups.get(conf):
+            continue
+        label = conf if conf in ("AFC", "NFC") else "Other"
+        cards = "".join(team_card(team) for team in groups[conf])
+        sections.append(
+            f'<section class="team-section"><h3>{label}</h3>'
+            f'<div class="team-grid">{cards}</div></section>'
         )
 
     index_body = f"""
     <div class="panel-head">
       <div>
-        <h2>NFL playoff odds by team</h2>
-        <p>Every team’s simulated chance of reaching the playoffs, winning its conference and lifting the Super Bowl, from 10,000 Monte Carlo runs.</p>
+        <h2>NFL team pages</h2>
+        <p>Browse all 32 teams for playoff odds, Super Bowl chances and the remaining schedule. Live league-wide rankings are on the <a href="/#playoffs">Playoffs tab</a>.</p>
       </div>
     </div>
-    <div class="table-wrap"><div class="table-scroll"><table class="dtable">
-      <thead><tr><th>#</th><th>Team</th><th class="hide-sm">Conf</th><th>Playoff</th>
-      <th class="hide-sm">Conf. title</th><th>Super Bowl</th><th class="num hide-sm">Fair odds</th></tr></thead>
-      <tbody>{''.join(rows)}</tbody>
-    </table></div></div>
+    <div class="team-directory">{''.join(sections)}</div>
     """
     with open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8") as f:
         f.write(
             page(
-                "NFL Playoff Odds by Team — NFL ML Predictions",
-                "Simulated playoff and Super Bowl probabilities for all 32 NFL teams.",
+                "NFL Team Pages — Schedules & Playoff Odds — NFL ML Predictions",
+                "Directory of all 32 NFL team pages with model playoff odds, Super Bowl chances and remaining schedules.",
                 index_body,
+                f"{SITE}/teams/",
+                updated,
             )
         )
 
@@ -321,10 +375,26 @@ def main() -> None:
                     f"{abbr} {full_name(abbr)} Playoff Odds & Remaining Schedule — NFL ML Predictions",
                     f"{full_name(abbr)} playoff probability, Super Bowl odds and remaining NFL schedule with model win probabilities.",
                     body,
+                    f"{SITE}/teams/{abbr}",
+                    updated,
                 )
             )
 
-    print(f"Wrote {len(ordered)} team pages to {out_dir}/")
+    urls = [f"{SITE}/", f"{SITE}/teams/"] + [
+        f"{SITE}/teams/{team.get('team')}" for team in ordered if team.get("team")
+    ]
+    sitemap = (
+        '<?xml version="1.0" encoding="UTF-8"?>\n'
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+        + "".join(
+            f"  <url><loc>{html.escape(url)}</loc><lastmod>{lastmod}</lastmod></url>\n"
+            for url in urls
+        )
+        + "</urlset>\n"
+    )
+    with open("frontend/sitemap.xml", "w", encoding="utf-8") as f:
+        f.write(sitemap)
+    print(f"Wrote {len(ordered)} team pages to {out_dir}/ and frontend/sitemap.xml")
 
 
 if __name__ == "__main__":

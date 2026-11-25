@@ -1865,6 +1865,75 @@ footer .odds {
   color: var(--accent);
 }
 
+.team-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.team-link:hover .nm {
+  color: var(--accent);
+}
+
+/* ---------- team directory ---------- */
+
+.team-directory {
+  display: grid;
+  gap: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.team-section h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 0.55rem;
+}
+
+.team-card {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: inherit;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.team-card:hover {
+  border-color: var(--accent);
+  background: var(--hover);
+}
+
+.team-card .nm {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.team-card .tm {
+  font-size: 0.72rem;
+  color: var(--muted-2);
+}
+
+.team-card .next {
+  margin-top: 0.12rem;
+  font-size: 0.68rem;
+  color: var(--muted-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* ---------- responsive ---------- */
 
 @media (max-width: 1000px) {
