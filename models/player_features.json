@@ -25,6 +25,7 @@
     "roll_st_pct",
     "is_home",
     "rest_days",
-    "opp_def_rating"
+    "opp_def_rating",
+    "div_game"
   ]
 }

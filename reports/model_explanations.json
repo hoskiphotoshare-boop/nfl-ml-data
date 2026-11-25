@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T04:49:19.958972+00:00",
+  "generated_at": "2026-11-25T04:55:35.336014+00:00",
   "method": "Linear SHAP (match) and permutation SHAP (players)",
   "match": {
     "model": "logistic",
@@ -19131,122 +19131,185 @@
     "QB": {
       "model": "HistGradientBoostingRegressor",
       "sample_size": 60,
-      "base_value": 11.185,
+      "base_value": 11.216,
       "global": [
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 2.3554,
-          "mean_shap": 0.9519,
-          "share": 0.3641
+          "mean_abs_shap": 2.406,
+          "mean_shap": 0.9923,
+          "share": 0.3681
         },
         {
           "feature": "roll_offense_pct",
           "label": "Rolling offense pct",
-          "mean_abs_shap": 1.1879,
-          "mean_shap": 0.1265,
-          "share": 0.1836
+          "mean_abs_shap": 1.0821,
+          "mean_shap": 0.1105,
+          "share": 0.1656
         },
         {
           "feature": "roll_rushing_yards",
           "label": "Rolling rushing yards",
-          "mean_abs_shap": 0.4208,
-          "mean_shap": 0.1258,
-          "share": 0.065
-        },
-        {
-          "feature": "opp_def_rating",
-          "label": "Opponent defense rating",
-          "mean_abs_shap": 0.3624,
-          "mean_shap": 0.0343,
-          "share": 0.056
+          "mean_abs_shap": 0.4934,
+          "mean_shap": 0.1678,
+          "share": 0.0755
         },
         {
           "feature": "roll_offense_snaps",
           "label": "Rolling offense snaps",
-          "mean_abs_shap": 0.3474,
-          "mean_shap": 0.0761,
-          "share": 0.0537
+          "mean_abs_shap": 0.4175,
+          "mean_shap": 0.0864,
+          "share": 0.0639
         },
         {
-          "feature": "is_home",
-          "label": "Home game",
-          "mean_abs_shap": 0.3222,
-          "mean_shap": -0.0236,
-          "share": 0.0498
+          "feature": "opp_def_rating",
+          "label": "Opponent defense rating",
+          "mean_abs_shap": 0.3364,
+          "mean_shap": 0.0368,
+          "share": 0.0515
         },
         {
           "feature": "roll_completions",
           "label": "Rolling completions",
-          "mean_abs_shap": 0.3154,
-          "mean_shap": 0.1107,
-          "share": 0.0488
+          "mean_abs_shap": 0.3229,
+          "mean_shap": 0.1067,
+          "share": 0.0494
+        },
+        {
+          "feature": "is_home",
+          "label": "Home game",
+          "mean_abs_shap": 0.3186,
+          "mean_shap": -0.0194,
+          "share": 0.0487
         },
         {
           "feature": "roll_carries",
           "label": "Rolling carries",
-          "mean_abs_shap": 0.2866,
-          "mean_shap": 0.0757,
-          "share": 0.0443
+          "mean_abs_shap": 0.2568,
+          "mean_shap": 0.0288,
+          "share": 0.0393
         },
         {
           "feature": "roll_passing_interceptions",
           "label": "Rolling passing interceptions",
-          "mean_abs_shap": 0.1996,
-          "mean_shap": 0.1909,
-          "share": 0.0309
-        },
-        {
-          "feature": "roll_attempts",
-          "label": "Rolling attempts",
-          "mean_abs_shap": 0.1562,
-          "mean_shap": -0.0284,
-          "share": 0.0241
+          "mean_abs_shap": 0.1843,
+          "mean_shap": 0.1719,
+          "share": 0.0282
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.1433,
-          "mean_shap": -0.0155,
-          "share": 0.0222
+          "mean_abs_shap": 0.1527,
+          "mean_shap": -0.009,
+          "share": 0.0234
+        },
+        {
+          "feature": "roll_attempts",
+          "label": "Rolling attempts",
+          "mean_abs_shap": 0.1522,
+          "mean_shap": -0.034,
+          "share": 0.0233
         },
         {
           "feature": "roll_rushing_tds",
           "label": "Rolling rushing tds",
-          "mean_abs_shap": 0.1156,
-          "mean_shap": -0.0262,
-          "share": 0.0179
+          "mean_abs_shap": 0.1034,
+          "mean_shap": -0.02,
+          "share": 0.0158
+        },
+        {
+          "feature": "div_game",
+          "label": "Div Game",
+          "mean_abs_shap": 0.0939,
+          "mean_shap": -0.0037,
+          "share": 0.0144
         },
         {
           "feature": "roll_passing_yards",
           "label": "Rolling passing yards",
-          "mean_abs_shap": 0.1028,
-          "mean_shap": 0.0102,
-          "share": 0.0159
+          "mean_abs_shap": 0.0906,
+          "mean_shap": 0.0097,
+          "share": 0.0139
         },
         {
           "feature": "roll_passing_tds",
           "label": "Rolling passing tds",
-          "mean_abs_shap": 0.0874,
-          "mean_shap": 0.0453,
-          "share": 0.0135
+          "mean_abs_shap": 0.0742,
+          "mean_shap": 0.0353,
+          "share": 0.0114
         },
         {
           "feature": "roll_receptions",
           "label": "Rolling receptions",
-          "mean_abs_shap": 0.0421,
-          "mean_shap": -0.0007,
-          "share": 0.0065
+          "mean_abs_shap": 0.0338,
+          "mean_shap": -0.0014,
+          "share": 0.0052
         },
         {
           "feature": "roll_yards",
           "label": "Rolling yards",
-          "mean_abs_shap": 0.0245,
-          "mean_shap": -0.0023,
-          "share": 0.0038
+          "mean_abs_shap": 0.0176,
+          "mean_shap": -0.0017,
+          "share": 0.0027
         }
       ],
       "players": [
+        {
+          "player_id": "00-0033077",
+          "name": "Dak Prescott",
+          "team": "DAL",
+          "prediction": 19.07,
+          "drivers": [
+            {
+              "feature": "roll_fantasy_points",
+              "label": "Rolling fantasy points",
+              "value": 23.25,
+              "shap": 5.0178
+            },
+            {
+              "feature": "roll_offense_snaps",
+              "label": "Rolling offense snaps",
+              "value": 76.0,
+              "shap": 1.0007
+            },
+            {
+              "feature": "roll_offense_pct",
+              "label": "Rolling offense pct",
+              "value": 1.0,
+              "shap": 0.6791
+            },
+            {
+              "feature": "opp_def_rating",
+              "label": "Opponent defense rating",
+              "value": 24.56,
+              "shap": 0.6655
+            },
+            {
+              "feature": "roll_passing_tds",
+              "label": "Rolling passing tds",
+              "value": 2.75,
+              "shap": -0.6053
+            },
+            {
+              "feature": "is_home",
+              "label": "Home game",
+              "value": 1.0,
+              "shap": 0.5263
+            },
+            {
+              "feature": "roll_passing_yards",
+              "label": "Rolling passing yards",
+              "value": 271.25,
+              "shap": 0.4014
+            },
+            {
+              "feature": "roll_carries",
+              "label": "Rolling carries",
+              "value": 3.75,
+              "shap": -0.223
+            }
+          ]
+        },
         {
           "player_id": "00-0039910",
           "name": "Jayden Daniels",
@@ -19257,161 +19320,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 17.825,
-              "shap": 3.7247
+              "shap": 3.9063
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 1.0,
-              "shap": 1.043
+              "shap": 0.8861
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 64.5,
-              "shap": 0.743
-            },
-            {
-              "feature": "roll_completions",
-              "label": "Rolling completions",
-              "value": 23.0,
-              "shap": 0.7115
+              "shap": 0.8543
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 19.25,
-              "shap": 0.589
+              "shap": 0.6605
+            },
+            {
+              "feature": "roll_completions",
+              "label": "Rolling completions",
+              "value": 23.0,
+              "shap": 0.6019
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.5385
+              "shap": 0.5457
             },
             {
               "feature": "roll_passing_yards",
               "label": "Rolling passing yards",
               "value": 260.0,
-              "shap": 0.3408
+              "shap": 0.2735
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 14.54,
-              "shap": -0.1835
-            }
-          ]
-        },
-        {
-          "player_id": "00-0033077",
-          "name": "Dak Prescott",
-          "team": "DAL",
-          "prediction": 18.59,
-          "drivers": [
-            {
-              "feature": "roll_fantasy_points",
-              "label": "Rolling fantasy points",
-              "value": 23.25,
-              "shap": 4.7472
-            },
-            {
-              "feature": "roll_offense_snaps",
-              "label": "Rolling offense snaps",
-              "value": 76.0,
-              "shap": 0.9671
-            },
-            {
-              "feature": "roll_offense_pct",
-              "label": "Rolling offense pct",
-              "value": 1.0,
-              "shap": 0.6488
-            },
-            {
-              "feature": "opp_def_rating",
-              "label": "Opponent defense rating",
-              "value": 24.56,
-              "shap": 0.6463
-            },
-            {
-              "feature": "roll_passing_tds",
-              "label": "Rolling passing tds",
-              "value": 2.75,
-              "shap": -0.6302
-            },
-            {
-              "feature": "is_home",
-              "label": "Home game",
-              "value": 1.0,
-              "shap": 0.4794
-            },
-            {
-              "feature": "roll_passing_yards",
-              "label": "Rolling passing yards",
-              "value": 271.25,
-              "shap": 0.4425
-            },
-            {
-              "feature": "roll_completions",
-              "label": "Rolling completions",
-              "value": 21.25,
-              "shap": 0.226
-            }
-          ]
-        },
-        {
-          "player_id": "00-0039163",
-          "name": "C.J. Stroud",
-          "team": "HOU",
-          "prediction": 18.37,
-          "drivers": [
-            {
-              "feature": "roll_fantasy_points",
-              "label": "Rolling fantasy points",
-              "value": 23.325,
-              "shap": 4.0662
-            },
-            {
-              "feature": "rest_days",
-              "label": "Rest days",
-              "value": 4.0,
-              "shap": 0.911
-            },
-            {
-              "feature": "roll_offense_pct",
-              "label": "Rolling offense pct",
-              "value": 0.9725,
-              "shap": 0.8989
-            },
-            {
-              "feature": "roll_offense_snaps",
-              "label": "Rolling offense snaps",
-              "value": 63.25,
-              "shap": 0.7933
-            },
-            {
-              "feature": "is_home",
-              "label": "Home game",
-              "value": 1.0,
-              "shap": 0.4413
-            },
-            {
-              "feature": "roll_passing_yards",
-              "label": "Rolling passing yards",
-              "value": 265.0,
-              "shap": 0.3849
-            },
-            {
-              "feature": "roll_carries",
-              "label": "Rolling carries",
-              "value": 2.0,
-              "shap": -0.3508
-            },
-            {
-              "feature": "roll_passing_tds",
-              "label": "Rolling passing tds",
-              "value": 3.25,
-              "shap": -0.2606
+              "shap": -0.1912
             }
           ]
         },
@@ -19419,111 +19370,55 @@
           "player_id": "00-0039851",
           "name": "Drake Maye",
           "team": "NE",
-          "prediction": 18.36,
+          "prediction": 18.73,
           "drivers": [
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 22.99,
-              "shap": 4.9698
+              "shap": 5.195
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.9525,
-              "shap": 1.0444
+              "shap": 0.8755
             },
             {
               "feature": "roll_passing_yards",
               "label": "Rolling passing yards",
               "value": 263.5,
-              "shap": 0.5302
+              "shap": 0.5756
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 15.865,
-              "shap": 0.4101
+              "shap": 0.4116
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 0.0,
-              "shap": -0.3368
+              "shap": -0.3335
             },
             {
               "feature": "roll_completions",
               "label": "Rolling completions",
               "value": 19.75,
-              "shap": 0.3272
+              "shap": 0.2919
             },
             {
-              "feature": "roll_rushing_yards",
-              "label": "Rolling rushing yards",
-              "value": 14.5,
-              "shap": -0.1433
-            },
-            {
-              "feature": "roll_carries",
-              "label": "Rolling carries",
-              "value": 4.25,
-              "shap": 0.1363
-            }
-          ]
-        },
-        {
-          "player_id": "00-0040743",
-          "name": "Tyler Shough",
-          "team": "NO",
-          "prediction": 17.88,
-          "drivers": [
-            {
-              "feature": "roll_fantasy_points",
-              "label": "Rolling fantasy points",
-              "value": 17.615,
-              "shap": 3.5988
-            },
-            {
-              "feature": "roll_offense_pct",
-              "label": "Rolling offense pct",
-              "value": 0.9925,
-              "shap": 1.1602
-            },
-            {
-              "feature": "roll_completions",
-              "label": "Rolling completions",
-              "value": 23.0,
-              "shap": 0.6314
-            },
-            {
-              "feature": "is_home",
-              "label": "Home game",
-              "value": 0.0,
-              "shap": -0.6288
-            },
-            {
-              "feature": "roll_rushing_yards",
-              "label": "Rolling rushing yards",
-              "value": 28.75,
-              "shap": 0.5966
+              "feature": "roll_passing_tds",
+              "label": "Rolling passing tds",
+              "value": 2.5,
+              "shap": 0.141
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
-              "value": 66.25,
-              "shap": 0.4252
-            },
-            {
-              "feature": "roll_carries",
-              "label": "Rolling carries",
-              "value": 6.0,
-              "shap": 0.3075
-            },
-            {
-              "feature": "roll_passing_yards",
-              "label": "Rolling passing yards",
-              "value": 218.5,
-              "shap": 0.2002
+              "value": 58.25,
+              "shap": 0.1397
             }
           ]
         },
@@ -19531,55 +19426,167 @@
           "player_id": "00-0036442",
           "name": "Joe Burrow",
           "team": "CIN",
-          "prediction": 17.77,
+          "prediction": 18.53,
           "drivers": [
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 32.765,
-              "shap": 5.2503
+              "shap": 5.5448
             },
             {
               "feature": "roll_completions",
               "label": "Rolling completions",
               "value": 29.75,
-              "shap": 1.0927
+              "shap": 1.4007
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.9725,
-              "shap": 0.883
+              "shap": 0.6503
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 61.0,
-              "shap": 0.3714
+              "shap": 0.4883
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 11.0425,
-              "shap": -0.3272
+              "shap": -0.2759
             },
             {
               "feature": "roll_passing_tds",
               "label": "Rolling passing tds",
               "value": 4.0,
-              "shap": -0.2166
-            },
-            {
-              "feature": "roll_passing_yards",
-              "label": "Rolling passing yards",
-              "value": 358.5,
-              "shap": -0.1884
+              "shap": -0.2493
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 0.0,
-              "shap": -0.1661
+              "shap": -0.1824
+            },
+            {
+              "feature": "roll_attempts",
+              "label": "Rolling attempts",
+              "value": 37.75,
+              "shap": -0.1151
+            }
+          ]
+        },
+        {
+          "player_id": "00-0039163",
+          "name": "C.J. Stroud",
+          "team": "HOU",
+          "prediction": 18.42,
+          "drivers": [
+            {
+              "feature": "roll_fantasy_points",
+              "label": "Rolling fantasy points",
+              "value": 23.325,
+              "shap": 4.3008
+            },
+            {
+              "feature": "rest_days",
+              "label": "Rest days",
+              "value": 4.0,
+              "shap": 0.9264
+            },
+            {
+              "feature": "roll_offense_pct",
+              "label": "Rolling offense pct",
+              "value": 0.9725,
+              "shap": 0.7966
+            },
+            {
+              "feature": "roll_offense_snaps",
+              "label": "Rolling offense snaps",
+              "value": 63.25,
+              "shap": 0.7378
+            },
+            {
+              "feature": "is_home",
+              "label": "Home game",
+              "value": 1.0,
+              "shap": 0.4491
+            },
+            {
+              "feature": "roll_carries",
+              "label": "Rolling carries",
+              "value": 2.0,
+              "shap": -0.2911
+            },
+            {
+              "feature": "roll_passing_tds",
+              "label": "Rolling passing tds",
+              "value": 3.25,
+              "shap": -0.2217
+            },
+            {
+              "feature": "roll_passing_yards",
+              "label": "Rolling passing yards",
+              "value": 265.0,
+              "shap": 0.2006
+            }
+          ]
+        },
+        {
+          "player_id": "00-0033873",
+          "name": "Patrick Mahomes",
+          "team": "KC",
+          "prediction": 18.03,
+          "drivers": [
+            {
+              "feature": "roll_fantasy_points",
+              "label": "Rolling fantasy points",
+              "value": 20.835,
+              "shap": 3.6029
+            },
+            {
+              "feature": "roll_offense_pct",
+              "label": "Rolling offense pct",
+              "value": 0.9725,
+              "shap": 1.1804
+            },
+            {
+              "feature": "roll_completions",
+              "label": "Rolling completions",
+              "value": 23.5,
+              "shap": 0.7575
+            },
+            {
+              "feature": "roll_offense_snaps",
+              "label": "Rolling offense snaps",
+              "value": 61.5,
+              "shap": 0.4401
+            },
+            {
+              "feature": "roll_passing_yards",
+              "label": "Rolling passing yards",
+              "value": 269.0,
+              "shap": 0.3633
+            },
+            {
+              "feature": "is_home",
+              "label": "Home game",
+              "value": 1.0,
+              "shap": 0.3495
+            },
+            {
+              "feature": "roll_carries",
+              "label": "Rolling carries",
+              "value": 2.0,
+              "shap": -0.2146
+            },
+            {
+              "feature": "roll_passing_tds",
+              "label": "Rolling passing tds",
+              "value": 2.5,
+              "shap": 0.2084
             }
           ]
         }
@@ -19588,112 +19595,119 @@
     "RB": {
       "model": "HistGradientBoostingRegressor",
       "sample_size": 60,
-      "base_value": 6.361,
+      "base_value": 6.368,
       "global": [
         {
           "feature": "roll_offense_pct",
           "label": "Rolling offense pct",
-          "mean_abs_shap": 0.9182,
-          "mean_shap": -0.5715,
-          "share": 0.2077
+          "mean_abs_shap": 0.9142,
+          "mean_shap": -0.5752,
+          "share": 0.2034
         },
         {
           "feature": "roll_carries",
           "label": "Rolling carries",
-          "mean_abs_shap": 0.7569,
-          "mean_shap": -0.4584,
-          "share": 0.1712
+          "mean_abs_shap": 0.7287,
+          "mean_shap": -0.448,
+          "share": 0.1622
         },
         {
           "feature": "roll_rushing_yards",
           "label": "Rolling rushing yards",
-          "mean_abs_shap": 0.6701,
-          "mean_shap": -0.2798,
-          "share": 0.1515
+          "mean_abs_shap": 0.7259,
+          "mean_shap": -0.3132,
+          "share": 0.1615
         },
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 0.6636,
-          "mean_shap": -0.5042,
-          "share": 0.1501
+          "mean_abs_shap": 0.6309,
+          "mean_shap": -0.4767,
+          "share": 0.1404
         },
         {
           "feature": "roll_st_pct",
           "label": "Rolling st pct",
-          "mean_abs_shap": 0.426,
-          "mean_shap": -0.2213,
-          "share": 0.0963
+          "mean_abs_shap": 0.4272,
+          "mean_shap": -0.2212,
+          "share": 0.0951
         },
         {
           "feature": "roll_receptions",
           "label": "Rolling receptions",
-          "mean_abs_shap": 0.1873,
-          "mean_shap": -0.0946,
-          "share": 0.0424
+          "mean_abs_shap": 0.2089,
+          "mean_shap": -0.1009,
+          "share": 0.0465
         },
         {
           "feature": "opp_def_rating",
           "label": "Opponent defense rating",
-          "mean_abs_shap": 0.1805,
-          "mean_shap": 0.0134,
-          "share": 0.0408
+          "mean_abs_shap": 0.188,
+          "mean_shap": 0.0118,
+          "share": 0.0418
         },
         {
           "feature": "roll_offense_snaps",
           "label": "Rolling offense snaps",
-          "mean_abs_shap": 0.1597,
-          "mean_shap": 0.0554,
-          "share": 0.0361
-        },
-        {
-          "feature": "roll_st_snaps",
-          "label": "Rolling st snaps",
-          "mean_abs_shap": 0.1168,
-          "mean_shap": -0.0234,
-          "share": 0.0264
+          "mean_abs_shap": 0.1858,
+          "mean_shap": 0.0645,
+          "share": 0.0413
         },
         {
           "feature": "roll_yards",
           "label": "Rolling yards",
-          "mean_abs_shap": 0.1115,
-          "mean_shap": 0.0319,
-          "share": 0.0252
+          "mean_abs_shap": 0.1222,
+          "mean_shap": 0.0256,
+          "share": 0.0272
+        },
+        {
+          "feature": "roll_st_snaps",
+          "label": "Rolling st snaps",
+          "mean_abs_shap": 0.1153,
+          "mean_shap": -0.0269,
+          "share": 0.0256
         },
         {
           "feature": "roll_targets",
           "label": "Rolling targets",
-          "mean_abs_shap": 0.0905,
-          "mean_shap": -0.0295,
-          "share": 0.0205
+          "mean_abs_shap": 0.0956,
+          "mean_shap": -0.0347,
+          "share": 0.0213
         },
         {
           "feature": "is_home",
           "label": "Home game",
-          "mean_abs_shap": 0.0764,
-          "mean_shap": 0.0009,
-          "share": 0.0173
+          "mean_abs_shap": 0.0804,
+          "mean_shap": 0.0007,
+          "share": 0.0179
         },
         {
           "feature": "roll_rushing_tds",
           "label": "Rolling rushing tds",
-          "mean_abs_shap": 0.0492,
-          "mean_shap": 0.0368,
-          "share": 0.0111
+          "mean_abs_shap": 0.0482,
+          "mean_shap": 0.0401,
+          "share": 0.0107
+        },
+        {
+          "feature": "div_game",
+          "label": "Div Game",
+          "mean_abs_shap": 0.0102,
+          "mean_shap": 0.0011,
+          "share": 0.0023
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.0133,
-          "mean_shap": -0.0035,
-          "share": 0.003
+          "mean_abs_shap": 0.0089,
+          "mean_shap": -0.0038,
+          "share": 0.002
         },
         {
           "feature": "roll_touchdowns",
           "label": "Rolling touchdowns",
-          "mean_abs_shap": 0.002,
-          "mean_shap": 0.0001,
-          "share": 0.0004
+          "mean_abs_shap": 0.0035,
+          "mean_shap": 0.001,
+          "share": 0.0008
         }
       ],
       "players": [
@@ -19701,55 +19715,55 @@
           "player_id": "00-0033280",
           "name": "Christian McCaffrey",
           "team": "SF",
-          "prediction": 18.97,
+          "prediction": 18.99,
           "drivers": [
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 27.3,
-              "shap": 4.3719
+              "shap": 4.3914
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.6625,
-              "shap": 3.0832
+              "shap": 3.0309
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 58.25,
-              "shap": 1.4708
+              "shap": 1.4702
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 13.5,
-              "shap": 1.347
+              "shap": 1.252
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 5.25,
-              "shap": 1.1289
+              "shap": 1.1823
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0075,
-              "shap": 0.7701
+              "shap": 0.7916
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 8.1875,
-              "shap": 0.7203
+              "shap": 0.7269
             },
             {
               "feature": "roll_rushing_tds",
               "label": "Rolling rushing tds",
               "value": 1.25,
-              "shap": -0.4529
+              "shap": -0.3809
             }
           ]
         },
@@ -19757,55 +19771,55 @@
           "player_id": "00-0035261",
           "name": "Tony Pollard",
           "team": "TEN",
-          "prediction": 17.94,
+          "prediction": 18.4,
           "drivers": [
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 22.425,
-              "shap": 4.8282
+              "shap": 4.7873
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.7625,
-              "shap": 2.9131
+              "shap": 2.8457
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 18.5,
-              "shap": 1.6137
+              "shap": 1.6469
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 88.75,
-              "shap": 1.4186
+              "shap": 1.5381
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.7021
+              "shap": 0.6687
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 3.5,
-              "shap": 0.5415
-            },
-            {
-              "feature": "roll_rushing_tds",
-              "label": "Rolling rushing tds",
-              "value": 1.25,
-              "shap": -0.2984
+              "shap": 0.6158
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 28.0,
-              "shap": 0.2501
+              "shap": 0.4324
+            },
+            {
+              "feature": "roll_offense_snaps",
+              "label": "Rolling offense snaps",
+              "value": 46.5,
+              "shap": -0.194
             }
           ]
         },
@@ -19813,55 +19827,55 @@
           "player_id": "00-0039139",
           "name": "Jahmyr Gibbs",
           "team": "DET",
-          "prediction": 15.69,
+          "prediction": 15.82,
           "drivers": [
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 124.0,
-              "shap": 4.577
+              "shap": 4.7354
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 23.175,
-              "shap": 3.8137
+              "shap": 3.5158
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.7575,
-              "shap": 2.2236
+              "shap": 2.182
             },
             {
               "feature": "roll_rushing_tds",
               "label": "Rolling rushing tds",
               "value": 1.0,
-              "shap": -1.073
+              "shap": -0.9245
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.8393
+              "shap": 0.8103
             },
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 4.75,
-              "shap": -0.459
+              "shap": -0.4284
+            },
+            {
+              "feature": "roll_offense_snaps",
+              "label": "Rolling offense snaps",
+              "value": 51.25,
+              "shap": -0.4046
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 35.25,
-              "shap": -0.4584
-            },
-            {
-              "feature": "roll_receptions",
-              "label": "Rolling receptions",
-              "value": 3.5,
-              "shap": 0.3629
+              "shap": -0.4029
             }
           ]
         },
@@ -19869,111 +19883,55 @@
           "player_id": "00-0037248",
           "name": "James Cook",
           "team": "BUF",
-          "prediction": 15.53,
+          "prediction": 15.63,
           "drivers": [
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 19.575,
-              "shap": 3.89
+              "shap": 3.6154
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 109.75,
-              "shap": 3.4869
+              "shap": 3.5029
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.6125,
-              "shap": 1.6275
+              "shap": 1.6278
             },
             {
               "feature": "roll_rushing_tds",
               "label": "Rolling rushing tds",
               "value": 1.0,
-              "shap": -0.9944
+              "shap": -0.9381
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.8564
-            },
-            {
-              "feature": "opp_def_rating",
-              "label": "Opponent defense rating",
-              "value": 7.675,
-              "shap": 0.1517
+              "shap": 0.8416
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 23.0,
-              "shap": 0.1452
+              "shap": 0.414
+            },
+            {
+              "feature": "opp_def_rating",
+              "label": "Opponent defense rating",
+              "value": 7.675,
+              "shap": 0.1947
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 43.75,
-              "shap": -0.142
-            }
-          ]
-        },
-        {
-          "player_id": "00-0039361",
-          "name": "Bucky Irving",
-          "team": "TB",
-          "prediction": 15.0,
-          "drivers": [
-            {
-              "feature": "roll_rushing_yards",
-              "label": "Rolling rushing yards",
-              "value": 104.75,
-              "shap": 3.8506
-            },
-            {
-              "feature": "roll_fantasy_points",
-              "label": "Rolling fantasy points",
-              "value": 19.225,
-              "shap": 3.6833
-            },
-            {
-              "feature": "roll_offense_pct",
-              "label": "Rolling offense pct",
-              "value": 0.6575,
-              "shap": 1.512
-            },
-            {
-              "feature": "roll_rushing_tds",
-              "label": "Rolling rushing tds",
-              "value": 1.25,
-              "shap": -1.0583
-            },
-            {
-              "feature": "roll_st_pct",
-              "label": "Rolling st pct",
-              "value": 0.0,
-              "shap": 0.8056
-            },
-            {
-              "feature": "opp_def_rating",
-              "label": "Opponent defense rating",
-              "value": 5.3104,
-              "shap": -0.3306
-            },
-            {
-              "feature": "roll_carries",
-              "label": "Rolling carries",
-              "value": 22.5,
-              "shap": 0.2678
-            },
-            {
-              "feature": "roll_receptions",
-              "label": "Rolling receptions",
-              "value": 1.75,
-              "shap": 0.151
+              "shap": -0.141
             }
           ]
         },
@@ -19981,55 +19939,111 @@
           "player_id": "00-0036555",
           "name": "Chuba Hubbard",
           "team": "CAR",
-          "prediction": 14.87,
+          "prediction": 14.92,
           "drivers": [
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.815,
-              "shap": 3.4144
+              "shap": 3.233
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 18.175,
-              "shap": 2.3167
+              "shap": 2.3798
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 71.25,
-              "shap": 1.6109
+              "shap": 1.7476
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 18.0,
-              "shap": 1.5541
+              "shap": 1.5658
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 54.75,
-              "shap": -0.8101
+              "shap": -1.0088
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 5.0,
-              "shap": 0.6801
+              "shap": 0.5996
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.5237
+              "shap": 0.5848
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 6.3562,
-              "shap": -0.4106
+              "shap": -0.4118
+            }
+          ]
+        },
+        {
+          "player_id": "00-0039361",
+          "name": "Bucky Irving",
+          "team": "TB",
+          "prediction": 14.88,
+          "drivers": [
+            {
+              "feature": "roll_rushing_yards",
+              "label": "Rolling rushing yards",
+              "value": 104.75,
+              "shap": 3.5897
+            },
+            {
+              "feature": "roll_fantasy_points",
+              "label": "Rolling fantasy points",
+              "value": 19.225,
+              "shap": 3.5348
+            },
+            {
+              "feature": "roll_offense_pct",
+              "label": "Rolling offense pct",
+              "value": 0.6575,
+              "shap": 1.2728
+            },
+            {
+              "feature": "roll_rushing_tds",
+              "label": "Rolling rushing tds",
+              "value": 1.25,
+              "shap": -0.9438
+            },
+            {
+              "feature": "roll_st_pct",
+              "label": "Rolling st pct",
+              "value": 0.0,
+              "shap": 0.7812
+            },
+            {
+              "feature": "roll_carries",
+              "label": "Rolling carries",
+              "value": 22.5,
+              "shap": 0.7788
+            },
+            {
+              "feature": "opp_def_rating",
+              "label": "Opponent defense rating",
+              "value": 5.3104,
+              "shap": -0.5375
+            },
+            {
+              "feature": "roll_offense_snaps",
+              "label": "Rolling offense snaps",
+              "value": 44.25,
+              "shap": -0.1528
             }
           ]
         }
@@ -20038,105 +20052,112 @@
     "WR": {
       "model": "HistGradientBoostingRegressor",
       "sample_size": 60,
-      "base_value": 4.274,
+      "base_value": 4.286,
       "global": [
         {
           "feature": "roll_targets",
           "label": "Rolling targets",
-          "mean_abs_shap": 0.7461,
-          "mean_shap": 0.3036,
-          "share": 0.1949
+          "mean_abs_shap": 0.7483,
+          "mean_shap": 0.3064,
+          "share": 0.1936
         },
         {
           "feature": "roll_offense_pct",
           "label": "Rolling offense pct",
-          "mean_abs_shap": 0.6017,
-          "mean_shap": 0.2974,
-          "share": 0.1572
+          "mean_abs_shap": 0.6442,
+          "mean_shap": 0.3226,
+          "share": 0.1667
         },
         {
           "feature": "roll_receptions",
           "label": "Rolling receptions",
-          "mean_abs_shap": 0.5658,
-          "mean_shap": 0.2588,
-          "share": 0.1478
-        },
-        {
-          "feature": "roll_offense_snaps",
-          "label": "Rolling offense snaps",
-          "mean_abs_shap": 0.3951,
-          "mean_shap": 0.1428,
-          "share": 0.1032
+          "mean_abs_shap": 0.5511,
+          "mean_shap": 0.2516,
+          "share": 0.1426
         },
         {
           "feature": "roll_yards",
           "label": "Rolling yards",
-          "mean_abs_shap": 0.3623,
-          "mean_shap": 0.1508,
-          "share": 0.0947
+          "mean_abs_shap": 0.3751,
+          "mean_shap": 0.1582,
+          "share": 0.0971
+        },
+        {
+          "feature": "roll_offense_snaps",
+          "label": "Rolling offense snaps",
+          "mean_abs_shap": 0.3688,
+          "mean_shap": 0.1261,
+          "share": 0.0954
         },
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 0.3295,
-          "mean_shap": 0.1666,
-          "share": 0.0861
+          "mean_abs_shap": 0.33,
+          "mean_shap": 0.1664,
+          "share": 0.0854
         },
         {
           "feature": "roll_st_pct",
           "label": "Rolling st pct",
-          "mean_abs_shap": 0.3167,
-          "mean_shap": 0.116,
-          "share": 0.0827
+          "mean_abs_shap": 0.3083,
+          "mean_shap": 0.1107,
+          "share": 0.0798
         },
         {
           "feature": "roll_carries",
           "label": "Rolling carries",
-          "mean_abs_shap": 0.1198,
-          "mean_shap": 0.0117,
-          "share": 0.0313
+          "mean_abs_shap": 0.1337,
+          "mean_shap": 0.0132,
+          "share": 0.0346
         },
         {
           "feature": "is_home",
           "label": "Home game",
-          "mean_abs_shap": 0.1098,
-          "mean_shap": -0.0057,
-          "share": 0.0287
+          "mean_abs_shap": 0.1101,
+          "mean_shap": -0.0049,
+          "share": 0.0285
         },
         {
           "feature": "roll_st_snaps",
           "label": "Rolling st snaps",
-          "mean_abs_shap": 0.0959,
-          "mean_shap": 0.0369,
-          "share": 0.0251
+          "mean_abs_shap": 0.1014,
+          "mean_shap": 0.0421,
+          "share": 0.0262
         },
         {
           "feature": "opp_def_rating",
           "label": "Opponent defense rating",
-          "mean_abs_shap": 0.08,
-          "mean_shap": -0.0035,
-          "share": 0.0209
+          "mean_abs_shap": 0.0811,
+          "mean_shap": -0.0027,
+          "share": 0.021
         },
         {
           "feature": "roll_rushing_yards",
           "label": "Rolling rushing yards",
-          "mean_abs_shap": 0.0708,
-          "mean_shap": -0.0072,
-          "share": 0.0185
+          "mean_abs_shap": 0.0674,
+          "mean_shap": -0.0071,
+          "share": 0.0175
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.0275,
-          "mean_shap": -0.0,
-          "share": 0.0072
+          "mean_abs_shap": 0.0265,
+          "mean_shap": 0.0008,
+          "share": 0.0068
+        },
+        {
+          "feature": "div_game",
+          "label": "Div Game",
+          "mean_abs_shap": 0.0118,
+          "mean_shap": -0.0023,
+          "share": 0.0031
         },
         {
           "feature": "roll_touchdowns",
           "label": "Rolling touchdowns",
-          "mean_abs_shap": 0.0065,
-          "mean_shap": 0.0003,
-          "share": 0.0017
+          "mean_abs_shap": 0.0071,
+          "mean_shap": 0.0006,
+          "share": 0.0018
         }
       ],
       "players": [
@@ -20144,55 +20165,55 @@
           "player_id": "00-0038543",
           "name": "Jaxon Smith-Njigba",
           "team": "SEA",
-          "prediction": 18.36,
+          "prediction": 18.32,
           "drivers": [
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 12.25,
-              "shap": 5.4273
+              "shap": 4.926
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 113.25,
-              "shap": 2.3442
+              "shap": 2.5059
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 18.9,
-              "shap": 2.1537
+              "shap": 2.4684
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 8.5,
-              "shap": 1.8545
+              "shap": 1.6432
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 3.25,
-              "shap": 1.0884
+              "shap": 1.0741
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.855,
-              "shap": 0.8482
+              "shap": 0.9611
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 60.75,
-              "shap": -0.7403
+              "shap": -0.7666
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.5663
+              "shap": 0.5068
             }
           ]
         },
@@ -20200,111 +20221,55 @@
           "player_id": "00-0039075",
           "name": "Puka Nacua",
           "team": "LA",
-          "prediction": 16.51,
+          "prediction": 16.09,
           "drivers": [
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 13.25,
-              "shap": 4.7233
+              "shap": 3.9454
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 19.375,
-              "shap": 2.0892
+              "shap": 2.2699
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.89,
-              "shap": 1.8385
+              "shap": 1.8722
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 10.5,
-              "shap": 0.9904
-            },
-            {
-              "feature": "roll_rushing_yards",
-              "label": "Rolling rushing yards",
-              "value": 4.75,
-              "shap": 0.9558
+              "shap": 1.1686
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 91.5,
-              "shap": 0.8543
+              "shap": 0.9065
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 58.75,
-              "shap": -0.7747
+              "shap": -0.8025
+            },
+            {
+              "feature": "roll_rushing_yards",
+              "label": "Rolling rushing yards",
+              "value": 4.75,
+              "shap": 0.7953
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 4.2417,
-              "shap": 0.6229
-            }
-          ]
-        },
-        {
-          "player_id": "00-0040735",
-          "name": "Luther Burden III",
-          "team": "CHI",
-          "prediction": 16.12,
-          "drivers": [
-            {
-              "feature": "roll_targets",
-              "label": "Rolling targets",
-              "value": 7.75,
-              "shap": 3.1145
-            },
-            {
-              "feature": "roll_yards",
-              "label": "Rolling yards",
-              "value": 94.5,
-              "shap": 2.8001
-            },
-            {
-              "feature": "roll_receptions",
-              "label": "Rolling receptions",
-              "value": 6.5,
-              "shap": 1.9063
-            },
-            {
-              "feature": "roll_fantasy_points",
-              "label": "Rolling fantasy points",
-              "value": 16.875,
-              "shap": 1.6848
-            },
-            {
-              "feature": "roll_rushing_yards",
-              "label": "Rolling rushing yards",
-              "value": 1.75,
-              "shap": 1.0037
-            },
-            {
-              "feature": "roll_offense_snaps",
-              "label": "Rolling offense snaps",
-              "value": 36.5,
-              "shap": 0.5545
-            },
-            {
-              "feature": "roll_st_pct",
-              "label": "Rolling st pct",
-              "value": 0.01,
-              "shap": 0.4699
-            },
-            {
-              "feature": "roll_st_snaps",
-              "label": "Rolling st snaps",
-              "value": 0.25,
-              "shap": 0.2871
+              "shap": 0.5376
             }
           ]
         },
@@ -20312,55 +20277,111 @@
           "player_id": "00-0036963",
           "name": "Amon-Ra St. Brown",
           "team": "DET",
-          "prediction": 15.29,
+          "prediction": 15.65,
           "drivers": [
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.5,
-              "shap": 3.3098
+              "shap": 3.6007
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 95.75,
-              "shap": 2.1199
+              "shap": 2.281
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 7.0,
-              "shap": 1.9198
+              "shap": 1.7493
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 16.3,
-              "shap": 1.4807
+              "shap": 1.6059
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 2.25,
-              "shap": 0.9156
+              "shap": 0.7587
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.5687
-            },
-            {
-              "feature": "roll_st_snaps",
-              "label": "Rolling st snaps",
-              "value": 0.0,
-              "shap": 0.2506
+              "shap": 0.5025
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 0.5,
-              "shap": 0.2188
+              "shap": 0.3415
+            },
+            {
+              "feature": "roll_st_snaps",
+              "label": "Rolling st snaps",
+              "value": 0.0,
+              "shap": 0.2951
+            }
+          ]
+        },
+        {
+          "player_id": "00-0040735",
+          "name": "Luther Burden III",
+          "team": "CHI",
+          "prediction": 15.56,
+          "drivers": [
+            {
+              "feature": "roll_targets",
+              "label": "Rolling targets",
+              "value": 7.75,
+              "shap": 3.0474
+            },
+            {
+              "feature": "roll_yards",
+              "label": "Rolling yards",
+              "value": 94.5,
+              "shap": 2.6636
+            },
+            {
+              "feature": "roll_fantasy_points",
+              "label": "Rolling fantasy points",
+              "value": 16.875,
+              "shap": 1.9109
+            },
+            {
+              "feature": "roll_receptions",
+              "label": "Rolling receptions",
+              "value": 6.5,
+              "shap": 1.7148
+            },
+            {
+              "feature": "roll_rushing_yards",
+              "label": "Rolling rushing yards",
+              "value": 1.75,
+              "shap": 0.7162
+            },
+            {
+              "feature": "roll_offense_snaps",
+              "label": "Rolling offense snaps",
+              "value": 36.5,
+              "shap": 0.4813
+            },
+            {
+              "feature": "roll_st_pct",
+              "label": "Rolling st pct",
+              "value": 0.01,
+              "shap": 0.423
+            },
+            {
+              "feature": "roll_st_snaps",
+              "label": "Rolling st snaps",
+              "value": 0.25,
+              "shap": 0.2981
             }
           ]
         },
@@ -20368,55 +20389,55 @@
           "player_id": "00-0040667",
           "name": "Matthew Golden",
           "team": "GB",
-          "prediction": 14.24,
+          "prediction": 14.28,
           "drivers": [
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 12.0,
-              "shap": 4.7132
+              "shap": 4.5287
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 17.775,
-              "shap": 2.0595
+              "shap": 2.2473
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 7.25,
-              "shap": 1.7115
+              "shap": 1.7205
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 96.5,
-              "shap": 1.3553
+              "shap": 1.388
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 57.0,
-              "shap": -0.7523
-            },
-            {
-              "feature": "roll_st_pct",
-              "label": "Rolling st pct",
-              "value": 0.0125,
-              "shap": 0.5889
+              "shap": -0.951
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.8225,
-              "shap": 0.4997
+              "shap": 0.5615
+            },
+            {
+              "feature": "roll_st_pct",
+              "label": "Rolling st pct",
+              "value": 0.0125,
+              "shap": 0.5204
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 0.0,
-              "shap": -0.4832
+              "shap": -0.3997
             }
           ]
         },
@@ -20424,55 +20445,55 @@
           "player_id": "00-0036912",
           "name": "DeVonta Smith",
           "team": "PHI",
-          "prediction": 13.8,
+          "prediction": 13.77,
           "drivers": [
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 10.25,
-              "shap": 2.7736
+              "shap": 2.7636
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.8725,
-              "shap": 2.5242
+              "shap": 2.5532
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 6.5,
-              "shap": 1.5128
+              "shap": 1.4426
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 14.0,
-              "shap": 1.1505
-            },
-            {
-              "feature": "roll_st_pct",
-              "label": "Rolling st pct",
-              "value": 0.0075,
-              "shap": 0.5966
+              "shap": 1.2613
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 77.5,
-              "shap": 0.4885
+              "shap": 0.6028
+            },
+            {
+              "feature": "roll_st_pct",
+              "label": "Rolling st pct",
+              "value": 0.0075,
+              "shap": 0.5369
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 7.7746,
-              "shap": 0.3758
+              "shap": 0.3638
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.25,
-              "shap": 0.2861
+              "shap": 0.2938
             }
           ]
         }
@@ -20481,112 +20502,119 @@
     "TE": {
       "model": "HistGradientBoostingRegressor",
       "sample_size": 60,
-      "base_value": 3.276,
+      "base_value": 3.274,
       "global": [
         {
           "feature": "roll_targets",
           "label": "Rolling targets",
-          "mean_abs_shap": 0.6118,
-          "mean_shap": -0.3695,
-          "share": 0.3203
+          "mean_abs_shap": 0.6086,
+          "mean_shap": -0.3667,
+          "share": 0.3163
         },
         {
           "feature": "roll_offense_pct",
           "label": "Rolling offense pct",
-          "mean_abs_shap": 0.3623,
-          "mean_shap": -0.1722,
-          "share": 0.1897
+          "mean_abs_shap": 0.3593,
+          "mean_shap": -0.1684,
+          "share": 0.1868
         },
         {
           "feature": "roll_st_pct",
           "label": "Rolling st pct",
-          "mean_abs_shap": 0.2514,
-          "mean_shap": -0.1301,
-          "share": 0.1316
+          "mean_abs_shap": 0.2578,
+          "mean_shap": -0.1346,
+          "share": 0.134
         },
         {
           "feature": "roll_yards",
           "label": "Rolling yards",
-          "mean_abs_shap": 0.1768,
-          "mean_shap": -0.0837,
-          "share": 0.0926
+          "mean_abs_shap": 0.1783,
+          "mean_shap": -0.0842,
+          "share": 0.0927
         },
         {
           "feature": "roll_st_snaps",
           "label": "Rolling st snaps",
-          "mean_abs_shap": 0.1321,
-          "mean_shap": -0.036,
-          "share": 0.0692
+          "mean_abs_shap": 0.1264,
+          "mean_shap": -0.0333,
+          "share": 0.0657
         },
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 0.0933,
-          "mean_shap": -0.0478,
-          "share": 0.0488
+          "mean_abs_shap": 0.099,
+          "mean_shap": -0.0535,
+          "share": 0.0515
         },
         {
           "feature": "roll_offense_snaps",
           "label": "Rolling offense snaps",
-          "mean_abs_shap": 0.0592,
-          "mean_shap": -0.043,
-          "share": 0.031
+          "mean_abs_shap": 0.06,
+          "mean_shap": -0.0445,
+          "share": 0.0312
         },
         {
           "feature": "opp_def_rating",
           "label": "Opponent defense rating",
-          "mean_abs_shap": 0.0548,
-          "mean_shap": 0.0104,
-          "share": 0.0287
+          "mean_abs_shap": 0.0557,
+          "mean_shap": 0.0095,
+          "share": 0.029
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.0484,
-          "mean_shap": 0.0094,
-          "share": 0.0253
+          "mean_abs_shap": 0.0507,
+          "mean_shap": 0.0102,
+          "share": 0.0264
         },
         {
           "feature": "roll_carries",
           "label": "Rolling carries",
-          "mean_abs_shap": 0.0466,
-          "mean_shap": -0.0466,
-          "share": 0.0244
+          "mean_abs_shap": 0.0474,
+          "mean_shap": -0.0474,
+          "share": 0.0247
         },
         {
           "feature": "roll_receptions",
           "label": "Rolling receptions",
-          "mean_abs_shap": 0.0368,
-          "mean_shap": -0.0242,
-          "share": 0.0193
+          "mean_abs_shap": 0.039,
+          "mean_shap": -0.0264,
+          "share": 0.0203
         },
         {
           "feature": "roll_touchdowns",
           "label": "Rolling touchdowns",
-          "mean_abs_shap": 0.016,
-          "mean_shap": 0.0097,
-          "share": 0.0084
+          "mean_abs_shap": 0.0172,
+          "mean_shap": 0.0106,
+          "share": 0.009
         },
         {
           "feature": "roll_rushing_tds",
           "label": "Rolling rushing tds",
-          "mean_abs_shap": 0.013,
-          "mean_shap": -0.013,
-          "share": 0.0068
+          "mean_abs_shap": 0.0145,
+          "mean_shap": -0.0145,
+          "share": 0.0075
         },
         {
           "feature": "roll_rushing_yards",
           "label": "Rolling rushing yards",
-          "mean_abs_shap": 0.0038,
-          "mean_shap": 0.0038,
-          "share": 0.002
+          "mean_abs_shap": 0.0043,
+          "mean_shap": 0.0043,
+          "share": 0.0022
         },
         {
           "feature": "is_home",
           "label": "Home game",
-          "mean_abs_shap": 0.0037,
-          "mean_shap": -0.0001,
-          "share": 0.0019
+          "mean_abs_shap": 0.0033,
+          "mean_shap": -0.0006,
+          "share": 0.0017
+        },
+        {
+          "feature": "div_game",
+          "label": "Div Game",
+          "mean_abs_shap": 0.0024,
+          "mean_shap": 0.0003,
+          "share": 0.0013
         }
       ],
       "players": [
@@ -20594,55 +20622,55 @@
           "player_id": "00-0039338",
           "name": "Brock Bowers",
           "team": "LV",
-          "prediction": 11.32,
+          "prediction": 11.57,
           "drivers": [
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.75,
-              "shap": 2.6907
+              "shap": 2.6499
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.92,
-              "shap": 2.0042
+              "shap": 1.9091
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 56.5,
-              "shap": 0.9166
+              "shap": 0.8552
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 86.5,
-              "shap": 0.7139
-            },
-            {
-              "feature": "roll_st_snaps",
-              "label": "Rolling st snaps",
-              "value": 0.0,
-              "shap": 0.3945
+              "shap": 0.8499
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.392
+              "shap": 0.508
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 5.1375,
-              "shap": 0.3167
+              "shap": 0.3955
+            },
+            {
+              "feature": "roll_st_snaps",
+              "label": "Rolling st snaps",
+              "value": 0.0,
+              "shap": 0.3893
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 0.25,
-              "shap": 0.1572
+              "shap": 0.2606
             }
           ]
         },
@@ -20650,55 +20678,55 @@
           "player_id": "00-0037838",
           "name": "Isaiah Likely",
           "team": "NYG",
-          "prediction": 11.03,
+          "prediction": 11.14,
           "drivers": [
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.0,
-              "shap": 2.0129
+              "shap": 2.0047
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.85,
-              "shap": 1.6129
+              "shap": 1.5465
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 72.75,
-              "shap": 1.3019
+              "shap": 1.2995
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 14.525,
-              "shap": 1.1832
+              "shap": 1.1977
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 58.5,
-              "shap": 0.5815
+              "shap": 0.6939
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.25,
-              "shap": 0.533
+              "shap": 0.5183
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0075,
-              "shap": 0.488
+              "shap": 0.4945
             },
             {
               "feature": "roll_touchdowns",
               "label": "Rolling touchdowns",
               "value": 0.75,
-              "shap": 0.1193
+              "shap": 0.2132
             }
           ]
         },
@@ -20706,55 +20734,55 @@
           "player_id": "00-0037744",
           "name": "Trey McBride",
           "team": "ARI",
-          "prediction": 10.66,
+          "prediction": 10.54,
           "drivers": [
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.5,
-              "shap": 2.7733
+              "shap": 2.7815
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.885,
-              "shap": 1.4886
+              "shap": 1.5409
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 68.5,
-              "shap": 1.2783
+              "shap": 1.2036
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 56.25,
-              "shap": 0.5832
+              "shap": 0.6983
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.5136
+              "shap": 0.5222
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.0,
-              "shap": 0.4148
+              "shap": 0.4188
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 7.25,
-              "shap": 0.3138
+              "shap": 0.2494
             },
             {
-              "feature": "roll_fantasy_points",
-              "label": "Rolling fantasy points",
-              "value": 13.475,
-              "shap": 0.0949
+              "feature": "opp_def_rating",
+              "label": "Opponent defense rating",
+              "value": 3.6375,
+              "shap": -0.1146
             }
           ]
         },
@@ -20762,55 +20790,55 @@
           "player_id": "00-0033288",
           "name": "George Kittle",
           "team": "SF",
-          "prediction": 10.41,
+          "prediction": 10.16,
           "drivers": [
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.5,
-              "shap": 2.6644
+              "shap": 2.6551
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.88,
-              "shap": 1.6951
+              "shap": 1.6797
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 72.25,
-              "shap": 1.206
-            },
-            {
-              "feature": "roll_fantasy_points",
-              "label": "Rolling fantasy points",
-              "value": 11.1,
-              "shap": 0.6554
+              "shap": 1.0475
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 58.25,
-              "shap": 0.5722
+              "shap": 0.6603
+            },
+            {
+              "feature": "roll_fantasy_points",
+              "label": "Rolling fantasy points",
+              "value": 11.1,
+              "shap": 0.6416
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.5569
+              "shap": 0.5523
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 2.4021,
-              "shap": -0.3334
+              "shap": -0.4865
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.0,
-              "shap": 0.2559
+              "shap": 0.2693
             }
           ]
         },
@@ -20818,55 +20846,55 @@
           "player_id": "00-0040128",
           "name": "Tyler Warren",
           "team": "IND",
-          "prediction": 9.81,
+          "prediction": 9.86,
           "drivers": [
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.8375,
-              "shap": 1.7627
+              "shap": 1.6958
             },
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 7.25,
-              "shap": 1.2843
+              "shap": 1.2645
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 7.375,
-              "shap": 0.7537
+              "shap": 0.7829
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 0.5,
-              "shap": 0.6988
+              "shap": 0.7366
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 53.75,
-              "shap": 0.4524
-            },
-            {
-              "feature": "roll_yards",
-              "label": "Rolling yards",
-              "value": 36.5,
-              "shap": 0.3003
+              "shap": 0.4646
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 4.2208,
-              "shap": 0.2862
+              "shap": 0.3557
             },
             {
-              "feature": "roll_st_pct",
-              "label": "Rolling st pct",
-              "value": 0.015,
-              "shap": 0.2655
+              "feature": "roll_yards",
+              "label": "Rolling yards",
+              "value": 36.5,
+              "shap": 0.3043
+            },
+            {
+              "feature": "roll_receptions",
+              "label": "Rolling receptions",
+              "value": 4.25,
+              "shap": 0.2829
             }
           ]
         },
@@ -20874,55 +20902,55 @@
           "player_id": "00-0040663",
           "name": "Harold Fannin Jr.",
           "team": "CLE",
-          "prediction": 9.63,
+          "prediction": 9.76,
           "drivers": [
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.855,
-              "shap": 2.0766
+              "shap": 2.0686
             },
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 6.5,
-              "shap": 1.6819
+              "shap": 1.7052
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 74.0,
-              "shap": 1.1075
+              "shap": 1.0865
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 58.75,
-              "shap": 0.6174
+              "shap": 0.7187
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 10.275,
-              "shap": 0.5087
+              "shap": 0.4992
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0375,
-              "shap": 0.4537
+              "shap": 0.4692
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 4.75,
-              "shap": 0.1815
+              "shap": 0.2122
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 3.2542,
-              "shap": -0.1632
+              "shap": -0.1694
             }
           ]
         }
@@ -20931,88 +20959,95 @@
     "K": {
       "model": "HistGradientBoostingRegressor",
       "sample_size": 60,
-      "base_value": 7.36,
+      "base_value": 7.369,
       "global": [
         {
           "feature": "roll_st_pct",
           "label": "Rolling st pct",
-          "mean_abs_shap": 0.2419,
-          "mean_shap": -0.076,
-          "share": 0.2058
+          "mean_abs_shap": 0.2427,
+          "mean_shap": -0.0728,
+          "share": 0.2034
         },
         {
           "feature": "is_home",
           "label": "Home game",
-          "mean_abs_shap": 0.1998,
-          "mean_shap": -0.0091,
-          "share": 0.17
+          "mean_abs_shap": 0.2018,
+          "mean_shap": -0.0085,
+          "share": 0.1691
         },
         {
           "feature": "roll_pat_made",
           "label": "Rolling pat made",
-          "mean_abs_shap": 0.1358,
-          "mean_shap": -0.0664,
-          "share": 0.1155
+          "mean_abs_shap": 0.1432,
+          "mean_shap": -0.0685,
+          "share": 0.12
         },
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 0.1281,
-          "mean_shap": 0.044,
-          "share": 0.109
+          "mean_abs_shap": 0.1219,
+          "mean_shap": 0.0423,
+          "share": 0.1022
         },
         {
           "feature": "opp_def_rating",
           "label": "Opponent defense rating",
-          "mean_abs_shap": 0.1139,
-          "mean_shap": -0.0339,
-          "share": 0.0969
+          "mean_abs_shap": 0.1084,
+          "mean_shap": -0.0341,
+          "share": 0.0908
         },
         {
           "feature": "roll_fg_att",
           "label": "Rolling fg att",
-          "mean_abs_shap": 0.0975,
-          "mean_shap": 0.0051,
-          "share": 0.0829
+          "mean_abs_shap": 0.1037,
+          "mean_shap": 0.0028,
+          "share": 0.0869
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.0941,
-          "mean_shap": -0.0087,
-          "share": 0.08
+          "mean_abs_shap": 0.0983,
+          "mean_shap": -0.0117,
+          "share": 0.0824
         },
         {
           "feature": "roll_pat_att",
           "label": "Rolling pat att",
-          "mean_abs_shap": 0.0859,
-          "mean_shap": -0.0322,
-          "share": 0.0731
+          "mean_abs_shap": 0.0925,
+          "mean_shap": -0.0312,
+          "share": 0.0775
         },
         {
           "feature": "roll_st_snaps",
           "label": "Rolling st snaps",
-          "mean_abs_shap": 0.0525,
-          "mean_shap": 0.0317,
-          "share": 0.0447
+          "mean_abs_shap": 0.0502,
+          "mean_shap": 0.0325,
+          "share": 0.042
         },
         {
           "feature": "roll_fg_made",
           "label": "Rolling fg made",
-          "mean_abs_shap": 0.0258,
-          "mean_shap": 0.0016,
-          "share": 0.022
+          "mean_abs_shap": 0.0227,
+          "mean_shap": 0.0018,
+          "share": 0.019
         },
         {
-          "feature": "roll_offense_pct",
-          "label": "Rolling offense pct",
+          "feature": "div_game",
+          "label": "Div Game",
+          "mean_abs_shap": 0.008,
+          "mean_shap": -0.001,
+          "share": 0.0067
+        },
+        {
+          "feature": "roll_offense_snaps",
+          "label": "Rolling offense snaps",
           "mean_abs_shap": 0.0,
           "mean_shap": 0.0,
           "share": 0.0
         },
         {
-          "feature": "roll_offense_snaps",
-          "label": "Rolling offense snaps",
+          "feature": "roll_offense_pct",
+          "label": "Rolling offense pct",
           "mean_abs_shap": 0.0,
           "mean_shap": 0.0,
           "share": 0.0
@@ -21023,55 +21058,55 @@
           "player_id": "00-0040530",
           "name": "Ben Sauls",
           "team": "NYG",
-          "prediction": 8.87,
+          "prediction": 8.88,
           "drivers": [
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.46,
-              "shap": 0.995
+              "shap": 1.0027
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.2609
+              "shap": 0.2889
             },
             {
               "feature": "roll_pat_made",
               "label": "Rolling pat made",
               "value": 2.5,
-              "shap": 0.2107
+              "shap": 0.2085
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 9.5,
-              "shap": 0.0713
+              "shap": 0.087
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
               "value": 7.0,
-              "shap": -0.0633
-            },
-            {
-              "feature": "roll_pat_att",
-              "label": "Rolling pat att",
-              "value": 2.5,
-              "shap": 0.0386
-            },
-            {
-              "feature": "roll_fg_made",
-              "label": "Rolling fg made",
-              "value": 2.0,
-              "shap": 0.0345
+              "shap": -0.0641
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 8.5,
-              "shap": -0.0244
+              "shap": -0.0372
+            },
+            {
+              "feature": "opp_def_rating",
+              "label": "Opponent defense rating",
+              "value": 11.25,
+              "shap": -0.0362
+            },
+            {
+              "feature": "roll_pat_att",
+              "label": "Rolling pat att",
+              "value": 2.5,
+              "shap": 0.0338
             }
           ]
         },
@@ -21079,111 +21114,55 @@
           "player_id": "00-0040899",
           "name": "Trey Smack",
           "team": "GB",
-          "prediction": 8.82,
+          "prediction": 8.79,
           "drivers": [
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.445,
-              "shap": 0.7559
+              "shap": 0.7215
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.4198
+              "shap": 0.4214
             },
             {
               "feature": "roll_fg_att",
               "label": "Rolling fg att",
               "value": 2.25,
-              "shap": 0.2247
+              "shap": 0.2304
             },
             {
               "feature": "roll_pat_made",
               "label": "Rolling pat made",
               "value": 2.75,
-              "shap": 0.209
+              "shap": 0.2214
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 11.25,
-              "shap": -0.1858
+              "shap": -0.2072
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 5.75,
-              "shap": 0.1323
-            },
-            {
-              "feature": "roll_fantasy_points",
-              "label": "Rolling fantasy points",
-              "value": 8.0,
-              "shap": -0.097
+              "shap": 0.1274
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
               "value": 7.0,
-              "shap": -0.0764
-            }
-          ]
-        },
-        {
-          "player_id": "00-0035145",
-          "name": "Austin Seibert",
-          "team": "WAS",
-          "prediction": 8.75,
-          "drivers": [
-            {
-              "feature": "is_home",
-              "label": "Home game",
-              "value": 1.0,
-              "shap": 0.4721
+              "shap": -0.0807
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
-              "value": 12.0,
-              "shap": 0.3661
-            },
-            {
-              "feature": "opp_def_rating",
-              "label": "Opponent defense rating",
-              "value": 8.75,
-              "shap": 0.244
-            },
-            {
-              "feature": "roll_st_pct",
-              "label": "Rolling st pct",
-              "value": 0.485,
-              "shap": 0.1854
-            },
-            {
-              "feature": "rest_days",
-              "label": "Rest days",
-              "value": 10.0,
-              "shap": 0.1829
-            },
-            {
-              "feature": "roll_fg_made",
-              "label": "Rolling fg made",
-              "value": 3.25,
-              "shap": -0.1796
-            },
-            {
-              "feature": "roll_pat_made",
-              "label": "Rolling pat made",
-              "value": 2.25,
-              "shap": 0.1195
-            },
-            {
-              "feature": "roll_pat_att",
-              "label": "Rolling pat att",
-              "value": 2.25,
-              "shap": -0.0792
+              "value": 8.0,
+              "shap": -0.0693
             }
           ]
         },
@@ -21197,105 +21176,49 @@
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.4237
+              "shap": 0.4131
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.405,
-              "shap": 0.3911
+              "shap": 0.3797
             },
             {
               "feature": "roll_fg_att",
               "label": "Rolling fg att",
               "value": 2.25,
-              "shap": 0.222
+              "shap": 0.228
             },
             {
               "feature": "roll_pat_made",
               "label": "Rolling pat made",
               "value": 2.25,
-              "shap": 0.1875
+              "shap": 0.2072
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 6.0,
-              "shap": 0.1186
+              "shap": 0.1163
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
               "value": 7.0,
-              "shap": -0.0666
+              "shap": -0.0785
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 8.25,
-              "shap": 0.047
+              "shap": 0.0623
             },
             {
               "feature": "roll_pat_att",
               "label": "Rolling pat att",
               "value": 2.25,
-              "shap": -0.0458
-            }
-          ]
-        },
-        {
-          "player_id": "00-0031203",
-          "name": "Cairo Santos",
-          "team": "CHI",
-          "prediction": 8.65,
-          "drivers": [
-            {
-              "feature": "roll_st_pct",
-              "label": "Rolling st pct",
-              "value": 0.4325,
-              "shap": 0.7564
-            },
-            {
-              "feature": "is_home",
-              "label": "Home game",
-              "value": 1.0,
-              "shap": 0.4219
-            },
-            {
-              "feature": "roll_fg_att",
-              "label": "Rolling fg att",
-              "value": 2.5,
-              "shap": -0.371
-            },
-            {
-              "feature": "roll_pat_made",
-              "label": "Rolling pat made",
-              "value": 3.5,
-              "shap": 0.2018
-            },
-            {
-              "feature": "rest_days",
-              "label": "Rest days",
-              "value": 14.0,
-              "shap": 0.1864
-            },
-            {
-              "feature": "opp_def_rating",
-              "label": "Opponent defense rating",
-              "value": 8.75,
-              "shap": -0.0746
-            },
-            {
-              "feature": "roll_st_snaps",
-              "label": "Rolling st snaps",
-              "value": 12.25,
-              "shap": 0.0657
-            },
-            {
-              "feature": "roll_fantasy_points",
-              "label": "Rolling fantasy points",
-              "value": 9.5,
-              "shap": 0.0401
+              "shap": -0.0468
             }
           ]
         },
@@ -21303,55 +21226,167 @@
           "player_id": "00-0037692",
           "name": "Brandon Aubrey",
           "team": "DAL",
-          "prediction": 8.42,
+          "prediction": 8.66,
           "drivers": [
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.4225,
-              "shap": 0.6559
+              "shap": 0.6598
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 13.25,
-              "shap": -0.5871
+              "shap": -0.6177
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.5067
-            },
-            {
-              "feature": "opp_def_rating",
-              "label": "Opponent defense rating",
-              "value": 9.5,
-              "shap": 0.2251
-            },
-            {
-              "feature": "roll_pat_made",
-              "label": "Rolling pat made",
-              "value": 2.75,
-              "shap": 0.1993
+              "shap": 0.5005
             },
             {
               "feature": "roll_fg_att",
               "label": "Rolling fg att",
               "value": 3.0,
-              "shap": 0.1917
+              "shap": 0.2532
+            },
+            {
+              "feature": "roll_pat_made",
+              "label": "Rolling pat made",
+              "value": 2.75,
+              "shap": 0.2338
+            },
+            {
+              "feature": "opp_def_rating",
+              "label": "Opponent defense rating",
+              "value": 9.5,
+              "shap": 0.2177
+            },
+            {
+              "feature": "roll_fantasy_points",
+              "label": "Rolling fantasy points",
+              "value": 10.25,
+              "shap": 0.1351
             },
             {
               "feature": "roll_fg_made",
               "label": "Rolling fg made",
               "value": 2.5,
-              "shap": -0.0929
+              "shap": -0.0697
+            }
+          ]
+        },
+        {
+          "player_id": "00-0035145",
+          "name": "Austin Seibert",
+          "team": "WAS",
+          "prediction": 8.62,
+          "drivers": [
+            {
+              "feature": "is_home",
+              "label": "Home game",
+              "value": 1.0,
+              "shap": 0.4852
+            },
+            {
+              "feature": "roll_fantasy_points",
+              "label": "Rolling fantasy points",
+              "value": 12.0,
+              "shap": 0.3637
+            },
+            {
+              "feature": "roll_fg_made",
+              "label": "Rolling fg made",
+              "value": 3.25,
+              "shap": -0.2697
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
-              "value": 7.0,
-              "shap": -0.052
+              "value": 10.0,
+              "shap": 0.2166
+            },
+            {
+              "feature": "opp_def_rating",
+              "label": "Opponent defense rating",
+              "value": 8.75,
+              "shap": 0.2016
+            },
+            {
+              "feature": "roll_pat_made",
+              "label": "Rolling pat made",
+              "value": 2.25,
+              "shap": 0.1363
+            },
+            {
+              "feature": "roll_st_pct",
+              "label": "Rolling st pct",
+              "value": 0.485,
+              "shap": 0.1226
+            },
+            {
+              "feature": "roll_st_snaps",
+              "label": "Rolling st snaps",
+              "value": 12.5,
+              "shap": 0.0897
+            }
+          ]
+        },
+        {
+          "player_id": "00-0031203",
+          "name": "Cairo Santos",
+          "team": "CHI",
+          "prediction": 8.46,
+          "drivers": [
+            {
+              "feature": "roll_st_pct",
+              "label": "Rolling st pct",
+              "value": 0.4325,
+              "shap": 0.7618
+            },
+            {
+              "feature": "roll_fg_att",
+              "label": "Rolling fg att",
+              "value": 2.5,
+              "shap": -0.4858
+            },
+            {
+              "feature": "is_home",
+              "label": "Home game",
+              "value": 1.0,
+              "shap": 0.4168
+            },
+            {
+              "feature": "roll_pat_made",
+              "label": "Rolling pat made",
+              "value": 3.5,
+              "shap": 0.2086
+            },
+            {
+              "feature": "roll_st_snaps",
+              "label": "Rolling st snaps",
+              "value": 12.25,
+              "shap": 0.1289
+            },
+            {
+              "feature": "opp_def_rating",
+              "label": "Opponent defense rating",
+              "value": 8.75,
+              "shap": -0.1077
+            },
+            {
+              "feature": "rest_days",
+              "label": "Rest days",
+              "value": 14.0,
+              "shap": 0.0983
+            },
+            {
+              "feature": "roll_pat_att",
+              "label": "Rolling pat att",
+              "value": 3.5,
+              "shap": 0.0409
             }
           ]
         }

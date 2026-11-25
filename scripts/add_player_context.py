@@ -53,6 +53,25 @@ def weather_table() -> pl.DataFrame | None:
     return table
 
 
+def game_context_table() -> pl.DataFrame | None:
+    if not os.path.exists(SCHEDULES):
+        return None
+    schedules = pl.read_parquet(SCHEDULES)
+    if not {"season", "week", "home_team", "away_team", "div_game"}.issubset(
+        set(schedules.columns)
+    ):
+        return None
+    home = schedules.select(
+        "season", "week", pl.col("home_team").alias("team"), "div_game"
+    )
+    away = schedules.select(
+        "season", "week", pl.col("away_team").alias("team"), "div_game"
+    )
+    return pl.concat([home, away]).unique(
+        subset=["season", "week", "team"], keep="last"
+    )
+
+
 def roster_table() -> pl.DataFrame | None:
     path = next((p for p in ROSTERS if os.path.exists(p)), None)
     if path is None:
@@ -99,6 +118,13 @@ def main() -> None:
             pl.lit(60.0).alias("temp"),
             pl.lit(8.0).alias("wind"),
         )
+
+    games = game_context_table()
+    if games is not None:
+        players = players.join(games, on=["season", "week", "team"], how="left")
+        players = players.with_columns(pl.col("div_game").fill_null(0).cast(pl.Int8))
+    else:
+        players = players.with_columns(pl.lit(0).cast(pl.Int8).alias("div_game"))
 
     rosters = roster_table()
     if rosters is not None:

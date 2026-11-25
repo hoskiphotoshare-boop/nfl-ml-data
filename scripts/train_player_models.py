@@ -173,7 +173,7 @@ def feature_cols(df: pl.DataFrame) -> list[str]:
     cols = [c for c in df.columns if c.startswith("roll_")]
     # Weather columns are kept in the feature table for display, but the
     # current schedules have too many null forecasts to improve the models.
-    for extra in ["is_home", "rest_days", "opp_def_rating"]:
+    for extra in ["is_home", "rest_days", "opp_def_rating", "div_game"]:
         if extra in df.columns:
             cols.append(extra)
     return cols
@@ -251,6 +251,22 @@ def train_group(df: pl.DataFrame, group: str, positions: list[str]):
 
 
 def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict | None = None) -> list[dict]:
+    upcoming_div = {}
+    try:
+        schedules = pl.read_parquet("data/schedules.parquet")
+        if {"season", "home_team", "away_team", "div_game"}.issubset(set(schedules.columns)):
+            current = schedules["season"].max()
+            unplayed = schedules.filter(
+                (pl.col("season") == current)
+                & (pl.col("home_score").is_null() | pl.col("away_score").is_null())
+            )
+            for game in unplayed.iter_rows(named=True):
+                value = int(game.get("div_game") or 0)
+                upcoming_div[game["home_team"]] = value
+                upcoming_div[game["away_team"]] = value
+    except Exception:
+        upcoming_div = {}
+
     intervals = {}
     path = "models/player_intervals.json"
     if os.path.exists(path):
@@ -294,6 +310,8 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
                     values.append(0.5)
                 elif c == "rest_days":
                     values.append(7.0)
+                elif c == "div_game":
+                    values.append(float(upcoming_div.get(stats.get("team"), stats.get(c) or 0)))
                 else:
                     values.append(float(stats.get(c) or 0.0))
             fantasy = float(model.predict([values])[0])

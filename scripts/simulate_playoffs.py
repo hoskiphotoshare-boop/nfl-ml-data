@@ -137,7 +137,12 @@ def build_current_state(schedules: pl.DataFrame):
         }
 
     remaining_games = [
-        (row["home_team"], row["away_team"], int(row["week"]))
+        (
+            row["home_team"],
+            row["away_team"],
+            int(row["week"]),
+            int(row.get("div_game") or 0),
+        )
         for row in remaining.iter_rows(named=True)
     ]
     return records, remaining_games, season
@@ -227,15 +232,24 @@ class ModelProbabilities:
             except Exception:
                 pass
 
-    def prob(self, home: str, away: str, week: int) -> float | None:
+    def prob(self, home: str, away: str, week: int, div_game: int = 0) -> float | None:
         if home not in self.stats or away not in self.stats:
             return None
-        key = (home, away, week)
+        key = (home, away, week, div_game)
         if key in self.cache:
             return self.cache[key]
-        vector = build_feature_vector(
-            self.features, self.stats[home], self.stats[away], week, self.season
-        )
+        home_stats = self.stats[home]
+        previous = home_stats.get("div_game")
+        home_stats["div_game"] = div_game
+        try:
+            vector = build_feature_vector(
+                self.features, home_stats, self.stats[away], week, self.season
+            )
+        finally:
+            if previous is None:
+                home_stats.pop("div_game", None)
+            else:
+                home_stats["div_game"] = previous
         prob = float(self.model.predict_proba([vector])[0, 1])
         if self.platt:
             p = min(max(prob, 1e-6), 1 - 1e-6)
@@ -246,8 +260,8 @@ class ModelProbabilities:
         return prob
 
     def neutral_prob(self, team_a: str, team_b: str, week: int) -> float | None:
-        forward = self.prob(team_a, team_b, week)
-        reverse = self.prob(team_b, team_a, week)
+        forward = self.prob(team_a, team_b, week, 0)
+        reverse = self.prob(team_b, team_a, week, 0)
         if forward is None or reverse is None:
             return None
         return 0.5 * (forward + (1.0 - reverse))
@@ -256,10 +270,16 @@ class ModelProbabilities:
 def make_win_prob(model: ModelProbabilities | None, sim: dict, rating: dict, noise: dict):
     """Blend match-model and SRS probabilities, then apply team uncertainty."""
 
-    def win_prob(home: str, away: str, week: int, neutral: bool = False) -> float:
+    def win_prob(
+        home: str, away: str, week: int, neutral: bool = False, div_game: int = 0
+    ) -> float:
         p_rating = rating_probability(rating, home, away, neutral)
         if model is not None:
-            p_model = model.neutral_prob(home, away, week) if neutral else model.prob(home, away, week)
+            p_model = (
+                model.neutral_prob(home, away, week)
+                if neutral
+                else model.prob(home, away, week, div_game)
+            )
             if p_model is None:
                 value = logit(p_rating)
             else:
@@ -274,7 +294,7 @@ def make_win_prob(model: ModelProbabilities | None, sim: dict, rating: dict, noi
 
 def simulate(
     records: dict,
-    remaining_games: list[tuple[str, str, int]],
+    remaining_games: list[tuple[str, str, int, int]],
     conf_map: dict,
     n_sims: int = N_SIMS,
     model: ModelProbabilities | None = None,
@@ -293,10 +313,10 @@ def simulate(
         win_prob = make_win_prob(model, sim, rating, noise)
 
         # Remaining regular season.
-        for home, away, week in remaining_games:
+        for home, away, week, div_game in remaining_games:
             if home not in sim or away not in sim:
                 continue
-            if random.random() < win_prob(home, away, week):
+            if random.random() < win_prob(home, away, week, div_game=div_game):
                 sim[home]["wins"] += 1
             else:
                 sim[away]["wins"] += 1
