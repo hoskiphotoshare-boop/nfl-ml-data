@@ -71,7 +71,9 @@ output directory `frontend`.
 - **Model outliers**: games with a 20+ percentage-point disagreement on any
   market are flagged amber. They stay in their sorted position and in the edge
   stats, and the card shows the top SHAP drivers for the specific market
-  (winner, margin or total). Treat them as missing-information flags, not picks.
+  (winner/spread or total). Spread drivers come from the win-probability model
+  because the displayed spread is derived from it. Treat them as
+  missing-information flags, not picks.
 - **Weather**: kickoff forecasts are shown for outdoor games but are not model
   inputs. A 2024–2026 walk-forward ablation (ERA5 and forecast archive) found
   only a small, non-robust totals gain and flat-or-worse margin, match and
