@@ -10,7 +10,7 @@
     "away_moneyline": 2.15,
     "market_home_win_prob": 0.5527,
     "best_home_ml": {
-      "price": 1.74,
+      "price": 1.75,
       "bookmaker": "draftkings"
     },
     "best_away_ml": {
@@ -59,8 +59,8 @@
     "away_moneyline": 1.755,
     "market_home_win_prob": 0.4553,
     "best_home_ml": {
-      "price": 2.17,
-      "bookmaker": "betrivers"
+      "price": 2.16,
+      "bookmaker": "draftkings"
     },
     "best_away_ml": {
       "price": 1.79,
@@ -68,8 +68,8 @@
     },
     "best_home_spread": {
       "point": 2.5,
-      "price": 1.92,
-      "bookmaker": "betrivers"
+      "price": 1.9,
+      "bookmaker": "draftkings"
     },
     "best_away_spread": {
       "point": -1.0,
@@ -83,7 +83,7 @@
     },
     "best_under": {
       "point": 55.5,
-      "price": 1.91,
+      "price": 1.93,
       "bookmaker": "betrivers"
     },
     "bookmakers": [
@@ -104,9 +104,9 @@
     "home_spread": -8.5,
     "away_spread": 8.5,
     "total": 48.0,
-    "home_moneyline": 1.22,
-    "away_moneyline": 4.5,
-    "market_home_win_prob": 0.7867,
+    "home_moneyline": 1.2149999999999999,
+    "away_moneyline": 4.529999999999999,
+    "market_home_win_prob": 0.7885,
     "best_home_ml": {
       "price": 1.23,
       "bookmaker": "betus"
@@ -177,7 +177,7 @@
     "best_over": {
       "point": 47.0,
       "price": 1.91,
-      "bookmaker": "betus"
+      "bookmaker": "betmgm"
     },
     "best_under": {
       "point": 47.5,
@@ -229,9 +229,9 @@
       "bookmaker": "lowvig"
     },
     "best_under": {
-      "point": 38.0,
-      "price": 1.88,
-      "bookmaker": "betrivers"
+      "point": 38.5,
+      "price": 1.85,
+      "bookmaker": "draftkings"
     },
     "bookmakers": [
       "betmgm",
@@ -259,7 +259,7 @@
       "bookmaker": "betrivers"
     },
     "best_away_ml": {
-      "price": 3.73,
+      "price": 3.65,
       "bookmaker": "draftkings"
     },
     "best_home_spread": {
@@ -398,21 +398,21 @@
     "home_spread": 6.5,
     "away_spread": -6.5,
     "total": 41.5,
-    "home_moneyline": 3.535,
+    "home_moneyline": 3.52,
     "away_moneyline": 1.32,
-    "market_home_win_prob": 0.2719,
+    "market_home_win_prob": 0.2727,
     "best_home_ml": {
-      "price": 3.75,
-      "bookmaker": "fanduel"
+      "price": 3.85,
+      "bookmaker": "betrivers"
     },
     "best_away_ml": {
-      "price": 1.32,
-      "bookmaker": "draftkings"
+      "price": 1.33,
+      "bookmaker": "betmgm"
     },
     "best_home_spread": {
-      "point": 6.5,
-      "price": 1.96,
-      "bookmaker": "draftkings"
+      "point": 7.0,
+      "price": 1.92,
+      "bookmaker": "betrivers"
     },
     "best_away_spread": {
       "point": -6.5,
@@ -448,8 +448,8 @@
     "away_spread": 14.5,
     "total": 48.5,
     "home_moneyline": 1.08,
-    "away_moneyline": 8.5,
-    "market_home_win_prob": 0.8873,
+    "away_moneyline": 8.52,
+    "market_home_win_prob": 0.8875,
     "best_home_ml": {
       "price": 1.09,
       "bookmaker": "betmgm"
@@ -459,9 +459,9 @@
       "bookmaker": "draftkings"
     },
     "best_home_spread": {
-      "point": -14.0,
-      "price": 1.91,
-      "bookmaker": "mybookieag"
+      "point": -14.5,
+      "price": 1.96,
+      "bookmaker": "draftkings"
     },
     "best_away_spread": {
       "point": 14.5,
@@ -495,17 +495,17 @@
     "away_team": "New York Jets",
     "home_spread": 3.5,
     "away_spread": -3.5,
-    "total": 41.0,
+    "total": 40.5,
     "home_moneyline": 2.685,
-    "away_moneyline": 1.5,
-    "market_home_win_prob": 0.3584,
+    "away_moneyline": 1.505,
+    "market_home_win_prob": 0.3592,
     "best_home_ml": {
       "price": 2.76,
       "bookmaker": "fanduel"
     },
     "best_away_ml": {
       "price": 1.51,
-      "bookmaker": "lowvig"
+      "bookmaker": "draftkings"
     },
     "best_home_spread": {
       "point": 4.0,
@@ -518,14 +518,14 @@
       "bookmaker": "lowvig"
     },
     "best_over": {
-      "point": 40.5,
-      "price": 1.91,
-      "bookmaker": "fanduel"
+      "point": 40.0,
+      "price": 1.93,
+      "bookmaker": "lowvig"
     },
     "best_under": {
-      "point": 41.0,
-      "price": 1.91,
-      "bookmaker": "lowvig"
+      "point": 40.5,
+      "price": 1.92,
+      "bookmaker": "draftkings"
     },
     "bookmakers": [
       "betmgm",
@@ -643,16 +643,16 @@
     "home_spread": -3.0,
     "away_spread": 3.0,
     "total": 45.0,
-    "home_moneyline": 1.56,
+    "home_moneyline": 1.5750000000000002,
     "away_moneyline": 2.48,
-    "market_home_win_prob": 0.6139,
+    "market_home_win_prob": 0.6116,
     "best_home_ml": {
       "price": 1.63,
       "bookmaker": "betrivers"
     },
     "best_away_ml": {
-      "price": 2.57,
-      "bookmaker": "lowvig"
+      "price": 2.55,
+      "bookmaker": "betus"
     },
     "best_home_spread": {
       "point": -3.0,
@@ -742,8 +742,8 @@
     "away_spread": 3.0,
     "total": 43.5,
     "home_moneyline": 1.65,
-    "away_moneyline": 2.3,
-    "market_home_win_prob": 0.5823,
+    "away_moneyline": 2.3049999999999997,
+    "market_home_win_prob": 0.5828,
     "best_home_ml": {
       "price": 1.67,
       "bookmaker": "betus"
@@ -790,9 +790,9 @@
     "home_spread": 0.0,
     "away_spread": 0.0,
     "total": 45.5,
-    "home_moneyline": 1.9649999999999999,
+    "home_moneyline": 1.97,
     "away_moneyline": 1.88,
-    "market_home_win_prob": 0.4889,
+    "market_home_win_prob": 0.4883,
     "best_home_ml": {
       "price": 2.02,
       "bookmaker": "fanduel"
@@ -817,9 +817,9 @@
       "bookmaker": "betus"
     },
     "best_under": {
-      "point": 46.5,
-      "price": 1.88,
-      "bookmaker": "draftkings"
+      "point": 45.5,
+      "price": 1.95,
+      "bookmaker": "fanduel"
     },
     "bookmakers": [
       "betonlineag",
@@ -1112,9 +1112,9 @@
     "home_spread": 6.0,
     "away_spread": -6.0,
     "total": 47.5,
-    "home_moneyline": 3.495,
+    "home_moneyline": 3.5,
     "away_moneyline": 1.3250000000000002,
-    "market_home_win_prob": 0.2749,
+    "market_home_win_prob": 0.2746,
     "best_home_ml": {
       "price": 3.6,
       "bookmaker": "fanduel"
@@ -1155,29 +1155,29 @@
     "commence_time": "2026-12-06T18:00:00Z",
     "home_team": "Tennessee Titans",
     "away_team": "Washington Commanders",
-    "home_spread": 4.0,
-    "away_spread": -4.0,
+    "home_spread": 4.5,
+    "away_spread": -4.5,
     "total": 46.5,
-    "home_moneyline": 2.78,
-    "away_moneyline": 1.47,
-    "market_home_win_prob": 0.3459,
+    "home_moneyline": 2.865,
+    "away_moneyline": 1.45,
+    "market_home_win_prob": 0.336,
     "best_home_ml": {
-      "price": 2.8,
-      "bookmaker": "fanduel"
+      "price": 2.93,
+      "bookmaker": "draftkings"
     },
     "best_away_ml": {
       "price": 1.47,
-      "bookmaker": "draftkings"
+      "bookmaker": "fanduel"
     },
     "best_home_spread": {
       "point": 4.5,
       "price": 1.91,
-      "bookmaker": "betus"
+      "bookmaker": "draftkings"
     },
     "best_away_spread": {
-      "point": -3.5,
-      "price": 1.88,
-      "bookmaker": "draftkings"
+      "point": -4.0,
+      "price": 1.95,
+      "bookmaker": "lowvig"
     },
     "best_over": {
       "point": 46.5,
