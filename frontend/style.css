@@ -720,6 +720,23 @@ h2 {
   transform: translateY(-1px);
 }
 
+.game-card.clickable {
+  cursor: pointer;
+}
+
+.game-card.clickable:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.card-hint {
+  margin-top: -0.15rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-align: right;
+  color: var(--accent);
+}
+
 .game-top {
   display: flex;
   align-items: center;

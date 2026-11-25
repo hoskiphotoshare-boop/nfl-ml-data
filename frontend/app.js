@@ -64,6 +64,7 @@ const state = {
   gamesById: new Map(),
   gamesView: 'schedule',
   playersPos: 'QB',
+  playersGame: 'all',
   playersSort: { key: 'proj', dir: 'desc' },
   historyWindow: 3,
   selectedPlayerId: null,
@@ -529,6 +530,10 @@ const GLOSSARY = {
     ],
     ['Recent form', 'Sorts by average fantasy points over the last three games.'],
     ['Depth chart', 'Sorts by listed depth-chart rank, #1 first.'],
+    [
+      'Game filter',
+      'Limits the table to players in one game. Click any game card to open this tab with that game selected.',
+    ],
     ['Yds', 'Yards. For quarterbacks this is passing yards; for skill players it is receiving/rushing yards.'],
     ['TD', 'Touchdowns. For quarterbacks this is passing touchdowns.'],
     ['QB / RB / WR / TE / K', 'Quarterback, running back, wide receiver, tight end, kicker.'],
@@ -855,8 +860,42 @@ function gameCard(game, rank) {
     buttons.appendChild(btn);
   });
   card.appendChild(buttons);
+  card.appendChild(el('div', 'card-hint', 'View players →'));
+
+  card.classList.add('clickable');
+  card.tabIndex = 0;
+  card.setAttribute('role', 'link');
+  card.setAttribute(
+    'aria-label',
+    `View players in ${teamAbbr(game.away_team)} at ${teamAbbr(game.home_team)}`
+  );
+  const openPlayers = () => openGamePlayers(game.game_id);
+  card.addEventListener('click', (event) => {
+    if (event.target.closest('button, a, select, input, label, details, summary')) return;
+    openPlayers();
+  });
+  card.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    if (event.target.closest('button, a, select, input, label')) return;
+    event.preventDefault();
+    openPlayers();
+  });
 
   return card;
+}
+
+function openGamePlayers(gameId) {
+  const game = state.gamesById.get(gameId);
+  if (!game) return;
+  state.playersGame = gameId;
+  const gameSelect = $('#players-game-filter');
+  if (gameSelect) gameSelect.value = gameId;
+  const teamSelect = $('#players-team-filter');
+  if (teamSelect) teamSelect.value = '';
+  setPosition('all');
+  activateTab('players');
+  history.replaceState(null, '', '#players');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function setPick(gameId, side) {
@@ -930,15 +969,12 @@ function showFirstOddsWeek() {
 
 function filteredGames() {
   const week = $('#games-week-filter')?.value || 'all';
-  const team = ($('#games-team-filter')?.value || '').trim().toLowerCase();
+  const team = ($('#games-team-filter')?.value || '').trim();
   const sort = $('#games-sort')?.value || 'kickoff';
 
   let list = state.games.filter((g) => {
     const weekOk = week === 'all' || String(g.week) === week;
-    const teamOk =
-      !team ||
-      (g.home_team || '').toLowerCase().includes(team) ||
-      (g.away_team || '').toLowerCase().includes(team);
+    const teamOk = !team || g.home_team === team || g.away_team === team;
     return weekOk && teamOk;
   });
 
@@ -1312,11 +1348,13 @@ function setPlayerSort(key) {
 }
 
 function filteredPlayers() {
-  const team = ($('#players-team-filter')?.value || '').trim().toLowerCase();
+  const team = ($('#players-team-filter')?.value || '').trim();
+  const game = $('#players-game-filter')?.value || state.playersGame || 'all';
   const list = state.players.filter((p) => {
     const posOk = state.playersPos === 'all' || p.position === state.playersPos;
-    const teamOk = !team || (p.team || '').toLowerCase().includes(team);
-    return posOk && teamOk;
+    const teamOk = !team || p.team === team;
+    const gameOk = game === 'all' || p.game_id === game;
+    return posOk && teamOk && gameOk;
   });
   normalizePlayerSort();
   return sortRecords(list, (player) => playerSortValue(player, state.playersSort.key), state.playersSort);
@@ -1348,8 +1386,13 @@ function renderPlayers() {
       state.historyWindow === 6
         ? 'Small numbers under each stat are the last six games, oldest to newest.'
         : 'Small numbers under each stat are the last three games; use + Last 6 for all six.';
+    const gameId = $('#players-game-filter')?.value || 'all';
+    const selectedGame = gameId !== 'all' ? state.gamesById.get(gameId) : null;
+    const gameNote = selectedGame
+      ? ` Showing ${teamAbbr(selectedGame.away_team)} @ ${teamAbbr(selectedGame.home_team)}.`
+      : '';
     sub.textContent = state.players.length
-      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}. ${historyNote}`
+      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}.${gameNote} ${historyNote}`
       : 'Projected fantasy points and stat lines for this week’s matchups.';
   }
 
@@ -1407,6 +1450,28 @@ function renderPlayers() {
   }
 
   if (!list.length) {
+    const selectedGameId = $('#players-game-filter')?.value || 'all';
+    const gameHasPlayers =
+      selectedGameId === 'all' ||
+      state.players.some((player) => player.game_id === selectedGameId);
+    if (!gameHasPlayers) {
+      wrap.appendChild(
+        emptyState({
+          icon: '📅',
+          title: 'No player projections for this game',
+          message:
+            'Player projections are generated for the current week. This game is outside the current projection slate.',
+          actionLabel: 'Show all games',
+          onAction: () => {
+            const g = $('#players-game-filter');
+            if (g) g.value = 'all';
+            state.playersGame = 'all';
+            setPosition('all');
+          },
+        })
+      );
+      return;
+    }
     wrap.appendChild(
       emptyState({
         icon: '🏈',
@@ -1416,6 +1481,9 @@ function renderPlayers() {
         onAction: () => {
           const t = $('#players-team-filter');
           if (t) t.value = '';
+          const g = $('#players-game-filter');
+          if (g) g.value = 'all';
+          state.playersGame = 'all';
           setPosition('all');
         },
       })
@@ -1644,10 +1712,10 @@ function setPlayoffSort(key) {
 }
 
 function filteredPlayoffs() {
-  const team = ($('#playoffs-team-filter')?.value || '').trim().toLowerCase();
+  const team = ($('#playoffs-team-filter')?.value || '').trim();
   const list = state.playoffs.filter((t) => {
     const confOk = state.playoffsConf === 'all' || t.conference === state.playoffsConf;
-    const teamOk = !team || (t.team || '').toLowerCase().includes(team);
+    const teamOk = !team || t.team === team;
     return confOk && teamOk;
   });
   return sortRecords(
@@ -2032,13 +2100,25 @@ function setGamesView(view) {
 function setupFilters() {
   const rerenderGames = () => renderGames();
   $('#games-week-filter')?.addEventListener('change', rerenderGames);
-  $('#games-team-filter')?.addEventListener('input', rerenderGames);
+  $('#games-team-filter')?.addEventListener('change', rerenderGames);
   $('#games-sort')?.addEventListener('change', rerenderGames);
   document.querySelectorAll('#games-view-seg button').forEach((btn) => {
     btn.addEventListener('click', () => setGamesView(btn.dataset.view));
   });
 
-  $('#players-team-filter')?.addEventListener('input', renderPlayers);
+  $('#players-team-filter')?.addEventListener('change', (event) => {
+    const game = $('#players-game-filter');
+    if (game) game.value = 'all';
+    state.playersGame = 'all';
+    event.target.value = event.target.value || '';
+    renderPlayers();
+  });
+  $('#players-game-filter')?.addEventListener('change', (event) => {
+    state.playersGame = event.target.value;
+    const team = $('#players-team-filter');
+    if (team) team.value = '';
+    renderPlayers();
+  });
   $('#players-history-toggle')?.addEventListener('click', () => {
     state.historyWindow = state.historyWindow === 6 ? 3 : 6;
     renderPlayers();
@@ -2052,7 +2132,7 @@ function setupFilters() {
     btn.addEventListener('click', () => setPosition(btn.dataset.pos));
   });
 
-  $('#playoffs-team-filter')?.addEventListener('input', renderPlayoffs);
+  $('#playoffs-team-filter')?.addEventListener('change', renderPlayoffs);
   $('#playoffs-sort')?.addEventListener('change', (event) => {
     const key =
       {
@@ -2170,6 +2250,53 @@ function populateSelect(select, values, label, format = (v) => `Week ${v}`) {
   if (fallback !== null) select.value = String(fallback);
 }
 
+function populateTeamFilters() {
+  const teams = Object.keys(TEAMS).sort((a, b) => teamFull(a).localeCompare(teamFull(b)));
+  ['#games-team-filter', '#players-team-filter', '#playoffs-team-filter'].forEach((selector) => {
+    const select = $(selector);
+    if (!select) return;
+    const current = select.value;
+    select.innerHTML = '';
+    const all = document.createElement('option');
+    all.value = '';
+    all.textContent = 'All teams';
+    select.appendChild(all);
+    teams.forEach((abbr) => {
+      const option = document.createElement('option');
+      option.value = abbr;
+      option.textContent = `${abbr} — ${teamFull(abbr)}`;
+      select.appendChild(option);
+    });
+    select.value = teams.includes(current) ? current : '';
+  });
+}
+
+function populateGameFilters() {
+  const select = $('#players-game-filter');
+  if (!select) return;
+  const current = select.value;
+  const games = [...state.games].sort(
+    (a, b) =>
+      (a.week ?? 99) - (b.week ?? 99) ||
+      String(a.gameday || '').localeCompare(String(b.gameday || '')) ||
+      String(a.gametime || '').localeCompare(String(b.gametime || ''))
+  );
+  select.innerHTML = '';
+  const all = document.createElement('option');
+  all.value = 'all';
+  all.textContent = 'All games';
+  select.appendChild(all);
+  games.forEach((game) => {
+    const option = document.createElement('option');
+    option.value = game.game_id;
+    option.textContent = `Wk ${game.week} · ${teamAbbr(game.away_team)} @ ${teamAbbr(
+      game.home_team
+    )}`;
+    select.appendChild(option);
+  });
+  select.value = games.some((game) => game.game_id === current) ? current : 'all';
+}
+
 function applyMeta(meta) {
   state.meta = meta || {};
   const metaData = state.meta;
@@ -2249,6 +2376,8 @@ async function loadAll() {
     );
     state.marketById = new Map((market?.games || []).map((g) => [g.game_id, g]));
     state.gamesById = new Map(state.games.map((g) => [g.game_id, g]));
+    populateTeamFilters();
+    populateGameFilters();
     applyMeta(meta);
 
     // Retry once if the meta call was dropped (keeps the freshness chip honest).
