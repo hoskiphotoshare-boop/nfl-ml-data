@@ -81,6 +81,13 @@ async function main() {
   await send('Page.navigate', { url: `${url}${hash}` });
   await sleep(4000);
 
+  if (process.env.THEME) {
+    await send('Runtime.evaluate', {
+      expression: `localStorage.setItem('nfl_theme', '${process.env.THEME}'); location.reload();`,
+    });
+    await sleep(3500);
+  }
+
   const info = await send('Runtime.evaluate', {
     expression: `JSON.stringify({
       innerWidth: window.innerWidth,

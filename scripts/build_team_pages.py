@@ -117,7 +117,17 @@ def page(title: str, description: str, body: str) -> str:
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="{html.escape(description)}" />
-  <meta name="theme-color" content="#070b14" />
+  <meta name="theme-color" content="#f3f6fb" />
+  <script>
+    (function () {{
+      try {{
+        var saved = localStorage.getItem('nfl_theme');
+        document.documentElement.dataset.theme = saved === 'dark' ? 'dark' : 'light';
+      }} catch (e) {{
+        document.documentElement.dataset.theme = 'light';
+      }}
+    }})();
+  </script>
   <title>{html.escape(title)}</title>
   <link rel="icon" href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏈</text></svg>' />
   <link rel="stylesheet" href="../style.css" />
@@ -140,6 +150,15 @@ def page(title: str, description: str, body: str) -> str:
         <div class="spacer"></div>
         <div class="topbar-meta">
           <a class="chip" href="/">← All games</a>
+          <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch theme" title="Switch theme">
+            <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4.2" />
+              <path d="M12 2.5v2.2M12 19.3v2.2M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6" />
+            </svg>
+            <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z" />
+            </svg>
+          </button>
         </div>
       </div>
     </div>
@@ -151,6 +170,7 @@ def page(title: str, description: str, body: str) -> str:
     <div class="foot-row"><span>Model-implied probabilities · not betting advice</span></div>
     <div class="foot-row"><span>Data: nflverse (CC-BY 4.0)</span></div>
   </footer>
+  <script src="../theme.js"></script>
 </body>
 </html>
 """
