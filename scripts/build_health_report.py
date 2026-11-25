@@ -29,6 +29,7 @@ def main() -> None:
     upcoming = load("predictions/upcoming_games.json", [])
     platt = load("models/platt.json", {})
     odds_meta = load("market/odds_meta.json", {})
+    futures_meta = load("market/futures_meta.json", {})
 
     market_summary = market.get("summary", {})
     outliers = [g for g in market.get("games", []) if g.get("outlier")]
@@ -126,6 +127,13 @@ def main() -> None:
             "credits": odds_meta.get("credits"),
             "requests_used": odds_meta.get("requests_used"),
             "requests_remaining": odds_meta.get("requests_remaining"),
+        },
+        "futures_api": {
+            "fetched_at": futures_meta.get("fetched_at"),
+            "teams": futures_meta.get("teams"),
+            "credits": futures_meta.get("credits"),
+            "requests_used": futures_meta.get("requests_used"),
+            "requests_remaining": futures_meta.get("requests_remaining"),
         },
         "line_movement": {
             "snapshots": len(movement.get("snapshots", [])),

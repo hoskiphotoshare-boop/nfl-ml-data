@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T19:06:27.337435+00:00",
+  "generated_at": "2026-11-25T20:54:26.916942+00:00",
   "match_backtest": {
     "accuracy": 0.6440677966101694,
     "log_loss": 0.6430025716450639,
@@ -106,6 +106,13 @@
     "credits": 3,
     "requests_used": 24,
     "requests_remaining": 476
+  },
+  "futures_api": {
+    "fetched_at": "2026-11-25T01:48:33.422422+00:00",
+    "teams": 32,
+    "credits": 1,
+    "requests_used": 25,
+    "requests_remaining": 475
   },
   "line_movement": {
     "snapshots": 3,

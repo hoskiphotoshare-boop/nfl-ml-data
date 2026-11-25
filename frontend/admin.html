@@ -344,6 +344,7 @@
         const score = h.score_models || {};
         const injuries = h.injuries || {};
         const odds = h.odds || {};
+        const futuresApi = h.futures_api || {};
         const movement = h.line_movement || {};
         elm.appendChild(card("Match backtest", [
           `accuracy ${(bt.accuracy ?? 0).toFixed(4)}`,
@@ -384,10 +385,19 @@
           `latest week ${injuries.latest_week ?? "—"} (${injuries.latest_season ?? "—"})`,
           `${injuries.rows ?? 0} rows`,
         ]));
-        elm.appendChild(card("Odds budget", [
+        elm.appendChild(card("Odds API", [
           `${odds.requests_remaining ?? "—"} credits left`,
           `${odds.requests_used ?? "—"} requests used · ${odds.events ?? "—"} games priced`,
-          odds.fetched_at ? new Date(odds.fetched_at).toLocaleString() : "—",
+          `${odds.credits ?? "—"} credits/fetch · ${
+            odds.fetched_at ? new Date(odds.fetched_at).toLocaleString() : "—"
+          }`,
+        ]));
+        elm.appendChild(card("Futures API", [
+          `${futuresApi.requests_remaining ?? "—"} credits left`,
+          `${futuresApi.requests_used ?? "—"} requests used · ${futuresApi.teams ?? "—"} teams`,
+          `${futuresApi.credits ?? "—"} credit/fetch · ${
+            futuresApi.fetched_at ? new Date(futuresApi.fetched_at).toLocaleString() : "—"
+          }`,
         ]));
         elm.appendChild(card("Playoff simulation", [
           `playoff Brier ${h.playoff_backtest?.playoff?.brier ?? "—"}`,
