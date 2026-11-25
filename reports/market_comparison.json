@@ -5,9 +5,9 @@
     "mean_abs_edge": 0.1748,
     "max_abs_edge": 0.503
   },
-  "odds_fetched_at": "2026-11-25T01:38:00.097293+00:00",
+  "odds_fetched_at": "2026-11-25T01:40:17.444387+00:00",
   "odds_events": 30,
-  "odds_requests_remaining": "482",
+  "odds_requests_remaining": 479,
   "games": [
     {
       "game_id": "2026_12_GB_LA",
