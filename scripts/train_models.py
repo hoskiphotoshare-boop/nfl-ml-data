@@ -101,7 +101,9 @@ def prepare_match_matrix(df: pl.DataFrame):
         "away_short_week",
         # Context. Week/season are deliberately excluded: they encode season
         # phase rather than team strength and dominated SHAP without improving
-        # the 2026 backtest.
+        # the 2026 backtest. Division games are lower-scoring and slightly less
+        # home-favoured; keep the flag as a small matchup signal.
+        "div_game",
         # Team results and quarterback continuity (added by add_match_context.py)
         "home_prior_games",
         "away_prior_games",

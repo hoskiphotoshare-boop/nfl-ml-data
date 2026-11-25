@@ -55,7 +55,7 @@ OUTPUT = "reports/model_explanations.json"
 
 MATCH_SAMPLE = 250
 PLAYER_SAMPLE = 60
-LOCAL_GAMES = 12
+LOCAL_GAMES = 200
 LOCAL_PLAYERS = 6
 TOP_DRIVERS = 8
 
@@ -195,6 +195,94 @@ def match_explanations() -> dict | None:
     }
 
 
+def score_label(feature: str) -> str:
+    if feature == "div_game":
+        return "Division game"
+    return match_label(feature)
+
+
+def score_explanations() -> dict | None:
+    if not os.path.exists("models/score_models.joblib"):
+        return None
+    bundle = joblib.load("models/score_models.joblib")
+    features = bundle["features"]
+    frame = load_match_features()
+    if frame is None:
+        return None
+    matrix = np.nan_to_num(frame.select(features).to_numpy(), nan=0.0)
+    sample = matrix[-250:]
+    output = {"features": features, "global": {}, "games": []}
+
+    explainers = {}
+    for key in ("margin", "total"):
+        model = bundle.get(f"{key}_model")
+        if model is None:
+            continue
+        explainer = shap.TreeExplainer(model)
+        values = np.asarray(explainer.shap_values(sample, check_additivity=False))
+        mean_abs = np.abs(values).mean(axis=0)
+        mean_signed = values.mean(axis=0)
+        total = mean_abs.sum() or 1.0
+        order = [i for i in np.argsort(mean_abs)[::-1] if mean_abs[i] > 1e-9][:20]
+        output["global"][key] = [
+            {
+                "feature": features[i],
+                "label": score_label(features[i]),
+                "mean_abs_shap": round(float(mean_abs[i]), 4),
+                "mean_shap": round(float(mean_signed[i]), 4),
+                "share": round(float(mean_abs[i] / total), 4),
+            }
+            for i in order
+        ]
+        explainers[key] = (model, explainer)
+
+    upcoming = (
+        json.load(open(PREDICTIONS, encoding="utf-8"))
+        if os.path.exists(PREDICTIONS)
+        else []
+    )
+    upcoming = sorted(upcoming, key=lambda g: (g.get("gameday") or "", g.get("gametime") or ""))
+    if not upcoming or not explainers:
+        return output
+
+    stats = {}
+    for game in upcoming:
+        for team in (game["home_team"], game["away_team"]):
+            if team not in stats:
+                stats[team] = team_stats_from_row(team_latest_row(frame, team), team)
+    rows = []
+    for game in upcoming:
+        stats[game["home_team"]]["div_game"] = int(game.get("div_game") or 0)
+        stats[game["away_team"]]["div_game"] = int(game.get("div_game") or 0)
+        rows.append(
+            build_feature_vector(
+                features,
+                stats[game["home_team"]],
+                stats[game["away_team"]],
+                int(game.get("week") or 0),
+                int(game.get("season") or 0),
+            )
+        )
+    matrix_games = np.asarray(rows)
+    for game, row in zip(upcoming, matrix_games):
+        entry = {
+            "game_id": game.get("game_id"),
+            "matchup": f"{game['away_team']} @ {game['home_team']}",
+            "week": game.get("week"),
+        }
+        for key, (model, explainer) in explainers.items():
+            values = np.asarray(explainer.shap_values(np.asarray([row]), check_additivity=False))[0]
+            entry[key] = {
+                "prediction": round(float(model.predict([row])[0]), 2),
+                "base": round(float(np.asarray(explainer.expected_value).ravel()[0]), 2),
+                "drivers": short_features(
+                    features, np.asarray(row), values, score_label
+                ),
+            }
+        output["games"].append(entry)
+    return output
+
+
 def latest_player_rows(data: pl.DataFrame, id_col: str) -> pl.DataFrame:
     return data.sort(["season", "week"]).unique(subset=[id_col], keep="last")
 
@@ -293,6 +381,10 @@ def main() -> None:
     if match:
         payload["match"] = match
         print(f"Match SHAP: {len(match['games'])} games, {len(match['global'])} global drivers")
+    score = score_explanations()
+    if score:
+        payload["score"] = score
+        print(f"Score SHAP: {len(score['games'])} games")
     payload["players"] = player_explanations()
     for group, data in payload["players"].items():
         print(f"{group} SHAP: {len(data['players'])} players")

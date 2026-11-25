@@ -326,6 +326,8 @@ def build_feature_vector(features: list[str], home_stats: dict, away_stats: dict
             values.append(float(week))
         elif feat == "season":
             values.append(float(season))
+        elif feat == "div_game":
+            values.append(float(home_stats.get("div_game") or 0.0))
         elif feat == "rest_diff":
             values.append(
                 float(home_stats.get("rest_days") or 0) - float(away_stats.get("rest_days") or 0)
@@ -386,6 +388,7 @@ def main() -> None:
             stats_cache[home] = team_stats_from_row(
                 team_latest_row(features_df, home), home
             )
+            stats_cache[home]["div_game"] = int(row.get("div_game") or 0)
             stats_cache[home].update(team_records.get(home, {}))
             stats_cache[home].update(qb_context.get(home, {}))
             stats_cache[home].update(injury_context.get(home, {}))
@@ -393,6 +396,7 @@ def main() -> None:
             stats_cache[away] = team_stats_from_row(
                 team_latest_row(features_df, away), away
             )
+            stats_cache[away]["div_game"] = int(row.get("div_game") or 0)
             stats_cache[away].update(team_records.get(away, {}))
             stats_cache[away].update(qb_context.get(away, {}))
             stats_cache[away].update(injury_context.get(away, {}))

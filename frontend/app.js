@@ -56,6 +56,8 @@ const state = {
   playoffs: [],
   market: null,
   futures: null,
+  explanationById: new Map(),
+  scoreExplanationById: new Map(),
   futuresByTeam: new Map(),
   meta: null,
   marketById: new Map(),
@@ -470,15 +472,34 @@ function gameCard(game, rank) {
 
   if (market && market.markets) card.appendChild(edgeGrid(market, best));
   if (market && market.outlier) {
-    card.appendChild(
-      el(
-        'p',
-        'outlier-note',
-        `Model disagrees with the market by ${(market.outlier_edge * 100).toFixed(0)} pp on the ${
-          MARKET_LABEL[market.outlier_market] ? MARKET_LABEL[market.outlier_market].toLowerCase() : 'line'
-        } — likely missing QB/roster news.`
-      )
-    );
+    const marketKey = market.outlier_market;
+    let drivers = [];
+    let unit = '';
+    if (marketKey === 'total' || marketKey === 'spread') {
+      const scoreGame = state.scoreExplanationById?.get(game.game_id);
+      const entry = scoreGame?.[marketKey === 'total' ? 'total' : 'margin'];
+      drivers = entry?.drivers?.slice(0, 3) || [];
+      unit = ' pts';
+    }
+    if (!drivers.length) {
+      drivers = state.explanationById?.get(game.game_id)?.drivers?.slice(0, 3) || [];
+    }
+    if (drivers.length) {
+      const block = el('div', 'driver-block');
+      block.appendChild(el('div', 'k', 'Why the model differs'));
+      const tags = el('div', 'driver-tags');
+      drivers.forEach((driver) => {
+        const tag = el(
+          'span',
+          `tag ${driver.shap >= 0 ? 'edge' : 'neg'}`,
+          `${driver.label} ${driver.shap >= 0 ? '+' : ''}${driver.shap.toFixed(2)}${unit}`
+        );
+        tag.title = `SHAP ${driver.shap.toFixed(3)}${unit ? ' points' : ' log-odds'} · feature value ${driver.value}`;
+        tags.appendChild(tag);
+      });
+      block.appendChild(tags);
+      card.appendChild(block);
+    }
   }
 
   const buttons = el('div', 'pick-buttons');
@@ -584,7 +605,6 @@ function filteredGames() {
 
   if (state.gamesView === 'edges') {
     list = list.filter((g) => bestMarket(state.marketById.get(g.game_id)));
-    const outlier = (g) => (state.marketById.get(g.game_id)?.outlier ? 1 : 0);
     let compare;
     if (sort === 'ev') {
       compare = (a, b) =>
@@ -596,8 +616,7 @@ function filteredGames() {
     } else {
       compare = (a, b) => gameEdge(b) - gameEdge(a);
     }
-    // Model outliers go last so they are not presented as top edges.
-    list.sort((a, b) => outlier(a) - outlier(b) || compare(a, b));
+    list.sort(compare);
     return list;
   }
 
@@ -627,11 +646,10 @@ function renderGameStats(list) {
     .filter((item) => item.market)
     .map((item) => ({ ...item, best: bestMarket(item.market) }))
     .filter((item) => item.best);
-  const clean = ranked.filter((item) => !item.market.outlier);
-  const top = [...clean].sort((a, b) => b.best.market.edge - a.best.market.edge)[0];
+  const top = [...ranked].sort((a, b) => b.best.market.edge - a.best.market.edge)[0];
 
   if (state.gamesView === 'edges') {
-    const edges = clean.map((item) => item.best.market.edge);
+    const edges = ranked.map((item) => item.best.market.edge);
     const sorted = [...edges].sort((a, b) => a - b);
     const median = sorted.length ? sorted[Math.floor(sorted.length / 2)] : null;
     row.appendChild(statTile({ label: 'Priced games', value: list.length, sub: 'with a market line' }));
@@ -653,10 +671,9 @@ function renderGameStats(list) {
     );
     row.appendChild(
       statTile({
-        label: 'Model outliers',
-        value: ranked.length - clean.length,
-        sub: '20+ pp vs market',
-        cls: ranked.length - clean.length ? 'warn' : '',
+        label: 'Median edge',
+        value: median !== null ? edgePoints(median) : '—',
+        sub: 'best market per game',
       })
     );
     return;
@@ -1264,7 +1281,6 @@ function renderDistribution(games) {
   clear(container);
 
   const edges = games
-    .filter((game) => !state.marketById.get(game.game_id)?.outlier)
     .map((game) => bestMarket(state.marketById.get(game.game_id))?.market.edge)
     .filter((value) => typeof value === 'number');
 
@@ -1524,12 +1540,13 @@ async function loadAll() {
   setupFilters();
 
   try {
-    const [games, players, playoffs, market, futures, meta] = await Promise.all([
+    const [games, players, playoffs, market, futures, explanations, meta] = await Promise.all([
       loadGames(),
       fetchJSON('players_week.json'),
       fetchJSON('playoffs.json'),
       fetchReport('market_comparison.json').catch(() => null),
       fetchReport('futures_comparison.json').catch(() => null),
+      fetchReport('model_explanations.json').catch(() => null),
       fetchJSON('meta.json').catch(() => null),
     ]);
 
@@ -1539,6 +1556,12 @@ async function loadAll() {
     state.market = market;
     state.futures = futures;
     state.futuresByTeam = new Map((futures?.teams || []).map((team) => [team.team, team]));
+    state.explanationById = new Map(
+      (explanations?.match?.games || []).map((game) => [game.game_id, game])
+    );
+    state.scoreExplanationById = new Map(
+      (explanations?.score?.games || []).map((game) => [game.game_id, game])
+    );
     state.marketById = new Map((market?.games || []).map((g) => [g.game_id, g]));
     state.gamesById = new Map(state.games.map((g) => [g.game_id, g]));
     applyMeta(meta);
