@@ -55,11 +55,22 @@ def load_json(path: str, default):
         return json.load(f)
 
 
+def decimal_suffix(prob) -> str:
+    try:
+        p = float(prob)
+    except Exception:
+        return ""
+    if p <= 0 or p >= 1:
+        return ""
+    return f" ({1 / p:.2f})"
+
+
 def fmt_pct(value) -> str:
     try:
-        return f"{float(value) * 100:.1f}%"
+        p = float(value)
     except Exception:
         return "—"
+    return f"{p * 100:.1f}%{decimal_suffix(p)}"
 
 
 def american(prob) -> str:
@@ -192,10 +203,11 @@ def meter(value, cls: str = "") -> str:
         label = f"{pct:.0f}%"
     except Exception:
         pct, label = 0.0, "—"
+    suffix = decimal_suffix(value)
     return (
         f'<div class="meter {cls}">'
         f'<div class="track"><i style="width:{pct:.1f}%"></i></div>'
-        f'<span class="val">{label}</span>'
+        f'<span class="val">{label}{suffix and f"<span class=\"dec\">{suffix}</span>"}</span>'
         "</div>"
     )
 

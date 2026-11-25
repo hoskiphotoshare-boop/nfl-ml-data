@@ -91,7 +91,9 @@ function clear(node) {
 
 function pct(value, digits = 0) {
   if (value === undefined || value === null || Number.isNaN(value)) return '—';
-  return `${(value * 100).toFixed(digits)}%`;
+  // Keep tiny probabilities readable instead of rounding them to 0%.
+  const places = digits === 0 && value > 0 && value < 0.05 ? 1 : digits;
+  return `${(value * 100).toFixed(places)}%`;
 }
 
 function signed(value, digits = 1, suffix = '') {
@@ -109,6 +111,12 @@ function formatEv(value) {
 function decimalOdds(prob) {
   if (prob === undefined || prob === null || prob <= 0 || prob >= 1) return null;
   return (1 / prob).toFixed(2);
+}
+
+function decSuffix(prob) {
+  if (prob === undefined || prob === null || prob < 0.005 || prob >= 1) return '';
+  const dec = decimalOdds(prob);
+  return dec ? ` (${dec})` : '';
 }
 
 function american(prob) {
@@ -256,7 +264,10 @@ function meter(value, cls = '') {
   fill.style.width = `${Math.max(0, Math.min(1, value || 0)) * 100}%`;
   track.appendChild(fill);
   wrap.appendChild(track);
-  wrap.appendChild(el('span', 'val', pct(value)));
+  const val = el('span', 'val', pct(value));
+  const dec = decimalOdds(value);
+  if (dec && value >= 0.005) val.appendChild(el('span', 'dec', ` (${dec})`));
+  wrap.appendChild(val);
   return wrap;
 }
 
@@ -322,6 +333,17 @@ function edgePoints(edge) {
   return `${edge >= 0 ? '+' : ''}${(edge * 100).toFixed(1)} pp`;
 }
 
+function shortMarketTag(entry) {
+  if (entry.side === 'over' || entry.side === 'under') {
+    return `${entry.side === 'over' ? 'O' : 'U'}${entry.line}`;
+  }
+  const line =
+    entry.line !== null && entry.line !== undefined
+      ? ` ${entry.line > 0 ? '+' : ''}${entry.line}`
+      : '';
+  return `${teamAbbr(entry.team)}${line}`;
+}
+
 function edgeGrid(market, best) {
   const grid = el('div', 'edge-grid');
   ['ml', 'spread', 'total'].forEach((key) => {
@@ -374,7 +396,7 @@ function gameCard(game, rank) {
       el(
         'span',
         `tag edge-tag ${best.market.edge >= 0.02 ? 'edge' : 'neutral'}`,
-        `${MARKET_SHORT[best.key]} ${teamAbbr(best.market.team)} ${edgePoints(best.market.edge)}`
+        `${MARKET_SHORT[best.key]} ${shortMarketTag(best.market)} ${edgePoints(best.market.edge)}`
       )
     );
   }
@@ -401,7 +423,11 @@ function gameCard(game, rank) {
     if (row.prob !== null) oddsLine.title = `Decimal odds ${decimalOdds(row.prob)}`;
     names.appendChild(oddsLine);
     line.appendChild(names);
-    line.appendChild(el('span', 'prob', pct(row.prob)));
+    const probNode = el('span', 'prob');
+    probNode.appendChild(document.createTextNode(pct(row.prob)));
+    const probDec = decimalOdds(row.prob);
+    if (probDec && row.prob >= 0.005) probNode.appendChild(el('span', 'dec', ` (${probDec})`));
+    line.appendChild(probNode);
     card.appendChild(line);
   });
 
@@ -434,7 +460,7 @@ function gameCard(game, rank) {
   [
     ['Model spread', spreadLine(game)],
     ['Model total', game.total !== null && game.total !== undefined ? game.total.toFixed(1) : '—'],
-    ['Confidence', home === null ? '—' : `${Math.round(Math.abs(home - 0.5) * 200)}%`],
+    ['Lean vs 50%', home === null ? '—' : `${(Math.abs(home - 0.5) * 100).toFixed(1)} pts`],
   ].forEach(([k, v]) => {
     const cell = el('div', 'meta-cell');
     cell.appendChild(el('div', 'k', k));
@@ -496,7 +522,7 @@ function renderPicks() {
         el(
           'div',
           'team-sub',
-          `Week ${game.week} · picked ${side === 'home' ? teamAbbr(game.home_team) : teamAbbr(game.away_team)} · model ${pct(prob)}`
+          `Week ${game.week} · picked ${side === 'home' ? teamAbbr(game.home_team) : teamAbbr(game.away_team)} · model ${pct(prob)}${decSuffix(prob)}`
         )
       );
       row.appendChild(text);
@@ -634,6 +660,8 @@ function renderGameStats(list) {
         pick && pick.game.home_win_prob !== null && pick.game.home_win_prob !== undefined
           ? `${teamAbbr(pick.game.home_win_prob >= 0.5 ? pick.game.home_team : pick.game.away_team)} ${pct(
               pick.game.home_win_prob >= 0.5 ? pick.game.home_win_prob : 1 - pick.game.home_win_prob
+            )}${decSuffix(
+              pick.game.home_win_prob >= 0.5 ? pick.game.home_win_prob : 1 - pick.game.home_win_prob
             )}`
           : '—',
       sub: pick ? `${pick.game.away_team} @ ${pick.game.home_team}` : '',
@@ -703,10 +731,9 @@ function renderGames() {
       title.textContent =
         week === 'all' ? 'Model edges · all priced games' : `Model edges · Week ${week}`;
     } else {
+      const season = state.meta?.season || state.games?.[0]?.season;
       title.textContent =
-        week === 'all'
-          ? 'All remaining games'
-          : `Week ${week}${state.meta?.season ? ` · ${state.meta.season}` : ''}`;
+        week === 'all' ? 'All remaining games' : `Week ${week}${season ? ` · ${season}` : ''}`;
     }
   }
 
@@ -1060,7 +1087,12 @@ function renderPlayoffs() {
       statTile({
         label: 'Title favourite',
         value: fav ? teamAbbr(fav.team) : '—',
-        sub: fav ? `${pct(fav.super_bowl_prob, 1)} model · ${pct(futuresFor(fav.team)?.market_sb_prob, 1)} market` : '',
+        sub: fav
+          ? `${pct(fav.super_bowl_prob, 1)}${decSuffix(fav.super_bowl_prob)} model · ${pct(
+              futuresFor(fav.team)?.market_sb_prob,
+              1
+            )}${decSuffix(futuresFor(fav.team)?.market_sb_prob)} market`
+          : '',
         cls: 'good',
       })
     );
@@ -1069,7 +1101,9 @@ function renderPlayoffs() {
         statTile({
           label: 'Best futures edge',
           value: edgePoints(bestEdge.futures.edge),
-          sub: `${teamAbbr(bestEdge.team.team)} · model ${pct(bestEdge.team.super_bowl_prob, 1)} vs market ${pct(bestEdge.futures.market_sb_prob, 1)}`,
+          sub: `${teamAbbr(bestEdge.team.team)} · model ${pct(bestEdge.team.super_bowl_prob, 1)}${decSuffix(
+            bestEdge.team.super_bowl_prob
+          )} vs market ${pct(bestEdge.futures.market_sb_prob, 1)}${decSuffix(bestEdge.futures.market_sb_prob)}`,
           cls: bestEdge.futures.edge >= 0.02 ? 'good' : '',
         })
       );
@@ -1077,7 +1111,11 @@ function renderPlayoffs() {
         statTile({
           label: 'Market favourite',
           value: marketFav ? teamAbbr(marketFav.team.team) : '—',
-          sub: marketFav ? `${pct(marketFav.futures.market_sb_prob, 1)} at ${americanFromDecimal(marketFav.futures.best_price) || '—'}` : '',
+          sub: marketFav
+            ? `${pct(marketFav.futures.market_sb_prob, 1)}${decSuffix(
+                marketFav.futures.market_sb_prob
+              )} · ${americanFromDecimal(marketFav.futures.best_price) || '—'}`
+            : '',
         })
       );
     } else {
@@ -1150,7 +1188,9 @@ function renderPlayoffs() {
 
     const marketTd = el('td', 'hide-sm');
     if (futures && futures.market_sb_prob !== null && futures.market_sb_prob !== undefined) {
-      marketTd.appendChild(el('div', 'proj', pct(futures.market_sb_prob, 1)));
+      marketTd.appendChild(
+        el('div', 'proj', `${pct(futures.market_sb_prob, 1)}${decSuffix(futures.market_sb_prob)}`)
+      );
       marketTd.appendChild(
         el(
           'div',
