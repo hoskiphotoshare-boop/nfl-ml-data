@@ -718,6 +718,7 @@ h2 {
 .game-top {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.45rem;
   font-size: 0.73rem;
   color: var(--muted-2);
@@ -1819,10 +1820,6 @@ footer .odds {
 }
 
 @media (max-width: 430px) {
-  .edge-cell .price {
-    display: none;
-  }
-
   .edge-cell .pick {
     font-size: 0.8rem;
   }

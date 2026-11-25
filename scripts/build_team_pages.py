@@ -65,6 +65,13 @@ def decimal_suffix(prob) -> str:
     return f" ({1 / p:.2f})"
 
 
+def pct_only(value) -> str:
+    try:
+        return f"{float(value) * 100:.1f}%"
+    except Exception:
+        return "—"
+
+
 def fmt_pct(value) -> str:
     try:
         p = float(value)
@@ -73,15 +80,16 @@ def fmt_pct(value) -> str:
     return f"{p * 100:.1f}%{decimal_suffix(p)}"
 
 
-def american(prob) -> str:
+def fair_decimal(prob) -> str:
     try:
         p = float(prob)
     except Exception:
         return "—"
-    if p <= 0 or p >= 1:
+    if p <= 0:
         return "—"
-    raw = (-100 * p / (1 - p)) if p >= 0.5 else (100 * (1 - p) / p)
-    return f"{raw:+.0f}"
+    if p >= 1:
+        return "1.00"
+    return f"{1 / p:.2f}"
 
 
 def luminance(hex_color: str) -> float:
@@ -236,7 +244,7 @@ def main() -> None:
             f'<td>{meter(team.get("playoff_prob"), "green")}</td>'
             f'<td class="hide-sm">{meter(team.get("conference_prob"))}</td>'
             f'<td>{meter(team.get("super_bowl_prob"), "green")}</td>'
-            f'<td class="num hide-sm muted">{american(team.get("super_bowl_prob"))}</td></tr>'
+            f'<td class="num hide-sm muted">{fair_decimal(team.get("super_bowl_prob"))}</td></tr>'
         )
 
     index_body = f"""
@@ -248,7 +256,7 @@ def main() -> None:
     </div>
     <div class="table-wrap"><div class="table-scroll"><table class="dtable">
       <thead><tr><th>#</th><th>Team</th><th class="hide-sm">Conf</th><th>Playoff</th>
-      <th class="hide-sm">Conf. title</th><th>Super Bowl</th><th class="num hide-sm">SB odds</th></tr></thead>
+      <th class="hide-sm">Conf. title</th><th>Super Bowl</th><th class="num hide-sm">Fair odds</th></tr></thead>
       <tbody>{''.join(rows)}</tbody>
     </table></div></div>
     """
@@ -279,8 +287,8 @@ def main() -> None:
                 f'<div><div class="nm">{venue} {html.escape(full_name(opponent))}</div>'
                 f'<div class="tm">{html.escape(opponent)} · {html.escape(str(g.get("stadium") or ""))}</div></div></div></td>'
                 f'<td class="hide-sm">{kickoff(g.get("gameday"), g.get("gametime"))}</td>'
-                f'<td class="num">{fmt_pct(win_prob)}</td>'
-                f'<td class="num hide-sm muted">{american(win_prob)}</td></tr>'
+                f'<td class="num">{pct_only(win_prob)}</td>'
+                f'<td class="num hide-sm muted">{fair_decimal(win_prob)}</td></tr>'
             )
 
         body = f"""
@@ -297,12 +305,12 @@ def main() -> None:
           {stat("Playoff chance", fmt_pct(team.get("playoff_prob")), "make the postseason", "good")}
           {stat("Conference title", fmt_pct(team.get("conference_prob")), "win the conference")}
           {stat("Super Bowl", fmt_pct(team.get("super_bowl_prob")), "win the title")}
-          {stat("SB odds", american(team.get("super_bowl_prob")), "model-implied moneyline")}
+          {stat("Fair odds", fair_decimal(team.get("super_bowl_prob")), "model-implied decimal")}
         </div>
         <div class="section-title">Remaining schedule</div>
         <div class="table-wrap"><div class="table-scroll"><table class="dtable">
           <thead><tr><th>Week</th><th>Matchup</th><th class="hide-sm">Kickoff</th>
-          <th class="num">Win prob</th><th class="num hide-sm">Odds</th></tr></thead>
+          <th class="num">Win prob</th><th class="num hide-sm">Fair odds</th></tr></thead>
           <tbody>{''.join(game_rows) or '<tr><td colspan="5" class="muted">No remaining games</td></tr>'}</tbody>
         </table></div></div>
         """

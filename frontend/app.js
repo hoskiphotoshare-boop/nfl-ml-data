@@ -119,18 +119,6 @@ function decSuffix(prob) {
   return dec ? ` (${dec})` : '';
 }
 
-function american(prob) {
-  if (prob === undefined || prob === null || prob <= 0 || prob >= 1) return null;
-  const raw = prob >= 0.5 ? (-100 * prob) / (1 - prob) : (100 * (1 - prob)) / prob;
-  return `${raw > 0 ? '+' : ''}${Math.round(raw)}`;
-}
-
-function americanFromDecimal(dec) {
-  if (!dec || dec <= 1) return null;
-  const raw = dec >= 2 ? (dec - 1) * 100 : -100 / (dec - 1);
-  return `${raw > 0 ? '+' : ''}${Math.round(raw)}`;
-}
-
 function teamAbbr(value) {
   return String(value || '').toUpperCase();
 }
@@ -337,11 +325,8 @@ function shortMarketTag(entry) {
   if (entry.side === 'over' || entry.side === 'under') {
     return `${entry.side === 'over' ? 'O' : 'U'}${entry.line}`;
   }
-  const line =
-    entry.line !== null && entry.line !== undefined
-      ? ` ${entry.line > 0 ? '+' : ''}${entry.line}`
-      : '';
-  return `${teamAbbr(entry.team)}${line}`;
+  // The line lives in the edge grid; keep the header chip short.
+  return teamAbbr(entry.team);
 }
 
 function edgeGrid(market, best) {
@@ -362,11 +347,11 @@ function edgeGrid(market, best) {
       )
     );
     if (entry.price) {
-      valueRow.appendChild(el('span', 'price', americanFromDecimal(entry.price) || ''));
+      valueRow.appendChild(el('span', 'price', entry.price.toFixed(2)));
     }
     cell.appendChild(valueRow);
     cell.title = `Model ${pct(entry.model_prob, 1)} vs market ${pct(entry.market_prob, 1)}${
-      entry.price ? ` · best ${americanFromDecimal(entry.price)} at ${entry.bookmaker}` : ''
+      entry.price ? ` · best ${entry.price.toFixed(2)} at ${entry.bookmaker}` : ''
     }${entry.ev !== null && entry.ev !== undefined ? ` · EV ${formatEv(entry.ev)}` : ''}`;
     grid.appendChild(cell);
   });
@@ -419,9 +404,12 @@ function gameCard(game, rank) {
     if (row.record) nameWrap.appendChild(el('span', 'team-sub', ` ${row.record}`));
     if (row.form) nameWrap.appendChild(formDots(row.form));
     names.appendChild(nameWrap);
-    const oddsLine = el('div', 'team-sub', row.prob === null ? '—' : `${american(row.prob)}`);
-    if (row.prob !== null) oddsLine.title = `Decimal odds ${decimalOdds(row.prob)}`;
-    names.appendChild(oddsLine);
+    const bestMl = row.team === game.home_team ? market?.best_home_ml : market?.best_away_ml;
+    if (bestMl && bestMl.price) {
+      const oddsLine = el('div', 'team-sub', `mkt ${bestMl.price.toFixed(2)}`);
+      oddsLine.title = `${bestMl.bookmaker || 'Market'} decimal price`;
+      names.appendChild(oddsLine);
+    }
     line.appendChild(names);
     const probNode = el('span', 'prob');
     probNode.appendChild(document.createTextNode(pct(row.prob)));
@@ -1114,7 +1102,7 @@ function renderPlayoffs() {
           sub: marketFav
             ? `${pct(marketFav.futures.market_sb_prob, 1)}${decSuffix(
                 marketFav.futures.market_sb_prob
-              )} · ${americanFromDecimal(marketFav.futures.best_price) || '—'}`
+              )} · ${marketFav.futures.best_price ? marketFav.futures.best_price.toFixed(2) : '—'}`
             : '',
         })
       );
@@ -1195,7 +1183,7 @@ function renderPlayoffs() {
         el(
           'div',
           'tm',
-          `${americanFromDecimal(futures.best_price) || '—'}${
+          `${futures.best_price ? futures.best_price.toFixed(2) : '—'}${
             futures.best_bookmaker ? ` · ${futures.best_bookmaker}` : ''
           }`
         )
