@@ -416,6 +416,8 @@ def main() -> None:
                 "roof": row.get("roof"),
                 "surface": row.get("surface"),
                 "div_game": row.get("div_game"),
+                "temp": row.get("temp"),
+                "wind": row.get("wind"),
             }
         )
 

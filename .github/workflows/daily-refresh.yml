@@ -27,6 +27,7 @@ jobs:
       - run: python scripts/download_data.py || true
       - run: python scripts/build_features.py || true
       - run: python scripts/add_match_context.py || true
+      - run: python scripts/add_player_context.py || true
       - run: python scripts/build_predictions.py || true
       - run: python scripts/train_models.py || true
       - run: python scripts/calibrate_probabilities.py || true

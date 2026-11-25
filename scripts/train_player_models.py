@@ -171,6 +171,8 @@ def build_rolling(df: pl.DataFrame) -> tuple[pl.DataFrame, str]:
 
 def feature_cols(df: pl.DataFrame) -> list[str]:
     cols = [c for c in df.columns if c.startswith("roll_")]
+    # Weather columns are kept in the feature table for display, but the
+    # current schedules have too many null forecasts to improve the models.
     for extra in ["is_home", "rest_days", "opp_def_rating"]:
         if extra in df.columns:
             cols.append(extra)
@@ -213,16 +215,27 @@ def train_group(df: pl.DataFrame, group: str, positions: list[str]):
     )
     model.fit(X_train, y_train)
     pred = model.predict(X_test)
+    residuals = y_test - pred
     metrics = {
         "rows": int(len(y_test)),
         "mae": round(float(mean_absolute_error(y_test, pred)), 3),
         "rmse": round(float(np.sqrt(mean_squared_error(y_test, pred))), 3),
+        "q10": round(float(np.quantile(residuals, 0.1)), 3),
+        "q90": round(float(np.quantile(residuals, 0.9)), 3),
     }
     print(f"{group}: n={metrics['rows']} MAE={metrics['mae']} RMSE={metrics['rmse']}")
     return model, metrics
 
 
 def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
+    intervals = {}
+    path = "models/player_intervals.json"
+    if os.path.exists(path):
+        try:
+            with open(path, encoding="utf-8") as f:
+                intervals = json.load(f)
+        except Exception:
+            intervals = {}
     # Latest row per player.
     latest = (
         df.sort(["season", "week"])
@@ -263,6 +276,10 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
         else:
             fantasy = float(stats.get("roll_fantasy_points") or 0.0)
 
+        interval = intervals.get(group, {})
+        floor = max(0.0, fantasy + float(interval.get("q10", 0.0)))
+        ceiling = max(0.0, fantasy + float(interval.get("q90", 0.0)))
+
         records.append(
             {
                 "player_id": stats.get(id_col),
@@ -274,6 +291,8 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
                 "projected_yards": round(float(stats.get("roll_yards") or 0.0), 1),
                 "projected_tds": round(float(stats.get("roll_touchdowns") or 0.0), 2),
                 "projected_fantasy_points": round(fantasy, 1),
+                "floor_fantasy_points": round(floor, 1),
+                "ceiling_fantasy_points": round(ceiling, 1),
                 "projected_pass_yards": round(float(stats.get("roll_passing_yards") or 0.0), 1)
                 if pos == "QB"
                 else None,
@@ -393,6 +412,38 @@ def apply_depth_chart_adjustments(records: list[dict]) -> list[dict]:
     return records
 
 
+def apply_roster_status(records: list[dict]) -> list[dict]:
+    path = None
+    for candidate in ["data/rosters_weekly_history.parquet", "data/rosters_weekly_latest.parquet"]:
+        if os.path.exists(candidate):
+            path = candidate
+            break
+    if path is None:
+        return records
+    try:
+        rosters = pl.read_parquet(path)
+        required = {"season", "week", "gsis_id", "status"}
+        if not required.issubset(set(rosters.columns)):
+            return records
+        latest = (
+            rosters.sort(["season", "week"])
+            .group_by("gsis_id", maintain_order=True)
+            .agg(pl.all().last())
+        )
+        status = {row["gsis_id"]: row["status"] for row in latest.iter_rows(named=True)}
+        available = {"ACT"}
+        kept = []
+        for record in records:
+            state = status.get(record.get("player_id"))
+            record["roster_status"] = state
+            if state is not None and state not in available:
+                continue
+            kept.append(record)
+        return kept
+    except Exception:
+        return records
+
+
 def main() -> None:
     df = load_player_features()
     if df.height == 0:
@@ -419,10 +470,18 @@ def main() -> None:
     os.makedirs("reports", exist_ok=True)
     with open("reports/player_backtest.json", "w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
+    intervals = {
+        group: {"q10": m.get("q10", 0.0), "q90": m.get("q90", 0.0)}
+        for group, m in metrics.items()
+        if m
+    }
+    with open("models/player_intervals.json", "w", encoding="utf-8") as f:
+        json.dump(intervals, f, indent=2)
 
     records = predict_latest(rolling, models, id_col)
     records = apply_depth_chart_adjustments(records)
     records = apply_injury_adjustments(records)
+    records = apply_roster_status(records)
     records = [r for r in records if r["projected_fantasy_points"] > 0][:250]
 
     os.makedirs("predictions", exist_ok=True)

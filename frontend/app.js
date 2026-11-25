@@ -374,6 +374,17 @@ function gameCard(game, rank) {
     v.title = [game.roof, game.surface].filter(Boolean).join(' · ');
     top.appendChild(v);
   }
+  const weather = [
+    game.temp !== null && game.temp !== undefined ? `${game.temp}°F` : null,
+    game.wind !== null && game.wind !== undefined ? `${game.wind} mph` : null,
+  ]
+    .filter(Boolean)
+    .join(' · ');
+  if (weather) {
+    const w = el('span', 'venue', `· ${weather}`);
+    w.title = 'Forecast weather';
+    top.appendChild(w);
+  }
   top.appendChild(el('span', 'spacer'));
   if (game.div_game) top.appendChild(el('span', 'tag div', 'Div'));
   if (best) {
@@ -979,6 +990,11 @@ function renderPlayers() {
     fill.style.width = `${Math.max(4, (proj(player) / maxProj) * 100)}%`;
     bar.appendChild(fill);
     projTd.appendChild(bar);
+    if (player.floor_fantasy_points !== undefined && player.ceiling_fantasy_points !== undefined) {
+      projTd.appendChild(
+        el('div', 'tm', `${player.floor_fantasy_points}–${player.ceiling_fantasy_points}`)
+      );
+    }
     if (player.recent_fantasy_points && player.recent_fantasy_points.length) {
       projTd.appendChild(el('div', 'tm only-sm', `L3 ${recentAvg(player).toFixed(1)}`));
     }
