@@ -32,6 +32,137 @@ def load_match_features() -> pl.DataFrame | None:
     return pl.read_parquet(path)
 
 
+def current_records(schedules: pl.DataFrame, season: int) -> dict[str, dict]:
+    """Current wins, games and point differential per team."""
+    played = schedules.filter(
+        (pl.col("season") == season)
+        & pl.col("home_score").is_not_null()
+        & pl.col("away_score").is_not_null()
+    )
+    home = played.select(
+        pl.col("home_team").alias("team"),
+        (pl.col("home_score") > pl.col("away_score")).cast(pl.Int8).alias("win"),
+        pl.col("home_score").alias("pf"),
+        pl.col("away_score").alias("pa"),
+    )
+    away = played.select(
+        pl.col("away_team").alias("team"),
+        (pl.col("away_score") > pl.col("home_score")).cast(pl.Int8).alias("win"),
+        pl.col("away_score").alias("pf"),
+        pl.col("home_score").alias("pa"),
+    )
+    long = pl.concat([home, away])
+    agg = long.group_by("team").agg(
+        pl.col("win").sum().alias("wins"),
+        pl.len().alias("games"),
+        pl.col("pf").sum().alias("pf"),
+        pl.col("pa").sum().alias("pa"),
+    )
+    return {
+        row["team"]: {
+            "win_pct": round(row["wins"] / max(row["games"], 1), 4),
+            "diff_pg": round((row["pf"] - row["pa"]) / max(row["games"], 1), 3),
+            "prior_games": int(row["games"]),
+        }
+        for row in agg.iter_rows(named=True)
+    }
+
+
+def current_qb_context(season: int) -> dict[str, dict]:
+    """Trailing starter quality and QB-change flags for each team."""
+    path = "features/player_features.parquet"
+    if not os.path.exists(path):
+        return {}
+    players = pl.read_parquet(path)
+    qbs = players.filter(
+        (pl.col("position") == "QB")
+        & (pl.col("season") == season)
+        & (pl.col("attempts").is_not_null())
+        & (pl.col("attempts") > 0)
+    )
+    if qbs.height == 0:
+        return {}
+
+    primary = (
+        qbs.sort(
+            ["team", "week", "attempts"],
+            descending=[False, False, True],
+        )
+        .group_by(["team", "week"], maintain_order=True)
+        .agg(
+            pl.col("player_id").first().alias("qb_id"),
+            pl.col("player_name").first().alias("qb_name"),
+            pl.col("attempts").first().alias("attempts"),
+            pl.col("passing_epa").first().alias("passing_epa"),
+        )
+    )
+    latest = (
+        primary.sort(["team", "week"])
+        .group_by("team", maintain_order=True)
+        .agg(pl.all().last())
+    )
+
+    # Prefer the current depth-chart starter when available.
+    starters = {}
+    dc_path = "data/depth_charts_latest.parquet"
+    if os.path.exists(dc_path):
+        dc = pl.read_parquet(dc_path)
+        latest_dt = dc["dt"].max()
+        dc = dc.filter((pl.col("dt") == latest_dt) & (pl.col("pos_abb") == "QB") & (pl.col("pos_rank") == 1))
+        for row in dc.iter_rows(named=True):
+            starters[row["team"]] = {
+                "id": row.get("gsis_id"),
+                "name": row.get("player_name"),
+            }
+
+    context = {}
+    for row in latest.iter_rows(named=True):
+        team = row["team"]
+        starter = starters.get(team)
+        qb_id = row["qb_id"]
+        qb_name = row["qb_name"]
+        if starter and (starter.get("id") or starter.get("name")):
+            # Match the depth-chart starter in the player table.
+            candidates = qbs.filter(
+                (pl.col("team") == team)
+                & (
+                    (pl.col("player_id") == starter.get("id"))
+                    if starter.get("id")
+                    else (pl.col("player_name") == starter.get("name"))
+                )
+            )
+            if candidates.height:
+                qb_id = candidates["player_id"][-1]
+                qb_name = candidates["player_name"][-1]
+
+        hist = primary.filter((pl.col("team") == team) & (pl.col("qb_id") == qb_id)).sort("week")
+        if hist.height == 0:
+            context[team] = {
+                "qb_prior_epa": 0.0,
+                "qb_starts": 0,
+                "qb_changed": 1,
+                "qb_missing": 1,
+            }
+            continue
+        epa = hist["passing_epa"].to_list()[-3:]
+        att = hist["attempts"].to_list()[-3:]
+        values = [e / a for e, a in zip(epa, att) if a and e is not None]
+        previous = primary.filter(
+            (pl.col("team") == team) & (pl.col("week") < row["week"])
+        ).sort("week")
+        changed = 0
+        if previous.height:
+            changed = int(previous["qb_id"][-1] != qb_id)
+
+        context[team] = {
+            "qb_prior_epa": round(sum(values) / len(values), 4) if values else 0.0,
+            "qb_starts": int(hist.height - 1),
+            "qb_changed": changed,
+            "qb_missing": 0,
+        }
+    return context
+
+
 def team_latest_row(df: pl.DataFrame, team: str) -> dict:
     rows = df.filter((pl.col("home_team") == team) | (pl.col("away_team") == team)).sort(
         ["season", "week"]
@@ -143,6 +274,8 @@ def main() -> None:
 
     stats_cache: dict[str, dict] = {}
     records = season_records(schedules, current_season)
+    team_records = current_records(schedules, current_season)
+    qb_context = current_qb_context(current_season)
     predictions = []
     for row in upcoming.iter_rows(named=True):
         home = row["home_team"]
@@ -153,10 +286,14 @@ def main() -> None:
             stats_cache[home] = team_stats_from_row(
                 team_latest_row(features_df, home), home
             )
+            stats_cache[home].update(team_records.get(home, {}))
+            stats_cache[home].update(qb_context.get(home, {}))
         if away not in stats_cache:
             stats_cache[away] = team_stats_from_row(
                 team_latest_row(features_df, away), away
             )
+            stats_cache[away].update(team_records.get(away, {}))
+            stats_cache[away].update(qb_context.get(away, {}))
 
         x = build_feature_vector(
             feature_names, stats_cache[home], stats_cache[away], week, current_season

@@ -463,7 +463,9 @@ function gameCard(game, rank) {
       el(
         'p',
         'outlier-note',
-        `Model disagrees with the market by ${(market.outlier_edge * 100).toFixed(0)} pp — likely missing QB/roster news.`
+        `Model disagrees with the market by ${(market.outlier_edge * 100).toFixed(0)} pp on the ${
+          MARKET_LABEL[market.outlier_market] ? MARKET_LABEL[market.outlier_market].toLowerCase() : 'line'
+        } — likely missing QB/roster news.`
       )
     );
   }

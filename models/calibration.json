@@ -1,9 +1,9 @@
 {
-  "a": 0.311001,
-  "b": 0.135691,
+  "a": 0.950946,
+  "b": 0.084834,
   "n": 30,
-  "enabled": true,
-  "rmse_before": 0.219954,
-  "rmse_cv": 0.216712,
-  "rmse_after": 0.187821
+  "enabled": false,
+  "rmse_before": 0.149726,
+  "rmse_cv": 0.160189,
+  "rmse_after": 0.148662
 }

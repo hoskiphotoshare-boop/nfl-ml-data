@@ -325,10 +325,16 @@ def main() -> None:
         market_evs = [m["ev"] for m in markets.values() if m.get("ev") is not None]
         best_market_ev = max(market_evs) if market_evs else None
 
+        # Flag any market where the model and the price disagree by 20+ points,
+        # so large spread/total edges are not presented as clean picks either.
         market_edges = [
-            abs(m.get("edge", 0)) for m in markets.values() if m.get("edge") is not None
+            (key, abs(m.get("edge", 0)))
+            for key, m in markets.items()
+            if m.get("edge") is not None
         ]
-        outlier = bool(market_edges) and max(market_edges) >= 0.20
+        outlier_market = max(market_edges, key=lambda item: item[1])[0] if market_edges else None
+        outlier_edge = max((value for _, value in market_edges), default=0.0)
+        outlier = bool(market_edges) and outlier_edge >= 0.20
 
         comparisons.append(
             {
@@ -351,7 +357,8 @@ def main() -> None:
                 "best_market": best_market,
                 "best_edge": best_edge,
                 "outlier": outlier,
-                "outlier_edge": round(max(market_edges), 4) if market_edges else None,
+                "outlier_edge": round(outlier_edge, 4),
+                "outlier_market": outlier_market,
                 "best_team": markets[best_market]["team"] if best_market else None,
                 "model_spread": game.get("spread"),
                 "market_spread": market_spread,

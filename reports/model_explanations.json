@@ -1,151 +1,151 @@
 {
-  "generated_at": "2026-11-25T03:05:28.987126+00:00",
+  "generated_at": "2026-11-25T03:19:09.744008+00:00",
   "method": "Linear SHAP (match) and permutation SHAP (players)",
   "match": {
     "model": "logistic",
     "sample_size": 250,
-    "base_value_logit": 0.2355,
-    "base_probability": 0.5586,
+    "base_value_logit": 0.197,
+    "base_probability": 0.5491,
     "global": [
       {
-        "feature": "away_ng_rec_catch_percentage",
-        "label": "Away \u00b7 NG Rec Catch Percentage",
-        "mean_abs_shap": 0.3535,
-        "mean_shap": 0.095,
-        "share": 0.0824
+        "feature": "home_qb_starts",
+        "label": "Home \u00b7 Qb Starts",
+        "mean_abs_shap": 0.3006,
+        "mean_shap": 0.0059,
+        "share": 0.1235
       },
       {
-        "feature": "home_ng_rush_avg_time_to_los",
-        "label": "Home \u00b7 NG Rush Avg Time To LOS",
-        "mean_abs_shap": 0.2814,
-        "mean_shap": -0.0543,
-        "share": 0.0656
+        "feature": "away_qb_starts",
+        "label": "Away \u00b7 Qb Starts",
+        "mean_abs_shap": 0.2533,
+        "mean_shap": 0.013,
+        "share": 0.1041
       },
       {
-        "feature": "away_ng_rush_avg_time_to_los",
-        "label": "Away \u00b7 NG Rush Avg Time To LOS",
-        "mean_abs_shap": 0.2718,
-        "mean_shap": -0.0061,
-        "share": 0.0634
+        "feature": "away_prior_games",
+        "label": "Away \u00b7 Prior Games",
+        "mean_abs_shap": 0.2518,
+        "mean_shap": -0.0013,
+        "share": 0.1034
       },
       {
-        "feature": "away_ng_rec_percent_share_of_intended_air_yards",
-        "label": "Away \u00b7 NG Rec Percent Share Of Intended Air Yards",
-        "mean_abs_shap": 0.2537,
-        "mean_shap": -0.0431,
-        "share": 0.0591
+        "feature": "home_prior_games",
+        "label": "Home \u00b7 Prior Games",
+        "mean_abs_shap": 0.2503,
+        "mean_shap": 0.0037,
+        "share": 0.1028
       },
       {
-        "feature": "home_ng_rec_avg_cushion",
-        "label": "Home \u00b7 NG Rec Avg Cushion",
-        "mean_abs_shap": 0.2387,
-        "mean_shap": 0.0743,
-        "share": 0.0557
+        "feature": "diff_pg_diff",
+        "label": "Diff Pg Diff",
+        "mean_abs_shap": 0.1644,
+        "mean_shap": -0.0291,
+        "share": 0.0675
+      },
+      {
+        "feature": "away_passing_epa",
+        "label": "Away \u00b7 Passing EPA",
+        "mean_abs_shap": 0.1164,
+        "mean_shap": 0.0068,
+        "share": 0.0478
+      },
+      {
+        "feature": "home_diff_pg",
+        "label": "Home \u00b7 Diff Pg",
+        "mean_abs_shap": 0.1088,
+        "mean_shap": -0.0153,
+        "share": 0.0447
       },
       {
         "feature": "home_passing_epa",
         "label": "Home \u00b7 Passing EPA",
-        "mean_abs_shap": 0.2362,
-        "mean_shap": 0.0036,
-        "share": 0.0551
-      },
-      {
-        "feature": "away_ng_rec_avg_cushion",
-        "label": "Away \u00b7 NG Rec Avg Cushion",
-        "mean_abs_shap": 0.2148,
-        "mean_shap": -0.0673,
-        "share": 0.0501
-      },
-      {
-        "feature": "home_ng_pass_avg_completed_air_yards",
-        "label": "Home \u00b7 NG Pass Avg Completed Air Yards",
-        "mean_abs_shap": 0.182,
-        "mean_shap": -0.0357,
-        "share": 0.0424
-      },
-      {
-        "feature": "away_ng_pass_avg_completed_air_yards",
-        "label": "Away \u00b7 NG Pass Avg Completed Air Yards",
-        "mean_abs_shap": 0.1787,
-        "mean_shap": 0.0276,
-        "share": 0.0417
-      },
-      {
-        "feature": "away_ng_rush_efficiency",
-        "label": "Away \u00b7 NG Rush Efficiency",
-        "mean_abs_shap": 0.1757,
-        "mean_shap": -0.0035,
-        "share": 0.041
-      },
-      {
-        "feature": "home_ng_rush_efficiency",
-        "label": "Home \u00b7 NG Rush Efficiency",
-        "mean_abs_shap": 0.1674,
-        "mean_shap": -0.0353,
+        "mean_abs_shap": 0.095,
+        "mean_shap": 0.0015,
         "share": 0.039
       },
       {
-        "feature": "away_ng_pass_avg_intended_air_yards",
-        "label": "Away \u00b7 NG Pass Avg Intended Air Yards",
-        "mean_abs_shap": 0.1444,
-        "mean_shap": -0.0255,
-        "share": 0.0337
+        "feature": "away_qb_changed",
+        "label": "Away \u00b7 Qb Changed",
+        "mean_abs_shap": 0.0866,
+        "mean_shap": 0.0207,
+        "share": 0.0356
       },
       {
-        "feature": "away_ng_pass_aggressiveness",
-        "label": "Away \u00b7 NG Pass Aggressiveness",
-        "mean_abs_shap": 0.1376,
-        "mean_shap": -0.0184,
-        "share": 0.0321
-      },
-      {
-        "feature": "home_ng_rush_percent_attempts_gte_eight_defenders",
-        "label": "Home \u00b7 NG Rush Percent Attempts Gte Eight Defenders",
-        "mean_abs_shap": 0.137,
-        "mean_shap": 0.0165,
-        "share": 0.0319
-      },
-      {
-        "feature": "home_ng_pass_aggressiveness",
-        "label": "Home \u00b7 NG Pass Aggressiveness",
-        "mean_abs_shap": 0.1348,
-        "mean_shap": 0.0268,
-        "share": 0.0314
+        "feature": "home_qb_prior_epa",
+        "label": "Home \u00b7 Qb Prior EPA",
+        "mean_abs_shap": 0.0857,
+        "mean_shap": -0.0114,
+        "share": 0.0352
       },
       {
         "feature": "home_avg_points",
         "label": "Home \u00b7 Avg Points",
-        "mean_abs_shap": 0.1233,
-        "mean_shap": 0.0307,
-        "share": 0.0287
+        "mean_abs_shap": 0.0796,
+        "mean_shap": 0.0199,
+        "share": 0.0327
       },
       {
         "feature": "away_avg_points",
         "label": "Away \u00b7 Avg Points",
-        "mean_abs_shap": 0.1105,
-        "mean_shap": 0.0065,
-        "share": 0.0258
+        "mean_abs_shap": 0.0735,
+        "mean_shap": 0.0043,
+        "share": 0.0302
       },
       {
-        "feature": "away_ng_rec_avg_yac_above_expectation",
-        "label": "Away \u00b7 NG Rec Avg YAC Above Expectation",
-        "mean_abs_shap": 0.0949,
-        "mean_shap": -0.0056,
-        "share": 0.0221
+        "feature": "away_win_pct",
+        "label": "Away \u00b7 Win Pct",
+        "mean_abs_shap": 0.0672,
+        "mean_shap": -0.0007,
+        "share": 0.0276
       },
       {
-        "feature": "home_ng_rec_avg_yac_above_expectation",
-        "label": "Home \u00b7 NG Rec Avg YAC Above Expectation",
-        "mean_abs_shap": 0.089,
-        "mean_shap": -0.0021,
-        "share": 0.0208
+        "feature": "home_rushing_epa",
+        "label": "Home \u00b7 Rushing EPA",
+        "mean_abs_shap": 0.0637,
+        "mean_shap": 0.0016,
+        "share": 0.0262
       },
       {
-        "feature": "home_ng_pass_avg_intended_air_yards",
-        "label": "Home \u00b7 NG Pass Avg Intended Air Yards",
-        "mean_abs_shap": 0.0822,
-        "mean_shap": -0.0175,
-        "share": 0.0192
+        "feature": "away_short_week",
+        "label": "Away \u00b7 Short Week",
+        "mean_abs_shap": 0.0488,
+        "mean_shap": 0.004,
+        "share": 0.0201
+      },
+      {
+        "feature": "home_short_week",
+        "label": "Home \u00b7 Short Week",
+        "mean_abs_shap": 0.0463,
+        "mean_shap": -0.0055,
+        "share": 0.019
+      },
+      {
+        "feature": "away_avg_allowed",
+        "label": "Away \u00b7 Avg Allowed",
+        "mean_abs_shap": 0.0432,
+        "mean_shap": 0.0017,
+        "share": 0.0178
+      },
+      {
+        "feature": "home_win_pct",
+        "label": "Home \u00b7 Win Pct",
+        "mean_abs_shap": 0.0358,
+        "mean_shap": 0.0025,
+        "share": 0.0147
+      },
+      {
+        "feature": "away_rest_days",
+        "label": "Away \u00b7 Rest Days",
+        "mean_abs_shap": 0.0343,
+        "mean_shap": 0.0015,
+        "share": 0.0141
+      },
+      {
+        "feature": "win_pct_diff",
+        "label": "Win Pct Diff",
+        "mean_abs_shap": 0.0338,
+        "mean_shap": -0.0024,
+        "share": 0.0139
       }
     ],
     "games": [
@@ -154,56 +154,56 @@
         "matchup": "GB @ LA",
         "week": 12,
         "home_team": "LA",
-        "prediction": 0.4738,
-        "base_probability": 0.5586,
+        "prediction": 0.5302,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "home_ng_rec_avg_cushion",
-            "label": "Home \u00b7 NG Rec Avg Cushion",
-            "value": 0.0,
-            "shap": 2.2449
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": 0.2286
           },
           {
-            "feature": "home_ng_pass_avg_completed_air_yards",
-            "label": "Home \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 0.0,
-            "shap": -1.4236
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": -0.171
           },
           {
-            "feature": "home_ng_rush_avg_time_to_los",
-            "label": "Home \u00b7 NG Rush Avg Time To LOS",
-            "value": 0.0,
-            "shap": -1.0235
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": 4.6128,
+            "shap": -0.1561
           },
           {
-            "feature": "home_ng_pass_aggressiveness",
-            "label": "Home \u00b7 NG Pass Aggressiveness",
-            "value": 0.0,
-            "shap": 0.9023
+            "feature": "home_avg_points",
+            "label": "Home \u00b7 Avg Points",
+            "value": 24.4474,
+            "shap": 0.142
           },
           {
-            "feature": "home_ng_pass_avg_intended_air_yards",
-            "label": "Home \u00b7 NG Pass Avg Intended Air Yards",
-            "value": 0.0,
-            "shap": -0.7668
+            "feature": "away_avg_points",
+            "label": "Away \u00b7 Avg Points",
+            "value": 25.1576,
+            "shap": -0.1366
           },
           {
-            "feature": "home_ng_pass_passer_rating",
-            "label": "Home \u00b7 NG Pass Passer Rating",
-            "value": 0.0,
-            "shap": 0.6676
+            "feature": "home_passing_epa",
+            "label": "Home \u00b7 Passing EPA",
+            "value": 2.9466,
+            "shap": 0.0809
           },
           {
-            "feature": "home_ng_rush_efficiency",
-            "label": "Home \u00b7 NG Rush Efficiency",
-            "value": 0.0,
-            "shap": -0.6121
+            "feature": "away_pass_epa",
+            "label": "Away \u00b7 Pass EPA",
+            "value": 0.1365,
+            "shap": -0.0534
           },
           {
-            "feature": "home_ng_pass_avg_time_to_throw",
-            "label": "Home \u00b7 NG Pass Avg Time To Throw",
-            "value": 0.0,
-            "shap": -0.4602
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": 3.25,
+            "shap": 0.0475
           }
         ]
       },
@@ -212,56 +212,56 @@
         "matchup": "CHI @ DET",
         "week": 12,
         "home_team": "DET",
-        "prediction": 0.4607,
-        "base_probability": 0.5586,
+        "prediction": 0.6185,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "away_ng_rec_catch_percentage",
-            "label": "Away \u00b7 NG Rec Catch Percentage",
-            "value": 0.0,
-            "shap": 2.8961
-          },
-          {
-            "feature": "away_ng_rec_avg_cushion",
-            "label": "Away \u00b7 NG Rec Avg Cushion",
-            "value": 0.0,
-            "shap": -1.8524
-          },
-          {
-            "feature": "away_ng_rec_percent_share_of_intended_air_yards",
-            "label": "Away \u00b7 NG Rec Percent Share Of Intended Air Yards",
-            "value": 0.0,
-            "shap": -1.6169
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": 0.2286
           },
           {
             "feature": "home_passing_epa",
             "label": "Home \u00b7 Passing EPA",
             "value": 6.79,
-            "shap": 0.5343
+            "shap": 0.2149
           },
           {
-            "feature": "away_ng_rec_avg_yac_above_expectation",
-            "label": "Away \u00b7 NG Rec Avg YAC Above Expectation",
-            "value": 0.0,
-            "shap": 0.1845
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": -1.425,
+            "shap": 0.0962
           },
           {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.7905,
-            "shap": -0.1667
-          },
-          {
-            "feature": "away_ng_pass_completion_percentage_above_expectation",
-            "label": "Away \u00b7 NG Pass Completion Percentage Above Expectation",
-            "value": -2.9366,
-            "shap": 0.1589
+            "feature": "away_avg_points",
+            "label": "Away \u00b7 Avg Points",
+            "value": 20.4683,
+            "shap": 0.0892
           },
           {
             "feature": "home_avg_allowed",
             "label": "Home \u00b7 Avg Allowed",
             "value": 24.7035,
-            "shap": -0.1446
+            "shap": -0.0773
+          },
+          {
+            "feature": "away_win_pct",
+            "label": "Away \u00b7 Win Pct",
+            "value": 0.75,
+            "shap": -0.0772
+          },
+          {
+            "feature": "away_rest_days",
+            "label": "Away \u00b7 Rest Days",
+            "value": 14.0,
+            "shap": -0.0766
+          },
+          {
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": 4.125,
+            "shap": 0.0652
           }
         ]
       },
@@ -270,56 +270,56 @@
         "matchup": "PHI @ DAL",
         "week": 12,
         "home_team": "DAL",
-        "prediction": 0.5012,
-        "base_probability": 0.5586,
+        "prediction": 0.6607,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "away_ng_rec_percent_share_of_intended_air_yards",
-            "label": "Away \u00b7 NG Rec Percent Share Of Intended Air Yards",
-            "value": 36.2507,
-            "shap": 0.3707
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 1.0,
+            "shap": 0.3008
           },
           {
-            "feature": "home_ng_pass_aggressiveness",
-            "label": "Home \u00b7 NG Pass Aggressiveness",
-            "value": 19.7385,
-            "shap": -0.3389
-          },
-          {
-            "feature": "away_ng_rec_catch_percentage",
-            "label": "Away \u00b7 NG Rec Catch Percentage",
-            "value": 69.3452,
-            "shap": -0.292
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 10.0,
+            "shap": 0.3007
           },
           {
             "feature": "home_passing_epa",
             "label": "Home \u00b7 Passing EPA",
             "value": 3.5665,
-            "shap": 0.2548
+            "shap": 0.1025
           },
           {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8491,
-            "shap": -0.186
+            "feature": "home_prior_games",
+            "label": "Home \u00b7 Prior Games",
+            "value": 9.0,
+            "shap": -0.0945
           },
           {
-            "feature": "away_ng_pass_avg_completed_air_yards",
-            "label": "Away \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 6.2524,
-            "shap": -0.1859
+            "feature": "home_avg_points",
+            "label": "Home \u00b7 Avg Points",
+            "value": 23.3471,
+            "shap": 0.0829
           },
           {
-            "feature": "home_ng_pass_avg_completed_air_yards",
-            "label": "Home \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 6.2137,
-            "shap": 0.1806
+            "feature": "away_avg_points",
+            "label": "Away \u00b7 Avg Points",
+            "value": 23.9646,
+            "shap": -0.0791
           },
           {
-            "feature": "away_ng_pass_completion_percentage_above_expectation",
-            "label": "Away \u00b7 NG Pass Completion Percentage Above Expectation",
-            "value": 2.941,
-            "shap": -0.1419
+            "feature": "away_rest_days",
+            "label": "Away \u00b7 Rest Days",
+            "value": 14.0,
+            "shap": -0.0766
+          },
+          {
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": 2.6044,
+            "shap": -0.0722
           }
         ]
       },
@@ -328,56 +328,56 @@
         "matchup": "KC @ BUF",
         "week": 12,
         "home_team": "BUF",
-        "prediction": 0.5754,
-        "base_probability": 0.5586,
+        "prediction": 0.6019,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "home_passing_epa",
-            "label": "Home \u00b7 Passing EPA",
-            "value": 5.9032,
-            "shap": 0.4575
-          },
-          {
-            "feature": "away_ng_rec_catch_percentage",
-            "label": "Away \u00b7 NG Rec Catch Percentage",
-            "value": 69.7657,
-            "shap": -0.3114
-          },
-          {
-            "feature": "away_ng_pass_aggressiveness",
-            "label": "Away \u00b7 NG Pass Aggressiveness",
-            "value": 10.6341,
-            "shap": -0.193
-          },
-          {
-            "feature": "away_ng_pass_avg_completed_air_yards",
-            "label": "Away \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 4.5448,
-            "shap": 0.1785
-          },
-          {
-            "feature": "away_ng_rec_percent_share_of_intended_air_yards",
-            "label": "Away \u00b7 NG Rec Percent Share Of Intended Air Yards",
-            "value": 26.4822,
-            "shap": -0.1649
-          },
-          {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.7548,
-            "shap": -0.1549
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": 0.2286
           },
           {
             "feature": "home_rushing_epa",
             "label": "Home \u00b7 Rushing EPA",
             "value": 2.314,
-            "shap": 0.1314
+            "shap": 0.2147
+          },
+          {
+            "feature": "home_passing_epa",
+            "label": "Home \u00b7 Passing EPA",
+            "value": 5.9032,
+            "shap": 0.184
+          },
+          {
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": -0.171
+          },
+          {
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": 4.9508,
+            "shap": -0.1702
+          },
+          {
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": 8.625,
+            "shap": 0.1561
           },
           {
             "feature": "away_avg_points",
             "label": "Away \u00b7 Avg Points",
             "value": 24.08,
-            "shap": -0.1274
+            "shap": -0.0847
+          },
+          {
+            "feature": "away_win_pct",
+            "label": "Away \u00b7 Win Pct",
+            "value": 0.75,
+            "shap": -0.0772
           }
         ]
       },
@@ -386,56 +386,56 @@
         "matchup": "DEN @ PIT",
         "week": 12,
         "home_team": "PIT",
-        "prediction": 0.371,
-        "base_probability": 0.5586,
+        "prediction": 0.531,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "home_ng_rush_avg_time_to_los",
-            "label": "Home \u00b7 NG Rush Avg Time To LOS",
-            "value": 0.0,
-            "shap": -1.0235
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": 0.2286
           },
           {
-            "feature": "home_ng_rush_efficiency",
-            "label": "Home \u00b7 NG Rush Efficiency",
-            "value": 0.0,
-            "shap": -0.6121
-          },
-          {
-            "feature": "home_ng_rush_percent_attempts_gte_eight_defenders",
-            "label": "Home \u00b7 NG Rush Percent Attempts Gte Eight Defenders",
-            "value": 0.0,
-            "shap": 0.4237
-          },
-          {
-            "feature": "away_ng_rec_percent_share_of_intended_air_yards",
-            "label": "Away \u00b7 NG Rec Percent Share Of Intended Air Yards",
-            "value": 36.132,
-            "shap": 0.3642
-          },
-          {
-            "feature": "home_ng_rec_avg_yac_above_expectation",
-            "label": "Home \u00b7 NG Rec Avg YAC Above Expectation",
-            "value": 1.5211,
-            "shap": 0.3173
-          },
-          {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8825,
-            "shap": -0.1971
-          },
-          {
-            "feature": "home_ng_pass_avg_completed_air_yards",
-            "label": "Home \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 4.8822,
-            "shap": -0.1632
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": -0.171
           },
           {
             "feature": "home_avg_allowed",
             "label": "Home \u00b7 Avg Allowed",
             "value": 19.5032,
-            "shap": 0.1474
+            "shap": 0.0787
+          },
+          {
+            "feature": "away_win_pct",
+            "label": "Away \u00b7 Win Pct",
+            "value": 0.75,
+            "shap": -0.0772
+          },
+          {
+            "feature": "away_rest_days",
+            "label": "Away \u00b7 Rest Days",
+            "value": 14.0,
+            "shap": -0.0766
+          },
+          {
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": 4.5,
+            "shap": 0.0728
+          },
+          {
+            "feature": "rest_diff",
+            "label": "Rest Diff",
+            "value": -7.0,
+            "shap": -0.064
+          },
+          {
+            "feature": "home_avg_points",
+            "label": "Home \u00b7 Avg Points",
+            "value": 22.6385,
+            "shap": 0.0449
           }
         ]
       },
@@ -444,56 +444,56 @@
         "matchup": "NO @ CIN",
         "week": 12,
         "home_team": "CIN",
-        "prediction": 0.3169,
-        "base_probability": 0.5586,
+        "prediction": 0.6768,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "home_ng_rush_avg_time_to_los",
-            "label": "Home \u00b7 NG Rush Avg Time To LOS",
-            "value": 0.0,
-            "shap": -1.0235
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": 0.2286
           },
           {
-            "feature": "home_ng_rush_efficiency",
-            "label": "Home \u00b7 NG Rush Efficiency",
-            "value": 0.0,
-            "shap": -0.6121
+            "feature": "home_qb_prior_epa",
+            "label": "Home \u00b7 Qb Prior EPA",
+            "value": 0.4221,
+            "shap": 0.2281
           },
           {
-            "feature": "home_ng_rush_percent_attempts_gte_eight_defenders",
-            "label": "Home \u00b7 NG Rush Percent Attempts Gte Eight Defenders",
-            "value": 0.0,
-            "shap": 0.4237
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": -0.171
+          },
+          {
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": 8.125,
+            "shap": 0.146
           },
           {
             "feature": "home_passing_epa",
             "label": "Home \u00b7 Passing EPA",
             "value": 4.2774,
-            "shap": 0.3165
-          },
-          {
-            "feature": "away_ng_rec_avg_yac_above_expectation",
-            "label": "Away \u00b7 NG Rec Avg YAC Above Expectation",
-            "value": -0.0018,
-            "shap": 0.1851
-          },
-          {
-            "feature": "home_ng_rec_avg_yac_above_expectation",
-            "label": "Home \u00b7 NG Rec Avg YAC Above Expectation",
-            "value": 1.0909,
-            "shap": 0.176
+            "shap": 0.1273
           },
           {
             "feature": "away_avg_points",
             "label": "Away \u00b7 Avg Points",
             "value": 24.7161,
-            "shap": -0.1735
+            "shap": -0.1153
           },
           {
-            "feature": "away_ng_rec_percent_share_of_intended_air_yards",
-            "label": "Away \u00b7 NG Rec Percent Share Of Intended Air Yards",
-            "value": 32.4247,
-            "shap": 0.161
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": -0.2168,
+            "shap": 0.0457
+          },
+          {
+            "feature": "away_avg_allowed",
+            "label": "Away \u00b7 Avg Allowed",
+            "value": 23.1054,
+            "shap": 0.0451
           }
         ]
       },
@@ -502,56 +502,56 @@
         "matchup": "BAL @ HOU",
         "week": 12,
         "home_team": "HOU",
-        "prediction": 0.4037,
-        "base_probability": 0.5586,
+        "prediction": 0.6583,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "away_ng_rec_catch_percentage",
-            "label": "Away \u00b7 NG Rec Catch Percentage",
-            "value": 69.3261,
-            "shap": -0.2912
+            "feature": "home_short_week",
+            "label": "Home \u00b7 Short Week",
+            "value": 1.0,
+            "shap": 0.364
           },
           {
-            "feature": "home_ng_pass_avg_completed_air_yards",
-            "label": "Home \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 6.377,
-            "shap": 0.2228
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 1.0,
+            "shap": 0.3008
           },
           {
-            "feature": "away_ng_pass_avg_completed_air_yards",
-            "label": "Away \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 6.4143,
-            "shap": -0.2205
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": 0.2286
           },
           {
             "feature": "away_avg_allowed",
             "label": "Away \u00b7 Avg Allowed",
             "value": 18.7599,
-            "shap": -0.1963
+            "shap": -0.1434
           },
           {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8285,
-            "shap": -0.1793
+            "feature": "home_rushing_epa",
+            "label": "Home \u00b7 Rushing EPA",
+            "value": -2.9318,
+            "shap": -0.1335
           },
           {
-            "feature": "home_ng_rush_avg_time_to_los",
-            "label": "Home \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8629,
-            "shap": 0.1622
+            "feature": "away_prior_games",
+            "label": "Away \u00b7 Prior Games",
+            "value": 9.0,
+            "shap": 0.097
           },
           {
-            "feature": "away_ng_rec_avg_cushion",
-            "label": "Away \u00b7 NG Rec Avg Cushion",
-            "value": 6.391,
-            "shap": 0.1469
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": 2.985,
+            "shap": -0.0881
           },
           {
-            "feature": "home_ng_rush_efficiency",
-            "label": "Home \u00b7 NG Rush Efficiency",
-            "value": 4.6566,
-            "shap": 0.1414
+            "feature": "home_qb_prior_epa",
+            "label": "Home \u00b7 Qb Prior EPA",
+            "value": 0.1561,
+            "shap": 0.0591
           }
         ]
       },
@@ -560,56 +560,56 @@
         "matchup": "NYG @ IND",
         "week": 12,
         "home_team": "IND",
-        "prediction": 0.5913,
-        "base_probability": 0.5586,
+        "prediction": 0.6433,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "home_passing_epa",
-            "label": "Home \u00b7 Passing EPA",
-            "value": -1.9881,
-            "shap": -0.2268
+            "feature": "home_short_week",
+            "label": "Home \u00b7 Short Week",
+            "value": 1.0,
+            "shap": 0.364
+          },
+          {
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 10.0,
+            "shap": 0.3007
+          },
+          {
+            "feature": "home_qb_prior_epa",
+            "label": "Home \u00b7 Qb Prior EPA",
+            "value": -0.4026,
+            "shap": -0.2958
+          },
+          {
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 3.0,
+            "shap": 0.1828
+          },
+          {
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": -7.2222,
+            "shap": -0.164
           },
           {
             "feature": "home_avg_points",
             "label": "Home \u00b7 Avg Points",
             "value": 24.4958,
-            "shap": 0.2238
+            "shap": 0.1446
           },
           {
-            "feature": "home_ng_rec_avg_cushion",
-            "label": "Home \u00b7 NG Rec Avg Cushion",
-            "value": 6.4758,
-            "shap": -0.1854
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": -2.2248,
+            "shap": 0.1296
           },
           {
-            "feature": "away_ng_rec_avg_cushion",
-            "label": "Away \u00b7 NG Rec Avg Cushion",
-            "value": 6.3929,
-            "shap": 0.1475
-          },
-          {
-            "feature": "away_ng_rec_catch_percentage",
-            "label": "Away \u00b7 NG Rec Catch Percentage",
-            "value": 66.0843,
-            "shap": -0.1421
-          },
-          {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.7045,
-            "shap": -0.1383
-          },
-          {
-            "feature": "home_ng_pass_aggressiveness",
-            "label": "Home \u00b7 NG Pass Aggressiveness",
-            "value": 16.1245,
-            "shap": -0.1117
-          },
-          {
-            "feature": "home_ng_pass_avg_completed_air_yards",
-            "label": "Home \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 5.94,
-            "shap": 0.1099
+            "feature": "home_prior_games",
+            "label": "Home \u00b7 Prior Games",
+            "value": 9.0,
+            "shap": -0.0945
           }
         ]
       },
@@ -618,56 +618,56 @@
         "matchup": "NYJ @ MIA",
         "week": 12,
         "home_team": "MIA",
-        "prediction": 0.771,
-        "base_probability": 0.5586,
+        "prediction": 0.4708,
+        "base_probability": 0.5491,
         "drivers": [
+          {
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 1.0,
+            "shap": -0.3483
+          },
+          {
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 10.0,
+            "shap": -0.23
+          },
+          {
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": -4.1345,
+            "shap": 0.2093
+          },
+          {
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": -9.25,
+            "shap": -0.205
+          },
           {
             "feature": "away_avg_points",
             "label": "Away \u00b7 Avg Points",
             "value": 19.2919,
-            "shap": 0.2194
+            "shap": 0.1459
           },
           {
-            "feature": "away_ng_rush_efficiency",
-            "label": "Away \u00b7 NG Rush Efficiency",
-            "value": 5.0027,
-            "shap": -0.2133
+            "feature": "away_prior_games",
+            "label": "Away \u00b7 Prior Games",
+            "value": 9.0,
+            "shap": 0.097
           },
           {
-            "feature": "away_ng_rec_percent_share_of_intended_air_yards",
-            "label": "Away \u00b7 NG Rec Percent Share Of Intended Air Yards",
-            "value": 33.0293,
-            "shap": 0.1941
+            "feature": "home_avg_points",
+            "label": "Home \u00b7 Avg Points",
+            "value": 20.3758,
+            "shap": -0.0765
           },
           {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8614,
-            "shap": -0.1901
-          },
-          {
-            "feature": "away_ng_pass_completion_percentage_above_expectation",
-            "label": "Away \u00b7 NG Pass Completion Percentage Above Expectation",
-            "value": -3.2101,
-            "shap": 0.1729
-          },
-          {
-            "feature": "home_ng_rush_avg_time_to_los",
-            "label": "Home \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8333,
-            "shap": 0.15
-          },
-          {
-            "feature": "home_passing_epa",
-            "label": "Home \u00b7 Passing EPA",
-            "value": 2.2117,
-            "shap": 0.1374
-          },
-          {
-            "feature": "home_ng_rush_efficiency",
-            "label": "Home \u00b7 NG Rush Efficiency",
-            "value": 4.521,
-            "shap": 0.1195
+            "feature": "away_win_pct",
+            "label": "Away \u00b7 Win Pct",
+            "value": 0.2222,
+            "shap": 0.0722
           }
         ]
       },
@@ -676,56 +676,56 @@
         "matchup": "ATL @ MIN",
         "week": 12,
         "home_team": "MIN",
-        "prediction": 0.6893,
-        "base_probability": 0.5586,
+        "prediction": 0.4462,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.9295,
-            "shap": -0.2126
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 1.0,
+            "shap": -0.3483
           },
           {
-            "feature": "home_ng_pass_avg_completed_air_yards",
-            "label": "Home \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 6.295,
-            "shap": 0.2016
+            "feature": "home_rushing_epa",
+            "label": "Home \u00b7 Rushing EPA",
+            "value": -1.8365,
+            "shap": -0.0608
           },
           {
-            "feature": "away_ng_rec_avg_cushion",
-            "label": "Away \u00b7 NG Rec Avg Cushion",
-            "value": 6.4391,
-            "shap": 0.1619
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": 3.75,
+            "shap": 0.0576
           },
           {
-            "feature": "home_ng_rush_avg_time_to_los",
-            "label": "Home \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8451,
-            "shap": 0.1548
+            "feature": "home_avg_points",
+            "label": "Home \u00b7 Avg Points",
+            "value": 22.8178,
+            "shap": 0.0545
           },
           {
-            "feature": "away_ng_rec_percent_share_of_intended_air_yards",
-            "label": "Away \u00b7 NG Rec Percent Share Of Intended Air Yards",
-            "value": 31.9508,
-            "shap": 0.135
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 7.0,
+            "shap": -0.0531
           },
           {
-            "feature": "away_ng_rush_efficiency",
-            "label": "Away \u00b7 NG Rush Efficiency",
-            "value": 4.445,
-            "shap": -0.135
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": -0.3383,
+            "shap": 0.0508
+          },
+          {
+            "feature": "away_avg_allowed",
+            "label": "Away \u00b7 Avg Allowed",
+            "value": 23.1765,
+            "shap": 0.0482
           },
           {
             "feature": "home_passing_epa",
             "label": "Home \u00b7 Passing EPA",
             "value": -0.6476,
-            "shap": -0.1106
-          },
-          {
-            "feature": "away_ng_pass_avg_intended_air_yards",
-            "label": "Away \u00b7 NG Pass Avg Intended Air Yards",
-            "value": 8.2488,
-            "shap": 0.1088
+            "shap": -0.0445
           }
         ]
       },
@@ -734,56 +734,56 @@
         "matchup": "TEN @ JAX",
         "week": 12,
         "home_team": "JAX",
-        "prediction": 0.7237,
-        "base_probability": 0.5586,
+        "prediction": 0.7414,
+        "base_probability": 0.5491,
         "drivers": [
           {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8236,
-            "shap": -0.1776
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": 13.5,
+            "shap": 0.2546
           },
           {
-            "feature": "home_ng_pass_avg_completed_air_yards",
-            "label": "Home \u00b7 NG Pass Avg Completed Air Yards",
-            "value": 6.1274,
-            "shap": 0.1583
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": 0.2286
+          },
+          {
+            "feature": "home_qb_prior_epa",
+            "label": "Home \u00b7 Qb Prior EPA",
+            "value": 0.3756,
+            "shap": 0.1986
+          },
+          {
+            "feature": "away_passing_epa",
+            "label": "Away \u00b7 Passing EPA",
+            "value": -3.641,
+            "shap": 0.1887
+          },
+          {
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": -0.171
+          },
+          {
+            "feature": "away_win_pct",
+            "label": "Away \u00b7 Win Pct",
+            "value": 0.125,
+            "shap": 0.0998
+          },
+          {
+            "feature": "home_avg_points",
+            "label": "Home \u00b7 Avg Points",
+            "value": 20.4442,
+            "shap": -0.0728
           },
           {
             "feature": "home_passing_epa",
             "label": "Home \u00b7 Passing EPA",
             "value": 2.3836,
-            "shap": 0.1523
-          },
-          {
-            "feature": "home_ng_rec_avg_cushion",
-            "label": "Home \u00b7 NG Rec Avg Cushion",
-            "value": 6.3563,
-            "shap": -0.1406
-          },
-          {
-            "feature": "home_ng_rush_avg_time_to_los",
-            "label": "Home \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8011,
-            "shap": 0.1366
-          },
-          {
-            "feature": "away_ng_rush_efficiency",
-            "label": "Away \u00b7 NG Rush Efficiency",
-            "value": 4.4249,
-            "shap": -0.1321
-          },
-          {
-            "feature": "away_ng_rec_catch_percentage",
-            "label": "Away \u00b7 NG Rec Catch Percentage",
-            "value": 60.386,
-            "shap": 0.1199
-          },
-          {
-            "feature": "away_ng_rec_avg_cushion",
-            "label": "Away \u00b7 NG Rec Avg Cushion",
-            "value": 6.2902,
-            "shap": 0.1154
+            "shap": 0.0612
           }
         ]
       },
@@ -792,56 +792,56 @@
         "matchup": "NE @ LAC",
         "week": 12,
         "home_team": "LAC",
-        "prediction": 0.3751,
-        "base_probability": 0.5586,
+        "prediction": 0.6325,
+        "base_probability": 0.5491,
         "drivers": [
+          {
+            "feature": "away_qb_changed",
+            "label": "Away \u00b7 Qb Changed",
+            "value": 1.0,
+            "shap": 0.4327
+          },
+          {
+            "feature": "away_qb_starts",
+            "label": "Away \u00b7 Qb Starts",
+            "value": 0.0,
+            "shap": 0.3598
+          },
+          {
+            "feature": "home_diff_pg",
+            "label": "Home \u00b7 Diff Pg",
+            "value": -12.25,
+            "shap": -0.2656
+          },
+          {
+            "feature": "home_qb_starts",
+            "label": "Home \u00b7 Qb Starts",
+            "value": 9.0,
+            "shap": 0.2286
+          },
+          {
+            "feature": "home_qb_prior_epa",
+            "label": "Home \u00b7 Qb Prior EPA",
+            "value": -0.219,
+            "shap": -0.1792
+          },
           {
             "feature": "away_avg_points",
             "label": "Away \u00b7 Avg Points",
             "value": 25.5894,
-            "shap": -0.2367
-          },
-          {
-            "feature": "away_ng_rec_catch_percentage",
-            "label": "Away \u00b7 NG Rec Catch Percentage",
-            "value": 67.0064,
-            "shap": -0.1845
+            "shap": -0.1574
           },
           {
             "feature": "away_avg_allowed",
             "label": "Away \u00b7 Avg Allowed",
             "value": 19.2866,
-            "shap": -0.1651
+            "shap": -0.1205
           },
           {
-            "feature": "away_ng_rush_avg_time_to_los",
-            "label": "Away \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.774,
-            "shap": -0.1612
-          },
-          {
-            "feature": "home_ng_rush_efficiency",
-            "label": "Home \u00b7 NG Rush Efficiency",
-            "value": 4.7029,
-            "shap": 0.1489
-          },
-          {
-            "feature": "home_ng_rush_avg_time_to_los",
-            "label": "Home \u00b7 NG Rush Avg Time To LOS",
-            "value": 2.8026,
-            "shap": 0.1372
-          },
-          {
-            "feature": "away_ng_pass_completion_percentage_above_expectation",
-            "label": "Away \u00b7 NG Pass Completion Percentage Above Expectation",
-            "value": 2.331,
-            "shap": -0.1107
-          },
-          {
-            "feature": "away_ng_rec_percent_share_of_intended_air_yards",
-            "label": "Away \u00b7 NG Rec Percent Share Of Intended Air Yards",
-            "value": 27.5971,
-            "shap": -0.1037
+            "feature": "home_win_pct",
+            "label": "Home \u00b7 Win Pct",
+            "value": 0.0,
+            "shap": 0.0747
           }
         ]
       }
@@ -856,112 +856,112 @@
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 2.3573,
-          "mean_shap": 0.9509,
-          "share": 0.3639
+          "mean_abs_shap": 2.356,
+          "mean_shap": 0.9514,
+          "share": 0.364
         },
         {
           "feature": "roll_offense_pct",
           "label": "Rolling offense pct",
-          "mean_abs_shap": 1.1907,
-          "mean_shap": 0.1296,
-          "share": 0.1838
+          "mean_abs_shap": 1.1905,
+          "mean_shap": 0.1269,
+          "share": 0.1839
         },
         {
           "feature": "roll_rushing_yards",
           "label": "Rolling rushing yards",
-          "mean_abs_shap": 0.4261,
-          "mean_shap": 0.1278,
-          "share": 0.0658
+          "mean_abs_shap": 0.4266,
+          "mean_shap": 0.1318,
+          "share": 0.0659
         },
         {
           "feature": "opp_def_rating",
           "label": "Opponent defense rating",
-          "mean_abs_shap": 0.363,
-          "mean_shap": 0.0334,
-          "share": 0.056
+          "mean_abs_shap": 0.3617,
+          "mean_shap": 0.0345,
+          "share": 0.0559
         },
         {
           "feature": "roll_offense_snaps",
           "label": "Rolling offense snaps",
-          "mean_abs_shap": 0.3468,
-          "mean_shap": 0.0732,
-          "share": 0.0535
+          "mean_abs_shap": 0.3476,
+          "mean_shap": 0.0753,
+          "share": 0.0537
         },
         {
           "feature": "is_home",
           "label": "Home game",
-          "mean_abs_shap": 0.3225,
-          "mean_shap": -0.0229,
-          "share": 0.0498
+          "mean_abs_shap": 0.3217,
+          "mean_shap": -0.025,
+          "share": 0.0497
         },
         {
           "feature": "roll_completions",
           "label": "Rolling completions",
-          "mean_abs_shap": 0.3143,
-          "mean_shap": 0.1128,
-          "share": 0.0485
+          "mean_abs_shap": 0.3128,
+          "mean_shap": 0.1134,
+          "share": 0.0483
         },
         {
           "feature": "roll_carries",
           "label": "Rolling carries",
-          "mean_abs_shap": 0.2845,
-          "mean_shap": 0.0732,
-          "share": 0.0439
+          "mean_abs_shap": 0.2847,
+          "mean_shap": 0.0725,
+          "share": 0.044
         },
         {
           "feature": "roll_passing_interceptions",
           "label": "Rolling passing interceptions",
-          "mean_abs_shap": 0.1996,
-          "mean_shap": 0.1902,
-          "share": 0.0308
+          "mean_abs_shap": 0.1998,
+          "mean_shap": 0.1908,
+          "share": 0.0309
         },
         {
           "feature": "roll_attempts",
           "label": "Rolling attempts",
-          "mean_abs_shap": 0.1581,
-          "mean_shap": -0.0285,
-          "share": 0.0244
+          "mean_abs_shap": 0.156,
+          "mean_shap": -0.0307,
+          "share": 0.0241
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.1448,
-          "mean_shap": -0.0151,
-          "share": 0.0224
+          "mean_abs_shap": 0.1455,
+          "mean_shap": -0.0153,
+          "share": 0.0225
         },
         {
           "feature": "roll_rushing_tds",
           "label": "Rolling rushing tds",
           "mean_abs_shap": 0.1157,
-          "mean_shap": -0.026,
+          "mean_shap": -0.0263,
           "share": 0.0179
         },
         {
           "feature": "roll_passing_yards",
           "label": "Rolling passing yards",
-          "mean_abs_shap": 0.102,
-          "mean_shap": 0.0103,
+          "mean_abs_shap": 0.1021,
+          "mean_shap": 0.0115,
           "share": 0.0158
         },
         {
           "feature": "roll_passing_tds",
           "label": "Rolling passing tds",
-          "mean_abs_shap": 0.086,
-          "mean_shap": 0.0448,
-          "share": 0.0133
+          "mean_abs_shap": 0.0854,
+          "mean_shap": 0.043,
+          "share": 0.0132
         },
         {
           "feature": "roll_receptions",
           "label": "Rolling receptions",
-          "mean_abs_shap": 0.0422,
-          "mean_shap": -0.0005,
+          "mean_abs_shap": 0.0421,
+          "mean_shap": -0.0006,
           "share": 0.0065
         },
         {
           "feature": "roll_yards",
           "label": "Rolling yards",
-          "mean_abs_shap": 0.0244,
+          "mean_abs_shap": 0.0243,
           "mean_shap": -0.0024,
           "share": 0.0038
         }
@@ -977,49 +977,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 17.825,
-              "shap": 3.7127
+              "shap": 3.7425
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 1.0,
-              "shap": 1.0551
+              "shap": 1.0307
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 64.5,
-              "shap": 0.7457
+              "shap": 0.7488
             },
             {
               "feature": "roll_completions",
               "label": "Rolling completions",
               "value": 23.0,
-              "shap": 0.7078
+              "shap": 0.6959
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 19.25,
-              "shap": 0.5613
+              "shap": 0.568
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.5421
+              "shap": 0.5395
             },
             {
               "feature": "roll_passing_yards",
               "label": "Rolling passing yards",
               "value": 260.0,
-              "shap": 0.3621
+              "shap": 0.3577
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 14.54,
-              "shap": -0.18
+              "shap": -0.1837
             }
           ]
         },
@@ -1033,49 +1033,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 23.25,
-              "shap": 4.7719
+              "shap": 4.7663
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 76.0,
-              "shap": 0.9532
+              "shap": 0.9245
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 1.0,
-              "shap": 0.6619
+              "shap": 0.6708
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 24.56,
-              "shap": 0.6466
+              "shap": 0.6332
             },
             {
               "feature": "roll_passing_tds",
               "label": "Rolling passing tds",
               "value": 2.75,
-              "shap": -0.6424
+              "shap": -0.6135
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.4745
+              "shap": 0.508
             },
             {
               "feature": "roll_passing_yards",
               "label": "Rolling passing yards",
               "value": 271.25,
-              "shap": 0.4627
+              "shap": 0.4485
             },
             {
               "feature": "roll_completions",
               "label": "Rolling completions",
               "value": 21.25,
-              "shap": 0.2241
+              "shap": 0.2199
             }
           ]
         },
@@ -1089,49 +1089,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 23.325,
-              "shap": 4.0462
-            },
-            {
-              "feature": "roll_offense_pct",
-              "label": "Rolling offense pct",
-              "value": 0.9725,
-              "shap": 0.9079
+              "shap": 4.0495
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
               "value": 4.0,
-              "shap": 0.8959
+              "shap": 0.9149
+            },
+            {
+              "feature": "roll_offense_pct",
+              "label": "Rolling offense pct",
+              "value": 0.9725,
+              "shap": 0.8975
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 63.25,
-              "shap": 0.7822
+              "shap": 0.7971
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.4455
+              "shap": 0.4491
             },
             {
               "feature": "roll_passing_yards",
               "label": "Rolling passing yards",
               "value": 265.0,
-              "shap": 0.3993
+              "shap": 0.3909
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 2.0,
-              "shap": -0.3473
+              "shap": -0.356
             },
             {
-              "feature": "roll_passing_tds",
-              "label": "Rolling passing tds",
-              "value": 3.25,
-              "shap": -0.2692
+              "feature": "roll_completions",
+              "label": "Rolling completions",
+              "value": 20.5,
+              "shap": 0.2607
             }
           ]
         },
@@ -1145,49 +1145,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 22.99,
-              "shap": 4.9668
+              "shap": 4.9555
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.9525,
-              "shap": 1.0294
+              "shap": 1.0877
             },
             {
               "feature": "roll_passing_yards",
               "label": "Rolling passing yards",
               "value": 263.5,
-              "shap": 0.5482
+              "shap": 0.5336
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 15.865,
-              "shap": 0.4045
+              "shap": 0.4053
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 0.0,
-              "shap": -0.3389
+              "shap": -0.3438
             },
             {
               "feature": "roll_completions",
               "label": "Rolling completions",
               "value": 19.75,
-              "shap": 0.3203
-            },
-            {
-              "feature": "roll_carries",
-              "label": "Rolling carries",
-              "value": 4.25,
-              "shap": 0.1546
+              "shap": 0.3347
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 14.5,
-              "shap": -0.1356
+              "shap": -0.1475
+            },
+            {
+              "feature": "roll_carries",
+              "label": "Rolling carries",
+              "value": 4.25,
+              "shap": 0.1243
             }
           ]
         },
@@ -1201,49 +1201,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 17.615,
-              "shap": 3.6017
+              "shap": 3.5842
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.9925,
-              "shap": 1.1429
-            },
-            {
-              "feature": "roll_completions",
-              "label": "Rolling completions",
-              "value": 23.0,
-              "shap": 0.6189
+              "shap": 1.2085
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 0.0,
-              "shap": -0.6177
+              "shap": -0.6431
+            },
+            {
+              "feature": "roll_completions",
+              "label": "Rolling completions",
+              "value": 23.0,
+              "shap": 0.6394
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 28.75,
-              "shap": 0.5995
+              "shap": 0.5811
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 66.25,
-              "shap": 0.4263
+              "shap": 0.4286
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 6.0,
-              "shap": 0.2972
+              "shap": 0.3045
             },
             {
               "feature": "roll_passing_yards",
               "label": "Rolling passing yards",
               "value": 218.5,
-              "shap": 0.2125
+              "shap": 0.1955
             }
           ]
         },
@@ -1257,49 +1257,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 32.765,
-              "shap": 5.2297
+              "shap": 5.174
             },
             {
               "feature": "roll_completions",
               "label": "Rolling completions",
               "value": 29.75,
-              "shap": 1.1173
+              "shap": 1.0998
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.9725,
-              "shap": 0.8882
+              "shap": 0.8996
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 61.0,
-              "shap": 0.3602
+              "shap": 0.3673
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 11.0425,
-              "shap": -0.3253
+              "shap": -0.2732
             },
             {
               "feature": "roll_passing_tds",
               "label": "Rolling passing tds",
               "value": 4.0,
-              "shap": -0.2184
+              "shap": -0.2233
             },
             {
               "feature": "roll_passing_yards",
               "label": "Rolling passing yards",
               "value": 358.5,
-              "shap": -0.1826
+              "shap": -0.1903
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 0.0,
-              "shap": -0.1781
+              "shap": -0.172
             }
           ]
         }
@@ -1313,100 +1313,100 @@
         {
           "feature": "roll_offense_pct",
           "label": "Rolling offense pct",
-          "mean_abs_shap": 0.9216,
-          "mean_shap": -0.5742,
-          "share": 0.2086
+          "mean_abs_shap": 0.9211,
+          "mean_shap": -0.5743,
+          "share": 0.2082
         },
         {
           "feature": "roll_carries",
           "label": "Rolling carries",
-          "mean_abs_shap": 0.7569,
-          "mean_shap": -0.4605,
-          "share": 0.1713
+          "mean_abs_shap": 0.7559,
+          "mean_shap": -0.4587,
+          "share": 0.1709
         },
         {
           "feature": "roll_rushing_yards",
           "label": "Rolling rushing yards",
-          "mean_abs_shap": 0.6745,
-          "mean_shap": -0.2841,
-          "share": 0.1527
+          "mean_abs_shap": 0.673,
+          "mean_shap": -0.2833,
+          "share": 0.1521
         },
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 0.6514,
-          "mean_shap": -0.4955,
-          "share": 0.1475
+          "mean_abs_shap": 0.6593,
+          "mean_shap": -0.4991,
+          "share": 0.1491
         },
         {
           "feature": "roll_st_pct",
           "label": "Rolling st pct",
-          "mean_abs_shap": 0.4265,
-          "mean_shap": -0.2216,
-          "share": 0.0965
+          "mean_abs_shap": 0.4292,
+          "mean_shap": -0.2222,
+          "share": 0.097
         },
         {
           "feature": "roll_receptions",
           "label": "Rolling receptions",
-          "mean_abs_shap": 0.1861,
-          "mean_shap": -0.0929,
-          "share": 0.0421
+          "mean_abs_shap": 0.1849,
+          "mean_shap": -0.0924,
+          "share": 0.0418
         },
         {
           "feature": "opp_def_rating",
           "label": "Opponent defense rating",
-          "mean_abs_shap": 0.1809,
-          "mean_shap": 0.0127,
-          "share": 0.0409
+          "mean_abs_shap": 0.1817,
+          "mean_shap": 0.0125,
+          "share": 0.0411
         },
         {
           "feature": "roll_offense_snaps",
           "label": "Rolling offense snaps",
           "mean_abs_shap": 0.1591,
-          "mean_shap": 0.0551,
+          "mean_shap": 0.0557,
           "share": 0.036
         },
         {
           "feature": "roll_st_snaps",
           "label": "Rolling st snaps",
-          "mean_abs_shap": 0.1176,
-          "mean_shap": -0.0228,
-          "share": 0.0266
+          "mean_abs_shap": 0.117,
+          "mean_shap": -0.0227,
+          "share": 0.0264
         },
         {
           "feature": "roll_yards",
           "label": "Rolling yards",
-          "mean_abs_shap": 0.1123,
-          "mean_shap": 0.0309,
-          "share": 0.0254
+          "mean_abs_shap": 0.1118,
+          "mean_shap": 0.0312,
+          "share": 0.0253
         },
         {
           "feature": "roll_targets",
           "label": "Rolling targets",
-          "mean_abs_shap": 0.0902,
-          "mean_shap": -0.0299,
-          "share": 0.0204
+          "mean_abs_shap": 0.0898,
+          "mean_shap": -0.029,
+          "share": 0.0203
         },
         {
           "feature": "is_home",
           "label": "Home game",
-          "mean_abs_shap": 0.0761,
-          "mean_shap": 0.0005,
-          "share": 0.0172
+          "mean_abs_shap": 0.0766,
+          "mean_shap": 0.0008,
+          "share": 0.0173
         },
         {
           "feature": "roll_rushing_tds",
           "label": "Rolling rushing tds",
-          "mean_abs_shap": 0.0493,
-          "mean_shap": 0.0373,
-          "share": 0.0112
+          "mean_abs_shap": 0.0492,
+          "mean_shap": 0.0366,
+          "share": 0.0111
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.0129,
+          "mean_abs_shap": 0.0126,
           "mean_shap": -0.0029,
-          "share": 0.0029
+          "share": 0.0028
         },
         {
           "feature": "roll_touchdowns",
@@ -1427,49 +1427,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 27.3,
-              "shap": 4.5094
+              "shap": 4.4175
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.6625,
-              "shap": 3.0335
+              "shap": 3.0507
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 58.25,
-              "shap": 1.4563
+              "shap": 1.4216
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 13.5,
-              "shap": 1.2913
+              "shap": 1.3228
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 5.25,
-              "shap": 1.1406
+              "shap": 1.1877
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0075,
-              "shap": 0.7733
+              "shap": 0.8074
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 8.1875,
-              "shap": 0.7188
+              "shap": 0.71
             },
             {
               "feature": "roll_rushing_tds",
               "label": "Rolling rushing tds",
               "value": 1.25,
-              "shap": -0.4631
+              "shap": -0.4689
             }
           ]
         },
@@ -1483,49 +1483,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 22.425,
-              "shap": 4.8229
+              "shap": 4.8209
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.7625,
-              "shap": 2.9171
+              "shap": 2.9812
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 18.5,
-              "shap": 1.5991
+              "shap": 1.5711
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 88.75,
-              "shap": 1.4322
+              "shap": 1.4036
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.6729
+              "shap": 0.698
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 3.5,
-              "shap": 0.5434
+              "shap": 0.5455
             },
             {
               "feature": "roll_rushing_tds",
               "label": "Rolling rushing tds",
               "value": 1.25,
-              "shap": -0.2927
+              "shap": -0.3052
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 28.0,
-              "shap": 0.2798
+              "shap": 0.271
             }
           ]
         },
@@ -1539,49 +1539,49 @@
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 124.0,
-              "shap": 4.6421
+              "shap": 4.8199
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 23.175,
-              "shap": 3.7364
+              "shap": 3.6445
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.7575,
-              "shap": 2.2919
+              "shap": 2.3758
             },
             {
               "feature": "roll_rushing_tds",
               "label": "Rolling rushing tds",
               "value": 1.0,
-              "shap": -1.0247
+              "shap": -0.9983
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.8308
-            },
-            {
-              "feature": "roll_yards",
-              "label": "Rolling yards",
-              "value": 35.25,
-              "shap": -0.5525
+              "shap": 0.8526
             },
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 4.75,
-              "shap": -0.4749
+              "shap": -0.5214
             },
             {
-              "feature": "roll_receptions",
-              "label": "Rolling receptions",
-              "value": 3.5,
-              "shap": 0.3879
+              "feature": "roll_yards",
+              "label": "Rolling yards",
+              "value": 35.25,
+              "shap": -0.3915
+            },
+            {
+              "feature": "roll_offense_snaps",
+              "label": "Rolling offense snaps",
+              "value": 51.25,
+              "shap": -0.3495
             }
           ]
         },
@@ -1595,49 +1595,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 19.575,
-              "shap": 3.8878
+              "shap": 3.6889
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 109.75,
-              "shap": 3.489
+              "shap": 3.3925
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.6125,
-              "shap": 1.5583
-            },
-            {
-              "feature": "roll_rushing_tds",
-              "label": "Rolling rushing tds",
-              "value": 1.0,
-              "shap": -0.9074
+              "shap": 1.853
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.8767
+              "shap": 0.8356
+            },
+            {
+              "feature": "roll_rushing_tds",
+              "label": "Rolling rushing tds",
+              "value": 1.0,
+              "shap": -0.8019
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 7.675,
-              "shap": 0.152
+              "shap": 0.1575
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 43.75,
-              "shap": -0.1204
+              "shap": -0.1205
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.0,
-              "shap": 0.1035
+              "shap": 0.0988
             }
           ]
         },
@@ -1651,49 +1651,49 @@
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 19.225,
-              "shap": 3.7364
+              "shap": 3.6565
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 104.75,
-              "shap": 3.6055
+              "shap": 3.6084
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.6575,
-              "shap": 1.522
+              "shap": 1.6104
             },
             {
               "feature": "roll_rushing_tds",
               "label": "Rolling rushing tds",
               "value": 1.25,
-              "shap": -0.954
+              "shap": -1.0565
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.8303
+              "shap": 0.8048
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 22.5,
-              "shap": 0.4499
+              "shap": 0.4618
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 5.3104,
-              "shap": -0.3485
+              "shap": -0.3624
             },
             {
-              "feature": "roll_offense_snaps",
-              "label": "Rolling offense snaps",
-              "value": 44.25,
-              "shap": -0.1325
+              "feature": "roll_receptions",
+              "label": "Rolling receptions",
+              "value": 1.75,
+              "shap": 0.1558
             }
           ]
         },
@@ -1707,49 +1707,49 @@
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.815,
-              "shap": 3.247
+              "shap": 3.3448
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 18.175,
-              "shap": 2.3873
-            },
-            {
-              "feature": "roll_carries",
-              "label": "Rolling carries",
-              "value": 18.0,
-              "shap": 1.6141
+              "shap": 2.3185
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 71.25,
-              "shap": 1.6072
+              "shap": 1.6708
+            },
+            {
+              "feature": "roll_carries",
+              "label": "Rolling carries",
+              "value": 18.0,
+              "shap": 1.5549
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 54.75,
-              "shap": -0.8353
+              "shap": -0.7604
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 5.0,
-              "shap": 0.6593
+              "shap": 0.642
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.553
+              "shap": 0.5427
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 6.3562,
-              "shap": -0.4096
+              "shap": -0.4045
             }
           ]
         }
@@ -1763,100 +1763,100 @@
         {
           "feature": "roll_targets",
           "label": "Rolling targets",
-          "mean_abs_shap": 0.7448,
-          "mean_shap": 0.3028,
-          "share": 0.1946
+          "mean_abs_shap": 0.742,
+          "mean_shap": 0.299,
+          "share": 0.1941
         },
         {
           "feature": "roll_offense_pct",
           "label": "Rolling offense pct",
-          "mean_abs_shap": 0.6009,
-          "mean_shap": 0.2952,
-          "share": 0.157
+          "mean_abs_shap": 0.6008,
+          "mean_shap": 0.2954,
+          "share": 0.1572
         },
         {
           "feature": "roll_receptions",
           "label": "Rolling receptions",
-          "mean_abs_shap": 0.5703,
-          "mean_shap": 0.2627,
-          "share": 0.149
+          "mean_abs_shap": 0.5704,
+          "mean_shap": 0.2637,
+          "share": 0.1492
         },
         {
           "feature": "roll_offense_snaps",
           "label": "Rolling offense snaps",
-          "mean_abs_shap": 0.3927,
-          "mean_shap": 0.1429,
-          "share": 0.1026
+          "mean_abs_shap": 0.3915,
+          "mean_shap": 0.1435,
+          "share": 0.1024
         },
         {
           "feature": "roll_yards",
           "label": "Rolling yards",
-          "mean_abs_shap": 0.364,
-          "mean_shap": 0.1517,
-          "share": 0.0951
+          "mean_abs_shap": 0.3629,
+          "mean_shap": 0.1508,
+          "share": 0.0949
         },
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 0.3313,
-          "mean_shap": 0.167,
-          "share": 0.0866
+          "mean_abs_shap": 0.3307,
+          "mean_shap": 0.1677,
+          "share": 0.0865
         },
         {
           "feature": "roll_st_pct",
           "label": "Rolling st pct",
-          "mean_abs_shap": 0.3161,
-          "mean_shap": 0.1162,
-          "share": 0.0826
+          "mean_abs_shap": 0.3165,
+          "mean_shap": 0.1177,
+          "share": 0.0828
         },
         {
           "feature": "roll_carries",
           "label": "Rolling carries",
-          "mean_abs_shap": 0.1186,
-          "mean_shap": 0.0107,
-          "share": 0.031
+          "mean_abs_shap": 0.1193,
+          "mean_shap": 0.0113,
+          "share": 0.0312
         },
         {
           "feature": "is_home",
           "label": "Home game",
-          "mean_abs_shap": 0.1099,
-          "mean_shap": -0.0056,
+          "mean_abs_shap": 0.1097,
+          "mean_shap": -0.0057,
           "share": 0.0287
         },
         {
           "feature": "roll_st_snaps",
           "label": "Rolling st snaps",
-          "mean_abs_shap": 0.0947,
-          "mean_shap": 0.0356,
-          "share": 0.0247
+          "mean_abs_shap": 0.0951,
+          "mean_shap": 0.0368,
+          "share": 0.0249
         },
         {
           "feature": "opp_def_rating",
           "label": "Opponent defense rating",
-          "mean_abs_shap": 0.08,
-          "mean_shap": -0.0034,
+          "mean_abs_shap": 0.0801,
+          "mean_shap": -0.0038,
           "share": 0.0209
         },
         {
           "feature": "roll_rushing_yards",
           "label": "Rolling rushing yards",
-          "mean_abs_shap": 0.0709,
-          "mean_shap": -0.0084,
-          "share": 0.0185
+          "mean_abs_shap": 0.0704,
+          "mean_shap": -0.008,
+          "share": 0.0184
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.0266,
-          "mean_shap": 0.0008,
-          "share": 0.0069
+          "mean_abs_shap": 0.0271,
+          "mean_shap": -0.0,
+          "share": 0.0071
         },
         {
           "feature": "roll_touchdowns",
           "label": "Rolling touchdowns",
-          "mean_abs_shap": 0.0064,
-          "mean_shap": 0.0002,
-          "share": 0.0017
+          "mean_abs_shap": 0.0062,
+          "mean_shap": 0.0001,
+          "share": 0.0016
         }
       ],
       "players": [
@@ -1870,49 +1870,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 12.25,
-              "shap": 5.3723
+              "shap": 5.416
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 113.25,
-              "shap": 2.3685
+              "shap": 2.3723
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 18.9,
-              "shap": 2.2478
+              "shap": 2.1711
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 8.5,
-              "shap": 1.8206
+              "shap": 1.8334
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 3.25,
-              "shap": 1.0732
+              "shap": 1.0346
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.855,
-              "shap": 0.8998
+              "shap": 0.8504
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 60.75,
-              "shap": -0.7404
+              "shap": -0.7349
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.5491
+              "shap": 0.5578
             }
           ]
         },
@@ -1926,49 +1926,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 13.25,
-              "shap": 4.7947
+              "shap": 4.8022
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 19.375,
-              "shap": 2.094
+              "shap": 2.1221
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.89,
-              "shap": 1.8065
+              "shap": 1.7611
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 10.5,
-              "shap": 1.0411
+              "shap": 1.0075
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 91.5,
-              "shap": 0.885
+              "shap": 0.8776
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 4.75,
-              "shap": 0.8601
+              "shap": 0.8425
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 58.75,
-              "shap": -0.8105
+              "shap": -0.7083
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 4.2417,
-              "shap": 0.6259
+              "shap": 0.6158
             }
           ]
         },
@@ -1982,49 +1982,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 7.75,
-              "shap": 3.072
+              "shap": 3.1132
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 94.5,
-              "shap": 2.8026
+              "shap": 2.7716
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 6.5,
-              "shap": 1.8361
+              "shap": 1.9068
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 16.875,
-              "shap": 1.7106
+              "shap": 1.7314
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 1.75,
-              "shap": 1.0344
+              "shap": 0.9857
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 36.5,
-              "shap": 0.5795
+              "shap": 0.5493
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.01,
-              "shap": 0.4893
+              "shap": 0.4912
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.25,
-              "shap": 0.2926
+              "shap": 0.2601
             }
           ]
         },
@@ -2038,49 +2038,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.5,
-              "shap": 3.2831
+              "shap": 3.2809
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 95.75,
-              "shap": 2.1525
+              "shap": 2.174
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 7.0,
-              "shap": 1.8803
+              "shap": 1.8931
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 16.3,
-              "shap": 1.4918
+              "shap": 1.4491
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 2.25,
-              "shap": 0.9216
+              "shap": 0.9059
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.5743
+              "shap": 0.5641
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.0,
-              "shap": 0.2537
+              "shap": 0.2595
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 0.5,
-              "shap": 0.2219
+              "shap": 0.2177
             }
           ]
         },
@@ -2094,49 +2094,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 12.0,
-              "shap": 4.6434
+              "shap": 4.7065
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 17.775,
-              "shap": 2.122
+              "shap": 2.1116
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 7.25,
-              "shap": 1.7453
+              "shap": 1.7968
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 96.5,
-              "shap": 1.3695
+              "shap": 1.394
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 57.0,
-              "shap": -0.772
+              "shap": -0.8291
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0125,
-              "shap": 0.5925
+              "shap": 0.5832
             },
             {
               "feature": "roll_rushing_yards",
               "label": "Rolling rushing yards",
               "value": 0.0,
-              "shap": -0.4883
+              "shap": -0.4965
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.8225,
-              "shap": 0.4726
+              "shap": 0.4692
             }
           ]
         },
@@ -2150,49 +2150,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 10.25,
-              "shap": 2.748
+              "shap": 2.7669
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.8725,
-              "shap": 2.5199
+              "shap": 2.5498
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 6.5,
-              "shap": 1.475
+              "shap": 1.4345
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 14.0,
-              "shap": 1.1911
+              "shap": 1.1703
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0075,
-              "shap": 0.5992
+              "shap": 0.5953
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 77.5,
-              "shap": 0.5226
+              "shap": 0.5232
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 7.7746,
-              "shap": 0.3751
+              "shap": 0.3725
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.25,
-              "shap": 0.2803
+              "shap": 0.2842
             }
           ]
         }
@@ -2206,65 +2206,65 @@
         {
           "feature": "roll_targets",
           "label": "Rolling targets",
-          "mean_abs_shap": 0.6115,
-          "mean_shap": -0.3693,
-          "share": 0.3203
+          "mean_abs_shap": 0.6125,
+          "mean_shap": -0.37,
+          "share": 0.3205
         },
         {
           "feature": "roll_offense_pct",
           "label": "Rolling offense pct",
-          "mean_abs_shap": 0.3623,
-          "mean_shap": -0.173,
-          "share": 0.1898
+          "mean_abs_shap": 0.3624,
+          "mean_shap": -0.1718,
+          "share": 0.1896
         },
         {
           "feature": "roll_st_pct",
           "label": "Rolling st pct",
-          "mean_abs_shap": 0.251,
-          "mean_shap": -0.1298,
-          "share": 0.1315
+          "mean_abs_shap": 0.2521,
+          "mean_shap": -0.1299,
+          "share": 0.1319
         },
         {
           "feature": "roll_yards",
           "label": "Rolling yards",
-          "mean_abs_shap": 0.176,
-          "mean_shap": -0.0833,
+          "mean_abs_shap": 0.1762,
+          "mean_shap": -0.0831,
           "share": 0.0922
         },
         {
           "feature": "roll_st_snaps",
           "label": "Rolling st snaps",
-          "mean_abs_shap": 0.1323,
-          "mean_shap": -0.0359,
-          "share": 0.0693
+          "mean_abs_shap": 0.1322,
+          "mean_shap": -0.0362,
+          "share": 0.0692
         },
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 0.0937,
-          "mean_shap": -0.0486,
-          "share": 0.0491
+          "mean_abs_shap": 0.0935,
+          "mean_shap": -0.0496,
+          "share": 0.0489
         },
         {
           "feature": "roll_offense_snaps",
           "label": "Rolling offense snaps",
-          "mean_abs_shap": 0.0592,
-          "mean_shap": -0.0423,
-          "share": 0.031
+          "mean_abs_shap": 0.0588,
+          "mean_shap": -0.0414,
+          "share": 0.0308
         },
         {
           "feature": "opp_def_rating",
           "label": "Opponent defense rating",
-          "mean_abs_shap": 0.0549,
-          "mean_shap": 0.0103,
-          "share": 0.0288
+          "mean_abs_shap": 0.0548,
+          "mean_shap": 0.0105,
+          "share": 0.0287
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.0483,
-          "mean_shap": 0.0093,
-          "share": 0.0253
+          "mean_abs_shap": 0.0485,
+          "mean_shap": 0.0094,
+          "share": 0.0254
         },
         {
           "feature": "roll_carries",
@@ -2276,15 +2276,15 @@
         {
           "feature": "roll_receptions",
           "label": "Rolling receptions",
-          "mean_abs_shap": 0.0368,
-          "mean_shap": -0.0241,
-          "share": 0.0193
+          "mean_abs_shap": 0.0372,
+          "mean_shap": -0.0245,
+          "share": 0.0194
         },
         {
           "feature": "roll_touchdowns",
           "label": "Rolling touchdowns",
           "mean_abs_shap": 0.016,
-          "mean_shap": 0.0097,
+          "mean_shap": 0.0098,
           "share": 0.0084
         },
         {
@@ -2295,17 +2295,17 @@
           "share": 0.0068
         },
         {
-          "feature": "is_home",
-          "label": "Home game",
-          "mean_abs_shap": 0.0038,
-          "mean_shap": -0.0,
-          "share": 0.002
-        },
-        {
           "feature": "roll_rushing_yards",
           "label": "Rolling rushing yards",
           "mean_abs_shap": 0.0038,
           "mean_shap": 0.0038,
+          "share": 0.002
+        },
+        {
+          "feature": "is_home",
+          "label": "Home game",
+          "mean_abs_shap": 0.0038,
+          "mean_shap": -0.0,
           "share": 0.002
         }
       ],
@@ -2320,49 +2320,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.75,
-              "shap": 2.6202
+              "shap": 2.7153
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.92,
-              "shap": 2.0672
+              "shap": 1.9752
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 56.5,
-              "shap": 0.8923
+              "shap": 0.935
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 86.5,
-              "shap": 0.7491
+              "shap": 0.7503
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.4245
+              "shap": 0.4102
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.0,
-              "shap": 0.4084
+              "shap": 0.3824
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 5.1375,
-              "shap": 0.3096
+              "shap": 0.3095
             },
             {
-              "feature": "roll_carries",
-              "label": "Rolling carries",
-              "value": 0.25,
-              "shap": 0.1519
+              "feature": "roll_rushing_yards",
+              "label": "Rolling rushing yards",
+              "value": 0.5,
+              "shap": 0.1535
             }
           ]
         },
@@ -2376,49 +2376,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.0,
-              "shap": 2.0598
+              "shap": 2.0063
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.85,
-              "shap": 1.6233
+              "shap": 1.6456
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 72.75,
-              "shap": 1.322
+              "shap": 1.3161
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 14.525,
-              "shap": 1.1769
+              "shap": 1.1739
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 58.5,
-              "shap": 0.5693
+              "shap": 0.5796
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.25,
-              "shap": 0.5336
+              "shap": 0.5327
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0075,
-              "shap": 0.458
+              "shap": 0.496
             },
             {
               "feature": "roll_touchdowns",
               "label": "Rolling touchdowns",
               "value": 0.75,
-              "shap": 0.1208
+              "shap": 0.1231
             }
           ]
         },
@@ -2432,49 +2432,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.5,
-              "shap": 2.8143
+              "shap": 2.7943
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.885,
-              "shap": 1.4968
+              "shap": 1.4694
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 68.5,
-              "shap": 1.2381
+              "shap": 1.2973
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 56.25,
-              "shap": 0.6039
+              "shap": 0.5966
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.0,
-              "shap": 0.5475
+              "shap": 0.5412
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.0,
-              "shap": 0.3916
+              "shap": 0.4026
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 7.25,
-              "shap": 0.2872
+              "shap": 0.3025
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 13.475,
-              "shap": 0.0987
+              "shap": 0.0655
             }
           ]
         },
@@ -2488,49 +2488,49 @@
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 8.5,
-              "shap": 2.6547
+              "shap": 2.6657
             },
             {
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.88,
-              "shap": 1.7262
+              "shap": 1.6841
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 72.25,
-              "shap": 1.206
+              "shap": 1.1561
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 11.1,
-              "shap": 0.639
-            },
-            {
-              "feature": "roll_st_pct",
-              "label": "Rolling st pct",
-              "value": 0.0,
-              "shap": 0.5447
+              "shap": 0.6693
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 58.25,
-              "shap": 0.5405
+              "shap": 0.5714
+            },
+            {
+              "feature": "roll_st_pct",
+              "label": "Rolling st pct",
+              "value": 0.0,
+              "shap": 0.5586
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 2.4021,
-              "shap": -0.341
+              "shap": -0.3138
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 0.0,
-              "shap": 0.2631
+              "shap": 0.2657
             }
           ]
         },
@@ -2544,49 +2544,49 @@
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.8375,
-              "shap": 1.7237
+              "shap": 1.7432
             },
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 7.25,
-              "shap": 1.2791
+              "shap": 1.2689
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 7.375,
-              "shap": 0.7238
+              "shap": 0.7597
             },
             {
               "feature": "roll_carries",
               "label": "Rolling carries",
               "value": 0.5,
-              "shap": 0.6937
+              "shap": 0.7029
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 53.75,
-              "shap": 0.4284
+              "shap": 0.433
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.015,
-              "shap": 0.3388
+              "shap": 0.3147
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 36.5,
-              "shap": 0.3001
+              "shap": 0.3075
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 4.2208,
-              "shap": 0.2883
+              "shap": 0.2882
             }
           ]
         },
@@ -2600,49 +2600,49 @@
               "feature": "roll_offense_pct",
               "label": "Rolling offense pct",
               "value": 0.855,
-              "shap": 2.0857
+              "shap": 2.092
             },
             {
               "feature": "roll_targets",
               "label": "Rolling targets",
               "value": 6.5,
-              "shap": 1.7013
+              "shap": 1.6802
             },
             {
               "feature": "roll_yards",
               "label": "Rolling yards",
               "value": 74.0,
-              "shap": 1.1078
+              "shap": 1.1133
             },
             {
               "feature": "roll_offense_snaps",
               "label": "Rolling offense snaps",
               "value": 58.75,
-              "shap": 0.6195
-            },
-            {
-              "feature": "roll_st_pct",
-              "label": "Rolling st pct",
-              "value": 0.0375,
-              "shap": 0.5136
+              "shap": 0.6287
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 10.275,
-              "shap": 0.4222
+              "shap": 0.4514
+            },
+            {
+              "feature": "roll_st_pct",
+              "label": "Rolling st pct",
+              "value": 0.0375,
+              "shap": 0.4495
             },
             {
               "feature": "roll_receptions",
               "label": "Rolling receptions",
               "value": 4.75,
-              "shap": 0.1769
+              "shap": 0.2104
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 3.2542,
-              "shap": -0.1603
+              "shap": -0.1657
             }
           ]
         }
@@ -2656,72 +2656,72 @@
         {
           "feature": "roll_st_pct",
           "label": "Rolling st pct",
-          "mean_abs_shap": 0.2421,
-          "mean_shap": -0.0771,
-          "share": 0.2058
+          "mean_abs_shap": 0.2406,
+          "mean_shap": -0.0751,
+          "share": 0.2049
         },
         {
           "feature": "is_home",
           "label": "Home game",
           "mean_abs_shap": 0.2007,
           "mean_shap": -0.0085,
-          "share": 0.1707
+          "share": 0.1709
         },
         {
           "feature": "roll_pat_made",
           "label": "Rolling pat made",
-          "mean_abs_shap": 0.1361,
-          "mean_shap": -0.0663,
+          "mean_abs_shap": 0.1358,
+          "mean_shap": -0.0662,
           "share": 0.1157
         },
         {
           "feature": "roll_fantasy_points",
           "label": "Rolling fantasy points",
-          "mean_abs_shap": 0.1281,
-          "mean_shap": 0.0446,
-          "share": 0.1089
+          "mean_abs_shap": 0.1277,
+          "mean_shap": 0.0435,
+          "share": 0.1088
         },
         {
           "feature": "opp_def_rating",
           "label": "Opponent defense rating",
-          "mean_abs_shap": 0.1127,
-          "mean_shap": -0.0341,
-          "share": 0.0959
+          "mean_abs_shap": 0.1136,
+          "mean_shap": -0.0348,
+          "share": 0.0967
         },
         {
           "feature": "roll_fg_att",
           "label": "Rolling fg att",
-          "mean_abs_shap": 0.0978,
-          "mean_shap": 0.0049,
-          "share": 0.0832
+          "mean_abs_shap": 0.0974,
+          "mean_shap": 0.005,
+          "share": 0.0829
         },
         {
           "feature": "rest_days",
           "label": "Rest days",
-          "mean_abs_shap": 0.0942,
-          "mean_shap": -0.0084,
-          "share": 0.0801
+          "mean_abs_shap": 0.0943,
+          "mean_shap": -0.0085,
+          "share": 0.0803
         },
         {
           "feature": "roll_pat_att",
           "label": "Rolling pat att",
-          "mean_abs_shap": 0.0858,
-          "mean_shap": -0.0316,
-          "share": 0.0729
+          "mean_abs_shap": 0.0863,
+          "mean_shap": -0.0321,
+          "share": 0.0734
         },
         {
           "feature": "roll_st_snaps",
           "label": "Rolling st snaps",
-          "mean_abs_shap": 0.0527,
-          "mean_shap": 0.0313,
-          "share": 0.0448
+          "mean_abs_shap": 0.0523,
+          "mean_shap": 0.0314,
+          "share": 0.0445
         },
         {
           "feature": "roll_fg_made",
           "label": "Rolling fg made",
-          "mean_abs_shap": 0.026,
+          "mean_abs_shap": 0.0258,
           "mean_shap": 0.0014,
-          "share": 0.0221
+          "share": 0.0219
         },
         {
           "feature": "roll_offense_pct",
@@ -2749,49 +2749,49 @@
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.46,
-              "shap": 1.0102
+              "shap": 1.0125
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.2527
+              "shap": 0.2562
             },
             {
               "feature": "roll_pat_made",
               "label": "Rolling pat made",
               "value": 2.5,
-              "shap": 0.2134
+              "shap": 0.1965
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 9.5,
-              "shap": 0.0711
+              "shap": 0.0722
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
               "value": 7.0,
-              "shap": -0.0622
-            },
-            {
-              "feature": "roll_fg_made",
-              "label": "Rolling fg made",
-              "value": 2.0,
-              "shap": 0.0344
+              "shap": -0.0625
             },
             {
               "feature": "roll_pat_att",
               "label": "Rolling pat att",
               "value": 2.5,
-              "shap": 0.0336
+              "shap": 0.0374
+            },
+            {
+              "feature": "roll_fg_made",
+              "label": "Rolling fg made",
+              "value": 2.0,
+              "shap": 0.0337
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 8.5,
-              "shap": -0.0309
+              "shap": -0.0275
             }
           ]
         },
@@ -2805,49 +2805,49 @@
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.445,
-              "shap": 0.762
+              "shap": 0.7658
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.4172
+              "shap": 0.425
             },
             {
               "feature": "roll_fg_att",
               "label": "Rolling fg att",
               "value": 2.25,
-              "shap": 0.2264
+              "shap": 0.2198
             },
             {
               "feature": "roll_pat_made",
               "label": "Rolling pat made",
               "value": 2.75,
-              "shap": 0.2036
+              "shap": 0.2112
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 11.25,
-              "shap": -0.1935
+              "shap": -0.1858
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 5.75,
-              "shap": 0.1295
+              "shap": 0.1204
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 8.0,
-              "shap": -0.0868
+              "shap": -0.0977
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
               "value": 7.0,
-              "shap": -0.0758
+              "shap": -0.0764
             }
           ]
         },
@@ -2861,7 +2861,7 @@
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.4982
+              "shap": 0.5063
             },
             {
               "feature": "roll_fantasy_points",
@@ -2873,37 +2873,37 @@
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 8.75,
-              "shap": 0.2653
-            },
-            {
-              "feature": "rest_days",
-              "label": "Rest days",
-              "value": 10.0,
-              "shap": 0.1865
+              "shap": 0.2589
             },
             {
               "feature": "roll_fg_made",
               "label": "Rolling fg made",
               "value": 3.25,
-              "shap": -0.1818
+              "shap": -0.1843
+            },
+            {
+              "feature": "rest_days",
+              "label": "Rest days",
+              "value": 10.0,
+              "shap": 0.1831
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.485,
-              "shap": 0.1778
+              "shap": 0.1681
             },
             {
               "feature": "roll_pat_made",
               "label": "Rolling pat made",
               "value": 2.25,
-              "shap": 0.1153
+              "shap": 0.1169
             },
             {
-              "feature": "roll_st_snaps",
-              "label": "Rolling st snaps",
-              "value": 12.5,
-              "shap": 0.0819
+              "feature": "roll_pat_att",
+              "label": "Rolling pat att",
+              "value": 2.25,
+              "shap": -0.0803
             }
           ]
         },
@@ -2917,49 +2917,49 @@
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.4281
+              "shap": 0.4216
             },
             {
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.405,
-              "shap": 0.3839
+              "shap": 0.3935
             },
             {
               "feature": "roll_fg_att",
               "label": "Rolling fg att",
               "value": 2.25,
-              "shap": 0.221
+              "shap": 0.2236
             },
             {
               "feature": "roll_pat_made",
               "label": "Rolling pat made",
               "value": 2.25,
-              "shap": 0.194
+              "shap": 0.1878
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 6.0,
-              "shap": 0.1202
+              "shap": 0.1179
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
               "value": 7.0,
-              "shap": -0.0663
+              "shap": -0.0665
             },
             {
               "feature": "roll_pat_att",
               "label": "Rolling pat att",
               "value": 2.25,
-              "shap": -0.0495
+              "shap": -0.0471
             },
             {
               "feature": "roll_fantasy_points",
               "label": "Rolling fantasy points",
               "value": 8.25,
-              "shap": 0.0461
+              "shap": 0.0466
             }
           ]
         },
@@ -2973,49 +2973,49 @@
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.4325,
-              "shap": 0.7926
+              "shap": 0.7741
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.4094
+              "shap": 0.4081
             },
             {
               "feature": "roll_fg_att",
               "label": "Rolling fg att",
               "value": 2.5,
-              "shap": -0.3739
+              "shap": -0.3549
             },
             {
               "feature": "roll_pat_made",
               "label": "Rolling pat made",
               "value": 3.5,
-              "shap": 0.1997
+              "shap": 0.2019
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
               "value": 14.0,
-              "shap": 0.1667
-            },
-            {
-              "feature": "roll_st_snaps",
-              "label": "Rolling st snaps",
-              "value": 12.25,
-              "shap": 0.0788
+              "shap": 0.1836
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 8.75,
-              "shap": -0.0759
+              "shap": -0.0899
+            },
+            {
+              "feature": "roll_st_snaps",
+              "label": "Rolling st snaps",
+              "value": 12.25,
+              "shap": 0.082
             },
             {
               "feature": "roll_pat_att",
               "label": "Rolling pat att",
               "value": 3.5,
-              "shap": 0.035
+              "shap": 0.0356
             }
           ]
         },
@@ -3029,49 +3029,49 @@
               "feature": "roll_st_pct",
               "label": "Rolling st pct",
               "value": 0.4225,
-              "shap": 0.6519
+              "shap": 0.6596
             },
             {
               "feature": "roll_st_snaps",
               "label": "Rolling st snaps",
               "value": 13.25,
-              "shap": -0.5743
+              "shap": -0.6049
             },
             {
               "feature": "is_home",
               "label": "Home game",
               "value": 1.0,
-              "shap": 0.4669
+              "shap": 0.4748
             },
             {
               "feature": "opp_def_rating",
               "label": "Opponent defense rating",
               "value": 9.5,
-              "shap": 0.2238
+              "shap": 0.2448
             },
             {
               "feature": "roll_pat_made",
               "label": "Rolling pat made",
               "value": 2.75,
-              "shap": 0.2013
+              "shap": 0.2109
             },
             {
               "feature": "roll_fg_att",
               "label": "Rolling fg att",
               "value": 3.0,
-              "shap": 0.192
+              "shap": 0.1914
             },
             {
               "feature": "roll_fg_made",
               "label": "Rolling fg made",
               "value": 2.5,
-              "shap": -0.0938
+              "shap": -0.1079
             },
             {
               "feature": "rest_days",
               "label": "Rest days",
               "value": 7.0,
-              "shap": -0.0495
+              "shap": -0.0491
             }
           ]
         }

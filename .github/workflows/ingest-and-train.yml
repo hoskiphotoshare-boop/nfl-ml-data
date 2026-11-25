@@ -40,6 +40,7 @@ jobs:
 
       # Build feature tables (match + player).
       - run: python scripts/build_features.py || true
+      - run: python scripts/add_match_context.py || true
 
       # Write fallback prediction JSON (so the frontend always has data).
       - run: python scripts/build_predictions.py || true

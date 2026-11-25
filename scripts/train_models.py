@@ -99,11 +99,32 @@ def prepare_match_matrix(df: pl.DataFrame):
         "rest_diff",
         "home_short_week",
         "away_short_week",
-        # Context
-        "week",
-        "season",
+        # Context. Week/season are deliberately excluded: they encode season
+        # phase rather than team strength and dominated SHAP without improving
+        # the 2026 backtest.
+        # Team results and quarterback continuity (added by add_match_context.py)
+        "home_prior_games",
+        "away_prior_games",
+        "home_win_pct",
+        "away_win_pct",
+        "home_diff_pg",
+        "away_diff_pg",
+        "win_pct_diff",
+        "diff_pg_diff",
+        "home_qb_prior_epa",
+        "away_qb_prior_epa",
+        "home_qb_starts",
+        "away_qb_starts",
+        "home_qb_changed",
+        "away_qb_changed",
+        "home_qb_missing",
+        "away_qb_missing",
     ]
-    feature_cols += NG_FEATURES
+    # Next Gen Stats are unstable for team-level rankings (collinear, large
+    # coefficients). Results and QB context now carry that signal more
+    # reliably; NGS can be re-enabled for experiments via MATCH_USE_NGS=1.
+    if os.environ.get("MATCH_USE_NGS", "0") == "1":
+        feature_cols += NG_FEATURES
     feature_cols = [c for c in feature_cols if c in df.columns]
     if not feature_cols:
         return None, None, feature_cols
