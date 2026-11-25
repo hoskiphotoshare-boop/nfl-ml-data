@@ -380,7 +380,7 @@ function gameCard(game, rank) {
     top.appendChild(
       el(
         'span',
-        `tag edge-tag ${best.market.edge >= 0.02 ? 'edge' : 'neutral'}`,
+        `tag edge-tag ${market.outlier ? 'amber' : best.market.edge >= 0.02 ? 'edge' : 'neutral'}`,
         `${MARKET_SHORT[best.key]} ${shortMarketTag(best.market)} ${edgePoints(best.market.edge)}`
       )
     );
@@ -458,6 +458,15 @@ function gameCard(game, rank) {
   card.appendChild(meta);
 
   if (market && market.markets) card.appendChild(edgeGrid(market, best));
+  if (market && market.outlier) {
+    card.appendChild(
+      el(
+        'p',
+        'outlier-note',
+        `Model disagrees with the market by ${(market.outlier_edge * 100).toFixed(0)} pp — likely missing QB/roster news.`
+      )
+    );
+  }
 
   const buttons = el('div', 'pick-buttons');
   [
@@ -562,17 +571,20 @@ function filteredGames() {
 
   if (state.gamesView === 'edges') {
     list = list.filter((g) => bestMarket(state.marketById.get(g.game_id)));
+    const outlier = (g) => (state.marketById.get(g.game_id)?.outlier ? 1 : 0);
+    let compare;
     if (sort === 'ev') {
-      list.sort(
-        (a, b) =>
-          (state.marketById.get(b.game_id)?.best_market_ev ?? -999) -
-          (state.marketById.get(a.game_id)?.best_market_ev ?? -999)
-      );
+      compare = (a, b) =>
+        (state.marketById.get(b.game_id)?.best_market_ev ?? -999) -
+        (state.marketById.get(a.game_id)?.best_market_ev ?? -999);
     } else if (sort === 'kickoff') {
-      list.sort((a, b) => `${a.gameday || ''}${a.gametime || ''}`.localeCompare(`${b.gameday || ''}${b.gametime || ''}`));
+      compare = (a, b) =>
+        `${a.gameday || ''}${a.gametime || ''}`.localeCompare(`${b.gameday || ''}${b.gametime || ''}`);
     } else {
-      list.sort((a, b) => gameEdge(b) - gameEdge(a));
+      compare = (a, b) => gameEdge(b) - gameEdge(a);
     }
+    // Model outliers go last so they are not presented as top edges.
+    list.sort((a, b) => outlier(a) - outlier(b) || compare(a, b));
     return list;
   }
 
@@ -602,10 +614,11 @@ function renderGameStats(list) {
     .filter((item) => item.market)
     .map((item) => ({ ...item, best: bestMarket(item.market) }))
     .filter((item) => item.best);
-  const top = [...ranked].sort((a, b) => b.best.market.edge - a.best.market.edge)[0];
+  const clean = ranked.filter((item) => !item.market.outlier);
+  const top = [...clean].sort((a, b) => b.best.market.edge - a.best.market.edge)[0];
 
   if (state.gamesView === 'edges') {
-    const edges = ranked.map((item) => item.best.market.edge);
+    const edges = clean.map((item) => item.best.market.edge);
     const sorted = [...edges].sort((a, b) => a - b);
     const median = sorted.length ? sorted[Math.floor(sorted.length / 2)] : null;
     row.appendChild(statTile({ label: 'Priced games', value: list.length, sub: 'with a market line' }));
@@ -619,17 +632,18 @@ function renderGameStats(list) {
     );
     row.appendChild(
       statTile({
-        label: 'Median edge',
-        value: median !== null ? edgePoints(median) : '—',
-        sub: 'best market per game',
-      })
-    );
-    row.appendChild(
-      statTile({
         label: 'Strong edges',
         value: `${edges.filter((e) => e >= 0.05).length}/${edges.length}`,
         sub: '5+ probability points',
         cls: edges.some((e) => e >= 0.05) ? 'good' : '',
+      })
+    );
+    row.appendChild(
+      statTile({
+        label: 'Model outliers',
+        value: ranked.length - clean.length,
+        sub: '20+ pp vs market',
+        cls: ranked.length - clean.length ? 'warn' : '',
       })
     );
     return;
@@ -1232,6 +1246,7 @@ function renderDistribution(games) {
   clear(container);
 
   const edges = games
+    .filter((game) => !state.marketById.get(game.game_id)?.outlier)
     .map((game) => bestMarket(state.marketById.get(game.game_id))?.market.edge)
     .filter((value) => typeof value === 'number');
 

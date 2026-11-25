@@ -83,6 +83,30 @@
         <div id="futures" class="card-grid"></div>
       </section>
 
+      <section id="shap-section">
+        <h2>Model explanations (SHAP)</h2>
+        <p class="subtitle">What drives each model globally, and why it produced the current predictions.</p>
+        <div class="seg" id="shap-models" role="group" aria-label="Model">
+          <button data-model="match" class="active" type="button">Match</button>
+          <button data-model="QB" type="button">QB</button>
+          <button data-model="RB" type="button">RB</button>
+          <button data-model="WR" type="button">WR</button>
+          <button data-model="TE" type="button">TE</button>
+          <button data-model="K" type="button">K</button>
+        </div>
+        <div class="card-grid" id="shap-summary"></div>
+        <div class="section-title">Global drivers</div>
+        <div id="shap-global"></div>
+        <div class="section-title">Current prediction drivers</div>
+        <div class="filters">
+          <label class="field">
+            <select id="shap-local" aria-label="Prediction to explain"></select>
+          </label>
+        </div>
+        <div id="shap-local-table"></div>
+        <p class="panel-note" id="shap-note"></p>
+      </section>
+
       <section>
         <h2>Quick links</h2>
         <p><a href="/">Public site</a> · <a href="/teams/">Team pages</a></p>
@@ -155,6 +179,139 @@
       showLoginError("");
       showAdmin();
       load();
+    }
+
+    let shapData = null;
+    let shapModel = "match";
+    let shapLocalIndex = 0;
+
+    function shapBar(value, max, negative) {
+      const bar = el("span", "shap-bar");
+      const fill = el("i");
+      fill.style.width = `${Math.max(2, (Math.abs(value) / (max || 1)) * 100)}%`;
+      if (negative) fill.style.background = "var(--grad-dist-neg)";
+      bar.appendChild(fill);
+      return bar;
+    }
+
+    function shapTable(rows, local) {
+      const table = el("table", "dtable");
+      const thead = el("thead");
+      const head = el("tr");
+      ["Driver", local ? "Value" : "Mean |SHAP|", "Impact"].forEach((label) => {
+        head.appendChild(el("th", "", label));
+      });
+      thead.appendChild(head);
+      table.appendChild(thead);
+      const tbody = el("tbody");
+      const max = Math.max(...rows.map((r) => Math.abs(local ? r.shap : r.mean_abs_shap)), 0.0001);
+      rows.forEach((row) => {
+        const tr = el("tr");
+        tr.appendChild(el("td", "", row.label));
+        if (local) {
+          tr.appendChild(el("td", "shap-num", Number(row.value).toFixed(2)));
+        } else {
+          tr.appendChild(el("td", "shap-num", Number(row.mean_abs_shap).toFixed(4)));
+        }
+        const impact = el("td");
+        const signed = local ? row.shap : row.mean_shap;
+        impact.appendChild(shapBar(signed, max, signed < 0));
+        impact.appendChild(
+          el("span", signed >= 0 ? "shap-pos" : "shap-neg", `${signed >= 0 ? "+" : ""}${Number(signed).toFixed(3)}`)
+        );
+        tr.appendChild(impact);
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      const wrap = el("div", "table-wrap");
+      wrap.appendChild(table);
+      return wrap;
+    }
+
+    function shapModelData() {
+      if (!shapData) return null;
+      return shapModel === "match" ? shapData.match : shapData.players?.[shapModel];
+    }
+
+    function shapLocalOptions(model) {
+      if (!model) return [];
+      if (shapModel === "match") {
+        return (model.games || []).map((game, index) => ({
+          value: String(index),
+          label: `${game.matchup} · Week ${game.week} · ${(game.prediction * 100).toFixed(1)}%`,
+          row: game,
+        }));
+      }
+      return (model.players || []).map((player, index) => ({
+        value: String(index),
+        label: `${player.name} (${player.team}) · ${player.prediction.toFixed(1)} pts`,
+        row: player,
+      }));
+    }
+
+    function renderShap() {
+      const model = shapModelData();
+      if (!model) return;
+      const summary = document.getElementById("shap-summary");
+      const global = document.getElementById("shap-global");
+      const local = document.getElementById("shap-local");
+      const localTable = document.getElementById("shap-local-table");
+      const note = document.getElementById("shap-note");
+      summary.innerHTML = "";
+      global.innerHTML = "";
+      localTable.innerHTML = "";
+
+      const top = model.global?.[0];
+      summary.appendChild(card("Model", [model.model]));
+      summary.appendChild(
+        card(
+          shapModel === "match" ? "Base probability" : "Base projection",
+          [shapModel === "match" ? `${(model.base_probability * 100).toFixed(1)}%` : Number(model.base_value).toFixed(2)]
+        )
+      );
+      summary.appendChild(card("Sample", [String(model.sample_size)]));
+      summary.appendChild(card("Top global driver", [top ? top.label : "—"]));
+
+      if (model.global?.length) global.appendChild(shapTable(model.global, false));
+
+      const options = shapLocalOptions(model);
+      local.innerHTML = "";
+      options.forEach((option) => {
+        const opt = document.createElement("option");
+        opt.value = option.value;
+        opt.textContent = option.label;
+        local.appendChild(opt);
+      });
+      if (!options.length) {
+        localTable.appendChild(el("p", "muted", "No current predictions to explain."));
+        return;
+      }
+      shapLocalIndex = Math.min(shapLocalIndex, options.length - 1);
+      local.value = String(shapLocalIndex);
+      const selected = options[shapLocalIndex].row;
+      localTable.appendChild(shapTable(selected.drivers || [], true));
+      note.textContent =
+        shapModel === "match"
+          ? "Match SHAP is in log-odds vs the baseline game; positive pushes the home team’s win probability up. A feature value of 0 can mean missing data (e.g. Next Gen Stats), which the model currently treats as zero."
+          : "Player SHAP is in projected fantasy points vs the position baseline.";
+    }
+
+    function setupShap() {
+      document.querySelectorAll("#shap-models button").forEach((button) => {
+        button.addEventListener("click", () => {
+          shapModel = button.dataset.model;
+          shapLocalIndex = 0;
+          document.querySelectorAll("#shap-models button").forEach((other) => {
+            other.classList.toggle("active", other === button);
+          });
+          renderShap();
+        });
+      });
+      document.getElementById("shap-local")?.addEventListener("change", (event) => {
+        shapLocalIndex = Number(event.target.value) || 0;
+        renderShap();
+      });
+      renderShap();
     }
 
     async function load() {
@@ -243,6 +400,14 @@
         elm.appendChild(card("Updated", [r.updated_at ? new Date(r.updated_at).toLocaleString() : "—"]));
       } catch (e) {
         document.getElementById("futures").appendChild(card("Futures report unavailable", [String(e)]));
+      }
+
+      // SHAP explanations
+      try {
+        shapData = await getJSON(`${R}/model_explanations.json`);
+        setupShap();
+      } catch (e) {
+        document.getElementById("shap-global").appendChild(card("SHAP report unavailable", [String(e)]));
       }
     }
 

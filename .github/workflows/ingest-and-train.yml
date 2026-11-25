@@ -32,7 +32,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install polars nflreadpy scikit-learn joblib || true
+      - run: pip install polars nflreadpy scikit-learn joblib shap || true
 
       # Attempt to fetch real data. If the APIs are unreachable,
       # the script exits 0 so the workflow can still build predictions.
@@ -53,6 +53,7 @@ jobs:
       # Predict upcoming games using the latest team features.
       - run: python scripts/predict_upcoming.py || true
       - run: python scripts/add_player_matchups.py || true
+      - run: python scripts/explain_models.py || true
 
       # Fetch current NFL odds from The Odds API (secret only available here).
       - name: Fetch NFL odds

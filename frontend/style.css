@@ -917,6 +917,12 @@ h2 {
   display: none;
 }
 
+.outlier-note {
+  margin: 0.15rem 0 0;
+  font-size: 0.74rem;
+  color: var(--amber);
+}
+
 .meta-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1571,6 +1577,41 @@ footer .odds {
 
 .method strong {
   color: var(--text);
+}
+
+/* SHAP diagnostics (admin) */
+.shap-bar {
+  display: inline-block;
+  width: 90px;
+  height: 6px;
+  margin-right: 0.4rem;
+  border-radius: 999px;
+  background: var(--track);
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+.shap-bar i {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: var(--grad-accent);
+}
+
+.shap-num {
+  font-variant-numeric: tabular-nums;
+}
+
+.shap-pos {
+  color: var(--green);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.shap-neg {
+  color: var(--red);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 /* ---------- simple pages (admin + team pages) ---------- */

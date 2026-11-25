@@ -1,0 +1,30 @@
+{
+  "features": [
+    "roll_fantasy_points",
+    "roll_targets",
+    "roll_receptions",
+    "roll_yards",
+    "roll_touchdowns",
+    "roll_passing_yards",
+    "roll_passing_tds",
+    "roll_passing_interceptions",
+    "roll_rushing_yards",
+    "roll_rushing_tds",
+    "roll_carries",
+    "roll_attempts",
+    "roll_completions",
+    "roll_fg_made",
+    "roll_fg_att",
+    "roll_pat_made",
+    "roll_pat_att",
+    "roll_offense_snaps",
+    "roll_offense_pct",
+    "roll_defense_snaps",
+    "roll_defense_pct",
+    "roll_st_snaps",
+    "roll_st_pct",
+    "is_home",
+    "rest_days",
+    "opp_def_rating"
+  ]
+}

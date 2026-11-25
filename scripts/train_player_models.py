@@ -413,6 +413,8 @@ def main() -> None:
 
     os.makedirs("models", exist_ok=True)
     joblib.dump(models, "models/player_models.joblib")
+    with open("models/player_features.json", "w", encoding="utf-8") as f:
+        json.dump({"features": feature_cols(rolling)}, f, indent=2)
 
     os.makedirs("reports", exist_ok=True)
     with open("reports/player_backtest.json", "w", encoding="utf-8") as f:

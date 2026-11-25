@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - run: pip install polars nflreadpy scikit-learn joblib || true
+      - run: pip install polars nflreadpy scikit-learn joblib shap || true
 
       - run: python scripts/download_data.py || true
       - run: python scripts/build_features.py || true
@@ -31,6 +31,7 @@ jobs:
       - run: python scripts/train_player_models.py || true
       - run: python scripts/predict_upcoming.py || true
       - run: python scripts/add_player_matchups.py || true
+      - run: python scripts/explain_models.py || true
       - run: python scripts/compare_market.py || true
       - run: python scripts/calibrate_model.py || true
       - run: python scripts/simulate_playoffs.py || true
