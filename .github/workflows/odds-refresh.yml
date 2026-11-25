@@ -42,6 +42,7 @@ jobs:
       ODDS_CACHE_HOURS: "0.4"                 # avoid duplicate calls within ~25 min
       ODDS_REQUIRE_GAME_WITHIN_DAYS: "10"     # no NFL games → no credits
       ODDS_MIN_REMAINING: "12"                # keep a small reserve
+      FUTURES_CACHE_HOURS: "20"               # one Super Bowl futures fetch per day
       FORCE_ODDS_FETCH: ${{ inputs.force && '1' || '0' }}
     steps:
       - uses: actions/checkout@v4
@@ -55,6 +56,11 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python scripts/fetch_odds.py || true
 
+      - name: Fetch Super Bowl futures
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python scripts/fetch_futures.py || true
+
       - name: Check for new odds
         id: changes
         run: |
@@ -67,6 +73,10 @@ jobs:
       - name: Compare model to market
         if: steps.changes.outputs.changed == 'true'
         run: python scripts/compare_market.py || true
+
+      - name: Compare model to futures
+        if: steps.changes.outputs.changed == 'true'
+        run: python scripts/compare_futures.py || true
 
       - name: Track line movement
         if: steps.changes.outputs.changed == 'true'

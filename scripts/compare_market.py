@@ -20,6 +20,14 @@ try:
 except Exception:  # pragma: no cover
     TEAMS_AVAILABLE = False
 
+# Normal approximation used to turn line differences into cover probabilities.
+# NFL margins have a standard deviation of roughly two touchdowns.
+SIGMA = 13.5
+
+
+def normal_cdf(x: float) -> float:
+    return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
+
 
 def load_json(path: str):
     if not os.path.exists(path):
@@ -202,6 +210,121 @@ def main() -> None:
         if game.get("total") is not None and market_total is not None:
             total_edge = float(game["total"]) - float(market_total)
 
+        # ---- per-market model edges -------------------------------------
+        # Every edge is expressed as a probability advantage so ML, spread
+        # and total are directly comparable.
+        model_spread = float(game["spread"]) if game.get("spread") is not None else None
+        model_total = float(game["total"]) if game.get("total") is not None else None
+        markets: dict[str, dict] = {}
+
+        if float(model_prob) >= float(market_prob):
+            ml_side, ml_team = "home", home_abbr
+            ml_model, ml_market = float(model_prob), float(market_prob)
+            ml_price = (best_home_ml or {}).get("price")
+            ml_book = (best_home_ml or {}).get("bookmaker")
+        else:
+            ml_side, ml_team = "away", away_abbr
+            ml_model, ml_market = 1.0 - float(model_prob), 1.0 - float(market_prob)
+            ml_price = (best_away_ml or {}).get("price")
+            ml_book = (best_away_ml or {}).get("bookmaker")
+        markets["ml"] = {
+            "side": ml_side,
+            "team": ml_team,
+            "line": None,
+            "model_prob": round(ml_model, 4),
+            "market_prob": round(ml_market, 4),
+            "edge": round(ml_model - ml_market, 4),
+            "price": ml_price,
+            "bookmaker": ml_book,
+        }
+
+        if model_spread is not None:
+            spread_candidates = []
+            if best_home_spread and best_home_spread.get("point") is not None:
+                line = float(best_home_spread["point"])
+                cover = normal_cdf((model_spread + line) / SIGMA)
+                spread_candidates.append(
+                    {
+                        "side": "home",
+                        "team": home_abbr,
+                        "line": line,
+                        "model_prob": round(cover, 4),
+                        "market_prob": 0.5,
+                        "edge": round(cover - 0.5, 4),
+                        "price": best_home_spread.get("price"),
+                        "bookmaker": best_home_spread.get("bookmaker"),
+                    }
+                )
+            if best_away_spread and best_away_spread.get("point") is not None:
+                line = float(best_away_spread["point"])
+                cover = normal_cdf((-model_spread + line) / SIGMA)
+                spread_candidates.append(
+                    {
+                        "side": "away",
+                        "team": away_abbr,
+                        "line": line,
+                        "model_prob": round(cover, 4),
+                        "market_prob": 0.5,
+                        "edge": round(cover - 0.5, 4),
+                        "price": best_away_spread.get("price"),
+                        "bookmaker": best_away_spread.get("bookmaker"),
+                    }
+                )
+            if spread_candidates:
+                markets["spread"] = max(spread_candidates, key=lambda m: m["edge"])
+
+        if model_total is not None:
+            total_candidates = []
+            best_over = event.get("best_over")
+            best_under = event.get("best_under")
+            if best_over and best_over.get("point") is not None:
+                line = float(best_over["point"])
+                over = normal_cdf((model_total - line) / SIGMA)
+                total_candidates.append(
+                    {
+                        "side": "over",
+                        "team": "Over",
+                        "line": line,
+                        "model_prob": round(over, 4),
+                        "market_prob": 0.5,
+                        "edge": round(over - 0.5, 4),
+                        "price": best_over.get("price"),
+                        "bookmaker": best_over.get("bookmaker"),
+                    }
+                )
+            if best_under and best_under.get("point") is not None:
+                line = float(best_under["point"])
+                under = normal_cdf((line - model_total) / SIGMA)
+                total_candidates.append(
+                    {
+                        "side": "under",
+                        "team": "Under",
+                        "line": line,
+                        "model_prob": round(under, 4),
+                        "market_prob": 0.5,
+                        "edge": round(under - 0.5, 4),
+                        "price": best_under.get("price"),
+                        "bookmaker": best_under.get("bookmaker"),
+                    }
+                )
+            if total_candidates:
+                markets["total"] = max(total_candidates, key=lambda m: m["edge"])
+
+        for market in markets.values():
+            price = market.get("price")
+            market["ev"] = (
+                round((float(market["model_prob"]) * float(price) - 1.0) * 100.0, 2)
+                if price
+                else None
+            )
+
+        best_market = None
+        if markets:
+            best_market = max(markets, key=lambda key: markets[key].get("edge", -1))
+        best_edge = markets[best_market]["edge"] if best_market else None
+        market_evs = [m["ev"] for m in markets.values() if m.get("ev") is not None]
+        best_market_ev = max(market_evs) if market_evs else None
+
         comparisons.append(
             {
                 "game_id": game.get("game_id"),
@@ -218,6 +341,11 @@ def main() -> None:
                 "ev_away_ml": round(ev_away, 3) if ev_away is not None else None,
                 "best_ev": round(best_ev, 3) if best_ev is not None else None,
                 "best_ev_side": best_ev_side,
+                "best_market_ev": round(best_market_ev, 2) if best_market_ev is not None else None,
+                "markets": markets,
+                "best_market": best_market,
+                "best_edge": best_edge,
+                "best_team": markets[best_market]["team"] if best_market else None,
                 "model_spread": game.get("spread"),
                 "market_spread": market_spread,
                 "spread_edge": round(spread_edge, 2) if spread_edge is not None else None,
@@ -239,11 +367,19 @@ def main() -> None:
 
     edges = [c["edge"] for c in comparisons]
     abs_edges = [c["abs_edge"] for c in comparisons]
+    best_edges = [c["best_edge"] for c in comparisons if c.get("best_edge") is not None]
     summary = {
         "games_compared": len(comparisons),
         "mean_edge": round(statistics.mean(edges), 4),
         "mean_abs_edge": round(statistics.mean(abs_edges), 4),
         "max_abs_edge": round(max(abs_edges), 4),
+        "mean_best_edge": round(statistics.mean(best_edges), 4) if best_edges else None,
+        "max_best_edge": round(max(best_edges), 4) if best_edges else None,
+        "strong_edges": sum(1 for e in best_edges if e >= 0.05),
+        "best_market_counts": {
+            key: sum(1 for c in comparisons if c.get("best_market") == key)
+            for key in ("ml", "spread", "total")
+        },
     }
 
     odds_meta = {}
