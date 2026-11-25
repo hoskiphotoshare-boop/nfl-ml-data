@@ -322,6 +322,17 @@ function renderPlayers(players) {
     if (p.injury_status) {
       card.appendChild(el('p', 'injury', `Status: ${p.injury_status}`));
     }
+    if (p.recent_fantasy_points && p.recent_fantasy_points.length) {
+      const chart = el('div', 'spark');
+      const max = Math.max(...p.recent_fantasy_points, 1);
+      p.recent_fantasy_points.forEach((v) => {
+        const bar = el('span', 'bar');
+        bar.style.height = `${Math.max(2, (v / max) * 28)}px`;
+        bar.title = `${v} pts`;
+        chart.appendChild(bar);
+      });
+      card.appendChild(chart);
+    }
     card.appendChild(el('p', '', `Targets: ${p.projected_targets}`));
     card.appendChild(el('p', '', `Receptions: ${p.projected_receptions}`));
     card.appendChild(el('p', '', `Yards: ${p.projected_yards}`));

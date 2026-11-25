@@ -145,6 +145,22 @@ h2 {
   font-size: 0.9rem;
 }
 
+.spark {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 32px;
+  margin: 0.5rem 0;
+}
+
+.spark .bar {
+  display: inline-block;
+  width: 6px;
+  background: var(--accent);
+  border-radius: 2px 2px 0 0;
+  opacity: 0.85;
+}
+
 @media (max-width: 600px) {
   header {
     padding: 1.25rem 1rem 0.75rem;

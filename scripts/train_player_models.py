@@ -230,6 +230,16 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
         .agg(pl.all().last())
     )
 
+    recent = (
+        df.sort(["season", "week"])
+        .group_by(id_col)
+        .agg(pl.col("fantasy_points").tail(6).alias("recent_fantasy_points"))
+    )
+    recent_map = {
+        row[id_col]: row["recent_fantasy_points"]
+        for row in recent.iter_rows(named=True)
+    }
+
     records = []
     for row in latest.iter_rows(named=True):
         pos = row.get("position") or ""
@@ -270,6 +280,10 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
                 "projected_pass_tds": round(float(stats.get("roll_passing_tds") or 0.0), 2)
                 if pos == "QB"
                 else None,
+                "recent_fantasy_points": [
+                    round(float(v), 1) if v is not None else 0.0
+                    for v in (recent_map.get(stats.get(id_col)) or [])
+                ],
             }
         )
 
