@@ -1,0 +1,56 @@
+name: Daily Refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 6 * * *'   # daily data refresh; odds stay on the weekly Ingest run
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ingest-and-train
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - run: pip install polars nflreadpy scikit-learn joblib || true
+
+      - run: python scripts/download_data.py || true
+      - run: python scripts/build_features.py || true
+      - run: python scripts/build_predictions.py || true
+      - run: python scripts/train_models.py || true
+      - run: python scripts/train_player_models.py || true
+      - run: python scripts/predict_upcoming.py || true
+      - run: python scripts/compare_market.py || true
+      - run: python scripts/calibrate_model.py || true
+      - run: python scripts/simulate_playoffs.py || true
+
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add predictions/ features/ models/ reports/ market/ 2>/dev/null || true
+          git commit -m "chore: daily predictions refresh" || true
+          git pull --rebase origin main || true
+          git push origin main || true
+
+      - name: Prepare static data for Pages
+        run: |
+          mkdir -p frontend/data/predictions frontend/data/reports
+          cp predictions/*.json frontend/data/predictions/ 2>/dev/null || true
+          cp reports/*.json frontend/data/reports/ 2>/dev/null || true
+
+      - name: Deploy frontend to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx wrangler pages deploy frontend --project-name nfl-ml-data --commit-dirty=true
