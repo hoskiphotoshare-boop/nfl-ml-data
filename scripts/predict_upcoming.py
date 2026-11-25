@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.dirname(__file__) + "/../")
 
@@ -148,6 +149,16 @@ def main() -> None:
     os.makedirs("predictions", exist_ok=True)
     with open("predictions/upcoming_games.json", "w", encoding="utf-8") as f:
         json.dump(records, f, indent=2)
+    with open("predictions/meta.json", "w", encoding="utf-8") as f:
+        json.dump(
+            {
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+                "games": len(records),
+                "season": current_season,
+            },
+            f,
+            indent=2,
+        )
     print(f"Wrote predictions/upcoming_games.json ({len(records)} games)")
 
 

@@ -146,6 +146,16 @@ function renderGames(games) {
     const awayLine = `Away: ${((1 - g.home_win_prob) * 100).toFixed(0)}%${awayOdds ? ` (${awayOdds})` : ''}`;
     card.appendChild(el('p', 'prob' + (g.home_win_prob < 0.5 ? ' low' : ''), homeLine));
     card.appendChild(el('p', 'odds', awayLine));
+    const confidence = Math.abs(g.home_win_prob - 0.5);
+    const confLabel =
+      confidence >= 0.2
+        ? 'High confidence'
+        : confidence >= 0.1
+        ? 'Medium confidence'
+        : 'Low confidence';
+    card.appendChild(
+      el('p', confidence >= 0.2 ? 'prob' : 'odds', confLabel)
+    );
     card.appendChild(el('p', '', `Model spread: ${g.spread > 0 ? '+' : ''}${g.spread}`));
     card.appendChild(el('p', '', `Model total: ${g.total}`));
 
@@ -540,12 +550,19 @@ async function loadAll() {
   setupTabs();
   renderPicks();
   try {
-    const [games, players, playoffs, market] = await Promise.all([
+    const [games, players, playoffs, market, meta] = await Promise.all([
       loadGames(),
       fetchJSON('players_week.json'),
       fetchJSON('playoffs.json'),
       fetchReport('market_comparison.json').catch(() => null),
+      fetchJSON('meta.json').catch(() => null),
     ]);
+    if (meta && meta.generated_at) {
+      const metaEl = document.getElementById('last-updated');
+      if (metaEl) {
+        metaEl.textContent = `Data updated: ${new Date(meta.generated_at).toLocaleString()}`;
+      }
+    }
     if (market) {
       window.__marketById = new Map(
         (market.games || []).map((g) => [g.game_id, g])

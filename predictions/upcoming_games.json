@@ -14,8 +14,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.534
+    "div_game": 0
   },
   {
     "game_id": "2026_12_CHI_DET",
@@ -32,8 +31,7 @@
     "stadium": "Ford Field",
     "roof": "dome",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.528
+    "div_game": 1
   },
   {
     "game_id": "2026_12_PHI_DAL",
@@ -50,8 +48,7 @@
     "stadium": "AT&T Stadium",
     "roof": null,
     "surface": "matrixturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.538
+    "div_game": 1
   },
   {
     "game_id": "2026_12_KC_BUF",
@@ -68,8 +65,7 @@
     "stadium": "Highmark Stadium",
     "roof": "outdoors",
     "surface": "a_turf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.556
+    "div_game": 0
   },
   {
     "game_id": "2026_12_DEN_PIT",
@@ -86,8 +82,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.502
+    "div_game": 0
   },
   {
     "game_id": "2026_12_NO_CIN",
@@ -104,8 +99,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.484
+    "div_game": 0
   },
   {
     "game_id": "2026_12_LV_CLE",
@@ -122,8 +116,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.537
+    "div_game": 0
   },
   {
     "game_id": "2026_12_BAL_HOU",
@@ -140,8 +133,7 @@
     "stadium": "Reliant Stadium",
     "roof": null,
     "surface": "astroturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.507
+    "div_game": 0
   },
   {
     "game_id": "2026_12_NYG_IND",
@@ -158,8 +150,7 @@
     "stadium": "Lucas Oil Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.557
+    "div_game": 0
   },
   {
     "game_id": "2026_12_NYJ_MIA",
@@ -176,8 +167,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.613
+    "div_game": 1
   },
   {
     "game_id": "2026_12_ATL_MIN",
@@ -194,8 +184,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.586
+    "div_game": 0
   },
   {
     "game_id": "2026_12_TEN_JAX",
@@ -212,8 +201,7 @@
     "stadium": "EverBank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.596
+    "div_game": 1
   },
   {
     "game_id": "2026_12_WAS_ARI",
@@ -230,8 +218,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.435
+    "div_game": 0
   },
   {
     "game_id": "2026_12_SEA_SF",
@@ -248,8 +235,7 @@
     "stadium": "Levi's Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.571
+    "div_game": 1
   },
   {
     "game_id": "2026_12_NE_LAC",
@@ -266,8 +252,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.499
+    "div_game": 0
   },
   {
     "game_id": "2026_12_CAR_TB",
@@ -284,8 +269,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.61
+    "div_game": 1
   },
   {
     "game_id": "2026_13_KC_LA",
@@ -302,8 +286,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.519
+    "div_game": 0
   },
   {
     "game_id": "2026_13_DET_ATL",
@@ -320,8 +303,7 @@
     "stadium": "Mercedes-Benz Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.529
+    "div_game": 0
   },
   {
     "game_id": "2026_13_JAX_CHI",
@@ -338,8 +320,7 @@
     "stadium": "Soldier Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.702
+    "div_game": 0
   },
   {
     "game_id": "2026_13_CIN_CLE",
@@ -356,8 +337,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.546
+    "div_game": 1
   },
   {
     "game_id": "2026_13_GB_NO",
@@ -374,8 +354,7 @@
     "stadium": "Caesars Superdome",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.504
+    "div_game": 0
   },
   {
     "game_id": "2026_13_SF_NYG",
@@ -392,8 +371,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.465
+    "div_game": 0
   },
   {
     "game_id": "2026_13_LAC_TB",
@@ -410,8 +388,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.537
+    "div_game": 0
   },
   {
     "game_id": "2026_13_WAS_TEN",
@@ -428,8 +405,7 @@
     "stadium": "Nissan Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.52
+    "div_game": 0
   },
   {
     "game_id": "2026_13_PHI_ARI",
@@ -446,8 +422,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.398
+    "div_game": 0
   },
   {
     "game_id": "2026_13_MIA_DEN",
@@ -464,8 +439,7 @@
     "stadium": "Empower Field at Mile High",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.549
+    "div_game": 0
   },
   {
     "game_id": "2026_13_CAR_MIN",
@@ -482,8 +456,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.617
+    "div_game": 0
   },
   {
     "game_id": "2026_13_BUF_NE",
@@ -500,8 +473,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.524
+    "div_game": 1
   },
   {
     "game_id": "2026_13_HOU_PIT",
@@ -518,8 +490,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.483
+    "div_game": 0
   },
   {
     "game_id": "2026_13_DAL_SEA",
@@ -536,8 +507,7 @@
     "stadium": "Lumen Field",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.55
+    "div_game": 0
   },
   {
     "game_id": "2026_14_MIN_NE",
@@ -554,8 +524,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.555
+    "div_game": 0
   },
   {
     "game_id": "2026_14_TB_BAL",
@@ -572,8 +541,7 @@
     "stadium": "M&T Bank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.586
+    "div_game": 0
   },
   {
     "game_id": "2026_14_NO_CAR",
@@ -590,8 +558,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.513
+    "div_game": 1
   },
   {
     "game_id": "2026_14_ATL_CLE",
@@ -608,8 +575,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.534
+    "div_game": 0
   },
   {
     "game_id": "2026_14_TEN_DET",
@@ -626,8 +592,7 @@
     "stadium": "Ford Field",
     "roof": "dome",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.605
+    "div_game": 0
   },
   {
     "game_id": "2026_14_CHI_MIA",
@@ -644,8 +609,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.53
+    "div_game": 0
   },
   {
     "game_id": "2026_14_DEN_NYJ",
@@ -662,8 +626,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.534
+    "div_game": 0
   },
   {
     "game_id": "2026_14_IND_PHI",
@@ -680,8 +643,7 @@
     "stadium": "Lincoln Financial Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.601
+    "div_game": 0
   },
   {
     "game_id": "2026_14_HOU_WAS",
@@ -698,8 +660,7 @@
     "stadium": "Northwest Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.53
+    "div_game": 0
   },
   {
     "game_id": "2026_14_LAC_LV",
@@ -716,8 +677,7 @@
     "stadium": "Allegiant Stadium",
     "roof": "dome",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.489
+    "div_game": 1
   },
   {
     "game_id": "2026_14_KC_CIN",
@@ -734,8 +694,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.432
+    "div_game": 0
   },
   {
     "game_id": "2026_14_NYG_SEA",
@@ -752,8 +711,7 @@
     "stadium": "Lumen Field",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.58
+    "div_game": 0
   },
   {
     "game_id": "2026_14_LA_SF",
@@ -770,8 +728,7 @@
     "stadium": "Levi's Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.612
+    "div_game": 1
   },
   {
     "game_id": "2026_14_BUF_GB",
@@ -788,8 +745,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.564
+    "div_game": 0
   },
   {
     "game_id": "2026_14_PIT_JAX",
@@ -806,8 +762,7 @@
     "stadium": "EverBank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.633
+    "div_game": 0
   },
   {
     "game_id": "2026_15_SF_LAC",
@@ -824,8 +779,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.49
+    "div_game": 0
   },
   {
     "game_id": "2026_15_SEA_PHI",
@@ -842,8 +796,7 @@
     "stadium": "Lincoln Financial Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.562
+    "div_game": 0
   },
   {
     "game_id": "2026_15_CHI_BUF",
@@ -860,8 +813,7 @@
     "stadium": "Highmark Stadium",
     "roof": "outdoors",
     "surface": "a_turf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.566
+    "div_game": 0
   },
   {
     "game_id": "2026_15_CIN_CAR",
@@ -878,8 +830,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.553
+    "div_game": 0
   },
   {
     "game_id": "2026_15_MIA_GB",
@@ -896,8 +847,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.597
+    "div_game": 0
   },
   {
     "game_id": "2026_15_JAX_HOU",
@@ -914,8 +864,7 @@
     "stadium": "Reliant Stadium",
     "roof": null,
     "surface": "astroturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.55
+    "div_game": 1
   },
   {
     "game_id": "2026_15_CLE_NYG",
@@ -932,8 +881,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.56
+    "div_game": 0
   },
   {
     "game_id": "2026_15_BAL_PIT",
@@ -950,8 +898,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.444
+    "div_game": 1
   },
   {
     "game_id": "2026_15_NO_TB",
@@ -968,8 +915,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.553
+    "div_game": 1
   },
   {
     "game_id": "2026_15_IND_TEN",
@@ -986,8 +932,7 @@
     "stadium": "Nissan Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.517
+    "div_game": 1
   },
   {
     "game_id": "2026_15_ATL_WAS",
@@ -1004,8 +949,7 @@
     "stadium": "Northwest Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.562
+    "div_game": 0
   },
   {
     "game_id": "2026_15_NYJ_ARI",
@@ -1022,8 +966,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.473
+    "div_game": 0
   },
   {
     "game_id": "2026_15_DAL_LA",
@@ -1040,8 +983,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.551
+    "div_game": 0
   },
   {
     "game_id": "2026_15_DEN_LV",
@@ -1058,8 +1000,7 @@
     "stadium": "Allegiant Stadium",
     "roof": "dome",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.52
+    "div_game": 1
   },
   {
     "game_id": "2026_15_DET_MIN",
@@ -1076,8 +1017,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.53
+    "div_game": 1
   },
   {
     "game_id": "2026_15_NE_KC",
@@ -1094,8 +1034,7 @@
     "stadium": "GEHA Field at Arrowhead Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.542
+    "div_game": 0
   },
   {
     "game_id": "2026_16_HOU_PHI",
@@ -1112,8 +1051,7 @@
     "stadium": "Lincoln Financial Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.595
+    "div_game": 0
   },
   {
     "game_id": "2026_16_GB_CHI",
@@ -1130,8 +1068,7 @@
     "stadium": "Soldier Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.671
+    "div_game": 1
   },
   {
     "game_id": "2026_16_BUF_DEN",
@@ -1148,8 +1085,7 @@
     "stadium": "Empower Field at Mile High",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.516
+    "div_game": 0
   },
   {
     "game_id": "2026_16_LA_SEA",
@@ -1166,8 +1102,7 @@
     "stadium": "Lumen Field",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.575
+    "div_game": 1
   },
   {
     "game_id": "2026_16_TB_ATL",
@@ -1184,8 +1119,7 @@
     "stadium": "Mercedes-Benz Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.546
+    "div_game": 1
   },
   {
     "game_id": "2026_16_CLE_BAL",
@@ -1202,8 +1136,7 @@
     "stadium": "M&T Bank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.631
+    "div_game": 1
   },
   {
     "game_id": "2026_16_CIN_IND",
@@ -1220,8 +1153,7 @@
     "stadium": "Lucas Oil Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.587
+    "div_game": 0
   },
   {
     "game_id": "2026_16_LAC_MIA",
@@ -1238,8 +1170,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.557
+    "div_game": 0
   },
   {
     "game_id": "2026_16_WAS_MIN",
@@ -1256,8 +1187,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.566
+    "div_game": 0
   },
   {
     "game_id": "2026_16_ARI_NO",
@@ -1274,8 +1204,7 @@
     "stadium": "Caesars Superdome",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.631
+    "div_game": 0
   },
   {
     "game_id": "2026_16_NE_NYJ",
@@ -1292,8 +1221,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.468
+    "div_game": 1
   },
   {
     "game_id": "2026_16_CAR_PIT",
@@ -1310,8 +1238,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.547
+    "div_game": 0
   },
   {
     "game_id": "2026_16_TEN_LV",
@@ -1328,8 +1255,7 @@
     "stadium": "Allegiant Stadium",
     "roof": "dome",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.54
+    "div_game": 0
   },
   {
     "game_id": "2026_16_SF_KC",
@@ -1346,8 +1272,7 @@
     "stadium": "GEHA Field at Arrowhead Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.532
+    "div_game": 0
   },
   {
     "game_id": "2026_16_JAX_DAL",
@@ -1364,8 +1289,7 @@
     "stadium": "AT&T Stadium",
     "roof": null,
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.57
+    "div_game": 0
   },
   {
     "game_id": "2026_16_NYG_DET",
@@ -1382,8 +1306,7 @@
     "stadium": "Ford Field",
     "roof": "dome",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.581
+    "div_game": 0
   },
   {
     "game_id": "2026_17_BAL_CIN",
@@ -1400,8 +1323,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.441
+    "div_game": 1
   },
   {
     "game_id": "2026_17_NO_ATL",
@@ -1418,8 +1340,7 @@
     "stadium": "Mercedes-Benz Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.559
+    "div_game": 1
   },
   {
     "game_id": "2026_17_SEA_CAR",
@@ -1436,8 +1357,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.476
+    "div_game": 0
   },
   {
     "game_id": "2026_17_IND_CLE",
@@ -1454,8 +1374,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.509
+    "div_game": 0
   },
   {
     "game_id": "2026_17_NYG_DAL",
@@ -1472,8 +1391,7 @@
     "stadium": "AT&T Stadium",
     "roof": null,
     "surface": "matrixturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.581
+    "div_game": 1
   },
   {
     "game_id": "2026_17_WAS_JAX",
@@ -1490,8 +1408,7 @@
     "stadium": "EverBank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.568
+    "div_game": 0
   },
   {
     "game_id": "2026_17_KC_LAC",
@@ -1508,8 +1425,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.499
+    "div_game": 1
   },
   {
     "game_id": "2026_17_BUF_MIA",
@@ -1526,8 +1442,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.528
+    "div_game": 1
   },
   {
     "game_id": "2026_17_DEN_NE",
@@ -1544,8 +1459,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.584
+    "div_game": 0
   },
   {
     "game_id": "2026_17_MIN_NYJ",
@@ -1562,8 +1476,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.505
+    "div_game": 0
   },
   {
     "game_id": "2026_17_LA_TB",
@@ -1580,8 +1493,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.558
+    "div_game": 0
   },
   {
     "game_id": "2026_17_PIT_TEN",
@@ -1598,8 +1510,7 @@
     "stadium": "Nissan Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.588
+    "div_game": 0
   },
   {
     "game_id": "2026_17_LV_ARI",
@@ -1616,8 +1527,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.46
+    "div_game": 0
   },
   {
     "game_id": "2026_17_DET_CHI",
@@ -1634,8 +1544,7 @@
     "stadium": "Soldier Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.678
+    "div_game": 1
   },
   {
     "game_id": "2026_17_PHI_SF",
@@ -1652,8 +1561,7 @@
     "stadium": "Levi's Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.578
+    "div_game": 0
   },
   {
     "game_id": "2026_17_HOU_GB",
@@ -1670,8 +1578,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.604
+    "div_game": 0
   },
   {
     "game_id": "2026_18_SF_ARI",
@@ -1688,8 +1595,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.371
+    "div_game": 1
   },
   {
     "game_id": "2026_18_PIT_BAL",
@@ -1706,8 +1612,7 @@
     "stadium": "M&T Bank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.668
+    "div_game": 1
   },
   {
     "game_id": "2026_18_NYJ_BUF",
@@ -1724,8 +1629,7 @@
     "stadium": "Highmark Stadium",
     "roof": "outdoors",
     "surface": "a_turf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.649
+    "div_game": 1
   },
   {
     "game_id": "2026_18_ATL_CAR",
@@ -1742,8 +1646,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.541
+    "div_game": 1
   },
   {
     "game_id": "2026_18_CLE_CIN",
@@ -1760,8 +1663,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.519
+    "div_game": 1
   },
   {
     "game_id": "2026_18_LAC_DEN",
@@ -1778,8 +1680,7 @@
     "stadium": "Empower Field at Mile High",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.545
+    "div_game": 1
   },
   {
     "game_id": "2026_18_DET_GB",
@@ -1796,8 +1697,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.58
+    "div_game": 1
   },
   {
     "game_id": "2026_18_TEN_HOU",
@@ -1814,8 +1714,7 @@
     "stadium": "Reliant Stadium",
     "roof": null,
     "surface": "astroturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.586
+    "div_game": 1
   },
   {
     "game_id": "2026_18_JAX_IND",
@@ -1832,8 +1731,7 @@
     "stadium": "Lucas Oil Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.548
+    "div_game": 1
   },
   {
     "game_id": "2026_18_LV_KC",
@@ -1850,8 +1748,7 @@
     "stadium": "GEHA Field at Arrowhead Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.622
+    "div_game": 1
   },
   {
     "game_id": "2026_18_SEA_LA",
@@ -1868,8 +1765,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.535
+    "div_game": 1
   },
   {
     "game_id": "2026_18_CHI_MIN",
@@ -1886,8 +1782,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.518
+    "div_game": 1
   },
   {
     "game_id": "2026_18_MIA_NE",
@@ -1904,8 +1799,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.559
+    "div_game": 1
   },
   {
     "game_id": "2026_18_TB_NO",
@@ -1922,8 +1816,7 @@
     "stadium": "Caesars Superdome",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.53
+    "div_game": 1
   },
   {
     "game_id": "2026_18_PHI_NYG",
@@ -1940,8 +1833,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.495
+    "div_game": 1
   },
   {
     "game_id": "2026_18_DAL_WAS",
@@ -1958,7 +1850,6 @@
     "stadium": "Northwest Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.514
+    "div_game": 1
   }
 ]
