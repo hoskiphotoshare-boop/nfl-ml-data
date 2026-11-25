@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T04:56:38.342594+00:00",
+  "generated_at": "2026-11-25T06:05:08.952589+00:00",
   "match_backtest": {
     "accuracy": 0.6440677966101694,
     "log_loss": 0.6430025716450639,
@@ -16,7 +16,7 @@
   },
   "market": {
     "games": 30,
-    "outliers": 8,
+    "outliers": 9,
     "outlier_games": [
       "2026_12_PHI_DAL",
       "2026_12_NYG_IND",
@@ -25,14 +25,15 @@
       "2026_13_JAX_CHI",
       "2026_13_CIN_CLE",
       "2026_13_MIA_DEN",
+      "2026_13_HOU_PIT",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.1075,
-    "max_abs_edge": 0.23
+    "mean_abs_edge": 0.1102,
+    "max_abs_edge": 0.261
   },
   "futures": {
-    "mean_abs_edge": 0.0066,
-    "max_abs_edge": 0.0278,
+    "mean_abs_edge": 0.0074,
+    "max_abs_edge": 0.0352,
     "teams_matched": 32
   },
   "score_models": {
