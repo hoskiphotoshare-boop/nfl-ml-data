@@ -7,6 +7,20 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <datalist id="team-options">
+    <option value="ARI"></option><option value="ATL"></option><option value="BAL"></option>
+    <option value="BUF"></option><option value="CAR"></option><option value="CHI"></option>
+    <option value="CIN"></option><option value="CLE"></option><option value="DAL"></option>
+    <option value="DEN"></option><option value="DET"></option><option value="GB"></option>
+    <option value="HOU"></option><option value="IND"></option><option value="JAX"></option>
+    <option value="KC"></option><option value="LA"></option><option value="LAC"></option>
+    <option value="LV"></option><option value="MIA"></option><option value="MIN"></option>
+    <option value="NE"></option><option value="NO"></option><option value="NYG"></option>
+    <option value="NYJ"></option><option value="PHI"></option><option value="PIT"></option>
+    <option value="SEA"></option><option value="SF"></option><option value="TB"></option>
+    <option value="TEN"></option><option value="WAS"></option>
+  </datalist>
+
   <header>
     <h1>🏈 NFL ML Predictions</h1>
     <p class="subtitle">Match outcomes · Player projections · Playoff odds</p>
@@ -26,9 +40,11 @@
         <select id="games-week-filter">
           <option value="all">All weeks</option>
         </select>
-        <input id="games-team-filter" placeholder="Filter team (e.g. KC)" />
+        <input id="games-team-filter" placeholder="Filter team (e.g. KC)" list="team-options" />
       </div>
-      <div id="games-list" class="card-grid"></div>
+      <div id="games-list" class="card-grid">
+        <p class="muted">Loading games…</p>
+      </div>
     </section>
 
     <section id="players" class="tab-panel">
@@ -37,14 +53,18 @@
         <select id="players-position-filter">
           <option value="all">All positions</option>
         </select>
-        <input id="players-team-filter" placeholder="Filter team (e.g. KC)" />
+        <input id="players-team-filter" placeholder="Filter team (e.g. KC)" list="team-options" />
       </div>
-      <div id="players-list" class="card-grid"></div>
+      <div id="players-list" class="card-grid">
+        <p class="muted">Loading player projections…</p>
+      </div>
     </section>
 
     <section id="playoffs" class="tab-panel">
       <h2>Playoff &amp; Super Bowl Probabilities</h2>
-      <div id="playoffs-list" class="card-grid"></div>
+      <div id="playoffs-list" class="card-grid">
+        <p class="muted">Loading playoff odds…</p>
+      </div>
     </section>
 
     <section id="market" class="tab-panel">
@@ -54,10 +74,12 @@
         <select id="market-week-filter">
           <option value="all">All weeks</option>
         </select>
-        <input id="market-team-filter" placeholder="Filter team (e.g. KC)" />
+        <input id="market-team-filter" placeholder="Filter team (e.g. KC)" list="team-options" />
       </div>
       <div id="market-summary" class="card-grid"></div>
-      <div id="market-list" class="card-grid"></div>
+      <div id="market-list" class="card-grid">
+        <p class="muted">Loading market comparison…</p>
+      </div>
     </section>
 
     <section class="picks">
