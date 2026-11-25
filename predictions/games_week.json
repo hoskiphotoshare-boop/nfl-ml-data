@@ -5,7 +5,7 @@
     "week": 11,
     "home_team": "KC",
     "away_team": "ARI",
-    "home_win_prob": 0.905,
+    "home_win_prob": 0.906,
     "spread": 3.0,
     "total": 45.3
   },
@@ -15,7 +15,7 @@
     "week": 11,
     "home_team": "CAR",
     "away_team": "BAL",
-    "home_win_prob": 0.266,
+    "home_win_prob": 0.263,
     "spread": -2.9,
     "total": 42.6
   },
@@ -25,7 +25,7 @@
     "week": 11,
     "home_team": "WAS",
     "away_team": "CIN",
-    "home_win_prob": 0.641,
+    "home_win_prob": 0.646,
     "spread": -0.7,
     "total": 43.8
   },
@@ -35,7 +35,7 @@
     "week": 11,
     "home_team": "HOU",
     "away_team": "IND",
-    "home_win_prob": 0.564,
+    "home_win_prob": 0.569,
     "spread": -1.9,
     "total": 45.5
   },
@@ -45,7 +45,7 @@
     "week": 11,
     "home_team": "NYG",
     "away_team": "JAX",
-    "home_win_prob": 0.459,
+    "home_win_prob": 0.462,
     "spread": -0.0,
     "total": 43.1
   },
@@ -55,7 +55,7 @@
     "week": 11,
     "home_team": "DEN",
     "away_team": "LV",
-    "home_win_prob": 0.696,
+    "home_win_prob": 0.694,
     "spread": 2.6,
     "total": 45.4
   },
@@ -65,7 +65,7 @@
     "week": 11,
     "home_team": "BUF",
     "away_team": "MIA",
-    "home_win_prob": 0.72,
+    "home_win_prob": 0.714,
     "spread": 1.2,
     "total": 43.1
   },
@@ -75,7 +75,7 @@
     "week": 11,
     "home_team": "SF",
     "away_team": "MIN",
-    "home_win_prob": 0.712,
+    "home_win_prob": 0.71,
     "spread": -0.4,
     "total": 44.8
   },
@@ -85,7 +85,7 @@
     "week": 11,
     "home_team": "CHI",
     "away_team": "NO",
-    "home_win_prob": 0.938,
+    "home_win_prob": 0.945,
     "spread": -1.4,
     "total": 44.9
   },
@@ -95,7 +95,7 @@
     "week": 11,
     "home_team": "LAC",
     "away_team": "NYJ",
-    "home_win_prob": 0.707,
+    "home_win_prob": 0.71,
     "spread": 1.8,
     "total": 43.3
   },
@@ -105,7 +105,7 @@
     "week": 11,
     "home_team": "PHI",
     "away_team": "PIT",
-    "home_win_prob": 0.89,
+    "home_win_prob": 0.889,
     "spread": -0.0,
     "total": 43.5
   },
@@ -115,7 +115,7 @@
     "week": 11,
     "home_team": "DET",
     "away_team": "TB",
-    "home_win_prob": 0.583,
+    "home_win_prob": 0.579,
     "spread": -1.4,
     "total": 44.9
   },
@@ -125,7 +125,7 @@
     "week": 11,
     "home_team": "DAL",
     "away_team": "TEN",
-    "home_win_prob": 0.743,
+    "home_win_prob": 0.749,
     "spread": 1.3,
     "total": 44.8
   }
