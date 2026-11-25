@@ -3,38 +3,100 @@
   "simulations": 2000,
   "seasons": [
     {
+      "season": 2020,
+      "teams": 32,
+      "playoff_brier": 0.1205,
+      "playoff_log_loss": 0.434,
+      "conf_brier": 0.0466,
+      "conf_log_loss": 0.1416,
+      "sb_brier": 0.03,
+      "sb_log_loss": 0.1059,
+      "actual_sb_winner": [
+        "TB"
+      ]
+    },
+    {
+      "season": 2021,
+      "teams": 32,
+      "playoff_brier": 0.1453,
+      "playoff_log_loss": 0.4703,
+      "conf_brier": 0.0721,
+      "conf_log_loss": 0.2707,
+      "sb_brier": 0.0345,
+      "sb_log_loss": 0.157,
+      "actual_sb_winner": [
+        "LA"
+      ]
+    },
+    {
       "season": 2022,
       "teams": 32,
-      "brier": 0.1434,
-      "log_loss": 0.4434,
-      "actual_playoff_teams": 14
+      "playoff_brier": 0.1224,
+      "playoff_log_loss": 0.4064,
+      "conf_brier": 0.0415,
+      "conf_log_loss": 0.1287,
+      "sb_brier": 0.0279,
+      "sb_log_loss": 0.0957,
+      "actual_sb_winner": [
+        "KC"
+      ]
     },
     {
       "season": 2023,
       "teams": 32,
-      "brier": 0.1285,
-      "log_loss": 0.3607,
-      "actual_playoff_teams": 14
+      "playoff_brier": 0.1544,
+      "playoff_log_loss": 0.4403,
+      "conf_brier": 0.0456,
+      "conf_log_loss": 0.1462,
+      "sb_brier": 0.0346,
+      "sb_log_loss": 0.1314,
+      "actual_sb_winner": [
+        "KC"
+      ]
     },
     {
       "season": 2024,
       "teams": 32,
-      "brier": 0.0513,
-      "log_loss": 0.1625,
-      "actual_playoff_teams": 14
+      "playoff_brier": 0.0599,
+      "playoff_log_loss": 0.1987,
+      "conf_brier": 0.0657,
+      "conf_log_loss": 0.2028,
+      "sb_brier": 0.0385,
+      "sb_log_loss": 0.1456,
+      "actual_sb_winner": [
+        "PHI"
+      ]
     },
     {
       "season": 2025,
       "teams": 32,
-      "brier": 0.1028,
-      "log_loss": 0.3157,
-      "actual_playoff_teams": 14
+      "playoff_brier": 0.177,
+      "playoff_log_loss": 0.5661,
+      "conf_brier": 0.0492,
+      "conf_log_loss": 0.152,
+      "sb_brier": 0.0244,
+      "sb_log_loss": 0.0807,
+      "actual_sb_winner": [
+        "SEA"
+      ]
     }
   ],
   "pooled": {
-    "brier": 0.1065,
-    "log_loss": 0.3206,
-    "teams": 128
+    "playoff": {
+      "brier": 0.1299,
+      "log_loss": 0.4193,
+      "observations": 192
+    },
+    "conf": {
+      "brier": 0.0535,
+      "log_loss": 0.1737,
+      "observations": 192
+    },
+    "sb": {
+      "brier": 0.0317,
+      "log_loss": 0.1194,
+      "observations": 192
+    }
   },
-  "note": "SRS-only simulation; live sim also blends the match model."
+  "note": "SRS-only postseason simulation; live sim blends the match model."
 }

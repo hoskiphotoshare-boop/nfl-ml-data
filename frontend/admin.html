@@ -379,9 +379,10 @@
           odds.fetched_at ? new Date(odds.fetched_at).toLocaleString() : "—",
         ]));
         elm.appendChild(card("Playoff simulation", [
-          `Brier ${h.playoff_backtest?.brier ?? "—"}`,
-          `log loss ${h.playoff_backtest?.log_loss ?? "—"}`,
-          `${h.playoff_backtest?.teams ?? 0} team-seasons`,
+          `playoff Brier ${h.playoff_backtest?.playoff?.brier ?? "—"}`,
+          `conf Brier ${h.playoff_backtest?.conf?.brier ?? "—"}`,
+          `SB Brier ${h.playoff_backtest?.sb?.brier ?? "—"}`,
+          `${h.playoff_backtest?.playoff?.observations ?? 0} observations`,
         ]));
         elm.appendChild(card("Line movement", [
           `${movement.snapshots ?? 0} snapshots`,

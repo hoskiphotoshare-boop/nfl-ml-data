@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T04:01:08.428074+00:00",
+  "generated_at": "2026-11-25T04:09:56.239583+00:00",
   "match_backtest": {
     "accuracy": 0.6463790446841294,
     "log_loss": 0.6419906879525928,
@@ -39,9 +39,21 @@
     "total": 13.898
   },
   "playoff_backtest": {
-    "brier": 0.1065,
-    "log_loss": 0.3206,
-    "teams": 128
+    "playoff": {
+      "brier": 0.1299,
+      "log_loss": 0.4193,
+      "observations": 192
+    },
+    "conf": {
+      "brier": 0.0535,
+      "log_loss": 0.1737,
+      "observations": 192
+    },
+    "sb": {
+      "brier": 0.0317,
+      "log_loss": 0.1194,
+      "observations": 192
+    }
   },
   "injuries": {
     "seasons": [
