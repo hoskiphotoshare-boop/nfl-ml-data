@@ -52,6 +52,51 @@ def team_stats_from_row(row: dict, team: str) -> dict:
     return stats
 
 
+def season_records(schedules: pl.DataFrame, season: int) -> dict[str, dict]:
+    """W-L-T and last-five form for every team in the given season."""
+    played = schedules.filter(
+        (pl.col("season") == season)
+        & pl.col("home_score").is_not_null()
+        & pl.col("away_score").is_not_null()
+    ).sort(["week", "gameday"] if "gameday" in schedules.columns else ["week"])
+
+    records: dict[str, dict] = {}
+
+    def bucket(team: str) -> dict:
+        return records.setdefault(
+            team, {"w": 0, "l": 0, "t": 0, "form": []}
+        )
+
+    for row in played.iter_rows(named=True):
+        home, away = row["home_team"], row["away_team"]
+        hs, as_ = int(row["home_score"]), int(row["away_score"])
+        hb, ab = bucket(home), bucket(away)
+        if hs > as_:
+            hb["w"] += 1
+            ab["l"] += 1
+            hb["form"].append("W")
+            ab["form"].append("L")
+        elif as_ > hs:
+            ab["w"] += 1
+            hb["l"] += 1
+            ab["form"].append("W")
+            hb["form"].append("L")
+        else:
+            hb["t"] += 1
+            ab["t"] += 1
+            hb["form"].append("T")
+            ab["form"].append("T")
+
+    out = {}
+    for team, rec in records.items():
+        suffix = f"-{rec['t']}" if rec["t"] else ""
+        out[team] = {
+            "record": f"{rec['w']}-{rec['l']}{suffix}",
+            "form": "".join(rec["form"][-5:]),
+        }
+    return out
+
+
 def build_feature_vector(features: list[str], home_stats: dict, away_stats: dict, week: int, season: int) -> list[float]:
     values = []
     for feat in features:
@@ -97,7 +142,8 @@ def main() -> None:
         return
 
     stats_cache: dict[str, dict] = {}
-    records = []
+    records = season_records(schedules, current_season)
+    predictions = []
     for row in upcoming.iter_rows(named=True):
         home = row["home_team"]
         away = row["away_team"]
@@ -126,7 +172,7 @@ def main() -> None:
         spread = (proj_home - proj_away) if proj_home is not None and proj_away is not None else None
         total = (proj_home + proj_away) if proj_home is not None and proj_away is not None else None
 
-        records.append(
+        predictions.append(
             {
                 "game_id": row.get("game_id"),
                 "season": current_season,
@@ -134,6 +180,10 @@ def main() -> None:
                 "home_team": home,
                 "away_team": away,
                 "home_win_prob": round(proba, 3),
+                "home_record": records.get(home, {}).get("record"),
+                "away_record": records.get(away, {}).get("record"),
+                "home_form": records.get(home, {}).get("form"),
+                "away_form": records.get(away, {}).get("form"),
                 "spread": round(spread, 1) if spread is not None else None,
                 "total": round(total, 1) if total is not None else None,
                 "gameday": str(row.get("gameday")) if row.get("gameday") is not None else None,
@@ -148,18 +198,18 @@ def main() -> None:
 
     os.makedirs("predictions", exist_ok=True)
     with open("predictions/upcoming_games.json", "w", encoding="utf-8") as f:
-        json.dump(records, f, indent=2)
+        json.dump(predictions, f, indent=2)
     with open("predictions/meta.json", "w", encoding="utf-8") as f:
         json.dump(
             {
                 "generated_at": datetime.now(timezone.utc).isoformat(),
-                "games": len(records),
+                "games": len(predictions),
                 "season": current_season,
             },
             f,
             indent=2,
         )
-    print(f"Wrote predictions/upcoming_games.json ({len(records)} games)")
+    print(f"Wrote predictions/upcoming_games.json ({len(predictions)} games)")
 
 
 if __name__ == "__main__":

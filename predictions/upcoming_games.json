@@ -6,6 +6,10 @@
     "home_team": "LA",
     "away_team": "GB",
     "home_win_prob": 0.474,
+    "home_record": "6-4",
+    "away_record": "6-4",
+    "home_form": "LWWWW",
+    "away_form": "WLWWL",
     "spread": -0.5,
     "total": 46.5,
     "gameday": "2026-11-25",
@@ -14,8 +18,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.526
+    "div_game": 0
   },
   {
     "game_id": "2026_12_CHI_DET",
@@ -24,6 +27,10 @@
     "home_team": "DET",
     "away_team": "CHI",
     "home_win_prob": 0.461,
+    "home_record": "8-2",
+    "away_record": "8-2",
+    "home_form": "WWWWW",
+    "away_form": "WWWWW",
     "spread": -0.8,
     "total": 44.4,
     "gameday": "2026-11-26",
@@ -32,8 +39,7 @@
     "stadium": "Ford Field",
     "roof": "dome",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.522
+    "div_game": 1
   },
   {
     "game_id": "2026_12_PHI_DAL",
@@ -42,6 +48,10 @@
     "home_team": "DAL",
     "away_team": "PHI",
     "home_win_prob": 0.501,
+    "home_record": "5-6",
+    "away_record": "3-7",
+    "home_form": "WLWLW",
+    "away_form": "LLLLW",
     "spread": -1.0,
     "total": 45.2,
     "gameday": "2026-11-26",
@@ -50,8 +60,7 @@
     "stadium": "AT&T Stadium",
     "roof": null,
     "surface": "matrixturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.534
+    "div_game": 1
   },
   {
     "game_id": "2026_12_KC_BUF",
@@ -60,6 +69,10 @@
     "home_team": "BUF",
     "away_team": "KC",
     "home_win_prob": 0.575,
+    "home_record": "9-1",
+    "away_record": "8-2",
+    "home_form": "WWWWW",
+    "away_form": "LLWWW",
     "spread": -0.9,
     "total": 44.8,
     "gameday": "2026-11-26",
@@ -68,8 +81,7 @@
     "stadium": "Highmark Stadium",
     "roof": "outdoors",
     "surface": "a_turf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.557
+    "div_game": 0
   },
   {
     "game_id": "2026_12_DEN_PIT",
@@ -78,6 +90,10 @@
     "home_team": "PIT",
     "away_team": "DEN",
     "home_win_prob": 0.371,
+    "home_record": "6-4",
+    "away_record": "8-2",
+    "home_form": "WWWLL",
+    "away_form": "WWWWW",
     "spread": 1.1,
     "total": 43.3,
     "gameday": "2026-11-27",
@@ -86,8 +102,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.493
+    "div_game": 0
   },
   {
     "game_id": "2026_12_NO_CIN",
@@ -96,6 +111,10 @@
     "home_team": "CIN",
     "away_team": "NO",
     "home_win_prob": 0.317,
+    "home_record": "7-3",
+    "away_record": "3-7",
+    "home_form": "WWWWL",
+    "away_form": "WLWLL",
     "spread": -1.5,
     "total": 46.1,
     "gameday": "2026-11-29",
@@ -104,8 +123,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.474
+    "div_game": 0
   },
   {
     "game_id": "2026_12_LV_CLE",
@@ -114,6 +132,10 @@
     "home_team": "CLE",
     "away_team": "LV",
     "home_win_prob": 0.513,
+    "home_record": "6-4",
+    "away_record": "4-7",
+    "home_form": "WWLLW",
+    "away_form": "LWLLL",
     "spread": -0.5,
     "total": 43.8,
     "gameday": "2026-11-29",
@@ -122,8 +144,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.538
+    "div_game": 0
   },
   {
     "game_id": "2026_12_BAL_HOU",
@@ -132,6 +153,10 @@
     "home_team": "HOU",
     "away_team": "BAL",
     "home_win_prob": 0.404,
+    "home_record": "4-6",
+    "away_record": "4-7",
+    "home_form": "WLWLW",
+    "away_form": "LLLLL",
     "spread": -3.1,
     "total": 42.8,
     "gameday": "2026-11-29",
@@ -140,8 +165,7 @@
     "stadium": "Reliant Stadium",
     "roof": null,
     "surface": "astroturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.504
+    "div_game": 0
   },
   {
     "game_id": "2026_12_NYG_IND",
@@ -150,6 +174,10 @@
     "home_team": "IND",
     "away_team": "NYG",
     "home_win_prob": 0.591,
+    "home_record": "3-8",
+    "away_record": "6-3-1",
+    "home_form": "LLLWL",
+    "away_form": "LWWLW",
     "spread": 1.7,
     "total": 45.4,
     "gameday": "2026-11-29",
@@ -158,8 +186,7 @@
     "stadium": "Lucas Oil Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.562
+    "div_game": 0
   },
   {
     "game_id": "2026_12_NYJ_MIA",
@@ -168,6 +195,10 @@
     "home_team": "MIA",
     "away_team": "NYJ",
     "home_win_prob": 0.771,
+    "home_record": "1-9",
+    "away_record": "3-8",
+    "home_form": "WLLLL",
+    "away_form": "LLLLW",
     "spread": 0.6,
     "total": 42.0,
     "gameday": "2026-11-29",
@@ -176,8 +207,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.626
+    "div_game": 1
   },
   {
     "game_id": "2026_12_ATL_MIN",
@@ -186,6 +216,10 @@
     "home_team": "MIN",
     "away_team": "ATL",
     "home_win_prob": 0.689,
+    "home_record": "7-3",
+    "away_record": "3-7",
+    "home_form": "WLLWL",
+    "away_form": "LWLLL",
     "spread": 0.8,
     "total": 45.1,
     "gameday": "2026-11-29",
@@ -194,8 +228,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.595
+    "div_game": 0
   },
   {
     "game_id": "2026_12_TEN_JAX",
@@ -204,6 +237,10 @@
     "home_team": "JAX",
     "away_team": "TEN",
     "home_win_prob": 0.724,
+    "home_record": "7-3",
+    "away_record": "1-9",
+    "home_form": "LWWWL",
+    "away_form": "WLLLL",
     "spread": -0.1,
     "total": 43.3,
     "gameday": "2026-11-29",
@@ -212,8 +249,7 @@
     "stadium": "EverBank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.607
+    "div_game": 1
   },
   {
     "game_id": "2026_12_WAS_ARI",
@@ -222,6 +258,10 @@
     "home_team": "ARI",
     "away_team": "WAS",
     "home_win_prob": 0.173,
+    "home_record": "3-8",
+    "away_record": "4-5-1",
+    "home_form": "LWLLL",
+    "away_form": "LWLWW",
     "spread": -0.4,
     "total": 44.0,
     "gameday": "2026-11-29",
@@ -230,8 +270,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.413
+    "div_game": 0
   },
   {
     "game_id": "2026_12_SEA_SF",
@@ -240,6 +279,10 @@
     "home_team": "SF",
     "away_team": "SEA",
     "home_win_prob": 0.636,
+    "home_record": "9-1",
+    "away_record": "6-4",
+    "home_form": "WLWWW",
+    "away_form": "LWLWW",
     "spread": -1.4,
     "total": 44.4,
     "gameday": "2026-11-29",
@@ -248,8 +291,7 @@
     "stadium": "Levi's Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.577
+    "div_game": 1
   },
   {
     "game_id": "2026_12_NE_LAC",
@@ -258,6 +300,10 @@
     "home_team": "LAC",
     "away_team": "NE",
     "home_win_prob": 0.375,
+    "home_record": "1-9",
+    "away_record": "5-5",
+    "home_form": "LLLWL",
+    "away_form": "WLWLL",
     "spread": -2.9,
     "total": 45.0,
     "gameday": "2026-11-29",
@@ -266,8 +312,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.494
+    "div_game": 0
   },
   {
     "game_id": "2026_12_CAR_TB",
@@ -276,6 +321,10 @@
     "home_team": "TB",
     "away_team": "CAR",
     "home_win_prob": 0.764,
+    "home_record": "3-7",
+    "away_record": "5-5",
+    "home_form": "LWWLL",
+    "away_form": "LLLWW",
     "spread": 0.8,
     "total": 43.2,
     "gameday": "2026-11-30",
@@ -284,8 +333,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.623
+    "div_game": 1
   },
   {
     "game_id": "2026_13_KC_LA",
@@ -294,6 +342,10 @@
     "home_team": "LA",
     "away_team": "KC",
     "home_win_prob": 0.425,
+    "home_record": "6-4",
+    "away_record": "8-2",
+    "home_form": "LWWWW",
+    "away_form": "LLWWW",
     "spread": 0.0,
     "total": 46.0,
     "gameday": "2026-12-03",
@@ -302,8 +354,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.51
+    "div_game": 0
   },
   {
     "game_id": "2026_13_DET_ATL",
@@ -312,6 +363,10 @@
     "home_team": "ATL",
     "away_team": "DET",
     "home_win_prob": 0.477,
+    "home_record": "3-7",
+    "away_record": "8-2",
+    "home_form": "LWLLL",
+    "away_form": "WWWWW",
     "spread": 0.8,
     "total": 46.0,
     "gameday": "2026-12-06",
@@ -320,8 +375,7 @@
     "stadium": "Mercedes-Benz Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.527
+    "div_game": 0
   },
   {
     "game_id": "2026_13_JAX_CHI",
@@ -330,6 +384,10 @@
     "home_team": "CHI",
     "away_team": "JAX",
     "home_win_prob": 0.943,
+    "home_record": "8-2",
+    "away_record": "7-3",
+    "home_form": "WWWWW",
+    "away_form": "LWWWL",
     "spread": 0.3,
     "total": 42.3,
     "gameday": "2026-12-06",
@@ -338,8 +396,7 @@
     "stadium": "Soldier Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.733
+    "div_game": 0
   },
   {
     "game_id": "2026_13_CIN_CLE",
@@ -348,6 +405,10 @@
     "home_team": "CLE",
     "away_team": "CIN",
     "home_win_prob": 0.55,
+    "home_record": "6-4",
+    "away_record": "7-3",
+    "home_form": "WWLLW",
+    "away_form": "WWWWL",
     "spread": -2.0,
     "total": 42.8,
     "gameday": "2026-12-06",
@@ -356,8 +417,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.549
+    "div_game": 1
   },
   {
     "game_id": "2026_13_GB_NO",
@@ -366,6 +426,10 @@
     "home_team": "NO",
     "away_team": "GB",
     "home_win_prob": 0.381,
+    "home_record": "3-7",
+    "away_record": "6-4",
+    "home_form": "WLWLL",
+    "away_form": "WLWWL",
     "spread": -1.0,
     "total": 47.3,
     "gameday": "2026-12-06",
@@ -374,8 +438,7 @@
     "stadium": "Caesars Superdome",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.496
+    "div_game": 0
   },
   {
     "game_id": "2026_13_SF_NYG",
@@ -384,6 +447,10 @@
     "home_team": "NYG",
     "away_team": "SF",
     "home_win_prob": 0.256,
+    "home_record": "6-3-1",
+    "away_record": "9-1",
+    "home_form": "LWWLW",
+    "away_form": "WLWWW",
     "spread": -0.7,
     "total": 44.1,
     "gameday": "2026-12-06",
@@ -392,8 +459,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.451
+    "div_game": 0
   },
   {
     "game_id": "2026_13_LAC_TB",
@@ -402,6 +468,10 @@
     "home_team": "TB",
     "away_team": "LAC",
     "home_win_prob": 0.51,
+    "home_record": "3-7",
+    "away_record": "1-9",
+    "home_form": "LWWLL",
+    "away_form": "LLLWL",
     "spread": -0.3,
     "total": 44.1,
     "gameday": "2026-12-06",
@@ -410,8 +480,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.537
+    "div_game": 0
   },
   {
     "game_id": "2026_13_WAS_TEN",
@@ -420,6 +489,10 @@
     "home_team": "TEN",
     "away_team": "WAS",
     "home_win_prob": 0.441,
+    "home_record": "1-9",
+    "away_record": "4-5-1",
+    "home_form": "WLLLL",
+    "away_form": "LWLWW",
     "spread": 0.6,
     "total": 43.6,
     "gameday": "2026-12-06",
@@ -428,8 +501,7 @@
     "stadium": "Nissan Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.515
+    "div_game": 0
   },
   {
     "game_id": "2026_13_PHI_ARI",
@@ -438,6 +510,10 @@
     "home_team": "ARI",
     "away_team": "PHI",
     "home_win_prob": 0.102,
+    "home_record": "3-8",
+    "away_record": "3-7",
+    "home_form": "LWLLL",
+    "away_form": "LLLLW",
     "spread": -3.4,
     "total": 44.8,
     "gameday": "2026-12-06",
@@ -446,8 +522,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.368
+    "div_game": 0
   },
   {
     "game_id": "2026_13_MIA_DEN",
@@ -456,6 +531,10 @@
     "home_team": "DEN",
     "away_team": "MIA",
     "home_win_prob": 0.541,
+    "home_record": "8-2",
+    "away_record": "1-9",
+    "home_form": "WWWWW",
+    "away_form": "WLLLL",
     "spread": 1.3,
     "total": 43.4,
     "gameday": "2026-12-06",
@@ -464,8 +543,7 @@
     "stadium": "Empower Field at Mile High",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.547
+    "div_game": 0
   },
   {
     "game_id": "2026_13_CAR_MIN",
@@ -474,6 +552,10 @@
     "home_team": "MIN",
     "away_team": "CAR",
     "home_win_prob": 0.79,
+    "home_record": "7-3",
+    "away_record": "5-5",
+    "home_form": "WLLWL",
+    "away_form": "LLLWW",
     "spread": 1.1,
     "total": 44.2,
     "gameday": "2026-12-06",
@@ -482,8 +564,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.634
+    "div_game": 0
   },
   {
     "game_id": "2026_13_BUF_NE",
@@ -492,6 +573,10 @@
     "home_team": "NE",
     "away_team": "BUF",
     "home_win_prob": 0.463,
+    "home_record": "5-5",
+    "away_record": "9-1",
+    "home_form": "WLWLL",
+    "away_form": "WWWWW",
     "spread": 2.8,
     "total": 44.3,
     "gameday": "2026-12-06",
@@ -500,8 +585,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.522
+    "div_game": 1
   },
   {
     "game_id": "2026_13_HOU_PIT",
@@ -510,6 +594,10 @@
     "home_team": "PIT",
     "away_team": "HOU",
     "home_win_prob": 0.306,
+    "home_record": "6-4",
+    "away_record": "4-6",
+    "home_form": "WWWLL",
+    "away_form": "WLWLW",
     "spread": 2.5,
     "total": 43.0,
     "gameday": "2026-12-06",
@@ -518,8 +606,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.47
+    "div_game": 0
   },
   {
     "game_id": "2026_13_DAL_SEA",
@@ -528,6 +615,10 @@
     "home_team": "SEA",
     "away_team": "DAL",
     "home_win_prob": 0.551,
+    "home_record": "6-4",
+    "away_record": "5-6",
+    "home_form": "LWLWW",
+    "away_form": "WLWLW",
     "spread": 0.7,
     "total": 44.9,
     "gameday": "2026-12-07",
@@ -536,8 +627,7 @@
     "stadium": "Lumen Field",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.55
+    "div_game": 0
   },
   {
     "game_id": "2026_14_MIN_NE",
@@ -546,6 +636,10 @@
     "home_team": "NE",
     "away_team": "MIN",
     "home_win_prob": 0.588,
+    "home_record": "5-5",
+    "away_record": "7-3",
+    "home_form": "WLWLL",
+    "away_form": "WLLWL",
     "spread": 2.8,
     "total": 44.9,
     "gameday": "2026-12-10",
@@ -554,8 +648,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.561
+    "div_game": 0
   },
   {
     "game_id": "2026_14_TB_BAL",
@@ -564,6 +657,10 @@
     "home_team": "BAL",
     "away_team": "TB",
     "home_win_prob": 0.687,
+    "home_record": "4-7",
+    "away_record": "3-7",
+    "home_form": "LLLLL",
+    "away_form": "LWWLL",
     "spread": 2.1,
     "total": 42.4,
     "gameday": "2026-12-13",
@@ -572,8 +669,7 @@
     "stadium": "M&T Bank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.594
+    "div_game": 0
   },
   {
     "game_id": "2026_14_NO_CAR",
@@ -582,6 +678,10 @@
     "home_team": "CAR",
     "away_team": "NO",
     "home_win_prob": 0.419,
+    "home_record": "5-5",
+    "away_record": "3-7",
+    "home_form": "LLLWW",
+    "away_form": "WLWLL",
     "spread": -1.6,
     "total": 45.6,
     "gameday": "2026-12-13",
@@ -590,8 +690,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.509
+    "div_game": 1
   },
   {
     "game_id": "2026_14_ATL_CLE",
@@ -600,6 +699,10 @@
     "home_team": "CLE",
     "away_team": "ATL",
     "home_win_prob": 0.493,
+    "home_record": "6-4",
+    "away_record": "3-7",
+    "home_form": "WWLLW",
+    "away_form": "LWLLL",
     "spread": -2.1,
     "total": 43.3,
     "gameday": "2026-12-13",
@@ -608,8 +711,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.532
+    "div_game": 0
   },
   {
     "game_id": "2026_14_TEN_DET",
@@ -618,6 +720,10 @@
     "home_team": "DET",
     "away_team": "TEN",
     "home_win_prob": 0.745,
+    "home_record": "8-2",
+    "away_record": "1-9",
+    "home_form": "WWWWW",
+    "away_form": "WLLLL",
     "spread": -0.6,
     "total": 45.4,
     "gameday": "2026-12-13",
@@ -626,8 +732,7 @@
     "stadium": "Ford Field",
     "roof": "dome",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.615
+    "div_game": 0
   },
   {
     "game_id": "2026_14_CHI_MIA",
@@ -636,6 +741,10 @@
     "home_team": "MIA",
     "away_team": "CHI",
     "home_win_prob": 0.478,
+    "home_record": "1-9",
+    "away_record": "8-2",
+    "home_form": "WLLLL",
+    "away_form": "WWWWW",
     "spread": -0.3,
     "total": 42.2,
     "gameday": "2026-12-13",
@@ -644,8 +753,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.527
+    "div_game": 0
   },
   {
     "game_id": "2026_14_DEN_NYJ",
@@ -654,6 +762,10 @@
     "home_team": "NYJ",
     "away_team": "DEN",
     "home_win_prob": 0.495,
+    "home_record": "3-8",
+    "away_record": "8-2",
+    "home_form": "LLLLW",
+    "away_form": "WWWWW",
     "spread": -1.9,
     "total": 43.0,
     "gameday": "2026-12-13",
@@ -662,8 +774,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.532
+    "div_game": 0
   },
   {
     "game_id": "2026_14_IND_PHI",
@@ -672,6 +783,10 @@
     "home_team": "PHI",
     "away_team": "IND",
     "home_win_prob": 0.731,
+    "home_record": "3-7",
+    "away_record": "3-8",
+    "home_form": "LLLLW",
+    "away_form": "LLLWL",
     "spread": 0.6,
     "total": 46.0,
     "gameday": "2026-12-13",
@@ -680,8 +795,7 @@
     "stadium": "Lincoln Financial Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.61
+    "div_game": 0
   },
   {
     "game_id": "2026_14_HOU_WAS",
@@ -690,6 +804,10 @@
     "home_team": "WAS",
     "away_team": "HOU",
     "home_win_prob": 0.482,
+    "home_record": "4-5-1",
+    "away_record": "4-6",
+    "home_form": "LWLWW",
+    "away_form": "WLWLW",
     "spread": -0.4,
     "total": 43.6,
     "gameday": "2026-12-13",
@@ -698,8 +816,7 @@
     "stadium": "Northwest Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.528
+    "div_game": 0
   },
   {
     "game_id": "2026_14_LAC_LV",
@@ -708,6 +825,10 @@
     "home_team": "LV",
     "away_team": "LAC",
     "home_win_prob": 0.338,
+    "home_record": "4-7",
+    "away_record": "1-9",
+    "home_form": "LWLLL",
+    "away_form": "LLLWL",
     "spread": -2.5,
     "total": 45.8,
     "gameday": "2026-12-13",
@@ -716,8 +837,7 @@
     "stadium": "Allegiant Stadium",
     "roof": "dome",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.482
+    "div_game": 1
   },
   {
     "game_id": "2026_14_KC_CIN",
@@ -726,6 +846,10 @@
     "home_team": "CIN",
     "away_team": "KC",
     "home_win_prob": 0.169,
+    "home_record": "7-3",
+    "away_record": "8-2",
+    "home_form": "WWWWL",
+    "away_form": "LLWWW",
     "spread": -1.9,
     "total": 45.0,
     "gameday": "2026-12-13",
@@ -734,8 +858,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.411
+    "div_game": 0
   },
   {
     "game_id": "2026_14_NYG_SEA",
@@ -744,6 +867,10 @@
     "home_team": "SEA",
     "away_team": "NYG",
     "home_win_prob": 0.674,
+    "home_record": "6-4",
+    "away_record": "6-3-1",
+    "home_form": "LWLWW",
+    "away_form": "LWWLW",
     "spread": 2.1,
     "total": 43.9,
     "gameday": "2026-12-13",
@@ -752,8 +879,7 @@
     "stadium": "Lumen Field",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.589
+    "div_game": 0
   },
   {
     "game_id": "2026_14_LA_SF",
@@ -762,6 +888,10 @@
     "home_team": "SF",
     "away_team": "LA",
     "home_win_prob": 0.77,
+    "home_record": "9-1",
+    "away_record": "6-4",
+    "home_form": "WLWWW",
+    "away_form": "LWWWW",
     "spread": -1.4,
     "total": 45.5,
     "gameday": "2026-12-13",
@@ -770,8 +900,7 @@
     "stadium": "Levi's Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.625
+    "div_game": 1
   },
   {
     "game_id": "2026_14_BUF_GB",
@@ -780,6 +909,10 @@
     "home_team": "GB",
     "away_team": "BUF",
     "home_win_prob": 0.605,
+    "home_record": "6-4",
+    "away_record": "9-1",
+    "home_form": "WLWWL",
+    "away_form": "WWWWW",
     "spread": 1.4,
     "total": 45.3,
     "gameday": "2026-12-13",
@@ -788,8 +921,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.567
+    "div_game": 0
   },
   {
     "game_id": "2026_14_PIT_JAX",
@@ -798,6 +930,10 @@
     "home_team": "JAX",
     "away_team": "PIT",
     "home_win_prob": 0.82,
+    "home_record": "7-3",
+    "away_record": "6-4",
+    "home_form": "LWWWL",
+    "away_form": "WWWLL",
     "spread": -2.4,
     "total": 42.3,
     "gameday": "2026-12-14",
@@ -806,8 +942,7 @@
     "stadium": "EverBank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.647
+    "div_game": 0
   },
   {
     "game_id": "2026_15_SF_LAC",
@@ -816,6 +951,10 @@
     "home_team": "LAC",
     "away_team": "SF",
     "home_win_prob": 0.337,
+    "home_record": "1-9",
+    "away_record": "9-1",
+    "home_form": "LLLWL",
+    "away_form": "WLWWW",
     "spread": 0.4,
     "total": 44.9,
     "gameday": "2026-12-17",
@@ -824,8 +963,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.481
+    "div_game": 0
   },
   {
     "game_id": "2026_15_SEA_PHI",
@@ -834,6 +972,10 @@
     "home_team": "PHI",
     "away_team": "SEA",
     "home_win_prob": 0.608,
+    "home_record": "3-7",
+    "away_record": "6-4",
+    "home_form": "LLLLW",
+    "away_form": "LWLWW",
     "spread": 0.3,
     "total": 44.5,
     "gameday": "2026-12-19",
@@ -842,8 +984,7 @@
     "stadium": "Lincoln Financial Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.568
+    "div_game": 0
   },
   {
     "game_id": "2026_15_CHI_BUF",
@@ -852,6 +993,10 @@
     "home_team": "BUF",
     "away_team": "CHI",
     "home_win_prob": 0.61,
+    "home_record": "9-1",
+    "away_record": "8-2",
+    "home_form": "WWWWW",
+    "away_form": "WWWWW",
     "spread": 0.9,
     "total": 42.9,
     "gameday": "2026-12-19",
@@ -860,8 +1005,7 @@
     "stadium": "Highmark Stadium",
     "roof": "outdoors",
     "surface": "a_turf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.568
+    "div_game": 0
   },
   {
     "game_id": "2026_15_CIN_CAR",
@@ -870,6 +1014,10 @@
     "home_team": "CAR",
     "away_team": "CIN",
     "home_win_prob": 0.566,
+    "home_record": "5-5",
+    "away_record": "7-3",
+    "home_form": "LLLWW",
+    "away_form": "WWWWL",
     "spread": -0.1,
     "total": 43.9,
     "gameday": "2026-12-20",
@@ -878,8 +1026,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.554
+    "div_game": 0
   },
   {
     "game_id": "2026_15_MIA_GB",
@@ -888,6 +1035,10 @@
     "home_team": "GB",
     "away_team": "MIA",
     "home_win_prob": 0.722,
+    "home_record": "6-4",
+    "away_record": "1-9",
+    "home_form": "WLWWL",
+    "away_form": "WLLLL",
     "spread": 2.7,
     "total": 44.6,
     "gameday": "2026-12-20",
@@ -896,8 +1047,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.606
+    "div_game": 0
   },
   {
     "game_id": "2026_15_JAX_HOU",
@@ -906,6 +1056,10 @@
     "home_team": "HOU",
     "away_team": "JAX",
     "home_win_prob": 0.565,
+    "home_record": "4-6",
+    "away_record": "7-3",
+    "home_form": "WLWLW",
+    "away_form": "LWWWL",
     "spread": -0.1,
     "total": 43.2,
     "gameday": "2026-12-20",
@@ -914,8 +1068,7 @@
     "stadium": "Reliant Stadium",
     "roof": null,
     "surface": "astroturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.554
+    "div_game": 1
   },
   {
     "game_id": "2026_15_CLE_NYG",
@@ -924,6 +1077,10 @@
     "home_team": "NYG",
     "away_team": "CLE",
     "home_win_prob": 0.598,
+    "home_record": "6-3-1",
+    "away_record": "6-4",
+    "home_form": "LWWLW",
+    "away_form": "WWLLW",
     "spread": 1.8,
     "total": 42.4,
     "gameday": "2026-12-20",
@@ -932,8 +1089,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.564
+    "div_game": 0
   },
   {
     "game_id": "2026_15_BAL_PIT",
@@ -942,6 +1098,10 @@
     "home_team": "PIT",
     "away_team": "BAL",
     "home_win_prob": 0.196,
+    "home_record": "6-4",
+    "away_record": "4-7",
+    "home_form": "WWWLL",
+    "away_form": "LLLLL",
     "spread": -0.6,
     "total": 42.0,
     "gameday": "2026-12-20",
@@ -950,8 +1110,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.425
+    "div_game": 1
   },
   {
     "game_id": "2026_15_NO_TB",
@@ -960,6 +1119,10 @@
     "home_team": "TB",
     "away_team": "NO",
     "home_win_prob": 0.575,
+    "home_record": "3-7",
+    "away_record": "3-7",
+    "home_form": "LWWLL",
+    "away_form": "WLWLL",
     "spread": -0.8,
     "total": 45.4,
     "gameday": "2026-12-20",
@@ -968,8 +1131,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.557
+    "div_game": 1
   },
   {
     "game_id": "2026_15_IND_TEN",
@@ -978,6 +1140,10 @@
     "home_team": "TEN",
     "away_team": "IND",
     "home_win_prob": 0.424,
+    "home_record": "1-9",
+    "away_record": "3-8",
+    "home_form": "WLLLL",
+    "away_form": "LLLWL",
     "spread": -1.7,
     "total": 45.6,
     "gameday": "2026-12-20",
@@ -986,8 +1152,7 @@
     "stadium": "Nissan Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.51
+    "div_game": 1
   },
   {
     "game_id": "2026_15_ATL_WAS",
@@ -996,6 +1161,10 @@
     "home_team": "WAS",
     "away_team": "ATL",
     "home_win_prob": 0.594,
+    "home_record": "4-5-1",
+    "away_record": "3-7",
+    "home_form": "LWLWW",
+    "away_form": "LWLLL",
     "spread": -0.9,
     "total": 44.3,
     "gameday": "2026-12-20",
@@ -1004,8 +1173,7 @@
     "stadium": "Northwest Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.563
+    "div_game": 0
   },
   {
     "game_id": "2026_15_NYJ_ARI",
@@ -1014,6 +1182,10 @@
     "home_team": "ARI",
     "away_team": "NYJ",
     "home_win_prob": 0.269,
+    "home_record": "3-8",
+    "away_record": "3-8",
+    "home_form": "LWLLL",
+    "away_form": "LLLLW",
     "spread": -0.3,
     "total": 43.2,
     "gameday": "2026-12-20",
@@ -1022,8 +1194,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.456
+    "div_game": 0
   },
   {
     "game_id": "2026_15_DAL_LA",
@@ -1032,6 +1203,10 @@
     "home_team": "LA",
     "away_team": "DAL",
     "home_win_prob": 0.536,
+    "home_record": "6-4",
+    "away_record": "5-6",
+    "home_form": "LWWWW",
+    "away_form": "WLWLW",
     "spread": 0.7,
     "total": 46.0,
     "gameday": "2026-12-20",
@@ -1040,8 +1215,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.545
+    "div_game": 0
   },
   {
     "game_id": "2026_15_DEN_LV",
@@ -1050,6 +1224,10 @@
     "home_team": "LV",
     "away_team": "DEN",
     "home_win_prob": 0.447,
+    "home_record": "4-7",
+    "away_record": "8-2",
+    "home_form": "LWLLL",
+    "away_form": "WWWWW",
     "spread": -2.6,
     "total": 45.4,
     "gameday": "2026-12-20",
@@ -1058,8 +1236,7 @@
     "stadium": "Allegiant Stadium",
     "roof": "dome",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.517
+    "div_game": 1
   },
   {
     "game_id": "2026_15_DET_MIN",
@@ -1068,6 +1245,10 @@
     "home_team": "MIN",
     "away_team": "DET",
     "home_win_prob": 0.495,
+    "home_record": "7-3",
+    "away_record": "8-2",
+    "home_form": "WLLWL",
+    "away_form": "WWWWW",
     "spread": 1.6,
     "total": 45.9,
     "gameday": "2026-12-20",
@@ -1076,8 +1257,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.532
+    "div_game": 1
   },
   {
     "game_id": "2026_15_NE_KC",
@@ -1086,6 +1266,10 @@
     "home_team": "KC",
     "away_team": "NE",
     "home_win_prob": 0.525,
+    "home_record": "8-2",
+    "away_record": "5-5",
+    "home_form": "LLWWW",
+    "away_form": "WLWLL",
     "spread": -1.9,
     "total": 45.3,
     "gameday": "2026-12-21",
@@ -1094,8 +1278,7 @@
     "stadium": "GEHA Field at Arrowhead Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.542
+    "div_game": 0
   },
   {
     "game_id": "2026_16_HOU_PHI",
@@ -1104,6 +1287,10 @@
     "home_team": "PHI",
     "away_team": "HOU",
     "home_win_prob": 0.718,
+    "home_record": "3-7",
+    "away_record": "4-6",
+    "home_form": "LLLLW",
+    "away_form": "WLWLW",
     "spread": 2.5,
     "total": 44.4,
     "gameday": "2026-12-24",
@@ -1112,8 +1299,7 @@
     "stadium": "Lincoln Financial Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.605
+    "div_game": 0
   },
   {
     "game_id": "2026_16_GB_CHI",
@@ -1122,6 +1308,10 @@
     "home_team": "CHI",
     "away_team": "GB",
     "home_win_prob": 0.903,
+    "home_record": "8-2",
+    "away_record": "6-4",
+    "home_form": "WWWWW",
+    "away_form": "WLWWL",
     "spread": -2.3,
     "total": 44.4,
     "gameday": "2026-12-25",
@@ -1130,8 +1320,7 @@
     "stadium": "Soldier Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.696
+    "div_game": 1
   },
   {
     "game_id": "2026_16_BUF_DEN",
@@ -1140,6 +1329,10 @@
     "home_team": "DEN",
     "away_team": "BUF",
     "home_win_prob": 0.412,
+    "home_record": "8-2",
+    "away_record": "9-1",
+    "home_form": "WWWWW",
+    "away_form": "WWWWW",
     "spread": 0.1,
     "total": 44.1,
     "gameday": "2026-12-25",
@@ -1148,8 +1341,7 @@
     "stadium": "Empower Field at Mile High",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.506
+    "div_game": 0
   },
   {
     "game_id": "2026_16_LA_SEA",
@@ -1158,6 +1350,10 @@
     "home_team": "SEA",
     "away_team": "LA",
     "home_win_prob": 0.661,
+    "home_record": "6-4",
+    "away_record": "6-4",
+    "home_form": "LWLWW",
+    "away_form": "LWWWW",
     "spread": 0.0,
     "total": 45.3,
     "gameday": "2026-12-25",
@@ -1166,8 +1362,7 @@
     "stadium": "Lumen Field",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.585
+    "div_game": 1
   },
   {
     "game_id": "2026_16_TB_ATL",
@@ -1176,6 +1371,10 @@
     "home_team": "ATL",
     "away_team": "TB",
     "home_win_prob": 0.542,
+    "home_record": "3-7",
+    "away_record": "3-7",
+    "home_form": "LWLLL",
+    "away_form": "LWWLL",
     "spread": -0.6,
     "total": 44.2,
     "gameday": "2026-12-27",
@@ -1184,8 +1383,7 @@
     "stadium": "Mercedes-Benz Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.547
+    "div_game": 1
   },
   {
     "game_id": "2026_16_CLE_BAL",
@@ -1194,6 +1392,10 @@
     "home_team": "BAL",
     "away_team": "CLE",
     "home_win_prob": 0.816,
+    "home_record": "4-7",
+    "away_record": "6-4",
+    "home_form": "LLLLL",
+    "away_form": "WWLLW",
     "spread": 4.8,
     "total": 41.5,
     "gameday": "2026-12-27",
@@ -1202,8 +1404,7 @@
     "stadium": "M&T Bank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.645
+    "div_game": 1
   },
   {
     "game_id": "2026_16_CIN_IND",
@@ -1212,6 +1413,10 @@
     "home_team": "IND",
     "away_team": "CIN",
     "home_win_prob": 0.699,
+    "home_record": "3-8",
+    "away_record": "7-3",
+    "home_form": "LLLWL",
+    "away_form": "WWWWL",
     "spread": 1.6,
     "total": 45.8,
     "gameday": "2026-12-27",
@@ -1220,8 +1425,7 @@
     "stadium": "Lucas Oil Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.598
+    "div_game": 0
   },
   {
     "game_id": "2026_16_LAC_MIA",
@@ -1230,6 +1434,10 @@
     "home_team": "MIA",
     "away_team": "LAC",
     "home_win_prob": 0.589,
+    "home_record": "1-9",
+    "away_record": "1-9",
+    "home_form": "WLLLL",
+    "away_form": "LLLWL",
     "spread": -1.1,
     "total": 43.8,
     "gameday": "2026-12-27",
@@ -1238,8 +1446,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.562
+    "div_game": 0
   },
   {
     "game_id": "2026_16_WAS_MIN",
@@ -1248,6 +1455,10 @@
     "home_team": "MIN",
     "away_team": "WAS",
     "home_win_prob": 0.624,
+    "home_record": "7-3",
+    "away_record": "4-5-1",
+    "home_form": "WLLWL",
+    "away_form": "LWLWW",
     "spread": 1.7,
     "total": 44.1,
     "gameday": "2026-12-27",
@@ -1256,8 +1467,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.573
+    "div_game": 0
   },
   {
     "game_id": "2026_16_ARI_NO",
@@ -1266,6 +1476,10 @@
     "home_team": "NO",
     "away_team": "ARI",
     "home_win_prob": 0.823,
+    "home_record": "3-7",
+    "away_record": "3-8",
+    "home_form": "WLWLL",
+    "away_form": "LWLLL",
     "spread": 2.6,
     "total": 46.3,
     "gameday": "2026-12-27",
@@ -1274,8 +1488,7 @@
     "stadium": "Caesars Superdome",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.649
+    "div_game": 0
   },
   {
     "game_id": "2026_16_NE_NYJ",
@@ -1284,6 +1497,10 @@
     "home_team": "NYJ",
     "away_team": "NE",
     "home_win_prob": 0.266,
+    "home_record": "3-8",
+    "away_record": "5-5",
+    "home_form": "LLLLW",
+    "away_form": "WLWLL",
     "spread": -4.6,
     "total": 43.2,
     "gameday": "2026-12-27",
@@ -1292,8 +1509,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.455
+    "div_game": 1
   },
   {
     "game_id": "2026_16_CAR_PIT",
@@ -1302,6 +1518,10 @@
     "home_team": "PIT",
     "away_team": "CAR",
     "home_win_prob": 0.541,
+    "home_record": "6-4",
+    "away_record": "5-5",
+    "home_form": "WWWLL",
+    "away_form": "LLLWW",
     "spread": 2.3,
     "total": 42.8,
     "gameday": "2026-12-27",
@@ -1310,8 +1530,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.547
+    "div_game": 0
   },
   {
     "game_id": "2026_16_TEN_LV",
@@ -1320,6 +1539,10 @@
     "home_team": "LV",
     "away_team": "TEN",
     "home_win_prob": 0.528,
+    "home_record": "4-7",
+    "away_record": "1-9",
+    "home_form": "LWLLL",
+    "away_form": "WLLLL",
     "spread": -1.4,
     "total": 45.2,
     "gameday": "2026-12-27",
@@ -1328,8 +1551,7 @@
     "stadium": "Allegiant Stadium",
     "roof": "dome",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.543
+    "div_game": 0
   },
   {
     "game_id": "2026_16_SF_KC",
@@ -1338,6 +1560,10 @@
     "home_team": "KC",
     "away_team": "SF",
     "home_win_prob": 0.482,
+    "home_record": "8-2",
+    "away_record": "9-1",
+    "home_form": "LLWWW",
+    "away_form": "WLWWW",
     "spread": 1.3,
     "total": 45.2,
     "gameday": "2026-12-27",
@@ -1346,8 +1572,7 @@
     "stadium": "GEHA Field at Arrowhead Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.528
+    "div_game": 0
   },
   {
     "game_id": "2026_16_JAX_DAL",
@@ -1356,6 +1581,10 @@
     "home_team": "DAL",
     "away_team": "JAX",
     "home_win_prob": 0.63,
+    "home_record": "5-6",
+    "away_record": "7-3",
+    "home_form": "WLWLW",
+    "away_form": "LWWWL",
     "spread": 1.3,
     "total": 44.1,
     "gameday": "2026-12-27",
@@ -1364,8 +1593,7 @@
     "stadium": "AT&T Stadium",
     "roof": null,
     "surface": "matrixturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.575
+    "div_game": 0
   },
   {
     "game_id": "2026_16_NYG_DET",
@@ -1374,6 +1602,10 @@
     "home_team": "DET",
     "away_team": "NYG",
     "home_win_prob": 0.664,
+    "home_record": "8-2",
+    "away_record": "6-3-1",
+    "home_form": "WWWWW",
+    "away_form": "LWWLW",
     "spread": -0.5,
     "total": 45.2,
     "gameday": "2026-12-28",
@@ -1382,8 +1614,7 @@
     "stadium": "Ford Field",
     "roof": "dome",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.586
+    "div_game": 0
   },
   {
     "game_id": "2026_17_BAL_CIN",
@@ -1392,6 +1623,10 @@
     "home_team": "CIN",
     "away_team": "BAL",
     "home_win_prob": 0.19,
+    "home_record": "7-3",
+    "away_record": "4-7",
+    "home_form": "WWWWL",
+    "away_form": "LLLLL",
     "spread": -2.8,
     "total": 43.1,
     "gameday": "2026-12-31",
@@ -1400,8 +1635,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.422
+    "div_game": 1
   },
   {
     "game_id": "2026_17_NO_ATL",
@@ -1410,6 +1644,10 @@
     "home_team": "ATL",
     "away_team": "NO",
     "home_win_prob": 0.596,
+    "home_record": "3-7",
+    "away_record": "3-7",
+    "home_form": "LWLLL",
+    "away_form": "WLWLL",
     "spread": -1.3,
     "total": 46.6,
     "gameday": "2027-01-03",
@@ -1418,8 +1656,7 @@
     "stadium": "Mercedes-Benz Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.564
+    "div_game": 1
   },
   {
     "game_id": "2026_17_SEA_CAR",
@@ -1428,6 +1665,10 @@
     "home_team": "CAR",
     "away_team": "SEA",
     "home_win_prob": 0.288,
+    "home_record": "5-5",
+    "away_record": "6-4",
+    "home_form": "LLLWW",
+    "away_form": "LWLWW",
     "spread": -2.0,
     "total": 43.8,
     "gameday": "2027-01-03",
@@ -1436,8 +1677,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.464
+    "div_game": 0
   },
   {
     "game_id": "2026_17_IND_CLE",
@@ -1446,6 +1686,10 @@
     "home_team": "CLE",
     "away_team": "IND",
     "home_win_prob": 0.402,
+    "home_record": "6-4",
+    "away_record": "3-8",
+    "home_form": "WWLLW",
+    "away_form": "LLLWL",
     "spread": -3.6,
     "total": 44.2,
     "gameday": "2027-01-03",
@@ -1454,8 +1698,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.503
+    "div_game": 0
   },
   {
     "game_id": "2026_17_NYG_DAL",
@@ -1464,6 +1707,10 @@
     "home_team": "DAL",
     "away_team": "NYG",
     "home_win_prob": 0.671,
+    "home_record": "5-6",
+    "away_record": "6-3-1",
+    "home_form": "WLWLW",
+    "away_form": "LWWLW",
     "spread": 1.4,
     "total": 44.6,
     "gameday": "2027-01-03",
@@ -1472,8 +1719,7 @@
     "stadium": "AT&T Stadium",
     "roof": null,
     "surface": "matrixturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.588
+    "div_game": 1
   },
   {
     "game_id": "2026_17_WAS_JAX",
@@ -1482,6 +1728,10 @@
     "home_team": "JAX",
     "away_team": "WAS",
     "home_win_prob": 0.624,
+    "home_record": "7-3",
+    "away_record": "4-5-1",
+    "home_form": "LWWWL",
+    "away_form": "LWLWW",
     "spread": 0.6,
     "total": 42.9,
     "gameday": "2027-01-03",
@@ -1490,8 +1740,7 @@
     "stadium": "EverBank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.573
+    "div_game": 0
   },
   {
     "game_id": "2026_17_KC_LAC",
@@ -1500,6 +1749,10 @@
     "home_team": "LAC",
     "away_team": "KC",
     "home_win_prob": 0.371,
+    "home_record": "1-9",
+    "away_record": "8-2",
+    "home_form": "LLLWL",
+    "away_form": "LLWWW",
     "spread": -0.9,
     "total": 45.4,
     "gameday": "2027-01-03",
@@ -1508,8 +1761,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.493
+    "div_game": 1
   },
   {
     "game_id": "2026_17_BUF_MIA",
@@ -1518,6 +1770,10 @@
     "home_team": "MIA",
     "away_team": "BUF",
     "home_win_prob": 0.468,
+    "home_record": "1-9",
+    "away_record": "9-1",
+    "home_form": "WLLLL",
+    "away_form": "WWWWW",
     "spread": -1.2,
     "total": 43.1,
     "gameday": "2027-01-03",
@@ -1526,8 +1782,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.524
+    "div_game": 1
   },
   {
     "game_id": "2026_17_DEN_NE",
@@ -1536,6 +1791,10 @@
     "home_team": "NE",
     "away_team": "DEN",
     "home_win_prob": 0.693,
+    "home_record": "5-5",
+    "away_record": "8-2",
+    "home_form": "WLWLL",
+    "away_form": "WWWWW",
     "spread": 2.7,
     "total": 44.6,
     "gameday": "2027-01-03",
@@ -1544,8 +1803,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.596
+    "div_game": 0
   },
   {
     "game_id": "2026_17_MIN_NYJ",
@@ -1554,6 +1812,10 @@
     "home_team": "NYJ",
     "away_team": "MIN",
     "home_win_prob": 0.388,
+    "home_record": "3-8",
+    "away_record": "7-3",
+    "home_form": "LLLLW",
+    "away_form": "WLLWL",
     "spread": -1.8,
     "total": 43.3,
     "gameday": "2027-01-03",
@@ -1562,8 +1824,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.498
+    "div_game": 0
   },
   {
     "game_id": "2026_17_LA_TB",
@@ -1572,6 +1833,10 @@
     "home_team": "TB",
     "away_team": "LA",
     "home_win_prob": 0.591,
+    "home_record": "3-7",
+    "away_record": "6-4",
+    "home_form": "LWWLL",
+    "away_form": "LWWWW",
     "spread": -1.2,
     "total": 44.7,
     "gameday": "2027-01-03",
@@ -1580,8 +1845,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.562
+    "div_game": 0
   },
   {
     "game_id": "2026_17_PIT_TEN",
@@ -1590,6 +1854,10 @@
     "home_team": "TEN",
     "away_team": "PIT",
     "home_win_prob": 0.689,
+    "home_record": "1-9",
+    "away_record": "6-4",
+    "home_form": "WLLLL",
+    "away_form": "WWWLL",
     "spread": -2.3,
     "total": 43.1,
     "gameday": "2027-01-03",
@@ -1598,8 +1866,7 @@
     "stadium": "Nissan Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.595
+    "div_game": 0
   },
   {
     "game_id": "2026_17_LV_ARI",
@@ -1608,6 +1875,10 @@
     "home_team": "ARI",
     "away_team": "LV",
     "home_win_prob": 0.238,
+    "home_record": "3-8",
+    "away_record": "4-7",
+    "home_form": "LWLLL",
+    "away_form": "LWLLL",
     "spread": 0.4,
     "total": 45.6,
     "gameday": "2027-01-03",
@@ -1616,8 +1887,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.444
+    "div_game": 0
   },
   {
     "game_id": "2026_17_DET_CHI",
@@ -1626,6 +1896,10 @@
     "home_team": "CHI",
     "away_team": "DET",
     "home_win_prob": 0.917,
+    "home_record": "8-2",
+    "away_record": "8-2",
+    "home_form": "WWWWW",
+    "away_form": "WWWWW",
     "spread": 0.8,
     "total": 44.4,
     "gameday": "2027-01-03",
@@ -1634,8 +1908,7 @@
     "stadium": "Soldier Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.707
+    "div_game": 1
   },
   {
     "game_id": "2026_17_PHI_SF",
@@ -1644,6 +1917,10 @@
     "home_team": "SF",
     "away_team": "PHI",
     "home_win_prob": 0.644,
+    "home_record": "9-1",
+    "away_record": "3-7",
+    "home_form": "WLWWW",
+    "away_form": "LLLLW",
     "spread": -1.6,
     "total": 44.7,
     "gameday": "2027-01-03",
@@ -1652,8 +1929,7 @@
     "stadium": "Levi's Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.579
+    "div_game": 0
   },
   {
     "game_id": "2026_17_HOU_GB",
@@ -1662,6 +1938,10 @@
     "home_team": "GB",
     "away_team": "HOU",
     "home_win_prob": 0.748,
+    "home_record": "6-4",
+    "away_record": "4-6",
+    "home_form": "WLWWL",
+    "away_form": "WLWLW",
     "spread": 2.8,
     "total": 45.3,
     "gameday": "2027-01-04",
@@ -1670,8 +1950,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "calibrated_home_win_prob": 0.616
+    "div_game": 0
   },
   {
     "game_id": "2026_18_SF_ARI",
@@ -1680,6 +1959,10 @@
     "home_team": "ARI",
     "away_team": "SF",
     "home_win_prob": 0.071,
+    "home_record": "3-8",
+    "away_record": "9-1",
+    "home_form": "LWLLL",
+    "away_form": "WLWWW",
     "spread": -1.7,
     "total": 44.7,
     "gameday": "2027-01-10",
@@ -1688,8 +1971,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.34
+    "div_game": 1
   },
   {
     "game_id": "2026_18_PIT_BAL",
@@ -1698,6 +1980,10 @@
     "home_team": "BAL",
     "away_team": "PIT",
     "home_win_prob": 0.89,
+    "home_record": "4-7",
+    "away_record": "6-4",
+    "home_form": "LLLLL",
+    "away_form": "WWWLL",
     "spread": 0.6,
     "total": 42.0,
     "gameday": "2027-01-10",
@@ -1706,8 +1992,7 @@
     "stadium": "M&T Bank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.687
+    "div_game": 1
   },
   {
     "game_id": "2026_18_NYJ_BUF",
@@ -1716,6 +2001,10 @@
     "home_team": "BUF",
     "away_team": "NYJ",
     "home_win_prob": 0.854,
+    "home_record": "9-1",
+    "away_record": "3-8",
+    "home_form": "WWWWW",
+    "away_form": "LLLLW",
     "spread": 1.8,
     "total": 42.7,
     "gameday": "2027-01-10",
@@ -1724,8 +2013,7 @@
     "stadium": "Highmark Stadium",
     "roof": "outdoors",
     "surface": "a_turf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.665
+    "div_game": 1
   },
   {
     "game_id": "2026_18_ATL_CAR",
@@ -1734,6 +2022,10 @@
     "home_team": "CAR",
     "away_team": "ATL",
     "home_win_prob": 0.511,
+    "home_record": "5-5",
+    "away_record": "3-7",
+    "home_form": "LLLWW",
+    "away_form": "LWLLL",
     "spread": -0.2,
     "total": 44.3,
     "gameday": "2027-01-10",
@@ -1742,8 +2034,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.537
+    "div_game": 1
   },
   {
     "game_id": "2026_18_CLE_CIN",
@@ -1752,6 +2043,10 @@
     "home_team": "CIN",
     "away_team": "CLE",
     "home_win_prob": 0.434,
+    "home_record": "7-3",
+    "away_record": "6-4",
+    "home_form": "WWWWL",
+    "away_form": "WWLLW",
     "spread": 2.0,
     "total": 42.8,
     "gameday": "2027-01-10",
@@ -1760,8 +2055,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.513
+    "div_game": 1
   },
   {
     "game_id": "2026_18_LAC_DEN",
@@ -1770,6 +2064,10 @@
     "home_team": "DEN",
     "away_team": "LAC",
     "home_win_prob": 0.535,
+    "home_record": "8-2",
+    "away_record": "1-9",
+    "home_form": "WWWWW",
+    "away_form": "LLLWL",
     "spread": 0.2,
     "total": 44.7,
     "gameday": "2027-01-10",
@@ -1778,8 +2076,7 @@
     "stadium": "Empower Field at Mile High",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.545
+    "div_game": 1
   },
   {
     "game_id": "2026_18_DET_GB",
@@ -1788,6 +2085,10 @@
     "home_team": "GB",
     "away_team": "DET",
     "home_win_prob": 0.672,
+    "home_record": "6-4",
+    "away_record": "8-2",
+    "home_form": "WLWWL",
+    "away_form": "WWWWW",
     "spread": 3.1,
     "total": 46.7,
     "gameday": "2027-01-10",
@@ -1796,8 +2097,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.589
+    "div_game": 1
   },
   {
     "game_id": "2026_18_TEN_HOU",
@@ -1806,6 +2106,10 @@
     "home_team": "HOU",
     "away_team": "TEN",
     "home_win_prob": 0.7,
+    "home_record": "4-6",
+    "away_record": "1-9",
+    "home_form": "WLWLW",
+    "away_form": "WLLLL",
     "spread": -0.2,
     "total": 43.9,
     "gameday": "2027-01-10",
@@ -1814,8 +2118,7 @@
     "stadium": "Reliant Stadium",
     "roof": null,
     "surface": "astroturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.598
+    "div_game": 1
   },
   {
     "game_id": "2026_18_JAX_IND",
@@ -1824,6 +2127,10 @@
     "home_team": "IND",
     "away_team": "JAX",
     "home_win_prob": 0.552,
+    "home_record": "3-8",
+    "away_record": "7-3",
+    "home_form": "LLLWL",
+    "away_form": "LWWWL",
     "spread": 1.7,
     "total": 44.9,
     "gameday": "2027-01-10",
@@ -1832,8 +2139,7 @@
     "stadium": "Lucas Oil Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.55
+    "div_game": 1
   },
   {
     "game_id": "2026_18_LV_KC",
@@ -1842,6 +2148,10 @@
     "home_team": "KC",
     "away_team": "LV",
     "home_win_prob": 0.794,
+    "home_record": "8-2",
+    "away_record": "4-7",
+    "home_form": "LLWWW",
+    "away_form": "LWLLL",
     "spread": 3.4,
     "total": 46.1,
     "gameday": "2027-01-10",
@@ -1850,8 +2160,7 @@
     "stadium": "GEHA Field at Arrowhead Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.635
+    "div_game": 1
   },
   {
     "game_id": "2026_18_SEA_LA",
@@ -1860,6 +2169,10 @@
     "home_team": "LA",
     "away_team": "SEA",
     "home_win_prob": 0.49,
+    "home_record": "6-4",
+    "away_record": "6-4",
+    "home_form": "LWWWW",
+    "away_form": "LWLWW",
     "spread": -0.0,
     "total": 45.3,
     "gameday": "2027-01-10",
@@ -1868,8 +2181,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.531
+    "div_game": 1
   },
   {
     "game_id": "2026_18_CHI_MIN",
@@ -1878,6 +2190,10 @@
     "home_team": "MIN",
     "away_team": "CHI",
     "home_win_prob": 0.44,
+    "home_record": "7-3",
+    "away_record": "8-2",
+    "home_form": "WLLWL",
+    "away_form": "WWWWW",
     "spread": 0.9,
     "total": 43.5,
     "gameday": "2027-01-10",
@@ -1886,8 +2202,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.515
+    "div_game": 1
   },
   {
     "game_id": "2026_18_MIA_NE",
@@ -1896,6 +2211,10 @@
     "home_team": "NE",
     "away_team": "MIA",
     "home_win_prob": 0.598,
+    "home_record": "5-5",
+    "away_record": "1-9",
+    "home_form": "WLWLL",
+    "away_form": "WLLLL",
     "spread": 4.0,
     "total": 43.7,
     "gameday": "2027-01-10",
@@ -1904,8 +2223,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.564
+    "div_game": 1
   },
   {
     "game_id": "2026_18_TB_NO",
@@ -1914,6 +2232,10 @@
     "home_team": "NO",
     "away_team": "TB",
     "home_win_prob": 0.487,
+    "home_record": "3-7",
+    "away_record": "3-7",
+    "home_form": "WLWLL",
+    "away_form": "LWWLL",
     "spread": 0.8,
     "total": 45.4,
     "gameday": "2027-01-10",
@@ -1922,8 +2244,7 @@
     "stadium": "Caesars Superdome",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.53
+    "div_game": 1
   },
   {
     "game_id": "2026_18_PHI_NYG",
@@ -1932,6 +2253,10 @@
     "home_team": "NYG",
     "away_team": "PHI",
     "home_win_prob": 0.344,
+    "home_record": "6-3-1",
+    "away_record": "3-7",
+    "home_form": "LWWLW",
+    "away_form": "LLLLW",
     "spread": -2.4,
     "total": 44.2,
     "gameday": "2027-01-10",
@@ -1940,8 +2265,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.484
+    "div_game": 1
   },
   {
     "game_id": "2026_18_DAL_WAS",
@@ -1950,6 +2274,10 @@
     "home_team": "WAS",
     "away_team": "DAL",
     "home_win_prob": 0.411,
+    "home_record": "4-5-1",
+    "away_record": "5-6",
+    "home_form": "LWLWW",
+    "away_form": "WLWLW",
     "spread": -1.9,
     "total": 44.5,
     "gameday": "2027-01-10",
@@ -1958,7 +2286,6 @@
     "stadium": "Northwest Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "calibrated_home_win_prob": 0.506
+    "div_game": 1
   }
 ]

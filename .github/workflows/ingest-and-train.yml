@@ -52,6 +52,7 @@ jobs:
 
       # Predict upcoming games using the latest team features.
       - run: python scripts/predict_upcoming.py || true
+      - run: python scripts/add_player_matchups.py || true
 
       # Fetch current NFL odds from The Odds API (secret only available here).
       - name: Fetch NFL odds

@@ -30,6 +30,7 @@ jobs:
       - run: python scripts/train_models.py || true
       - run: python scripts/train_player_models.py || true
       - run: python scripts/predict_upcoming.py || true
+      - run: python scripts/add_player_matchups.py || true
       - run: python scripts/compare_market.py || true
       - run: python scripts/calibrate_model.py || true
       - run: python scripts/simulate_playoffs.py || true

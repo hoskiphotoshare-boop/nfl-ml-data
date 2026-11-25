@@ -19,7 +19,13 @@
       8.6,
       27.1
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0033280",
@@ -41,7 +47,13 @@
       42.3,
       13.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0035261",
@@ -63,7 +75,13 @@
       19.9,
       11.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040743",
@@ -85,7 +103,13 @@
       10.0,
       14.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036442",
@@ -107,7 +131,13 @@
       33.2,
       19.9
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0029604",
@@ -129,7 +159,13 @@
       15.4,
       7.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039910",
@@ -151,7 +187,13 @@
       20.8,
       17.1
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0033873",
@@ -173,7 +215,13 @@
       35.4,
       25.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0033077",
@@ -195,7 +243,13 @@
       32.4,
       35.9
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0039163",
@@ -217,7 +271,13 @@
       20.4,
       20.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0019596",
@@ -238,7 +298,13 @@
       35.7,
       7.4,
       20.0
-    ]
+    ],
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0040735",
@@ -260,7 +326,13 @@
       17.2,
       2.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036971",
@@ -282,7 +354,13 @@
       26.8,
       12.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039139",
@@ -304,7 +382,13 @@
       40.7,
       25.8
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039732",
@@ -326,7 +410,13 @@
       15.7,
       11.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0037248",
@@ -348,7 +438,13 @@
       21.7,
       16.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0034857",
@@ -370,7 +466,13 @@
       22.3,
       12.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0037834",
@@ -392,7 +494,13 @@
       29.7,
       22.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0026498",
@@ -414,7 +522,13 @@
       11.2,
       19.8
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "GB",
+    "matchup": "vs GB",
+    "home_away": "home",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0036963",
@@ -436,7 +550,13 @@
       23.8,
       12.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039918",
@@ -458,7 +578,13 @@
       12.8,
       14.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036264",
@@ -480,7 +606,13 @@
       34.2,
       10.8
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LA",
+    "matchup": "@ LA",
+    "home_away": "away",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0040676",
@@ -502,7 +634,13 @@
       19.1,
       22.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0031280",
@@ -523,7 +661,13 @@
       18.7,
       12.6,
       12.0
-    ]
+    ],
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039361",
@@ -545,7 +689,13 @@
       26.5,
       17.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0036555",
@@ -567,7 +717,13 @@
       31.7,
       24.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0026143",
@@ -588,7 +744,13 @@
       10.2,
       9.1,
       11.3
-    ]
+    ],
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033537",
@@ -610,7 +772,13 @@
       11.2,
       21.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0036912",
@@ -632,7 +800,13 @@
       17.0,
       6.6
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0040719",
@@ -654,7 +828,13 @@
       18.8,
       6.8
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036355",
@@ -676,7 +856,13 @@
       16.3,
       22.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0038597",
@@ -698,7 +884,13 @@
       24.3,
       6.1
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0023459",
@@ -720,7 +912,13 @@
       13.6,
       16.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0039923",
@@ -742,7 +940,13 @@
       17.1,
       14.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038542",
@@ -764,7 +968,13 @@
       23.7,
       15.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034899",
@@ -781,7 +991,13 @@
     "recent_fantasy_points": [
       8.8,
       6.0
-    ]
+    ],
+    "opponent": "GB",
+    "matchup": "vs GB",
+    "home_away": "home",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0022942",
@@ -799,7 +1015,13 @@
       6.8,
       17.1,
       7.8
-    ]
+    ],
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0030565",
@@ -821,7 +1043,13 @@
       5.9,
       19.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040715",
@@ -843,7 +1071,13 @@
       25.7,
       4.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035040",
@@ -860,7 +1094,13 @@
     "recent_fantasy_points": [
       13.6,
       5.0
-    ]
+    ],
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0039150",
@@ -882,7 +1122,13 @@
       8.1,
       16.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0036223",
@@ -904,7 +1150,13 @@
       11.3,
       4.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034869",
@@ -926,7 +1178,13 @@
       14.0,
       15.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0039917",
@@ -948,7 +1206,13 @@
       13.5,
       12.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037228",
@@ -970,7 +1234,13 @@
       6.6,
       3.9
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0036275",
@@ -992,7 +1262,13 @@
       3.1,
       10.9
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033106",
@@ -1014,7 +1290,13 @@
       20.4,
       20.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036875",
@@ -1036,7 +1318,13 @@
       13.3,
       1.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0036997",
@@ -1058,7 +1346,13 @@
       7.2,
       22.6
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0027688",
@@ -1077,7 +1371,13 @@
       7.3,
       10.2,
       1.3
-    ]
+    ],
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036900",
@@ -1099,7 +1399,13 @@
       28.6,
       5.6
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037238",
@@ -1121,7 +1427,13 @@
       9.3,
       13.9
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037840",
@@ -1143,7 +1455,13 @@
       7.6,
       4.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "GB",
+    "matchup": "vs GB",
+    "home_away": "home",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0037263",
@@ -1165,7 +1483,13 @@
       1.4,
       2.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0033119",
@@ -1187,7 +1511,13 @@
       11.8,
       13.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036358",
@@ -1209,7 +1539,13 @@
       16.7,
       24.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0038108",
@@ -1230,7 +1566,13 @@
       12.1,
       0.8,
       7.0
-    ]
+    ],
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0038124",
@@ -1252,7 +1594,13 @@
       26.6,
       5.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LA",
+    "matchup": "@ LA",
+    "home_away": "away",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0039337",
@@ -1274,7 +1622,13 @@
       4.9,
       15.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039152",
@@ -1295,7 +1649,13 @@
       7.0,
       -4.4,
       9.8
-    ]
+    ],
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032764",
@@ -1317,7 +1677,13 @@
       16.5,
       17.1
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035100",
@@ -1338,7 +1704,13 @@
       5.4,
       19.1,
       0.6
-    ]
+    ],
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040129",
@@ -1360,7 +1732,13 @@
       5.4,
       2.8
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0037838",
@@ -1382,7 +1760,13 @@
       23.2,
       4.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040198",
@@ -1404,7 +1788,13 @@
       13.5,
       7.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036322",
@@ -1426,7 +1816,13 @@
       11.9,
       10.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035640",
@@ -1448,7 +1844,13 @@
       12.4,
       0.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0040784",
@@ -1470,7 +1872,13 @@
       5.0,
       14.6
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0037744",
@@ -1492,7 +1900,13 @@
       6.2,
       10.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0041496",
@@ -1514,7 +1928,13 @@
       16.8,
       32.9
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0037740",
@@ -1536,7 +1956,13 @@
       12.1,
       5.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033288",
@@ -1558,7 +1984,13 @@
       10.4,
       16.9
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0040666",
@@ -1580,7 +2012,13 @@
       17.0,
       9.8
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0040667",
@@ -1602,7 +2040,13 @@
       27.4,
       9.5
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "LA",
+    "matchup": "@ LA",
+    "home_away": "away",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0039164",
@@ -1624,7 +2068,13 @@
       0.7,
       0.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036261",
@@ -1645,7 +2095,13 @@
       18.7,
       4.7,
       3.3
-    ]
+    ],
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0035710",
@@ -1666,7 +2122,13 @@
       10.3,
       5.2,
       4.1
-    ]
+    ],
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041037",
@@ -1688,7 +2150,13 @@
       12.8,
       2.1
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0037239",
@@ -1710,7 +2178,13 @@
       4.5,
       14.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038120",
@@ -1732,7 +2206,13 @@
       12.8,
       17.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040122",
@@ -1754,7 +2234,13 @@
       8.4,
       25.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0039064",
@@ -1776,7 +2262,13 @@
       8.4,
       12.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040126",
@@ -1798,7 +2290,13 @@
       7.4,
       10.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036554",
@@ -1820,7 +2318,13 @@
       19.9,
       13.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033897",
@@ -1841,7 +2345,13 @@
       3.3,
       16.4,
       17.0
-    ]
+    ],
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0029701",
@@ -1862,7 +2372,13 @@
       9.8,
       6.7,
       12.4
-    ]
+    ],
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040663",
@@ -1884,7 +2400,13 @@
       11.2,
       12.6
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0035700",
@@ -1906,7 +2428,13 @@
       20.2,
       0.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LA",
+    "matchup": "@ LA",
+    "home_away": "away",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0040128",
@@ -1928,7 +2456,13 @@
       1.4,
       2.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036973",
@@ -1950,7 +2484,13 @@
       4.9,
       7.6
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040014",
@@ -1968,7 +2508,13 @@
       12.8,
       3.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034351",
@@ -1990,7 +2536,13 @@
       7.5,
       4.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0038579",
@@ -2012,7 +2564,13 @@
       15.9,
       4.8
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0032156",
@@ -2033,7 +2591,13 @@
       10.5,
       13.7,
       2.9
-    ]
+    ],
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038129",
@@ -2055,7 +2619,13 @@
       4.5,
       1.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0039165",
@@ -2077,7 +2647,13 @@
       9.1,
       9.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0031588",
@@ -2099,7 +2675,13 @@
       17.3,
       6.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036898",
@@ -2121,7 +2703,13 @@
       2.6,
       0.1
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040202",
@@ -2142,7 +2730,13 @@
       8.4,
       14.9,
       9.7
-    ]
+    ],
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037525",
@@ -2164,7 +2758,13 @@
       5.9,
       4.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038606",
@@ -2186,7 +2786,13 @@
       24.7,
       14.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036251",
@@ -2207,7 +2813,13 @@
       0.0,
       5.5,
       5.9
-    ]
+    ],
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039067",
@@ -2229,7 +2841,13 @@
       10.7,
       8.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0040124",
@@ -2251,7 +2869,13 @@
       5.0,
       16.1
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0038996",
@@ -2273,7 +2897,13 @@
       1.4,
       2.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LA",
+    "matchup": "@ LA",
+    "home_away": "away",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0035664",
@@ -2294,7 +2924,13 @@
       10.0,
       4.5,
       10.9
-    ]
+    ],
+    "opponent": "GB",
+    "matchup": "vs GB",
+    "home_away": "home",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0039065",
@@ -2316,7 +2952,13 @@
       2.1,
       7.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0029263",
@@ -2337,7 +2979,13 @@
       0.3,
       0.0,
       3.0
-    ]
+    ],
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039793",
@@ -2359,7 +3007,13 @@
       14.0,
       3.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0041562",
@@ -2378,7 +3032,13 @@
       13.9,
       22.9
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0034411",
@@ -2399,7 +3059,13 @@
       4.8,
       9.0,
       2.0
-    ]
+    ],
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0039338",
@@ -2422,7 +3088,13 @@
       2.8
     ],
     "depth_rank": 1,
-    "injury_status": "questionable"
+    "injury_status": "questionable",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0033040",
@@ -2443,7 +3115,13 @@
       13.9,
       13.4,
       9.7
-    ]
+    ],
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041438",
@@ -2466,7 +3144,13 @@
       12.8
     ],
     "depth_rank": 1,
-    "injury_status": "questionable"
+    "injury_status": "questionable",
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039794",
@@ -2488,7 +3172,13 @@
       5.1,
       8.9
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039880",
@@ -2510,7 +3200,13 @@
       11.9,
       5.6
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039398",
@@ -2532,7 +3228,13 @@
       11.2,
       6.3
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0034827",
@@ -2554,7 +3256,13 @@
       17.4,
       19.1
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0036212",
@@ -2576,7 +3284,13 @@
       16.2,
       -0.6
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040530",
@@ -2594,7 +3308,13 @@
       7.0,
       10.0,
       14.0
-    ]
+    ],
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0030506",
@@ -2616,7 +3336,13 @@
       4.0,
       22.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0035120",
@@ -2633,7 +3359,13 @@
     "recent_fantasy_points": [
       5.0,
       1.3
-    ]
+    ],
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0038097",
@@ -2654,7 +3386,13 @@
       6.0,
       6.0,
       13.0
-    ]
+    ],
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0023853",
@@ -2675,7 +3413,13 @@
       3.0,
       9.0,
       12.0
-    ]
+    ],
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0032268",
@@ -2697,7 +3441,13 @@
       20.4,
       5.3
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0039649",
@@ -2718,7 +3468,13 @@
       6.0,
       10.0,
       2.0
-    ]
+    ],
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032058",
@@ -2735,7 +3491,13 @@
     "recent_fantasy_points": [
       20.2,
       0.3
-    ]
+    ],
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0040899",
@@ -2757,7 +3519,13 @@
       13.0,
       4.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LA",
+    "matchup": "@ LA",
+    "home_away": "away",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0035704",
@@ -2779,7 +3547,13 @@
       12.6,
       15.6
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036469",
@@ -2800,7 +3574,13 @@
       3.0,
       10.0,
       0.0
-    ]
+    ],
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038428",
@@ -2822,7 +3602,13 @@
       10.0,
       9.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0031547",
@@ -2843,7 +3629,13 @@
       8.5,
       2.0,
       1.1
-    ]
+    ],
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0039172",
@@ -2865,7 +3657,13 @@
       5.0,
       7.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033862",
@@ -2886,7 +3684,13 @@
       7.0,
       9.0,
       4.0
-    ]
+    ],
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0029822",
@@ -2908,7 +3712,13 @@
       8.0,
       10.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "GB",
+    "matchup": "vs GB",
+    "home_away": "home",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0033303",
@@ -2930,7 +3740,13 @@
       5.0,
       10.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0037809",
@@ -2952,7 +3768,13 @@
       4.4,
       8.6
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0039851",
@@ -2974,7 +3796,13 @@
       18.3,
       3.0
     ],
-    "depth_rank": 3
+    "depth_rank": 3,
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0040242",
@@ -2997,7 +3825,13 @@
       14.7
     ],
     "depth_rank": 1,
-    "injury_status": "questionable"
+    "injury_status": "questionable",
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0041029",
@@ -3016,7 +3850,13 @@
       13.5,
       1.5
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037224",
@@ -3038,7 +3878,13 @@
       11.0,
       6.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0033702",
@@ -3059,7 +3905,13 @@
       9.0,
       1.0,
       3.0
-    ]
+    ],
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0029421",
@@ -3080,7 +3932,13 @@
       4.0,
       6.0,
       3.0
-    ]
+    ],
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035864",
@@ -3101,7 +3959,13 @@
       1.6,
       6.3,
       0.0
-    ]
+    ],
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0034161",
@@ -3123,7 +3987,13 @@
       4.0,
       9.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035243",
@@ -3144,7 +4014,13 @@
       8.9,
       6.8,
       3.5
-    ]
+    ],
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0038400",
@@ -3166,7 +4042,13 @@
       10.5,
       7.0
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0035719",
@@ -3188,7 +4070,13 @@
       24.4,
       6.2
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036410",
@@ -3210,7 +4098,13 @@
       9.1,
       11.3
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034855",
@@ -3233,7 +4127,13 @@
       19.1
     ],
     "depth_rank": 1,
-    "injury_status": "questionable"
+    "injury_status": "questionable",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0040279",
@@ -3255,7 +4155,13 @@
       8.0,
       9.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0038563",
@@ -3277,7 +4183,13 @@
       1.4,
       6.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0031136",
@@ -3299,7 +4211,13 @@
       4.0,
       10.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0034173",
@@ -3321,7 +4239,13 @@
       8.0,
       5.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0032569",
@@ -3343,7 +4267,13 @@
       8.0,
       8.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0038402",
@@ -3364,7 +4294,13 @@
       14.0,
       6.0,
       3.0
-    ]
+    ],
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038562",
@@ -3386,7 +4322,13 @@
       4.0,
       7.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038152",
@@ -3407,7 +4349,13 @@
       9.0,
       9.0,
       1.0
-    ]
+    ],
+    "opponent": "LA",
+    "matchup": "@ LA",
+    "home_away": "away",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0039404",
@@ -3429,7 +4377,13 @@
       12.0,
       4.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0025580",
@@ -3450,7 +4404,13 @@
       5.0,
       7.0,
       9.0
-    ]
+    ],
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033871",
@@ -3471,7 +4431,13 @@
       2.4,
       6.0,
       2.2
-    ]
+    ],
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039376",
@@ -3493,7 +4459,13 @@
       2.6,
       0.0
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0031203",
@@ -3515,7 +4487,13 @@
       9.0,
       7.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039229",
@@ -3537,7 +4515,13 @@
       5.0,
       7.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0031492",
@@ -3559,7 +4543,13 @@
       5.0,
       3.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0035685",
@@ -3581,7 +4571,13 @@
       1.1,
       13.9
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039405",
@@ -3601,7 +4597,13 @@
       3.6,
       0.3,
       11.5
-    ]
+    ],
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036924",
@@ -3622,7 +4624,13 @@
       5.4,
       1.9,
       1.6
-    ]
+    ],
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041182",
@@ -3644,7 +4652,13 @@
       6.0,
       16.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0034184",
@@ -3665,7 +4679,13 @@
       2.3,
       19.6,
       2.2
-    ]
+    ],
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0039498",
@@ -3686,7 +4706,13 @@
       14.0,
       6.0,
       4.0
-    ]
+    ],
+    "opponent": "GB",
+    "matchup": "vs GB",
+    "home_away": "home",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0029597",
@@ -3707,7 +4733,13 @@
       5.0,
       4.0,
       7.0
-    ]
+    ],
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034972",
@@ -3728,7 +4760,13 @@
       13.6,
       4.3,
       5.1
-    ]
+    ],
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0032669",
@@ -3745,7 +4783,13 @@
     "recent_fantasy_points": [
       12.0,
       3.0
-    ]
+    ],
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0035192",
@@ -3767,7 +4811,13 @@
       11.0,
       12.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037247",
@@ -3789,7 +4839,13 @@
       38.0,
       20.3
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0036970",
@@ -3811,7 +4867,13 @@
       3.8,
       5.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038935",
@@ -3833,7 +4895,13 @@
       7.9,
       3.1
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035145",
@@ -3854,7 +4922,13 @@
       12.0,
       9.0,
       6.0
-    ]
+    ],
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036162",
@@ -3876,7 +4950,13 @@
       7.0,
       14.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0041145",
@@ -3898,7 +4978,13 @@
       3.0,
       11.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040736",
@@ -3920,7 +5006,13 @@
       4.0,
       3.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034844",
@@ -3942,7 +5034,13 @@
       8.2,
       13.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0040200",
@@ -3964,7 +5062,13 @@
       3.0,
       4.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0035849",
@@ -3982,7 +5086,13 @@
       8.0,
       8.0,
       0.0
-    ]
+    ],
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0034796",
@@ -4004,7 +5114,13 @@
       18.9,
       0.0
     ],
-    "depth_rank": 3
+    "depth_rank": 3,
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037240",
@@ -4026,7 +5142,13 @@
       7.0,
       17.3
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041251",
@@ -4047,7 +5169,13 @@
       10.7,
       -0.3
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0035229",
@@ -4069,7 +5197,13 @@
       5.3,
       8.5
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036854",
@@ -4091,7 +5225,13 @@
       8.0,
       8.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0026858",
@@ -4112,7 +5252,13 @@
       3.0,
       8.0,
       6.0
-    ]
+    ],
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034750",
@@ -4133,7 +5279,13 @@
       1.9,
       0.8,
       1.6
-    ]
+    ],
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0038476",
@@ -4155,7 +5307,13 @@
       0.8,
       7.1
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0037257",
@@ -4176,7 +5334,13 @@
       20.8,
       9.4,
       4.2
-    ]
+    ],
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0036816",
@@ -4198,7 +5362,13 @@
       8.0,
       7.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039919",
@@ -4220,7 +5390,13 @@
       14.0,
       6.5
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040234",
@@ -4241,7 +5417,13 @@
       8.4,
       0.3
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040691",
@@ -4263,7 +5445,13 @@
       26.6,
       0.8
     ],
-    "depth_rank": 3
+    "depth_rank": 3,
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0031408",
@@ -4286,7 +5474,13 @@
       19.9
     ],
     "depth_rank": 1,
-    "injury_status": "questionable"
+    "injury_status": "questionable",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0034084",
@@ -4307,7 +5501,13 @@
       4.0,
       5.0,
       0.0
-    ]
+    ],
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0035535",
@@ -4328,7 +5528,13 @@
       1.3,
       4.6,
       5.4
-    ]
+    ],
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037692",
@@ -4350,7 +5556,13 @@
       8.0,
       9.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0037258",
@@ -4371,7 +5583,13 @@
       2.2,
       13.0,
       11.3
-    ]
+    ],
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0041547",
@@ -4393,7 +5611,13 @@
       16.8,
       10.2
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0041523",
@@ -4415,7 +5639,13 @@
       8.6,
       4.0
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037542",
@@ -4436,7 +5666,13 @@
       4.0,
       4.0,
       5.0
-    ]
+    ],
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0025565",
@@ -4457,7 +5693,13 @@
       11.0,
       0.0,
       5.0
-    ]
+    ],
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033923",
@@ -4478,7 +5720,13 @@
       0.2,
       3.8,
       5.0
-    ]
+    ],
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0030332",
@@ -4499,7 +5747,13 @@
       3.0,
       1.0,
       11.0
-    ]
+    ],
+    "opponent": "GB",
+    "matchup": "vs GB",
+    "home_away": "home",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0038567",
@@ -4521,7 +5775,13 @@
       6.0,
       1.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0034753",
@@ -4543,7 +5803,13 @@
       12.2,
       2.4
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032087",
@@ -4559,7 +5825,13 @@
     "projected_pass_tds": null,
     "recent_fantasy_points": [
       3.0
-    ]
+    ],
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039934",
@@ -4579,7 +5851,13 @@
       2.0,
       4.0,
       2.0
-    ]
+    ],
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032726",
@@ -4601,7 +5879,13 @@
       6.0,
       6.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037606",
@@ -4617,7 +5901,13 @@
     "projected_pass_tds": null,
     "recent_fantasy_points": [
       10.0
-    ]
+    ],
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041489",
@@ -4639,7 +5929,13 @@
       1.0,
       7.0
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0023252",
@@ -4660,7 +5956,13 @@
       15.0,
       13.0,
       1.0
-    ]
+    ],
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0033118",
@@ -4681,7 +5983,13 @@
       14.9,
       2.1,
       0.0
-    ]
+    ],
+    "opponent": "LA",
+    "matchup": "@ LA",
+    "home_away": "away",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0036168",
@@ -4697,7 +6005,13 @@
     "projected_pass_tds": null,
     "recent_fantasy_points": [
       5.0
-    ]
+    ],
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035761",
@@ -4713,7 +6027,13 @@
     "projected_pass_tds": null,
     "recent_fantasy_points": [
       0.0
-    ]
+    ],
+    "opponent": "LA",
+    "matchup": "@ LA",
+    "home_away": "away",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0035189",
@@ -4734,7 +6054,13 @@
       1.0,
       4.0,
       10.0
-    ]
+    ],
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034909",
@@ -4752,7 +6078,13 @@
       9.0,
       0.0,
       0.0
-    ]
+    ],
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0039738",
@@ -4774,7 +6106,13 @@
       11.8,
       19.4
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "GB",
+    "matchup": "vs GB",
+    "home_away": "home",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0037382",
@@ -4795,7 +6133,13 @@
       10.8,
       1.4,
       1.4
-    ]
+    ],
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0035676",
@@ -4817,7 +6161,13 @@
       6.3,
       3.7
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0038551",
@@ -4838,7 +6188,13 @@
       9.0,
       8.0,
       4.3
-    ]
+    ],
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037509",
@@ -4857,7 +6213,13 @@
       7.5,
       9.9,
       3.5
-    ]
+    ],
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0041013",
@@ -4879,7 +6241,13 @@
       32.1,
       22.3
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0033090",
@@ -4901,7 +6269,13 @@
       5.0,
       3.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0033662",
@@ -4922,7 +6296,13 @@
       -1.1,
       5.7,
       -0.6
-    ]
+    ],
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034109",
@@ -4940,7 +6320,13 @@
       6.9,
       2.7,
       0.2
-    ]
+    ],
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033357",
@@ -4961,7 +6347,13 @@
       13.3,
       0.0,
       4.7
-    ]
+    ],
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0029621",
@@ -4982,7 +6374,13 @@
       8.0,
       1.0,
       4.0
-    ]
+    ],
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037231",
@@ -5003,7 +6401,13 @@
       13.2,
       5.7,
       1.2
-    ]
+    ],
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040236",
@@ -5025,7 +6429,13 @@
       27.5,
       1.8
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038128",
@@ -5047,7 +6457,13 @@
       14.6,
       3.8
     ],
-    "depth_rank": 3
+    "depth_rank": 3,
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039409",
@@ -5069,7 +6485,13 @@
       16.0,
       12.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033787",
@@ -5091,7 +6513,13 @@
       3.0,
       13.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0034450",
@@ -5112,7 +6540,13 @@
       12.0,
       8.0,
       6.0
-    ]
+    ],
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032765",
@@ -5133,7 +6567,13 @@
       8.8,
       0.0,
       1.4
-    ]
+    ],
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034383",
@@ -5155,7 +6595,13 @@
       7.6,
       1.6
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036139",
@@ -5177,7 +6623,13 @@
       4.4,
       5.4
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0031800",
@@ -5198,7 +6650,13 @@
       1.2,
       0.2,
       0.8
-    ]
+    ],
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0033110",
@@ -5220,7 +6678,13 @@
       1.8,
       9.2
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "GB",
+    "matchup": "vs GB",
+    "home_away": "home",
+    "game_id": "2026_12_GB_LA",
+    "gameday": "2026-11-25",
+    "gametime": "20:00"
   },
   {
     "player_id": "00-0031260",
@@ -5241,7 +6705,13 @@
       12.1,
       3.5,
       1.4
-    ]
+    ],
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0033275",
@@ -5262,7 +6732,13 @@
       10.6,
       0.0,
       0.1
-    ]
+    ],
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0039576",
@@ -5284,7 +6760,13 @@
       6.0,
       3.0
     ],
-    "depth_rank": 1
+    "depth_rank": 1,
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038122",
@@ -5305,7 +6787,13 @@
       4.3,
       11.1,
       0.4
-    ]
+    ],
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0034177",
@@ -5326,7 +6814,13 @@
       3.8,
       3.4,
       6.8
-    ]
+    ],
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036945",
@@ -5348,6 +6842,12 @@
       0.0,
       -0.2
     ],
-    "depth_rank": 2
+    "depth_rank": 2,
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   }
 ]
