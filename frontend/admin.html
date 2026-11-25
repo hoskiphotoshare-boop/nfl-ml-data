@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NFL ML — Diagnostics</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>NFL ML — Diagnostics</h1>
+    <p class="subtitle">Internal model and data health (not linked from the public app)</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Data freshness</h2>
+      <div id="meta" class="card-grid"></div>
+    </section>
+
+    <section>
+      <h2>Match backtest</h2>
+      <div id="match-backtest" class="card-grid"></div>
+    </section>
+
+    <section>
+      <h2>Player backtest</h2>
+      <div id="player-backtest" class="card-grid"></div>
+    </section>
+
+    <section>
+      <h2>Feature ablation</h2>
+      <div id="ablation" class="card-grid"></div>
+    </section>
+
+    <section>
+      <h2>Market comparison</h2>
+      <div id="market" class="card-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Diagnostics page · no index</p>
+  </footer>
+
+  <script>
+    const DATA = '/data';
+    const R = `${DATA}/reports`;
+    const P = `${DATA}/predictions`;
+
+    function el(tag, className, text) {
+      const n = document.createElement(tag);
+      if (className) n.className = className;
+      if (text !== undefined) n.textContent = text;
+      return n;
+    }
+
+    async function getJSON(url) {
+      const res = await fetch(`${url}?t=${Date.now()}`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`${url}: ${res.status}`);
+      return res.json();
+    }
+
+    function card(title, lines) {
+      const c = el('div', 'card');
+      c.appendChild(el('h3', '', title));
+      lines.forEach((line) => c.appendChild(el('p', '', line)));
+      return c;
+    }
+
+    async function load() {
+      try {
+        const meta = await getJSON(`${P}/meta.json`);
+        const metaEl = document.getElementById('meta');
+        metaEl.appendChild(card('Last generated', [new Date(meta.generated_at).toLocaleString()]));
+        metaEl.appendChild(card('Games', [String(meta.games)]));
+        metaEl.appendChild(card('Season', [String(meta.season)]));
+      } catch (e) {
+        document.getElementById('meta').appendChild(card('Meta unavailable', [String(e)]));
+      }
+
+      try {
+        const r = await getJSON(`${R}/backtest.json`);
+        const p = r.pooled || {};
+        const elm = document.getElementById('match-backtest');
+        elm.appendChild(card('Pooled accuracy', [(p.accuracy ?? 0).toFixed(4)]));
+        elm.appendChild(card('Pooled log loss', [(p.log_loss ?? 0).toFixed(4)]));
+        elm.appendChild(card('Pooled Brier', [(p.brier ?? 0).toFixed(4)]));
+        elm.appendChild(card('Pooled AUC', [(p.auc ?? 0).toFixed(4)]));
+      } catch (e) {
+        document.getElementById('match-backtest').appendChild(card('Backtest unavailable', [String(e)]));
+      }
+
+      try {
+        const r = await getJSON(`${R}/player_backtest.json`);
+        const elm = document.getElementById('player-backtest');
+        Object.entries(r).forEach(([pos, m]) => {
+          elm.appendChild(card(pos, [`MAE ${m.mae}`, `RMSE ${m.rmse}`, `n ${m.rows}`]));
+        });
+      } catch (e) {
+        document.getElementById('player-backtest').appendChild(card('Player backtest unavailable', [String(e)]));
+      }
+
+      try {
+        const r = await getJSON(`${R}/feature_ablation.json`);
+        const elm = document.getElementById('ablation');
+        Object.entries(r).forEach(([name, data]) => {
+          const p = data.pooled || {};
+          elm.appendChild(
+            card(name, [
+              `acc ${(p.accuracy ?? 0).toFixed(4)}`,
+              `logloss ${(p.log_loss ?? 0).toFixed(4)}`,
+              `brier ${(p.brier ?? 0).toFixed(4)}`,
+              `auc ${(p.auc ?? 0).toFixed(4)}`,
+            ])
+          );
+        });
+      } catch (e) {
+        document.getElementById('ablation').appendChild(card('Ablation unavailable', [String(e)]));
+      }
+
+      try {
+        const r = await getJSON(`${R}/market_comparison.json`);
+        const s = r.summary || {};
+        const elm = document.getElementById('market');
+        elm.appendChild(card('Games compared', [String(s.games_compared ?? 0)]));
+        elm.appendChild(card('Mean edge', [`${(s.mean_edge ?? 0) * 100}%`]));
+        elm.appendChild(card('Mean abs edge', [`${(s.mean_abs_edge ?? 0) * 100}%`]));
+        elm.appendChild(card('Max abs edge', [`${(s.max_abs_edge ?? 0) * 100}%`]));
+      } catch (e) {
+        document.getElementById('market').appendChild(card('Market report unavailable', [String(e)]));
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', load);
+  </script>
+</body>
+</html>

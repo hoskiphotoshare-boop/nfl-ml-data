@@ -145,6 +145,44 @@ h2 {
   font-size: 0.9rem;
 }
 
+.section-title {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 1rem 0 0.5rem;
+}
+
+.distribution {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.35rem;
+  height: 90px;
+  padding: 0.5rem 0;
+  margin-bottom: 1rem;
+}
+
+.dist-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 0.2rem;
+}
+
+.dist-bar {
+  width: 100%;
+  background: var(--accent);
+  border-radius: 2px 2px 0 0;
+  min-height: 2px;
+}
+
+.dist-label {
+  font-size: 0.65rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
 .spark {
   display: flex;
   align-items: flex-end;
@@ -159,6 +197,28 @@ h2 {
   background: var(--accent);
   border-radius: 2px 2px 0 0;
   opacity: 0.85;
+}
+
+.team-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+.team-table th,
+.team-table td {
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid #334155;
+}
+
+.team-table th {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.team-table a {
+  color: var(--accent);
 }
 
 @media (max-width: 600px) {

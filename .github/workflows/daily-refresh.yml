@@ -42,6 +42,8 @@ jobs:
           git pull --rebase origin main || true
           git push origin main || true
 
+      - run: python scripts/build_team_pages.py || true
+
       - name: Prepare static data for Pages
         run: |
           mkdir -p frontend/data/predictions frontend/data/reports

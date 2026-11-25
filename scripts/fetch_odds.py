@@ -215,6 +215,13 @@ def main() -> None:
             f,
             indent=2,
         )
+
+    history_dir = "market/history"
+    os.makedirs(history_dir, exist_ok=True)
+    date_key = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    with open(f"{history_dir}/{date_key}.json", "w", encoding="utf-8") as f:
+        json.dump(events, f, indent=2)
+
     print(f"Wrote market/odds_latest.json ({len(events)} events)")
 
 

@@ -7,11 +7,16 @@ on:
         description: "Fetch fresh Odds API data (uses one API request)"
         type: boolean
         default: false
+      create_report:
+        description: "Create or comment on the weekly model report issue"
+        type: boolean
+        default: false
   schedule:
     - cron: '0 6 * * 1'   # every Monday at 06:00 UTC
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: ingest-and-train
@@ -63,6 +68,9 @@ jobs:
       - name: Calibrate model to market
         run: python scripts/calibrate_model.py || true
 
+      # Track closing-line movement across stored odds snapshots.
+      - run: python scripts/backtest_market.py || true
+
       # Run the Monte Carlo playoff / Super Bowl simulator.
       - run: python scripts/simulate_playoffs.py || true
 
@@ -71,6 +79,21 @@ jobs:
 
       # Feature-group ablation study.
       - run: python scripts/feature_ablation.py || true
+
+      - run: python scripts/weekly_report.py > weekly_report.md || true
+
+      - name: Weekly report issue
+        if: github.event_name == 'schedule' || github.event.inputs.create_report == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          TITLE="Weekly Model Report"
+          NUMBER=$(gh issue list --repo "${{ github.repository }}" --search "$TITLE in:title" --json number --jq '.[0].number' 2>/dev/null || true)
+          if [ -n "$NUMBER" ]; then
+            gh issue comment "$NUMBER" --repo "${{ github.repository }}" --body-file weekly_report.md
+          else
+            gh issue create --repo "${{ github.repository }}" --title "$TITLE" --body-file weekly_report.md
+          fi
 
       - run: |
           git config user.name "github-actions"
@@ -83,6 +106,8 @@ jobs:
       - run: |
           git pull --rebase origin main || true
           git push origin main || true
+
+      - run: python scripts/build_team_pages.py || true
 
       - name: Prepare static data for Pages
         run: |

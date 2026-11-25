@@ -378,6 +378,39 @@ function renderPlayoffs(data) {
   });
 }
 
+function renderDistribution(games) {
+  const container = document.getElementById('market-distribution');
+  if (!container) return;
+  container.innerHTML = '';
+
+  const bins = [
+    { label: '≤−20', test: (e) => e <= -0.2 },
+    { label: '−20…−10', test: (e) => e > -0.2 && e <= -0.1 },
+    { label: '−10…−5', test: (e) => e > -0.1 && e <= -0.05 },
+    { label: '−5…0', test: (e) => e > -0.05 && e < 0 },
+    { label: '0…5', test: (e) => e >= 0 && e < 0.05 },
+    { label: '5…10', test: (e) => e >= 0.05 && e < 0.1 },
+    { label: '10…20', test: (e) => e >= 0.1 && e < 0.2 },
+    { label: '≥20', test: (e) => e >= 0.2 },
+  ];
+
+  const counts = bins.map((b) =>
+    games.filter((g) => g.edge !== undefined && g.edge !== null && b.test(g.edge)).length
+  );
+  const max = Math.max(...counts, 1);
+
+  bins.forEach((b, i) => {
+    const col = el('div', 'dist-col');
+    const bar = el('div', 'dist-bar');
+    bar.style.height = `${Math.max(2, (counts[i] / max) * 60)}px`;
+    bar.title = `${counts[i]} games`;
+    if (counts[i] === 0) bar.style.opacity = '0.25';
+    col.appendChild(bar);
+    col.appendChild(el('div', 'dist-label', b.label));
+    container.appendChild(col);
+  });
+}
+
 function renderMarket(data) {
   const summaryEl = document.getElementById('market-summary');
   const listEl = document.getElementById('market-list');
@@ -437,6 +470,8 @@ function renderMarket(data) {
     listEl.appendChild(el('p', 'muted', 'No games match the current filter.'));
     return;
   }
+
+  renderDistribution(games);
 
   games.forEach((g) => {
     const card = el('div', 'card');
