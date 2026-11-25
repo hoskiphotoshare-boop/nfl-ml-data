@@ -217,6 +217,15 @@ class ModelProbabilities:
             for team in teams
         }
         self.cache: dict[tuple[str, str, int], float] = {}
+        self.platt = None
+        if os.path.exists("models/platt.json"):
+            try:
+                with open("models/platt.json", encoding="utf-8") as f:
+                    data = json.load(f)
+                if data.get("enabled"):
+                    self.platt = data
+            except Exception:
+                pass
 
     def prob(self, home: str, away: str, week: int) -> float | None:
         if home not in self.stats or away not in self.stats:
@@ -228,6 +237,10 @@ class ModelProbabilities:
             self.features, self.stats[home], self.stats[away], week, self.season
         )
         prob = float(self.model.predict_proba([vector])[0, 1])
+        if self.platt:
+            p = min(max(prob, 1e-6), 1 - 1e-6)
+            value = self.platt["a"] * math.log(p / (1 - p)) + self.platt["b"]
+            prob = 1.0 / (1.0 + math.exp(-value))
         prob = min(max(prob, 0.02), 0.98)
         self.cache[key] = prob
         return prob

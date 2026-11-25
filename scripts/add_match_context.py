@@ -42,7 +42,34 @@ ADDED_COLUMNS = [
     "away_qb_changed",
     "home_qb_missing",
     "away_qb_missing",
+    "home_inj_impact",
+    "away_inj_impact",
+    "inj_impact_diff",
+    "home_inj_missing",
+    "away_inj_missing",
 ]
+
+INJURY_PATHS = ["data/injuries_history.parquet", "data/injuries_latest.parquet"]
+STATUS_WEIGHTS = {"out": 4.0, "doubtful": 2.5, "questionable": 1.2, "probable": 0.5}
+POSITION_WEIGHTS = {
+    "QB": 4.0,
+    "T": 2.5,
+    "G": 2.5,
+    "C": 2.5,
+    "WR": 1.5,
+    "TE": 1.5,
+    "RB": 1.5,
+    "FB": 0.8,
+    "CB": 1.2,
+    "S": 1.2,
+    "LB": 1.2,
+    "DE": 1.2,
+    "DT": 1.2,
+    "NT": 1.2,
+    "K": 0.5,
+    "P": 0.5,
+    "LS": 0.2,
+}
 
 
 def add_record_features(df: pl.DataFrame) -> pl.DataFrame:
@@ -211,6 +238,74 @@ def add_qb_features(df: pl.DataFrame) -> pl.DataFrame:
     return out
 
 
+def injury_table() -> pl.DataFrame | None:
+    for path in INJURY_PATHS:
+        if os.path.exists(path):
+            break
+    else:
+        return None
+    injuries = pl.read_parquet(path)
+    if "report_status" not in injuries.columns:
+        return None
+    required = {"season", "week", "team", "position", "report_status"}
+    if not required.issubset(set(injuries.columns)):
+        return None
+
+    injuries = injuries.filter(pl.col("report_status").is_not_null())
+    status = pl.col("report_status").str.to_lowercase()
+    impact = (
+        pl.when(status == "out").then(STATUS_WEIGHTS["out"])
+        .when(status == "doubtful").then(STATUS_WEIGHTS["doubtful"])
+        .when(status == "questionable").then(STATUS_WEIGHTS["questionable"])
+        .when(status == "probable").then(STATUS_WEIGHTS["probable"])
+        .otherwise(0.0)
+    )
+    position = pl.col("position").fill_null("")
+    pos_weight = (
+        pl.when(position == "QB").then(POSITION_WEIGHTS["QB"])
+        .when(position.is_in(["T", "G", "C"])).then(POSITION_WEIGHTS["T"])
+        .when(position.is_in(["WR", "TE", "RB"])).then(POSITION_WEIGHTS["WR"])
+        .when(position.is_in(["CB", "S", "LB", "DE", "DT", "NT"])).then(POSITION_WEIGHTS["CB"])
+        .when(position.is_in(["K", "P"])).then(POSITION_WEIGHTS["K"])
+        .otherwise(0.3)
+    )
+    injuries = injuries.with_columns((impact * pos_weight).alias("impact"))
+    return (
+        injuries.group_by(["season", "week", "team"])
+        .agg(
+            pl.col("impact").sum().alias("inj_impact"),
+            pl.len().alias("inj_players"),
+        )
+        .sort(["season", "week"])
+    )
+
+
+def add_injury_features(df: pl.DataFrame) -> pl.DataFrame:
+    table = injury_table()
+    if table is None:
+        return df
+    out = df
+    for side in ("home", "away"):
+        side_table = table.rename(
+            {
+                "team": f"{side}_team",
+                "inj_impact": f"{side}_inj_impact",
+            }
+        ).select(["season", "week", f"{side}_team", f"{side}_inj_impact"])
+        out = out.join(side_table, on=["season", "week", f"{side}_team"], how="left")
+    out = out.with_columns(
+        pl.col("home_inj_impact").is_null().cast(pl.Int8).alias("home_inj_missing"),
+        pl.col("away_inj_impact").is_null().cast(pl.Int8).alias("away_inj_missing"),
+    ).with_columns(
+        pl.col("home_inj_impact").fill_null(0.0),
+        pl.col("away_inj_impact").fill_null(0.0),
+    )
+    out = out.with_columns(
+        (pl.col("home_inj_impact") - pl.col("away_inj_impact")).alias("inj_impact_diff")
+    )
+    return out
+
+
 def main() -> None:
     if not os.path.exists(MATCH_FEATURES):
         print("No match features found; skipping context features.")
@@ -221,6 +316,7 @@ def main() -> None:
     before = df.height
 
     df = add_record_features(df)
+    df = add_injury_features(df)
     if os.path.exists(PLAYER_FEATURES):
         df = add_qb_features(df)
     else:

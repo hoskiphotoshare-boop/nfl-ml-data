@@ -8,9 +8,11 @@ team-level feature row, then writes ``predictions/upcoming_games.json``.
 from __future__ import annotations
 
 import json
+import math
 import os
 import sys
 from datetime import datetime, timezone
+from statistics import NormalDist
 
 sys.path.insert(0, os.path.dirname(__file__) + "/../")
 
@@ -23,6 +25,38 @@ def load_schedules() -> pl.DataFrame | None:
         if os.path.exists(path):
             return pl.read_parquet(path) if path.endswith(".parquet") else pl.read_csv(path)
     return None
+
+
+def load_platt():
+    path = "models/platt.json"
+    if not os.path.exists(path):
+        return None
+    try:
+        with open(path, encoding="utf-8") as f:
+            data = json.load(f)
+        return data if data.get("enabled") else None
+    except Exception:
+        return None
+
+
+def apply_platt(prob: float, platt: dict | None) -> float:
+    if not platt:
+        return prob
+    p = min(max(prob, 1e-6), 1 - 1e-6)
+    value = platt["a"] * math.log(p / (1 - p)) + platt["b"]
+    return 1.0 / (1.0 + math.exp(-value))
+
+
+def load_score_models():
+    path = "models/score_models.joblib"
+    if not os.path.exists(path):
+        return None
+    try:
+        import joblib
+
+        return joblib.load(path)
+    except Exception:
+        return None
 
 
 def load_match_features() -> pl.DataFrame | None:
@@ -66,6 +100,27 @@ def current_records(schedules: pl.DataFrame, season: int) -> dict[str, dict]:
         }
         for row in agg.iter_rows(named=True)
     }
+
+
+def current_injury_context(season: int) -> dict[str, dict]:
+    try:
+        from add_match_context import injury_table
+
+        table = injury_table()
+        if table is None:
+            return {}
+        latest = (
+            table.filter(pl.col("season") == season)
+            .sort("week")
+            .group_by("team", maintain_order=True)
+            .agg(pl.all().last())
+        )
+        return {
+            row["team"]: {"inj_impact": float(row["inj_impact"]), "inj_missing": 0}
+            for row in latest.iter_rows(named=True)
+        }
+    except Exception:
+        return {}
 
 
 def current_qb_context(season: int) -> dict[str, dict]:
@@ -261,6 +316,8 @@ def main() -> None:
     bundle = joblib.load("models/match_model.joblib")
     model = bundle["model"]
     feature_names = bundle["features"]
+    score_bundle = load_score_models()
+    platt = load_platt()
 
     current_season = int(schedules["season"].max())
     upcoming = schedules.filter(
@@ -276,6 +333,7 @@ def main() -> None:
     records = season_records(schedules, current_season)
     team_records = current_records(schedules, current_season)
     qb_context = current_qb_context(current_season)
+    injury_context = current_injury_context(current_season)
     predictions = []
     for row in upcoming.iter_rows(named=True):
         home = row["home_team"]
@@ -288,17 +346,20 @@ def main() -> None:
             )
             stats_cache[home].update(team_records.get(home, {}))
             stats_cache[home].update(qb_context.get(home, {}))
+            stats_cache[home].update(injury_context.get(home, {}))
         if away not in stats_cache:
             stats_cache[away] = team_stats_from_row(
                 team_latest_row(features_df, away), away
             )
             stats_cache[away].update(team_records.get(away, {}))
             stats_cache[away].update(qb_context.get(away, {}))
+            stats_cache[away].update(injury_context.get(away, {}))
 
         x = build_feature_vector(
             feature_names, stats_cache[home], stats_cache[away], week, current_season
         )
-        proba = float(model.predict_proba([x])[0, 1])
+        raw_proba = float(model.predict_proba([x])[0, 1])
+        proba = apply_platt(raw_proba, platt)
 
         home_avg = float(stats_cache[home].get("avg_points") or 0.0)
         away_avg = float(stats_cache[away].get("avg_points") or 0.0)
@@ -309,6 +370,30 @@ def main() -> None:
         spread = (proj_home - proj_away) if proj_home is not None and proj_away is not None else None
         total = (proj_home + proj_away) if proj_home is not None and proj_away is not None else None
 
+        # Keep the spread consistent with the win probability: convert the
+        # model probability to a margin with the calibrated margin sigma. The
+        # separate margin regressor can disagree with the classifier (e.g. a
+        # 41% home team being projected as a 4-point favorite).
+        sigma_margin = float(score_bundle.get("sigma_margin", 13.5)) if score_bundle else 13.5
+        try:
+            probit = NormalDist().inv_cdf(min(max(proba, 0.01), 0.99))
+            spread = probit * sigma_margin
+        except Exception:
+            pass
+
+        if score_bundle:
+            try:
+                sx = build_feature_vector(
+                    score_bundle["features"],
+                    stats_cache[home],
+                    stats_cache[away],
+                    week,
+                    current_season,
+                )
+                total = float(score_bundle["total_model"].predict([sx])[0])
+            except Exception:
+                pass
+
         predictions.append(
             {
                 "game_id": row.get("game_id"),
@@ -317,6 +402,7 @@ def main() -> None:
                 "home_team": home,
                 "away_team": away,
                 "home_win_prob": round(proba, 3),
+                "raw_home_win_prob": round(raw_proba, 3),
                 "home_record": records.get(home, {}).get("record"),
                 "away_record": records.get(away, {}).get("record"),
                 "home_form": records.get(home, {}).get("form"),

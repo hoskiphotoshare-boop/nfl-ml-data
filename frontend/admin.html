@@ -59,6 +59,11 @@
       </section>
 
       <section>
+        <h2>Model health</h2>
+        <div id="health" class="card-grid"></div>
+      </section>
+
+      <section>
         <h2>Match backtest</h2>
         <div id="match-backtest" class="card-grid"></div>
       </section>
@@ -325,6 +330,66 @@
         metaEl.appendChild(card("Season", [String(meta.season)]));
       } catch (e) {
         document.getElementById("meta").appendChild(card("Meta unavailable", [String(e)]));
+      }
+
+      // Model health
+      try {
+        const h = await getJSON(`${R}/model_health.json`);
+        const elm = document.getElementById("health");
+        elm.innerHTML = "";
+        const bt = h.match_backtest || {};
+        const cal = h.calibration || {};
+        const market = h.market || {};
+        const futures = h.futures || {};
+        const score = h.score_models || {};
+        const injuries = h.injuries || {};
+        const odds = h.odds || {};
+        const movement = h.line_movement || {};
+        elm.appendChild(card("Match backtest", [
+          `accuracy ${(bt.accuracy ?? 0).toFixed(4)}`,
+          `log loss ${(bt.log_loss ?? 0).toFixed(4)}`,
+          `AUC ${(bt.auc ?? 0).toFixed(4)}`,
+        ]));
+        elm.appendChild(card("Calibration", [
+          `enabled ${cal.enabled ? "yes" : "no"}`,
+          `log loss ${(cal.raw_log_loss ?? 0).toFixed(4)} → ${(cal.calibrated_log_loss ?? 0).toFixed(4)}`,
+          `n ${cal.n ?? "—"}`,
+        ]));
+        elm.appendChild(card("Market outliers", [
+          `${market.outliers ?? 0} of ${market.games ?? 0} games`,
+          `mean |edge| ${((market.mean_abs_edge ?? 0) * 100).toFixed(1)} pp`,
+          `max ${((market.max_abs_edge ?? 0) * 100).toFixed(1)} pp`,
+        ]));
+        elm.appendChild(card("Futures board", [
+          `mean |edge| ${((futures.mean_abs_edge ?? 0) * 100).toFixed(1)} pp`,
+          `max ${((futures.max_abs_edge ?? 0) * 100).toFixed(1)} pp`,
+          `${futures.teams_matched ?? 0} teams`,
+        ]));
+        elm.appendChild(card("Score models", [
+          `margin σ ${score.margin ?? "—"}`,
+          `total σ ${score.total ?? "—"}`,
+        ]));
+        elm.appendChild(card("Injury data", [
+          `seasons ${(injuries.seasons || []).join(", ") || "—"}`,
+          `latest week ${injuries.latest_week ?? "—"} (${injuries.latest_season ?? "—"})`,
+          `${injuries.rows ?? 0} rows`,
+        ]));
+        elm.appendChild(card("Odds budget", [
+          `${odds.requests_remaining ?? "—"} credits left`,
+          odds.fetched_at ? new Date(odds.fetched_at).toLocaleString() : "—",
+        ]));
+        elm.appendChild(card("Playoff simulation", [
+          `Brier ${h.playoff_backtest?.brier ?? "—"}`,
+          `log loss ${h.playoff_backtest?.log_loss ?? "—"}`,
+          `${h.playoff_backtest?.teams ?? 0} team-seasons`,
+        ]));
+        elm.appendChild(card("Line movement", [
+          `${movement.snapshots ?? 0} snapshots`,
+          `${movement.games ?? 0} games`,
+          `mean |spread| ${movement.summary?.mean_abs_spread_move ?? "—"}`,
+        ]));
+      } catch (e) {
+        document.getElementById("health").appendChild(card("Health report unavailable", [String(e)]));
       }
 
       // Match backtest

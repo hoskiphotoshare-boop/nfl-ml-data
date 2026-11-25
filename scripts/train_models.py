@@ -22,7 +22,7 @@ import polars as pl
 
 try:
     from sklearn.linear_model import LogisticRegression
-    from sklearn.ensemble import HistGradientBoostingClassifier
+    from sklearn.ensemble import HistGradientBoostingClassifier, HistGradientBoostingRegressor
     from sklearn.metrics import accuracy_score, log_loss
     from sklearn.model_selection import train_test_split
     import joblib
@@ -119,6 +119,11 @@ def prepare_match_matrix(df: pl.DataFrame):
         "away_qb_changed",
         "home_qb_missing",
         "away_qb_missing",
+        "home_inj_impact",
+        "away_inj_impact",
+        "inj_impact_diff",
+        "home_inj_missing",
+        "away_inj_missing",
     ]
     # Next Gen Stats are unstable for team-level rankings (collinear, large
     # coefficients). Results and QB context now carry that signal more
@@ -203,6 +208,84 @@ def train_match_model(df: pl.DataFrame):
     )
     print("Saved models/match_model.joblib")
     return best_model, feature_cols
+
+
+def train_score_models(df: pl.DataFrame, feature_cols: list[str]) -> None:
+    """Train margin and total regressors and save residual scales.
+
+    The spread/total probabilities in ``compare_market.py`` use the residual
+    standard deviation instead of a fixed 13.5-point assumption.
+    """
+    if not SKLEARN_AVAILABLE or not feature_cols:
+        return
+    required = {"home_score", "away_score", "season"}
+    if not required.issubset(set(df.columns)):
+        return
+
+    played = df.filter(
+        pl.col("home_score").is_not_null()
+        & pl.col("away_score").is_not_null()
+        & (pl.col("season") >= 2022)
+    )
+    if played.height < 100:
+        print("Not enough recent games for score models; skipping.")
+        return
+
+    X = played.select(
+        [pl.col(c).cast(pl.Float64, strict=False).fill_null(0.0) for c in feature_cols]
+    ).to_numpy()
+    margin = (played["home_score"] - played["away_score"]).to_numpy()
+    total = (played["home_score"] + played["away_score"]).to_numpy()
+    seasons = played["season"].to_numpy()
+
+    oof_margin = []
+    oof_total = []
+    for test_season in (2024, 2025, 2026):
+        train = seasons < test_season
+        test = seasons == test_season
+        if train.sum() < 100 or test.sum() < 20:
+            continue
+        margin_model = HistGradientBoostingRegressor(
+            max_iter=300, learning_rate=0.05, max_depth=3, random_state=42
+        ).fit(X[train], margin[train])
+        total_model = HistGradientBoostingRegressor(
+            max_iter=300, learning_rate=0.05, max_depth=3, random_state=42
+        ).fit(X[train], total[train])
+        oof_margin.extend(margin_model.predict(X[test]) - margin[test])
+        oof_total.extend(total_model.predict(X[test]) - total[test])
+        mae_m = np.mean(np.abs(margin_model.predict(X[test]) - margin[test]))
+        mae_t = np.mean(np.abs(total_model.predict(X[test]) - total[test]))
+        print(
+            f"Score models {test_season}: margin MAE={mae_m:.2f}, "
+            f"total MAE={mae_t:.2f}"
+        )
+
+    sigma_margin = float(np.std(oof_margin)) if oof_margin else 13.5
+    sigma_total = float(np.std(oof_total)) if oof_total else 13.5
+    sigma_margin = max(sigma_margin, 7.0)
+    sigma_total = max(sigma_total, 7.0)
+
+    final_margin = HistGradientBoostingRegressor(
+        max_iter=300, learning_rate=0.05, max_depth=3, random_state=42
+    ).fit(X, margin)
+    final_total = HistGradientBoostingRegressor(
+        max_iter=300, learning_rate=0.05, max_depth=3, random_state=42
+    ).fit(X, total)
+
+    joblib.dump(
+        {
+            "margin_model": final_margin,
+            "total_model": final_total,
+            "features": feature_cols,
+            "sigma_margin": round(sigma_margin, 3),
+            "sigma_total": round(sigma_total, 3),
+        },
+        "models/score_models.joblib",
+    )
+    print(
+        f"Saved models/score_models.joblib "
+        f"(sigma margin {sigma_margin:.2f}, total {sigma_total:.2f})"
+    )
 
 
 def write_games_predictions(df: pl.DataFrame, model, feature_cols) -> None:
@@ -349,6 +432,7 @@ def main() -> None:
     if df is not None and df.height > 0:
         model, feature_cols = train_match_model(df)
         write_games_predictions(df, model, feature_cols)
+        train_score_models(df, feature_cols)
     else:
         print("Skipping match predictions because features are missing.")
     write_player_predictions()

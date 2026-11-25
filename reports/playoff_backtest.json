@@ -1,0 +1,40 @@
+{
+  "cutoff_week": 12,
+  "simulations": 2000,
+  "seasons": [
+    {
+      "season": 2022,
+      "teams": 32,
+      "brier": 0.1434,
+      "log_loss": 0.4434,
+      "actual_playoff_teams": 14
+    },
+    {
+      "season": 2023,
+      "teams": 32,
+      "brier": 0.1285,
+      "log_loss": 0.3607,
+      "actual_playoff_teams": 14
+    },
+    {
+      "season": 2024,
+      "teams": 32,
+      "brier": 0.0513,
+      "log_loss": 0.1625,
+      "actual_playoff_teams": 14
+    },
+    {
+      "season": 2025,
+      "teams": 32,
+      "brier": 0.1028,
+      "log_loss": 0.3157,
+      "actual_playoff_teams": 14
+    }
+  ],
+  "pooled": {
+    "brier": 0.1065,
+    "log_loss": 0.3206,
+    "teams": 128
+  },
+  "note": "SRS-only simulation; live sim also blends the match model."
+}

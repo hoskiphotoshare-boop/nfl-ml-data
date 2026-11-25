@@ -82,6 +82,12 @@ jobs:
         if: steps.changes.outputs.changed == 'true'
         run: python scripts/backtest_market.py || true
 
+      - name: Refresh movement and health reports
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          python scripts/line_movement.py || true
+          python scripts/build_health_report.py || true
+
       - name: Commit odds and reports
         if: steps.changes.outputs.changed == 'true'
         run: |

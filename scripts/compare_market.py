@@ -23,6 +23,16 @@ except Exception:  # pragma: no cover
 # Normal approximation used to turn line differences into cover probabilities.
 # NFL margins have a standard deviation of roughly two touchdowns.
 SIGMA = 13.5
+SPREAD_SIGMA = 13.5
+TOTAL_SIGMA = 13.5
+try:
+    import joblib
+
+    _score_bundle = joblib.load("models/score_models.joblib")
+    SPREAD_SIGMA = float(_score_bundle.get("sigma_margin", 13.5))
+    TOTAL_SIGMA = float(_score_bundle.get("sigma_total", 13.5))
+except Exception:
+    pass
 
 
 def normal_cdf(x: float) -> float:
@@ -242,7 +252,7 @@ def main() -> None:
             spread_candidates = []
             if best_home_spread and best_home_spread.get("point") is not None:
                 line = float(best_home_spread["point"])
-                cover = normal_cdf((model_spread + line) / SIGMA)
+                cover = normal_cdf((model_spread + line) / SPREAD_SIGMA)
                 spread_candidates.append(
                     {
                         "side": "home",
@@ -257,7 +267,7 @@ def main() -> None:
                 )
             if best_away_spread and best_away_spread.get("point") is not None:
                 line = float(best_away_spread["point"])
-                cover = normal_cdf((-model_spread + line) / SIGMA)
+                cover = normal_cdf((-model_spread + line) / SPREAD_SIGMA)
                 spread_candidates.append(
                     {
                         "side": "away",
@@ -279,7 +289,7 @@ def main() -> None:
             best_under = event.get("best_under")
             if best_over and best_over.get("point") is not None:
                 line = float(best_over["point"])
-                over = normal_cdf((model_total - line) / SIGMA)
+                over = normal_cdf((model_total - line) / TOTAL_SIGMA)
                 total_candidates.append(
                     {
                         "side": "over",
@@ -294,7 +304,7 @@ def main() -> None:
                 )
             if best_under and best_under.get("point") is not None:
                 line = float(best_under["point"])
-                under = normal_cdf((line - model_total) / SIGMA)
+                under = normal_cdf((line - model_total) / TOTAL_SIGMA)
                 total_candidates.append(
                     {
                         "side": "under",

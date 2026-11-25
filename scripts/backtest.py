@@ -93,13 +93,13 @@ def load_features() -> pl.DataFrame:
     return pl.read_parquet(path)
 
 
-def prepare(df: pl.DataFrame) -> pl.DataFrame:
+def prepare(df: pl.DataFrame, features: list[str]) -> pl.DataFrame:
     df = df.filter(pl.col("home_win").is_not_null())
-    for col in FEATURE_COLS:
+    for col in features:
         if col not in df.columns:
             df = df.with_columns(pl.lit(0.0).alias(col))
     return df.with_columns(
-        [pl.col(c).cast(pl.Float64, strict=False).fill_null(0.0) for c in FEATURE_COLS]
+        [pl.col(c).cast(pl.Float64, strict=False).fill_null(0.0) for c in features]
     )
 
 
@@ -114,7 +114,15 @@ def evaluate(y_true: np.ndarray, proba: np.ndarray) -> dict:
 
 
 def main() -> None:
-    df = prepare(load_features())
+    features = FEATURE_COLS
+    try:
+        import joblib
+
+        if os.path.exists("models/match_model.joblib"):
+            features = joblib.load("models/match_model.joblib")["features"]
+    except Exception:
+        pass
+    df = prepare(load_features(), features)
     seasons = sorted(int(s) for s in df["season"].unique().to_list())
     test_seasons = [s for s in seasons if s >= 2022]
 
@@ -128,9 +136,9 @@ def main() -> None:
         if train.height < 100 or test.height < 20:
             continue
 
-        X_train = train.select(FEATURE_COLS).to_numpy()
+        X_train = train.select(features).to_numpy()
         y_train = train["home_win"].to_numpy()
-        X_test = test.select(FEATURE_COLS).to_numpy()
+        X_test = test.select(features).to_numpy()
         y_test = test["home_win"].to_numpy()
 
         model = LogisticRegression(max_iter=2000)

@@ -29,14 +29,18 @@ jobs:
       - run: python scripts/add_match_context.py || true
       - run: python scripts/build_predictions.py || true
       - run: python scripts/train_models.py || true
+      - run: python scripts/calibrate_probabilities.py || true
       - run: python scripts/train_player_models.py || true
       - run: python scripts/predict_upcoming.py || true
       - run: python scripts/add_player_matchups.py || true
       - run: python scripts/explain_models.py || true
       - run: python scripts/compare_market.py || true
+      - run: python scripts/line_movement.py || true
       - run: python scripts/calibrate_model.py || true
       - run: python scripts/simulate_playoffs.py || true
+      - run: python scripts/backtest_playoffs.py || true
       - run: python scripts/compare_futures.py || true
+      - run: python scripts/build_health_report.py || true
 
       - run: |
           git config user.name "github-actions"

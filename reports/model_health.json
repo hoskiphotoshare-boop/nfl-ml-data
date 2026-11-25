@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-11-25T03:51:55.720631+00:00",
+  "match_backtest": {
+    "accuracy": 0.6463790446841294,
+    "log_loss": 0.6419906879525928,
+    "brier": 0.22488895482757434,
+    "auc": 0.6825459216934463
+  },
+  "calibration": {
+    "enabled": true,
+    "a": 0.815348,
+    "b": 0.020784,
+    "raw_log_loss": 0.641991,
+    "calibrated_log_loss": 0.640103,
+    "n": 1298
+  },
+  "market": {
+    "games": 30,
+    "outliers": 7,
+    "outlier_games": [
+      "2026_12_NYG_IND",
+      "2026_12_ATL_MIN",
+      "2026_12_TEN_JAX",
+      "2026_13_CIN_CLE",
+      "2026_13_MIA_DEN",
+      "2026_13_CAR_MIN",
+      "2026_13_DAL_SEA"
+    ],
+    "mean_abs_edge": 0.1302,
+    "max_abs_edge": 0.2853
+  },
+  "futures": {
+    "mean_abs_edge": 0.0066,
+    "max_abs_edge": 0.0361,
+    "teams_matched": 32
+  },
+  "score_models": {
+    "margin": 13.421,
+    "total": 13.898
+  },
+  "playoff_backtest": {
+    "brier": 0.1065,
+    "log_loss": 0.3206,
+    "teams": 128
+  },
+  "injuries": {
+    "seasons": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "latest_season": 2026,
+    "latest_week": 11,
+    "rows": 27045
+  },
+  "odds": {
+    "fetched_at": "2026-11-25T01:48:33.268475+00:00",
+    "requests_remaining": 476
+  },
+  "line_movement": {
+    "snapshots": 3,
+    "games": 30,
+    "summary": {
+      "games_with_movement": 30,
+      "mean_abs_spread_move": 0.0,
+      "max_abs_spread_move": 0.0,
+      "mean_abs_total_move": 0.0,
+      "max_abs_total_move": 0.0
+    }
+  }
+}

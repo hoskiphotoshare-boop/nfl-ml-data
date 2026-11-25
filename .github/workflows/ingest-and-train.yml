@@ -47,6 +47,7 @@ jobs:
 
       # Train baseline models and overwrite game/player predictions.
       - run: python scripts/train_models.py || true
+      - run: python scripts/calibrate_probabilities.py || true
 
       # Train per-position player models and overwrite player projections.
       - run: python scripts/train_player_models.py || true
@@ -68,6 +69,7 @@ jobs:
       # Compare model probabilities with market-implied probabilities.
       - name: Compare model to market
         run: python scripts/compare_market.py || true
+      - run: python scripts/line_movement.py || true
 
       # Calibrate model probabilities to market-implied probabilities.
       - name: Calibrate model to market
@@ -78,6 +80,7 @@ jobs:
 
       # Run the Monte Carlo playoff / Super Bowl simulator.
       - run: python scripts/simulate_playoffs.py || true
+      - run: python scripts/backtest_playoffs.py || true
       - run: python scripts/compare_futures.py || true
 
       # Walk-forward backtest of the match model.
@@ -85,6 +88,8 @@ jobs:
 
       # Feature-group ablation study.
       - run: python scripts/feature_ablation.py || true
+
+      - run: python scripts/build_health_report.py || true
 
       - run: python scripts/weekly_report.py > weekly_report.md || true
 

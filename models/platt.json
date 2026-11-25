@@ -1,0 +1,17 @@
+{
+  "a": 0.815348,
+  "b": 0.020784,
+  "n": 1298,
+  "enabled": true,
+  "raw_log_loss": 0.641991,
+  "calibrated_log_loss": 0.640103,
+  "raw_brier": 0.224889,
+  "calibrated_brier": 0.224529,
+  "seasons": [
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+  ]
+}
