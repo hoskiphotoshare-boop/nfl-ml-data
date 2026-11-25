@@ -417,6 +417,11 @@ h2 {
   color: var(--muted-2);
 }
 
+.tab-updated {
+  margin: 0.15rem 0 0.8rem;
+  font-variant-numeric: tabular-nums;
+}
+
 .section-title {
   display: flex;
   align-items: center;
@@ -846,8 +851,12 @@ h2 {
 .edge-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.35rem;
-  padding-top: 0.1rem;
+  gap: 0.4rem;
+  padding-top: 0.15rem;
+}
+
+.edge-cell.empty {
+  opacity: 0.55;
 }
 
 .edge-cell {
@@ -1172,27 +1181,86 @@ h2 {
   text-align: right;
 }
 
+.history-toggle {
+  border: 1px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.history-toggle:hover,
+.history-toggle[aria-pressed='true'] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* ---------- last-six history ---------- */
 
 .stat-val {
   font-variant-numeric: tabular-nums;
 }
 
-.stat-sub {
-  display: flex;
-  align-items: baseline;
-  gap: 0.2rem;
+.stat-range {
+  margin-top: 0.12rem;
   font-size: 0.66rem;
   color: var(--muted-2);
   white-space: nowrap;
 }
 
-.micro {
-  font-size: 0.56rem;
+.stat-range summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.18rem;
+  font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--muted-2);
+  cursor: pointer;
+  list-style: none;
+}
+
+.stat-range summary::-webkit-details-marker {
+  display: none;
+}
+
+.stat-range summary::after {
+  content: '+';
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.stat-range[open] summary::after {
+  content: '−';
+}
+
+.stat-range .range-value {
+  display: block;
+  margin-top: 0.06rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.stat-range:not([open]) .range-value {
+  display: none;
+}
+
+@media (min-width: 761px) {
+  .stat-range summary {
+    display: none;
+  }
+
+  .stat-range .range-value {
+    display: inline;
+    margin-top: 0;
+  }
 }
 
 .hist {
@@ -1205,6 +1273,39 @@ h2 {
   color: var(--muted-2);
   white-space: nowrap;
   opacity: 0.92;
+}
+
+.dtable tbody tr .hist {
+  display: none;
+}
+
+.dtable tbody tr.row-open .hist {
+  display: flex;
+}
+
+#players-table-wrap .dtable tbody tr {
+  cursor: pointer;
+}
+
+.dtable tbody tr.row-open {
+  background: var(--accent-soft);
+}
+
+.dtable tbody tr.row-open td {
+  border-bottom-color: var(--accent-soft);
+}
+
+.row-chevron {
+  flex: 0 0 auto;
+  margin-left: auto;
+  padding-left: 0.2rem;
+  font-size: 0.78rem;
+  line-height: 1;
+  color: var(--muted-2);
+}
+
+.row-open .row-chevron {
+  color: var(--accent);
 }
 
 .hist span + span::before {
@@ -1846,6 +1947,12 @@ footer .odds {
     gap: 0.5rem;
   }
 
+  #games-stats,
+  #players-stats,
+  #playoffs-stats {
+    display: none;
+  }
+
   .stat .v {
     font-size: 1.08rem;
   }
@@ -1890,8 +1997,10 @@ footer .odds {
     background: var(--surface-2);
   }
 
-  .dtable tbody tr:hover td.sticky-col {
-    background: var(--hover);
+  .dtable tbody tr:hover td.sticky-col,
+  .dtable tbody tr:focus-within td.sticky-col {
+    background-color: var(--surface);
+    background-image: linear-gradient(var(--hover), var(--hover));
   }
 
   .dtable td,

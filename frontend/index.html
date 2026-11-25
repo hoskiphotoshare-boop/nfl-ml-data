@@ -123,6 +123,7 @@
       </div>
 
       <p class="panel-note" id="odds-freshness"></p>
+      <p class="panel-note tab-updated" id="games-updated"></p>
 
       <div id="edges-extras">
         <div class="section-title" title="Each game’s largest model-vs-market gap across moneyline, spread and total. Values are in percentage points (pp); positive means the model rates that side higher than the vig-free market.">Best edge per game · probability points</div>
@@ -178,8 +179,11 @@
             <option value="depth">Depth chart</option>
           </select>
         </label>
+        <button id="players-history-toggle" class="history-toggle" type="button" title="Show the last six games">+ Last 6</button>
         <span class="count-note" id="players-count"></span>
       </div>
+
+      <p class="panel-note tab-updated" id="players-freshness"></p>
 
       <div id="players-table-wrap">
         <div class="skeleton-grid"><div class="sk-card"></div><div class="sk-card"></div><div class="sk-card"></div></div>
@@ -221,6 +225,7 @@
             <option value="playoff">Playoff chance</option>
             <option value="edge">Biggest futures edge</option>
             <option value="team">Team name</option>
+            <option value="market">Market chance</option>
           </select>
         </label>
         <span class="count-note" id="playoffs-count"></span>
@@ -248,7 +253,7 @@
       <summary>How the model works</summary>
       <div>
         <p><strong>Games.</strong> Logistic regression on pre-game rolling EPA, scoring efficiency, rest days, division context, quarterback continuity and weighted injuries. Trained on nflverse play-by-play from 1999 to today and validated with a walk-forward backtest (pooled AUC ≈ 0.68, log loss ≈ 0.64). Next Gen Stats, week/season and raw roster counts were tested and left out.</p>
-        <p><strong>Players.</strong> Per-position models project fantasy points plus position-specific stat lines: passing, interceptions and rushing for QBs; targets, receptions and yards for skill players; field goals and extra points for kickers. The small numbers under each stat are the last six games, oldest to newest; “Range” under Proj is the 80% projection interval (10th–90th percentile).</p>
+        <p><strong>Players.</strong> Per-position models project fantasy points plus position-specific stat lines: passing, interceptions and rushing for QBs; targets, receptions and yards for skill players; field goals and extra points for kickers. The small numbers under each stat show the last three games by default; “+ Last 6” expands to six. “Range” under Proj is the 80% projection interval (10th–90th percentile).</p>
         <p><strong>Playoffs.</strong> A Monte Carlo simulation plays out the remaining schedule and bracket 10,000 times. Game probabilities blend the match model with an opponent-adjusted point-differential rating, and each simulated season carries team-strength uncertainty for injuries, form and coaching. It counts playoff berths, conference titles and Super Bowl wins.</p>
         <p><strong>Model edges.</strong> Every priced game gets a model edge for moneyline, spread and total, expressed in probability points against vig-free market prices. The “Model edges” view ranks them; large gaps usually mean the model disagrees strongly with the market, not that a bet is guaranteed.</p>
         <p><strong>Futures.</strong> Super Bowl winner prices from sportsbooks are normalized to remove the bookmaker overround, then compared with the simulated championship probability on the Playoffs tab.</p>

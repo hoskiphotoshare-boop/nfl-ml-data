@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T06:05:08.952589+00:00",
+  "generated_at": "2026-11-25T19:06:27.337435+00:00",
   "match_backtest": {
     "accuracy": 0.6440677966101694,
     "log_loss": 0.6430025716450639,
@@ -102,6 +102,9 @@
   },
   "odds": {
     "fetched_at": "2026-11-25T01:48:33.268475+00:00",
+    "events": 30,
+    "credits": 3,
+    "requests_used": 24,
     "requests_remaining": 476
   },
   "line_movement": {

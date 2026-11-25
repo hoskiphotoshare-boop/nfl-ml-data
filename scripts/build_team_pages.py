@@ -190,6 +190,7 @@ def page(title: str, description: str, body: str) -> str:
     <div class="foot-row"><span>Data: nflverse (CC-BY 4.0)</span></div>
   </footer>
   <script src="../theme.js"></script>
+  <script src="../table-sort.js"></script>
 </body>
 </html>
 """

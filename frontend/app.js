@@ -64,7 +64,11 @@ const state = {
   gamesById: new Map(),
   gamesView: 'schedule',
   playersPos: 'QB',
+  playersSort: { key: 'proj', dir: 'desc' },
+  historyWindow: 3,
+  selectedPlayerId: null,
   playoffsConf: 'all',
+  playoffsSort: { key: 'super_bowl', dir: 'desc' },
   picks: {},
 };
 
@@ -242,16 +246,17 @@ function recentStatValues(player, key) {
 function historyRow(player, key, digits = 1) {
   const values = recentStatValues(player, key);
   const row = el('div', 'hist');
-  row.title = 'Last six games, oldest to newest';
   if (!values.length) {
     row.appendChild(el('span', 'muted-2', '—'));
     return row;
   }
-  values.forEach((value, index) => {
+  const shown = values.slice(-(state.historyWindow || 3));
+  row.title = `Last ${shown.length} games, oldest to newest`;
+  shown.forEach((value, index) => {
     const text = Number(value)
       .toFixed(digits)
       .replace(/\.0+$/, '');
-    row.appendChild(el('span', index === values.length - 1 ? 'last' : '', text));
+    row.appendChild(el('span', index === shown.length - 1 ? 'last' : '', text));
   });
   return row;
 }
@@ -284,6 +289,71 @@ function emptyState({ icon = '—', title, message, actionLabel, onAction }) {
     box.appendChild(btn);
   }
   return box;
+}
+
+/* ---------------- table sorting ---------------- */
+
+function compareSortValues(a, b, dir) {
+  const aMissing = a === null || a === undefined || Number.isNaN(a);
+  const bMissing = b === null || b === undefined || Number.isNaN(b);
+  if (aMissing && bMissing) return 0;
+  if (aMissing) return 1;
+  if (bMissing) return -1;
+  let result;
+  if (typeof a === 'string' || typeof b === 'string') {
+    result = String(a).localeCompare(String(b), undefined, { numeric: true });
+  } else {
+    result = a - b;
+  }
+  return dir === 'asc' ? result : -result;
+}
+
+function sortRecords(list, getValue, sort) {
+  return [...list].sort((a, b) =>
+    compareSortValues(getValue(a), getValue(b), sort.dir)
+  );
+}
+
+function nextSort(sort, key, ascendingKeys = []) {
+  if (sort.key === key) {
+    sort.dir = sort.dir === 'asc' ? 'desc' : 'asc';
+  } else {
+    sort.key = key;
+    sort.dir = ascendingKeys.includes(key) ? 'asc' : 'desc';
+  }
+  return sort;
+}
+
+function sortHeader(label, key, sort, onSort, className = '', title = '') {
+  const th = el('th', className);
+  const active = sort.key === key;
+  const button = el('button');
+  button.type = 'button';
+  if (active) button.classList.add('sorted');
+  button.appendChild(document.createTextNode(label));
+  button.appendChild(
+    el('span', 'caret', active ? (sort.dir === 'asc' ? '▲' : '▼') : '⇅')
+  );
+  button.title = title
+    ? `${title} Click to sort.`
+    : `Sort by ${label.toLowerCase()}.`;
+  button.setAttribute(
+    'aria-label',
+    `${label}: sort ${active ? (sort.dir === 'asc' ? 'descending' : 'ascending') : 'ascending'}`
+  );
+  button.addEventListener('click', () => onSort(key));
+  th.appendChild(button);
+  th.setAttribute('aria-sort', active ? (sort.dir === 'asc' ? 'ascending' : 'descending') : 'none');
+  return th;
+}
+
+function renderSortState(sort, selector, mapping) {
+  const select = $(selector);
+  if (!select) return;
+  const value = mapping[sort.key];
+  if (value && [...select.options].some((option) => option.value === value)) {
+    select.value = value;
+  }
 }
 
 /* ---------------- games ---------------- */
@@ -388,7 +458,6 @@ const GLOSSARY = {
       'Model win probability split between the two teams; the wider side is more likely to win.',
     ],
     ['Weather', 'Forecast temperature (°F) and wind (mph) at kickoff for outdoor games.'],
-    ['API credits', 'Remaining requests on the free odds-data plan, shown on the odds line.'],
     [
       'Model spread',
       'The model’s projected point margin. Positive favours the home team; negative favours the away team.',
@@ -443,8 +512,8 @@ const GLOSSARY = {
       'The 80% projection interval: floor (10th percentile) to ceiling (90th percentile). Roughly 4 in 5 outcomes should land inside it.',
     ],
     [
-      'Last six',
-      'The small numbers under each stat are that player’s last six games, oldest to newest. The bold value is the most recent game.',
+      'Last 3 / Last 6',
+      'The small numbers under each stat show the last three games by default, oldest to newest. The bold value is the most recent game; “+ Last 6” expands every stat to the last six.',
     ],
     ['Tgt', 'Targets: passes thrown in the player’s direction.'],
     ['Rec', 'Receptions.'],
@@ -558,7 +627,13 @@ function edgeGrid(market, best) {
   const grid = el('div', 'edge-grid');
   ['ml', 'spread', 'total'].forEach((key) => {
     const entry = market.markets ? market.markets[key] : null;
-    if (!entry) return;
+    if (!entry) {
+      const empty = el('div', 'edge-cell empty');
+      empty.appendChild(el('div', 'k', MARKET_LABEL[key]));
+      empty.appendChild(el('div', 'pick', '—'));
+      grid.appendChild(empty);
+      return;
+    }
     const isBest = best && best.key === key;
     const cell = el('div', `edge-cell${isBest ? ' best' : ''}`);
     cell.appendChild(el('div', 'k', MARKET_LABEL[key]));
@@ -700,6 +775,12 @@ function gameCard(game, rank) {
   const meta = el('div', 'meta-grid');
   [
     {
+      label: 'Lean vs 50%',
+      value: home === null ? '—' : `${(Math.abs(home - 0.5) * 100).toFixed(1)} pts`,
+      title:
+        'How far the model’s win probability is from a coin flip, in percentage points. 0 = pick’em; 30 pts = a 80% vs 20% split. Bigger lean = more confident.',
+    },
+    {
       label: 'Model spread',
       value: spreadLine(game),
       title:
@@ -709,12 +790,6 @@ function gameCard(game, rank) {
       label: 'Model total',
       value: game.total !== null && game.total !== undefined ? game.total.toFixed(1) : '—',
       title: 'The model’s projected combined points for both teams.',
-    },
-    {
-      label: 'Lean vs 50%',
-      value: home === null ? '—' : `${(Math.abs(home - 0.5) * 100).toFixed(1)} pts`,
-      title:
-        'How far the model’s win probability is from a coin flip, in percentage points. 0 = pick’em; 30 pts = a 80% vs 20% split. Bigger lean = more confident.',
     },
   ].forEach(({ label, value, title }) => {
     const cell = el('div', 'meta-cell');
@@ -1015,11 +1090,27 @@ function renderOddsFreshness() {
     return;
   }
   const events = market.odds_events ?? (market.games || []).length;
-  const credits = market.odds_requests_remaining;
-  node.textContent = `Odds updated ${relativeTime(market.odds_fetched_at)} · ${events} games priced${
-    credits !== undefined && credits !== null ? ` · ${credits} API credits left` : ''
-  }`;
+  node.textContent = `Odds updated ${relativeTime(market.odds_fetched_at)} · ${events} games priced`;
   node.title = new Date(market.odds_fetched_at).toLocaleString();
+}
+
+function renderModelFreshness() {
+  const meta = state.meta || {};
+  const stamps = [
+    ['#games-updated', 'Predictions updated', meta.games ?? state.games.length, 'games'],
+    ['#players-freshness', 'Projections updated', meta.players ?? state.players.length, 'players'],
+  ];
+  stamps.forEach(([selector, label, count, unit]) => {
+    const node = $(selector);
+    if (!node) return;
+    if (!meta.generated_at) {
+      node.textContent = '';
+      return;
+    }
+    const week = meta.week ? ` · Week ${meta.week}` : '';
+    node.textContent = `${label} ${relativeTime(meta.generated_at)}${week} · ${count} ${unit}`;
+    node.title = new Date(meta.generated_at).toLocaleString();
+  });
 }
 
 function renderGames() {
@@ -1122,7 +1213,8 @@ function renderGames() {
   });
 }
 
-const STAT_HISTORY_TIP = 'Small numbers below are the last six games, oldest to newest.';
+const STAT_HISTORY_TIP =
+  'Small numbers below are recent games, oldest to newest; use + Last 6 for all six.';
 
 const SKILL_COLUMNS = [
   { key: 'targets', valueKey: 'projected_targets', label: 'Tgt', digits: 1, hist: 0, tip: 'Projected targets.' },
@@ -1180,22 +1272,54 @@ function injuryPill(status) {
   return pill;
 }
 
+const PLAYER_ASC_KEYS = ['player', 'matchup', 'status'];
+const INJURY_ORDER = { out: 0, ir: 0, doubtful: 1, questionable: 2, probable: 3 };
+
+function injurySortRank(status) {
+  return status ? INJURY_ORDER[String(status).toLowerCase()] ?? 4 : 9;
+}
+
+function playerSortValue(player, key) {
+  if (key === 'player') return player.name || '';
+  if (key === 'matchup') return player.matchup || player.opponent || '';
+  if (key === 'proj') return proj(player);
+  if (key === 'recent') return recentAvg(player);
+  if (key === 'depth') return player.depth_rank ?? null;
+  if (key === 'status') return injurySortRank(player.injury_status);
+  const column = playerColumns(state.playersPos).find((item) => item.key === key);
+  if (!column) return null;
+  const stat = resolveStat(player, column, state.playersPos);
+  return stat.skip ? null : stat.value ?? null;
+}
+
+function normalizePlayerSort() {
+  const valid = new Set(['player', 'matchup', 'proj', 'recent', 'depth', 'status']);
+  playerColumns(state.playersPos).forEach((column) => valid.add(column.key));
+  if (!valid.has(state.playersSort.key)) {
+    state.playersSort = { key: 'proj', dir: 'desc' };
+  }
+}
+
+function setPlayerSort(key) {
+  nextSort(state.playersSort, key, PLAYER_ASC_KEYS);
+  normalizePlayerSort();
+  renderSortState(state.playersSort, '#players-sort', {
+    proj: 'proj',
+    recent: 'recent',
+    depth: 'depth',
+  });
+  renderPlayers();
+}
+
 function filteredPlayers() {
   const team = ($('#players-team-filter')?.value || '').trim().toLowerCase();
-  const sort = $('#players-sort')?.value || 'proj';
   const list = state.players.filter((p) => {
     const posOk = state.playersPos === 'all' || p.position === state.playersPos;
     const teamOk = !team || (p.team || '').toLowerCase().includes(team);
     return posOk && teamOk;
   });
-  if (sort === 'recent') {
-    list.sort((a, b) => recentAvg(b) - recentAvg(a));
-  } else if (sort === 'depth') {
-    list.sort((a, b) => (a.depth_rank ?? 99) - (b.depth_rank ?? 99) || proj(b) - proj(a));
-  } else {
-    list.sort((a, b) => proj(b) - proj(a));
-  }
-  return list;
+  normalizePlayerSort();
+  return sortRecords(list, (player) => playerSortValue(player, state.playersSort.key), state.playersSort);
 }
 
 function proj(player) {
@@ -1211,6 +1335,7 @@ function recentAvg(player) {
 function renderPlayers() {
   const wrap = $('#players-table-wrap');
   if (!wrap) return;
+  const previousScroll = wrap.querySelector('.table-scroll')?.scrollLeft || 0;
   const list = filteredPlayers();
   clear(wrap);
 
@@ -1219,9 +1344,23 @@ function renderPlayers() {
 
   const sub = $('#players-sub');
   if (sub) {
+    const historyNote =
+      state.historyWindow === 6
+        ? 'Small numbers under each stat are the last six games, oldest to newest.'
+        : 'Small numbers under each stat are the last three games; use + Last 6 for all six.';
     sub.textContent = state.players.length
-      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}. Small numbers under each stat are the last six games, oldest to newest.`
+      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}. ${historyNote}`
       : 'Projected fantasy points and stat lines for this week’s matchups.';
+  }
+
+  const historyToggle = $('#players-history-toggle');
+  if (historyToggle) {
+    const expanded = state.historyWindow === 6;
+    historyToggle.textContent = expanded ? '− Last 3' : '+ Last 6';
+    historyToggle.title = expanded
+      ? 'Show only the last three games'
+      : 'Show the last six games';
+    historyToggle.setAttribute('aria-pressed', String(expanded));
   }
 
   const stats = $('#players-stats');
@@ -1287,30 +1426,82 @@ function renderPlayers() {
   const table = el('table', 'dtable');
   const thead = el('thead');
   const headRow = el('tr');
-  headRow.appendChild(el('th', 'sticky-col', 'Player'));
-  const matchupTh = el('th', 'hide-sm', 'Matchup');
-  matchupTh.title = 'Opponent and kickoff time for this week’s game.';
-  headRow.appendChild(matchupTh);
-  const projTh = el('th', 'num', 'Proj');
-  projTh.title =
-    'Projected fantasy points (standard scoring, 4-pt passing TD). “Range” is the 80% projection interval; the small numbers are the last six games.';
-  headRow.appendChild(projTh);
+  headRow.appendChild(
+    sortHeader('Player', 'player', state.playersSort, setPlayerSort, 'sticky-col')
+  );
+  headRow.appendChild(
+    sortHeader(
+      'Matchup',
+      'matchup',
+      state.playersSort,
+      setPlayerSort,
+      'hide-sm',
+      'Opponent and kickoff time for this week’s game.'
+    )
+  );
+  headRow.appendChild(
+    sortHeader(
+      'Proj',
+      'proj',
+      state.playersSort,
+      setPlayerSort,
+      'num',
+      'Projected fantasy points (standard scoring, 4-pt passing TD). “Range” is the 80% projection interval; the small numbers are the last six games.'
+    )
+  );
   const columns = playerColumns(state.playersPos);
   columns.forEach((column) => {
-    const th = el('th', `num col-${column.key}`, column.label);
-    th.title = `${column.tip} ${STAT_HISTORY_TIP}`;
-    headRow.appendChild(th);
+    headRow.appendChild(
+      sortHeader(
+        column.label,
+        column.key,
+        state.playersSort,
+        setPlayerSort,
+        `num col-${column.key}`,
+        `${column.tip} ${STAT_HISTORY_TIP}`
+      )
+    );
   });
-  const statusTh = el('th', '', 'Status');
-  statusTh.title = 'Injury report status: Q questionable, D doubtful, O out, IR injured reserve.';
-  headRow.appendChild(statusTh);
+  headRow.appendChild(
+    sortHeader(
+      'Status',
+      'status',
+      state.playersSort,
+      setPlayerSort,
+      '',
+      'Injury report status: Q questionable, D doubtful, O out, IR injured reserve.'
+    )
+  );
   thead.appendChild(headRow);
   table.appendChild(thead);
 
   const tbody = el('tbody');
   const maxProj = Math.max(...list.map(proj), 1);
   list.forEach((player) => {
-    const tr = el('tr');
+    const playerId = String(player.player_id);
+    const isOpen = state.selectedPlayerId === playerId;
+    const tr = el('tr', isOpen ? 'row-open' : '');
+    tr.tabIndex = 0;
+    tr.setAttribute('aria-expanded', String(isOpen));
+    tr.setAttribute(
+      'aria-label',
+      `${isOpen ? 'Hide' : 'Show'} last six games for ${player.name}`
+    );
+    tr.title = isOpen ? 'Hide last six games' : 'Show last six games';
+    const toggleRow = () => {
+      state.selectedPlayerId = isOpen ? null : playerId;
+      renderPlayers();
+    };
+    tr.addEventListener('click', (event) => {
+      if (event.target.closest('a, button, summary, details')) return;
+      toggleRow();
+    });
+    tr.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      if (event.target.closest('a, button, summary, details')) return;
+      event.preventDefault();
+      toggleRow();
+    });
     const playerTd = el('td', 'sticky-col');
     const pwrap = el('div', 'player');
     pwrap.appendChild(teamBadge(player.team, true));
@@ -1330,6 +1521,7 @@ function renderPlayers() {
       );
     }
     pwrap.appendChild(info);
+    pwrap.appendChild(el('span', 'row-chevron', isOpen ? '▾' : '▸'));
     playerTd.appendChild(pwrap);
     tr.appendChild(playerTd);
 
@@ -1350,15 +1542,19 @@ function renderPlayers() {
     bar.appendChild(fill);
     projTd.appendChild(bar);
     if (player.floor_fantasy_points !== undefined && player.ceiling_fantasy_points !== undefined) {
-      const range = el('div', 'stat-sub');
-      range.appendChild(el('span', 'micro', 'Range '));
+      const range = el('details', 'stat-range');
+      range.open = !window.matchMedia('(max-width: 760px)').matches;
+      const summary = el('summary', '', 'Range');
+      summary.title =
+        '80% projection interval: floor (10th percentile) to ceiling (90th percentile).';
+      range.appendChild(summary);
       range.appendChild(
-        document.createTextNode(
+        el(
+          'span',
+          'range-value',
           `${player.floor_fantasy_points}–${player.ceiling_fantasy_points}`
         )
       );
-      range.title =
-        '80% projection interval: floor (10th percentile) to ceiling (90th percentile).';
       projTd.appendChild(range);
     }
     projTd.appendChild(historyRow(player, 'fantasy_points', 1));
@@ -1388,6 +1584,7 @@ function renderPlayers() {
   const box = el('div', 'table-wrap');
   box.appendChild(scroll);
   wrap.appendChild(box);
+  scroll.scrollLeft = previousScroll;
 }
 
 function fmtStat(value, skip, digits = 1) {
@@ -1418,29 +1615,52 @@ function renderFuturesFreshness() {
   node.title = new Date(futures.updated_at).toLocaleString();
 }
 
+const PLAYOFF_ASC_KEYS = ['team', 'conf'];
+
+function playoffSortValue(team, key) {
+  if (key === 'rank') return team.super_bowl_prob ?? null;
+  if (key === 'team') return team.team || '';
+  if (key === 'conf') return team.conference || '';
+  if (key === 'edge') return futuresFor(team.team)?.edge ?? null;
+  if (key === 'super_bowl') return team.super_bowl_prob ?? null;
+  if (key === 'market') return futuresFor(team.team)?.market_sb_prob ?? null;
+  if (key === 'conf_title') return team.conference_prob ?? null;
+  if (key === 'playoff') return team.playoff_prob ?? null;
+  return null;
+}
+
+function setPlayoffSort(key) {
+  nextSort(state.playoffsSort, key, PLAYOFF_ASC_KEYS);
+  renderSortState(state.playoffsSort, '#playoffs-sort', {
+    rank: 'sb',
+    super_bowl: 'sb',
+    conf_title: 'conf',
+    playoff: 'playoff',
+    edge: 'edge',
+    team: 'team',
+    market: 'market',
+  });
+  renderPlayoffs();
+}
+
 function filteredPlayoffs() {
   const team = ($('#playoffs-team-filter')?.value || '').trim().toLowerCase();
-  const sort = $('#playoffs-sort')?.value || 'sb';
   const list = state.playoffs.filter((t) => {
     const confOk = state.playoffsConf === 'all' || t.conference === state.playoffsConf;
     const teamOk = !team || (t.team || '').toLowerCase().includes(team);
     return confOk && teamOk;
   });
-  const key = {
-    sb: (t) => t.super_bowl_prob ?? 0,
-    conf: (t) => t.conference_prob ?? 0,
-    playoff: (t) => t.playoff_prob ?? 0,
-    edge: (t) => futuresFor(t.team)?.edge ?? -9,
-    team: (t) => t.team || '',
-  }[sort];
-  if (sort === 'team') list.sort((a, b) => String(key(a)).localeCompare(String(key(b))));
-  else list.sort((a, b) => key(b) - key(a));
-  return list;
+  return sortRecords(
+    list,
+    (entry) => playoffSortValue(entry, state.playoffsSort.key),
+    state.playoffsSort
+  );
 }
 
 function renderPlayoffs() {
   const wrap = $('#playoffs-table-wrap');
   if (!wrap) return;
+  const previousScroll = wrap.querySelector('.table-scroll')?.scrollLeft || 0;
   clear(wrap);
   const list = filteredPlayoffs();
   renderFuturesFreshness();
@@ -1549,28 +1769,65 @@ function renderPlayoffs() {
   const table = el('table', 'dtable po-table');
   const thead = el('thead');
   const headRow = el('tr');
-  headRow.appendChild(el('th', '', '#'));
-  headRow.appendChild(el('th', 'sticky-col', 'Team'));
-  const confTh = el('th', 'hide-sm', 'Conf');
-  confTh.title = 'AFC or NFC.';
-  headRow.appendChild(confTh);
-  const playoffTh = el('th', '', 'Playoff');
-  playoffTh.title = 'Probability of reaching the playoffs in the simulated seasons.';
-  headRow.appendChild(playoffTh);
-  const confTitleTh = el('th', '', 'Conf. title');
-  confTitleTh.title = 'Probability of winning the conference championship.';
-  headRow.appendChild(confTitleTh);
-  const sbTh = el('th', '', 'Super Bowl');
-  sbTh.title = 'Probability of winning the Super Bowl.';
-  headRow.appendChild(sbTh);
-  const marketTh = el('th', '', 'Market');
-  marketTh.title =
-    'Vig-free market Super Bowl probability, normalized across teams, with the best available decimal price.';
-  headRow.appendChild(marketTh);
-  const edgeTh = el('th', 'num', 'Edge');
-  edgeTh.title =
-    'Model probability minus vig-free market probability, in percentage points. Positive means the model is higher than the market.';
-  headRow.appendChild(edgeTh);
+  headRow.appendChild(
+    sortHeader('#', 'rank', state.playoffsSort, setPlayoffSort, '', 'Rank by model Super Bowl probability.')
+  );
+  headRow.appendChild(
+    sortHeader('Team', 'team', state.playoffsSort, setPlayoffSort, 'sticky-col')
+  );
+  headRow.appendChild(
+    sortHeader('Conf', 'conf', state.playoffsSort, setPlayoffSort, 'hide-sm', 'AFC or NFC.')
+  );
+  headRow.appendChild(
+    sortHeader(
+      'Edge',
+      'edge',
+      state.playoffsSort,
+      setPlayoffSort,
+      'num',
+      'Model probability minus vig-free market probability, in percentage points. Positive means the model is higher than the market.'
+    )
+  );
+  headRow.appendChild(
+    sortHeader(
+      'Super Bowl',
+      'super_bowl',
+      state.playoffsSort,
+      setPlayoffSort,
+      '',
+      'Probability of winning the Super Bowl.'
+    )
+  );
+  headRow.appendChild(
+    sortHeader(
+      'Market',
+      'market',
+      state.playoffsSort,
+      setPlayoffSort,
+      '',
+      'Vig-free market Super Bowl probability, normalized across teams, with the best available decimal price.'
+    )
+  );
+  headRow.appendChild(
+    sortHeader(
+      'Conf. title',
+      'conf_title',
+      state.playoffsSort,
+      setPlayoffSort,
+      '',
+      'Probability of winning the conference championship.'
+    )
+  );
+  headRow.appendChild(
+    sortHeader(
+      'Playoff',
+      'playoff',
+      state.playoffsSort,
+      setPlayoffSort,
+      '',
+      'Probability of reaching the playoffs in the simulated seasons.'
+    )
+  );
   thead.appendChild(headRow);
   table.appendChild(thead);
 
@@ -1601,18 +1858,21 @@ function renderPlayoffs() {
     tr.appendChild(teamTd);
 
     tr.appendChild(el('td', 'muted hide-sm', team.conference || '—'));
-    tapeCell(
-      tr,
-      team.playoff_prob,
-      (team.playoff_prob ?? 0) >= 0.8 ? 'green' : '',
-      'Chance to reach the playoffs in the simulated seasons.'
-    );
-    tapeCell(
-      tr,
-      team.conference_prob,
-      '',
-      'Chance to win the conference championship.'
-    );
+
+    const edgeTd = el('td', 'num');
+    if (edge !== null && edge !== undefined) {
+      edgeTd.appendChild(
+        el(
+          'span',
+          `tag edge-tag ${edge >= 0.02 ? 'edge' : edge > 0 ? 'neutral' : 'neg'}`,
+          edgePoints(edge)
+        )
+      );
+    } else {
+      edgeTd.appendChild(el('span', 'muted-2', '—'));
+    }
+    tr.appendChild(edgeTd);
+
     tapeCell(
       tr,
       team.super_bowl_prob,
@@ -1640,31 +1900,31 @@ function renderPlayoffs() {
     }
     tr.appendChild(marketTd);
 
-    const edgeTd = el('td', 'num');
-    if (edge !== null && edge !== undefined) {
-      edgeTd.appendChild(
-        el(
-          'span',
-          `tag edge-tag ${edge >= 0.02 ? 'edge' : edge > 0 ? 'neutral' : 'neg'}`,
-          edgePoints(edge)
-        )
-      );
-    } else {
-      edgeTd.appendChild(el('span', 'muted-2', '—'));
-    }
-    tr.appendChild(edgeTd);
+    tapeCell(
+      tr,
+      team.conference_prob,
+      '',
+      'Chance to win the conference championship.'
+    );
+    tapeCell(
+      tr,
+      team.playoff_prob,
+      (team.playoff_prob ?? 0) >= 0.8 ? 'green' : '',
+      'Chance to reach the playoffs in the simulated seasons.'
+    );
     tbody.appendChild(tr);
   });
   table.appendChild(tbody);
 
   wrap.appendChild(
-    el('p', 'scroll-hint only-sm', 'Swipe the table sideways for conference title, market and edge →')
+    el('p', 'scroll-hint only-sm', 'Swipe the table sideways for Super Bowl, market, conf. title and playoff →')
   );
   const scroll = el('div', 'table-scroll');
   scroll.appendChild(table);
   const box = el('div', 'table-wrap');
   box.appendChild(scroll);
   wrap.appendChild(box);
+  scroll.scrollLeft = previousScroll;
 }
 
 function tapeCell(tr, value, cls, title = '') {
@@ -1777,13 +2037,33 @@ function setupFilters() {
   });
 
   $('#players-team-filter')?.addEventListener('input', renderPlayers);
-  $('#players-sort')?.addEventListener('change', renderPlayers);
+  $('#players-history-toggle')?.addEventListener('click', () => {
+    state.historyWindow = state.historyWindow === 6 ? 3 : 6;
+    renderPlayers();
+  });
+  $('#players-sort')?.addEventListener('change', (event) => {
+    const key = event.target.value;
+    state.playersSort = { key, dir: key === 'depth' ? 'asc' : 'desc' };
+    renderPlayers();
+  });
   document.querySelectorAll('#players-pos-seg button').forEach((btn) => {
     btn.addEventListener('click', () => setPosition(btn.dataset.pos));
   });
 
   $('#playoffs-team-filter')?.addEventListener('input', renderPlayoffs);
-  $('#playoffs-sort')?.addEventListener('change', renderPlayoffs);
+  $('#playoffs-sort')?.addEventListener('change', (event) => {
+    const key =
+      {
+        sb: 'super_bowl',
+        conf: 'conf_title',
+        playoff: 'playoff',
+        edge: 'edge',
+        team: 'team',
+        market: 'market',
+      }[event.target.value] || 'super_bowl';
+    state.playoffsSort = { key, dir: key === 'team' ? 'asc' : 'desc' };
+    renderPlayoffs();
+  });
   document.querySelectorAll('#playoffs-conf-seg button').forEach((btn) => {
     btn.addEventListener('click', () => setConference(btn.dataset.conf));
   });
@@ -1791,6 +2071,7 @@ function setupFilters() {
 
 function setPosition(pos) {
   state.playersPos = pos;
+  state.selectedPlayerId = null;
   document.querySelectorAll('#players-pos-seg button').forEach((btn) => {
     const active = btn.dataset.pos === pos;
     btn.classList.toggle('active', active);
@@ -1913,6 +2194,7 @@ function applyMeta(meta) {
       footer.textContent = `Data updated ${new Date(metaData.generated_at).toLocaleString()} (${relativeTime(metaData.generated_at)})`;
     }
   }
+  renderModelFreshness();
 }
 
 function defaultWeek(games) {

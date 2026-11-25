@@ -122,6 +122,9 @@ def main() -> None:
         "injuries": injuries,
         "odds": {
             "fetched_at": odds_meta.get("fetched_at"),
+            "events": odds_meta.get("events"),
+            "credits": odds_meta.get("credits"),
+            "requests_used": odds_meta.get("requests_used"),
             "requests_remaining": odds_meta.get("requests_remaining"),
         },
         "line_movement": {

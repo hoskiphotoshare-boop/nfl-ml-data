@@ -386,6 +386,7 @@
         ]));
         elm.appendChild(card("Odds budget", [
           `${odds.requests_remaining ?? "—"} credits left`,
+          `${odds.requests_used ?? "—"} requests used · ${odds.events ?? "—"} games priced`,
           odds.fetched_at ? new Date(odds.fetched_at).toLocaleString() : "—",
         ]));
         elm.appendChild(card("Playoff simulation", [
