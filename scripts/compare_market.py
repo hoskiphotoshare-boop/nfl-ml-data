@@ -28,15 +28,58 @@ def load_json(path: str):
         return json.load(f)
 
 
+# The Odds API returns full team names. Keep a static fallback so the
+# comparison works in a bare Python environment (e.g. the odds workflow).
+FALLBACK_TEAM_NAMES = {
+    "ARI": "Arizona Cardinals",
+    "ATL": "Atlanta Falcons",
+    "BAL": "Baltimore Ravens",
+    "BUF": "Buffalo Bills",
+    "CAR": "Carolina Panthers",
+    "CHI": "Chicago Bears",
+    "CIN": "Cincinnati Bengals",
+    "CLE": "Cleveland Browns",
+    "DAL": "Dallas Cowboys",
+    "DEN": "Denver Broncos",
+    "DET": "Detroit Lions",
+    "GB": "Green Bay Packers",
+    "HOU": "Houston Texans",
+    "IND": "Indianapolis Colts",
+    "JAX": "Jacksonville Jaguars",
+    "KC": "Kansas City Chiefs",
+    "LA": "Los Angeles Rams",
+    "LAC": "Los Angeles Chargers",
+    "LV": "Las Vegas Raiders",
+    "MIA": "Miami Dolphins",
+    "MIN": "Minnesota Vikings",
+    "NE": "New England Patriots",
+    "NO": "New Orleans Saints",
+    "NYG": "New York Giants",
+    "NYJ": "New York Jets",
+    "PHI": "Philadelphia Eagles",
+    "PIT": "Pittsburgh Steelers",
+    "SEA": "Seattle Seahawks",
+    "SF": "San Francisco 49ers",
+    "TB": "Tampa Bay Buccaneers",
+    "TEN": "Tennessee Titans",
+    "WAS": "Washington Commanders",
+}
+
+
 def team_name_map() -> dict[str, str]:
+    names = dict(FALLBACK_TEAM_NAMES)
     if not TEAMS_AVAILABLE:
-        return {}
+        return names
     try:
         teams = load_teams()
-        return {row["team_abbr"]: row["team_name"] for row in teams.iter_rows(named=True)}
+        for row in teams.iter_rows(named=True):
+            abbr = row.get("team_abbr")
+            name = row.get("team_name")
+            if abbr and name:
+                names[abbr] = name
     except Exception as exc:  # pragma: no cover
-        print(f"Could not load team names: {exc}")
-        return {}
+        print(f"Could not load team names from nflreadpy, using fallback: {exc}")
+    return names
 
 
 def main() -> None:
