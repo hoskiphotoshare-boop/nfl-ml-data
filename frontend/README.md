@@ -95,3 +95,11 @@ output directory `frontend`.
 Data: nflverse (CC-BY 4.0; FTN/participation CC-BY-SA 4.0 where applicable).
 Weather forecasts and historical reanalysis: Open-Meteo.com (CC BY 4.0).
 Model-implied probabilities are informational, not betting advice.
+
+## Roadmap
+
+- Closing-line/CLV scoreboard before treating large edges as actionable.
+- Validate the live playoff blend (match model + SRS) against SRS-only.
+- Per-position player interval calibration to hit ~80% coverage.
+- Outlier triage for stale lines and late QB/roster news.
+- Monitoring alerts for calibration drift, data freshness and Odds API budget.
