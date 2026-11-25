@@ -501,9 +501,10 @@ function renderGameStats(list) {
     .map((g) => ({ g, edge: Math.abs((g.home_win_prob ?? 0.5) - 0.5) }))
     .sort((a, b) => b.edge - a.edge)[0];
   const totals = list.map((g) => g.total).filter((t) => t !== null && t !== undefined);
-  const edges = list
-    .map((g) => state.marketById.get(g.game_id)?.best_ev)
-    .filter((e) => e !== null && e !== undefined);
+  const priced = list
+    .map((g) => state.marketById.get(g.game_id))
+    .filter((g) => g && g.edge !== undefined && g.edge !== null);
+  const sharp = priced.filter((g) => Math.abs(g.edge) >= 0.05).length;
 
   row.appendChild(statTile({ label: 'Games', value: list.length, sub: 'in current filter' }));
   row.appendChild(
@@ -525,10 +526,10 @@ function renderGameStats(list) {
   );
   row.appendChild(
     statTile({
-      label: 'Positive EV',
-      value: edges.length ? `${edges.filter((e) => e > 0).length}/${edges.length}` : '—',
-      sub: edges.length ? 'games with a model edge' : 'odds load weekly',
-      cls: edges.some((e) => e > 0) ? 'good' : '',
+      label: 'Model edges',
+      value: priced.length ? `${sharp}/${priced.length}` : '—',
+      sub: priced.length ? 'games with a 5%+ moneyline edge' : 'odds refresh weekly',
+      cls: sharp ? 'good' : '',
     })
   );
 }
