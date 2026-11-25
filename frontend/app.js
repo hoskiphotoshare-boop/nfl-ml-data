@@ -37,6 +37,23 @@ function el(tag, className, text) {
   return node;
 }
 
+// Pick the week to show by default: the earliest week that still has an
+// unplayed game, falling back to the latest week present in the data.
+function defaultWeek(games) {
+  const weeks = [...new Set(games.map((g) => g.week).filter((w) => w !== undefined && w !== null))].sort(
+    (a, b) => a - b
+  );
+  const today = new Date().toISOString().slice(0, 10);
+  const upcoming = games.filter((g) => {
+    const when = (g.gameday || g.commence_time || '').slice(0, 10);
+    return when && when >= today && g.week !== undefined && g.week !== null;
+  });
+  if (upcoming.length) {
+    return Math.min(...upcoming.map((g) => g.week));
+  }
+  return weeks.length ? weeks[weeks.length - 1] : null;
+}
+
 function decimalOdds(prob) {
   if (prob === undefined || prob === null || prob <= 0 || prob >= 1) return null;
   return (1 / prob).toFixed(2);
@@ -96,6 +113,8 @@ function renderGames(games) {
     if (teamInput) {
       teamInput.addEventListener('input', () => renderGames(window.__games || []));
     }
+    const bw = defaultWeek(games);
+    if (bw !== null && weeks.includes(bw)) weekSelect.value = String(bw);
   }
 
   const weekVal = weekSelect?.value || 'all';
@@ -297,6 +316,9 @@ function renderPlayers(players) {
     if (teamInput) {
       teamInput.addEventListener('input', () => renderPlayers(window.__players || []));
     }
+    if (positions.includes('QB')) {
+      positionSelect.value = 'QB';
+    }
   }
 
   const posVal = positionSelect?.value || 'all';
@@ -451,6 +473,8 @@ function renderMarket(data) {
     if (teamInput) {
       teamInput.addEventListener('input', () => renderMarket(window.__marketData));
     }
+    const bw = defaultWeek(allGames);
+    if (bw !== null && weeks.includes(bw)) weekSelect.value = String(bw);
   }
 
   const weekVal = weekSelect?.value || 'all';
