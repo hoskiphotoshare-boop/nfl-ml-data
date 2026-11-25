@@ -3,6 +3,13 @@ name: CI
 on:
   push:
     branches: [main]
+    # Data-only refreshes deploy themselves; skip the full test suite for them.
+    paths-ignore:
+      - 'market/**'
+      - 'reports/**'
+      - 'predictions/**'
+      - 'features/**'
+      - 'frontend/data/**'
   pull_request:
     branches: [main]
   workflow_dispatch:
