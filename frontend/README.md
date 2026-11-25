@@ -71,6 +71,10 @@ output directory `frontend`.
   market are flagged amber. They stay in their sorted position and in the edge
   stats, and the card shows the top SHAP drivers for the specific market
   (winner, margin or total). Treat them as missing-information flags, not picks.
+- **Weather**: kickoff forecasts are shown for outdoor games but are not model
+  inputs. A 2024–2026 walk-forward ablation (ERA5 and forecast archive) found
+  only a small, non-robust totals gain and flat-or-worse margin, match and
+  player models; see `reports/weather_ablation.json`.
 - **Player table**: the small numbers under each stat are the last six games,
   oldest to newest (bold = most recent). “Range” under Proj is the 80%
   projection interval (floor 10th percentile to ceiling 90th percentile).
