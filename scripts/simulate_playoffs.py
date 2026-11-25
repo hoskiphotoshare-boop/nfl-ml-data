@@ -52,6 +52,18 @@ N_SIMS = 10_000
 PLAYOFF_WEEK = 20
 HOME_ADVANTAGE = 0.10
 
+# Playoff simulation settings.
+# The match model is blended with an opponent-adjusted point-differential
+# rating: the model's NGS-driven team ranking is unstable for hypothetical
+# matchups (e.g. it ranked a +6.5 point-differential team first), while the
+# rating alone ignores matchup detail. A 50/50 logit blend is more robust.
+MODEL_WEIGHT = 0.5
+# One logit unit of season-long team uncertainty (injuries, form, coaching).
+TEAM_NOISE = 0.8
+# NFL margin standard deviation, used to turn rating gaps into probabilities.
+MARGIN_SIGMA = 13.5
+RATING_HOME_ADVANTAGE = 2.5
+
 
 def load_schedules() -> pl.DataFrame | None:
     if os.path.exists("data/schedules.parquet"):
@@ -143,6 +155,51 @@ def rating_prob(home_rating: float, away_rating: float) -> float:
     return min(max(prob, 0.05), 0.95)
 
 
+def logit(prob: float) -> float:
+    prob = min(max(prob, 1e-6), 1 - 1e-6)
+    return math.log(prob / (1.0 - prob))
+
+
+def sigmoid(value: float) -> float:
+    return 1.0 / (1.0 + math.exp(-value))
+
+
+def srs_ratings(schedules: pl.DataFrame, season: int) -> dict[str, float]:
+    """Opponent-adjusted point differential (simple rating system)."""
+    played = schedules.filter(
+        (pl.col("season") == season)
+        & pl.col("home_score").is_not_null()
+        & pl.col("away_score").is_not_null()
+    )
+    games = [
+        (row["home_team"], row["away_team"], int(row["home_score"]) - int(row["away_score"]))
+        for row in played.iter_rows(named=True)
+    ]
+    teams = {team for home, away, _ in games for team in (home, away)}
+    rating = {team: 0.0 for team in teams}
+    for _ in range(50):
+        buckets: dict[str, list[float]] = {team: [] for team in teams}
+        for home, away, margin in games:
+            buckets[home].append(margin + rating[away])
+            buckets[away].append(-margin + rating[home])
+        updated = {
+            team: (sum(values) / len(values) if values else 0.0)
+            for team, values in buckets.items()
+        }
+        if max(abs(updated[t] - rating[t]) for t in teams) < 1e-6:
+            rating = updated
+            break
+        rating = updated
+    return rating
+
+
+def rating_probability(rating: dict, home: str, away: str, neutral: bool = False) -> float:
+    gap = rating.get(home, 0.0) - rating.get(away, 0.0)
+    if not neutral:
+        gap += RATING_HOME_ADVANTAGE
+    return 0.5 * (1.0 + math.erf(gap / (MARGIN_SIGMA * math.sqrt(2.0))))
+
+
 class ModelProbabilities:
     """Match-model probabilities for any pairing of the current rosters."""
 
@@ -183,25 +240,21 @@ class ModelProbabilities:
         return 0.5 * (forward + (1.0 - reverse))
 
 
-def make_win_prob(model: ModelProbabilities | None, sim: dict):
-    """Return a function (home, away, week, neutral=False) -> P(home wins)."""
+def make_win_prob(model: ModelProbabilities | None, sim: dict, rating: dict, noise: dict):
+    """Blend match-model and SRS probabilities, then apply team uncertainty."""
 
     def win_prob(home: str, away: str, week: int, neutral: bool = False) -> float:
+        p_rating = rating_probability(rating, home, away, neutral)
         if model is not None:
-            if neutral:
-                prob = model.neutral_prob(home, away, week)
+            p_model = model.neutral_prob(home, away, week) if neutral else model.prob(home, away, week)
+            if p_model is None:
+                value = logit(p_rating)
             else:
-                prob = model.prob(home, away, week)
-            if prob is not None:
-                return prob
-        # Fallback: simple rating model.
-        if neutral:
-            rating = (team_rating(sim[home]) + team_rating(sim[away])) / 2.0
-            home_rating = away_rating = rating
+                value = MODEL_WEIGHT * logit(p_model) + (1.0 - MODEL_WEIGHT) * logit(p_rating)
         else:
-            home_rating = team_rating(sim[home]) + HOME_ADVANTAGE
-            away_rating = team_rating(sim[away])
-        return rating_prob(home_rating, away_rating)
+            value = logit(p_rating)
+        value += noise.get(home, 0.0) - noise.get(away, 0.0)
+        return min(max(sigmoid(value), 0.03), 0.97)
 
     return win_prob
 
@@ -212,15 +265,19 @@ def simulate(
     conf_map: dict,
     n_sims: int = N_SIMS,
     model: ModelProbabilities | None = None,
+    rating: dict | None = None,
 ):
     if not records:
         return []
 
     counts = {team: {"playoffs": 0, "conf": 0, "sb": 0} for team in records}
+    rating = rating or {}
+    random.seed(42)  # reproducible Monte Carlo output between runs
 
     for _ in range(n_sims):
         sim = {team: rec.copy() for team, rec in records.items()}
-        win_prob = make_win_prob(model, sim)
+        noise = {team: random.gauss(0.0, TEAM_NOISE) for team in records}
+        win_prob = make_win_prob(model, sim, rating, noise)
 
         # Remaining regular season.
         for home, away, week in remaining_games:
@@ -289,12 +346,7 @@ def simulate(
 
         if "AFC" in conf_champs and "NFC" in conf_champs:
             afc, nfc = conf_champs["AFC"], conf_champs["NFC"]
-            if model is not None:
-                prob = model.neutral_prob(afc, nfc, PLAYOFF_WEEK)
-            else:
-                prob = 0.5
-            if prob is None:
-                prob = 0.5
+            prob = win_prob(afc, nfc, PLAYOFF_WEEK, neutral=True)
             winner = afc if random.random() < prob else nfc
             counts[winner]["sb"] += 1
 
@@ -344,8 +396,14 @@ def main() -> None:
     else:
         print("Match model not found; using ratings instead.")
 
+    rating = srs_ratings(schedules, season)
     results = simulate(
-        records, remaining_games, conference_map(), n_sims=N_SIMS, model=model
+        records,
+        remaining_games,
+        conference_map(),
+        n_sims=N_SIMS,
+        model=model,
+        rating=rating,
     )
 
     os.makedirs("predictions", exist_ok=True)
