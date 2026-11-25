@@ -12,6 +12,7 @@ import math
 import os
 import statistics
 import sys
+from datetime import datetime
 
 try:
     from nflreadpy import load_teams
@@ -51,10 +52,49 @@ def main() -> None:
         return
 
     names = team_name_map()
-    # Index odds by (home_full, away_full)
+    # Index odds by (home_full, away_full) -> list of events.
     odds_index = {}
     for event in odds:
-        odds_index[(event.get("home_team"), event.get("away_team"))] = event
+        key = (event.get("home_team"), event.get("away_team"))
+        odds_index.setdefault(key, []).append(event)
+
+    def event_date(event):
+        try:
+            return datetime.fromisoformat(
+                event["commence_time"].replace("Z", "+00:00")
+            ).date()
+        except Exception:
+            return None
+
+    def game_date(game):
+        try:
+            if game.get("gameday"):
+                return datetime.strptime(game["gameday"], "%Y-%m-%d").date()
+        except Exception:
+            pass
+        return None
+
+    def choose_event(candidates, game):
+        if not candidates:
+            return None
+        gd = game_date(game)
+        if gd is None:
+            return candidates[0]
+        best = None
+        best_diff = None
+        for ev in candidates:
+            ed = event_date(ev)
+            if ed is None:
+                continue
+            diff = abs((ed - gd).days)
+            if best_diff is None or diff < best_diff:
+                best = ev
+                best_diff = diff
+        if best is None:
+            return candidates[0]
+        if best_diff is not None and best_diff > 2:
+            return None
+        return best
 
     comparisons = []
     for game in predictions:
@@ -63,9 +103,10 @@ def main() -> None:
         home_full = names.get(home_abbr, home_abbr)
         away_full = names.get(away_abbr, away_abbr)
 
-        event = odds_index.get((home_full, away_full))
-        if event is None:
-            event = odds_index.get((away_full, home_full))
+        candidates = list(odds_index.get((home_full, away_full), [])) + list(
+            odds_index.get((away_full, home_full), [])
+        )
+        event = choose_event(candidates, game)
         if event is None:
             continue
 

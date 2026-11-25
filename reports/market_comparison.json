@@ -1,8 +1,8 @@
 {
   "summary": {
-    "games_compared": 32,
-    "mean_edge": -0.0195,
-    "mean_abs_edge": 0.1805,
+    "games_compared": 30,
+    "mean_edge": -0.0247,
+    "mean_abs_edge": 0.1723,
     "max_abs_edge": 0.505
   },
   "games": [
@@ -1504,106 +1504,6 @@
         "point": 51.5,
         "price": 1.91,
         "bookmaker": "fanduel"
-      }
-    },
-    {
-      "game_id": "2026_17_DET_CHI",
-      "season": 2026,
-      "week": 17,
-      "commence_time": "2026-11-26T18:00:00Z",
-      "home_team": "CHI",
-      "away_team": "DET",
-      "model_home_win_prob": 0.907,
-      "market_home_win_prob": 0.5447,
-      "edge": 0.3623,
-      "abs_edge": 0.3623,
-      "ev_home_ml": 62.353,
-      "ev_away_ml": -79.819,
-      "best_ev": 62.353,
-      "best_ev_side": "home",
-      "model_spread": 0.8,
-      "market_spread": -2.25,
-      "spread_edge": -3.05,
-      "model_total": 44.4,
-      "market_total": 55.5,
-      "total_edge": -11.1,
-      "best_home_ml": {
-        "price": 1.79,
-        "bookmaker": "fanduel"
-      },
-      "best_away_ml": {
-        "price": 2.17,
-        "bookmaker": "betrivers"
-      },
-      "best_home_spread": {
-        "point": -1.0,
-        "price": 1.87,
-        "bookmaker": "lowvig"
-      },
-      "best_away_spread": {
-        "point": 2.5,
-        "price": 1.92,
-        "bookmaker": "betrivers"
-      },
-      "best_over": {
-        "point": 55.0,
-        "price": 1.91,
-        "bookmaker": "betmgm"
-      },
-      "best_under": {
-        "point": 55.5,
-        "price": 1.91,
-        "bookmaker": "betrivers"
-      }
-    },
-    {
-      "game_id": "2026_18_CLE_CIN",
-      "season": 2026,
-      "week": 18,
-      "commence_time": "2026-12-06T18:00:00Z",
-      "home_team": "CIN",
-      "away_team": "CLE",
-      "model_home_win_prob": 0.439,
-      "market_home_win_prob": 0.6846,
-      "edge": -0.2456,
-      "abs_edge": 0.2456,
-      "ev_home_ml": -37.662,
-      "ev_away_ml": 75.032,
-      "best_ev": 75.032,
-      "best_ev_side": "away",
-      "model_spread": 2.0,
-      "market_spread": -4.5,
-      "spread_edge": -6.5,
-      "model_total": 42.8,
-      "market_total": 47.5,
-      "total_edge": -4.7,
-      "best_home_ml": {
-        "price": 1.42,
-        "bookmaker": "fanduel"
-      },
-      "best_away_ml": {
-        "price": 3.12,
-        "bookmaker": "draftkings"
-      },
-      "best_home_spread": {
-        "point": -4.5,
-        "price": 1.91,
-        "bookmaker": "lowvig"
-      },
-      "best_away_spread": {
-        "point": 6.0,
-        "price": 1.91,
-        "bookmaker": "draftkings"
-      },
-      "best_over": {
-        "point": 46.5,
-        "price": 1.88,
-        "bookmaker": "draftkings"
-      },
-      "best_under": {
-        "point": 47.5,
-        "price": 1.93,
-        "bookmaker": "lowvig"
       }
     }
   ]
