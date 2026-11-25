@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T04:19:47.521984+00:00",
+  "generated_at": "2026-11-25T04:24:36.282486+00:00",
   "match_backtest": {
     "accuracy": 0.6463790446841294,
     "log_loss": 0.6419906879525928,
@@ -54,6 +54,37 @@
       "log_loss": 0.1194,
       "observations": 192
     }
+  },
+  "player_intervals": {
+    "QB": {
+      "coverage_80": 0.761,
+      "mae": 6.396
+    },
+    "RB": {
+      "coverage_80": 0.797,
+      "mae": 4.179
+    },
+    "WR": {
+      "coverage_80": 0.811,
+      "mae": 3.842
+    },
+    "TE": {
+      "coverage_80": 0.878,
+      "mae": 3.252
+    },
+    "K": {
+      "coverage_80": 0.764,
+      "mae": 2.957
+    }
+  },
+  "players": {
+    "count": 250,
+    "with_ranges": 250,
+    "active": 250
+  },
+  "weather": {
+    "games_with_forecast": 23,
+    "games": 109
   },
   "injuries": {
     "seasons": [

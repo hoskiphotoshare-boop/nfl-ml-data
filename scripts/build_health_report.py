@@ -24,6 +24,9 @@ def main() -> None:
     futures = load("reports/futures_comparison.json", {})
     movement = load("reports/line_movement.json", {})
     playoff = load("reports/playoff_backtest.json", {})
+    player_backtest = load("reports/player_backtest.json", {})
+    players = load("predictions/players_week.json", [])
+    upcoming = load("predictions/upcoming_games.json", [])
     platt = load("models/platt.json", {})
     odds_meta = load("market/odds_meta.json", {})
 
@@ -93,6 +96,29 @@ def main() -> None:
         },
         "score_models": sigma,
         "playoff_backtest": playoff.get("pooled", {}),
+        "player_intervals": {
+            group: {
+                "coverage_80": metrics.get("coverage_80"),
+                "mae": metrics.get("mae"),
+            }
+            for group, metrics in player_backtest.items()
+            if metrics
+        },
+        "players": {
+            "count": len(players),
+            "with_ranges": sum(
+                1 for player in players if player.get("floor_fantasy_points") is not None
+            ),
+            "active": sum(
+                1 for player in players if player.get("roster_status") == "ACT"
+            ),
+        },
+        "weather": {
+            "games_with_forecast": sum(
+                1 for game in upcoming if game.get("temp") is not None
+            ),
+            "games": len(upcoming),
+        },
         "injuries": injuries,
         "odds": {
             "fetched_at": odds_meta.get("fetched_at"),

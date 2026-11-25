@@ -1,58 +1,80 @@
-# NFL ML Predictions – Frontend
+# NFL ML Predictions — Frontend
 
-Static frontend for the NFL predictive‑modeling pipeline. It renders:
+Static, no-build web app deployed to Cloudflare Pages. It renders:
 
-- Match predictions (winner probability, spread, total)
-- Player projections (targets, receptions, yards, TDs)
-- Playoff / Super‑Bowl probabilities
-- Model‑vs‑market comparison
+- **Games** — win probabilities, model spread/total, records/form, kickoff weather,
+  and a **Model edges** view ranked by ML/spread/total edge.
+- **Players** — per-position projections with matchup, recent form, injury/roster
+  status, and **floor–ceiling** ranges.
+- **Playoffs** — model playoff/conference/Super Bowl probabilities alongside
+  vig-free Super Bowl futures and the edge per team.
+- **Team pages** — generated static pages under `/teams/`.
+- **Admin** — Google OAuth-gated diagnostics at `/admin.html` (noindex).
 
-Prediction and report JSON are served **same‑origin** under `/data/...` by a
-Cloudflare Pages Function (`functions/data/[[path]].js`). The browser never
-sees an upstream data URL.
+All odds are displayed as **decimal** (model fair odds and market prices).
+Light theme is the default; a dark theme is available via the header toggle.
 
-## Local preview
+## Running locally
+
+The app is plain HTML/CSS/JS; no build step. Data is served same-origin from
+`/data/...`, so seed the ignored data folder before previewing:
 
 ```bash
-cd frontend
-python3 -m http.server 8080
+mkdir -p frontend/data/predictions frontend/data/reports
+cp predictions/*.json frontend/data/predictions/
+cp reports/*.json frontend/data/reports/
+python3 -m http.server 8080 --directory frontend
 # open http://localhost:8080
 ```
 
-Note: the `/data` proxy only exists when deployed to Cloudflare Pages. For
-local preview, seed `frontend/data/` with the JSON files or run a small proxy.
+The public site does **not** call GitHub, a proxy, or any upstream data URL.
+The deployed `frontend/data/` is populated by the Actions workflows before
+upload.
 
-## Deploy to Cloudflare Pages (free)
-
-1. Go to the Cloudflare dashboard → **Pages** → **Create a project**.
-2. Connect the project repository (or use direct upload).
-3. Configure:
-   - **Framework preset:** None
-   - **Build command:** *(leave empty)*
-   - **Build output directory:** `frontend`
-4. Deploy. Cloudflare provides a free `*.pages.dev` URL.
-5. Optionally add a subdomain of a domain already on Cloudflare for $0.
-
-Alternatively, deploy from the command line:
+## Deploying
 
 ```bash
-npx wrangler pages deploy frontend --project-name nfl-ml-data
+mkdir -p frontend/data/predictions frontend/data/reports
+cp predictions/*.json frontend/data/predictions/
+cp reports/*.json frontend/data/reports/
+python scripts/build_team_pages.py
+npx wrangler pages deploy frontend --project-name nfl-ml-data --commit-dirty=true
 ```
+
+Cloudflare Pages settings: framework preset **None**, build command empty,
+output directory `frontend`.
 
 ## Data contract
 
-The frontend expects:
-
 | Path | Contents |
-|------|----------|
-| `/data/predictions/upcoming_games.json` | Upcoming game predictions |
-| `/data/predictions/games_week.json` | Latest completed week |
-| `/data/predictions/players_week.json` | Player projections |
-| `/data/predictions/playoffs.json` | Playoff/Super Bowl odds |
-| `/data/reports/market_comparison.json` | Model‑vs‑market comparison |
+|---|---|
+| `/data/predictions/upcoming_games.json` | Upcoming games: probabilities, spread, total, records/form, kickoff, venue, roof/surface, weather |
+| `/data/predictions/players_week.json` | Player projections: stats, matchup, recent points, floor/ceiling, injury/roster status |
+| `/data/predictions/playoffs.json` | Playoff, conference and Super Bowl probabilities |
+| `/data/predictions/meta.json` | Generated timestamp, season, week |
+| `/data/reports/market_comparison.json` | Model vs market by game/market, outlier flag |
+| `/data/reports/futures_comparison.json` | Model vs Super Bowl futures |
+| `/data/reports/backtest.json` | Match-model walk-forward metrics |
+| `/data/reports/player_backtest.json` | Player MAE/RMSE and interval coverage |
+| `/data/reports/playoff_backtest.json` | Playoff/conference/SB Brier scores |
+| `/data/reports/model_explanations.json` | SHAP global/local drivers |
+| `/data/reports/model_health.json` | Calibration, outliers, data freshness, budget |
+| `/data/reports/line_movement.json` | Opening-to-latest movement by game |
+| `/data/reports/feature_ablation.json` | Feature-set comparison |
 
-## Notes
+## Behaviour notes
 
-- Picks are stored in `localStorage` (no auth).
-- A later enhancement can add a D1‑backed API for multi‑user picks and leaderboards.
-- No build step is required; this is plain HTML/CSS/JS.
+- **Filters** default to the current week; Players defaults to QB. Tabs are
+  addressable via the URL hash (`#games`, `#players`, `#playoffs`); week/team
+  filters are not persisted across reloads.
+- **Model outliers**: games with a 20+ percentage-point disagreement on any
+  market are flagged amber, ranked last in the edges view, and excluded from
+  best-edge stats. Treat them as missing-information flags, not picks.
+- **Picks** (`nfl_ml_picks`) and theme (`nfl_theme`) live in `localStorage`.
+- **Admin** is a client-side gate only. The underlying JSON remains public.
+- **Team pages** are generated at deploy time by `scripts/build_team_pages.py`.
+
+## Attribution
+
+Data: nflverse (CC-BY 4.0; FTN/participation CC-BY-SA 4.0 where applicable).
+Model-implied probabilities are informational, not betting advice.
