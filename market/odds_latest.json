@@ -5,43 +5,44 @@
     "away_team": "Green Bay Packers",
     "home_spread": -2.5,
     "away_spread": 2.5,
-    "total": 44.0,
-    "home_moneyline": 1.74,
-    "away_moneyline": 2.15,
-    "market_home_win_prob": 0.5527,
+    "total": 43.5,
+    "home_moneyline": 1.71,
+    "away_moneyline": 2.2,
+    "market_home_win_prob": 0.5627,
     "best_home_ml": {
-      "price": 1.75,
-      "bookmaker": "draftkings"
+      "price": 1.73,
+      "bookmaker": "bovada"
     },
     "best_away_ml": {
       "price": 2.2,
       "bookmaker": "fanduel"
     },
     "best_home_spread": {
-      "point": -1.5,
-      "price": 1.82,
-      "bookmaker": "betonlineag"
+      "point": -2.0,
+      "price": 1.87,
+      "bookmaker": "betus"
     },
     "best_away_spread": {
       "point": 2.5,
-      "price": 1.97,
-      "bookmaker": "lowvig"
+      "price": 1.98,
+      "bookmaker": "betmgm"
     },
     "best_over": {
-      "point": 43.5,
-      "price": 1.88,
-      "bookmaker": "betrivers"
+      "point": 43.0,
+      "price": 1.89,
+      "bookmaker": "bovada"
     },
     "best_under": {
-      "point": 44.5,
-      "price": 1.83,
-      "bookmaker": "fanduel"
+      "point": 43.5,
+      "price": 1.93,
+      "bookmaker": "draftkings"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -52,45 +53,46 @@
     "commence_time": "2026-11-26T18:00:00Z",
     "home_team": "Detroit Lions",
     "away_team": "Chicago Bears",
-    "home_spread": 2.25,
-    "away_spread": -2.25,
+    "home_spread": 1.0,
+    "away_spread": -1.0,
     "total": 55.5,
-    "home_moneyline": 2.1,
-    "away_moneyline": 1.755,
-    "market_home_win_prob": 0.4553,
+    "home_moneyline": 2.0,
+    "away_moneyline": 1.8250000000000002,
+    "market_home_win_prob": 0.4771,
     "best_home_ml": {
-      "price": 2.16,
-      "bookmaker": "draftkings"
+      "price": 2.05,
+      "bookmaker": "betrivers"
     },
     "best_away_ml": {
-      "price": 1.79,
-      "bookmaker": "fanduel"
+      "price": 1.85,
+      "bookmaker": "betonlineag"
     },
     "best_home_spread": {
-      "point": 2.5,
-      "price": 1.9,
-      "bookmaker": "draftkings"
+      "point": 1.5,
+      "price": 1.93,
+      "bookmaker": "betrivers"
     },
     "best_away_spread": {
-      "point": -1.0,
-      "price": 1.87,
-      "bookmaker": "lowvig"
+      "point": 0.0,
+      "price": 1.91,
+      "bookmaker": "betus"
     },
     "best_over": {
       "point": 55.0,
-      "price": 1.91,
-      "bookmaker": "betmgm"
+      "price": 1.88,
+      "bookmaker": "betrivers"
     },
     "best_under": {
       "point": 55.5,
       "price": 1.93,
-      "bookmaker": "betrivers"
+      "bookmaker": "fanduel"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -101,19 +103,19 @@
     "commence_time": "2026-11-26T21:30:00Z",
     "home_team": "Dallas Cowboys",
     "away_team": "Philadelphia Eagles",
-    "home_spread": -8.5,
-    "away_spread": 8.5,
+    "home_spread": -9.0,
+    "away_spread": 9.0,
     "total": 48.0,
-    "home_moneyline": 1.2149999999999999,
-    "away_moneyline": 4.529999999999999,
-    "market_home_win_prob": 0.7885,
+    "home_moneyline": 1.22,
+    "away_moneyline": 4.58,
+    "market_home_win_prob": 0.7897,
     "best_home_ml": {
       "price": 1.23,
       "bookmaker": "betus"
     },
     "best_away_ml": {
-      "price": 4.8,
-      "bookmaker": "fanduel"
+      "price": 4.75,
+      "bookmaker": "betmgm"
     },
     "best_home_spread": {
       "point": -8.5,
@@ -121,25 +123,26 @@
       "bookmaker": "betmgm"
     },
     "best_away_spread": {
-      "point": 10.0,
-      "price": 1.79,
-      "bookmaker": "betonlineag"
+      "point": 9.0,
+      "price": 1.95,
+      "bookmaker": "lowvig"
     },
     "best_over": {
       "point": 47.5,
-      "price": 1.87,
+      "price": 1.86,
       "bookmaker": "draftkings"
     },
     "best_under": {
-      "point": 48.5,
-      "price": 1.87,
-      "bookmaker": "fanduel"
+      "point": 48.0,
+      "price": 1.93,
+      "bookmaker": "lowvig"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -150,38 +153,38 @@
     "commence_time": "2026-11-27T01:20:00Z",
     "home_team": "Buffalo Bills",
     "away_team": "Kansas City Chiefs",
-    "home_spread": -2.5,
-    "away_spread": 2.5,
-    "total": 47.5,
-    "home_moneyline": 1.67,
-    "away_moneyline": 2.25,
-    "market_home_win_prob": 0.574,
+    "home_spread": -3.0,
+    "away_spread": 3.0,
+    "total": 46.5,
+    "home_moneyline": 1.66,
+    "away_moneyline": 2.27,
+    "market_home_win_prob": 0.5776,
     "best_home_ml": {
-      "price": 1.69,
-      "bookmaker": "betonlineag"
+      "price": 1.68,
+      "bookmaker": "draftkings"
     },
     "best_away_ml": {
-      "price": 2.28,
-      "bookmaker": "fanduel"
+      "price": 2.34,
+      "bookmaker": "betonlineag"
     },
     "best_home_spread": {
-      "point": -2.0,
+      "point": -2.5,
       "price": 1.83,
-      "bookmaker": "betus"
+      "bookmaker": "fanduel"
     },
     "best_away_spread": {
       "point": 3.0,
-      "price": 1.87,
-      "bookmaker": "betrivers"
+      "price": 1.88,
+      "bookmaker": "lowvig"
     },
     "best_over": {
-      "point": 47.0,
-      "price": 1.91,
-      "bookmaker": "betmgm"
+      "point": 45.5,
+      "price": 1.87,
+      "bookmaker": "lowvig"
     },
     "best_under": {
-      "point": 47.5,
-      "price": 1.92,
+      "point": 46.5,
+      "price": 1.93,
       "bookmaker": "betrivers"
     },
     "bookmakers": [
@@ -189,6 +192,7 @@
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -199,45 +203,46 @@
     "commence_time": "2026-11-27T20:00:00Z",
     "home_team": "Pittsburgh Steelers",
     "away_team": "Denver Broncos",
-    "home_spread": 3.0,
-    "away_spread": -3.0,
-    "total": 37.5,
-    "home_moneyline": 2.315,
-    "away_moneyline": 1.65,
-    "market_home_win_prob": 0.4161,
+    "home_spread": 3.5,
+    "away_spread": -3.5,
+    "total": 36.5,
+    "home_moneyline": 2.69,
+    "away_moneyline": 1.5,
+    "market_home_win_prob": 0.358,
     "best_home_ml": {
-      "price": 2.32,
-      "bookmaker": "draftkings"
-    },
-    "best_away_ml": {
-      "price": 1.66,
+      "price": 2.74,
       "bookmaker": "betonlineag"
     },
-    "best_home_spread": {
-      "point": 3.0,
-      "price": 1.87,
-      "bookmaker": "betrivers"
+    "best_away_ml": {
+      "price": 1.53,
+      "bookmaker": "fanduel"
     },
-    "best_away_spread": {
-      "point": -2.5,
-      "price": 1.86,
+    "best_home_spread": {
+      "point": 4.0,
+      "price": 1.91,
       "bookmaker": "lowvig"
     },
+    "best_away_spread": {
+      "point": -3.5,
+      "price": 1.91,
+      "bookmaker": "fanduel"
+    },
     "best_over": {
-      "point": 37.5,
-      "price": 1.98,
+      "point": 36.5,
+      "price": 1.93,
       "bookmaker": "lowvig"
     },
     "best_under": {
-      "point": 38.0,
-      "price": 1.88,
-      "bookmaker": "betrivers"
+      "point": 36.5,
+      "price": 1.95,
+      "bookmaker": "draftkings"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -252,20 +257,20 @@
     "away_spread": 7.0,
     "total": 41.5,
     "home_moneyline": 1.31,
-    "away_moneyline": 3.615,
-    "market_home_win_prob": 0.734,
+    "away_moneyline": 3.6,
+    "market_home_win_prob": 0.7332,
     "best_home_ml": {
       "price": 1.32,
-      "bookmaker": "betrivers"
+      "bookmaker": "draftkings"
     },
     "best_away_ml": {
       "price": 3.65,
-      "bookmaker": "draftkings"
+      "bookmaker": "fanduel"
     },
     "best_home_spread": {
-      "point": -7.0,
-      "price": 2.06,
-      "bookmaker": "lowvig"
+      "point": -6.5,
+      "price": 1.85,
+      "bookmaker": "betrivers"
     },
     "best_away_spread": {
       "point": 7.0,
@@ -278,15 +283,16 @@
       "bookmaker": "lowvig"
     },
     "best_under": {
-      "point": 42.5,
-      "price": 1.89,
-      "bookmaker": "betrivers"
+      "point": 41.5,
+      "price": 1.93,
+      "bookmaker": "draftkings"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -300,26 +306,26 @@
     "home_spread": -7.0,
     "away_spread": 7.0,
     "total": 47.0,
-    "home_moneyline": 1.315,
-    "away_moneyline": 3.5700000000000003,
-    "market_home_win_prob": 0.7308,
+    "home_moneyline": 1.32,
+    "away_moneyline": 3.56,
+    "market_home_win_prob": 0.7295,
     "best_home_ml": {
       "price": 1.32,
-      "bookmaker": "betus"
+      "bookmaker": "fanduel"
     },
     "best_away_ml": {
-      "price": 3.7,
-      "bookmaker": "fanduel"
+      "price": 3.61,
+      "bookmaker": "draftkings"
     },
     "best_home_spread": {
       "point": -6.5,
-      "price": 1.88,
-      "bookmaker": "betrivers"
+      "price": 1.87,
+      "bookmaker": "fanduel"
     },
     "best_away_spread": {
       "point": 7.0,
       "price": 1.91,
-      "bookmaker": "mybookieag"
+      "bookmaker": "lowvig"
     },
     "best_over": {
       "point": 46.5,
@@ -328,14 +334,15 @@
     },
     "best_under": {
       "point": 47.5,
-      "price": 1.87,
-      "bookmaker": "fanduel"
+      "price": 1.89,
+      "bookmaker": "bovada"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -348,22 +355,22 @@
     "away_team": "New Orleans Saints",
     "home_spread": -10.0,
     "away_spread": 10.0,
-    "total": 50.5,
-    "home_moneyline": 1.17,
-    "away_moneyline": 5.33,
-    "market_home_win_prob": 0.82,
+    "total": 49.5,
+    "home_moneyline": 1.18,
+    "away_moneyline": 5.25,
+    "market_home_win_prob": 0.8165,
     "best_home_ml": {
-      "price": 1.18,
-      "bookmaker": "betus"
+      "price": 1.19,
+      "bookmaker": "draftkings"
     },
     "best_away_ml": {
-      "price": 5.5,
-      "bookmaker": "betmgm"
+      "price": 5.35,
+      "bookmaker": "betus"
     },
     "best_home_spread": {
       "point": -9.5,
-      "price": 1.83,
-      "bookmaker": "fanduel"
+      "price": 1.87,
+      "bookmaker": "bovada"
     },
     "best_away_spread": {
       "point": 10.0,
@@ -371,20 +378,21 @@
       "bookmaker": "lowvig"
     },
     "best_over": {
-      "point": 50.5,
-      "price": 1.93,
-      "bookmaker": "draftkings"
-    },
-    "best_under": {
-      "point": 50.5,
+      "point": 49.5,
       "price": 1.93,
       "bookmaker": "lowvig"
+    },
+    "best_under": {
+      "point": 50.0,
+      "price": 1.91,
+      "bookmaker": "betus"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -398,31 +406,31 @@
     "home_spread": 6.5,
     "away_spread": -6.5,
     "total": 41.5,
-    "home_moneyline": 3.52,
-    "away_moneyline": 1.32,
-    "market_home_win_prob": 0.2727,
+    "home_moneyline": 3.5,
+    "away_moneyline": 1.33,
+    "market_home_win_prob": 0.2754,
     "best_home_ml": {
-      "price": 3.85,
-      "bookmaker": "betrivers"
+      "price": 3.61,
+      "bookmaker": "draftkings"
     },
     "best_away_ml": {
-      "price": 1.33,
-      "bookmaker": "betmgm"
+      "price": 1.35,
+      "bookmaker": "bovada"
     },
     "best_home_spread": {
-      "point": 7.0,
-      "price": 1.92,
-      "bookmaker": "betrivers"
+      "point": 6.5,
+      "price": 1.94,
+      "bookmaker": "draftkings"
     },
     "best_away_spread": {
-      "point": -6.5,
-      "price": 1.95,
-      "bookmaker": "lowvig"
+      "point": -6.0,
+      "price": 1.91,
+      "bookmaker": "mybookieag"
     },
     "best_over": {
-      "point": 41.0,
-      "price": 1.91,
-      "bookmaker": "betus"
+      "point": 40.5,
+      "price": 1.87,
+      "bookmaker": "betrivers"
     },
     "best_under": {
       "point": 42.5,
@@ -434,6 +442,7 @@
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -447,42 +456,43 @@
     "home_spread": -14.5,
     "away_spread": 14.5,
     "total": 48.5,
-    "home_moneyline": 1.08,
-    "away_moneyline": 8.52,
-    "market_home_win_prob": 0.8875,
+    "home_moneyline": 1.09,
+    "away_moneyline": 8.09,
+    "market_home_win_prob": 0.8813,
     "best_home_ml": {
       "price": 1.09,
-      "bookmaker": "betmgm"
+      "bookmaker": "draftkings"
     },
     "best_away_ml": {
-      "price": 8.8,
-      "bookmaker": "draftkings"
+      "price": 8.5,
+      "bookmaker": "fanduel"
     },
     "best_home_spread": {
       "point": -14.5,
-      "price": 1.96,
-      "bookmaker": "draftkings"
+      "price": 1.99,
+      "bookmaker": "lowvig"
     },
     "best_away_spread": {
       "point": 14.5,
-      "price": 2.01,
-      "bookmaker": "lowvig"
+      "price": 1.93,
+      "bookmaker": "bovada"
     },
     "best_over": {
-      "point": 47.5,
-      "price": 1.87,
-      "bookmaker": "betrivers"
+      "point": 48.0,
+      "price": 1.91,
+      "bookmaker": "mybookieag"
     },
     "best_under": {
-      "point": 48.5,
-      "price": 1.93,
-      "bookmaker": "lowvig"
+      "point": 49.0,
+      "price": 1.89,
+      "bookmaker": "bovada"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -496,25 +506,25 @@
     "home_spread": 3.5,
     "away_spread": -3.5,
     "total": 40.5,
-    "home_moneyline": 2.685,
-    "away_moneyline": 1.505,
-    "market_home_win_prob": 0.3592,
+    "home_moneyline": 2.7,
+    "away_moneyline": 1.5,
+    "market_home_win_prob": 0.3571,
     "best_home_ml": {
       "price": 2.76,
       "bookmaker": "fanduel"
     },
     "best_away_ml": {
       "price": 1.51,
-      "bookmaker": "draftkings"
+      "bookmaker": "lowvig"
     },
     "best_home_spread": {
-      "point": 4.0,
-      "price": 1.89,
-      "bookmaker": "betmgm"
+      "point": 3.5,
+      "price": 2.0,
+      "bookmaker": "fanduel"
     },
     "best_away_spread": {
       "point": -3.5,
-      "price": 1.93,
+      "price": 1.95,
       "bookmaker": "lowvig"
     },
     "best_over": {
@@ -525,13 +535,14 @@
     "best_under": {
       "point": 40.5,
       "price": 1.92,
-      "bookmaker": "draftkings"
+      "bookmaker": "betrivers"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -542,24 +553,24 @@
     "commence_time": "2026-11-29T21:05:00Z",
     "home_team": "Los Angeles Chargers",
     "away_team": "New England Patriots",
-    "home_spread": -0.75,
-    "away_spread": 0.75,
+    "home_spread": 0.0,
+    "away_spread": 0.0,
     "total": 35.5,
-    "home_moneyline": 1.88,
-    "away_moneyline": 1.95,
-    "market_home_win_prob": 0.5091,
+    "home_moneyline": 1.9049999999999998,
+    "away_moneyline": 1.9249999999999998,
+    "market_home_win_prob": 0.5026,
     "best_home_ml": {
-      "price": 1.89,
-      "bookmaker": "fanduel"
+      "price": 1.95,
+      "bookmaker": "bovada"
     },
     "best_away_ml": {
       "price": 1.96,
-      "bookmaker": "draftkings"
+      "bookmaker": "fanduel"
     },
     "best_home_spread": {
-      "point": 0.0,
-      "price": 1.95,
-      "bookmaker": "lowvig"
+      "point": 1.0,
+      "price": 1.89,
+      "bookmaker": "bovada"
     },
     "best_away_spread": {
       "point": 1.5,
@@ -567,9 +578,9 @@
       "bookmaker": "fanduel"
     },
     "best_over": {
-      "point": 35.0,
-      "price": 1.91,
-      "bookmaker": "betmgm"
+      "point": 35.5,
+      "price": 1.95,
+      "bookmaker": "bovada"
     },
     "best_under": {
       "point": 35.5,
@@ -581,6 +592,7 @@
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -602,18 +614,18 @@
       "bookmaker": "fanduel"
     },
     "best_away_ml": {
-      "price": 1.29,
+      "price": 1.32,
       "bookmaker": "draftkings"
     },
     "best_home_spread": {
-      "point": 7.0,
-      "price": 1.95,
-      "bookmaker": "fanduel"
+      "point": 8.0,
+      "price": 1.79,
+      "bookmaker": "lowvig"
     },
     "best_away_spread": {
       "point": -7.0,
-      "price": 1.97,
-      "bookmaker": "lowvig"
+      "price": 1.93,
+      "bookmaker": "draftkings"
     },
     "best_over": {
       "point": 41.5,
@@ -621,15 +633,16 @@
       "bookmaker": "lowvig"
     },
     "best_under": {
-      "point": 42.0,
-      "price": 1.91,
-      "bookmaker": "betus"
+      "point": 41.5,
+      "price": 1.93,
+      "bookmaker": "draftkings"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -640,45 +653,46 @@
     "commence_time": "2026-11-29T21:25:00Z",
     "home_team": "San Francisco 49ers",
     "away_team": "Seattle Seahawks",
-    "home_spread": -3.0,
-    "away_spread": 3.0,
-    "total": 45.0,
-    "home_moneyline": 1.5750000000000002,
-    "away_moneyline": 2.48,
-    "market_home_win_prob": 0.6116,
+    "home_spread": -2.5,
+    "away_spread": 2.5,
+    "total": 44.5,
+    "home_moneyline": 1.69,
+    "away_moneyline": 2.22,
+    "market_home_win_prob": 0.5678,
     "best_home_ml": {
-      "price": 1.63,
-      "bookmaker": "betrivers"
-    },
-    "best_away_ml": {
-      "price": 2.55,
+      "price": 1.71,
       "bookmaker": "betus"
     },
-    "best_home_spread": {
-      "point": -3.0,
-      "price": 1.93,
-      "bookmaker": "betrivers"
-    },
-    "best_away_spread": {
-      "point": 3.5,
-      "price": 1.85,
-      "bookmaker": "draftkings"
-    },
-    "best_over": {
-      "point": 45.0,
-      "price": 1.93,
+    "best_away_ml": {
+      "price": 2.25,
       "bookmaker": "lowvig"
     },
-    "best_under": {
-      "point": 46.0,
-      "price": 1.89,
+    "best_home_spread": {
+      "point": -2.0,
+      "price": 1.83,
+      "bookmaker": "betus"
+    },
+    "best_away_spread": {
+      "point": 3.0,
+      "price": 1.83,
       "bookmaker": "betrivers"
+    },
+    "best_over": {
+      "point": 44.5,
+      "price": 1.95,
+      "bookmaker": "bovada"
+    },
+    "best_under": {
+      "point": 44.5,
+      "price": 1.93,
+      "bookmaker": "lowvig"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -691,17 +705,17 @@
     "away_team": "Las Vegas Raiders",
     "home_spread": -4.5,
     "away_spread": 4.5,
-    "total": 40.75,
+    "total": 40.0,
     "home_moneyline": 1.43,
-    "away_moneyline": 2.925,
-    "market_home_win_prob": 0.6716,
+    "away_moneyline": 2.95,
+    "market_home_win_prob": 0.6735,
     "best_home_ml": {
-      "price": 1.46,
-      "bookmaker": "draftkings"
+      "price": 1.43,
+      "bookmaker": "fanduel"
     },
     "best_away_ml": {
-      "price": 3.0,
-      "bookmaker": "betus"
+      "price": 3.06,
+      "bookmaker": "draftkings"
     },
     "best_home_spread": {
       "point": -4.5,
@@ -709,25 +723,26 @@
       "bookmaker": "draftkings"
     },
     "best_away_spread": {
-      "point": 4.5,
-      "price": 1.95,
-      "bookmaker": "fanduel"
+      "point": 5.0,
+      "price": 1.89,
+      "bookmaker": "bovada"
     },
     "best_over": {
-      "point": 40.0,
-      "price": 1.92,
-      "bookmaker": "lowvig"
+      "point": 39.5,
+      "price": 1.86,
+      "bookmaker": "draftkings"
     },
     "best_under": {
-      "point": 41.5,
-      "price": 1.88,
-      "bookmaker": "betrivers"
+      "point": 40.5,
+      "price": 1.87,
+      "bookmaker": "fanduel"
     },
     "bookmakers": [
       "betmgm",
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -741,12 +756,12 @@
     "home_spread": -3.0,
     "away_spread": 3.0,
     "total": 43.5,
-    "home_moneyline": 1.65,
-    "away_moneyline": 2.3049999999999997,
-    "market_home_win_prob": 0.5828,
+    "home_moneyline": 1.62,
+    "away_moneyline": 2.35,
+    "market_home_win_prob": 0.5919,
     "best_home_ml": {
       "price": 1.67,
-      "bookmaker": "betus"
+      "bookmaker": "betrivers"
     },
     "best_away_ml": {
       "price": 2.41,
@@ -755,12 +770,12 @@
     "best_home_spread": {
       "point": -3.0,
       "price": 2.0,
-      "bookmaker": "betus"
+      "bookmaker": "mybookieag"
     },
     "best_away_spread": {
       "point": 3.0,
-      "price": 1.93,
-      "bookmaker": "lowvig"
+      "price": 1.95,
+      "bookmaker": "betus"
     },
     "best_over": {
       "point": 43.5,
@@ -777,6 +792,7 @@
       "betonlineag",
       "betrivers",
       "betus",
+      "bovada",
       "draftkings",
       "fanduel",
       "lowvig",
@@ -787,12 +803,12 @@
     "commence_time": "2026-12-04T01:15:00Z",
     "home_team": "Los Angeles Rams",
     "away_team": "Kansas City Chiefs",
-    "home_spread": 0.0,
-    "away_spread": 0.0,
-    "total": 45.5,
-    "home_moneyline": 1.97,
-    "away_moneyline": 1.88,
-    "market_home_win_prob": 0.4883,
+    "home_spread": 0.75,
+    "away_spread": -0.75,
+    "total": 45.0,
+    "home_moneyline": 2.02,
+    "away_moneyline": 1.83,
+    "market_home_win_prob": 0.4753,
     "best_home_ml": {
       "price": 2.02,
       "bookmaker": "fanduel"
@@ -808,21 +824,22 @@
     },
     "best_away_spread": {
       "point": 1.5,
-      "price": 1.82,
+      "price": 1.81,
       "bookmaker": "draftkings"
     },
     "best_over": {
       "point": 44.5,
-      "price": 1.91,
-      "bookmaker": "betus"
+      "price": 1.93,
+      "bookmaker": "lowvig"
     },
     "best_under": {
       "point": 45.5,
-      "price": 1.95,
-      "bookmaker": "fanduel"
+      "price": 1.91,
+      "bookmaker": "draftkings"
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -836,11 +853,11 @@
     "home_spread": 3.5,
     "away_spread": -3.5,
     "total": 50.5,
-    "home_moneyline": 2.5949999999999998,
-    "away_moneyline": 1.525,
-    "market_home_win_prob": 0.3701,
+    "home_moneyline": 2.65,
+    "away_moneyline": 1.5,
+    "market_home_win_prob": 0.3614,
     "best_home_ml": {
-      "price": 2.62,
+      "price": 2.68,
       "bookmaker": "fanduel"
     },
     "best_away_ml": {
@@ -869,6 +886,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -879,12 +897,12 @@
     "commence_time": "2026-12-06T18:00:00Z",
     "home_team": "Chicago Bears",
     "away_team": "Jacksonville Jaguars",
-    "home_spread": -3.0,
-    "away_spread": 3.0,
+    "home_spread": -2.75,
+    "away_spread": 2.75,
     "total": 50.0,
-    "home_moneyline": 1.67,
-    "away_moneyline": 2.265,
-    "market_home_win_prob": 0.5756,
+    "home_moneyline": 1.68,
+    "away_moneyline": 2.22,
+    "market_home_win_prob": 0.5692,
     "best_home_ml": {
       "price": 1.69,
       "bookmaker": "fanduel"
@@ -900,8 +918,8 @@
     },
     "best_away_spread": {
       "point": 3.0,
-      "price": 1.95,
-      "bookmaker": "lowvig"
+      "price": 1.87,
+      "bookmaker": "draftkings"
     },
     "best_over": {
       "point": 49.5,
@@ -915,6 +933,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -925,12 +944,12 @@
     "commence_time": "2026-12-06T18:00:00Z",
     "home_team": "Cleveland Browns",
     "away_team": "Cincinnati Bengals",
-    "home_spread": 4.5,
-    "away_spread": -4.5,
+    "home_spread": 5.0,
+    "away_spread": -5.0,
     "total": 47.5,
-    "home_moneyline": 3.05,
-    "away_moneyline": 1.4049999999999998,
-    "market_home_win_prob": 0.3154,
+    "home_moneyline": 2.98,
+    "away_moneyline": 1.42,
+    "market_home_win_prob": 0.3227,
     "best_home_ml": {
       "price": 3.12,
       "bookmaker": "draftkings"
@@ -961,6 +980,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -971,12 +991,12 @@
     "commence_time": "2026-12-06T18:00:00Z",
     "home_team": "Denver Broncos",
     "away_team": "Miami Dolphins",
-    "home_spread": -14.0,
-    "away_spread": 14.0,
+    "home_spread": -14.25,
+    "away_spread": 14.25,
     "total": 39.5,
-    "home_moneyline": 1.08,
-    "away_moneyline": 8.7,
-    "market_home_win_prob": 0.8896,
+    "home_moneyline": 1.07,
+    "away_moneyline": 9.0,
+    "market_home_win_prob": 0.8937,
     "best_home_ml": {
       "price": 1.09,
       "bookmaker": "draftkings"
@@ -1007,6 +1027,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -1020,31 +1041,31 @@
     "home_spread": 5.5,
     "away_spread": -5.5,
     "total": 46.0,
-    "home_moneyline": 2.98,
-    "away_moneyline": 1.415,
-    "market_home_win_prob": 0.322,
+    "home_moneyline": 3.1,
+    "away_moneyline": 1.38,
+    "market_home_win_prob": 0.308,
     "best_home_ml": {
-      "price": 3.06,
-      "bookmaker": "draftkings"
+      "price": 3.15,
+      "bookmaker": "fanduel"
     },
     "best_away_ml": {
-      "price": 1.43,
-      "bookmaker": "fanduel"
+      "price": 1.4,
+      "bookmaker": "draftkings"
     },
     "best_home_spread": {
       "point": 5.5,
       "price": 1.95,
-      "bookmaker": "lowvig"
+      "bookmaker": "fanduel"
     },
     "best_away_spread": {
-      "point": -5.0,
-      "price": 1.91,
-      "bookmaker": "betus"
+      "point": -5.5,
+      "price": 1.95,
+      "bookmaker": "lowvig"
     },
     "best_over": {
       "point": 45.5,
-      "price": 1.87,
-      "bookmaker": "fanduel"
+      "price": 1.93,
+      "bookmaker": "betrivers"
     },
     "best_under": {
       "point": 46.5,
@@ -1053,6 +1074,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -1067,8 +1089,8 @@
     "away_spread": 5.5,
     "total": 40.5,
     "home_moneyline": 1.38,
-    "away_moneyline": 3.1550000000000002,
-    "market_home_win_prob": 0.6957,
+    "away_moneyline": 3.15,
+    "market_home_win_prob": 0.6954,
     "best_home_ml": {
       "price": 1.39,
       "bookmaker": "draftkings"
@@ -1093,12 +1115,13 @@
       "bookmaker": "lowvig"
     },
     "best_under": {
-      "point": 41.5,
+      "point": 41.0,
       "price": 1.91,
       "bookmaker": "betus"
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -1109,15 +1132,15 @@
     "commence_time": "2026-12-06T18:00:00Z",
     "home_team": "New York Giants",
     "away_team": "San Francisco 49ers",
-    "home_spread": 6.0,
-    "away_spread": -6.0,
+    "home_spread": 6.5,
+    "away_spread": -6.5,
     "total": 47.5,
-    "home_moneyline": 3.5,
-    "away_moneyline": 1.3250000000000002,
-    "market_home_win_prob": 0.2746,
+    "home_moneyline": 3.6,
+    "away_moneyline": 1.31,
+    "market_home_win_prob": 0.2668,
     "best_home_ml": {
-      "price": 3.6,
-      "bookmaker": "fanduel"
+      "price": 3.7,
+      "bookmaker": "betrivers"
     },
     "best_away_ml": {
       "price": 1.34,
@@ -1125,12 +1148,12 @@
     },
     "best_home_spread": {
       "point": 6.5,
-      "price": 1.91,
-      "bookmaker": "draftkings"
+      "price": 1.97,
+      "bookmaker": "lowvig"
     },
     "best_away_spread": {
-      "point": -6.0,
-      "price": 1.95,
+      "point": -6.5,
+      "price": 1.93,
       "bookmaker": "lowvig"
     },
     "best_over": {
@@ -1145,6 +1168,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -1158,9 +1182,9 @@
     "home_spread": 4.5,
     "away_spread": -4.5,
     "total": 46.5,
-    "home_moneyline": 2.865,
-    "away_moneyline": 1.45,
-    "market_home_win_prob": 0.336,
+    "home_moneyline": 2.8,
+    "away_moneyline": 1.44,
+    "market_home_win_prob": 0.3396,
     "best_home_ml": {
       "price": 2.93,
       "bookmaker": "draftkings"
@@ -1171,12 +1195,12 @@
     },
     "best_home_spread": {
       "point": 4.5,
-      "price": 1.91,
+      "price": 1.92,
       "bookmaker": "draftkings"
     },
     "best_away_spread": {
       "point": -4.0,
-      "price": 1.95,
+      "price": 1.91,
       "bookmaker": "lowvig"
     },
     "best_over": {
@@ -1191,6 +1215,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -1201,12 +1226,12 @@
     "commence_time": "2026-12-06T21:05:00Z",
     "home_team": "Arizona Cardinals",
     "away_team": "Philadelphia Eagles",
-    "home_spread": 2.5,
-    "away_spread": -2.5,
+    "home_spread": 2.75,
+    "away_spread": -2.75,
     "total": 36.5,
-    "home_moneyline": 2.325,
-    "away_moneyline": 1.6349999999999998,
-    "market_home_win_prob": 0.4129,
+    "home_moneyline": 2.31,
+    "away_moneyline": 1.64,
+    "market_home_win_prob": 0.4152,
     "best_home_ml": {
       "price": 2.34,
       "bookmaker": "fanduel"
@@ -1237,6 +1262,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -1250,9 +1276,9 @@
     "home_spread": 13.5,
     "away_spread": -13.5,
     "total": 44.5,
-    "home_moneyline": 6.795,
-    "away_moneyline": 1.12,
-    "market_home_win_prob": 0.1415,
+    "home_moneyline": 6.5,
+    "away_moneyline": 1.11,
+    "market_home_win_prob": 0.1459,
     "best_home_ml": {
       "price": 7.1,
       "bookmaker": "fanduel"
@@ -1272,9 +1298,9 @@
       "bookmaker": "draftkings"
     },
     "best_over": {
-      "point": 44.5,
-      "price": 1.93,
-      "bookmaker": "lowvig"
+      "point": 43.5,
+      "price": 1.83,
+      "bookmaker": "betrivers"
     },
     "best_under": {
       "point": 44.5,
@@ -1283,6 +1309,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -1293,12 +1320,12 @@
     "commence_time": "2026-12-06T21:25:00Z",
     "home_team": "Minnesota Vikings",
     "away_team": "Carolina Panthers",
-    "home_spread": -4.5,
-    "away_spread": 4.5,
-    "total": 42.0,
-    "home_moneyline": 1.415,
-    "away_moneyline": 2.9749999999999996,
-    "market_home_win_prob": 0.6777,
+    "home_spread": -4.75,
+    "away_spread": 4.75,
+    "total": 42.25,
+    "home_moneyline": 1.43,
+    "away_moneyline": 2.9,
+    "market_home_win_prob": 0.6697,
     "best_home_ml": {
       "price": 1.43,
       "bookmaker": "fanduel"
@@ -1314,7 +1341,7 @@
     },
     "best_away_spread": {
       "point": 5.5,
-      "price": 1.91,
+      "price": 1.92,
       "bookmaker": "draftkings"
     },
     "best_over": {
@@ -1329,6 +1356,7 @@
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -1339,42 +1367,43 @@
     "commence_time": "2026-12-07T01:20:00Z",
     "home_team": "Pittsburgh Steelers",
     "away_team": "Houston Texans",
-    "home_spread": 3.0,
-    "away_spread": -3.0,
-    "total": 43.5,
-    "home_moneyline": 2.32,
-    "away_moneyline": 1.64,
-    "market_home_win_prob": 0.4141,
+    "home_spread": 4.5,
+    "away_spread": -4.5,
+    "total": 42.0,
+    "home_moneyline": 2.75,
+    "away_moneyline": 1.45,
+    "market_home_win_prob": 0.3452,
     "best_home_ml": {
-      "price": 2.32,
-      "bookmaker": "draftkings"
+      "price": 2.84,
+      "bookmaker": "fanduel"
     },
     "best_away_ml": {
-      "price": 1.64,
+      "price": 1.51,
       "bookmaker": "draftkings"
     },
     "best_home_spread": {
-      "point": 3.0,
+      "point": 4.5,
       "price": 1.95,
-      "bookmaker": "lowvig"
+      "bookmaker": "fanduel"
     },
     "best_away_spread": {
-      "point": -3.0,
-      "price": 1.95,
-      "bookmaker": "betus"
+      "point": -3.5,
+      "price": 1.85,
+      "bookmaker": "draftkings"
     },
     "best_over": {
-      "point": 42.5,
-      "price": 1.88,
+      "point": 41.5,
+      "price": 1.91,
       "bookmaker": "draftkings"
     },
     "best_under": {
-      "point": 43.5,
-      "price": 1.93,
-      "bookmaker": "lowvig"
+      "point": 42.5,
+      "price": 1.91,
+      "bookmaker": "betrivers"
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",
@@ -1388,21 +1417,21 @@
     "home_spread": -6.0,
     "away_spread": 6.0,
     "total": 50.5,
-    "home_moneyline": 1.3849999999999998,
-    "away_moneyline": 3.13,
-    "market_home_win_prob": 0.6932,
+    "home_moneyline": 1.38,
+    "away_moneyline": 3.15,
+    "market_home_win_prob": 0.6954,
     "best_home_ml": {
-      "price": 1.39,
-      "bookmaker": "fanduel"
+      "price": 1.41,
+      "bookmaker": "betrivers"
     },
     "best_away_ml": {
-      "price": 3.16,
+      "price": 3.2,
       "bookmaker": "draftkings"
     },
     "best_home_spread": {
       "point": -5.5,
-      "price": 1.91,
-      "bookmaker": "fanduel"
+      "price": 1.92,
+      "bookmaker": "betrivers"
     },
     "best_away_spread": {
       "point": 6.0,
@@ -1415,12 +1444,13 @@
       "bookmaker": "lowvig"
     },
     "best_under": {
-      "point": 51.5,
-      "price": 1.91,
-      "bookmaker": "fanduel"
+      "point": 50.5,
+      "price": 1.93,
+      "bookmaker": "lowvig"
     },
     "bookmakers": [
       "betonlineag",
+      "betrivers",
       "betus",
       "draftkings",
       "fanduel",

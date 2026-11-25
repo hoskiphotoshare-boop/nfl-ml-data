@@ -1,21 +1,21 @@
 {
   "summary": {
     "games_compared": 30,
-    "mean_edge": -0.0071,
-    "mean_abs_edge": 0.1102,
-    "max_abs_edge": 0.261,
-    "mean_best_edge": 0.1626,
-    "max_best_edge": 0.281,
+    "mean_edge": -0.0013,
+    "mean_abs_edge": 0.1151,
+    "max_abs_edge": 0.2888,
+    "mean_best_edge": 0.1663,
+    "max_best_edge": 0.2888,
     "strong_edges": 30,
     "best_market_counts": {
       "ml": 8,
-      "spread": 7,
-      "total": 15
+      "spread": 6,
+      "total": 16
     }
   },
-  "odds_fetched_at": "2026-11-25T01:48:33.268475+00:00",
+  "odds_fetched_at": "2026-11-25T21:12:59.980655+00:00",
   "odds_events": 30,
-  "odds_requests_remaining": 476,
+  "odds_requests_remaining": 472,
   "games": [
     {
       "game_id": "2026_12_GB_LA",
@@ -25,88 +25,88 @@
       "home_team": "LA",
       "away_team": "GB",
       "model_home_win_prob": 0.609,
-      "market_home_win_prob": 0.5527,
-      "edge": 0.0563,
-      "abs_edge": 0.0563,
-      "ev_home_ml": 6.575,
+      "market_home_win_prob": 0.5627,
+      "edge": 0.0463,
+      "abs_edge": 0.0463,
+      "ev_home_ml": 5.357,
       "ev_away_ml": -13.98,
-      "best_ev": 6.575,
+      "best_ev": 5.357,
       "best_ev_side": "home",
-      "best_market_ev": 26.32,
+      "best_market_ev": 29.43,
       "markets": {
         "ml": {
           "side": "home",
           "team": "LA",
           "line": null,
           "model_prob": 0.609,
-          "market_prob": 0.5527,
-          "edge": 0.0563,
-          "price": 1.75,
-          "bookmaker": "draftkings",
-          "ev": 6.57
+          "market_prob": 0.5627,
+          "edge": 0.0463,
+          "price": 1.73,
+          "bookmaker": "bovada",
+          "ev": 5.36
         },
         "spread": {
           "side": "home",
           "team": "LA",
-          "line": -1.5,
-          "model_prob": 0.5651,
+          "line": -2.0,
+          "model_prob": 0.5504,
           "market_prob": 0.5,
-          "edge": 0.0651,
-          "price": 1.82,
-          "bookmaker": "betonlineag",
-          "ev": 2.85
+          "edge": 0.0504,
+          "price": 1.87,
+          "bookmaker": "betus",
+          "ev": 2.92
         },
         "total": {
           "side": "over",
           "team": "Over",
-          "line": 43.5,
-          "model_prob": 0.6719,
+          "line": 43.0,
+          "model_prob": 0.6848,
           "market_prob": 0.5,
-          "edge": 0.1719,
-          "price": 1.88,
-          "bookmaker": "betrivers",
-          "ev": 26.32
+          "edge": 0.1848,
+          "price": 1.89,
+          "bookmaker": "bovada",
+          "ev": 29.43
         }
       },
       "best_market": "total",
-      "best_edge": 0.1719,
+      "best_edge": 0.1848,
       "outlier": false,
-      "outlier_edge": 0.1719,
+      "outlier_edge": 0.1848,
       "outlier_market": "total",
       "best_team": "Over",
       "model_spread": 3.7,
       "market_spread": -2.5,
       "spread_edge": -6.2,
       "model_total": 49.7,
-      "market_total": 44.0,
-      "total_edge": 5.7,
+      "market_total": 43.5,
+      "total_edge": 6.2,
       "best_home_ml": {
-        "price": 1.75,
-        "bookmaker": "draftkings"
+        "price": 1.73,
+        "bookmaker": "bovada"
       },
       "best_away_ml": {
         "price": 2.2,
         "bookmaker": "fanduel"
       },
       "best_home_spread": {
-        "point": -1.5,
-        "price": 1.82,
-        "bookmaker": "betonlineag"
+        "point": -2.0,
+        "price": 1.87,
+        "bookmaker": "betus"
       },
       "best_away_spread": {
         "point": 2.5,
-        "price": 1.97,
-        "bookmaker": "lowvig"
+        "price": 1.98,
+        "bookmaker": "betmgm"
       },
       "best_over": {
-        "point": 43.5,
-        "price": 1.88,
-        "bookmaker": "betrivers"
+        "point": 43.0,
+        "price": 1.89,
+        "bookmaker": "bovada"
       },
       "best_under": {
-        "point": 44.5,
-        "price": 1.83,
-        "bookmaker": "fanduel"
+        "point": 43.5,
+        "price": 1.93,
+        "bookmaker": "draftkings"
       }
     },
     {
@@ -117,36 +117,36 @@
       "home_team": "DET",
       "away_team": "CHI",
       "model_home_win_prob": 0.625,
-      "market_home_win_prob": 0.4553,
-      "edge": 0.1697,
-      "abs_edge": 0.1697,
-      "ev_home_ml": 35.0,
-      "ev_away_ml": -32.875,
-      "best_ev": 35.0,
+      "market_home_win_prob": 0.4771,
+      "edge": 0.1479,
+      "abs_edge": 0.1479,
+      "ev_home_ml": 28.125,
+      "ev_away_ml": -30.625,
+      "best_ev": 28.125,
       "best_ev_side": "home",
-      "best_market_ev": 35.0,
+      "best_market_ev": 28.79,
       "markets": {
         "ml": {
           "side": "home",
           "team": "DET",
           "line": null,
           "model_prob": 0.625,
-          "market_prob": 0.4553,
-          "edge": 0.1697,
-          "price": 2.16,
-          "bookmaker": "draftkings",
-          "ev": 35.0
+          "market_prob": 0.4771,
+          "edge": 0.1479,
+          "price": 2.05,
+          "bookmaker": "betrivers",
+          "ev": 28.12
         },
         "spread": {
           "side": "home",
           "team": "DET",
-          "line": 2.5,
-          "model_prob": 0.6939,
+          "line": 1.5,
+          "model_prob": 0.6673,
           "market_prob": 0.5,
-          "edge": 0.1939,
-          "price": 1.9,
-          "bookmaker": "draftkings",
-          "ev": 31.84
+          "edge": 0.1673,
+          "price": 1.93,
+          "bookmaker": "betrivers",
+          "ev": 28.79
         },
         "total": {
           "side": "under",
@@ -156,49 +156,49 @@
           "market_prob": 0.5,
           "edge": 0.0258,
           "price": 1.93,
-          "bookmaker": "betrivers",
+          "bookmaker": "fanduel",
           "ev": 1.48
         }
       },
       "best_market": "spread",
-      "best_edge": 0.1939,
+      "best_edge": 0.1673,
       "outlier": false,
-      "outlier_edge": 0.1939,
+      "outlier_edge": 0.1673,
       "outlier_market": "spread",
       "best_team": "DET",
       "model_spread": 4.3,
-      "market_spread": 2.25,
-      "spread_edge": -2.05,
+      "market_spread": 1.0,
+      "spread_edge": -3.3,
       "model_total": 54.6,
       "market_total": 55.5,
       "total_edge": -0.9,
       "best_home_ml": {
-        "price": 2.16,
-        "bookmaker": "draftkings"
+        "price": 2.05,
+        "bookmaker": "betrivers"
       },
       "best_away_ml": {
-        "price": 1.79,
-        "bookmaker": "fanduel"
+        "price": 1.85,
+        "bookmaker": "betonlineag"
       },
       "best_home_spread": {
-        "point": 2.5,
-        "price": 1.9,
-        "bookmaker": "draftkings"
+        "point": 1.5,
+        "price": 1.93,
+        "bookmaker": "betrivers"
       },
       "best_away_spread": {
-        "point": -1.0,
-        "price": 1.87,
-        "bookmaker": "lowvig"
+        "point": 0.0,
+        "price": 1.91,
+        "bookmaker": "betus"
       },
       "best_over": {
         "point": 55.0,
-        "price": 1.91,
-        "bookmaker": "betmgm"
+        "price": 1.88,
+        "bookmaker": "betrivers"
       },
       "best_under": {
         "point": 55.5,
         "price": 1.93,
-        "bookmaker": "betrivers"
+        "bookmaker": "fanduel"
       }
     },
     {
@@ -209,36 +209,36 @@
       "home_team": "DAL",
       "away_team": "PHI",
       "model_home_win_prob": 0.662,
-      "market_home_win_prob": 0.7885,
-      "edge": -0.1265,
-      "abs_edge": 0.1265,
+      "market_home_win_prob": 0.7897,
+      "edge": -0.1277,
+      "abs_edge": 0.1277,
       "ev_home_ml": -18.574,
-      "ev_away_ml": 62.24,
-      "best_ev": 62.24,
+      "ev_away_ml": 60.55,
+      "best_ev": 60.55,
       "best_ev_side": "away",
-      "best_market_ev": 62.24,
+      "best_market_ev": 60.55,
       "markets": {
         "ml": {
           "side": "away",
           "team": "PHI",
           "line": null,
           "model_prob": 0.338,
-          "market_prob": 0.2115,
-          "edge": 0.1265,
-          "price": 4.8,
-          "bookmaker": "fanduel",
-          "ev": 62.24
+          "market_prob": 0.2103,
+          "edge": 0.1277,
+          "price": 4.75,
+          "bookmaker": "betmgm",
+          "ev": 60.55
         },
         "spread": {
           "side": "away",
           "team": "PHI",
-          "line": 10.0,
-          "model_prob": 0.6286,
+          "line": 9.0,
+          "model_prob": 0.6001,
           "market_prob": 0.5,
-          "edge": 0.1286,
-          "price": 1.79,
-          "bookmaker": "betonlineag",
-          "ev": 12.52
+          "edge": 0.1001,
+          "price": 1.95,
+          "bookmaker": "lowvig",
+          "ev": 17.02
         },
         "total": {
           "side": "over",
@@ -247,9 +247,9 @@
           "model_prob": 0.781,
           "market_prob": 0.5,
           "edge": 0.281,
-          "price": 1.87,
+          "price": 1.86,
           "bookmaker": "draftkings",
-          "ev": 46.05
+          "ev": 45.27
         }
       },
       "best_market": "total",
@@ -259,8 +259,8 @@
       "outlier_market": "total",
       "best_team": "Over",
       "model_spread": 5.6,
-      "market_spread": -8.5,
-      "spread_edge": -14.1,
+      "market_spread": -9.0,
+      "spread_edge": -14.6,
       "model_total": 58.3,
       "market_total": 48.0,
       "total_edge": 10.3,
@@ -269,8 +269,8 @@
         "bookmaker": "betus"
       },
       "best_away_ml": {
-        "price": 4.8,
-        "bookmaker": "fanduel"
+        "price": 4.75,
+        "bookmaker": "betmgm"
       },
       "best_home_spread": {
         "point": -8.5,
@@ -278,19 +278,19 @@
         "bookmaker": "betmgm"
       },
       "best_away_spread": {
-        "point": 10.0,
-        "price": 1.79,
-        "bookmaker": "betonlineag"
+        "point": 9.0,
+        "price": 1.95,
+        "bookmaker": "lowvig"
       },
       "best_over": {
         "point": 47.5,
-        "price": 1.87,
+        "price": 1.86,
         "bookmaker": "draftkings"
       },
       "best_under": {
-        "point": 48.5,
-        "price": 1.87,
-        "bookmaker": "fanduel"
+        "point": 48.0,
+        "price": 1.93,
+        "bookmaker": "lowvig"
       }
     },
     {
@@ -301,87 +301,87 @@
       "home_team": "BUF",
       "away_team": "KC",
       "model_home_win_prob": 0.616,
-      "market_home_win_prob": 0.574,
-      "edge": 0.042,
-      "abs_edge": 0.042,
-      "ev_home_ml": 4.104,
-      "ev_away_ml": -12.448,
-      "best_ev": 4.104,
+      "market_home_win_prob": 0.5776,
+      "edge": 0.0384,
+      "abs_edge": 0.0384,
+      "ev_home_ml": 3.488,
+      "ev_away_ml": -10.144,
+      "best_ev": 3.488,
       "best_ev_side": "home",
-      "best_market_ev": 18.13,
+      "best_market_ev": 23.2,
       "markets": {
         "ml": {
           "side": "home",
           "team": "BUF",
           "line": null,
           "model_prob": 0.616,
-          "market_prob": 0.574,
-          "edge": 0.042,
-          "price": 1.69,
-          "bookmaker": "betonlineag",
-          "ev": 4.1
+          "market_prob": 0.5776,
+          "edge": 0.0384,
+          "price": 1.68,
+          "bookmaker": "draftkings",
+          "ev": 3.49
         },
         "spread": {
           "side": "home",
           "team": "BUF",
-          "line": -2.0,
-          "model_prob": 0.5593,
+          "line": -2.5,
+          "model_prob": 0.5445,
           "market_prob": 0.5,
-          "edge": 0.0593,
+          "edge": 0.0445,
           "price": 1.83,
-          "bookmaker": "betus",
-          "ev": 2.35
+          "bookmaker": "fanduel",
+          "ev": -0.36
         },
         "total": {
           "side": "over",
           "team": "Over",
-          "line": 47.0,
-          "model_prob": 0.6185,
+          "line": 45.5,
+          "model_prob": 0.6588,
           "market_prob": 0.5,
-          "edge": 0.1185,
-          "price": 1.91,
-          "bookmaker": "betmgm",
-          "ev": 18.13
+          "edge": 0.1588,
+          "price": 1.87,
+          "bookmaker": "lowvig",
+          "ev": 23.2
         }
       },
       "best_market": "total",
-      "best_edge": 0.1185,
+      "best_edge": 0.1588,
       "outlier": false,
-      "outlier_edge": 0.1185,
+      "outlier_edge": 0.1588,
       "outlier_market": "total",
       "best_team": "Over",
       "model_spread": 4.0,
-      "market_spread": -2.5,
-      "spread_edge": -6.5,
+      "market_spread": -3.0,
+      "spread_edge": -7.0,
       "model_total": 51.2,
-      "market_total": 47.5,
-      "total_edge": 3.7,
+      "market_total": 46.5,
+      "total_edge": 4.7,
       "best_home_ml": {
-        "price": 1.69,
-        "bookmaker": "betonlineag"
+        "price": 1.68,
+        "bookmaker": "draftkings"
       },
       "best_away_ml": {
-        "price": 2.28,
-        "bookmaker": "fanduel"
+        "price": 2.34,
+        "bookmaker": "betonlineag"
       },
       "best_home_spread": {
-        "point": -2.0,
+        "point": -2.5,
         "price": 1.83,
-        "bookmaker": "betus"
+        "bookmaker": "fanduel"
       },
       "best_away_spread": {
         "point": 3.0,
-        "price": 1.87,
-        "bookmaker": "betrivers"
+        "price": 1.88,
+        "bookmaker": "lowvig"
       },
       "best_over": {
-        "point": 47.0,
-        "price": 1.91,
-        "bookmaker": "betmgm"
+        "point": 45.5,
+        "price": 1.87,
+        "bookmaker": "lowvig"
       },
       "best_under": {
-        "point": 47.5,
-        "price": 1.92,
+        "point": 46.5,
+        "price": 1.93,
         "bookmaker": "betrivers"
       }
     },
@@ -393,88 +393,88 @@
       "home_team": "PIT",
       "away_team": "DEN",
       "model_home_win_prob": 0.541,
-      "market_home_win_prob": 0.4161,
-      "edge": 0.1249,
-      "abs_edge": 0.1249,
-      "ev_home_ml": 25.512,
-      "ev_away_ml": -23.806,
-      "best_ev": 25.512,
+      "market_home_win_prob": 0.358,
+      "edge": 0.183,
+      "abs_edge": 0.183,
+      "ev_home_ml": 48.234,
+      "ev_away_ml": -29.773,
+      "best_ev": 48.234,
       "best_ev_side": "home",
-      "best_market_ev": 33.55,
+      "best_market_ev": 48.23,
       "markets": {
         "ml": {
           "side": "home",
           "team": "PIT",
           "line": null,
           "model_prob": 0.541,
-          "market_prob": 0.4161,
-          "edge": 0.1249,
-          "price": 2.32,
-          "bookmaker": "draftkings",
-          "ev": 25.51
+          "market_prob": 0.358,
+          "edge": 0.183,
+          "price": 2.74,
+          "bookmaker": "betonlineag",
+          "ev": 48.23
         },
         "spread": {
           "side": "home",
           "team": "PIT",
-          "line": 3.0,
-          "model_prob": 0.6286,
+          "line": 4.0,
+          "model_prob": 0.6564,
           "market_prob": 0.5,
-          "edge": 0.1286,
-          "price": 1.87,
-          "bookmaker": "betrivers",
-          "ev": 17.55
+          "edge": 0.1564,
+          "price": 1.91,
+          "bookmaker": "lowvig",
+          "ev": 25.37
         },
         "total": {
           "side": "over",
           "team": "Over",
-          "line": 37.5,
-          "model_prob": 0.6745,
+          "line": 36.5,
+          "model_prob": 0.6999,
           "market_prob": 0.5,
-          "edge": 0.1745,
-          "price": 1.98,
+          "edge": 0.1999,
+          "price": 1.93,
           "bookmaker": "lowvig",
-          "ev": 33.55
+          "ev": 35.08
         }
       },
       "best_market": "total",
-      "best_edge": 0.1745,
+      "best_edge": 0.1999,
       "outlier": false,
-      "outlier_edge": 0.1745,
+      "outlier_edge": 0.1999,
       "outlier_market": "total",
       "best_team": "Over",
       "model_spread": 1.4,
-      "market_spread": 3.0,
-      "spread_edge": 1.6,
+      "market_spread": 3.5,
+      "spread_edge": 2.1,
       "model_total": 43.8,
-      "market_total": 37.5,
-      "total_edge": 6.3,
+      "market_total": 36.5,
+      "total_edge": 7.3,
       "best_home_ml": {
-        "price": 2.32,
-        "bookmaker": "draftkings"
-      },
-      "best_away_ml": {
-        "price": 1.66,
+        "price": 2.74,
         "bookmaker": "betonlineag"
       },
-      "best_home_spread": {
-        "point": 3.0,
-        "price": 1.87,
-        "bookmaker": "betrivers"
+      "best_away_ml": {
+        "price": 1.53,
+        "bookmaker": "fanduel"
       },
-      "best_away_spread": {
-        "point": -2.5,
-        "price": 1.86,
+      "best_home_spread": {
+        "point": 4.0,
+        "price": 1.91,
         "bookmaker": "lowvig"
       },
+      "best_away_spread": {
+        "point": -3.5,
+        "price": 1.91,
+        "bookmaker": "fanduel"
+      },
       "best_over": {
-        "point": 37.5,
-        "price": 1.98,
+        "point": 36.5,
+        "price": 1.93,
         "bookmaker": "lowvig"
       },
       "best_under": {
-        "point": 38.0,
-        "price": 1.88,
-        "bookmaker": "betrivers"
+        "point": 36.5,
+        "price": 1.95,
+        "bookmaker": "draftkings"
       }
     },
     {
@@ -485,25 +485,25 @@
       "home_team": "CIN",
       "away_team": "NO",
       "model_home_win_prob": 0.717,
-      "market_home_win_prob": 0.82,
-      "edge": -0.103,
-      "abs_edge": 0.103,
-      "ev_home_ml": -15.394,
-      "ev_away_ml": 55.65,
-      "best_ev": 55.65,
+      "market_home_win_prob": 0.8165,
+      "edge": -0.0995,
+      "abs_edge": 0.0995,
+      "ev_home_ml": -14.677,
+      "ev_away_ml": 51.405,
+      "best_ev": 51.405,
       "best_ev_side": "away",
-      "best_market_ev": 55.65,
+      "best_market_ev": 51.4,
       "markets": {
         "ml": {
           "side": "away",
           "team": "NO",
           "line": null,
           "model_prob": 0.283,
-          "market_prob": 0.18,
-          "edge": 0.103,
-          "price": 5.5,
-          "bookmaker": "betmgm",
-          "ev": 55.65
+          "market_prob": 0.1835,
+          "edge": 0.0995,
+          "price": 5.35,
+          "bookmaker": "betus",
+          "ev": 51.4
         },
         "spread": {
           "side": "away",
@@ -519,39 +519,39 @@
         "total": {
           "side": "over",
           "team": "Over",
-          "line": 50.5,
-          "model_prob": 0.574,
+          "line": 49.5,
+          "model_prob": 0.602,
           "market_prob": 0.5,
-          "edge": 0.074,
+          "edge": 0.102,
           "price": 1.93,
-          "bookmaker": "draftkings",
-          "ev": 10.78
+          "bookmaker": "lowvig",
+          "ev": 16.19
         }
       },
-      "best_market": "ml",
-      "best_edge": 0.103,
+      "best_market": "total",
+      "best_edge": 0.102,
       "outlier": false,
-      "outlier_edge": 0.103,
-      "outlier_market": "ml",
-      "best_team": "NO",
+      "outlier_edge": 0.102,
+      "outlier_market": "total",
+      "best_team": "Over",
       "model_spread": 7.7,
       "market_spread": -10.0,
       "spread_edge": -17.7,
       "model_total": 53.1,
-      "market_total": 50.5,
-      "total_edge": 2.6,
+      "market_total": 49.5,
+      "total_edge": 3.6,
       "best_home_ml": {
-        "price": 1.18,
-        "bookmaker": "betus"
+        "price": 1.19,
+        "bookmaker": "draftkings"
       },
       "best_away_ml": {
-        "price": 5.5,
-        "bookmaker": "betmgm"
+        "price": 5.35,
+        "bookmaker": "betus"
       },
       "best_home_spread": {
         "point": -9.5,
-        "price": 1.83,
-        "bookmaker": "fanduel"
+        "price": 1.87,
+        "bookmaker": "bovada"
       },
       "best_away_spread": {
         "point": 10.0,
@@ -559,14 +559,14 @@
         "bookmaker": "lowvig"
       },
       "best_over": {
-        "point": 50.5,
-        "price": 1.93,
-        "bookmaker": "draftkings"
-      },
-      "best_under": {
-        "point": 50.5,
+        "point": 49.5,
         "price": 1.93,
         "bookmaker": "lowvig"
+      },
+      "best_under": {
+        "point": 50.0,
+        "price": 1.91,
+        "bookmaker": "betus"
       }
     },
     {
@@ -577,68 +577,68 @@
       "home_team": "CLE",
       "away_team": "LV",
       "model_home_win_prob": 0.635,
-      "market_home_win_prob": 0.6716,
-      "edge": -0.0366,
-      "abs_edge": 0.0366,
-      "ev_home_ml": -7.29,
-      "ev_away_ml": 9.5,
-      "best_ev": 9.5,
+      "market_home_win_prob": 0.6735,
+      "edge": -0.0385,
+      "abs_edge": 0.0385,
+      "ev_home_ml": -9.195,
+      "ev_away_ml": 11.69,
+      "best_ev": 11.69,
       "best_ev_side": "away",
-      "best_market_ev": 21.37,
+      "best_market_ev": 15.66,
       "markets": {
         "ml": {
           "side": "away",
           "team": "LV",
           "line": null,
           "model_prob": 0.365,
-          "market_prob": 0.3284,
-          "edge": 0.0366,
-          "price": 3.0,
-          "bookmaker": "betus",
-          "ev": 9.5
+          "market_prob": 0.3265,
+          "edge": 0.0385,
+          "price": 3.06,
+          "bookmaker": "draftkings",
+          "ev": 11.69
         },
         "spread": {
-          "side": "home",
-          "team": "CLE",
-          "line": -4.5,
-          "model_prob": 0.503,
+          "side": "away",
+          "team": "LV",
+          "line": 5.0,
+          "model_prob": 0.5119,
           "market_prob": 0.5,
-          "edge": 0.003,
-          "price": 1.95,
-          "bookmaker": "draftkings",
-          "ev": -1.92
+          "edge": 0.0119,
+          "price": 1.89,
+          "bookmaker": "bovada",
+          "ev": -3.25
         },
         "total": {
           "side": "under",
           "team": "Under",
-          "line": 41.5,
-          "model_prob": 0.6456,
+          "line": 40.5,
+          "model_prob": 0.6185,
           "market_prob": 0.5,
-          "edge": 0.1456,
-          "price": 1.88,
-          "bookmaker": "betrivers",
-          "ev": 21.37
+          "edge": 0.1185,
+          "price": 1.87,
+          "bookmaker": "fanduel",
+          "ev": 15.66
         }
       },
       "best_market": "total",
-      "best_edge": 0.1456,
+      "best_edge": 0.1185,
       "outlier": false,
-      "outlier_edge": 0.1456,
+      "outlier_edge": 0.1185,
       "outlier_market": "total",
       "best_team": "Under",
       "model_spread": 4.6,
       "market_spread": -4.5,
       "spread_edge": -9.1,
       "model_total": 36.3,
-      "market_total": 40.75,
-      "total_edge": -4.45,
+      "market_total": 40.0,
+      "total_edge": -3.7,
       "best_home_ml": {
-        "price": 1.46,
-        "bookmaker": "draftkings"
+        "price": 1.43,
+        "bookmaker": "fanduel"
       },
       "best_away_ml": {
-        "price": 3.0,
-        "bookmaker": "betus"
+        "price": 3.06,
+        "bookmaker": "draftkings"
       },
       "best_home_spread": {
         "point": -4.5,
@@ -646,19 +646,19 @@
         "bookmaker": "draftkings"
       },
       "best_away_spread": {
-        "point": 4.5,
-        "price": 1.95,
-        "bookmaker": "fanduel"
+        "point": 5.0,
+        "price": 1.89,
+        "bookmaker": "bovada"
       },
       "best_over": {
-        "point": 40.0,
-        "price": 1.92,
-        "bookmaker": "lowvig"
+        "point": 39.5,
+        "price": 1.86,
+        "bookmaker": "draftkings"
       },
       "best_under": {
-        "point": 41.5,
-        "price": 1.88,
-        "bookmaker": "betrivers"
+        "point": 40.5,
+        "price": 1.87,
+        "bookmaker": "fanduel"
       }
     },
     {
@@ -669,25 +669,25 @@
       "home_team": "HOU",
       "away_team": "BAL",
       "model_home_win_prob": 0.588,
-      "market_home_win_prob": 0.7308,
-      "edge": -0.1428,
-      "abs_edge": 0.1428,
+      "market_home_win_prob": 0.7295,
+      "edge": -0.1415,
+      "abs_edge": 0.1415,
       "ev_home_ml": -22.384,
-      "ev_away_ml": 52.44,
-      "best_ev": 52.44,
+      "ev_away_ml": 48.732,
+      "best_ev": 48.732,
       "best_ev_side": "away",
-      "best_market_ev": 52.44,
+      "best_market_ev": 48.73,
       "markets": {
         "ml": {
           "side": "away",
           "team": "BAL",
           "line": null,
           "model_prob": 0.412,
-          "market_prob": 0.2692,
-          "edge": 0.1428,
-          "price": 3.7,
-          "bookmaker": "fanduel",
-          "ev": 52.44
+          "market_prob": 0.2705,
+          "edge": 0.1415,
+          "price": 3.61,
+          "bookmaker": "draftkings",
+          "ev": 48.73
         },
         "spread": {
           "side": "away",
@@ -697,7 +697,7 @@
           "market_prob": 0.5,
           "edge": 0.1172,
           "price": 1.91,
-          "bookmaker": "mybookieag",
+          "bookmaker": "lowvig",
           "ev": 17.89
         },
         "total": {
@@ -713,9 +713,9 @@
         }
       },
       "best_market": "ml",
-      "best_edge": 0.1428,
+      "best_edge": 0.1415,
       "outlier": false,
-      "outlier_edge": 0.1428,
+      "outlier_edge": 0.1415,
       "outlier_market": "ml",
       "best_team": "BAL",
       "model_spread": 3.0,
@@ -726,21 +726,21 @@
       "total_edge": 1.6,
       "best_home_ml": {
         "price": 1.32,
-        "bookmaker": "betus"
+        "bookmaker": "fanduel"
       },
       "best_away_ml": {
-        "price": 3.7,
-        "bookmaker": "fanduel"
+        "price": 3.61,
+        "bookmaker": "draftkings"
       },
       "best_home_spread": {
         "point": -6.5,
-        "price": 1.88,
-        "bookmaker": "betrivers"
+        "price": 1.87,
+        "bookmaker": "fanduel"
       },
       "best_away_spread": {
         "point": 7.0,
         "price": 1.91,
-        "bookmaker": "mybookieag"
+        "bookmaker": "lowvig"
       },
       "best_over": {
         "point": 46.5,
@@ -749,8 +749,8 @@
       },
       "best_under": {
         "point": 47.5,
-        "price": 1.87,
-        "bookmaker": "fanduel"
+        "price": 1.89,
+        "bookmaker": "bovada"
       }
     },
     {
@@ -761,36 +761,36 @@
       "home_team": "IND",
       "away_team": "NYG",
       "model_home_win_prob": 0.424,
-      "market_home_win_prob": 0.2727,
-      "edge": 0.1513,
-      "abs_edge": 0.1513,
-      "ev_home_ml": 63.24,
-      "ev_away_ml": -23.392,
-      "best_ev": 63.24,
+      "market_home_win_prob": 0.2754,
+      "edge": 0.1486,
+      "abs_edge": 0.1486,
+      "ev_home_ml": 53.064,
+      "ev_away_ml": -22.24,
+      "best_ev": 53.064,
       "best_ev_side": "home",
-      "best_market_ev": 63.24,
+      "best_market_ev": 53.06,
       "markets": {
         "ml": {
           "side": "home",
           "team": "IND",
           "line": null,
           "model_prob": 0.424,
-          "market_prob": 0.2727,
-          "edge": 0.1513,
-          "price": 3.85,
-          "bookmaker": "betrivers",
-          "ev": 63.24
+          "market_prob": 0.2754,
+          "edge": 0.1486,
+          "price": 3.61,
+          "bookmaker": "draftkings",
+          "ev": 53.06
         },
         "spread": {
           "side": "home",
           "team": "IND",
-          "line": 7.0,
-          "model_prob": 0.6286,
+          "line": 6.5,
+          "model_prob": 0.6144,
           "market_prob": 0.5,
-          "edge": 0.1286,
-          "price": 1.92,
-          "bookmaker": "betrivers",
-          "ev": 20.69
+          "edge": 0.1144,
+          "price": 1.94,
+          "bookmaker": "draftkings",
+          "ev": 19.19
         },
         "total": {
           "side": "under",
@@ -817,27 +817,27 @@
       "market_total": 41.5,
       "total_edge": -6.5,
       "best_home_ml": {
-        "price": 3.85,
-        "bookmaker": "betrivers"
+        "price": 3.61,
+        "bookmaker": "draftkings"
       },
       "best_away_ml": {
-        "price": 1.33,
-        "bookmaker": "betmgm"
+        "price": 1.35,
+        "bookmaker": "bovada"
       },
       "best_home_spread": {
-        "point": 7.0,
-        "price": 1.92,
-        "bookmaker": "betrivers"
+        "point": 6.5,
+        "price": 1.94,
+        "bookmaker": "draftkings"
       },
       "best_away_spread": {
-        "point": -6.5,
-        "price": 1.95,
-        "bookmaker": "lowvig"
+        "point": -6.0,
+        "price": 1.91,
+        "bookmaker": "mybookieag"
       },
       "best_over": {
-        "point": 41.0,
-        "price": 1.91,
-        "bookmaker": "betus"
+        "point": 40.5,
+        "price": 1.87,
+        "bookmaker": "betrivers"
       },
       "best_under": {
         "point": 42.5,
@@ -853,9 +853,9 @@
       "home_team": "MIA",
       "away_team": "NYJ",
       "model_home_win_prob": 0.419,
-      "market_home_win_prob": 0.3592,
-      "edge": 0.0598,
-      "abs_edge": 0.0598,
+      "market_home_win_prob": 0.3571,
+      "edge": 0.0619,
+      "abs_edge": 0.0619,
       "ev_home_ml": 15.644,
       "ev_away_ml": -12.269,
       "best_ev": 15.644,
@@ -867,8 +867,8 @@
           "team": "MIA",
           "line": null,
           "model_prob": 0.419,
-          "market_prob": 0.3592,
-          "edge": 0.0598,
+          "market_prob": 0.3571,
+          "edge": 0.0619,
           "price": 2.76,
           "bookmaker": "fanduel",
           "ev": 15.64
@@ -876,13 +876,13 @@
         "spread": {
           "side": "home",
           "team": "MIA",
-          "line": 4.0,
-          "model_prob": 0.5356,
+          "line": 3.5,
+          "model_prob": 0.5208,
           "market_prob": 0.5,
-          "edge": 0.0356,
-          "price": 1.89,
-          "bookmaker": "betmgm",
-          "ev": 1.23
+          "edge": 0.0208,
+          "price": 2.0,
+          "bookmaker": "fanduel",
+          "ev": 4.16
         },
         "total": {
           "side": "over",
@@ -914,16 +914,16 @@
       },
       "best_away_ml": {
         "price": 1.51,
-        "bookmaker": "draftkings"
+        "bookmaker": "lowvig"
       },
       "best_home_spread": {
-        "point": 4.0,
-        "price": 1.89,
-        "bookmaker": "betmgm"
+        "point": 3.5,
+        "price": 2.0,
+        "bookmaker": "fanduel"
       },
       "best_away_spread": {
         "point": -3.5,
-        "price": 1.93,
+        "price": 1.95,
         "bookmaker": "lowvig"
       },
       "best_over": {
@@ -934,7 +934,7 @@
       "best_under": {
         "point": 40.5,
         "price": 1.92,
-        "bookmaker": "draftkings"
+        "bookmaker": "betrivers"
       }
     },
     {
@@ -945,9 +945,9 @@
       "home_team": "MIN",
       "away_team": "ATL",
       "model_home_win_prob": 0.473,
-      "market_home_win_prob": 0.734,
-      "edge": -0.261,
-      "abs_edge": 0.261,
+      "market_home_win_prob": 0.7332,
+      "edge": -0.2602,
+      "abs_edge": 0.2602,
       "ev_home_ml": -37.564,
       "ev_away_ml": 92.355,
       "best_ev": 92.355,
@@ -959,10 +959,10 @@
           "team": "ATL",
           "line": null,
           "model_prob": 0.527,
-          "market_prob": 0.266,
-          "edge": 0.261,
+          "market_prob": 0.2668,
+          "edge": 0.2602,
           "price": 3.65,
-          "bookmaker": "draftkings",
+          "bookmaker": "fanduel",
           "ev": 92.36
         },
         "spread": {
@@ -989,9 +989,9 @@
         }
       },
       "best_market": "ml",
-      "best_edge": 0.261,
+      "best_edge": 0.2602,
       "outlier": true,
-      "outlier_edge": 0.261,
+      "outlier_edge": 0.2602,
       "outlier_market": "ml",
       "best_team": "ATL",
       "model_spread": -0.9,
@@ -1002,16 +1002,16 @@
       "total_edge": 3.0,
       "best_home_ml": {
         "price": 1.32,
-        "bookmaker": "betrivers"
+        "bookmaker": "draftkings"
       },
       "best_away_ml": {
         "price": 3.65,
-        "bookmaker": "draftkings"
+        "bookmaker": "fanduel"
       },
       "best_home_spread": {
-        "point": -7.0,
-        "price": 2.06,
-        "bookmaker": "lowvig"
+        "point": -6.5,
+        "price": 1.85,
+        "bookmaker": "betrivers"
       },
       "best_away_spread": {
         "point": 7.0,
@@ -1024,9 +1024,9 @@
         "bookmaker": "lowvig"
       },
       "best_under": {
-        "point": 42.5,
-        "price": 1.89,
-        "bookmaker": "betrivers"
+        "point": 41.5,
+        "price": 1.93,
+        "bookmaker": "draftkings"
       }
     },
     {
@@ -1037,25 +1037,25 @@
       "home_team": "JAX",
       "away_team": "TEN",
       "model_home_win_prob": 0.766,
-      "market_home_win_prob": 0.8875,
-      "edge": -0.1215,
-      "abs_edge": 0.1215,
+      "market_home_win_prob": 0.8813,
+      "edge": -0.1153,
+      "abs_edge": 0.1153,
       "ev_home_ml": -16.506,
-      "ev_away_ml": 105.92,
-      "best_ev": 105.92,
+      "ev_away_ml": 98.9,
+      "best_ev": 98.9,
       "best_ev_side": "away",
-      "best_market_ev": 105.92,
+      "best_market_ev": 98.9,
       "markets": {
         "ml": {
           "side": "away",
           "team": "TEN",
           "line": null,
           "model_prob": 0.234,
-          "market_prob": 0.1125,
-          "edge": 0.1215,
-          "price": 8.8,
-          "bookmaker": "draftkings",
-          "ev": 105.92
+          "market_prob": 0.1187,
+          "edge": 0.1153,
+          "price": 8.5,
+          "bookmaker": "fanduel",
+          "ev": 98.9
         },
         "spread": {
           "side": "away",
@@ -1064,26 +1064,26 @@
           "model_prob": 0.6398,
           "market_prob": 0.5,
           "edge": 0.1398,
-          "price": 2.01,
-          "bookmaker": "lowvig",
-          "ev": 28.6
+          "price": 1.93,
+          "bookmaker": "bovada",
+          "ev": 23.48
         },
         "total": {
           "side": "over",
           "team": "Over",
-          "line": 47.5,
-          "model_prob": 0.6562,
+          "line": 48.0,
+          "model_prob": 0.6429,
           "market_prob": 0.5,
-          "edge": 0.1562,
-          "price": 1.87,
-          "bookmaker": "betrivers",
-          "ev": 22.71
+          "edge": 0.1429,
+          "price": 1.91,
+          "bookmaker": "mybookieag",
+          "ev": 22.79
         }
       },
       "best_market": "total",
-      "best_edge": 0.1562,
+      "best_edge": 0.1429,
       "outlier": false,
-      "outlier_edge": 0.1562,
+      "outlier_edge": 0.1429,
       "outlier_market": "total",
       "best_team": "Over",
       "model_spread": 9.7,
@@ -1094,31 +1094,31 @@
       "total_edge": 4.6,
       "best_home_ml": {
         "price": 1.09,
-        "bookmaker": "betmgm"
+        "bookmaker": "draftkings"
       },
       "best_away_ml": {
-        "price": 8.8,
-        "bookmaker": "draftkings"
+        "price": 8.5,
+        "bookmaker": "fanduel"
       },
       "best_home_spread": {
         "point": -14.5,
-        "price": 1.96,
-        "bookmaker": "draftkings"
+        "price": 1.99,
+        "bookmaker": "lowvig"
       },
       "best_away_spread": {
         "point": 14.5,
-        "price": 2.01,
-        "bookmaker": "lowvig"
+        "price": 1.93,
+        "bookmaker": "bovada"
       },
       "best_over": {
-        "point": 47.5,
-        "price": 1.87,
-        "bookmaker": "betrivers"
+        "point": 48.0,
+        "price": 1.91,
+        "bookmaker": "mybookieag"
       },
       "best_under": {
-        "point": 48.5,
-        "price": 1.93,
-        "bookmaker": "lowvig"
+        "point": 49.0,
+        "price": 1.89,
+        "bookmaker": "bovada"
       }
     },
     {
@@ -1133,7 +1133,7 @@
       "edge": 0.0224,
       "abs_edge": 0.0224,
       "ev_home_ml": 8.0,
-      "ev_away_ml": -5.83,
+      "ev_away_ml": -3.64,
       "best_ev": 8.0,
       "best_ev_side": "home",
       "best_market_ev": 28.67,
@@ -1156,9 +1156,9 @@
           "model_prob": 0.5356,
           "market_prob": 0.5,
           "edge": 0.0356,
-          "price": 1.97,
-          "bookmaker": "lowvig",
-          "ev": 5.51
+          "price": 1.93,
+          "bookmaker": "draftkings",
+          "ev": 3.37
         },
         "total": {
           "side": "over",
@@ -1189,18 +1189,18 @@
         "bookmaker": "fanduel"
       },
       "best_away_ml": {
-        "price": 1.29,
+        "price": 1.32,
         "bookmaker": "draftkings"
       },
       "best_home_spread": {
-        "point": 7.0,
-        "price": 1.95,
-        "bookmaker": "fanduel"
+        "point": 8.0,
+        "price": 1.79,
+        "bookmaker": "lowvig"
       },
       "best_away_spread": {
         "point": -7.0,
-        "price": 1.97,
-        "bookmaker": "lowvig"
+        "price": 1.93,
+        "bookmaker": "draftkings"
       },
       "best_over": {
         "point": 41.5,
@@ -1208,9 +1208,9 @@
         "bookmaker": "lowvig"
       },
       "best_under": {
-        "point": 42.0,
-        "price": 1.91,
-        "bookmaker": "betus"
+        "point": 41.5,
+        "price": 1.93,
+        "bookmaker": "draftkings"
       }
     },
     {
@@ -1221,88 +1221,88 @@
       "home_team": "SF",
       "away_team": "SEA",
       "model_home_win_prob": 0.784,
-      "market_home_win_prob": 0.6116,
-      "edge": 0.1724,
-      "abs_edge": 0.1724,
-      "ev_home_ml": 27.792,
-      "ev_away_ml": -44.92,
-      "best_ev": 27.792,
+      "market_home_win_prob": 0.5678,
+      "edge": 0.2162,
+      "abs_edge": 0.2162,
+      "ev_home_ml": 34.064,
+      "ev_away_ml": -51.4,
+      "best_ev": 34.064,
       "best_ev_side": "home",
-      "best_market_ev": 37.9,
+      "best_market_ev": 35.29,
       "markets": {
         "ml": {
           "side": "home",
           "team": "SF",
           "line": null,
           "model_prob": 0.784,
-          "market_prob": 0.6116,
-          "edge": 0.1724,
-          "price": 1.63,
-          "bookmaker": "betrivers",
-          "ev": 27.79
+          "market_prob": 0.5678,
+          "edge": 0.2162,
+          "price": 1.71,
+          "bookmaker": "betus",
+          "ev": 34.06
         },
         "spread": {
           "side": "home",
           "team": "SF",
-          "line": -3.0,
-          "model_prob": 0.7145,
+          "line": -2.0,
+          "model_prob": 0.7393,
           "market_prob": 0.5,
-          "edge": 0.2145,
-          "price": 1.93,
-          "bookmaker": "betrivers",
-          "ev": 37.9
+          "edge": 0.2393,
+          "price": 1.83,
+          "bookmaker": "betus",
+          "ev": 35.29
         },
         "total": {
           "side": "under",
           "team": "Under",
-          "line": 46.0,
-          "model_prob": 0.6482,
+          "line": 44.5,
+          "model_prob": 0.6075,
           "market_prob": 0.5,
-          "edge": 0.1482,
-          "price": 1.89,
-          "bookmaker": "betrivers",
-          "ev": 22.51
+          "edge": 0.1075,
+          "price": 1.93,
+          "bookmaker": "lowvig",
+          "ev": 17.25
         }
       },
       "best_market": "spread",
-      "best_edge": 0.2145,
+      "best_edge": 0.2393,
       "outlier": true,
-      "outlier_edge": 0.2145,
+      "outlier_edge": 0.2393,
       "outlier_market": "spread",
       "best_team": "SF",
       "model_spread": 10.6,
-      "market_spread": -3.0,
-      "spread_edge": -13.6,
+      "market_spread": -2.5,
+      "spread_edge": -13.1,
       "model_total": 40.7,
-      "market_total": 45.0,
-      "total_edge": -4.3,
+      "market_total": 44.5,
+      "total_edge": -3.8,
       "best_home_ml": {
-        "price": 1.63,
-        "bookmaker": "betrivers"
-      },
-      "best_away_ml": {
-        "price": 2.55,
+        "price": 1.71,
         "bookmaker": "betus"
       },
-      "best_home_spread": {
-        "point": -3.0,
-        "price": 1.93,
-        "bookmaker": "betrivers"
-      },
-      "best_away_spread": {
-        "point": 3.5,
-        "price": 1.85,
-        "bookmaker": "draftkings"
-      },
-      "best_over": {
-        "point": 45.0,
-        "price": 1.93,
+      "best_away_ml": {
+        "price": 2.25,
         "bookmaker": "lowvig"
       },
-      "best_under": {
-        "point": 46.0,
-        "price": 1.89,
+      "best_home_spread": {
+        "point": -2.0,
+        "price": 1.83,
+        "bookmaker": "betus"
+      },
+      "best_away_spread": {
+        "point": 3.0,
+        "price": 1.83,
         "bookmaker": "betrivers"
+      },
+      "best_over": {
+        "point": 44.5,
+        "price": 1.95,
+        "bookmaker": "bovada"
+      },
+      "best_under": {
+        "point": 44.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
       }
     },
     {
@@ -1313,36 +1313,36 @@
       "home_team": "LAC",
       "away_team": "NE",
       "model_home_win_prob": 0.572,
-      "market_home_win_prob": 0.5091,
-      "edge": 0.0629,
-      "abs_edge": 0.0629,
-      "ev_home_ml": 8.108,
+      "market_home_win_prob": 0.5026,
+      "edge": 0.0694,
+      "abs_edge": 0.0694,
+      "ev_home_ml": 11.54,
       "ev_away_ml": -16.112,
-      "best_ev": 8.108,
+      "best_ev": 11.54,
       "best_ev_side": "home",
-      "best_market_ev": 11.34,
+      "best_market_ev": 13.42,
       "markets": {
         "ml": {
           "side": "home",
           "team": "LAC",
           "line": null,
           "model_prob": 0.572,
-          "market_prob": 0.5091,
-          "edge": 0.0629,
-          "price": 1.89,
-          "bookmaker": "fanduel",
-          "ev": 8.11
+          "market_prob": 0.5026,
+          "edge": 0.0694,
+          "price": 1.95,
+          "bookmaker": "bovada",
+          "ev": 11.54
         },
         "spread": {
           "side": "home",
           "team": "LAC",
-          "line": 0.0,
-          "model_prob": 0.571,
+          "line": 1.0,
+          "model_prob": 0.6001,
           "market_prob": 0.5,
-          "edge": 0.071,
-          "price": 1.95,
-          "bookmaker": "lowvig",
-          "ev": 11.34
+          "edge": 0.1001,
+          "price": 1.89,
+          "bookmaker": "bovada",
+          "ev": 13.42
         },
         "total": {
           "side": "under",
@@ -1357,29 +1357,29 @@
         }
       },
       "best_market": "spread",
-      "best_edge": 0.071,
+      "best_edge": 0.1001,
       "outlier": false,
-      "outlier_edge": 0.071,
+      "outlier_edge": 0.1001,
       "outlier_market": "spread",
       "best_team": "LAC",
       "model_spread": 2.4,
-      "market_spread": -0.75,
-      "spread_edge": -3.15,
+      "market_spread": 0.0,
+      "spread_edge": -2.4,
       "model_total": 34.8,
       "market_total": 35.5,
       "total_edge": -0.7,
       "best_home_ml": {
-        "price": 1.89,
-        "bookmaker": "fanduel"
+        "price": 1.95,
+        "bookmaker": "bovada"
       },
       "best_away_ml": {
         "price": 1.96,
-        "bookmaker": "draftkings"
+        "bookmaker": "fanduel"
       },
       "best_home_spread": {
-        "point": 0.0,
-        "price": 1.95,
-        "bookmaker": "lowvig"
+        "point": 1.0,
+        "price": 1.89,
+        "bookmaker": "bovada"
       },
       "best_away_spread": {
         "point": 1.5,
@@ -1387,9 +1387,9 @@
         "bookmaker": "fanduel"
       },
       "best_over": {
-        "point": 35.0,
-        "price": 1.91,
-        "bookmaker": "betmgm"
+        "point": 35.5,
+        "price": 1.95,
+        "bookmaker": "bovada"
       },
       "best_under": {
         "point": 35.5,
@@ -1405,9 +1405,9 @@
       "home_team": "TB",
       "away_team": "CAR",
       "model_home_win_prob": 0.498,
-      "market_home_win_prob": 0.5828,
-      "edge": -0.0848,
-      "abs_edge": 0.0848,
+      "market_home_win_prob": 0.5919,
+      "edge": -0.0939,
+      "abs_edge": 0.0939,
       "ev_home_ml": -16.834,
       "ev_away_ml": 20.982,
       "best_ev": 20.982,
@@ -1419,8 +1419,8 @@
           "team": "CAR",
           "line": null,
           "model_prob": 0.502,
-          "market_prob": 0.4172,
-          "edge": 0.0848,
+          "market_prob": 0.4081,
+          "edge": 0.0939,
           "price": 2.41,
           "bookmaker": "lowvig",
           "ev": 20.98
@@ -1432,9 +1432,9 @@
           "model_prob": 0.5914,
           "market_prob": 0.5,
           "edge": 0.0914,
-          "price": 1.93,
-          "bookmaker": "lowvig",
-          "ev": 14.14
+          "price": 1.95,
+          "bookmaker": "betus",
+          "ev": 15.32
         },
         "total": {
           "side": "over",
@@ -1448,11 +1448,11 @@
           "ev": 7.52
         }
       },
-      "best_market": "spread",
-      "best_edge": 0.0914,
+      "best_market": "ml",
+      "best_edge": 0.0939,
       "outlier": false,
-      "outlier_edge": 0.0914,
-      "outlier_market": "spread",
+      "outlier_edge": 0.0939,
+      "outlier_market": "ml",
       "best_team": "CAR",
       "model_spread": -0.1,
       "market_spread": -3.0,
@@ -1462,7 +1462,7 @@
       "total_edge": 1.8,
       "best_home_ml": {
         "price": 1.67,
-        "bookmaker": "betus"
+        "bookmaker": "betrivers"
       },
       "best_away_ml": {
         "price": 2.41,
@@ -1471,12 +1471,12 @@
       "best_home_spread": {
         "point": -3.0,
         "price": 2.0,
-        "bookmaker": "betus"
+        "bookmaker": "mybookieag"
       },
       "best_away_spread": {
         "point": 3.0,
-        "price": 1.93,
-        "bookmaker": "lowvig"
+        "price": 1.95,
+        "bookmaker": "betus"
       },
       "best_over": {
         "point": 43.5,
@@ -1497,9 +1497,9 @@
       "home_team": "LA",
       "away_team": "KC",
       "model_home_win_prob": 0.535,
-      "market_home_win_prob": 0.4883,
-      "edge": 0.0467,
-      "abs_edge": 0.0467,
+      "market_home_win_prob": 0.4753,
+      "edge": 0.0597,
+      "abs_edge": 0.0597,
       "ev_home_ml": 8.07,
       "ev_away_ml": -10.255,
       "best_ev": 8.07,
@@ -1511,8 +1511,8 @@
           "team": "LA",
           "line": null,
           "model_prob": 0.535,
-          "market_prob": 0.4883,
-          "edge": 0.0467,
+          "market_prob": 0.4753,
+          "edge": 0.0597,
           "price": 2.02,
           "bookmaker": "fanduel",
           "ev": 8.07
@@ -1535,9 +1535,9 @@
           "model_prob": 0.5229,
           "market_prob": 0.5,
           "edge": 0.0229,
-          "price": 1.91,
-          "bookmaker": "betus",
-          "ev": -0.13
+          "price": 1.93,
+          "bookmaker": "lowvig",
+          "ev": 0.92
         }
       },
       "best_market": "spread",
@@ -1547,11 +1547,11 @@
       "outlier_market": "spread",
       "best_team": "LA",
       "model_spread": 1.2,
-      "market_spread": 0.0,
-      "spread_edge": -1.2,
+      "market_spread": 0.75,
+      "spread_edge": -0.45,
       "model_total": 45.3,
-      "market_total": 45.5,
-      "total_edge": -0.2,
+      "market_total": 45.0,
+      "total_edge": 0.3,
       "best_home_ml": {
         "price": 2.02,
         "bookmaker": "fanduel"
@@ -1567,18 +1567,18 @@
       },
       "best_away_spread": {
         "point": 1.5,
-        "price": 1.82,
+        "price": 1.81,
         "bookmaker": "draftkings"
       },
       "best_over": {
         "point": 44.5,
-        "price": 1.91,
-        "bookmaker": "betus"
+        "price": 1.93,
+        "bookmaker": "lowvig"
       },
       "best_under": {
         "point": 45.5,
-        "price": 1.95,
-        "bookmaker": "fanduel"
+        "price": 1.91,
+        "bookmaker": "draftkings"
       }
     },
     {
@@ -1589,10 +1589,10 @@
       "home_team": "ATL",
       "away_team": "DET",
       "model_home_win_prob": 0.324,
-      "market_home_win_prob": 0.3701,
-      "edge": -0.0461,
-      "abs_edge": 0.0461,
-      "ev_home_ml": -15.112,
+      "market_home_win_prob": 0.3614,
+      "edge": -0.0374,
+      "abs_edge": 0.0374,
+      "ev_home_ml": -13.168,
       "ev_away_ml": 3.428,
       "best_ev": 3.428,
       "best_ev_side": "away",
@@ -1603,8 +1603,8 @@
           "team": "DET",
           "line": null,
           "model_prob": 0.676,
-          "market_prob": 0.6299,
-          "edge": 0.0461,
+          "market_prob": 0.6386,
+          "edge": 0.0374,
           "price": 1.53,
           "bookmaker": "draftkings",
           "ev": 3.43
@@ -1645,7 +1645,7 @@
       "market_total": 50.5,
       "total_edge": -1.1,
       "best_home_ml": {
-        "price": 2.62,
+        "price": 2.68,
         "bookmaker": "fanduel"
       },
       "best_away_ml": {
@@ -1681,9 +1681,9 @@
       "home_team": "CHI",
       "away_team": "JAX",
       "model_home_win_prob": 0.506,
-      "market_home_win_prob": 0.5756,
-      "edge": -0.0696,
-      "abs_edge": 0.0696,
+      "market_home_win_prob": 0.5692,
+      "edge": -0.0632,
+      "abs_edge": 0.0632,
       "ev_home_ml": -14.486,
       "ev_away_ml": 14.114,
       "best_ev": 14.114,
@@ -1695,8 +1695,8 @@
           "team": "JAX",
           "line": null,
           "model_prob": 0.494,
-          "market_prob": 0.4244,
-          "edge": 0.0696,
+          "market_prob": 0.4308,
+          "edge": 0.0632,
           "price": 2.31,
           "bookmaker": "draftkings",
           "ev": 14.11
@@ -1708,9 +1708,9 @@
           "model_prob": 0.5827,
           "market_prob": 0.5,
           "edge": 0.0827,
-          "price": 1.95,
-          "bookmaker": "lowvig",
-          "ev": 13.63
+          "price": 1.87,
+          "bookmaker": "draftkings",
+          "ev": 8.96
         },
         "total": {
           "side": "under",
@@ -1731,8 +1731,8 @@
       "outlier_market": "total",
       "best_team": "Under",
       "model_spread": 0.2,
-      "market_spread": -3.0,
-      "spread_edge": -3.2,
+      "market_spread": -2.75,
+      "spread_edge": -2.95,
       "model_total": 42.9,
       "market_total": 50.0,
       "total_edge": -7.1,
@@ -1751,8 +1751,8 @@
       },
       "best_away_spread": {
         "point": 3.0,
-        "price": 1.95,
-        "bookmaker": "lowvig"
+        "price": 1.87,
+        "bookmaker": "draftkings"
       },
       "best_over": {
         "point": 49.5,
@@ -1773,9 +1773,9 @@
       "home_team": "CLE",
       "away_team": "CIN",
       "model_home_win_prob": 0.382,
-      "market_home_win_prob": 0.3154,
-      "edge": 0.0666,
-      "abs_edge": 0.0666,
+      "market_home_win_prob": 0.3227,
+      "edge": 0.0593,
+      "abs_edge": 0.0593,
       "ev_home_ml": 19.184,
       "ev_away_ml": -12.244,
       "best_ev": 19.184,
@@ -1787,8 +1787,8 @@
           "team": "CLE",
           "line": null,
           "model_prob": 0.382,
-          "market_prob": 0.3154,
-          "edge": 0.0666,
+          "market_prob": 0.3227,
+          "edge": 0.0593,
           "price": 3.12,
           "bookmaker": "draftkings",
           "ev": 19.18
@@ -1823,8 +1823,8 @@
       "outlier_market": "total",
       "best_team": "Under",
       "model_spread": -4.0,
-      "market_spread": 4.5,
-      "spread_edge": 8.5,
+      "market_spread": 5.0,
+      "spread_edge": 9.0,
       "model_total": 37.1,
       "market_total": 47.5,
       "total_edge": -10.4,
@@ -1865,25 +1865,25 @@
       "home_team": "NO",
       "away_team": "GB",
       "model_home_win_prob": 0.386,
-      "market_home_win_prob": 0.322,
-      "edge": 0.064,
-      "abs_edge": 0.064,
-      "ev_home_ml": 18.116,
-      "ev_away_ml": -12.198,
-      "best_ev": 18.116,
+      "market_home_win_prob": 0.308,
+      "edge": 0.078,
+      "abs_edge": 0.078,
+      "ev_home_ml": 21.59,
+      "ev_away_ml": -14.04,
+      "best_ev": 21.59,
       "best_ev_side": "home",
-      "best_market_ev": 18.12,
+      "best_market_ev": 21.59,
       "markets": {
         "ml": {
           "side": "home",
           "team": "NO",
           "line": null,
           "model_prob": 0.386,
-          "market_prob": 0.322,
-          "edge": 0.064,
-          "price": 3.06,
-          "bookmaker": "draftkings",
-          "ev": 18.12
+          "market_prob": 0.308,
+          "edge": 0.078,
+          "price": 3.15,
+          "bookmaker": "fanduel",
+          "ev": 21.59
         },
         "spread": {
           "side": "home",
@@ -1893,7 +1893,7 @@
           "market_prob": 0.5,
           "edge": 0.0475,
           "price": 1.95,
-          "bookmaker": "lowvig",
+          "bookmaker": "fanduel",
           "ev": 6.76
         },
         "total": {
@@ -1903,15 +1903,15 @@
           "model_prob": 0.5286,
           "market_prob": 0.5,
           "edge": 0.0286,
-          "price": 1.87,
-          "bookmaker": "fanduel",
-          "ev": -1.15
+          "price": 1.93,
+          "bookmaker": "betrivers",
+          "ev": 2.02
         }
       },
       "best_market": "ml",
-      "best_edge": 0.064,
+      "best_edge": 0.078,
       "outlier": false,
-      "outlier_edge": 0.064,
+      "outlier_edge": 0.078,
       "outlier_market": "ml",
       "best_team": "NO",
       "model_spread": -3.9,
@@ -1921,27 +1921,27 @@
       "market_total": 46.0,
       "total_edge": 0.5,
       "best_home_ml": {
-        "price": 3.06,
-        "bookmaker": "draftkings"
+        "price": 3.15,
+        "bookmaker": "fanduel"
       },
       "best_away_ml": {
-        "price": 1.43,
-        "bookmaker": "fanduel"
+        "price": 1.4,
+        "bookmaker": "draftkings"
       },
       "best_home_spread": {
         "point": 5.5,
         "price": 1.95,
-        "bookmaker": "lowvig"
+        "bookmaker": "fanduel"
       },
       "best_away_spread": {
-        "point": -5.0,
-        "price": 1.91,
-        "bookmaker": "betus"
+        "point": -5.5,
+        "price": 1.95,
+        "bookmaker": "lowvig"
       },
       "best_over": {
         "point": 45.5,
-        "price": 1.87,
-        "bookmaker": "fanduel"
+        "price": 1.93,
+        "bookmaker": "betrivers"
       },
       "best_under": {
         "point": 46.5,
@@ -1957,25 +1957,25 @@
       "home_team": "NYG",
       "away_team": "SF",
       "model_home_win_prob": 0.35,
-      "market_home_win_prob": 0.2746,
-      "edge": 0.0754,
-      "abs_edge": 0.0754,
-      "ev_home_ml": 26.0,
+      "market_home_win_prob": 0.2668,
+      "edge": 0.0832,
+      "abs_edge": 0.0832,
+      "ev_home_ml": 29.5,
       "ev_away_ml": -12.9,
-      "best_ev": 26.0,
+      "best_ev": 29.5,
       "best_ev_side": "home",
-      "best_market_ev": 26.0,
+      "best_market_ev": 29.5,
       "markets": {
         "ml": {
           "side": "home",
           "team": "NYG",
           "line": null,
           "model_prob": 0.35,
-          "market_prob": 0.2746,
-          "edge": 0.0754,
-          "price": 3.6,
-          "bookmaker": "fanduel",
-          "ev": 26.0
+          "market_prob": 0.2668,
+          "edge": 0.0832,
+          "price": 3.7,
+          "bookmaker": "betrivers",
+          "ev": 29.5
         },
         "spread": {
           "side": "home",
@@ -1984,9 +1984,9 @@
           "model_prob": 0.5386,
           "market_prob": 0.5,
           "edge": 0.0386,
-          "price": 1.91,
-          "bookmaker": "draftkings",
-          "ev": 2.87
+          "price": 1.97,
+          "bookmaker": "lowvig",
+          "ev": 6.1
         },
         "total": {
           "side": "over",
@@ -2007,14 +2007,14 @@
       "outlier_market": "total",
       "best_team": "Over",
       "model_spread": -5.2,
-      "market_spread": 6.0,
-      "spread_edge": 11.2,
+      "market_spread": 6.5,
+      "spread_edge": 11.7,
       "model_total": 51.3,
       "market_total": 47.5,
       "total_edge": 3.8,
       "best_home_ml": {
-        "price": 3.6,
-        "bookmaker": "fanduel"
+        "price": 3.7,
+        "bookmaker": "betrivers"
       },
       "best_away_ml": {
         "price": 1.34,
@@ -2022,12 +2022,12 @@
       },
       "best_home_spread": {
         "point": 6.5,
-        "price": 1.91,
-        "bookmaker": "draftkings"
+        "price": 1.97,
+        "bookmaker": "lowvig"
       },
       "best_away_spread": {
-        "point": -6.0,
-        "price": 1.95,
+        "point": -6.5,
+        "price": 1.93,
         "bookmaker": "lowvig"
       },
       "best_over": {
@@ -2049,9 +2049,9 @@
       "home_team": "TB",
       "away_team": "LAC",
       "model_home_win_prob": 0.568,
-      "market_home_win_prob": 0.6957,
-      "edge": -0.1277,
-      "abs_edge": 0.1277,
+      "market_home_win_prob": 0.6954,
+      "edge": -0.1274,
+      "abs_edge": 0.1274,
       "ev_home_ml": -21.048,
       "ev_away_ml": 38.24,
       "best_ev": 38.24,
@@ -2063,8 +2063,8 @@
           "team": "LAC",
           "line": null,
           "model_prob": 0.432,
-          "market_prob": 0.3043,
-          "edge": 0.1277,
+          "market_prob": 0.3046,
+          "edge": 0.1274,
           "price": 3.2,
           "bookmaker": "fanduel",
           "ev": 38.24
@@ -2093,9 +2093,9 @@
         }
       },
       "best_market": "ml",
-      "best_edge": 0.1277,
+      "best_edge": 0.1274,
       "outlier": false,
-      "outlier_edge": 0.1277,
+      "outlier_edge": 0.1274,
       "outlier_market": "ml",
       "best_team": "LAC",
       "model_spread": 2.3,
@@ -2128,7 +2128,7 @@
         "bookmaker": "lowvig"
       },
       "best_under": {
-        "point": 41.5,
+        "point": 41.0,
         "price": 1.91,
         "bookmaker": "betus"
       }
@@ -2141,9 +2141,9 @@
       "home_team": "TEN",
       "away_team": "WAS",
       "model_home_win_prob": 0.473,
-      "market_home_win_prob": 0.336,
-      "edge": 0.137,
-      "abs_edge": 0.137,
+      "market_home_win_prob": 0.3396,
+      "edge": 0.1334,
+      "abs_edge": 0.1334,
       "ev_home_ml": 38.589,
       "ev_away_ml": -22.531,
       "best_ev": 38.589,
@@ -2155,8 +2155,8 @@
           "team": "TEN",
           "line": null,
           "model_prob": 0.473,
-          "market_prob": 0.336,
-          "edge": 0.137,
+          "market_prob": 0.3396,
+          "edge": 0.1334,
           "price": 2.93,
           "bookmaker": "draftkings",
           "ev": 38.59
@@ -2168,9 +2168,9 @@
           "model_prob": 0.6058,
           "market_prob": 0.5,
           "edge": 0.1058,
-          "price": 1.91,
+          "price": 1.92,
           "bookmaker": "draftkings",
-          "ev": 15.71
+          "ev": 16.31
         },
         "total": {
           "side": "under",
@@ -2185,9 +2185,9 @@
         }
       },
       "best_market": "ml",
-      "best_edge": 0.137,
+      "best_edge": 0.1334,
       "outlier": false,
-      "outlier_edge": 0.137,
+      "outlier_edge": 0.1334,
       "outlier_market": "ml",
       "best_team": "TEN",
       "model_spread": -0.9,
@@ -2206,12 +2206,12 @@
       },
       "best_home_spread": {
         "point": 4.5,
-        "price": 1.91,
+        "price": 1.92,
         "bookmaker": "draftkings"
       },
       "best_away_spread": {
         "point": -4.0,
-        "price": 1.95,
+        "price": 1.91,
         "bookmaker": "lowvig"
       },
       "best_over": {
@@ -2233,9 +2233,9 @@
       "home_team": "ARI",
       "away_team": "PHI",
       "model_home_win_prob": 0.272,
-      "market_home_win_prob": 0.4129,
-      "edge": -0.1409,
-      "abs_edge": 0.1409,
+      "market_home_win_prob": 0.4152,
+      "edge": -0.1432,
+      "abs_edge": 0.1432,
       "ev_home_ml": -36.352,
       "ev_away_ml": 19.392,
       "best_ev": 19.392,
@@ -2247,8 +2247,8 @@
           "team": "PHI",
           "line": null,
           "model_prob": 0.728,
-          "market_prob": 0.5871,
-          "edge": 0.1409,
+          "market_prob": 0.5848,
+          "edge": 0.1432,
           "price": 1.64,
           "bookmaker": "draftkings",
           "ev": 19.39
@@ -2283,8 +2283,8 @@
       "outlier_market": "total",
       "best_team": "Over",
       "model_spread": -8.1,
-      "market_spread": 2.5,
-      "spread_edge": 10.6,
+      "market_spread": 2.75,
+      "spread_edge": 10.85,
       "model_total": 42.7,
       "market_total": 36.5,
       "total_edge": 6.2,
@@ -2325,9 +2325,9 @@
       "home_team": "DEN",
       "away_team": "MIA",
       "model_home_win_prob": 0.752,
-      "market_home_win_prob": 0.8896,
-      "edge": -0.1376,
-      "abs_edge": 0.1376,
+      "market_home_win_prob": 0.8937,
+      "edge": -0.1417,
+      "abs_edge": 0.1417,
       "ev_home_ml": -18.032,
       "ev_away_ml": 130.64,
       "best_ev": 130.64,
@@ -2339,8 +2339,8 @@
           "team": "MIA",
           "line": null,
           "model_prob": 0.248,
-          "market_prob": 0.1104,
-          "edge": 0.1376,
+          "market_prob": 0.1063,
+          "edge": 0.1417,
           "price": 9.3,
           "bookmaker": "fanduel",
           "ev": 130.64
@@ -2375,8 +2375,8 @@
       "outlier_market": "total",
       "best_team": "Over",
       "model_spread": 9.1,
-      "market_spread": -14.0,
-      "spread_edge": -23.1,
+      "market_spread": -14.25,
+      "spread_edge": -23.35,
       "model_total": 48.1,
       "market_total": 39.5,
       "total_edge": 8.6,
@@ -2417,9 +2417,9 @@
       "home_team": "MIN",
       "away_team": "CAR",
       "model_home_win_prob": 0.502,
-      "market_home_win_prob": 0.6777,
-      "edge": -0.1757,
-      "abs_edge": 0.1757,
+      "market_home_win_prob": 0.6697,
+      "edge": -0.1677,
+      "abs_edge": 0.1677,
       "ev_home_ml": -28.214,
       "ev_away_ml": 51.89,
       "best_ev": 51.89,
@@ -2431,8 +2431,8 @@
           "team": "CAR",
           "line": null,
           "model_prob": 0.498,
-          "market_prob": 0.3223,
-          "edge": 0.1757,
+          "market_prob": 0.3303,
+          "edge": 0.1677,
           "price": 3.05,
           "bookmaker": "draftkings",
           "ev": 51.89
@@ -2444,9 +2444,9 @@
           "model_prob": 0.6564,
           "market_prob": 0.5,
           "edge": 0.1564,
-          "price": 1.91,
+          "price": 1.92,
           "bookmaker": "draftkings",
-          "ev": 25.37
+          "ev": 26.03
         },
         "total": {
           "side": "over",
@@ -2461,17 +2461,17 @@
         }
       },
       "best_market": "ml",
-      "best_edge": 0.1757,
+      "best_edge": 0.1677,
       "outlier": false,
-      "outlier_edge": 0.1757,
+      "outlier_edge": 0.1677,
       "outlier_market": "ml",
       "best_team": "CAR",
       "model_spread": 0.1,
-      "market_spread": -4.5,
-      "spread_edge": -4.6,
+      "market_spread": -4.75,
+      "spread_edge": -4.85,
       "model_total": 45.7,
-      "market_total": 42.0,
-      "total_edge": 3.7,
+      "market_total": 42.25,
+      "total_edge": 3.45,
       "best_home_ml": {
         "price": 1.43,
         "bookmaker": "fanduel"
@@ -2487,7 +2487,7 @@
       },
       "best_away_spread": {
         "point": 5.5,
-        "price": 1.91,
+        "price": 1.92,
         "bookmaker": "draftkings"
       },
       "best_over": {
@@ -2509,9 +2509,9 @@
       "home_team": "NE",
       "away_team": "BUF",
       "model_home_win_prob": 0.216,
-      "market_home_win_prob": 0.1415,
-      "edge": 0.0745,
-      "abs_edge": 0.0745,
+      "market_home_win_prob": 0.1459,
+      "edge": 0.0701,
+      "abs_edge": 0.0701,
       "ev_home_ml": 53.36,
       "ev_away_ml": -11.408,
       "best_ev": 53.36,
@@ -2523,8 +2523,8 @@
           "team": "NE",
           "line": null,
           "model_prob": 0.216,
-          "market_prob": 0.1415,
-          "edge": 0.0745,
+          "market_prob": 0.1459,
+          "edge": 0.0701,
           "price": 7.1,
           "bookmaker": "fanduel",
           "ev": 53.36
@@ -2583,9 +2583,9 @@
         "bookmaker": "draftkings"
       },
       "best_over": {
-        "point": 44.5,
-        "price": 1.93,
-        "bookmaker": "lowvig"
+        "point": 43.5,
+        "price": 1.83,
+        "bookmaker": "betrivers"
       },
       "best_under": {
         "point": 44.5,
@@ -2601,88 +2601,88 @@
       "home_team": "PIT",
       "away_team": "HOU",
       "model_home_win_prob": 0.634,
-      "market_home_win_prob": 0.4141,
-      "edge": 0.2199,
-      "abs_edge": 0.2199,
-      "ev_home_ml": 47.088,
-      "ev_away_ml": -39.976,
-      "best_ev": 47.088,
+      "market_home_win_prob": 0.3452,
+      "edge": 0.2888,
+      "abs_edge": 0.2888,
+      "ev_home_ml": 80.056,
+      "ev_away_ml": -44.734,
+      "best_ev": 80.056,
       "best_ev_side": "home",
-      "best_market_ev": 47.09,
+      "best_market_ev": 80.06,
       "markets": {
         "ml": {
           "side": "home",
           "team": "PIT",
           "line": null,
           "model_prob": 0.634,
-          "market_prob": 0.4141,
-          "edge": 0.2199,
-          "price": 2.32,
-          "bookmaker": "draftkings",
-          "ev": 47.09
+          "market_prob": 0.3452,
+          "edge": 0.2888,
+          "price": 2.84,
+          "bookmaker": "fanduel",
+          "ev": 80.06
         },
         "spread": {
           "side": "home",
           "team": "PIT",
-          "line": 3.0,
-          "model_prob": 0.7145,
+          "line": 4.5,
+          "model_prob": 0.7513,
           "market_prob": 0.5,
-          "edge": 0.2145,
+          "edge": 0.2513,
           "price": 1.95,
-          "bookmaker": "lowvig",
-          "ev": 39.33
+          "bookmaker": "fanduel",
+          "ev": 46.5
         },
         "total": {
           "side": "under",
           "team": "Under",
-          "line": 43.5,
-          "model_prob": 0.5628,
+          "line": 42.5,
+          "model_prob": 0.5343,
           "market_prob": 0.5,
-          "edge": 0.0628,
-          "price": 1.93,
-          "bookmaker": "lowvig",
-          "ev": 8.62
+          "edge": 0.0343,
+          "price": 1.91,
+          "bookmaker": "betrivers",
+          "ev": 2.05
         }
       },
       "best_market": "ml",
-      "best_edge": 0.2199,
+      "best_edge": 0.2888,
       "outlier": true,
-      "outlier_edge": 0.2199,
+      "outlier_edge": 0.2888,
       "outlier_market": "ml",
       "best_team": "PIT",
       "model_spread": 4.6,
-      "market_spread": 3.0,
-      "spread_edge": -1.6,
+      "market_spread": 4.5,
+      "spread_edge": -0.1,
       "model_total": 41.3,
-      "market_total": 43.5,
-      "total_edge": -2.2,
+      "market_total": 42.0,
+      "total_edge": -0.7,
       "best_home_ml": {
-        "price": 2.32,
-        "bookmaker": "draftkings"
+        "price": 2.84,
+        "bookmaker": "fanduel"
       },
       "best_away_ml": {
-        "price": 1.64,
+        "price": 1.51,
         "bookmaker": "draftkings"
       },
       "best_home_spread": {
-        "point": 3.0,
+        "point": 4.5,
         "price": 1.95,
-        "bookmaker": "lowvig"
+        "bookmaker": "fanduel"
       },
       "best_away_spread": {
-        "point": -3.0,
-        "price": 1.95,
-        "bookmaker": "betus"
+        "point": -3.5,
+        "price": 1.85,
+        "bookmaker": "draftkings"
       },
       "best_over": {
-        "point": 42.5,
-        "price": 1.88,
+        "point": 41.5,
+        "price": 1.91,
         "bookmaker": "draftkings"
       },
       "best_under": {
-        "point": 43.5,
-        "price": 1.93,
-        "bookmaker": "lowvig"
+        "point": 42.5,
+        "price": 1.91,
+        "bookmaker": "betrivers"
       }
     },
     {
@@ -2693,25 +2693,25 @@
       "home_team": "SEA",
       "away_team": "DAL",
       "model_home_win_prob": 0.507,
-      "market_home_win_prob": 0.6932,
-      "edge": -0.1862,
-      "abs_edge": 0.1862,
-      "ev_home_ml": -29.527,
-      "ev_away_ml": 55.788,
-      "best_ev": 55.788,
+      "market_home_win_prob": 0.6954,
+      "edge": -0.1884,
+      "abs_edge": 0.1884,
+      "ev_home_ml": -28.513,
+      "ev_away_ml": 57.76,
+      "best_ev": 57.76,
       "best_ev_side": "away",
-      "best_market_ev": 55.79,
+      "best_market_ev": 57.76,
       "markets": {
         "ml": {
           "side": "away",
           "team": "DAL",
           "line": null,
           "model_prob": 0.493,
-          "market_prob": 0.3068,
-          "edge": 0.1862,
-          "price": 3.16,
+          "market_prob": 0.3046,
+          "edge": 0.1884,
+          "price": 3.2,
           "bookmaker": "draftkings",
-          "ev": 55.79
+          "ev": 57.76
         },
         "spread": {
           "side": "away",
@@ -2727,19 +2727,19 @@
         "total": {
           "side": "under",
           "team": "Under",
-          "line": 51.5,
-          "model_prob": 0.7363,
+          "line": 50.5,
+          "model_prob": 0.7123,
           "market_prob": 0.5,
-          "edge": 0.2363,
-          "price": 1.91,
-          "bookmaker": "fanduel",
-          "ev": 40.63
+          "edge": 0.2123,
+          "price": 1.93,
+          "bookmaker": "lowvig",
+          "ev": 37.47
         }
       },
       "best_market": "total",
-      "best_edge": 0.2363,
+      "best_edge": 0.2123,
       "outlier": true,
-      "outlier_edge": 0.2363,
+      "outlier_edge": 0.2123,
       "outlier_market": "total",
       "best_team": "Under",
       "model_spread": 0.2,
@@ -2749,17 +2749,17 @@
       "market_total": 50.5,
       "total_edge": -7.8,
       "best_home_ml": {
-        "price": 1.39,
-        "bookmaker": "fanduel"
+        "price": 1.41,
+        "bookmaker": "betrivers"
       },
       "best_away_ml": {
-        "price": 3.16,
+        "price": 3.2,
         "bookmaker": "draftkings"
       },
       "best_home_spread": {
         "point": -5.5,
-        "price": 1.91,
-        "bookmaker": "fanduel"
+        "price": 1.92,
+        "bookmaker": "betrivers"
       },
       "best_away_spread": {
         "point": 6.0,
@@ -2772,9 +2772,9 @@
         "bookmaker": "lowvig"
       },
       "best_under": {
-        "point": 51.5,
-        "price": 1.91,
-        "bookmaker": "fanduel"
+        "point": 50.5,
+        "price": 1.93,
+        "bookmaker": "lowvig"
       }
     }
   ]
