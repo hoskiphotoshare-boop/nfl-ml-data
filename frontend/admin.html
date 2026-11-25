@@ -79,6 +79,11 @@
       </section>
 
       <section>
+        <h2>Super Bowl futures</h2>
+        <div id="futures" class="card-grid"></div>
+      </section>
+
+      <section>
         <h2>Quick links</h2>
         <p><a href="/">Public site</a> · <a href="/teams/">Team pages</a></p>
       </section>
@@ -223,6 +228,21 @@
         elm.appendChild(card("Max abs edge", [`${((s.max_abs_edge ?? 0) * 100).toFixed(2)}%`]));
       } catch (e) {
         document.getElementById("market").appendChild(card("Market report unavailable", [String(e)]));
+      }
+
+      // Futures comparison
+      try {
+        const r = await getJSON(`${R}/futures_comparison.json`);
+        const s = r.summary || {};
+        const elm = document.getElementById("futures");
+        elm.innerHTML = "";
+        elm.appendChild(card("Teams priced", [String(s.teams_matched ?? 0)]));
+        elm.appendChild(card("Market favourite", [`${s.market_favourite ?? "—"} · ${((s.market_favourite_prob ?? 0) * 100).toFixed(1)}%`]));
+        elm.appendChild(card("Best edge", [`${s.best_edge_team ?? "—"} · ${((s.best_edge ?? 0) * 100).toFixed(1)} pp`]));
+        elm.appendChild(card("Overround", [`${((s.overround ?? 0) * 100).toFixed(1)}%`]));
+        elm.appendChild(card("Updated", [r.updated_at ? new Date(r.updated_at).toLocaleString() : "—"]));
+      } catch (e) {
+        document.getElementById("futures").appendChild(card("Futures report unavailable", [String(e)]));
       }
     }
 

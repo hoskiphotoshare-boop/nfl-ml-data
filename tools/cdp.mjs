@@ -81,6 +81,11 @@ async function main() {
   await send('Page.navigate', { url: `${url}${hash}` });
   await sleep(4000);
 
+  if (process.env.CLICK) {
+    await send('Runtime.evaluate', { expression: `document.querySelector(${JSON.stringify(process.env.CLICK)})?.click()` });
+    await sleep(1200);
+  }
+
   if (process.env.THEME) {
     await send('Runtime.evaluate', {
       expression: `localStorage.setItem('nfl_theme', '${process.env.THEME}'); location.reload();`,
@@ -92,6 +97,7 @@ async function main() {
     expression: `JSON.stringify({
       innerWidth: window.innerWidth,
       scrollWidth: document.documentElement.scrollWidth,
+
       overflow: [...document.querySelectorAll('body *')]
         .filter((n) => n.getBoundingClientRect().right > window.innerWidth + 1)
         .slice(0, 15)
@@ -100,6 +106,15 @@ async function main() {
     returnByValue: true,
   });
   console.log(info.result.value);
+
+  if (process.env.EVAL) {
+    const r = await send('Runtime.evaluate', {
+      expression: process.env.EVAL,
+      returnByValue: true,
+      awaitPromise: true,
+    });
+    console.log('EVAL', JSON.stringify(r.result?.value ?? r));
+  }
 
   const shot = await send('Page.captureScreenshot', {
     format: 'png',
@@ -115,5 +130,5 @@ try {
   await main();
 } finally {
   chrome.kill('SIGKILL');
-  fs.rmSync(`/tmp/cdp-profile-${process.pid}`, { recursive: true, force: true });
+  fs.rmSync(`/tmp/cdp-profile-${process.pid}`, { recursive: true, force: true, maxRetries: 5, retryDelay: 200 });
 }
