@@ -5,12 +5,15 @@ The simulator:
 
 1. Reads the current season's schedules.
 2. Builds current standings from completed games.
-3. Simulates the remaining regular-season games (null scores) using team ratings.
-4. Seeds the top 7 teams per conference.
+3. Simulates the remaining regular-season games using the trained match model.
+4. Seeds the top 7 teams per conference (wins, then point differential).
 5. Simulates the playoff bracket 10,000 times.
 
+If the match model or its feature table is unavailable it falls back to a
+simple win-percentage / point-differential rating, so the pipeline still works.
+
 Outputs ``predictions/playoffs.json`` with playoff, conference, and Super Bowl
-probabilities for every team.  Degrades gracefully if data is unavailable.
+probabilities for every team.
 """
 
 from __future__ import annotations
@@ -21,7 +24,8 @@ import os
 import random
 import sys
 
-sys.path.insert(0, os.path.dirname(__file__) + "/../")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import polars as pl
 
@@ -31,8 +35,22 @@ try:
 except Exception:  # pragma: no cover
     TEAMS_AVAILABLE = False
 
+try:
+    import joblib
+    from predict_upcoming import (
+        build_feature_vector,
+        team_latest_row,
+        team_stats_from_row,
+    )
+
+    MODEL_IMPORTS = True
+except Exception:  # pragma: no cover
+    MODEL_IMPORTS = False
+
 
 N_SIMS = 10_000
+PLAYOFF_WEEK = 20
+HOME_ADVANTAGE = 0.10
 
 
 def load_schedules() -> pl.DataFrame | None:
@@ -107,7 +125,7 @@ def build_current_state(schedules: pl.DataFrame):
         }
 
     remaining_games = [
-        (row["home_team"], row["away_team"])
+        (row["home_team"], row["away_team"], int(row["week"]))
         for row in remaining.iter_rows(named=True)
     ]
     return records, remaining_games, season
@@ -120,105 +138,176 @@ def team_rating(rec: dict) -> float:
     return win_pct * 2.0 + point_diff_per_game / 10.0
 
 
-def simulate_game(team_a, team_b, home_advantage: float = 0.0):
-    """Return the winning (team_name, rating) tuple."""
-    rating_a = team_a[1] + home_advantage
-    rating_b = team_b[1]
-    prob_a = 1.0 / (1.0 + math.exp(-(rating_a - rating_b) * 3.0))
-    prob_a = min(max(prob_a, 0.05), 0.95)
-    return team_a if random.random() < prob_a else team_b
+def rating_prob(home_rating: float, away_rating: float) -> float:
+    prob = 1.0 / (1.0 + math.exp(-(home_rating - away_rating + HOME_ADVANTAGE) * 3.0))
+    return min(max(prob, 0.05), 0.95)
 
 
-def simulate(records: dict, remaining_games: list[tuple[str, str]], conf_map: dict, n_sims: int = N_SIMS):
+class ModelProbabilities:
+    """Match-model probabilities for any pairing of the current rosters."""
+
+    def __init__(self, season: int):
+        self.bundle = joblib.load("models/match_model.joblib")
+        self.model = self.bundle["model"]
+        self.features = self.bundle["features"]
+        self.season = season
+        frames = pl.read_parquet("features/match_features.parquet")
+        teams = set(frames["home_team"].unique().to_list()) | set(
+            frames["away_team"].unique().to_list()
+        )
+        self.stats = {
+            team: team_stats_from_row(team_latest_row(frames, team), team)
+            for team in teams
+        }
+        self.cache: dict[tuple[str, str, int], float] = {}
+
+    def prob(self, home: str, away: str, week: int) -> float | None:
+        if home not in self.stats or away not in self.stats:
+            return None
+        key = (home, away, week)
+        if key in self.cache:
+            return self.cache[key]
+        vector = build_feature_vector(
+            self.features, self.stats[home], self.stats[away], week, self.season
+        )
+        prob = float(self.model.predict_proba([vector])[0, 1])
+        prob = min(max(prob, 0.02), 0.98)
+        self.cache[key] = prob
+        return prob
+
+    def neutral_prob(self, team_a: str, team_b: str, week: int) -> float | None:
+        forward = self.prob(team_a, team_b, week)
+        reverse = self.prob(team_b, team_a, week)
+        if forward is None or reverse is None:
+            return None
+        return 0.5 * (forward + (1.0 - reverse))
+
+
+def make_win_prob(model: ModelProbabilities | None, sim: dict):
+    """Return a function (home, away, week, neutral=False) -> P(home wins)."""
+
+    def win_prob(home: str, away: str, week: int, neutral: bool = False) -> float:
+        if model is not None:
+            if neutral:
+                prob = model.neutral_prob(home, away, week)
+            else:
+                prob = model.prob(home, away, week)
+            if prob is not None:
+                return prob
+        # Fallback: simple rating model.
+        if neutral:
+            rating = (team_rating(sim[home]) + team_rating(sim[away])) / 2.0
+            home_rating = away_rating = rating
+        else:
+            home_rating = team_rating(sim[home]) + HOME_ADVANTAGE
+            away_rating = team_rating(sim[away])
+        return rating_prob(home_rating, away_rating)
+
+    return win_prob
+
+
+def simulate(
+    records: dict,
+    remaining_games: list[tuple[str, str, int]],
+    conf_map: dict,
+    n_sims: int = N_SIMS,
+    model: ModelProbabilities | None = None,
+):
     if not records:
         return []
 
     counts = {team: {"playoffs": 0, "conf": 0, "sb": 0} for team in records}
 
     for _ in range(n_sims):
-        # Start from current records and simulate the remaining schedule.
         sim = {team: rec.copy() for team, rec in records.items()}
-        for home, away in remaining_games:
+        win_prob = make_win_prob(model, sim)
+
+        # Remaining regular season.
+        for home, away, week in remaining_games:
             if home not in sim or away not in sim:
                 continue
-            home_rating = team_rating(sim[home])
-            away_rating = team_rating(sim[away])
-            prob_home = 1.0 / (1.0 + math.exp(-(home_rating - away_rating + 0.10) * 3.0))
-            prob_home = min(max(prob_home, 0.05), 0.95)
-            if random.random() < prob_home:
+            if random.random() < win_prob(home, away, week):
                 sim[home]["wins"] += 1
             else:
                 sim[away]["wins"] += 1
             sim[home]["games"] += 1
             sim[away]["games"] += 1
 
-        # Group by conference.
-        confs: dict[str, list[tuple[str, float]]] = {}
-        if conf_map:
-            for team in sim:
-                conf = conf_map.get(team, "OTHER")
-                confs.setdefault(conf, []).append((team, team_rating(sim[team])))
-        if len(confs) < 2:
-            ordered = sorted(sim.keys())
-            mid = len(ordered) // 2
-            confs = {
-                "AFC": [(t, team_rating(sim[t])) for t in ordered[:mid]],
-                "NFC": [(t, team_rating(sim[t])) for t in ordered[mid:]],
-            }
+        # Seeds: wins first, then point differential (static), then team name.
+        confs: dict[str, list[str]] = {}
+        for team in sim:
+            conf = conf_map.get(team, "OTHER")
+            confs.setdefault(conf, []).append(team)
 
-        # Keep only conferences with enough teams.
         confs = {k: v for k, v in confs.items() if len(v) >= 7}
         if len(confs) < 2:
             ordered = sorted(sim.keys())
             mid = max(7, len(ordered) // 2)
-            confs = {
-                "AFC": [(t, team_rating(sim[t])) for t in ordered[:mid]],
-                "NFC": [(t, team_rating(sim[t])) for t in ordered[mid:]],
-            }
+            confs = {"AFC": ordered[:mid], "NFC": ordered[mid:]}
 
-        conf_seeds: dict[str, list[tuple[str, float]]] = {}
+        conf_seeds: dict[str, list[str]] = {}
         for conf, teams in confs.items():
-            ranked = sorted(teams, key=lambda x: (-x[1], x[0]))[:7]
+            def seed_key(team: str):
+                diff = (sim[team]["pf"] - sim[team]["pa"]) / max(sim[team]["games"], 1)
+                return (-sim[team]["wins"], -diff, team)
+
+            ranked = sorted(teams, key=seed_key)[:7]
             conf_seeds[conf] = ranked
-            for team, _ in ranked:
+            for team in ranked:
                 counts[team]["playoffs"] += 1
 
-        conf_champs: dict[str, tuple[str, float]] = {}
-
+        conf_champs: dict[str, str] = {}
         for conf, seeds in conf_seeds.items():
             if len(seeds) < 7:
                 continue
 
-            # Wild card: 2v7, 3v6, 4v5 (zero-based indices 1/6, 2/5, 3/4)
-            wc = [
-                simulate_game(seeds[1], seeds[6], home_advantage=0.10),
-                simulate_game(seeds[2], seeds[5], home_advantage=0.10),
-                simulate_game(seeds[3], seeds[4], home_advantage=0.10),
+            # Wild card: 2v7, 3v6, 4v5.
+            wild_card = [
+                seeds[1] if random.random() < win_prob(seeds[1], seeds[6], PLAYOFF_WEEK) else seeds[6],
+                seeds[2] if random.random() < win_prob(seeds[2], seeds[5], PLAYOFF_WEEK) else seeds[5],
+                seeds[3] if random.random() < win_prob(seeds[3], seeds[4], PLAYOFF_WEEK) else seeds[4],
             ]
-            # Divisional: seed 1 vs lowest remaining; other two play.
-            wc_sorted = sorted(wc, key=lambda x: seeds.index(x))
-            div = [
-                simulate_game(seeds[0], wc_sorted[-1], home_advantage=0.10),
-                simulate_game(wc_sorted[0], wc_sorted[1], home_advantage=0.10),
-            ]
-            champ = simulate_game(div[0], div[1], home_advantage=0.05)
+            remaining = sorted(wild_card, key=lambda team: seeds.index(team))
+            # Divisional: 1 seed vs lowest remaining, other two play.
+            div_one = (
+                seeds[0]
+                if random.random() < win_prob(seeds[0], remaining[-1], PLAYOFF_WEEK)
+                else remaining[-1]
+            )
+            div_two = (
+                remaining[0]
+                if random.random() < win_prob(remaining[0], remaining[1], PLAYOFF_WEEK)
+                else remaining[1]
+            )
+            champ = (
+                div_one
+                if random.random() < win_prob(div_one, div_two, PLAYOFF_WEEK)
+                else div_two
+            )
             conf_champs[conf] = champ
-            counts[champ[0]]["conf"] += 1
+            counts[champ]["conf"] += 1
 
         if "AFC" in conf_champs and "NFC" in conf_champs:
-            sb = simulate_game(conf_champs["AFC"], conf_champs["NFC"], home_advantage=0.0)
-            counts[sb[0]]["sb"] += 1
+            afc, nfc = conf_champs["AFC"], conf_champs["NFC"]
+            if model is not None:
+                prob = model.neutral_prob(afc, nfc, PLAYOFF_WEEK)
+            else:
+                prob = 0.5
+            if prob is None:
+                prob = 0.5
+            winner = afc if random.random() < prob else nfc
+            counts[winner]["sb"] += 1
 
     results = []
     for team in records:
-        c = counts[team]
+        record = counts[team]
         results.append(
             {
                 "team": team,
                 "conference": conf_map.get(team, ""),
-                "playoff_prob": round(c["playoffs"] / n_sims, 4),
-                "conference_prob": round(c["conf"] / n_sims, 4),
-                "super_bowl_prob": round(c["sb"] / n_sims, 4),
+                "playoff_prob": round(record["playoffs"] / n_sims, 4),
+                "conference_prob": round(record["conf"] / n_sims, 4),
+                "super_bowl_prob": round(record["sb"] / n_sims, 4),
             }
         )
     results.sort(key=lambda x: (-x["super_bowl_prob"], -x["playoff_prob"]))
@@ -241,12 +330,30 @@ def main() -> None:
         f"{len(remaining_games)} remaining games to simulate"
     )
 
-    results = simulate(records, remaining_games, conference_map(), n_sims=N_SIMS)
+    model = None
+    if (
+        MODEL_IMPORTS
+        and os.path.exists("models/match_model.joblib")
+        and os.path.exists("features/match_features.parquet")
+    ):
+        try:
+            model = ModelProbabilities(season)
+            print("Using the trained match model for game probabilities.")
+        except Exception as exc:  # pragma: no cover
+            print(f"Match model unavailable, using ratings instead: {exc}")
+    else:
+        print("Match model not found; using ratings instead.")
+
+    results = simulate(
+        records, remaining_games, conference_map(), n_sims=N_SIMS, model=model
+    )
 
     os.makedirs("predictions", exist_ok=True)
     with open("predictions/playoffs.json", "w", encoding="utf-8") as f:
         json.dump(results, f, indent=2)
+    top = ", ".join(f"{r['team']} {r['super_bowl_prob'] * 100:.1f}%" for r in results[:5])
     print(f"Wrote predictions/playoffs.json ({len(results)} teams)")
+    print(f"Top Super Bowl odds: {top}")
 
 
 if __name__ == "__main__":

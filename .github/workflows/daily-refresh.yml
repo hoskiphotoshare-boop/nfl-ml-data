@@ -34,6 +34,7 @@ jobs:
       - run: python scripts/compare_market.py || true
       - run: python scripts/calibrate_model.py || true
       - run: python scripts/simulate_playoffs.py || true
+      - run: python scripts/compare_futures.py || true
 
       - run: |
           git config user.name "github-actions"

@@ -76,6 +76,7 @@ jobs:
 
       # Run the Monte Carlo playoff / Super Bowl simulator.
       - run: python scripts/simulate_playoffs.py || true
+      - run: python scripts/compare_futures.py || true
 
       # Walk-forward backtest of the match model.
       - run: python scripts/backtest.py || true
