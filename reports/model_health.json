@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T04:09:56.239583+00:00",
+  "generated_at": "2026-11-25T04:19:47.521984+00:00",
   "match_backtest": {
     "accuracy": 0.6463790446841294,
     "log_loss": 0.6419906879525928,
@@ -18,20 +18,20 @@
     "games": 30,
     "outliers": 7,
     "outlier_games": [
-      "2026_12_NYG_IND",
+      "2026_12_PHI_DAL",
       "2026_12_ATL_MIN",
-      "2026_12_TEN_JAX",
+      "2026_12_SEA_SF",
+      "2026_13_JAX_CHI",
       "2026_13_CIN_CLE",
       "2026_13_MIA_DEN",
-      "2026_13_CAR_MIN",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.1302,
-    "max_abs_edge": 0.2853
+    "mean_abs_edge": 0.1062,
+    "max_abs_edge": 0.238
   },
   "futures": {
-    "mean_abs_edge": 0.0062,
-    "max_abs_edge": 0.0317,
+    "mean_abs_edge": 0.0071,
+    "max_abs_edge": 0.0338,
     "teams_matched": 32
   },
   "score_models": {

@@ -187,19 +187,19 @@ def train_group(df: pl.DataFrame, group: str, positions: list[str]):
     )
     if data.height < 50:
         print(f"{group}: only {data.height} rows; using rolling average fallback.")
-        return None, {}
+        return None, {}, {}
 
     seasons = sorted(int(s) for s in data["season"].unique().to_list())
     if len(seasons) < 2:
         print(f"{group}: need at least two seasons; using fallback.")
-        return None, {}
+        return None, {}, {}
 
     test_season = seasons[-1]
     train = data.filter(pl.col("season") < test_season)
     test = data.filter(pl.col("season") == test_season)
     if train.height < 50 or test.height < 10:
         print(f"{group}: split too small; using fallback.")
-        return None, {}
+        return None, {}, {}
 
     cols = feature_cols(data)
     X_train = train.select(cols).to_numpy()
@@ -216,18 +216,41 @@ def train_group(df: pl.DataFrame, group: str, positions: list[str]):
     model.fit(X_train, y_train)
     pred = model.predict(X_test)
     residuals = y_test - pred
+    quantiles = {}
+    q10_pred = q90_pred = None
+    for label, quantile in (("q10", 0.1), ("q90", 0.9)):
+        q_model = HistGradientBoostingRegressor(
+            loss="quantile",
+            quantile=quantile,
+            max_iter=200,
+            learning_rate=0.05,
+            max_depth=3,
+            random_state=42,
+        )
+        q_model.fit(X_train, y_train)
+        quantiles[label] = q_model
+        forecast = q_model.predict(X_test)
+        if label == "q10":
+            q10_pred = forecast
+        else:
+            q90_pred = forecast
+    coverage = float(np.mean((y_test >= q10_pred) & (y_test <= q90_pred)))
     metrics = {
         "rows": int(len(y_test)),
         "mae": round(float(mean_absolute_error(y_test, pred)), 3),
         "rmse": round(float(np.sqrt(mean_squared_error(y_test, pred))), 3),
         "q10": round(float(np.quantile(residuals, 0.1)), 3),
         "q90": round(float(np.quantile(residuals, 0.9)), 3),
+        "coverage_80": round(coverage, 3),
     }
-    print(f"{group}: n={metrics['rows']} MAE={metrics['mae']} RMSE={metrics['rmse']}")
-    return model, metrics
+    print(
+        f"{group}: n={metrics['rows']} MAE={metrics['mae']} RMSE={metrics['rmse']} "
+        f"80% coverage={metrics['coverage_80']}"
+    )
+    return model, metrics, quantiles
 
 
-def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
+def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict | None = None) -> list[dict]:
     intervals = {}
     path = "models/player_intervals.json"
     if os.path.exists(path):
@@ -262,6 +285,7 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
 
         model = models.get(group)
         stats = row
+        values = None
         if model is not None:
             cols = feature_cols(df)
             values = []
@@ -277,8 +301,23 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str) -> list[dict]:
             fantasy = float(stats.get("roll_fantasy_points") or 0.0)
 
         interval = intervals.get(group, {})
-        floor = max(0.0, fantasy + float(interval.get("q10", 0.0)))
-        ceiling = max(0.0, fantasy + float(interval.get("q90", 0.0)))
+        residual_floor = max(0.0, fantasy + float(interval.get("q10", 0.0)))
+        residual_ceiling = max(0.0, fantasy + float(interval.get("q90", 0.0)))
+        floor = residual_floor
+        ceiling = residual_ceiling
+        if values is not None and quantiles and group in quantiles:
+            try:
+                q10 = float(quantiles[group]["q10"].predict([values])[0])
+                q90 = float(quantiles[group]["q90"].predict([values])[0])
+                # Envelope: conditional models can regress too far toward the
+                # position mean for elite players, so keep at least the
+                # unconditional residual bound.
+                floor = max(0.0, max(q10, residual_floor))
+                ceiling = max(0.0, max(q90, residual_ceiling))
+                floor = min(floor, fantasy)
+                ceiling = max(ceiling, fantasy)
+            except Exception:
+                pass
 
         records.append(
             {
@@ -456,14 +495,17 @@ def main() -> None:
     rolling, id_col = build_rolling(df)
     models = {}
     metrics = {}
+    quantiles = {}
 
     for group, positions in POSITION_GROUPS.items():
-        model, group_metrics = train_group(rolling, group, positions)
+        model, group_metrics, group_quantiles = train_group(rolling, group, positions)
         models[group] = model
         metrics[group] = group_metrics
+        quantiles[group] = group_quantiles
 
     os.makedirs("models", exist_ok=True)
     joblib.dump(models, "models/player_models.joblib")
+    joblib.dump(quantiles, "models/player_quantiles.joblib")
     with open("models/player_features.json", "w", encoding="utf-8") as f:
         json.dump({"features": feature_cols(rolling)}, f, indent=2)
 
@@ -478,7 +520,7 @@ def main() -> None:
     with open("models/player_intervals.json", "w", encoding="utf-8") as f:
         json.dump(intervals, f, indent=2)
 
-    records = predict_latest(rolling, models, id_col)
+    records = predict_latest(rolling, models, id_col, quantiles)
     records = apply_depth_chart_adjustments(records)
     records = apply_injury_adjustments(records)
     records = apply_roster_status(records)

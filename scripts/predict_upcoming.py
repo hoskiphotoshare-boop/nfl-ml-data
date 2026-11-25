@@ -115,8 +115,44 @@ def current_injury_context(season: int) -> dict[str, dict]:
             .group_by("team", maintain_order=True)
             .agg(pl.all().last())
         )
+        keys = [
+            "inj_impact",
+            "inj_qb",
+            "inj_ol",
+            "inj_skill",
+            "inj_def",
+        ]
         return {
-            row["team"]: {"inj_impact": float(row["inj_impact"]), "inj_missing": 0}
+            row["team"]: {
+                **{key: float(row.get(key) or 0.0) for key in keys},
+                "inj_missing": 0,
+            }
+            for row in latest.iter_rows(named=True)
+        }
+    except Exception:
+        return {}
+
+
+def current_roster_context(season: int) -> dict[str, dict]:
+    try:
+        from add_match_context import roster_table
+
+        table = roster_table()
+        if table is None:
+            return {}
+        latest = (
+            table.filter(pl.col("season") == season)
+            .sort("week")
+            .group_by("team", maintain_order=True)
+            .agg(pl.all().last())
+        )
+        return {
+            row["team"]: {
+                "roster_qb": int(row.get("roster_qb") or 0),
+                "roster_ol": int(row.get("roster_ol") or 0),
+                "roster_db": int(row.get("roster_db") or 0),
+                "roster_missing": 0,
+            }
             for row in latest.iter_rows(named=True)
         }
     except Exception:
@@ -298,6 +334,11 @@ def build_feature_vector(features: list[str], home_stats: dict, away_stats: dict
             values.append(float(home_stats.get(feat[5:]) or 0.0))
         elif feat.startswith("away_"):
             values.append(float(away_stats.get(feat[5:]) or 0.0))
+        elif feat.endswith("_diff"):
+            base = feat[: -len("_diff")]
+            values.append(
+                float(home_stats.get(base) or 0.0) - float(away_stats.get(base) or 0.0)
+            )
         else:
             values.append(0.0)
     return values
@@ -334,6 +375,7 @@ def main() -> None:
     team_records = current_records(schedules, current_season)
     qb_context = current_qb_context(current_season)
     injury_context = current_injury_context(current_season)
+    roster_context = current_roster_context(current_season)
     predictions = []
     for row in upcoming.iter_rows(named=True):
         home = row["home_team"]
@@ -354,6 +396,8 @@ def main() -> None:
             stats_cache[away].update(team_records.get(away, {}))
             stats_cache[away].update(qb_context.get(away, {}))
             stats_cache[away].update(injury_context.get(away, {}))
+            stats_cache[away].update(roster_context.get(away, {}))
+            stats_cache[home].update(roster_context.get(home, {}))
 
         x = build_feature_vector(
             feature_names, stats_cache[home], stats_cache[away], week, current_season

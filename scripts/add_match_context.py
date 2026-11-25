@@ -47,7 +47,32 @@ ADDED_COLUMNS = [
     "inj_impact_diff",
     "home_inj_missing",
     "away_inj_missing",
+    "home_inj_qb",
+    "away_inj_qb",
+    "home_inj_ol",
+    "away_inj_ol",
+    "home_inj_skill",
+    "away_inj_skill",
+    "home_inj_def",
+    "away_inj_def",
+    "inj_qb_diff",
+    "inj_ol_diff",
+    "inj_skill_diff",
+    "inj_def_diff",
+    "home_roster_ol",
+    "away_roster_ol",
+    "home_roster_qb",
+    "away_roster_qb",
+    "home_roster_db",
+    "away_roster_db",
+    "roster_ol_diff",
+    "roster_qb_diff",
+    "roster_db_diff",
+    "home_roster_missing",
+    "away_roster_missing",
 ]
+
+ROSTERS = ["data/rosters_weekly_history.parquet", "data/rosters_weekly_latest.parquet"]
 
 INJURY_PATHS = ["data/injuries_history.parquet", "data/injuries_latest.parquet"]
 STATUS_WEIGHTS = {"out": 4.0, "doubtful": 2.5, "questionable": 1.2, "probable": 0.5}
@@ -269,11 +294,25 @@ def injury_table() -> pl.DataFrame | None:
         .when(position.is_in(["K", "P"])).then(POSITION_WEIGHTS["K"])
         .otherwise(0.3)
     )
-    injuries = injuries.with_columns((impact * pos_weight).alias("impact"))
+    group = (
+        pl.when(pl.col("position") == "QB").then(pl.lit("QB"))
+        .when(pl.col("position").is_in(["T", "G", "C"])).then(pl.lit("OL"))
+        .when(pl.col("position").is_in(["WR", "TE", "RB", "FB"])).then(pl.lit("SKILL"))
+        .when(pl.col("position").is_in(["CB", "S", "LB", "DE", "DT", "NT"])).then(pl.lit("DEF"))
+        .otherwise(pl.lit("ST"))
+    )
+    injuries = injuries.with_columns(
+        (impact * pos_weight).alias("impact"),
+        group.alias("inj_group"),
+    )
     return (
         injuries.group_by(["season", "week", "team"])
         .agg(
             pl.col("impact").sum().alias("inj_impact"),
+            pl.when(pl.col("inj_group") == "QB").then(pl.col("impact")).otherwise(0.0).sum().alias("inj_qb"),
+            pl.when(pl.col("inj_group") == "OL").then(pl.col("impact")).otherwise(0.0).sum().alias("inj_ol"),
+            pl.when(pl.col("inj_group") == "SKILL").then(pl.col("impact")).otherwise(0.0).sum().alias("inj_skill"),
+            pl.when(pl.col("inj_group") == "DEF").then(pl.col("impact")).otherwise(0.0).sum().alias("inj_def"),
             pl.len().alias("inj_players"),
         )
         .sort(["season", "week"])
@@ -285,23 +324,76 @@ def add_injury_features(df: pl.DataFrame) -> pl.DataFrame:
     if table is None:
         return df
     out = df
+    metrics = ["inj_impact", "inj_qb", "inj_ol", "inj_skill", "inj_def"]
     for side in ("home", "away"):
         side_table = table.rename(
-            {
-                "team": f"{side}_team",
-                "inj_impact": f"{side}_inj_impact",
-            }
-        ).select(["season", "week", f"{side}_team", f"{side}_inj_impact"])
+            {"team": f"{side}_team", **{m: f"{side}_{m}" for m in metrics}}
+        ).select(["season", "week", f"{side}_team"] + [f"{side}_{m}" for m in metrics])
         out = out.join(side_table, on=["season", "week", f"{side}_team"], how="left")
     out = out.with_columns(
         pl.col("home_inj_impact").is_null().cast(pl.Int8).alias("home_inj_missing"),
         pl.col("away_inj_impact").is_null().cast(pl.Int8).alias("away_inj_missing"),
     ).with_columns(
-        pl.col("home_inj_impact").fill_null(0.0),
-        pl.col("away_inj_impact").fill_null(0.0),
+        [pl.col(f"{side}_{m}").fill_null(0.0) for side in ("home", "away") for m in metrics]
     )
     out = out.with_columns(
-        (pl.col("home_inj_impact") - pl.col("away_inj_impact")).alias("inj_impact_diff")
+        (pl.col("home_inj_impact") - pl.col("away_inj_impact")).alias("inj_impact_diff"),
+        (pl.col("home_inj_qb") - pl.col("away_inj_qb")).alias("inj_qb_diff"),
+        (pl.col("home_inj_ol") - pl.col("away_inj_ol")).alias("inj_ol_diff"),
+        (pl.col("home_inj_skill") - pl.col("away_inj_skill")).alias("inj_skill_diff"),
+        (pl.col("home_inj_def") - pl.col("away_inj_def")).alias("inj_def_diff"),
+    )
+    return out
+
+
+def roster_table() -> pl.DataFrame | None:
+    path = next((p for p in ROSTERS if os.path.exists(p)), None)
+    if path is None:
+        return None
+    rosters = pl.read_parquet(path)
+    if not {"season", "week", "team", "position", "status"}.issubset(set(rosters.columns)):
+        return None
+    active = rosters.filter(pl.col("status") == "ACT")
+    position = pl.col("position")
+    return (
+        active.group_by(["season", "week", "team"])
+        .agg(
+            (position == "QB").sum().alias("roster_qb"),
+            (position == "OL").sum().alias("roster_ol"),
+            (position == "DB").sum().alias("roster_db"),
+            pl.len().alias("roster_active"),
+        )
+        .sort(["season", "week"])
+    )
+
+
+def add_roster_features(df: pl.DataFrame) -> pl.DataFrame:
+    table = roster_table()
+    if table is None:
+        return df
+    out = df
+    for side in ("home", "away"):
+        side_table = table.rename(
+            {
+                "team": f"{side}_team",
+                "roster_qb": f"{side}_roster_qb",
+                "roster_ol": f"{side}_roster_ol",
+                "roster_db": f"{side}_roster_db",
+            }
+        ).select(
+            ["season", "week", f"{side}_team", f"{side}_roster_qb", f"{side}_roster_ol", f"{side}_roster_db"]
+        )
+        out = out.join(side_table, on=["season", "week", f"{side}_team"], how="left")
+    out = out.with_columns(
+        pl.col("home_roster_ol").is_null().cast(pl.Int8).alias("home_roster_missing"),
+        pl.col("away_roster_ol").is_null().cast(pl.Int8).alias("away_roster_missing"),
+    ).with_columns(
+        [pl.col(f"{side}_roster_{pos}").fill_null(0) for side in ("home", "away") for pos in ("qb", "ol", "db")]
+    )
+    out = out.with_columns(
+        (pl.col("home_roster_ol") - pl.col("away_roster_ol")).alias("roster_ol_diff"),
+        (pl.col("home_roster_qb") - pl.col("away_roster_qb")).alias("roster_qb_diff"),
+        (pl.col("home_roster_db") - pl.col("away_roster_db")).alias("roster_db_diff"),
     )
     return out
 
@@ -317,6 +409,7 @@ def main() -> None:
 
     df = add_record_features(df)
     df = add_injury_features(df)
+    df = add_roster_features(df)
     if os.path.exists(PLAYER_FEATURES):
         df = add_qb_features(df)
     else:
