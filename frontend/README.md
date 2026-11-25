@@ -83,4 +83,5 @@ output directory `frontend`.
 ## Attribution
 
 Data: nflverse (CC-BY 4.0; FTN/participation CC-BY-SA 4.0 where applicable).
+Weather forecasts and historical reanalysis: Open-Meteo.com (CC BY 4.0).
 Model-implied probabilities are informational, not betting advice.

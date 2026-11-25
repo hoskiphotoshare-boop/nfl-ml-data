@@ -348,6 +348,10 @@ const GLOSSARY = {
     ],
     ['Fair odds', 'The model’s own decimal price: 1 ÷ probability.'],
     ['#', 'A rank or depth-chart position, depending on the column.'],
+    ['ET', 'Eastern Time. Kickoff times are shown in ET.'],
+    ['vs / @', '“vs” means the team is at home; “@” means it is on the road.'],
+    ['pts', 'Points — used for projected margins, totals and lean distance.'],
+    ['°F / mph', 'Degrees Fahrenheit and miles per hour for kickoff weather.'],
     ['—', 'No data available for that item.'],
     [
       '+ / −',
@@ -415,6 +419,10 @@ const GLOSSARY = {
     [
       'EPA',
       'Expected points added. A play-quality measure: positive EPA is better for the offense, negative for the defense.',
+    ],
+    [
+      'NGS',
+      'Next Gen Stats: tracking-based metrics such as separation, cushion and rushing efficiency.',
     ],
     [
       'SHAP (driver)',
@@ -1165,7 +1173,7 @@ function renderPlayers() {
   const sub = $('#players-sub');
   if (sub) {
     sub.textContent = state.players.length
-      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''} — sort by recent form or depth chart.`
+      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}. Small numbers under each stat are the last six games, oldest to newest.`
       : 'Projected fantasy points and stat lines for this week’s matchups.';
   }
 

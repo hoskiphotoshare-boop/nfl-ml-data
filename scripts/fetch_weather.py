@@ -81,7 +81,7 @@ def fetch_forecast(team: str, day: str, cache: dict) -> tuple[float, float, floa
         {
             "latitude": coords[0],
             "longitude": coords[1],
-            "hourly": "temperature_2m,wind_speed_10m,precipitation_probability",
+            "hourly": "temperature_2m,wind_speed_10m,precipitation,precipitation_probability",
             "start_date": day,
             "end_date": day,
             "timezone": "UTC",
@@ -144,6 +144,7 @@ def main() -> None:
         game["temp"] = hourly_value(hourly, "temperature_2m", kickoff)
         game["wind"] = hourly_value(hourly, "wind_speed_10m", kickoff)
         game["precip"] = hourly_value(hourly, "precipitation_probability", kickoff)
+        game["precip_mm"] = hourly_value(hourly, "precipitation", kickoff)
         if game.get("temp") is not None or game.get("wind") is not None:
             updated += 1
 
