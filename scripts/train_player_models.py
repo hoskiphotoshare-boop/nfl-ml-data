@@ -480,7 +480,9 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
             }
         )
 
-    records.sort(key=lambda r: r["projected_fantasy_points"], reverse=True)
+    records.sort(
+        key=lambda r: (-r["projected_fantasy_points"], str(r.get("player_id")))
+    )
     os.makedirs("models", exist_ok=True)
     with open("models/player_feature_vectors.json", "w", encoding="utf-8") as f:
         json.dump(
@@ -548,7 +550,9 @@ def apply_injury_adjustments(records: list[dict]) -> list[dict]:
             for key in stat_keys:
                 if record.get(key) is not None:
                     record[key] = round(record[key] * mult, 2)
-        records.sort(key=lambda r: r.get("projected_fantasy_points", 0), reverse=True)
+        records.sort(
+            key=lambda r: (-r.get("projected_fantasy_points", 0), str(r.get("player_id")))
+        )
     except Exception as exc:  # pragma: no cover
         print(f"Injury adjustment skipped: {exc}")
     return records
@@ -591,7 +595,9 @@ def apply_depth_chart_adjustments(records: list[dict]) -> list[dict]:
             for key in stat_keys:
                 if record.get(key) is not None:
                     record[key] = round(record[key] * mult, 2)
-        records.sort(key=lambda r: r.get("projected_fantasy_points", 0), reverse=True)
+        records.sort(
+            key=lambda r: (-r.get("projected_fantasy_points", 0), str(r.get("player_id")))
+        )
     except Exception as exc:  # pragma: no cover
         print(f"Depth-chart adjustment skipped: {exc}")
     return records
@@ -627,6 +633,40 @@ def apply_roster_status(records: list[dict]) -> list[dict]:
         return kept
     except Exception:
         return records
+
+
+def predict_only() -> None:
+    """Refresh player projections from fixed models and the latest context."""
+    df = load_player_features()
+    if df.height == 0:
+        print("No player features found; skipping player predictions.")
+        return
+    if not os.path.exists("models/player_models.joblib"):
+        print("No trained player models found; skipping predictions.")
+        return
+
+    df = enrich_context(df)
+    df = add_position_group(df)
+    df = enrich_defense_rating(df)
+    rolling, id_col = build_rolling(df)
+    models = joblib.load("models/player_models.joblib")
+    quantiles = {}
+    if os.path.exists("models/player_quantiles.joblib"):
+        try:
+            quantiles = joblib.load("models/player_quantiles.joblib")
+        except Exception:
+            quantiles = {}
+
+    records = predict_latest(rolling, models, id_col, quantiles)
+    records = apply_depth_chart_adjustments(records)
+    records = apply_injury_adjustments(records)
+    records = apply_roster_status(records)
+    records = [r for r in records if r["projected_fantasy_points"] > 0][:250]
+
+    os.makedirs("predictions", exist_ok=True)
+    with open("predictions/players_week.json", "w", encoding="utf-8") as f:
+        json.dump(records, f, indent=2)
+    print(f"Wrote {len(records)} player projections with fixed models (no retraining).")
 
 
 def main() -> None:
@@ -681,7 +721,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     try:
-        main()
+        if "--predict-only" in sys.argv:
+            predict_only()
+        else:
+            main()
     except Exception as exc:  # pragma: no cover
         print(f"Player model error: {exc}")
     sys.exit(0)

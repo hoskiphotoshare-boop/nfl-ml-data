@@ -52,7 +52,34 @@ jobs:
           python-version: "3.11"
 
       - run: pip install --upgrade pip
-      - run: pip install polars nflreadpy scikit-learn joblib
+      - run: pip install polars nflreadpy scikit-learn joblib shap
+
+      - name: Decide whether to refresh inference
+        id: inference
+        run: |
+          case "${{ github.event.schedule }}" in
+            "0 13 * * 0"|"30 16 * * 0"|"30 19 * * 0"|"15 20 * * 0"|"50 23 * * 0"|"45 23 * * 4"|"45 23 * * 1")
+              echo "run=1" >> "$GITHUB_OUTPUT"
+              ;;
+            *)
+              echo "run=0" >> "$GITHUB_OUTPUT"
+              ;;
+          esac
+
+      - name: Refresh inference context
+        if: steps.inference.outputs.run == '1' || github.event_name == 'workflow_dispatch'
+        run: |
+          python scripts/download_data.py || true
+          python scripts/build_features.py || true
+          python scripts/add_match_context.py || true
+          python scripts/add_player_context.py || true
+          python scripts/build_predictions.py || true
+          python scripts/train_player_models.py --predict-only || true
+          python scripts/predict_upcoming.py || true
+          python scripts/add_player_matchups.py || true
+          python scripts/fetch_weather.py || true
+          python scripts/explain_models.py || true
+          python scripts/simulate_playoffs.py || true
 
       - name: Fetch NFL odds
         env:
@@ -67,7 +94,7 @@ jobs:
       - name: Check for new odds
         id: changes
         run: |
-          if [ -n "$(git status --porcelain market reports)" ]; then
+          if [ -n "$(git status --porcelain market reports predictions features models)" ]; then
             echo "changed=true" >> "$GITHUB_OUTPUT"
           else
             echo "changed=false" >> "$GITHUB_OUTPUT"
@@ -96,7 +123,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add market/ reports/ predictions/ 2>/dev/null || true
+          git add market/ reports/ predictions/ features/ models/ 2>/dev/null || true
           git commit -m "chore: odds refresh $(date -u +'%Y-%m-%d %H:%M UTC')" || true
           git pull --rebase origin main || true
           git push origin main || true

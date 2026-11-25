@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T21:13:06.376213+00:00",
+  "generated_at": "2026-11-25T21:26:43.086700+00:00",
   "match_backtest": {
     "accuracy": 0.6440677966101694,
     "log_loss": 0.6430025716450639,
@@ -32,8 +32,8 @@
     "max_abs_edge": 0.2888
   },
   "futures": {
-    "mean_abs_edge": 0.0074,
-    "max_abs_edge": 0.0352,
+    "mean_abs_edge": 0.0069,
+    "max_abs_edge": 0.033,
     "teams_matched": 32
   },
   "score_models": {
@@ -89,8 +89,16 @@
     "games": 109
   },
   "injuries": {
-    "seasons": [],
-    "latest_week": null
+    "seasons": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "latest_season": 2026,
+    "latest_week": 11,
+    "rows": 27045
   },
   "odds": {
     "fetched_at": "2026-11-25T21:12:59.980655+00:00",
