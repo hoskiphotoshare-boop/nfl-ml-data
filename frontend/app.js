@@ -264,6 +264,7 @@ function renderGames(games) {
 }
 
 function renderPlayers(players) {
+  window.__players = players;
   const container = document.getElementById('players-list');
   if (!container) return;
   container.innerHTML = '';
@@ -271,7 +272,37 @@ function renderPlayers(players) {
     container.appendChild(el('p', 'muted', 'No player projections yet.'));
     return;
   }
-  players.forEach((p) => {
+
+  const positionSelect = document.getElementById('players-position-filter');
+  const teamInput = document.getElementById('players-team-filter');
+  if (positionSelect && positionSelect.options.length <= 1) {
+    const positions = [...new Set(players.map((p) => p.position).filter(Boolean))].sort();
+    positions.forEach((pos) => {
+      const opt = document.createElement('option');
+      opt.value = pos;
+      opt.textContent = pos;
+      positionSelect.appendChild(opt);
+    });
+    positionSelect.addEventListener('change', () => renderPlayers(window.__players || []));
+    if (teamInput) {
+      teamInput.addEventListener('input', () => renderPlayers(window.__players || []));
+    }
+  }
+
+  const posVal = positionSelect?.value || 'all';
+  const teamVal = (teamInput?.value || '').trim().toLowerCase();
+  const filtered = players.filter((p) => {
+    const posOk = posVal === 'all' || p.position === posVal;
+    const teamOk = !teamVal || (p.team || '').toLowerCase().includes(teamVal);
+    return posOk && teamOk;
+  });
+
+  if (!filtered.length) {
+    container.appendChild(el('p', 'muted', 'No players match the current filter.'));
+    return;
+  }
+
+  filtered.forEach((p) => {
     const card = el('div', 'card');
     card.appendChild(el('h3', '', `${p.name} (${p.position})`));
     card.appendChild(el('p', '', `${p.team}`));
