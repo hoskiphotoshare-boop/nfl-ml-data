@@ -1,28 +1,28 @@
 [
   {
     "team": "San Francisco 49ers",
-    "market_prob": 0.162,
-    "best_price": 5.5
+    "market_prob": 0.1619,
+    "best_price": 5.6
   },
   {
     "team": "Buffalo Bills",
-    "market_prob": 0.1418,
+    "market_prob": 0.1417,
     "best_price": 6.25
   },
   {
     "team": "Chicago Bears",
-    "market_prob": 0.0896,
-    "best_price": 10.5
+    "market_prob": 0.0895,
+    "best_price": 11.0
   },
   {
     "team": "Kansas City Chiefs",
-    "market_prob": 0.0851,
+    "market_prob": 0.085,
     "best_price": 11.0
   },
   {
     "team": "Jacksonville Jaguars",
     "market_prob": 0.0773,
-    "best_price": 13.0
+    "best_price": 12.0
   },
   {
     "team": "Cincinnati Bengals",
@@ -31,7 +31,7 @@
   },
   {
     "team": "Denver Broncos",
-    "market_prob": 0.0532,
+    "market_prob": 0.0531,
     "best_price": 17.0
   },
   {
@@ -46,7 +46,7 @@
   },
   {
     "team": "Minnesota Vikings",
-    "market_prob": 0.0448,
+    "market_prob": 0.0447,
     "best_price": 21.0
   },
   {
@@ -85,23 +85,23 @@
     "best_price": 101.0
   },
   {
-    "team": "Pittsburgh Steelers",
-    "market_prob": 0.0084,
-    "best_price": 101.0
-  },
-  {
-    "team": "Washington Commanders",
-    "market_prob": 0.0068,
-    "best_price": 151.0
-  },
-  {
     "team": "Cleveland Browns",
-    "market_prob": 0.0056,
+    "market_prob": 0.0067,
     "best_price": 201.0
   },
   {
+    "team": "Washington Commanders",
+    "market_prob": 0.0067,
+    "best_price": 151.0
+  },
+  {
+    "team": "Pittsburgh Steelers",
+    "market_prob": 0.0067,
+    "best_price": 251.0
+  },
+  {
     "team": "New England Patriots",
-    "market_prob": 0.0042,
+    "market_prob": 0.0056,
     "best_price": 251.0
   },
   {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T23:04:05.598917+00:00",
+  "generated_at": "2026-11-25T23:12:04.263900+00:00",
   "match_backtest": {
     "accuracy": 0.6440677966101694,
     "log_loss": 0.6430025716450639,
@@ -28,12 +28,12 @@
       "2026_13_HOU_PIT",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.1096,
-    "max_abs_edge": 0.2498
+    "mean_abs_edge": 0.1109,
+    "max_abs_edge": 0.2554
   },
   "futures": {
     "mean_abs_edge": 0.0074,
-    "max_abs_edge": 0.0342,
+    "max_abs_edge": 0.0341,
     "teams_matched": 32
   },
   "score_models": {
@@ -89,38 +89,30 @@
     "games": 109
   },
   "injuries": {
-    "seasons": [
-      2022,
-      2023,
-      2024,
-      2025,
-      2026
-    ],
-    "latest_season": 2026,
-    "latest_week": 12,
-    "rows": 27149
+    "seasons": [],
+    "latest_week": null
   },
   "odds": {
-    "fetched_at": "2026-11-25T21:12:59.980655+00:00",
+    "fetched_at": "2026-11-25T23:11:58.681470+00:00",
     "events": 30,
     "credits": 3,
-    "requests_used": 28,
-    "requests_remaining": 472
+    "requests_used": 31,
+    "requests_remaining": 469
   },
   "futures_api": {
-    "fetched_at": "2026-11-25T01:48:33.422422+00:00",
+    "fetched_at": "2026-11-25T23:11:58.783622+00:00",
     "teams": 32,
     "credits": 1,
-    "requests_used": 25,
-    "requests_remaining": 475
+    "requests_used": 32,
+    "requests_remaining": 468
   },
   "line_movement": {
-    "snapshots": 4,
+    "snapshots": 5,
     "games": 30,
     "summary": {
       "games_with_movement": 30,
-      "mean_abs_spread_move": 0.275,
-      "max_abs_spread_move": 1.5,
+      "mean_abs_spread_move": 0.375,
+      "max_abs_spread_move": 1.75,
       "mean_abs_total_move": 0.233,
       "max_abs_total_move": 1.5
     }
