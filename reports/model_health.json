@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T11:02:21.715911+00:00",
+  "generated_at": "2026-11-26T12:01:15.241662+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -28,7 +28,7 @@
       "2026_13_HOU_PIT",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.092,
+    "mean_abs_edge": 0.0909,
     "max_abs_edge": 0.2602
   },
   "futures": {
@@ -101,23 +101,15 @@
     "games": 108
   },
   "injuries": {
-    "seasons": [
-      2022,
-      2023,
-      2024,
-      2025,
-      2026
-    ],
-    "latest_season": 2026,
-    "latest_week": 12,
-    "rows": 27301
+    "seasons": [],
+    "latest_week": null
   },
   "odds": {
-    "fetched_at": "2026-11-25T23:11:58.681470+00:00",
-    "events": 30,
+    "fetched_at": "2026-11-26T12:01:09.787956+00:00",
+    "events": 29,
     "credits": 3,
-    "requests_used": 31,
-    "requests_remaining": 469
+    "requests_used": 35,
+    "requests_remaining": 465
   },
   "futures_api": {
     "fetched_at": "2026-11-25T23:11:58.783622+00:00",
@@ -127,14 +119,14 @@
     "requests_remaining": 468
   },
   "line_movement": {
-    "snapshots": 5,
+    "snapshots": 6,
     "games": 30,
     "summary": {
       "games_with_movement": 30,
-      "mean_abs_spread_move": 0.375,
+      "mean_abs_spread_move": 0.417,
       "max_abs_spread_move": 1.75,
-      "mean_abs_total_move": 0.233,
-      "max_abs_total_move": 1.5
+      "mean_abs_total_move": 0.333,
+      "max_abs_total_move": 2.0
     }
   }
 }
