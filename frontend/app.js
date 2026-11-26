@@ -752,8 +752,15 @@ function applyLiveScores() {
     if (pick && pick.final) nowFinal.add(id);
   });
   if (!state.finalsInitialized) {
-    state.lastFinalIds = nowFinal;
     state.finalsInitialized = true;
+    state.lastFinalIds = nowFinal;
+    // The first render happens before /api/scores resolves, so any game that is
+    // already final must be re-rendered or its card keeps the upcoming layout
+    // (pick buttons, best-edge tag) with only the score chip updated.
+    if (nowFinal.size) {
+      syncResultGames();
+      renderGames();
+    }
     return;
   }
   let hasNew = false;
