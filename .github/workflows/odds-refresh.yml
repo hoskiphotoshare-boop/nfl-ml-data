@@ -115,8 +115,11 @@ jobs:
           git pull --rebase origin main || true
           git push origin main || true
 
-      - run: python scripts/build_team_pages.py || true
+      - name: Build team pages
         if: steps.changes.outputs.changed == 'true'
+        run: |
+          python scripts/build_team_pages.py
+          test "$(find frontend/teams -maxdepth 1 -name '*.html' | wc -l)" -ge 33
 
       - name: Prepare static data for Pages
         if: steps.changes.outputs.changed == 'true'

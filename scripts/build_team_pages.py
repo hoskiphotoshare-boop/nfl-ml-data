@@ -230,10 +230,11 @@ def meter(value, cls: str = "") -> str:
     except Exception:
         pct, label = 0.0, "—"
     suffix = decimal_suffix(value)
+    dec = f'<span class="dec">{suffix}</span>' if suffix else ""
     return (
         f'<div class="meter {cls}">'
         f'<div class="track"><i style="width:{pct:.1f}%"></i></div>'
-        f'<span class="val">{label}{suffix and f"<span class=\"dec\">{suffix}</span>"}</span>'
+        f'<span class="val">{label}{dec}</span>'
         "</div>"
     )
 
