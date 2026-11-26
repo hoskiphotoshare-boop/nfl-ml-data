@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="NFL ML Predictions">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e1628"/>
+      <stop offset="1" stop-color="#070b14"/>
+    </linearGradient>
+    <linearGradient id="ball" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e6edfb"/>
+    </linearGradient>
+    <clipPath id="round">
+      <rect x="0" y="0" width="512" height="512" rx="112" ry="112"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#round)">
+    <rect width="512" height="512" fill="url(#bg)"/>
+    <!-- subtle green turf arcs -->
+    <circle cx="256" cy="524" r="332" fill="none" stroke="#22c55e" stroke-opacity="0.14" stroke-width="42"/>
+    <circle cx="256" cy="524" r="248" fill="none" stroke="#22c55e" stroke-opacity="0.08" stroke-width="10"/>
+    <!-- faint top glow -->
+    <ellipse cx="256" cy="-50" rx="310" ry="190" fill="#38bdf8" opacity="0.05"/>
+    <!-- laced football, rotated -22deg -->
+    <g transform="translate(256 256) rotate(-22)">
+      <ellipse cx="0" cy="0" rx="150" ry="97" fill="url(#ball)"/>
+      <ellipse cx="0" cy="0" rx="150" ry="97" fill="none" stroke="#0b1120" stroke-opacity="0.10" stroke-width="6"/>
+      <g stroke="#0b1120" stroke-width="12" stroke-linecap="round">
+        <line x1="-72" y1="0" x2="72" y2="0"/>
+        <line x1="-56" y1="-26" x2="-56" y2="26"/>
+        <line x1="-28" y1="-30" x2="-28" y2="30"/>
+        <line x1="0" y1="-32" x2="0" y2="32"/>
+        <line x1="28" y1="-30" x2="28" y2="30"/>
+        <line x1="56" y1="-26" x2="56" y2="26"/>
+      </g>
+    </g>
+  </g>
+</svg>

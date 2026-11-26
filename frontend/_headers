@@ -1,0 +1,17 @@
+# Cloudflare Pages headers for the NFL ML static app.
+
+/sw.js
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/manifest.webmanifest
+  Content-Type: application/manifest+json
+  Cache-Control: no-cache
+
+/admin
+  X-Robots-Tag: noindex
+
+/admin.html
+  X-Robots-Tag: noindex
+
+/icons/*
+  Cache-Control: public, max-age=604800

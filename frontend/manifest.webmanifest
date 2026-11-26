@@ -1,0 +1,64 @@
+{
+  "id": "/",
+  "name": "NFL ML Predictions",
+  "short_name": "NFL ML",
+  "description": "NFL game predictions, player projections, playoff odds and model-vs-market edges, refreshed automatically.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#f3f6fb",
+  "theme_color": "#f3f6fb",
+  "categories": ["sports"],
+  "lang": "en",
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Games",
+      "short_name": "Games",
+      "description": "This week's games and model edges",
+      "url": "/#games",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Players",
+      "short_name": "Players",
+      "description": "Player projections and stat lines",
+      "url": "/#players",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Playoffs",
+      "short_name": "Playoffs",
+      "description": "Playoff and Super Bowl odds",
+      "url": "/#playoffs",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}

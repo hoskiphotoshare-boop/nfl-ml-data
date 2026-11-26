@@ -17,7 +17,15 @@
     })();
   </script>
   <title>NFL ML Predictions — Model odds, projections &amp; playoff chances</title>
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏈</text></svg>' />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="NFL ML" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -77,11 +85,12 @@
       <div class="panel-head">
         <div>
           <h2 id="games-title">This week’s games</h2>
-          <p>Win probability, model spread and total for every remaining game, with the model’s edge on each market. Click any card to see the players in that game.</p>
+          <p id="games-sub">Win probability, model spread and total for every remaining game, with the model’s edge on each market. Click any card to see the players in that game.</p>
         </div>
         <div class="seg" id="games-view-seg" role="group" aria-label="Games view">
           <button data-view="schedule" class="active" type="button">Schedule</button>
           <button data-view="edges" type="button">Model edges</button>
+          <button data-view="results" type="button">Results</button>
         </div>
       </div>
 
@@ -288,6 +297,7 @@
     <p style="padding: 1rem; color: #94a5c2">This app renders predictions with JavaScript. Enable JavaScript to view games, players, playoff odds and market edges.</p>
   </noscript>
 
+  <script src="/pwa.js" defer></script>
   <script src="theme.js"></script>
   <script src="app.js"></script>
 </body>

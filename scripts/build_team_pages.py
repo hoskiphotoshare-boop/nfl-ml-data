@@ -155,7 +155,15 @@ def page(title: str, description: str, body: str, canonical: str, updated: str =
     }})();
   </script>
   <title>{html.escape(title)}</title>
-  <link rel="icon" href='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏈</text></svg>' />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="NFL ML" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="color-scheme" content="light dark" />
   <link rel="stylesheet" href="../style.css" />
 </head>
 <body>
@@ -197,6 +205,7 @@ def page(title: str, description: str, body: str, canonical: str, updated: str =
     {updated_line}
     <div class="foot-row"><span>Data: nflverse (CC-BY 4.0)</span></div>
   </footer>
+  <script src="/pwa.js" defer></script>
   <script src="../theme.js"></script>
   <script src="../table-sort.js"></script>
 </body>
