@@ -62,6 +62,10 @@ const state = {
   meta: null,
   marketById: new Map(),
   gamesById: new Map(),
+  scoresById: new Map(),
+  scoresUpdatedAt: null,
+  scoresUnavailable: false,
+  scoreTimer: null,
   gamesView: 'schedule',
   playersPos: 'QB',
   playersGame: 'all',
@@ -670,6 +674,78 @@ function edgeGrid(market, best) {
   return grid;
 }
 
+function scoreLabel(score) {
+  if (!score || !score.status) return "";
+  const away = score.away || {};
+  const home = score.home || {};
+  const awayScore = away.score ?? "—";
+  const homeScore = home.score ?? "—";
+  const line = `${away.team || "AWAY"} ${awayScore}–${homeScore} ${home.team || "HOME"}`;
+  if (score.status.completed || score.status.state === "post") {
+    return `Final · ${line}`;
+  }
+  if (score.status.state === "in") {
+    return `${score.status.detail || "Live"} · ${line}`;
+  }
+  return "";
+}
+
+function updateScoreNode(node, gameId) {
+  const score = state.scoresById.get(gameId);
+  const label = scoreLabel(score);
+  node.hidden = !label;
+  node.textContent = label;
+  node.className = `live-score ${
+    score && (score.status.completed || score.status.state === "post") ? "final" : "live"
+  }`;
+  if (score && score.status && score.status.detail) node.title = score.status.detail;
+}
+
+function applyLiveScores() {
+  document.querySelectorAll("[data-live-score]").forEach((node) => {
+    updateScoreNode(node, node.dataset.liveScore);
+  });
+}
+
+async function loadScores() {
+  try {
+    const response = await fetch("/api/scores", { cache: "no-store" });
+    if (!response.ok) {
+      state.scoresUnavailable = true;
+      return;
+    }
+    const data = await response.json();
+    state.scoresUnavailable = false;
+    state.scoresById = new Map(
+      (data.games || []).map((game) => [game.game_id, game])
+    );
+    state.scoresUpdatedAt = data.updated_at || null;
+    applyLiveScores();
+  } catch (error) {
+    state.scoresUnavailable = true;
+    // Live scores are best-effort; predictions remain usable without them.
+  }
+}
+
+function scheduleScorePoll() {
+  clearTimeout(state.scoreTimer);
+  if (document.hidden || state.scoresUnavailable) return;
+  const hasLive = [...state.scoresById.values()].some(
+    (game) => game.status && game.status.state === "in"
+  );
+  const today = new Date().toISOString().slice(0, 10);
+  const hasGameToday = state.games.some(
+    (game) =>
+      game.gameday === today ||
+      (game.gameday && Math.abs(new Date(game.gameday) - new Date(today)) <= 86400000)
+  );
+  if (!hasLive && !hasGameToday) return;
+  state.scoreTimer = setTimeout(async () => {
+    await loadScores();
+    scheduleScorePoll();
+  }, hasLive ? 30000 : 60000);
+}
+
 function gameCard(game, rank) {
   const card = el('article', 'game-card');
   const market = state.marketById.get(game.game_id);
@@ -697,6 +773,11 @@ function gameCard(game, rank) {
     w.title = 'Forecast weather';
     top.appendChild(w);
   }
+  const liveScore = el('span', 'live-score');
+  liveScore.dataset.liveScore = game.game_id;
+  liveScore.hidden = true;
+  updateScoreNode(liveScore, game.game_id);
+  top.appendChild(liveScore);
   top.appendChild(el('span', 'spacer'));
   if (game.div_game) {
     const divTag = el('span', 'tag div', 'Div');
@@ -2222,6 +2303,14 @@ function setupTabs() {
     // Reset to the top so the sticky header does not cover the panel heading.
     requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'auto' }));
   }
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      clearTimeout(state.scoreTimer);
+    } else {
+      loadScores().then(scheduleScorePoll);
+    }
+  });
 }
 
 /* ---------------- data loading ---------------- */
@@ -2414,6 +2503,7 @@ async function loadAll() {
 
     // Refresh header metadata now that the week and game list are known.
     applyMeta(state.meta);
+    loadScores().then(scheduleScorePoll);
   } catch (err) {
     console.error(err);
     const container = $('#games-list');

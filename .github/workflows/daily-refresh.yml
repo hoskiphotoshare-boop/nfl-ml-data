@@ -38,6 +38,7 @@ jobs:
       - run: python scripts/fetch_weather.py || true
       - run: python scripts/explain_models.py || true
       - run: python scripts/compare_market.py || true
+      - run: python scripts/update_calls.py || true
       - run: python scripts/line_movement.py || true
       - run: python scripts/simulate_playoffs.py || true
       - run: python scripts/compare_futures.py || true

@@ -84,6 +84,7 @@ jobs:
       # Compare model probabilities with market-implied probabilities.
       - name: Compare model to market
         run: python scripts/compare_market.py || true
+      - run: python scripts/update_calls.py || true
       - run: python scripts/line_movement.py || true
 
       # Calibrate model probabilities to market-implied probabilities.

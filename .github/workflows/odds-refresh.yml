@@ -89,6 +89,10 @@ jobs:
         if: steps.changes.outputs.changed == 'true'
         run: python scripts/compare_market.py || true
 
+      - name: Update call ledger
+        if: steps.changes.outputs.changed == 'true'
+        run: python scripts/update_calls.py || true
+
       - name: Compare model to futures
         if: steps.changes.outputs.changed == 'true'
         run: python scripts/compare_futures.py || true

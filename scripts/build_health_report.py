@@ -25,6 +25,7 @@ def main() -> None:
     movement = load("reports/line_movement.json", {})
     playoff = load("reports/playoff_backtest.json", {})
     player_backtest = load("reports/player_backtest.json", {})
+    calls = load("reports/calls_scoreboard.json", {})
     players = load("predictions/players_week.json", [])
     upcoming = load("predictions/upcoming_games.json", [])
     platt = load("models/platt.json", {})
@@ -94,6 +95,18 @@ def main() -> None:
             "mean_abs_edge": futures_summary.get("mean_abs_edge"),
             "max_abs_edge": futures_summary.get("max_abs_edge"),
             "teams_matched": futures_summary.get("teams_matched"),
+        },
+        "calls": {
+            "graded": calls.get("graded"),
+            "open": calls.get("open"),
+            "wins": calls.get("wins"),
+            "losses": calls.get("losses"),
+            "pushes": calls.get("pushes"),
+            "win_rate": calls.get("win_rate"),
+            "roi": calls.get("roi"),
+            "profit": calls.get("profit"),
+            "by_market": calls.get("by_market", {}),
+            "by_edge": calls.get("by_edge", {}),
         },
         "score_models": sigma,
         "playoff_backtest": playoff.get("pooled", {}),

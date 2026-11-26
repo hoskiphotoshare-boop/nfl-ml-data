@@ -361,6 +361,22 @@
           `mean |edge| ${((market.mean_abs_edge ?? 0) * 100).toFixed(1)} pp`,
           `max ${((market.max_abs_edge ?? 0) * 100).toFixed(1)} pp`,
         ]));
+        const calls = h.calls || {};
+        elm.appendChild(card("Call record", [
+          `${calls.graded ?? 0} graded · ${calls.open ?? 0} open`,
+          `${calls.wins ?? 0}–${calls.losses ?? 0}${
+            calls.pushes ? `–${calls.pushes}` : ""
+          } · win ${
+            calls.win_rate !== null && calls.win_rate !== undefined
+              ? `${(calls.win_rate * 100).toFixed(1)}%`
+              : "—"
+          }`,
+          `ROI ${
+            calls.roi !== null && calls.roi !== undefined
+              ? `${(calls.roi * 100).toFixed(1)}%`
+              : "—"
+          } · profit ${calls.profit ?? "—"}u`,
+        ]));
         elm.appendChild(card("Futures board", [
           `mean |edge| ${((futures.mean_abs_edge ?? 0) * 100).toFixed(1)} pp`,
           `max ${((futures.max_abs_edge ?? 0) * 100).toFixed(1)} pp`,
