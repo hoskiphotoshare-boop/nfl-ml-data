@@ -64,6 +64,32 @@ function referrerHost(raw, requestHost) {
   }
 }
 
+function clientFamily(ua) {
+  const browser = /Edg\//.test(ua)
+    ? "Edge"
+    : /OPR\//.test(ua)
+    ? "Opera"
+    : /Firefox\//.test(ua)
+    ? "Firefox"
+    : /Chrome\//.test(ua)
+    ? "Chrome"
+    : /Safari\//.test(ua)
+    ? "Safari"
+    : "Other";
+  const os = /iPhone|iPad|iPod/.test(ua)
+    ? "iOS"
+    : /Android/.test(ua)
+    ? "Android"
+    : /Mac OS X/.test(ua)
+    ? "macOS"
+    : /Windows/.test(ua)
+    ? "Windows"
+    : /Linux/.test(ua)
+    ? "Linux"
+    : "Other";
+  return { browser, os };
+}
+
 function deviceClass(body, ua) {
   const value = String(body.device || "");
   if (["mobile", "tablet", "desktop"].includes(value)) return value;
@@ -118,12 +144,15 @@ export async function onRequestPost(context) {
     if (!path) path = "/";
 
     const requestHost = new URL(request.url).hostname;
+    const family = clientFamily(ua);
     const record = {
       v: 1,
       day,
       path,
       ref: referrerHost(body.referrer || request.headers.get("referer") || "", requestHost),
       device: deviceClass(body, ua),
+      browser: family.browser,
+      os: family.os,
       country: (request.cf && request.cf.country) || "XX",
       visitor,
       events,

@@ -153,6 +153,8 @@ export async function onRequestGet(context) {
   const referrers = {};
   const countries = {};
   const devices = {};
+  const browsers = {};
+  const systems = {};
   let pageviews = 0;
   let eventsTotal = 0;
   let clicksTotal = 0;
@@ -181,6 +183,8 @@ export async function onRequestGet(context) {
           bump(referrers, record.ref || "direct");
           bump(countries, record.country || "XX");
           bump(devices, record.device || "unknown");
+          bump(browsers, record.browser || "Other");
+          bump(systems, record.os || "Other");
         } else if (name === "tab_view") {
           bump(tabs, label);
         } else if (name === "view_change") {
@@ -230,6 +234,8 @@ export async function onRequestGet(context) {
     referrers: top(referrers),
     countries: top(countries),
     devices: top(devices),
+    browsers: top(browsers),
+    os: top(systems),
     note:
       "Cookie-free first-party counts. Visits are daily unique hashes and are " +
       "summed across days; no IP or user agent is stored. UTC days.",

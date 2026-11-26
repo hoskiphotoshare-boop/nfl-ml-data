@@ -454,6 +454,8 @@
       grid.appendChild(trafficTable("Referrers", data.referrers || [], "Source", "Views"));
       grid.appendChild(trafficTable("Countries", data.countries || [], "Country", "Views"));
       grid.appendChild(trafficTable("Devices", data.devices || [], "Device", "Views"));
+      grid.appendChild(trafficTable("Browsers", data.browsers || [], "Browser", "Views"));
+      grid.appendChild(trafficTable("Operating systems", data.os || [], "OS", "Views"));
       body.appendChild(grid);
       if (data.truncated) {
         body.appendChild(card("Partial data", ["The batch cap was reached; totals cover the newest batches only."]));

@@ -51,7 +51,7 @@
           <li>the page path (for example <code>/teams/KC</code>),</li>
           <li>event names and short labels: tab loads, Schedule/Edges/Results views, game-card opens, player opens, team links, filter and sort changes, theme toggles,</li>
           <li>the referrer hostname (not its path or query),</li>
-          <li>the country and device class reported by Cloudflare,</li>
+          <li>the country, device class, browser family and operating-system family (derived from the request; the raw user agent is not stored),</li>
           <li>a visitor value: a <strong>daily-salted SHA-256 hash</strong> of your IP address and user agent, truncated to 64 bits.</li>
         </ul>
         <p>The raw IP address and user agent are never written to storage, and the visitor value changes every UTC day, so it cannot be used to follow you across days or sites.</p>
