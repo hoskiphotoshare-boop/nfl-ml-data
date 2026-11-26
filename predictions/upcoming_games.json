@@ -44,8 +44,8 @@
     "roof": null,
     "surface": "matrixturf",
     "div_game": 1,
-    "temp": 51.8,
-    "wind": 11.9,
+    "temp": 52.2,
+    "wind": 12.6,
     "precip": 0.0,
     "precip_mm": 0.0
   },
@@ -70,10 +70,10 @@
     "roof": "outdoors",
     "surface": "a_turf",
     "div_game": 0,
-    "temp": 38.4,
-    "wind": 27.9,
+    "temp": 35.6,
+    "wind": 18.1,
     "precip": 100.0,
-    "precip_mm": 5.0
+    "precip_mm": 6.8
   },
   {
     "game_id": "2026_12_DEN_PIT",
@@ -96,10 +96,10 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 40.4,
-    "wind": 10.6,
-    "precip": 39.0,
-    "precip_mm": 0.0
+    "temp": 41.7,
+    "wind": 11.7,
+    "precip": 56.0,
+    "precip_mm": 0.4
   },
   {
     "game_id": "2026_12_NO_CIN",
@@ -122,10 +122,10 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 48.1,
-    "wind": 10.3,
-    "precip": 54.0,
-    "precip_mm": 0.1
+    "temp": 50.6,
+    "wind": 9.4,
+    "precip": 53.0,
+    "precip_mm": 3.2
   },
   {
     "game_id": "2026_12_BAL_HOU",
@@ -148,9 +148,9 @@
     "roof": null,
     "surface": "astroturf",
     "div_game": 0,
-    "temp": 71.6,
-    "wind": 14.9,
-    "precip": 0.0,
+    "temp": 67.5,
+    "wind": 15.7,
+    "precip": 1.0,
     "precip_mm": 0.0
   },
   {
@@ -174,10 +174,10 @@
     "roof": null,
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 44.7,
-    "wind": 6.5,
-    "precip": 82.0,
-    "precip_mm": 1.8
+    "temp": 45.5,
+    "wind": 5.1,
+    "precip": 89.0,
+    "precip_mm": 2.7
   },
   {
     "game_id": "2026_12_TEN_JAX",
@@ -200,9 +200,9 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": 66.7,
-    "wind": 5.1,
-    "precip": 2.0,
+    "temp": 66.1,
+    "wind": 9.0,
+    "precip": 1.0,
     "precip_mm": 0.0
   },
   {
@@ -227,8 +227,8 @@
     "surface": "grass",
     "div_game": 1,
     "temp": 77.8,
-    "wind": 6.9,
-    "precip": 2.0,
+    "wind": 8.8,
+    "precip": 3.0,
     "precip_mm": 0.0
   },
   {
@@ -300,8 +300,8 @@
     "roof": null,
     "surface": "grass",
     "div_game": 0,
-    "temp": 73.7,
-    "wind": 5.5,
+    "temp": 74.1,
+    "wind": 5.9,
     "precip": 0.0,
     "precip_mm": 0.0
   },
@@ -326,9 +326,9 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": 67.9,
-    "wind": 11.7,
-    "precip": 68.0,
+    "temp": 64.6,
+    "wind": 10.4,
+    "precip": 69.0,
     "precip_mm": 0.0
   },
   {
@@ -352,10 +352,10 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 48.4,
-    "wind": 10.2,
-    "precip": 95.0,
-    "precip_mm": 0.7
+    "temp": 49.9,
+    "wind": 14.3,
+    "precip": 96.0,
+    "precip_mm": 0.4
   },
   {
     "game_id": "2026_12_CAR_TB",
@@ -378,10 +378,10 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": 68.0,
-    "wind": 2.0,
-    "precip": 32.0,
-    "precip_mm": 0.3
+    "temp": 64.2,
+    "wind": 7.4,
+    "precip": 38.0,
+    "precip_mm": 0.6
   },
   {
     "game_id": "2026_13_KC_LA",
@@ -428,9 +428,9 @@
     "roof": null,
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 64.6,
-    "wind": 5.1,
-    "precip": 12.0,
+    "temp": 62.8,
+    "wind": 9.7,
+    "precip": 10.0,
     "precip_mm": 0.0
   },
   {
@@ -454,9 +454,9 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 42.4,
-    "wind": 6.9,
-    "precip": 7.0,
+    "temp": 46.9,
+    "wind": 8.4,
+    "precip": 12.0,
     "precip_mm": 0.0
   },
   {
@@ -480,9 +480,9 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": 41.9,
-    "wind": 12.6,
-    "precip": 8.0,
+    "temp": 45.5,
+    "wind": 14.8,
+    "precip": 10.0,
     "precip_mm": 0.0
   },
   {
@@ -530,9 +530,9 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 48.4,
-    "wind": 18.1,
-    "precip": 11.0,
+    "temp": 57.0,
+    "wind": 16.2,
+    "precip": 20.0,
     "precip_mm": 0.0
   },
   {
@@ -556,10 +556,10 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 74.1,
-    "wind": 5.8,
-    "precip": 4.0,
-    "precip_mm": 0.0
+    "temp": 83.2,
+    "wind": 6.8,
+    "precip": 6.0,
+    "precip_mm": 0.1
   },
   {
     "game_id": "2026_13_WAS_TEN",
@@ -582,9 +582,9 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 61.1,
-    "wind": 1.8,
-    "precip": 16.0,
+    "temp": 54.2,
+    "wind": 6.0,
+    "precip": 18.0,
     "precip_mm": 0.0
   },
   {
@@ -608,10 +608,10 @@
     "roof": null,
     "surface": "grass",
     "div_game": 0,
-    "temp": 49.7,
-    "wind": 7.9,
+    "temp": 44.2,
+    "wind": 15.4,
     "precip": 15.0,
-    "precip_mm": 0.0
+    "precip_mm": 0.6
   },
   {
     "game_id": "2026_13_MIA_DEN",
@@ -634,9 +634,9 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 39.6,
-    "wind": 7.7,
-    "precip": 14.0,
+    "temp": 48.2,
+    "wind": 2.1,
+    "precip": 16.0,
     "precip_mm": 0.0
   },
   {
@@ -684,10 +684,10 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 1,
-    "temp": 41.8,
-    "wind": 16.3,
-    "precip": 7.0,
-    "precip_mm": 0.0
+    "temp": 43.2,
+    "wind": 18.3,
+    "precip": 17.0,
+    "precip_mm": 0.1
   },
   {
     "game_id": "2026_13_HOU_PIT",
@@ -710,8 +710,8 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 40.4,
-    "wind": 5.5,
+    "temp": 42.6,
+    "wind": 3.7,
     "precip": 10.0,
     "precip_mm": 0.0
   },
@@ -736,9 +736,9 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 41.5,
-    "wind": 2.6,
-    "precip": 14.0,
+    "temp": 40.8,
+    "wind": 4.1,
+    "precip": 33.0,
     "precip_mm": 0.0
   },
   {
@@ -762,9 +762,9 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 31.3,
-    "wind": 2.1,
-    "precip": 19.0,
+    "temp": 36.2,
+    "wind": 8.9,
+    "precip": 17.0,
     "precip_mm": 0.0
   },
   {
