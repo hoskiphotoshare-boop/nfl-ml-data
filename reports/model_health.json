@@ -1,39 +1,38 @@
 {
-  "generated_at": "2026-11-26T01:39:04.626592+00:00",
+  "generated_at": "2026-11-26T04:35:38.324191+00:00",
   "match_backtest": {
-    "accuracy": 0.6440677966101694,
-    "log_loss": 0.6430025716450639,
-    "brier": 0.22535554137188882,
-    "auc": 0.6808921655098362
+    "accuracy": 0.6587057010785824,
+    "log_loss": 0.6308178480137088,
+    "brier": 0.21994522472719677,
+    "auc": 0.697072611880201
   },
   "calibration": {
     "enabled": true,
-    "a": 0.807278,
-    "b": 0.026965,
-    "raw_log_loss": 0.643003,
-    "calibrated_log_loss": 0.640936,
+    "a": 0.840129,
+    "b": 0.013148,
+    "raw_log_loss": 0.630818,
+    "calibrated_log_loss": 0.629177,
     "n": 1298
   },
   "market": {
     "games": 30,
-    "outliers": 9,
+    "outliers": 8,
     "outlier_games": [
       "2026_12_PHI_DAL",
-      "2026_12_NYG_IND",
+      "2026_12_TEN_JAX",
       "2026_12_ATL_MIN",
+      "2026_12_WAS_ARI",
       "2026_12_SEA_SF",
-      "2026_13_JAX_CHI",
-      "2026_13_CIN_CLE",
-      "2026_13_MIA_DEN",
+      "2026_13_PHI_ARI",
       "2026_13_HOU_PIT",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.1109,
-    "max_abs_edge": 0.2554
+    "mean_abs_edge": 0.1021,
+    "max_abs_edge": 0.2602
   },
   "futures": {
-    "mean_abs_edge": 0.0074,
-    "max_abs_edge": 0.0341,
+    "mean_abs_edge": 0.0075,
+    "max_abs_edge": 0.0403,
     "teams_matched": 32
   },
   "calls": {
@@ -49,8 +48,8 @@
     "by_edge": {}
   },
   "score_models": {
-    "margin": 13.413,
-    "total": 13.927
+    "margin": 13.381,
+    "total": 13.944
   },
   "playoff_backtest": {
     "playoff": {
@@ -93,11 +92,11 @@
   },
   "players": {
     "count": 250,
-    "with_ranges": 250,
-    "active": 250
+    "with_ranges": 0,
+    "active": 0
   },
   "weather": {
-    "games_with_forecast": 23,
+    "games_with_forecast": 0,
     "games": 109
   },
   "injuries": {

@@ -96,6 +96,12 @@ SPECIAL_LABELS = {
     "win_pct_diff": "Win pct (home − away)",
     "rest_diff": "Rest days (home − away)",
     "inj_impact_diff": "Injury impact (home − away)",
+    "home_blend_diff": "Blended point diff (home)",
+    "away_blend_diff": "Blended point diff (away)",
+    "blend_diff_diff": "Blended point diff (home − away)",
+    "home_blend_win": "Blended win pct (home)",
+    "away_blend_win": "Blended win pct (away)",
+    "blend_win_diff": "Blended win pct (home − away)",
 }
 
 

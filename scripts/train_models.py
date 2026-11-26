@@ -113,6 +113,13 @@ def prepare_match_matrix(df: pl.DataFrame):
         "away_diff_pg",
         "win_pct_diff",
         "diff_pg_diff",
+        # Blended current-season + prior-season strength (empirical-Bayes prior)
+        "home_blend_diff",
+        "away_blend_diff",
+        "blend_diff_diff",
+        "home_blend_win",
+        "away_blend_win",
+        "blend_win_diff",
         "home_qb_prior_epa",
         "away_qb_prior_epa",
         "home_qb_starts",

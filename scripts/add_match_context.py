@@ -32,6 +32,16 @@ ADDED_COLUMNS = [
     "away_diff_pg",
     "win_pct_diff",
     "diff_pg_diff",
+    "home_prev_diff_pg",
+    "away_prev_diff_pg",
+    "home_prev_win_pct",
+    "away_prev_win_pct",
+    "home_blend_diff",
+    "away_blend_diff",
+    "blend_diff_diff",
+    "home_blend_win",
+    "away_blend_win",
+    "blend_win_diff",
     "home_qb_id",
     "away_qb_id",
     "home_qb_prior_epa",
@@ -180,6 +190,96 @@ def add_record_features(df: pl.DataFrame) -> pl.DataFrame:
         (pl.col("home_diff_pg") - pl.col("away_diff_pg")).alias("diff_pg_diff"),
     )
     return out
+
+
+def add_prior_season_features(df: pl.DataFrame) -> pl.DataFrame:
+    """Shrink current-season results toward last season's finish.
+
+    Week 1 has no current-season sample, and a 3-1 start is a noisy estimate of
+    strength. Blending the current-season margin/win rate with the previous
+    season's final values acts as an empirical-Bayes prior: ``k`` games of
+    weight on last season, rising current-season weight as games accumulate.
+    """
+    played = df.filter(
+        pl.col("home_score").is_not_null() & pl.col("away_score").is_not_null()
+    )
+    home = played.select(
+        pl.col("season"),
+        pl.col("home_team").alias("team"),
+        pl.col("home_score").alias("pf"),
+        pl.col("away_score").alias("pa"),
+        (pl.col("home_score") > pl.col("away_score")).cast(pl.Float64).alias("win"),
+    )
+    away = played.select(
+        pl.col("season"),
+        pl.col("away_team").alias("team"),
+        pl.col("away_score").alias("pf"),
+        pl.col("home_score").alias("pa"),
+        (pl.col("away_score") > pl.col("home_score")).cast(pl.Float64).alias("win"),
+    )
+    team_season = (
+        pl.concat([home, away])
+        .group_by(["season", "team"])
+        .agg(
+            pl.col("pf").sum().alias("pf"),
+            pl.col("pa").sum().alias("pa"),
+            pl.col("win").mean().alias("win_pct"),
+            pl.len().alias("games"),
+        )
+        .with_columns(
+            ((pl.col("pf") - pl.col("pa")) / pl.col("games").clip(1)).alias("diff_pg")
+        )
+        .with_columns((pl.col("season") + 1).alias("season"))
+    )
+    prior = team_season.select(
+        "season",
+        "team",
+        pl.col("diff_pg").alias("prev_diff_pg"),
+        pl.col("win_pct").alias("prev_win_pct"),
+    )
+    home_prior = prior.select(
+        "season",
+        pl.col("team").alias("home_team"),
+        pl.col("prev_diff_pg").alias("home_prev_diff_pg"),
+        pl.col("prev_win_pct").alias("home_prev_win_pct"),
+    )
+    away_prior = prior.select(
+        "season",
+        pl.col("team").alias("away_team"),
+        pl.col("prev_diff_pg").alias("away_prev_diff_pg"),
+        pl.col("prev_win_pct").alias("away_prev_win_pct"),
+    )
+
+    out = df.join(home_prior, on=["season", "home_team"], how="left").join(
+        away_prior, on=["season", "away_team"], how="left"
+    )
+    out = out.with_columns(
+        pl.col("home_prev_diff_pg").fill_null(0.0),
+        pl.col("away_prev_diff_pg").fill_null(0.0),
+        pl.col("home_prev_win_pct").fill_null(0.5),
+        pl.col("away_prev_win_pct").fill_null(0.5),
+    )
+
+    k = 2.0
+    hg = pl.col("home_prior_games").cast(pl.Float64)
+    ag = pl.col("away_prior_games").cast(pl.Float64)
+    return out.with_columns(
+        ((hg * pl.col("home_diff_pg") + k * pl.col("home_prev_diff_pg")) / (hg + k)).alias(
+            "home_blend_diff"
+        ),
+        ((ag * pl.col("away_diff_pg") + k * pl.col("away_prev_diff_pg")) / (ag + k)).alias(
+            "away_blend_diff"
+        ),
+        ((hg * pl.col("home_win_pct") + k * pl.col("home_prev_win_pct")) / (hg + k)).alias(
+            "home_blend_win"
+        ),
+        ((ag * pl.col("away_win_pct") + k * pl.col("away_prev_win_pct")) / (ag + k)).alias(
+            "away_blend_win"
+        ),
+    ).with_columns(
+        (pl.col("home_blend_diff") - pl.col("away_blend_diff")).alias("blend_diff_diff"),
+        (pl.col("home_blend_win") - pl.col("away_blend_win")).alias("blend_win_diff"),
+    )
 
 
 def qb_week_table() -> pl.DataFrame:
@@ -408,6 +508,7 @@ def main() -> None:
     before = df.height
 
     df = add_record_features(df)
+    df = add_prior_season_features(df)
     df = add_injury_features(df)
     df = add_roster_features(df)
     if os.path.exists(PLAYER_FEATURES):
