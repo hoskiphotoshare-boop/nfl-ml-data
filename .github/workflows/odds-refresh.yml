@@ -9,6 +9,9 @@ name: Odds Refresh
 #   * two weekday updates (morning + evening ET)
 #   * five Sunday updates, ending just before each kickoff window
 #   * one Thursday and one Monday pre-game update for primetime games
+#
+# Every odds run also performs an inference-only refresh (context, predictions,
+# SHAP, playoff sim) before comparing the model to the new prices.
 
 on:
   workflow_dispatch:
@@ -17,10 +20,6 @@ on:
         description: "Bypass cache and fetch now"
         type: boolean
         default: true
-      refresh_inference:
-        description: "Refresh predictions/context before fetching odds"
-        type: boolean
-        default: false
 
 # Scheduling is handled by the Google Apps Script project in gas/.
 # The scheduler dispatches this workflow at the odds windows below.
@@ -51,8 +50,7 @@ jobs:
       - run: pip install --upgrade pip
       - run: pip install polars nflreadpy scikit-learn joblib shap
 
-      - name: Refresh inference context
-        if: inputs.refresh_inference == 'true' || inputs.refresh_inference == true
+      - name: Refresh inference (context, predictions, SHAP, sim)
         run: |
           python scripts/download_data.py || true
           python scripts/build_features.py || true

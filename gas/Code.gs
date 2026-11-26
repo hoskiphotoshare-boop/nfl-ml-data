@@ -25,16 +25,16 @@ var NFL_SLOTS = [
   // Inference-only refresh Wednesday-Monday.
   { id: "daily_inference_0600", days: [1, 3, 4, 5, 6, 7], hour: 6, minute: 0, workflow: "daily-refresh.yml", inputs: {} },
 
-  // Odds windows. Pre-kickoff runs also refresh inference inside the workflow.
+  // Odds windows. Every odds run refreshes inference inside the workflow.
   { id: "odds_mon_sat_0700", days: [1, 2, 3, 4, 5, 6], hour: 7, minute: 0, workflow: "odds-refresh.yml", inputs: { force: false } },
   { id: "odds_tue_wed_fri_sat_1730", days: [2, 3, 5, 6], hour: 17, minute: 30, workflow: "odds-refresh.yml", inputs: { force: false } },
-  { id: "odds_sun_0800", days: [7], hour: 8, minute: 0, workflow: "odds-refresh.yml", inputs: { force: false, refresh_inference: true } },
-  { id: "odds_sun_1130", days: [7], hour: 11, minute: 30, workflow: "odds-refresh.yml", inputs: { force: false, refresh_inference: true } },
-  { id: "odds_sun_1430", days: [7], hour: 14, minute: 30, workflow: "odds-refresh.yml", inputs: { force: false, refresh_inference: true } },
-  { id: "odds_sun_1515", days: [7], hour: 15, minute: 15, workflow: "odds-refresh.yml", inputs: { force: false, refresh_inference: true } },
-  { id: "odds_sun_1950", days: [7], hour: 19, minute: 50, workflow: "odds-refresh.yml", inputs: { force: false, refresh_inference: true } },
-  { id: "odds_thu_1845", days: [4], hour: 18, minute: 45, workflow: "odds-refresh.yml", inputs: { force: false, refresh_inference: true } },
-  { id: "odds_mon_1845", days: [1], hour: 18, minute: 45, workflow: "odds-refresh.yml", inputs: { force: false, refresh_inference: true } }
+  { id: "odds_sun_0800", days: [7], hour: 8, minute: 0, workflow: "odds-refresh.yml", inputs: { force: false } },
+  { id: "odds_sun_1130", days: [7], hour: 11, minute: 30, workflow: "odds-refresh.yml", inputs: { force: false } },
+  { id: "odds_sun_1430", days: [7], hour: 14, minute: 30, workflow: "odds-refresh.yml", inputs: { force: false } },
+  { id: "odds_sun_1515", days: [7], hour: 15, minute: 15, workflow: "odds-refresh.yml", inputs: { force: false } },
+  { id: "odds_sun_1950", days: [7], hour: 19, minute: 50, workflow: "odds-refresh.yml", inputs: { force: false } },
+  { id: "odds_thu_1845", days: [4], hour: 18, minute: 45, workflow: "odds-refresh.yml", inputs: { force: false } },
+  { id: "odds_mon_1845", days: [1], hour: 18, minute: 45, workflow: "odds-refresh.yml", inputs: { force: false } }
 ];
 
 function nflGetToken_(props) {
