@@ -471,6 +471,10 @@ const GLOSSARY = {
     ],
     ['Model total', 'The model’s projected combined points for both teams.'],
     [
+      'Calls ✓ / ✗',
+      'Once a game is final, each market cell is graded against the score: ✓ the model’s displayed pick and line beat the result, ✗ it missed, = push. The card header shows calls won out of calls graded.',
+    ],
+    [
       'Lean vs 50%',
       'How far the model’s win probability is from a coin flip, in percentage points. 0 = pick’em; 30 pts = an 80% vs 20% split.',
     ],
@@ -548,6 +552,10 @@ const GLOSSARY = {
     ['Status', 'Injury-report designation for this week.'],
     ['Q / D / O / IR', 'Questionable · Doubtful · Out · Injured reserve.'],
     ['Standard scoring', '4 points per passing TD, 6 per rushing/receiving TD, no points per reception.'],
+    [
+      'Green ✓',
+      'When a game is final, the actual stat appears under each projection. It turns green with ✓ when it met the projection (higher is better; interceptions are graded lower-is-better); otherwise it stays muted.',
+    ],
   ],
   playoffs: [
     ['Playoff', 'Probability of reaching the postseason in the simulated seasons.'],
@@ -634,10 +642,12 @@ function shortMarketTag(entry) {
   return teamAbbr(entry.team);
 }
 
-function edgeGrid(market, best) {
+function edgeGrid(market, best, game) {
   const grid = el('div', 'edge-grid');
+  const finalScore = game ? completedScore(game.game_id) : null;
   ['ml', 'spread', 'total'].forEach((key) => {
     const entry = market.markets ? market.markets[key] : null;
+    const grade = finalScore ? gradeCall(key, entry, finalScore) : null;
     if (!entry) {
       const empty = el('div', 'edge-cell empty');
       empty.appendChild(el('div', 'k', MARKET_LABEL[key]));
@@ -645,9 +655,22 @@ function edgeGrid(market, best) {
       grid.appendChild(empty);
       return;
     }
-    const isBest = best && best.key === key;
-    const cell = el('div', `edge-cell${isBest ? ' best' : ''}`);
-    cell.appendChild(el('div', 'k', MARKET_LABEL[key]));
+    const isBest = !finalScore && best && best.key === key;
+    const cell = el(
+      'div',
+      `edge-cell${isBest ? ' best' : ''}${grade === 'win' ? ' call-win' : ''}`
+    );
+    const label = el('div', 'k', MARKET_LABEL[key]);
+    if (grade) {
+      label.appendChild(
+        el(
+          'span',
+          `call-badge ${grade}`,
+          grade === 'win' ? '✓' : grade === 'loss' ? '✗' : '='
+        )
+      );
+    }
+    cell.appendChild(label);
     cell.appendChild(el('div', 'pick', marketPick(entry)));
     const valueRow = el('div', 'edge-val-row');
     valueRow.appendChild(
@@ -669,6 +692,10 @@ function edgeGrid(market, best) {
     }${
       entry.ev !== null && entry.ev !== undefined
         ? `\nExpected value ${formatEv(entry.ev)} per 1 unit staked.`
+        : ''
+    }${
+      grade
+        ? `\nFinal: ${grade === 'win' ? 'correct call' : grade === 'loss' ? 'missed call' : 'push'}.`
         : ''
     }`;
     grid.appendChild(cell);
@@ -707,6 +734,44 @@ function applyLiveScores() {
   document.querySelectorAll("[data-live-score]").forEach((node) => {
     updateScoreNode(node, node.dataset.liveScore);
   });
+}
+
+function completedScore(gameId) {
+  const score = state.scoresById.get(gameId);
+  if (!score || !score.status) return null;
+  const finished = score.status.completed || score.status.state === "post";
+  if (!finished) return null;
+  const home = score.home ? score.home.score : null;
+  const away = score.away ? score.away.score : null;
+  if (!Number.isFinite(home) || !Number.isFinite(away)) return null;
+  return { home, away };
+}
+
+function gradeCall(key, entry, final) {
+  if (!entry || !final) return null;
+  if (key === "ml") {
+    if (final.home === final.away) return "push";
+    const pickedHome = entry.side === "home";
+    const homeWon = final.home > final.away;
+    return pickedHome === homeWon ? "win" : "loss";
+  }
+  if (entry.line === null || entry.line === undefined) return null;
+  const line = Number(entry.line);
+  if (!Number.isFinite(line)) return null;
+  if (key === "spread") {
+    const teamScore = entry.side === "home" ? final.home : final.away;
+    const oppScore = entry.side === "home" ? final.away : final.home;
+    const margin = teamScore - oppScore + line;
+    if (Math.abs(margin) < 1e-9) return "push";
+    return margin > 0 ? "win" : "loss";
+  }
+  if (key === "total") {
+    const total = final.home + final.away;
+    if (Math.abs(total - line) < 1e-9) return "push";
+    const over = total > line;
+    return (entry.side === "over") === over ? "win" : "loss";
+  }
+  return null;
 }
 
 async function loadScores() {
@@ -790,14 +855,19 @@ function liveStatValue(record, statKey) {
   return parseLiveNumber(raw);
 }
 
-function liveGames() {
+function statGames() {
   return [...state.scoresById.values()].filter(
-    (game) => game.status && game.status.state === "in" && game.espn_id
+    (game) =>
+      game.espn_id &&
+      game.status &&
+      (game.status.state === "in" ||
+        game.status.completed ||
+        game.status.state === "post")
   );
 }
 
 async function loadLiveStats() {
-  const games = liveGames().slice(0, 8);
+  const games = statGames();
   if (!games.length) {
     if (state.liveStats.size) {
       state.liveStats = new Map();
@@ -805,8 +875,27 @@ async function loadLiveStats() {
     }
     return;
   }
+  // Live games refresh every poll; completed games are fetched once and kept.
+  const currentIds = new Set(games.map((game) => game.game_id));
+  const base = new Map(
+    [...state.liveStats].filter(([gameId]) => currentIds.has(gameId))
+  );
+  const pending = games
+    .filter((game) => {
+      const cached = base.get(game.game_id);
+      const live = game.status.state === "in";
+      return live || !cached || !(cached.status && cached.status.completed);
+    })
+    .slice(0, 16);
+  if (!pending.length) {
+    if (base.size !== state.liveStats.size) {
+      state.liveStats = base;
+      if (playersTabActive()) renderPlayers();
+    }
+    return;
+  }
   const results = await Promise.allSettled(
-    games.map(async (game) => {
+    pending.map(async (game) => {
       const response = await fetch(
         `/api/player-stats?event=${encodeURIComponent(game.espn_id)}`,
         { cache: "no-store" }
@@ -815,16 +904,16 @@ async function loadLiveStats() {
       return { gameId: game.game_id, data: await response.json() };
     })
   );
-  const next = new Map();
+  const next = new Map(base);
   let failed = 0;
-  results.forEach((result) => {
+  results.forEach((result, index) => {
     if (result.status === "fulfilled") {
-      next.set(result.value.gameId, result.value.data);
+      next.set(pending[index].game_id, result.value.data);
     } else {
       failed += 1;
     }
   });
-  state.liveStatsUnavailable = failed === games.length;
+  state.liveStatsUnavailable = failed === pending.length;
   if (!state.liveStatsUnavailable) state.liveStats = next;
   if (playersTabActive()) renderPlayers();
 }
@@ -888,7 +977,37 @@ function gameCard(game, rank) {
       'Division game — lower-scoring on average and a smaller home-field advantage.';
     top.appendChild(divTag);
   }
-  if (best) {
+  const finalScore = completedScore(game.game_id);
+  const callGrades = finalScore
+    ? Object.fromEntries(
+        ["ml", "spread", "total"].map((key) => [
+          key,
+          gradeCall(key, market?.markets?.[key], finalScore),
+        ])
+      )
+    : {};
+  if (finalScore) {
+    const graded = ["ml", "spread", "total"].filter((key) => callGrades[key]);
+    const wins = graded.filter((key) => callGrades[key] === "win").length;
+    if (graded.length) {
+      const cls =
+        wins === graded.length ? "edge" : wins > 0 ? "amber" : "neg";
+      const callTag = el("span", `tag ${cls}`, `Calls ${wins}/${graded.length}`);
+      callTag.title = `Model picks graded against the final score:\n${graded
+        .map(
+          (key) =>
+            `${MARKET_LABEL[key]} ${marketPick(market.markets[key])} — ${
+              callGrades[key] === "win"
+                ? "correct"
+                : callGrades[key] === "loss"
+                ? "missed"
+                : "push"
+            }`
+        )
+        .join("\n")}`;
+      top.appendChild(callTag);
+    }
+  } else if (best) {
     const bestTag = el(
       'span',
       `tag edge-tag ${market.outlier ? 'amber' : best.market.edge >= 0.02 ? 'edge' : 'neutral'}`,
@@ -989,7 +1108,7 @@ function gameCard(game, rank) {
   });
   card.appendChild(meta);
 
-  if (market && market.markets) card.appendChild(edgeGrid(market, best));
+  if (market && market.markets) card.appendChild(edgeGrid(market, best, game));
   if (market && market.outlier) {
     const marketKey = market.outlier_market;
     let drivers = [];
@@ -1446,7 +1565,7 @@ const SKILL_COLUMNS = [
 const QB_COLUMNS = [
   { key: 'passing_yards', valueKey: 'projected_pass_yards', label: 'Pass yds', digits: 1, hist: 0, tip: 'Projected passing yards.' },
   { key: 'passing_tds', valueKey: 'projected_pass_tds', label: 'Pass TD', digits: 2, hist: 0, tip: 'Projected passing touchdowns.' },
-  { key: 'passing_interceptions', valueKey: 'projected_interceptions', label: 'INT', digits: 2, hist: 0, tip: 'Projected interceptions thrown.' },
+  { key: 'passing_interceptions', valueKey: 'projected_interceptions', label: 'INT', digits: 2, hist: 0, tip: 'Projected interceptions thrown.', lowerBetter: true },
   { key: 'rushing_yards', valueKey: 'projected_rush_yards', label: 'Rush yds', digits: 1, hist: 0, tip: 'Projected rushing yards.' },
   { key: 'rushing_tds', valueKey: 'projected_rush_tds', label: 'Rush TD', digits: 2, hist: 0, tip: 'Projected rushing touchdowns.' },
 ];
@@ -1576,11 +1695,16 @@ function renderPlayers() {
     const gameNote = selectedGame
       ? ` Showing ${teamAbbr(selectedGame.away_team)} @ ${teamAbbr(selectedGame.home_team)}.`
       : '';
-    const liveNote = liveGames().length
-      ? ' Live stats refresh every 30 seconds while games are in progress.'
+    const liveNote = statGames().some((entry) => entry.status.state === 'in')
+      ? ' Live numbers refresh every 30 seconds.'
+      : '';
+    const finalNote = statGames().some(
+      (entry) => entry.status.completed || entry.status.state === 'post'
+    )
+      ? ' Green ✓ = final stat met the projection.'
       : '';
     sub.textContent = state.players.length
-      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}.${gameNote} ${historyNote}${liveNote}`
+      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}.${gameNote} ${historyNote}${liveNote}${finalNote}`
       : 'Projected fantasy points and stat lines for this week’s matchups.';
   }
 
@@ -1764,10 +1888,20 @@ function renderPlayers() {
     const info = el('div');
     info.style.minWidth = '0';
     const liveRecord = liveRecordFor(liveIndex, player);
+    const gameStatus = state.scoresById.get(player.game_id)?.status;
+    const isFinal = Boolean(
+      gameStatus && (gameStatus.completed || gameStatus.state === 'post')
+    );
     const nameLine = el('div', 'nm', player.name);
     if (liveRecord) {
-      const chip = el('span', 'live-chip', 'LIVE');
-      chip.title = 'This player’s game is in progress; numbers below are live.';
+      const chip = el(
+        'span',
+        isFinal ? 'live-chip final-chip' : 'live-chip',
+        isFinal ? 'FINAL' : 'LIVE'
+      );
+      chip.title = isFinal
+        ? 'Game finished; numbers below are the final stat line.'
+        : 'This player’s game is in progress; numbers below are live.';
       nameLine.appendChild(chip);
     }
     info.appendChild(nameLine);
@@ -1834,9 +1968,32 @@ function renderPlayers() {
           const text = Number(live)
             .toFixed(digits)
             .replace(/\.0+$/, '');
-          const node = el('div', 'live-val', text);
-          node.title = `Live ${column.label.toLowerCase()}`;
-          td.appendChild(node);
+          if (isFinal) {
+            const projected = Number(stat.value);
+            const comparable = Number.isFinite(projected) && projected > 0;
+            const met = comparable
+              ? column.lowerBetter
+                ? live <= projected
+                : live >= projected
+              : false;
+            const node = el('div', `final-val${met ? ' met' : ''}`, met ? `${text} ✓` : text);
+            node.title = `Final ${column.label.toLowerCase()}: ${text} vs projected ${fmtStat(
+              stat.value,
+              false,
+              digits
+            )} — ${
+              met
+                ? 'met the projection'
+                : column.lowerBetter
+                ? 'above the projection'
+                : 'below the projection'
+            }`;
+            td.appendChild(node);
+          } else {
+            const node = el('div', 'live-val', text);
+            node.title = `Live ${column.label.toLowerCase()}`;
+            td.appendChild(node);
+          }
         }
       }
       if (!stat.skip) td.appendChild(historyRow(player, stat.histKey, column.hist));

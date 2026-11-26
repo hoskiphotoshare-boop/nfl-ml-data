@@ -808,6 +808,46 @@ h2 {
   vertical-align: middle;
 }
 
+.live-chip.final-chip {
+  background: var(--chip-bg);
+  color: var(--muted);
+}
+
+.final-val {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--muted-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.final-val.met {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.call-badge {
+  margin-left: 0.28rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.call-badge.win {
+  color: var(--green);
+}
+
+.call-badge.loss {
+  color: var(--red);
+}
+
+.call-badge.push {
+  color: var(--muted-2);
+}
+
+.edge-cell.call-win {
+  border-color: var(--green);
+  background: var(--green-soft);
+}
+
 .game-top {
   display: flex;
   align-items: center;
