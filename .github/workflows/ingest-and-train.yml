@@ -135,16 +135,8 @@ jobs:
           git pull --rebase origin main || true
           git push origin main || true
 
-      - name: Build team pages
-        run: |
-          python scripts/build_team_pages.py
-          test "$(find frontend/teams -maxdepth 1 -name '*.html' | wc -l)" -ge 33
-
-      - name: Prepare static data for Pages
-        run: |
-          mkdir -p frontend/data/predictions frontend/data/reports
-          cp predictions/*.json frontend/data/predictions/ 2>/dev/null || true
-          cp reports/*.json frontend/data/reports/ 2>/dev/null || true
+      - name: Prepare static site
+        run: python scripts/prepare_site.py
 
       - name: Deploy frontend to Cloudflare Pages
         env:

@@ -1260,11 +1260,11 @@ function gameCard(game, rank) {
     });
     card.appendChild(buttons);
   }
-  if (!isFinal || hasPlayers) {
+  if (hasPlayers) {
     card.appendChild(el('div', 'card-hint', 'View players →'));
   }
 
-  if (!isFinal || hasPlayers) {
+  if (hasPlayers) {
     card.classList.add('clickable');
     card.tabIndex = 0;
     card.setAttribute('role', 'link');
@@ -1291,6 +1291,7 @@ function gameCard(game, rank) {
 function openGamePlayers(gameId) {
   const game = state.gamesById.get(gameId);
   if (!game) return;
+  if (!(state.players || []).some((player) => player.game_id === gameId)) return;
   state.playersGame = gameId;
   const gameSelect = $('#players-game-filter');
   if (gameSelect) gameSelect.value = gameId;
@@ -2914,12 +2915,19 @@ function populateGameFilters() {
   const select = $('#players-game-filter');
   if (!select) return;
   const current = select.value;
-  const games = [...state.games].sort(
-    (a, b) =>
-      (a.week ?? 99) - (b.week ?? 99) ||
-      String(a.gameday || '').localeCompare(String(b.gameday || '')) ||
-      String(a.gametime || '').localeCompare(String(b.gametime || ''))
+  // Only games that actually have player projections can be filtered to;
+  // listing the whole remaining schedule would lead to empty views.
+  const playerGames = new Set(
+    state.players.map((player) => player.game_id).filter(Boolean)
   );
+  const games = state.games
+    .filter((game) => playerGames.has(game.game_id))
+    .sort(
+      (a, b) =>
+        (a.week ?? 99) - (b.week ?? 99) ||
+        String(a.gameday || '').localeCompare(String(b.gameday || '')) ||
+        String(a.gametime || '').localeCompare(String(b.gametime || ''))
+    );
   select.innerHTML = '';
   const all = document.createElement('option');
   all.value = 'all';
