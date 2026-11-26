@@ -141,7 +141,7 @@ def main() -> None:
         X_test = test.select(features).to_numpy()
         y_test = test["home_win"].to_numpy()
 
-        model = LogisticRegression(max_iter=2000)
+        model = LogisticRegression(max_iter=4000, C=0.03)
         model.fit(X_train, y_train)
         proba = model.predict_proba(X_test)[:, 1]
 

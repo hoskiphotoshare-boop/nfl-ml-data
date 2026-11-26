@@ -49,7 +49,7 @@ def main() -> None:
         test = seasons == season
         if train.sum() < 100 or test.sum() < 20:
             continue
-        model = LogisticRegression(max_iter=3000)
+        model = LogisticRegression(max_iter=4000, C=0.03)
         model.fit(X[train], y[train])
         predictions.append(model.predict_proba(X[test])[:, 1])
         outcomes.append(y[test])

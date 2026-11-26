@@ -184,7 +184,7 @@ def train_match_model(df: pl.DataFrame):
         print("Using random 80/20 split (not enough seasons for time-based split).")
 
     candidates = [
-        ("logistic", LogisticRegression(max_iter=2000)),
+        ("logistic", LogisticRegression(max_iter=4000, C=0.03)),
         ("hist_gradient_boosting", HistGradientBoostingClassifier(max_iter=200, random_state=42)),
     ]
 
