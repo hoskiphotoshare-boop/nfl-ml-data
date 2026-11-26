@@ -66,6 +66,8 @@ const state = {
   scoresUpdatedAt: null,
   scoresUnavailable: false,
   scoreTimer: null,
+  liveStats: new Map(),
+  liveStatsUnavailable: false,
   gamesView: 'schedule',
   playersPos: 'QB',
   playersGame: 'all',
@@ -727,6 +729,106 @@ async function loadScores() {
   }
 }
 
+function playersTabActive() {
+  const panel = document.getElementById("players");
+  return Boolean(panel && panel.classList.contains("active"));
+}
+
+const LIVE_STAT_MAP = {
+  passing_yards: ["passing", "YDS"],
+  passing_tds: ["passing", "TD"],
+  passing_interceptions: ["passing", "INT"],
+  rushing_yards: ["rushing", "YDS"],
+  rushing_tds: ["rushing", "TD"],
+  receptions: ["receiving", "REC"],
+  yards: ["receiving", "YDS"],
+  touchdowns: ["receiving", "TD"],
+  targets: ["receiving", "TGTS"],
+  fg_made: ["kicking", "FG"],
+  fg_att: ["kicking", "FG"],
+  pat_made: ["kicking", "XP"],
+};
+
+function buildLiveIndex() {
+  const index = new Map();
+  state.liveStats.forEach((entry, gameId) => {
+    Object.entries(entry.teams || {}).forEach(([team, groups]) => {
+      Object.entries(groups || {}).forEach(([groupName, group]) => {
+        (group.players || []).forEach((athlete) => {
+          const key = `${gameId}:${athlete.id}`;
+          const record = index.get(key) || { team, values: {} };
+          (group.labels || []).forEach((label, i) => {
+            record.values[`${groupName}.${label}`] = athlete.stats?.[i];
+          });
+          index.set(key, record);
+        });
+      });
+    });
+  });
+  return index;
+}
+
+function liveRecordFor(index, player) {
+  if (!player.espn_id || !player.game_id) return null;
+  return index.get(`${player.game_id}:${player.espn_id}`) || null;
+}
+
+function parseLiveNumber(text) {
+  const value = Number(String(text).replace(/,/g, ""));
+  return Number.isFinite(value) ? value : null;
+}
+
+function liveStatValue(record, statKey) {
+  const mapping = LIVE_STAT_MAP[statKey];
+  if (!mapping) return null;
+  const raw = record.values[`${mapping[0]}.${mapping[1]}`];
+  if (raw === undefined || raw === null || raw === "") return null;
+  if (statKey === "fg_made" || statKey === "fg_att" || statKey === "pat_made") {
+    const [made, attempts] = String(raw).split("/");
+    return parseLiveNumber(statKey === "fg_att" ? attempts : made);
+  }
+  return parseLiveNumber(raw);
+}
+
+function liveGames() {
+  return [...state.scoresById.values()].filter(
+    (game) => game.status && game.status.state === "in" && game.espn_id
+  );
+}
+
+async function loadLiveStats() {
+  const games = liveGames().slice(0, 8);
+  if (!games.length) {
+    if (state.liveStats.size) {
+      state.liveStats = new Map();
+      if (playersTabActive()) renderPlayers();
+    }
+    return;
+  }
+  const results = await Promise.allSettled(
+    games.map(async (game) => {
+      const response = await fetch(
+        `/api/player-stats?event=${encodeURIComponent(game.espn_id)}`,
+        { cache: "no-store" }
+      );
+      if (!response.ok) throw new Error(String(response.status));
+      return { gameId: game.game_id, data: await response.json() };
+    })
+  );
+  const next = new Map();
+  let failed = 0;
+  results.forEach((result) => {
+    if (result.status === "fulfilled") {
+      next.set(result.value.gameId, result.value.data);
+    } else {
+      failed += 1;
+    }
+  });
+  state.liveStatsUnavailable = failed === games.length;
+  if (!state.liveStatsUnavailable) state.liveStats = next;
+  if (playersTabActive()) renderPlayers();
+}
+
 function scheduleScorePoll() {
   clearTimeout(state.scoreTimer);
   if (document.hidden || state.scoresUnavailable) return;
@@ -742,6 +844,7 @@ function scheduleScorePoll() {
   if (!hasLive && !hasGameToday) return;
   state.scoreTimer = setTimeout(async () => {
     await loadScores();
+    if (playersTabActive()) await loadLiveStats();
     scheduleScorePoll();
   }, hasLive ? 30000 : 60000);
 }
@@ -1456,6 +1559,7 @@ function renderPlayers() {
   if (!wrap) return;
   const previousScroll = wrap.querySelector('.table-scroll')?.scrollLeft || 0;
   const list = filteredPlayers();
+  const liveIndex = buildLiveIndex();
   clear(wrap);
 
   const count = $('#players-count');
@@ -1472,8 +1576,11 @@ function renderPlayers() {
     const gameNote = selectedGame
       ? ` Showing ${teamAbbr(selectedGame.away_team)} @ ${teamAbbr(selectedGame.home_team)}.`
       : '';
+    const liveNote = liveGames().length
+      ? ' Live stats refresh every 30 seconds while games are in progress.'
+      : '';
     sub.textContent = state.players.length
-      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}.${gameNote} ${historyNote}`
+      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}.${gameNote} ${historyNote}${liveNote}`
       : 'Projected fantasy points and stat lines for this week’s matchups.';
   }
 
@@ -1656,7 +1763,14 @@ function renderPlayers() {
     pwrap.appendChild(teamBadge(player.team, true));
     const info = el('div');
     info.style.minWidth = '0';
-    info.appendChild(el('div', 'nm', player.name));
+    const liveRecord = liveRecordFor(liveIndex, player);
+    const nameLine = el('div', 'nm', player.name);
+    if (liveRecord) {
+      const chip = el('span', 'live-chip', 'LIVE');
+      chip.title = 'This player’s game is in progress; numbers below are live.';
+      nameLine.appendChild(chip);
+    }
+    info.appendChild(nameLine);
     info.appendChild(
       el(
         'div',
@@ -1713,6 +1827,18 @@ function renderPlayers() {
       const stat = resolveStat(player, column, state.playersPos);
       const td = el('td', `num col-${column.key}`);
       td.appendChild(el('div', 'stat-val', fmtStat(stat.value, stat.skip, column.digits)));
+      if (liveRecord && !stat.skip) {
+        const live = liveStatValue(liveRecord, stat.histKey);
+        if (live !== null) {
+          const digits = column.digits;
+          const text = Number(live)
+            .toFixed(digits)
+            .replace(/\.0+$/, '');
+          const node = el('div', 'live-val', text);
+          node.title = `Live ${column.label.toLowerCase()}`;
+          td.appendChild(node);
+        }
+      }
       if (!stat.skip) td.appendChild(historyRow(player, stat.histKey, column.hist));
       tr.appendChild(td);
     });
@@ -2270,6 +2396,16 @@ function activateTab(name, focus = false) {
     btn.setAttribute('aria-current', active ? 'page' : 'false');
   });
   panels.forEach((panel) => panel.classList.toggle('active', panel.id === name));
+
+  if (name === 'players') {
+    if (state.scoresById.size) {
+      loadLiveStats();
+    } else {
+      loadScores().then(() => {
+        if (playersTabActive()) loadLiveStats();
+      });
+    }
+  }
 }
 
 function setupTabs() {

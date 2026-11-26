@@ -783,6 +783,31 @@ h2 {
   }
 }
 
+.live-chip {
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.3rem;
+  border-radius: 999px;
+  font-size: 0.56rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.live-val {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.live-val::before {
+  content: '●';
+  margin-right: 0.18rem;
+  font-size: 0.5rem;
+  vertical-align: middle;
+}
+
 .game-top {
   display: flex;
   align-items: center;

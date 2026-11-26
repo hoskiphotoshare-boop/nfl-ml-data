@@ -3,8 +3,8 @@
 
 Reads ``predictions/upcoming_games.json`` (written by ``predict_upcoming.py``)
 and ``predictions/players_week.json`` and adds ``opponent``, ``matchup``,
-``home_away``, ``gameday`` and ``gametime`` so the frontend can show a
-fantasy-style matchup column.
+``home_away``, ``gameday``, ``gametime`` and ``espn_id`` so the frontend can show
+a fantasy-style matchup column and join live ESPN stat lines.
 """
 
 from __future__ import annotations
@@ -21,12 +21,36 @@ def load(path: str, default):
         return json.load(f)
 
 
+def espn_id_map() -> dict[str, str]:
+    """Map GSIS player ids to ESPN athlete ids from the latest roster snapshot."""
+    try:
+        import polars as pl
+    except Exception:
+        return {}
+    for path in ("data/players_latest.parquet", "data/rosters_weekly_latest.parquet"):
+        if not os.path.exists(path):
+            continue
+        try:
+            frame = pl.read_parquet(path).select(["gsis_id", "espn_id"])
+        except Exception:
+            continue
+        mapping = {}
+        for row in frame.iter_rows(named=True):
+            gsis, espn = row.get("gsis_id"), row.get("espn_id")
+            if gsis and espn:
+                mapping[str(gsis)] = str(espn)
+        return mapping
+    return {}
+
+
 def main() -> None:
     games = load("predictions/upcoming_games.json", [])
     players = load("predictions/players_week.json", [])
     if not games or not players:
         print("Missing games or player projections; skipping matchup enrichment.")
         return
+
+    ids = espn_id_map()
 
     weeks = sorted({g.get("week") for g in games if g.get("week") is not None})
     current_week = weeks[0] if weeks else None
@@ -60,6 +84,7 @@ def main() -> None:
 
     enriched = 0
     for p in players:
+        p["espn_id"] = ids.get(str(p.get("player_id")))
         info = by_team.get(p.get("team"))
         if not info:
             p["opponent"] = None
