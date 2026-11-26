@@ -150,7 +150,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2577417",
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0036442",
@@ -303,7 +310,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3915511",
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039163",
@@ -456,7 +470,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4432577",
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036971",
@@ -609,7 +630,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4360310",
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039139",
@@ -762,7 +790,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4429795",
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0029604",
@@ -915,7 +950,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "14880",
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034857",
@@ -1068,7 +1110,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3918298",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0037834",
@@ -1221,7 +1270,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4361741",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0019596",
@@ -1373,7 +1429,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2330",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0039361",
@@ -1526,7 +1589,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4596448",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0033280",
@@ -1679,7 +1749,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3117251",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0040743",
@@ -1832,7 +1909,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4360689",
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035261",
@@ -1985,7 +2069,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3916148",
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039910",
@@ -2138,7 +2229,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4426348",
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0033537",
@@ -2291,7 +2389,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3122840",
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0033106",
@@ -2444,7 +2549,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3046779",
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033873",
@@ -2597,7 +2709,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3139477",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0038543",
@@ -2750,7 +2869,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4430878",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0039732",
@@ -2903,7 +3029,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4426338",
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0038542",
@@ -3056,7 +3189,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4430807",
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036264",
@@ -3209,7 +3349,10 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4036378",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0040715",
@@ -3362,7 +3505,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4696981",
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038134",
@@ -3515,7 +3665,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4567048",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0038597",
@@ -3668,7 +3825,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4362238",
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0026498",
@@ -3821,7 +3985,10 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "12483",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0036963",
@@ -3974,7 +4141,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4374302",
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040719",
@@ -4127,7 +4301,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4882093",
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039918",
@@ -4280,7 +4461,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4431611",
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039923",
@@ -4433,7 +4621,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4433970",
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037248",
@@ -4586,7 +4781,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4379399",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0036900",
@@ -4739,7 +4941,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4362628",
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036912",
@@ -4892,7 +5101,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4241478",
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0040676",
@@ -5045,7 +5261,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4688380",
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036355",
@@ -5198,7 +5421,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4038941",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0040735",
@@ -5351,7 +5581,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4685278",
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034869",
@@ -5504,7 +5741,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3912547",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0033119",
@@ -5657,7 +5901,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2578570",
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039150",
@@ -5810,7 +6061,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4685720",
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0040014",
@@ -5899,7 +6157,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4433971",
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036275",
@@ -6052,7 +6317,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4259545",
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036555",
@@ -6205,7 +6477,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4241416",
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0040198",
@@ -6358,7 +6637,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4711533",
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039917",
@@ -6511,7 +6797,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4360423",
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036358",
@@ -6664,7 +6957,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4241389",
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0037263",
@@ -6817,7 +7117,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4373626",
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036223",
@@ -6970,7 +7277,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4242335",
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036875",
@@ -7123,7 +7437,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4569173",
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0041496",
@@ -7276,7 +7597,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4702555",
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0037238",
@@ -7429,7 +7757,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4426502",
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037740",
@@ -7582,7 +7917,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4569618",
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037838",
@@ -7735,7 +8077,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4361050",
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033288",
@@ -7888,7 +8237,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3040151",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036322",
@@ -8041,7 +8397,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4262921",
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036997",
@@ -8194,7 +8557,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4361579",
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0039337",
@@ -8347,7 +8717,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4595348",
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034855",
@@ -8500,7 +8877,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3052587",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0037228",
@@ -8653,7 +9037,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4569987",
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0039338",
@@ -8806,7 +9197,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4432665",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0041438",
@@ -8959,7 +9357,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4871023",
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032764",
@@ -9112,7 +9517,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3043078",
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037744",
@@ -9265,7 +9677,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4361307",
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0040129",
@@ -9418,7 +9837,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4567750",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0035640",
@@ -9571,7 +9997,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4047650",
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0038120",
@@ -9724,7 +10157,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4427366",
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038124",
@@ -9877,7 +10317,10 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4248528",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0035228",
@@ -10030,7 +10473,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3917315",
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037525",
@@ -10183,7 +10633,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4360569",
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040666",
@@ -10336,7 +10793,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4685382",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0040126",
@@ -10489,7 +10953,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4723086",
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034844",
@@ -10642,7 +11113,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3929630",
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0038400",
@@ -10795,7 +11273,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4685201",
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0036554",
@@ -10948,7 +11433,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4258173",
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040122",
@@ -11101,7 +11593,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4890973",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0041562",
@@ -11206,7 +11705,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4837248",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0039064",
@@ -11359,7 +11865,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4429615",
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040784",
@@ -11512,7 +12025,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4685702",
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0041251",
@@ -11649,7 +12169,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4596472",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0041037",
@@ -11802,7 +12329,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4832800",
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0037239",
@@ -11955,7 +12489,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4361370",
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034351",
@@ -12108,7 +12649,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3121023",
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0039398",
@@ -12261,7 +12809,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4360698",
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0040242",
@@ -12414,7 +12969,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4575131",
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0039165",
@@ -12567,7 +13129,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4426385",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0039880",
@@ -12720,7 +13289,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4569603",
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035704",
@@ -12873,7 +13449,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3924327",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0038129",
@@ -13026,7 +13609,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4243331",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0032268",
@@ -13179,7 +13769,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2576980",
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0038579",
@@ -13332,7 +13929,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4260394",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0040128",
@@ -13485,7 +14089,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4431459",
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0030565",
@@ -13638,7 +14249,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "15864",
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040667",
@@ -13791,7 +14409,10 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4701936",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0029701",
@@ -13943,7 +14564,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "14876",
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0031588",
@@ -14096,7 +14724,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2976212",
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0037840",
@@ -14249,7 +14884,10 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4430737",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0038606",
@@ -14402,7 +15040,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4432620",
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040663",
@@ -14555,7 +15200,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "5083076",
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0037247",
@@ -14708,7 +15360,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4426354",
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0040234",
@@ -14845,7 +15504,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4889929",
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0031408",
@@ -14998,7 +15664,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "16737",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0038996",
@@ -15151,7 +15824,10 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4572680",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0039409",
@@ -15304,7 +15980,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4686361",
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039067",
@@ -15457,7 +16140,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4428331",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0040124",
@@ -15610,7 +16300,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4685472",
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0040583",
@@ -15763,7 +16460,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4429059",
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032058",
@@ -15851,7 +16555,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2979477",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0035120",
@@ -15939,7 +16650,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3120980",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0036973",
@@ -16092,7 +16810,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4239996",
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034184",
@@ -16244,7 +16969,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3051926",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0036212",
@@ -16397,7 +17129,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4241479",
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036898",
@@ -16550,7 +17289,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4242546",
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041029",
@@ -16655,7 +17401,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4880281",
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0026300",
@@ -16808,7 +17561,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "11394",
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036410",
@@ -16961,7 +17721,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4239993",
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034827",
@@ -17114,7 +17881,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3915416",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0039065",
@@ -17267,7 +18041,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4430027",
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039738",
@@ -17420,7 +18201,10 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4429096",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0037692",
@@ -17573,7 +18357,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3953687",
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0038563",
@@ -17726,7 +18517,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4428718",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0039172",
@@ -17879,7 +18677,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4689936",
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0030506",
@@ -18032,7 +18837,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "15847",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0029822",
@@ -18185,7 +18997,10 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "16339",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0036854",
@@ -18338,7 +19153,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4360234",
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0023853",
@@ -18490,7 +19312,14 @@
         3.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "11122",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0040200",
@@ -18643,7 +19472,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4569923",
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0038428",
@@ -18796,7 +19632,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4258620",
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0035700",
@@ -18950,7 +19793,10 @@
     },
     "depth_rank": 1,
     "injury_status": "questionable",
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4047365",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0033303",
@@ -19103,7 +19949,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3055899",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0039404",
@@ -19256,7 +20109,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4567104",
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034753",
@@ -19409,7 +20269,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3116365",
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035358",
@@ -19562,7 +20429,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3150744",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0040899",
@@ -19715,7 +20589,10 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4869461",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0039851",
@@ -19868,7 +20745,14 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4431452",
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0038994",
@@ -20021,7 +20905,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4429205",
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032569",
@@ -20174,7 +21065,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2985659",
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0035192",
@@ -20327,7 +21225,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3124084",
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037224",
@@ -20480,7 +21385,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4362081",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0038933",
@@ -20633,7 +21545,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4385690",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0041182",
@@ -20786,7 +21705,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "5081335",
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0025580",
@@ -20938,7 +21864,14 @@
         3.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "10636",
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0030332",
@@ -21090,7 +22023,10 @@
         2.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "16486",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0032726",
@@ -21243,7 +22179,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2971573",
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033923",
@@ -21395,7 +22338,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3059915",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0034084",
@@ -21547,7 +22497,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3123052",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0034173",
@@ -21700,7 +22657,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4034949",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036162",
@@ -21853,7 +22817,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3917232",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0038562",
@@ -22006,7 +22977,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4372066",
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039229",
@@ -22159,7 +23137,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "5208518",
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040279",
@@ -22312,7 +23297,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4568263",
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0039794",
@@ -22465,7 +23457,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4685247",
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0031492",
@@ -22618,7 +23617,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2473037",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036816",
@@ -22771,7 +23777,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4243371",
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038935",
@@ -22924,7 +23937,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4430539",
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040736",
@@ -23077,7 +24097,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4808766",
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037240",
@@ -23230,7 +24257,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4426388",
+    "opponent": "CHI",
+    "matchup": "vs CHI",
+    "home_away": "home",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0031136",
@@ -23383,7 +24417,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "17372",
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0037809",
@@ -23536,7 +24577,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4360635",
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0038567",
@@ -23689,7 +24737,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4363538",
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0041523",
@@ -23842,7 +24897,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4869645",
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035676",
@@ -23995,7 +25057,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4047646",
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0039576",
@@ -24148,7 +25217,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4571557",
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041145",
@@ -24301,7 +25377,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "5082424",
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036139",
@@ -24454,7 +25537,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4038815",
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0031203",
@@ -24607,7 +25697,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "17427",
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035269",
@@ -24760,7 +25857,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4249087",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0039915",
@@ -24913,7 +26017,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4612826",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0034383",
@@ -25066,7 +26177,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3117256",
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035229",
@@ -25219,7 +26337,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4036133",
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038416",
@@ -25372,7 +26497,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4434153",
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039919",
@@ -25525,7 +26657,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4431299",
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0039164",
@@ -25678,7 +26817,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4429084",
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041013",
@@ -25831,7 +26977,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4832955",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0041547",
@@ -25984,7 +27137,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4870653",
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0033357",
@@ -26136,7 +27296,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2468609",
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041489",
@@ -26289,7 +27456,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4685261",
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0023252",
@@ -26441,7 +27615,14 @@
         1.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "9354",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0027948",
@@ -26545,7 +27726,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "13987",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0035282",
@@ -26682,7 +27870,14 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3120590",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0036970",
@@ -26835,7 +28030,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4360248",
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033787",
@@ -26988,7 +28190,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3050478",
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0038041",
@@ -27141,7 +28350,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4242355",
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0039890",
@@ -27294,7 +28510,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4597500",
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037256",
@@ -27447,7 +28670,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4697815",
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0040162",
@@ -27600,7 +28830,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "5081397",
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0026968",
@@ -27752,7 +28989,14 @@
         2.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "12731",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0039793",
@@ -27905,7 +29149,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4576297",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0034960",
@@ -28058,7 +29309,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3916433",
+    "opponent": "TEN",
+    "matchup": "vs TEN",
+    "home_away": "home",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037157",
@@ -28211,7 +29469,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4427728",
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036919",
@@ -28364,7 +29629,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4371733",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0031376",
@@ -28516,7 +29788,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "16782",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0033925",
@@ -28668,7 +29947,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3125116",
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0033110",
@@ -28821,7 +30107,10 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2573401",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0034348",
@@ -28974,7 +30263,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3128429",
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0040584",
@@ -29127,7 +30423,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4686728",
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041052",
@@ -29280,7 +30583,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4696044",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0035719",
@@ -29433,7 +30743,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3126486",
+    "opponent": "SEA",
+    "matchup": "vs SEA",
+    "home_away": "home",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0026544",
@@ -29537,7 +30854,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "12471",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0028986",
@@ -29690,7 +31014,14 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "15168",
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033293",
@@ -29843,7 +31174,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3042519",
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034771",
@@ -29996,7 +31334,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3116407",
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0033555",
@@ -30149,7 +31494,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2991662",
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0041042",
@@ -30302,7 +31654,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4682648",
+    "opponent": "IND",
+    "matchup": "@ IND",
+    "home_away": "away",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037261",
@@ -30455,7 +31814,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4373678",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0040236",
@@ -30608,7 +31974,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4608686",
+    "opponent": "DET",
+    "matchup": "@ DET",
+    "home_away": "away",
+    "game_id": "2026_12_CHI_DET",
+    "gameday": "2026-11-26",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041040",
@@ -30761,7 +32134,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "5081432",
+    "opponent": "ARI",
+    "matchup": "@ ARI",
+    "home_away": "away",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0032951",
@@ -30914,7 +32294,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3051889",
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0033090",
@@ -31067,7 +32454,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3046439",
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0038046",
@@ -31220,7 +32614,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4241263",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0039894",
@@ -31373,7 +32774,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4683062",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0033881",
@@ -31526,7 +32934,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3051876",
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0034794",
@@ -31679,7 +33094,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3124679",
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0036244",
@@ -31832,7 +33254,10 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4242557",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0038618",
@@ -31985,7 +33410,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4686422",
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032436",
@@ -32137,7 +33569,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2574630",
+    "opponent": "LV",
+    "matchup": "vs LV",
+    "home_away": "home",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0037005",
@@ -32290,7 +33729,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4372780",
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0034975",
@@ -32443,7 +33889,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4038441",
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0034829",
@@ -32596,7 +34049,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3116164",
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035685",
@@ -32749,7 +34209,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4035538",
+    "opponent": "BAL",
+    "matchup": "vs BAL",
+    "home_away": "home",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0031288",
@@ -32837,7 +34304,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "16810",
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0040398",
@@ -32974,7 +34448,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4429435",
+    "opponent": "MIA",
+    "matchup": "@ MIA",
+    "home_away": "away",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035662",
@@ -33126,7 +34607,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4241372",
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0037252",
@@ -33279,7 +34767,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4367209",
+    "opponent": "NYJ",
+    "matchup": "vs NYJ",
+    "home_away": "home",
+    "game_id": "2026_12_NYJ_MIA",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0038476",
@@ -33432,7 +34927,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4240391",
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0033869",
@@ -33585,7 +35087,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3039707",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0039376",
@@ -33738,7 +35247,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4426339",
+    "opponent": "CIN",
+    "matchup": "@ CIN",
+    "home_away": "away",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037077",
@@ -33891,7 +35407,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4426875",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0039066",
@@ -34044,7 +35567,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4429086",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0040590",
@@ -34197,7 +35727,10 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4710855",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0033921",
@@ -34350,7 +35883,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3116165",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0035264",
@@ -34503,7 +36043,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3892775",
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0037741",
@@ -34656,7 +36203,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4361409",
+    "opponent": "MIN",
+    "matchup": "@ MIN",
+    "home_away": "away",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0029608",
@@ -34792,7 +36346,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "14924",
+    "opponent": "PHI",
+    "matchup": "vs PHI",
+    "home_away": "home",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0036613",
@@ -34945,7 +36506,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4372016",
+    "opponent": "PIT",
+    "matchup": "@ PIT",
+    "home_away": "away",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0041125",
@@ -35098,7 +36666,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4686468",
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0041512",
@@ -35251,7 +36826,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4685512",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036879",
@@ -35372,7 +36954,14 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4241820",
+    "opponent": "NYG",
+    "matchup": "vs NYG",
+    "home_away": "home",
+    "game_id": "2026_12_NYG_IND",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032211",
@@ -35524,7 +37113,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2577327",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0031610",
@@ -35677,7 +37273,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2576925",
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0040867",
@@ -35830,7 +37433,14 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4870795",
+    "opponent": "DAL",
+    "matchup": "@ DAL",
+    "home_away": "away",
+    "game_id": "2026_12_PHI_DAL",
+    "gameday": "2026-11-26",
+    "gametime": "16:30"
   },
   {
     "player_id": "00-0033857",
@@ -35982,7 +37592,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3120348",
+    "opponent": "BUF",
+    "matchup": "@ BUF",
+    "home_away": "away",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0034777",
@@ -36134,7 +37751,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "3115394",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0038544",
@@ -36287,7 +37911,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4429025",
+    "opponent": "NE",
+    "matchup": "vs NE",
+    "home_away": "home",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0040878",
@@ -36440,7 +38071,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4686658",
+    "opponent": "CLE",
+    "matchup": "@ CLE",
+    "home_away": "away",
+    "game_id": "2026_12_LV_CLE",
+    "gameday": "2026-11-29",
+    "gametime": "20:20"
   },
   {
     "player_id": "00-0041395",
@@ -36593,7 +38231,14 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4831959",
+    "opponent": "LAC",
+    "matchup": "@ LAC",
+    "home_away": "away",
+    "game_id": "2026_12_NE_LAC",
+    "gameday": "2026-11-29",
+    "gametime": "16:05"
   },
   {
     "player_id": "00-0031273",
@@ -36745,7 +38390,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "17453",
+    "opponent": "CAR",
+    "matchup": "vs CAR",
+    "home_away": "home",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   },
   {
     "player_id": "00-0031325",
@@ -36897,7 +38549,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "16725",
+    "opponent": "HOU",
+    "matchup": "@ HOU",
+    "home_away": "away",
+    "game_id": "2026_12_BAL_HOU",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0032434",
@@ -37033,7 +38692,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2574511",
+    "opponent": "JAX",
+    "matchup": "@ JAX",
+    "home_away": "away",
+    "game_id": "2026_12_TEN_JAX",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0035860",
@@ -37185,7 +38851,14 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4046676",
+    "opponent": "WAS",
+    "matchup": "vs WAS",
+    "home_away": "home",
+    "game_id": "2026_12_WAS_ARI",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   },
   {
     "player_id": "00-0036894",
@@ -37338,7 +39011,14 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4361411",
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0032950",
@@ -37491,7 +39171,14 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "2573079",
+    "opponent": "ATL",
+    "matchup": "vs ATL",
+    "home_away": "home",
+    "game_id": "2026_12_ATL_MIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
   },
   {
     "player_id": "00-0037429",
@@ -37643,6 +39330,13 @@
         0.0
       ]
     },
-    "roster_status": "ACT"
+    "roster_status": "ACT",
+    "espn_id": "4259308",
+    "opponent": "TB",
+    "matchup": "@ TB",
+    "home_away": "away",
+    "game_id": "2026_12_CAR_TB",
+    "gameday": "2026-11-30",
+    "gametime": "20:15"
   }
 ]

@@ -61,6 +61,7 @@ const state = {
   futuresByTeam: new Map(),
   meta: null,
   marketById: new Map(),
+  gameContext: new Map(),
   gamesById: new Map(),
   scoresById: new Map(),
   resultGames: [],
@@ -1038,6 +1039,7 @@ function gameCard(game, rank) {
   const card = el('article', 'game-card');
   card.dataset.gameId = game.game_id;
   const market = marketFor(game);
+  const context = state.gameContext.get(game.game_id);
   const best = bestMarket(market);
   const { home, away } = probsFor(game);
   const homeFav = home !== null && home >= 0.5;
@@ -1155,6 +1157,24 @@ function gameCard(game, rank) {
       )} moneyline (${bestMl.bookmaker || 'market'}).`;
       names.appendChild(oddsLine);
     }
+    const side = row.team === game.home_team ? 'home' : 'away';
+    const qb = context?.[side]?.qb;
+    if (qb && qb.name) {
+      const label = qb.status
+        ? INJURY_LABEL[String(qb.status).toLowerCase()] || qb.status
+        : null;
+      const qbLine = el(
+        'div',
+        'team-sub qb-line',
+        `QB ${qb.name}${label ? ` · ${label}` : ''}`
+      );
+      qbLine.title = `Starting quarterback${qb.injury ? ` — ${qb.injury}` : ''}${
+        qb.projected !== null && qb.projected !== undefined
+          ? ` · ${qb.projected} projected fantasy points`
+          : ''
+      }`;
+      names.appendChild(qbLine);
+    }
     line.appendChild(names);
     const probNode = el('span', 'prob');
     probNode.appendChild(document.createTextNode(pct(row.prob)));
@@ -1163,6 +1183,52 @@ function gameCard(game, rank) {
     line.appendChild(probNode);
     card.appendChild(line);
   });
+
+  if (context) {
+    const homeInjuries = context.home?.injuries || [];
+    const awayInjuries = context.away?.injuries || [];
+    if (homeInjuries.length || awayInjuries.length) {
+      const details = el('details', 'card-injuries');
+      details.open = window.matchMedia('(min-width: 761px)').matches;
+      details.appendChild(
+        el(
+          'summary',
+          '',
+          `Injuries · ${teamAbbr(game.home_team)} ${homeInjuries.length} · ${teamAbbr(
+            game.away_team
+          )} ${awayInjuries.length}`
+        )
+      );
+      const list = el('div', 'injury-list');
+      [
+        ['home', game.home_team, homeInjuries],
+        ['away', game.away_team, awayInjuries],
+      ].forEach(([, team, injuries]) => {
+        if (!injuries.length) return;
+        list.appendChild(el('div', 'injury-team', teamAbbr(team)));
+        injuries.forEach((injury) => {
+          const row = el('div', 'injury-row');
+          row.appendChild(el('span', 'injury-name', injury.name));
+          row.appendChild(el('span', 'injury-pos', injury.position || '—'));
+          const status = el(
+            'span',
+            `injury-status ${String(injury.kind || '').toLowerCase()}`,
+            injury.status || '—'
+          );
+          status.title = [injury.report_status, injury.practice_status]
+            .filter(Boolean)
+            .join(' · ');
+          row.appendChild(status);
+          if (injury.injury) row.appendChild(el('span', 'injury-note', injury.injury));
+          list.appendChild(row);
+        });
+      });
+      details.appendChild(list);
+      card.appendChild(details);
+    } else {
+      card.appendChild(el('div', 'card-injuries empty', 'Injuries · none reported'));
+    }
+  }
 
   if (home !== null) {
     const bar = el('div', 'winbar');
@@ -3050,7 +3116,17 @@ async function loadAll() {
   setupFilters();
 
   try {
-    const [games, players, playoffs, market, futures, explanations, meta, gamePicks] = await Promise.all([
+    const [
+      games,
+      players,
+      playoffs,
+      market,
+      futures,
+      explanations,
+      meta,
+      gamePicks,
+      gameContext,
+    ] = await Promise.all([
       loadGames(),
       fetchJSON('players_week.json'),
       fetchJSON('playoffs.json'),
@@ -3059,6 +3135,7 @@ async function loadAll() {
       fetchReport('model_explanations.json').catch(() => null),
       fetchJSON('meta.json').catch(() => null),
       fetchJSON('game_picks.json').catch(() => ({ games: [] })),
+      fetchReport('game_context.json').catch(() => null),
     ]);
 
     state.games = games || [];
@@ -3074,6 +3151,7 @@ async function loadAll() {
       (explanations?.score?.games || []).map((game) => [game.game_id, game])
     );
     state.marketById = new Map((market?.games || []).map((g) => [g.game_id, g]));
+    state.gameContext = new Map(Object.entries(gameContext?.games || {}));
     state.gamesById = new Map(state.games.map((g) => [g.game_id, g]));
     const archivedGames = gamePicks?.games || [];
     state.pickById = new Map(archivedGames.map((g) => [g.game_id, g]));

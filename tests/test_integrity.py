@@ -57,3 +57,36 @@ def test_health_integrity_has_no_open_issues():
     assert not integrity.get("final_picks_missing_source"), integrity.get(
         "final_picks_missing_source"
     )
+
+
+def test_players_have_game_ids_for_current_week():
+    players = load("predictions/players_week.json")
+    assert players, "no player projections"
+    with_game = [player for player in players if player.get("game_id")]
+    assert with_game, (
+        "players_week.json has no game_id values; the Players game filter and "
+        "game-card drilldown would be empty. Run add_player_matchups.py."
+    )
+    assert len({player["game_id"] for player in with_game}) >= 10
+
+
+def test_game_context_covers_player_games():
+    players = load("predictions/players_week.json")
+    game_ids = {player["game_id"] for player in players if player.get("game_id")}
+    context = load("reports/game_context.json")
+    games = context.get("games") or {}
+    assert games, "game_context.json has no games"
+    missing = game_ids - set(games)
+    assert not missing, f"games with players but no context: {sorted(missing)}"
+    for game in games.values():
+        for side in ("home", "away"):
+            team = game.get(side) or {}
+            assert team.get("team"), game.get("game_id")
+            assert isinstance(team.get("injuries"), list), game.get("game_id")
+            qb = team.get("qb")
+            if qb is not None:
+                assert qb.get("name"), game.get("game_id")
+        for side in ("home", "away"):
+            for injury in (game.get(side) or {}).get("injuries", []):
+                assert injury.get("name"), game.get("game_id")
+                assert injury.get("status"), game.get("game_id")

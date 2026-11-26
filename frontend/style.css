@@ -2539,3 +2539,99 @@ html.standalone .appbar {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* ---------- game-card QB and injury context ---------- */
+.qb-line {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.card-injuries {
+  margin: 0.35rem 0 0.15rem;
+  padding-top: 0.35rem;
+  border-top: 1px solid var(--line);
+}
+
+.card-injuries.empty {
+  color: var(--muted-2);
+  font-size: 0.7rem;
+}
+
+.card-injuries summary {
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  list-style-position: inside;
+}
+
+.card-injuries summary:hover {
+  color: var(--text);
+}
+
+.injury-list {
+  display: grid;
+  gap: 0.12rem;
+  margin-top: 0.35rem;
+}
+
+.injury-team {
+  margin-top: 0.3rem;
+  color: var(--muted-2);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.injury-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 2.6rem 4.4rem;
+  gap: 0.35rem;
+  align-items: baseline;
+  font-size: 0.7rem;
+}
+
+.injury-name {
+  overflow: hidden;
+  color: var(--text);
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.injury-pos {
+  color: var(--muted-2);
+  font-size: 0.64rem;
+}
+
+.injury-status {
+  color: var(--muted);
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.injury-status.out,
+.injury-status.doubtful {
+  color: var(--red);
+}
+
+.injury-status.questionable,
+.injury-status.dnp,
+.injury-status.limited {
+  color: var(--amber);
+}
+
+.injury-status.full {
+  color: var(--muted-2);
+}
+
+.injury-note {
+  grid-column: 1 / -1;
+  margin-top: -0.12rem;
+  color: var(--muted);
+  font-size: 0.64rem;
+}

@@ -22,6 +22,7 @@ jobs:
       - run: python scripts/build_features.py || true
       - run: python scripts/train_player_models.py || true
       - run: python scripts/add_player_matchups.py || true
+      - run: python scripts/build_game_context.py || true
       - run: python scripts/explain_models.py || true
       - run: python scripts/build_health_report.py || true
       - run: python scripts/build_model_scorecard.py || true

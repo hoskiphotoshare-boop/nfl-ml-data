@@ -51,6 +51,28 @@ def main() -> None:
             f"{mirror_meta.get('generated_at')} != {source_meta.get('generated_at')}"
         )
 
+    players = json.loads(
+        (FRONTEND / "data" / "predictions" / "players_week.json").read_text()
+    )
+    with_game = sum(1 for player in players if player.get("game_id"))
+    if players and with_game == 0:
+        raise SystemExit(
+            "players_week.json has no game_id values; run "
+            "scripts/add_player_matchups.py before deploying"
+        )
+
+    context_path = FRONTEND / "data" / "reports" / "game_context.json"
+    if not context_path.exists():
+        raise SystemExit(
+            "reports/game_context.json is missing; run scripts/build_game_context.py"
+        )
+    context = json.loads(context_path.read_text())
+    if with_game and not (context.get("games") or {}):
+        raise SystemExit(
+            "game_context.json has no current-week games; run "
+            "scripts/build_game_context.py"
+        )
+
     pages = sorted((FRONTEND / "teams").glob("*.html"))
     if len(pages) < 33:
         raise SystemExit(f"only {len(pages)} team pages generated; expected at least 33")
