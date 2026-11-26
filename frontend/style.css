@@ -2352,3 +2352,87 @@ footer .odds {
     grid-template-columns: 1fr;
   }
 }
+
+/* ---------- admin model scorecard ---------- */
+.score-wrap {
+  overflow-x: auto;
+}
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78rem;
+}
+
+.score-table th,
+.score-table td {
+  padding: 0.5rem 0.55rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.score-table th {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+.score-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.score-table td:first-child {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.score-table td:nth-child(3),
+.score-table td:nth-child(4) {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.grade {
+  display: inline-block;
+  min-width: 2.15rem;
+  padding: 0.08rem 0.35rem;
+  border-radius: 999px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.7rem;
+}
+
+.grade-ab {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.grade-c {
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.grade-d {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.score-caveats {
+  margin-top: 0.75rem;
+  padding: 0.6rem 0.75rem;
+  border-left: 3px solid var(--amber);
+  background: var(--amber-soft);
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  color: var(--muted);
+}
+
+.score-caveats ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.2rem;
+}

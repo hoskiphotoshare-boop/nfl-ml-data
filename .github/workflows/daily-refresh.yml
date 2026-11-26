@@ -43,6 +43,7 @@ jobs:
       - run: python scripts/simulate_playoffs.py || true
       - run: python scripts/compare_futures.py || true
       - run: python scripts/build_health_report.py || true
+      - run: python scripts/build_model_scorecard.py || true
 
       - run: |
           git config user.name "github-actions"

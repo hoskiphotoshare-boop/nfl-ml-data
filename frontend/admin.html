@@ -64,6 +64,11 @@
       </section>
 
       <section>
+        <h2>Model scorecard</h2>
+        <div id="scorecard"></div>
+      </section>
+
+      <section>
         <h2>Match backtest</h2>
         <div id="match-backtest" class="card-grid"></div>
       </section>
@@ -428,6 +433,85 @@
         ]));
       } catch (e) {
         document.getElementById("health").appendChild(card("Health report unavailable", [String(e)]));
+      }
+
+      // Model scorecard
+      try {
+        const s = await getJSON(`${R}/model_scorecard.json`);
+        const host = document.getElementById("scorecard");
+        host.innerHTML = "";
+        const note = document.createElement("p");
+        note.className = "subtitle";
+        note.textContent = `${s.headline || ""} Generated ${
+          s.generated_at ? new Date(s.generated_at).toLocaleString() : "—"
+        }.`;
+        host.appendChild(note);
+
+        const wrap = document.createElement("div");
+        wrap.className = "score-wrap";
+        const table = document.createElement("table");
+        table.className = "score-table";
+        const thead = document.createElement("thead");
+        const headRow = document.createElement("tr");
+        ["Model", "Grade", "This model", "Baseline", "Assessment"].forEach((label) => {
+          const th = document.createElement("th");
+          th.textContent = label;
+          headRow.appendChild(th);
+        });
+        thead.appendChild(headRow);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        (s.rows || []).forEach((row) => {
+          const tr = document.createElement("tr");
+          const model = document.createElement("td");
+          model.textContent = row.model || "";
+          tr.appendChild(model);
+
+          const gradeTd = document.createElement("td");
+          const letter = String(row.grade || "").charAt(0);
+          const badge = document.createElement("span");
+          badge.className = `grade ${
+            letter === "D" ? "grade-d" : letter === "C" ? "grade-c" : "grade-ab"
+          }`;
+          badge.textContent = row.grade || "—";
+          gradeTd.appendChild(badge);
+          tr.appendChild(gradeTd);
+
+          const primary = document.createElement("td");
+          primary.textContent = row.primary || "";
+          tr.appendChild(primary);
+
+          const baseline = document.createElement("td");
+          baseline.textContent = row.baseline || "";
+          tr.appendChild(baseline);
+
+          const verdict = document.createElement("td");
+          verdict.textContent = row.note || "";
+          tr.appendChild(verdict);
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        wrap.appendChild(table);
+        host.appendChild(wrap);
+
+        if (s.caveats && s.caveats.length) {
+          const box = document.createElement("div");
+          box.className = "score-caveats";
+          const title = document.createElement("strong");
+          title.textContent = "What this cannot tell us";
+          box.appendChild(title);
+          const list = document.createElement("ul");
+          s.caveats.forEach((item) => {
+            const li = document.createElement("li");
+            li.textContent = item;
+            list.appendChild(li);
+          });
+          box.appendChild(list);
+          host.appendChild(box);
+        }
+      } catch (e) {
+        document.getElementById("scorecard").appendChild(card("Scorecard unavailable", [String(e)]));
       }
 
       // Match backtest

@@ -106,6 +106,7 @@ jobs:
       - run: python scripts/feature_ablation.py || true
 
       - run: python scripts/build_health_report.py || true
+      - run: python scripts/build_model_scorecard.py || true
 
       - run: python scripts/weekly_report.py > weekly_report.md || true
 

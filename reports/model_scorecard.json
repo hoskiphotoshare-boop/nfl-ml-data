@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-11-26T06:12:10.502959+00:00",
+  "headline": "Baseline-relative assessment. The market benchmark is still unverified.",
+  "rows": [
+    {
+      "model": "Match",
+      "grade": "B",
+      "primary": "2026: 0.679 acc \u00b7 0.614 log loss \u00b7 0.727 AUC",
+      "baseline": "Home team: 0.549 acc \u00b7 0.689 log loss (pooled)",
+      "note": "Clearly beats naive baselines; closing-line skill is still unverified."
+    },
+    {
+      "model": "Match (pooled)",
+      "grade": "B",
+      "primary": "2022\u201326: 0.663 acc \u00b7 0.625 log loss \u00b7 0.704 AUC",
+      "baseline": "Home team: 0.549 acc \u00b7 0.689 log loss",
+      "note": "1298 games; 95% accuracy interval roughly \u00b12.6 pp."
+    },
+    {
+      "model": "Margin",
+      "grade": "C+",
+      "primary": "2026 MAE 10.16 pts",
+      "baseline": "Train mean 11.01",
+      "note": "Modest skill; the displayed spread is derived from win probability."
+    },
+    {
+      "model": "Total",
+      "grade": "C",
+      "primary": "2026 MAE 10.99 pts",
+      "baseline": "Train mean 11.29",
+      "note": "Small edge over a constant; still shares the match feature set."
+    },
+    {
+      "model": "Player \u00b7 QB",
+      "grade": "B",
+      "primary": "2026 MAE 6.23 (n=373)",
+      "baseline": "Persistence 6.50 \u00b7 position mean 7.22",
+      "note": "Best player model; clear gain over persistence."
+    },
+    {
+      "model": "Player \u00b7 RB",
+      "grade": "C",
+      "primary": "2026 MAE 4.11 (n=949)",
+      "baseline": "Persistence 4.16 \u00b7 position mean 5.92",
+      "note": "Marginal over a four-game average."
+    },
+    {
+      "model": "Player \u00b7 WR",
+      "grade": "B\u2212",
+      "primary": "2026 MAE 3.83 (n=1469)",
+      "baseline": "Persistence 3.95 \u00b7 position mean 5.14",
+      "note": "Modest but consistent."
+    },
+    {
+      "model": "Player \u00b7 TE",
+      "grade": "B\u2212",
+      "primary": "2026 MAE 3.25 (n=802)",
+      "baseline": "Persistence 3.41 \u00b7 position mean 4.04",
+      "note": "Modest, consistent gain."
+    },
+    {
+      "model": "Player \u00b7 K",
+      "grade": "D",
+      "primary": "2026 MAE 2.98 (n=326)",
+      "baseline": "Persistence 3.24 \u00b7 position mean 2.95",
+      "note": "No demonstrated skill \u2014 a positional constant is better."
+    },
+    {
+      "model": "Player intervals",
+      "grade": "B+",
+      "primary": "80% coverage QB 76\u219280% \u00b7 RB 80\u219280% \u00b7 WR 80\u219282% \u00b7 TE 88\u219288% \u00b7 K 77\u219280%",
+      "baseline": "Nominal 80%",
+      "note": "Aligned for QB/K/WR/RB; TE stays conservative at 88%."
+    },
+    {
+      "model": "Playoff bracket",
+      "grade": "B\u2212",
+      "primary": "Brier playoff 0.130 \u00b7 conf 0.053 \u00b7 SB 0.032",
+      "baseline": "SRS-only bracket",
+      "note": "Structure validated; Super Bowl skill is near the uniform prior."
+    },
+    {
+      "model": "SB futures",
+      "grade": "D",
+      "primary": "Mean |edge| 0.8 pp",
+      "baseline": "Uniform prior",
+      "note": "Near-uniform skill; treat futures edges as low confidence."
+    }
+  ],
+  "caveats": [
+    "No historical closing odds, so market log loss and CLV are unmeasured.",
+    "Market board: mean |edge| 9.1 pp, 8 games at 20+ pp \u2014 signal or overconfidence is unknown.",
+    "2026 is 162 games; pooled 2022\u201326 (1,298) is the more reliable sample.",
+    "The call ledger is 0 graded and CLV is 0 until odds move before kickoff.",
+    "Kicker projections and SB futures are the weakest outputs; total is close to a constant."
+  ]
+}

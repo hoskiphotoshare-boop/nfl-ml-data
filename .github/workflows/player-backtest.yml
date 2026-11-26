@@ -24,6 +24,7 @@ jobs:
       - run: python scripts/add_player_matchups.py || true
       - run: python scripts/explain_models.py || true
       - run: python scripts/build_health_report.py || true
+      - run: python scripts/build_model_scorecard.py || true
 
       - run: |
           git config user.name "github-actions"
