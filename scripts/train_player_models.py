@@ -236,6 +236,14 @@ def train_group(df: pl.DataFrame, group: str, positions: list[str]):
         else:
             q90_pred = forecast
     coverage = float(np.mean((y_test >= q10_pred) & (y_test <= q90_pred)))
+    # Conformal-style interval calibration: widen each group's interval by the
+    # 80th percentile of its out-of-fold conformity scores so the nominal 80%
+    # interval stops under-covering (worst for K and TE).
+    conformity = np.maximum(q10_pred - y_test, y_test - q90_pred)
+    offset = float(np.quantile(conformity, 0.8))
+    adjusted_coverage = float(
+        np.mean((y_test >= (q10_pred - offset)) & (y_test <= (q90_pred + offset)))
+    )
     metrics = {
         "rows": int(len(y_test)),
         "mae": round(float(mean_absolute_error(y_test, pred)), 3),
@@ -243,15 +251,24 @@ def train_group(df: pl.DataFrame, group: str, positions: list[str]):
         "q10": round(float(np.quantile(residuals, 0.1)), 3),
         "q90": round(float(np.quantile(residuals, 0.9)), 3),
         "coverage_80": round(coverage, 3),
+        "cqr_offset": round(offset, 3),
+        "coverage_80_adj": round(adjusted_coverage, 3),
     }
     print(
         f"{group}: n={metrics['rows']} MAE={metrics['mae']} RMSE={metrics['rmse']} "
-        f"80% coverage={metrics['coverage_80']}"
+        f"80% coverage={metrics['coverage_80']} → {metrics['coverage_80_adj']} "
+        f"(+{metrics['cqr_offset']} pts)"
     )
     return model, metrics, quantiles
 
 
-def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict | None = None) -> list[dict]:
+def predict_latest(
+    df: pl.DataFrame,
+    models: dict,
+    id_col: str,
+    quantiles: dict | None = None,
+    offsets: dict | None = None,
+) -> list[dict]:
     upcoming_ctx: dict[str, dict] = {}
     try:
         schedules = pl.read_parquet("data/schedules.parquet")
@@ -418,6 +435,9 @@ def predict_latest(df: pl.DataFrame, models: dict, id_col: str, quantiles: dict 
             try:
                 q10 = float(quantiles[group]["q10"].predict([values])[0])
                 q90 = float(quantiles[group]["q90"].predict([values])[0])
+                pad = float((offsets or {}).get(group, 0.0))
+                q10 -= pad
+                q90 += pad
                 # Envelope: conditional models can regress too far toward the
                 # position mean for elite players, so keep at least the
                 # unconditional residual bound.
@@ -657,7 +677,15 @@ def predict_only() -> None:
         except Exception:
             quantiles = {}
 
-    records = predict_latest(rolling, models, id_col, quantiles)
+    offsets = {}
+    if os.path.exists("models/player_offsets.json"):
+        try:
+            with open("models/player_offsets.json", encoding="utf-8") as f:
+                offsets = json.load(f)
+        except Exception:
+            offsets = {}
+
+    records = predict_latest(rolling, models, id_col, quantiles, offsets)
     records = apply_depth_chart_adjustments(records)
     records = apply_injury_adjustments(records)
     records = apply_roster_status(records)
@@ -706,7 +734,13 @@ def main() -> None:
     with open("models/player_intervals.json", "w", encoding="utf-8") as f:
         json.dump(intervals, f, indent=2)
 
-    records = predict_latest(rolling, models, id_col, quantiles)
+    offsets = {
+        group: m.get("cqr_offset", 0.0) for group, m in metrics.items() if m
+    }
+    with open("models/player_offsets.json", "w", encoding="utf-8") as f:
+        json.dump(offsets, f, indent=2)
+
+    records = predict_latest(rolling, models, id_col, quantiles, offsets)
     records = apply_depth_chart_adjustments(records)
     records = apply_injury_adjustments(records)
     records = apply_roster_status(records)

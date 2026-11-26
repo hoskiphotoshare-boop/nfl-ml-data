@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T04:35:38.324191+00:00",
+  "generated_at": "2026-11-26T04:48:08.734140+00:00",
   "match_backtest": {
     "accuracy": 0.6587057010785824,
     "log_loss": 0.6308178480137088,
@@ -74,12 +74,12 @@
       "mae": 6.356
     },
     "RB": {
-      "coverage_80": 0.793,
-      "mae": 4.184
+      "coverage_80": 0.805,
+      "mae": 4.192
     },
     "WR": {
-      "coverage_80": 0.809,
-      "mae": 3.839
+      "coverage_80": 0.807,
+      "mae": 3.838
     },
     "TE": {
       "coverage_80": 0.879,
@@ -92,8 +92,8 @@
   },
   "players": {
     "count": 250,
-    "with_ranges": 0,
-    "active": 0
+    "with_ranges": 250,
+    "active": 250
   },
   "weather": {
     "games_with_forecast": 0,
