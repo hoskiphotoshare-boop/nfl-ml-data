@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T05:20:41.441577+00:00",
+  "generated_at": "2026-11-26T11:02:21.715911+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -15,10 +15,11 @@
     "n": 1298
   },
   "market": {
-    "games": 30,
-    "outliers": 8,
+    "games": 29,
+    "outliers": 9,
     "outlier_games": [
       "2026_12_PHI_DAL",
+      "2026_12_KC_BUF",
       "2026_12_TEN_JAX",
       "2026_12_ATL_MIN",
       "2026_12_WAS_ARI",
@@ -27,12 +28,12 @@
       "2026_13_HOU_PIT",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.0908,
+    "mean_abs_edge": 0.092,
     "max_abs_edge": 0.2602
   },
   "futures": {
-    "mean_abs_edge": 0.008,
-    "max_abs_edge": 0.044,
+    "mean_abs_edge": 0.0077,
+    "max_abs_edge": 0.0478,
     "teams_matched": 32
   },
   "calls": {
@@ -96,8 +97,8 @@
     "active": 250
   },
   "weather": {
-    "games_with_forecast": 0,
-    "games": 109
+    "games_with_forecast": 24,
+    "games": 108
   },
   "injuries": {
     "seasons": [
@@ -108,8 +109,8 @@
       2026
     ],
     "latest_season": 2026,
-    "latest_week": 11,
-    "rows": 27045
+    "latest_week": 12,
+    "rows": 27301
   },
   "odds": {
     "fetched_at": "2026-11-25T23:11:58.681470+00:00",

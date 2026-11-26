@@ -480,166 +480,6 @@
     "gametime": "13:00"
   },
   {
-    "player_id": "00-0036264",
-    "name": "J.Love",
-    "team": "GB",
-    "position": "QB",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 19.0,
-    "floor_fantasy_points": 10.6,
-    "ceiling_fantasy_points": 30.3,
-    "projected_pass_yards": 302.5,
-    "projected_pass_tds": 2.25,
-    "projected_interceptions": 0.75,
-    "projected_rush_yards": 6.2,
-    "projected_rush_tds": 0.5,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      23.3,
-      20.2,
-      17.0,
-      21.5,
-      34.2,
-      10.8
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        23.3,
-        20.2,
-        17.0,
-        21.5,
-        34.2,
-        10.8
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        367.0,
-        276.0,
-        274.0,
-        288.0,
-        372.0,
-        220.0
-      ],
-      "passing_tds": [
-        2.0,
-        1.0,
-        2.0,
-        3.0,
-        3.0,
-        1.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        0.0,
-        1.0
-      ],
-      "completions": [
-        25.0,
-        23.0,
-        27.0,
-        30.0,
-        23.0,
-        17.0
-      ],
-      "attempts": [
-        31.0,
-        41.0,
-        45.0,
-        41.0,
-        29.0,
-        27.0
-      ],
-      "rushing_yards": [
-        6.0,
-        12.0,
-        0.0,
-        0.0,
-        13.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4036378",
-    "opponent": "LA",
-    "matchup": "@ LA",
-    "home_away": "away",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
     "player_id": "00-0036971",
     "name": "T.Lawrence",
     "team": "JAX",
@@ -3039,166 +2879,6 @@
     "gametime": "16:25"
   },
   {
-    "player_id": "00-0026498",
-    "name": "M.Stafford",
-    "team": "LA",
-    "position": "QB",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 15.7,
-    "floor_fantasy_points": 7.3,
-    "ceiling_fantasy_points": 27.0,
-    "projected_pass_yards": 200.5,
-    "projected_pass_tds": 1.75,
-    "projected_interceptions": 0.75,
-    "projected_rush_yards": -0.5,
-    "projected_rush_tds": 0.0,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      27.3,
-      16.9,
-      17.5,
-      8.3,
-      11.2,
-      19.8
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        27.3,
-        16.9,
-        17.5,
-        8.3,
-        11.2,
-        19.8
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        383.0,
-        222.0,
-        195.0,
-        157.0,
-        228.0,
-        249.0
-      ],
-      "passing_tds": [
-        3.0,
-        2.0,
-        3.0,
-        1.0,
-        1.0,
-        3.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0
-      ],
-      "completions": [
-        40.0,
-        25.0,
-        23.0,
-        17.0,
-        26.0,
-        18.0
-      ],
-      "attempts": [
-        54.0,
-        33.0,
-        29.0,
-        25.0,
-        43.0,
-        26.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        -3.0,
-        0.0,
-        1.0,
-        -2.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "12483",
-    "opponent": "GB",
-    "matchup": "vs GB",
-    "home_away": "home",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
     "player_id": "00-0039732",
     "name": "B.Nix",
     "team": "DEN",
@@ -3519,6 +3199,162 @@
     "gametime": "13:00"
   },
   {
+    "player_id": "00-0036264",
+    "name": "J.Love",
+    "team": "GB",
+    "position": "QB",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 15.5,
+    "floor_fantasy_points": 7.1,
+    "ceiling_fantasy_points": 27.4,
+    "projected_pass_yards": 288.5,
+    "projected_pass_tds": 2.25,
+    "projected_interceptions": 0.75,
+    "projected_rush_yards": 3.2,
+    "projected_rush_tds": 0.25,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      20.2,
+      17.0,
+      21.5,
+      34.2,
+      10.8,
+      8.6
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        20.2,
+        17.0,
+        21.5,
+        34.2,
+        10.8,
+        8.6
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        276.0,
+        274.0,
+        288.0,
+        372.0,
+        220.0,
+        198.0
+      ],
+      "passing_tds": [
+        1.0,
+        2.0,
+        3.0,
+        3.0,
+        1.0,
+        1.0
+      ],
+      "passing_interceptions": [
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "completions": [
+        23.0,
+        27.0,
+        30.0,
+        23.0,
+        17.0,
+        17.0
+      ],
+      "attempts": [
+        41.0,
+        45.0,
+        41.0,
+        29.0,
+        27.0,
+        29.0
+      ],
+      "rushing_yards": [
+        12.0,
+        0.0,
+        0.0,
+        13.0,
+        0.0,
+        7.0
+      ],
+      "rushing_tds": [
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT",
+    "espn_id": "4036378",
+    "opponent": null,
+    "matchup": null
+  },
+  {
     "player_id": "00-0040715",
     "name": "C.Skattebo",
     "team": "NYG",
@@ -3679,166 +3515,6 @@
     "gametime": "13:00"
   },
   {
-    "player_id": "00-0038134",
-    "name": "K.Walker",
-    "team": "KC",
-    "position": "RB",
-    "projected_targets": 3.5,
-    "projected_receptions": 2.8,
-    "projected_yards": 12.2,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 15.3,
-    "floor_fantasy_points": 9.3,
-    "ceiling_fantasy_points": 27.7,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      20.3,
-      30.4,
-      26.9,
-      7.7,
-      10.4,
-      34.3
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        20.3,
-        30.4,
-        26.9,
-        7.7,
-        10.4,
-        34.3
-      ],
-      "targets": [
-        2.0,
-        1.0,
-        3.0,
-        5.0,
-        5.0,
-        4.0
-      ],
-      "receptions": [
-        2.0,
-        1.0,
-        2.0,
-        4.0,
-        4.0,
-        4.0
-      ],
-      "yards": [
-        3.0,
-        2.0,
-        11.0,
-        21.0,
-        15.0,
-        41.0
-      ],
-      "touchdowns": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        2.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        70.0,
-        177.0,
-        128.0,
-        36.0,
-        69.0,
-        102.0
-      ],
-      "rushing_tds": [
-        1.0,
-        2.0,
-        2.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4567048",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
-  },
-  {
     "player_id": "00-0038597",
     "name": "C.Brown",
     "team": "CIN",
@@ -3997,6 +3673,162 @@
     "game_id": "2026_12_NO_CIN",
     "gameday": "2026-11-29",
     "gametime": "13:00"
+  },
+  {
+    "player_id": "00-0026498",
+    "name": "M.Stafford",
+    "team": "LA",
+    "position": "QB",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 15.2,
+    "floor_fantasy_points": 6.8,
+    "ceiling_fantasy_points": 26.4,
+    "projected_pass_yards": 207.2,
+    "projected_pass_tds": 2.0,
+    "projected_interceptions": 1.0,
+    "projected_rush_yards": -1.0,
+    "projected_rush_tds": 0.0,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      16.9,
+      17.5,
+      8.3,
+      11.2,
+      19.8,
+      3.6
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        16.9,
+        17.5,
+        8.3,
+        11.2,
+        19.8,
+        3.6
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        222.0,
+        195.0,
+        157.0,
+        228.0,
+        249.0,
+        140.0
+      ],
+      "passing_tds": [
+        2.0,
+        3.0,
+        1.0,
+        1.0,
+        3.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "completions": [
+        25.0,
+        23.0,
+        17.0,
+        26.0,
+        18.0,
+        16.0
+      ],
+      "attempts": [
+        33.0,
+        29.0,
+        25.0,
+        43.0,
+        26.0,
+        23.0
+      ],
+      "rushing_yards": [
+        0.0,
+        -3.0,
+        0.0,
+        1.0,
+        -2.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT",
+    "espn_id": "12483",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0036963",
@@ -9055,166 +8887,6 @@
     "gametime": "15:00"
   },
   {
-    "player_id": "00-0037840",
-    "name": "K.Williams",
-    "team": "LA",
-    "position": "RB",
-    "projected_targets": 3.2,
-    "projected_receptions": 2.2,
-    "projected_yards": 14.5,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 11.1,
-    "floor_fantasy_points": 5.1,
-    "ceiling_fantasy_points": 19.8,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      16.6,
-      8.2,
-      17.1,
-      12.4,
-      7.6,
-      4.2
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        16.6,
-        8.2,
-        17.1,
-        12.4,
-        7.6,
-        4.2
-      ],
-      "targets": [
-        8.0,
-        6.0,
-        2.0,
-        1.0,
-        4.0,
-        5.0
-      ],
-      "receptions": [
-        6.0,
-        3.0,
-        2.0,
-        1.0,
-        3.0,
-        2.0
-      ],
-      "yards": [
-        27.0,
-        17.0,
-        22.0,
-        3.0,
-        16.0,
-        9.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        49.0,
-        50.0,
-        99.0,
-        56.0,
-        45.0,
-        23.0
-      ],
-      "rushing_tds": [
-        1.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4430737",
-    "opponent": "GB",
-    "matchup": "vs GB",
-    "home_away": "home",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
     "player_id": "00-0039338",
     "name": "B.Bowers",
     "team": "LV",
@@ -10335,6 +10007,162 @@
     "gametime": "13:00"
   },
   {
+    "player_id": "00-0038124",
+    "name": "C.Watson",
+    "team": "GB",
+    "position": "WR",
+    "projected_targets": 7.8,
+    "projected_receptions": 5.8,
+    "projected_yards": 94.5,
+    "projected_tds": 0.25,
+    "projected_fantasy_points": 10.7,
+    "floor_fantasy_points": 5.7,
+    "ceiling_fantasy_points": 20.3,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      7.9,
+      8.2,
+      13.3,
+      26.6,
+      5.2,
+      14.5
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        7.9,
+        8.2,
+        13.3,
+        26.6,
+        5.2,
+        14.5
+      ],
+      "targets": [
+        8.0,
+        8.0,
+        10.0,
+        8.0,
+        5.0,
+        4.0
+      ],
+      "receptions": [
+        3.0,
+        5.0,
+        8.0,
+        7.0,
+        3.0,
+        4.0
+      ],
+      "yards": [
+        64.0,
+        57.0,
+        113.0,
+        171.0,
+        37.0,
+        65.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT",
+    "espn_id": "4248528",
+    "opponent": null,
+    "matchup": null
+  },
+  {
     "player_id": "00-0035228",
     "name": "K.Murray",
     "team": "MIN",
@@ -10813,166 +10641,6 @@
     "game_id": "2026_12_NE_LAC",
     "gameday": "2026-11-29",
     "gametime": "16:05"
-  },
-  {
-    "player_id": "00-0038124",
-    "name": "C.Watson",
-    "team": "GB",
-    "position": "WR",
-    "projected_targets": 8.5,
-    "projected_receptions": 5.8,
-    "projected_yards": 101.2,
-    "projected_tds": 0.25,
-    "projected_fantasy_points": 10.5,
-    "floor_fantasy_points": 5.5,
-    "ceiling_fantasy_points": 21.2,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      29.3,
-      7.9,
-      8.2,
-      13.3,
-      26.6,
-      5.2
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        29.3,
-        7.9,
-        8.2,
-        13.3,
-        26.6,
-        5.2
-      ],
-      "targets": [
-        8.0,
-        8.0,
-        8.0,
-        10.0,
-        8.0,
-        5.0
-      ],
-      "receptions": [
-        6.0,
-        3.0,
-        5.0,
-        8.0,
-        7.0,
-        3.0
-      ],
-      "yards": [
-        143.0,
-        64.0,
-        57.0,
-        113.0,
-        171.0,
-        37.0
-      ],
-      "touchdowns": [
-        2.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4248528",
-    "opponent": "LA",
-    "matchup": "@ LA",
-    "home_away": "away",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
   },
   {
     "player_id": "00-0040126",
@@ -13151,166 +12819,6 @@
     "gametime": "16:25"
   },
   {
-    "player_id": "00-0038996",
-    "name": "T.Kraft",
-    "team": "GB",
-    "position": "TE",
-    "projected_targets": 5.8,
-    "projected_receptions": 4.0,
-    "projected_yards": 34.8,
-    "projected_tds": 0.5,
-    "projected_fantasy_points": 9.7,
-    "floor_fantasy_points": 5.1,
-    "ceiling_fantasy_points": 18.8,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      9.1,
-      6.2,
-      12.8,
-      14.3,
-      1.4,
-      2.4
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        9.1,
-        6.2,
-        12.8,
-        14.3,
-        1.4,
-        2.4
-      ],
-      "targets": [
-        5.0,
-        8.0,
-        6.0,
-        6.0,
-        3.0,
-        4.0
-      ],
-      "receptions": [
-        5.0,
-        5.0,
-        4.0,
-        6.0,
-        1.0,
-        1.0
-      ],
-      "yards": [
-        64.0,
-        37.0,
-        48.0,
-        53.0,
-        1.0,
-        19.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        2.0,
-        0.0,
-        0.0,
-        0.0,
-        8.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4572680",
-    "opponent": "LA",
-    "matchup": "@ LA",
-    "home_away": "away",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
     "player_id": "00-0039165",
     "name": "Z.Charbonnet",
     "team": "SEA",
@@ -14910,6 +14418,162 @@
     "gametime": "16:25"
   },
   {
+    "player_id": "00-0037840",
+    "name": "K.Williams",
+    "team": "LA",
+    "position": "RB",
+    "projected_targets": 3.0,
+    "projected_receptions": 2.0,
+    "projected_yards": 12.5,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 9.2,
+    "floor_fantasy_points": 3.3,
+    "ceiling_fantasy_points": 19.2,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      8.2,
+      17.1,
+      12.4,
+      7.6,
+      4.2,
+      14.5
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        8.2,
+        17.1,
+        12.4,
+        7.6,
+        4.2,
+        14.5
+      ],
+      "targets": [
+        6.0,
+        2.0,
+        1.0,
+        4.0,
+        5.0,
+        5.0
+      ],
+      "receptions": [
+        3.0,
+        2.0,
+        1.0,
+        3.0,
+        2.0,
+        4.0
+      ],
+      "yards": [
+        17.0,
+        22.0,
+        3.0,
+        16.0,
+        9.0,
+        19.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        50.0,
+        99.0,
+        56.0,
+        45.0,
+        23.0,
+        46.0
+      ],
+      "rushing_tds": [
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT",
+    "espn_id": "4430737",
+    "opponent": null,
+    "matchup": null
+  },
+  {
     "player_id": "00-0038606",
     "name": "P.Washington",
     "team": "JAX",
@@ -15534,166 +15198,6 @@
     "gametime": "13:00"
   },
   {
-    "player_id": "00-0040667",
-    "name": "M.Golden",
-    "team": "GB",
-    "position": "WR",
-    "projected_targets": 8.4,
-    "projected_receptions": 5.04,
-    "projected_yards": 67.55,
-    "projected_tds": 0.52,
-    "projected_fantasy_points": 9.03,
-    "floor_fantasy_points": 7.9,
-    "ceiling_fantasy_points": 22.8,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      15.3,
-      19.4,
-      6.9,
-      17.4,
-      27.4,
-      9.5
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        15.3,
-        19.4,
-        6.9,
-        17.4,
-        27.4,
-        9.5
-      ],
-      "targets": [
-        7.0,
-        13.0,
-        12.0,
-        13.0,
-        10.0,
-        9.0
-      ],
-      "receptions": [
-        6.0,
-        6.0,
-        6.0,
-        7.0,
-        10.0,
-        5.0
-      ],
-      "yards": [
-        123.0,
-        104.0,
-        39.0,
-        79.0,
-        164.0,
-        70.0
-      ],
-      "touchdowns": [
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4701936",
-    "opponent": "LA",
-    "matchup": "@ LA",
-    "home_away": "away",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
     "player_id": "00-0031408",
     "name": "M.Evans",
     "team": "SF",
@@ -15852,6 +15356,162 @@
     "game_id": "2026_12_SEA_SF",
     "gameday": "2026-11-29",
     "gametime": "16:25"
+  },
+  {
+    "player_id": "00-0038996",
+    "name": "T.Kraft",
+    "team": "GB",
+    "position": "TE",
+    "projected_targets": 4.8,
+    "projected_receptions": 3.0,
+    "projected_yards": 30.2,
+    "projected_tds": 0.5,
+    "projected_fantasy_points": 9.0,
+    "floor_fantasy_points": 4.4,
+    "ceiling_fantasy_points": 17.0,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      6.2,
+      12.8,
+      14.3,
+      1.4,
+      2.4,
+      1.9
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        6.2,
+        12.8,
+        14.3,
+        1.4,
+        2.4,
+        1.9
+      ],
+      "targets": [
+        8.0,
+        6.0,
+        6.0,
+        3.0,
+        4.0,
+        5.0
+      ],
+      "receptions": [
+        5.0,
+        4.0,
+        6.0,
+        1.0,
+        1.0,
+        3.0
+      ],
+      "yards": [
+        37.0,
+        48.0,
+        53.0,
+        1.0,
+        19.0,
+        24.0
+      ],
+      "touchdowns": [
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        8.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT",
+    "espn_id": "4572680",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0039409",
@@ -16332,6 +15992,162 @@
     "game_id": "2026_12_CAR_TB",
     "gameday": "2026-11-30",
     "gametime": "20:15"
+  },
+  {
+    "player_id": "00-0040667",
+    "name": "M.Golden",
+    "team": "GB",
+    "position": "WR",
+    "projected_targets": 7.7,
+    "projected_receptions": 4.9,
+    "projected_yards": 61.6,
+    "projected_tds": 0.35,
+    "projected_fantasy_points": 8.68,
+    "floor_fantasy_points": 7.5,
+    "ceiling_fantasy_points": 22.7,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      19.4,
+      6.9,
+      17.4,
+      27.4,
+      9.5,
+      4.4
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        19.4,
+        6.9,
+        17.4,
+        27.4,
+        9.5,
+        4.4
+      ],
+      "targets": [
+        13.0,
+        12.0,
+        13.0,
+        10.0,
+        9.0,
+        5.0
+      ],
+      "receptions": [
+        6.0,
+        6.0,
+        7.0,
+        10.0,
+        5.0,
+        1.0
+      ],
+      "yards": [
+        104.0,
+        39.0,
+        79.0,
+        164.0,
+        70.0,
+        39.0
+      ],
+      "touchdowns": [
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 2,
+    "roster_status": "ACT",
+    "espn_id": "4701936",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0040583",
@@ -17915,166 +17731,6 @@
     "gametime": "20:20"
   },
   {
-    "player_id": "00-0040899",
-    "name": "T.Smack",
-    "team": "GB",
-    "position": "K",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 8.2,
-    "floor_fantasy_points": 3.9,
-    "ceiling_fantasy_points": 13.3,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": 1.8,
-    "projected_fg_att": 2.2,
-    "projected_xp": 2.8,
-    "recent_fantasy_points": [
-      5.0,
-      11.0,
-      5.0,
-      3.0,
-      13.0,
-      4.0
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        5.0,
-        11.0,
-        5.0,
-        3.0,
-        13.0,
-        4.0
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        1.0,
-        3.0,
-        1.0,
-        0.0,
-        3.0,
-        1.0
-      ],
-      "fg_att": [
-        3.0,
-        3.0,
-        3.0,
-        0.0,
-        3.0,
-        2.0
-      ],
-      "pat_made": [
-        2.0,
-        2.0,
-        2.0,
-        3.0,
-        4.0,
-        1.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4869461",
-    "opponent": "LA",
-    "matchup": "@ LA",
-    "home_away": "away",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
     "player_id": "00-0039065",
     "name": "S.LaPorta",
     "team": "DET",
@@ -18233,6 +17889,162 @@
     "game_id": "2026_12_CHI_DET",
     "gameday": "2026-11-26",
     "gametime": "13:00"
+  },
+  {
+    "player_id": "00-0039738",
+    "name": "B.Corum",
+    "team": "LA",
+    "position": "RB",
+    "projected_targets": 1.4,
+    "projected_receptions": 0.7,
+    "projected_yards": 4.76,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 8.05,
+    "floor_fantasy_points": 5.6,
+    "ceiling_fantasy_points": 20.6,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      13.0,
+      16.6,
+      13.3,
+      11.8,
+      19.4,
+      27.5
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        13.0,
+        16.6,
+        13.3,
+        11.8,
+        19.4,
+        27.5
+      ],
+      "targets": [
+        2.0,
+        1.0,
+        1.0,
+        2.0,
+        4.0,
+        3.0
+      ],
+      "receptions": [
+        2.0,
+        1.0,
+        0.0,
+        0.0,
+        3.0,
+        2.0
+      ],
+      "yards": [
+        18.0,
+        8.0,
+        0.0,
+        0.0,
+        19.0,
+        21.0
+      ],
+      "touchdowns": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        42.0,
+        93.0,
+        73.0,
+        58.0,
+        100.0,
+        184.0
+      ],
+      "rushing_tds": [
+        0.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 2,
+    "roster_status": "ACT",
+    "espn_id": "4429096",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0037692",
@@ -19035,486 +18847,6 @@
     "gametime": "13:00"
   },
   {
-    "player_id": "00-0029822",
-    "name": "B.McManus",
-    "team": "LA",
-    "position": "K",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 7.6,
-    "floor_fantasy_points": 3.2,
-    "ceiling_fantasy_points": 12.8,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": 0.8,
-    "projected_fg_att": 1.2,
-    "projected_xp": 3.2,
-    "recent_fantasy_points": [
-      3.0,
-      3.0,
-      5.0,
-      6.0,
-      8.0,
-      10.0
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        3.0,
-        3.0,
-        5.0,
-        6.0,
-        8.0,
-        10.0
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        1.0,
-        0.0,
-        0.0,
-        1.0,
-        2.0,
-        2.0
-      ],
-      "fg_att": [
-        1.0,
-        2.0,
-        0.0,
-        1.0,
-        2.0,
-        2.0
-      ],
-      "pat_made": [
-        0.0,
-        3.0,
-        5.0,
-        3.0,
-        2.0,
-        4.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "16339",
-    "opponent": "GB",
-    "matchup": "vs GB",
-    "home_away": "home",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
-    "player_id": "00-0030332",
-    "name": "B.Maher",
-    "team": "LA",
-    "position": "K",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 7.6,
-    "floor_fantasy_points": 3.2,
-    "ceiling_fantasy_points": 12.7,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": 1.2,
-    "projected_fg_att": 1.8,
-    "projected_xp": 1.2,
-    "recent_fantasy_points": [
-      11.0,
-      2.0,
-      14.0,
-      3.0,
-      1.0,
-      11.0
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        11.0,
-        2.0,
-        14.0,
-        3.0,
-        1.0,
-        11.0
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        3.0,
-        0.0,
-        4.0,
-        1.0,
-        0.0,
-        3.0
-      ],
-      "fg_att": [
-        5.0,
-        0.0,
-        4.0,
-        3.0,
-        0.0,
-        3.0
-      ],
-      "pat_made": [
-        2.0,
-        2.0,
-        2.0,
-        0.0,
-        1.0,
-        2.0
-      ]
-    },
-    "roster_status": "ACT",
-    "espn_id": "16486",
-    "opponent": "GB",
-    "matchup": "vs GB",
-    "home_away": "home",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
-    "player_id": "00-0035700",
-    "name": "J.Jacobs",
-    "team": "GB",
-    "position": "RB",
-    "projected_targets": 3.15,
-    "projected_receptions": 2.4,
-    "projected_yards": 13.35,
-    "projected_tds": 0.38,
-    "projected_fantasy_points": 7.57,
-    "floor_fantasy_points": 4.2,
-    "ceiling_fantasy_points": 19.4,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      3.8,
-      0.8,
-      6.3,
-      17.6,
-      20.2,
-      0.5
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        3.8,
-        0.8,
-        6.3,
-        17.6,
-        20.2,
-        0.5
-      ],
-      "targets": [
-        2.0,
-        1.0,
-        3.0,
-        7.0,
-        6.0,
-        0.0
-      ],
-      "receptions": [
-        2.0,
-        1.0,
-        1.0,
-        5.0,
-        6.0,
-        0.0
-      ],
-      "yards": [
-        12.0,
-        0.0,
-        3.0,
-        55.0,
-        13.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        36.0,
-        3.0,
-        55.0,
-        36.0,
-        39.0,
-        5.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "injury_status": "questionable",
-    "roster_status": "ACT",
-    "espn_id": "4047365",
-    "opponent": "LA",
-    "matchup": "@ LA",
-    "home_away": "away",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
     "player_id": "00-0023853",
     "name": "M.Prater",
     "team": "BUF",
@@ -19834,6 +19166,162 @@
     "gametime": "16:05"
   },
   {
+    "player_id": "00-0029822",
+    "name": "B.McManus",
+    "team": "LA",
+    "position": "K",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 7.4,
+    "floor_fantasy_points": 2.9,
+    "ceiling_fantasy_points": 12.5,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": 1.2,
+    "projected_fg_att": 1.2,
+    "projected_xp": 3.5,
+    "recent_fantasy_points": [
+      3.0,
+      5.0,
+      6.0,
+      8.0,
+      10.0,
+      14.0
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        3.0,
+        5.0,
+        6.0,
+        8.0,
+        10.0,
+        14.0
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "fg_att": [
+        2.0,
+        0.0,
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "pat_made": [
+        3.0,
+        5.0,
+        3.0,
+        2.0,
+        4.0,
+        2.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT",
+    "espn_id": "16339",
+    "opponent": null,
+    "matchup": null
+  },
+  {
     "player_id": "00-0038428",
     "name": "A.Szmyt",
     "team": "CLE",
@@ -19992,6 +19480,162 @@
     "game_id": "2026_12_LV_CLE",
     "gameday": "2026-11-29",
     "gametime": "20:20"
+  },
+  {
+    "player_id": "00-0040899",
+    "name": "T.Smack",
+    "team": "GB",
+    "position": "K",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 7.4,
+    "floor_fantasy_points": 2.9,
+    "ceiling_fantasy_points": 12.7,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": 1.2,
+    "projected_fg_att": 2.0,
+    "projected_xp": 2.5,
+    "recent_fantasy_points": [
+      11.0,
+      5.0,
+      3.0,
+      13.0,
+      4.0,
+      7.0
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        11.0,
+        5.0,
+        3.0,
+        13.0,
+        4.0,
+        7.0
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        3.0,
+        1.0,
+        0.0,
+        3.0,
+        1.0,
+        2.0
+      ],
+      "fg_att": [
+        3.0,
+        3.0,
+        0.0,
+        3.0,
+        2.0,
+        2.0
+      ],
+      "pat_made": [
+        2.0,
+        2.0,
+        3.0,
+        4.0,
+        1.0,
+        1.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT",
+    "espn_id": "4869461",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0033303",
@@ -21432,166 +21076,6 @@
     "game_id": "2026_12_NE_LAC",
     "gameday": "2026-11-29",
     "gametime": "16:05"
-  },
-  {
-    "player_id": "00-0038933",
-    "name": "D.Kincaid",
-    "team": "BUF",
-    "position": "TE",
-    "projected_targets": 4.8,
-    "projected_receptions": 3.8,
-    "projected_yards": 39.8,
-    "projected_tds": 0.25,
-    "projected_fantasy_points": 7.1,
-    "floor_fantasy_points": 2.5,
-    "ceiling_fantasy_points": 14.8,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      1.2,
-      1.2,
-      7.3,
-      16.6,
-      4.3,
-      6.8
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        1.2,
-        1.2,
-        7.3,
-        16.6,
-        4.3,
-        6.8
-      ],
-      "targets": [
-        2.0,
-        2.0,
-        8.0,
-        6.0,
-        3.0,
-        3.0
-      ],
-      "receptions": [
-        1.0,
-        1.0,
-        7.0,
-        4.0,
-        3.0,
-        2.0
-      ],
-      "yards": [
-        7.0,
-        7.0,
-        38.0,
-        86.0,
-        28.0,
-        58.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4385690",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
   },
   {
     "player_id": "00-0041182",
@@ -24149,6 +23633,161 @@
     "game_id": "2026_12_CHI_DET",
     "gameday": "2026-11-26",
     "gametime": "13:00"
+  },
+  {
+    "player_id": "00-0030332",
+    "name": "B.Maher",
+    "team": "LA",
+    "position": "K",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 6.8,
+    "floor_fantasy_points": 2.3,
+    "ceiling_fantasy_points": 12.0,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": 1.2,
+    "projected_fg_att": 1.8,
+    "projected_xp": 1.2,
+    "recent_fantasy_points": [
+      11.0,
+      2.0,
+      14.0,
+      3.0,
+      1.0,
+      11.0
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        11.0,
+        2.0,
+        14.0,
+        3.0,
+        1.0,
+        11.0
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        3.0,
+        0.0,
+        4.0,
+        1.0,
+        0.0,
+        3.0
+      ],
+      "fg_att": [
+        5.0,
+        0.0,
+        4.0,
+        3.0,
+        0.0,
+        3.0
+      ],
+      "pat_made": [
+        2.0,
+        2.0,
+        2.0,
+        0.0,
+        1.0,
+        2.0
+      ]
+    },
+    "roster_status": "ACT",
+    "espn_id": "16486",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0031136",
@@ -28084,166 +27723,6 @@
     "gametime": "16:30"
   },
   {
-    "player_id": "00-0038041",
-    "name": "J.Ferguson",
-    "team": "DAL",
-    "position": "TE",
-    "projected_targets": 3.5,
-    "projected_receptions": 2.0,
-    "projected_yards": 10.8,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 6.1,
-    "floor_fantasy_points": 1.5,
-    "ceiling_fantasy_points": 12.2,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      7.8,
-      2.6,
-      3.4,
-      2.3,
-      0.0,
-      9.1
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        7.8,
-        2.6,
-        3.4,
-        2.3,
-        0.0,
-        9.1
-      ],
-      "targets": [
-        5.0,
-        4.0,
-        6.0,
-        3.0,
-        1.0,
-        2.0
-      ],
-      "receptions": [
-        3.0,
-        3.0,
-        3.0,
-        2.0,
-        0.0,
-        2.0
-      ],
-      "yards": [
-        23.0,
-        11.0,
-        19.0,
-        13.0,
-        0.0,
-        21.0
-      ],
-      "touchdowns": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4242355",
-    "opponent": "PHI",
-    "matchup": "vs PHI",
-    "home_away": "home",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
-  },
-  {
     "player_id": "00-0039890",
     "name": "A.Mitchell",
     "team": "NYJ",
@@ -28881,166 +28360,6 @@
     "game_id": "2026_12_CAR_TB",
     "gameday": "2026-11-30",
     "gametime": "20:15"
-  },
-  {
-    "player_id": "00-0033110",
-    "name": "T.Higbee",
-    "team": "LA",
-    "position": "TE",
-    "projected_targets": 3.5,
-    "projected_receptions": 2.0,
-    "projected_yards": 15.8,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 6.0,
-    "floor_fantasy_points": 1.3,
-    "ceiling_fantasy_points": 12.0,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      10.8,
-      2.2,
-      2.4,
-      1.9,
-      1.8,
-      9.2
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        10.8,
-        2.2,
-        2.4,
-        1.9,
-        1.8,
-        9.2
-      ],
-      "targets": [
-        6.0,
-        4.0,
-        3.0,
-        2.0,
-        5.0,
-        4.0
-      ],
-      "receptions": [
-        5.0,
-        4.0,
-        2.0,
-        1.0,
-        1.0,
-        3.0
-      ],
-      "yards": [
-        83.0,
-        22.0,
-        14.0,
-        14.0,
-        13.0,
-        17.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "2573401",
-    "opponent": "GB",
-    "matchup": "vs GB",
-    "home_away": "home",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
   },
   {
     "player_id": "00-0039793",
@@ -30001,166 +29320,6 @@
     "gametime": "20:20"
   },
   {
-    "player_id": "00-0039750",
-    "name": "J.Karty",
-    "team": "LA",
-    "position": "K",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 5.67,
-    "floor_fantasy_points": 3.7,
-    "ceiling_fantasy_points": 13.6,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": 0.0,
-    "projected_fg_att": 0.2,
-    "projected_xp": 2.2,
-    "recent_fantasy_points": [
-      5.0,
-      5.0,
-      4.0,
-      0.0,
-      0.0,
-      0.0
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        5.0,
-        5.0,
-        4.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        2.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        2.0,
-        5.0,
-        4.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4566192",
-    "opponent": "GB",
-    "matchup": "vs GB",
-    "home_away": "home",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
     "player_id": "00-0034348",
     "name": "C.Sutton",
     "team": "DEN",
@@ -30319,166 +29478,6 @@
     "game_id": "2026_12_DEN_PIT",
     "gameday": "2026-11-27",
     "gametime": "15:00"
-  },
-  {
-    "player_id": "00-0039738",
-    "name": "B.Corum",
-    "team": "LA",
-    "position": "RB",
-    "projected_targets": 1.05,
-    "projected_receptions": 0.56,
-    "projected_yards": 4.55,
-    "projected_tds": 0.17,
-    "projected_fantasy_points": 5.6,
-    "floor_fantasy_points": 2.7,
-    "ceiling_fantasy_points": 16.5,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      14.7,
-      13.0,
-      16.6,
-      13.3,
-      11.8,
-      19.4
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        14.7,
-        13.0,
-        16.6,
-        13.3,
-        11.8,
-        19.4
-      ],
-      "targets": [
-        4.0,
-        2.0,
-        1.0,
-        1.0,
-        2.0,
-        4.0
-      ],
-      "receptions": [
-        3.0,
-        2.0,
-        1.0,
-        0.0,
-        0.0,
-        3.0
-      ],
-      "yards": [
-        53.0,
-        18.0,
-        8.0,
-        0.0,
-        0.0,
-        19.0
-      ],
-      "touchdowns": [
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        19.0,
-        42.0,
-        93.0,
-        73.0,
-        58.0,
-        100.0
-      ],
-      "rushing_tds": [
-        1.0,
-        0.0,
-        1.0,
-        1.0,
-        1.0,
-        1.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4429096",
-    "opponent": "GB",
-    "matchup": "vs GB",
-    "home_away": "home",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
   },
   {
     "player_id": "00-0040584",
@@ -31070,6 +30069,162 @@
     "game_id": "2026_12_NE_LAC",
     "gameday": "2026-11-29",
     "gametime": "16:05"
+  },
+  {
+    "player_id": "00-0033110",
+    "name": "T.Higbee",
+    "team": "LA",
+    "position": "TE",
+    "projected_targets": 3.5,
+    "projected_receptions": 1.8,
+    "projected_yards": 14.5,
+    "projected_tds": 0.25,
+    "projected_fantasy_points": 5.5,
+    "floor_fantasy_points": 0.8,
+    "ceiling_fantasy_points": 11.5,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      2.2,
+      2.4,
+      1.9,
+      1.8,
+      9.2,
+      1.9
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        2.2,
+        2.4,
+        1.9,
+        1.8,
+        9.2,
+        1.9
+      ],
+      "targets": [
+        4.0,
+        3.0,
+        2.0,
+        5.0,
+        4.0,
+        3.0
+      ],
+      "receptions": [
+        4.0,
+        2.0,
+        1.0,
+        1.0,
+        3.0,
+        1.0
+      ],
+      "yards": [
+        22.0,
+        14.0,
+        14.0,
+        13.0,
+        17.0,
+        14.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT",
+    "espn_id": "2573401",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0028986",
@@ -32024,6 +31179,167 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "espn_id": "4373678",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
+  },
+  {
+    "player_id": "00-0038933",
+    "name": "D.Kincaid",
+    "team": "BUF",
+    "position": "TE",
+    "projected_targets": 3.6,
+    "projected_receptions": 2.85,
+    "projected_yards": 29.85,
+    "projected_tds": 0.19,
+    "projected_fantasy_points": 5.32,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 14.8,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      1.2,
+      1.2,
+      7.3,
+      16.6,
+      4.3,
+      6.8
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        1.2,
+        1.2,
+        7.3,
+        16.6,
+        4.3,
+        6.8
+      ],
+      "targets": [
+        2.0,
+        2.0,
+        8.0,
+        6.0,
+        3.0,
+        3.0
+      ],
+      "receptions": [
+        1.0,
+        1.0,
+        7.0,
+        4.0,
+        3.0,
+        2.0
+      ],
+      "yards": [
+        7.0,
+        7.0,
+        38.0,
+        86.0,
+        28.0,
+        58.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "injury_status": "questionable",
+    "roster_status": "ACT",
+    "espn_id": "4385690",
     "opponent": "KC",
     "matchup": "vs KC",
     "home_away": "home",
@@ -34271,166 +33587,6 @@
     "gametime": "13:00"
   },
   {
-    "player_id": "00-0036244",
-    "name": "C.Parkinson",
-    "team": "LA",
-    "position": "TE",
-    "projected_targets": 3.15,
-    "projected_receptions": 2.66,
-    "projected_yards": 16.66,
-    "projected_tds": 0.17,
-    "projected_fantasy_points": 4.97,
-    "floor_fantasy_points": 2.4,
-    "ceiling_fantasy_points": 14.9,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      0.0,
-      0.8,
-      11.6,
-      7.3,
-      3.3,
-      2.1
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        0.0,
-        0.8,
-        11.6,
-        7.3,
-        3.3,
-        2.1
-      ],
-      "targets": [
-        1.0,
-        2.0,
-        6.0,
-        6.0,
-        4.0,
-        2.0
-      ],
-      "receptions": [
-        0.0,
-        1.0,
-        5.0,
-        5.0,
-        4.0,
-        2.0
-      ],
-      "yards": [
-        0.0,
-        3.0,
-        31.0,
-        48.0,
-        13.0,
-        11.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4242557",
-    "opponent": "GB",
-    "matchup": "vs GB",
-    "home_away": "home",
-    "game_id": "2026_12_GB_LA",
-    "gameday": "2026-11-25",
-    "gametime": "20:00"
-  },
-  {
     "player_id": "00-0031288",
     "name": "A.McCarron",
     "team": "CIN",
@@ -34524,6 +33680,162 @@
     "game_id": "2026_12_NO_CIN",
     "gameday": "2026-11-29",
     "gametime": "13:00"
+  },
+  {
+    "player_id": "00-0036244",
+    "name": "C.Parkinson",
+    "team": "LA",
+    "position": "TE",
+    "projected_targets": 3.15,
+    "projected_receptions": 2.8,
+    "projected_yards": 18.06,
+    "projected_tds": 0.17,
+    "projected_fantasy_points": 4.9,
+    "floor_fantasy_points": 2.4,
+    "ceiling_fantasy_points": 14.4,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      0.8,
+      11.6,
+      7.3,
+      3.3,
+      2.1,
+      0.9
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        0.8,
+        11.6,
+        7.3,
+        3.3,
+        2.1,
+        0.9
+      ],
+      "targets": [
+        2.0,
+        6.0,
+        6.0,
+        4.0,
+        2.0,
+        2.0
+      ],
+      "receptions": [
+        1.0,
+        5.0,
+        5.0,
+        4.0,
+        2.0,
+        2.0
+      ],
+      "yards": [
+        3.0,
+        31.0,
+        48.0,
+        13.0,
+        11.0,
+        -1.0
+      ],
+      "touchdowns": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 2,
+    "roster_status": "ACT",
+    "espn_id": "4242557",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0040398",
@@ -36570,6 +35882,162 @@
     "game_id": "2026_12_DEN_PIT",
     "gameday": "2026-11-27",
     "gametime": "15:00"
+  },
+  {
+    "player_id": "00-0040590",
+    "name": "K.Mumpfield",
+    "team": "LA",
+    "position": "WR",
+    "projected_targets": 2.5,
+    "projected_receptions": 1.5,
+    "projected_yards": 29.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 4.4,
+    "floor_fantasy_points": 0.0,
+    "ceiling_fantasy_points": 12.0,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      2.5,
+      2.0,
+      0.0,
+      3.0,
+      9.6,
+      8.9
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        2.5,
+        2.0,
+        0.0,
+        3.0,
+        9.6,
+        8.9
+      ],
+      "targets": [
+        3.0,
+        2.0,
+        2.0,
+        2.0,
+        4.0,
+        5.0
+      ],
+      "receptions": [
+        2.0,
+        1.0,
+        0.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "yards": [
+        15.0,
+        15.0,
+        0.0,
+        20.0,
+        81.0,
+        69.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT",
+    "espn_id": "4710855",
+    "opponent": null,
+    "matchup": null
   },
   {
     "player_id": "00-0041125",
@@ -39394,5 +38862,481 @@
     "game_id": "2026_12_CAR_TB",
     "gameday": "2026-11-30",
     "gametime": "20:15"
+  },
+  {
+    "player_id": "00-0035689",
+    "name": "D.Knox",
+    "team": "BUF",
+    "position": "TE",
+    "projected_targets": 1.96,
+    "projected_receptions": 1.26,
+    "projected_yards": 8.75,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 3.99,
+    "floor_fantasy_points": 1.0,
+    "ceiling_fantasy_points": 12.2,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      1.1,
+      0.5,
+      1.1,
+      5.7,
+      1.2,
+      4.1
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        1.1,
+        0.5,
+        1.1,
+        5.7,
+        1.2,
+        4.1
+      ],
+      "targets": [
+        3.0,
+        1.0,
+        2.0,
+        5.0,
+        3.0,
+        3.0
+      ],
+      "receptions": [
+        1.0,
+        1.0,
+        1.0,
+        4.0,
+        1.0,
+        2.0
+      ],
+      "yards": [
+        6.0,
+        0.0,
+        6.0,
+        37.0,
+        7.0,
+        31.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 2,
+    "roster_status": "ACT",
+    "espn_id": "3930086",
+    "opponent": "KC",
+    "matchup": "vs KC",
+    "home_away": "home",
+    "game_id": "2026_12_KC_BUF",
+    "gameday": "2026-11-26",
+    "gametime": "20:20"
+  },
+  {
+    "player_id": "00-0040142",
+    "name": "K.Johnson",
+    "team": "GB",
+    "position": "RB",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 3.99,
+    "floor_fantasy_points": 0.6,
+    "ceiling_fantasy_points": 13.4,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      2.2,
+      2.6,
+      -0.2,
+      12.8,
+      4.2,
+      3.7
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        2.2,
+        2.6,
+        -0.2,
+        12.8,
+        4.2,
+        3.7
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        19.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        42.0,
+        26.0,
+        -2.0,
+        68.0,
+        42.0,
+        13.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 2,
+    "roster_status": "ACT",
+    "espn_id": "4819231",
+    "opponent": null,
+    "matchup": null
+  },
+  {
+    "player_id": "00-0038797",
+    "name": "E.Wilson",
+    "team": "SEA",
+    "position": "RB",
+    "projected_targets": 0.72,
+    "projected_receptions": 0.48,
+    "projected_yards": 5.0,
+    "projected_tds": 0.1,
+    "projected_fantasy_points": 3.96,
+    "floor_fantasy_points": 4.0,
+    "ceiling_fantasy_points": 19.6,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      9.2,
+      1.4,
+      25.5,
+      12.2,
+      5.2,
+      18.0
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        9.2,
+        1.4,
+        25.5,
+        12.2,
+        5.2,
+        18.0
+      ],
+      "targets": [
+        1.0,
+        0.0,
+        4.0,
+        2.0,
+        1.0,
+        1.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        3.0,
+        2.0,
+        0.0,
+        1.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        39.0,
+        11.0,
+        0.0,
+        15.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        92.0,
+        14.0,
+        81.0,
+        61.0,
+        52.0,
+        100.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 3,
+    "roster_status": "ACT",
+    "espn_id": "4887558",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   }
 ]
