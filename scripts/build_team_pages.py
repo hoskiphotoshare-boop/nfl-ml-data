@@ -203,9 +203,10 @@ def page(title: str, description: str, body: str, canonical: str, updated: str =
   <footer>
     <div class="foot-row"><span>Model-implied probabilities · not betting advice</span></div>
     {updated_line}
-    <div class="foot-row"><span>Data: nflverse (CC-BY 4.0)</span></div>
+    <div class="foot-row"><a href="/privacy">Privacy</a> · <span>Data: nflverse (CC-BY 4.0)</span></div>
   </footer>
   <script src="/pwa.js" defer></script>
+  <script src="/analytics.js"></script>
   <script src="../theme.js"></script>
   <script src="../table-sort.js"></script>
 </body>
@@ -390,7 +391,7 @@ def main() -> None:
                 )
             )
 
-    urls = [f"{SITE}/", f"{SITE}/teams/"] + [
+    urls = [f"{SITE}/", f"{SITE}/teams/", f"{SITE}/privacy"] + [
         f"{SITE}/teams/{team.get('team')}" for team in ordered if team.get("team")
     ]
     sitemap = (

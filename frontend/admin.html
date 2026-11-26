@@ -70,6 +70,18 @@
         <div id="health" class="card-grid"></div>
       </section>
 
+      <section id="traffic-section">
+        <h2>Traffic &amp; engagement</h2>
+        <p class="subtitle">First-party, cookie-free counts. No cookies, IP addresses or user agents are stored; visits use a daily salted hash. Days are UTC.</p>
+        <div class="seg" id="traffic-range" role="group" aria-label="Traffic range">
+          <button data-days="7" class="active" type="button">7 days</button>
+          <button data-days="30" type="button">30 days</button>
+          <button data-days="90" type="button">90 days</button>
+        </div>
+        <div class="card-grid" id="traffic-kpis"></div>
+        <div id="traffic-body"></div>
+      </section>
+
       <section>
         <h2>Model scorecard</h2>
         <div id="scorecard"></div>
@@ -193,6 +205,8 @@
         return;
       }
       sessionStorage.setItem("nfl_admin_email", payload.email);
+      sessionStorage.setItem("nfl_admin_token", response.credential);
+      trafficToken = response.credential;
       showLoginError("");
       showAdmin();
       load();
@@ -329,6 +343,159 @@
         renderShap();
       });
       renderShap();
+    }
+
+    const TRAFFIC_API = "/api/admin/analytics";
+    let trafficDays = 7;
+    let trafficToken = sessionStorage.getItem("nfl_admin_token") || "";
+
+    function trafficKpi(title, value, sub) {
+      const c = el("div", "card");
+      c.appendChild(el("h3", "", title));
+      c.appendChild(el("p", "traffic-value", String(value)));
+      c.appendChild(el("p", "", sub));
+      return c;
+    }
+
+    function trafficTable(title, rows, labelHeading, valueHeading, formatLabel) {
+      const block = el("div", "traffic-block");
+      block.appendChild(el("h3", "", title));
+      const wrap = el("div", "score-wrap");
+      const table = el("table", "score-table");
+      const thead = el("thead");
+      const headRow = el("tr");
+      [labelHeading, valueHeading].forEach((label) => headRow.appendChild(el("th", "", label)));
+      thead.appendChild(headRow);
+      table.appendChild(thead);
+      const tbody = el("tbody");
+      if (!rows.length) {
+        const tr = el("tr");
+        const td = el("td", "", "No data yet");
+        td.colSpan = 2;
+        tr.appendChild(td);
+        tbody.appendChild(tr);
+      } else {
+        rows.forEach((row) => {
+          const tr = el("tr");
+          const label = formatLabel ? formatLabel(row.label) : row.label;
+          tr.appendChild(el("td", "", label || "—"));
+          tr.appendChild(el("td", "", String(row.count)));
+          tbody.appendChild(tr);
+        });
+      }
+      table.appendChild(tbody);
+      wrap.appendChild(table);
+      block.appendChild(wrap);
+      return block;
+    }
+
+    function trafficDaily(byDay) {
+      const block = el("div", "traffic-block");
+      block.appendChild(el("h3", "", "By day"));
+      const wrap = el("div", "score-wrap");
+      const table = el("table", "score-table");
+      const thead = el("thead");
+      const headRow = el("tr");
+      ["Day", "Pageviews", "Visits", "Events", "Clicks"].forEach((label) =>
+        headRow.appendChild(el("th", "", label))
+      );
+      thead.appendChild(headRow);
+      table.appendChild(thead);
+      const tbody = el("tbody");
+      [...byDay].reverse().forEach((day) => {
+        const tr = el("tr");
+        [day.day, day.pageviews, day.visits, day.events, day.clicks].forEach((value) =>
+          tr.appendChild(el("td", "", String(value)))
+        );
+        tbody.appendChild(tr);
+      });
+      table.appendChild(tbody);
+      wrap.appendChild(table);
+      block.appendChild(wrap);
+      return block;
+    }
+
+    function reauthCard(message) {
+      const c = el("div", "card");
+      c.appendChild(el("h3", "", "Traffic sign-in required"));
+      c.appendChild(el("p", "", message));
+      const button = el("button", "pick-btn", "Sign in again");
+      button.type = "button";
+      button.addEventListener("click", () => {
+        sessionStorage.removeItem("nfl_admin_email");
+        sessionStorage.removeItem("nfl_admin_token");
+        location.reload();
+      });
+      c.appendChild(button);
+      return c;
+    }
+
+    function renderTraffic(data) {
+      const kpis = document.getElementById("traffic-kpis");
+      const body = document.getElementById("traffic-body");
+      kpis.innerHTML = "";
+      body.innerHTML = "";
+      const totals = data.totals || {};
+      kpis.appendChild(trafficKpi("Pageviews", totals.pageviews || 0, `${data.range_days} days · UTC`));
+      kpis.appendChild(trafficKpi("Visits", totals.visits || 0, "daily unique hashes"));
+      kpis.appendChild(trafficKpi("Events", totals.events || 0, "tabs, views, clicks"));
+      kpis.appendChild(trafficKpi("Clicks", totals.clicks || 0, "games, players, teams"));
+
+      body.appendChild(trafficDaily(data.by_day || []));
+      const grid = el("div", "traffic-grid");
+      grid.appendChild(trafficTable("Top pages", data.pages || [], "Path", "Views"));
+      grid.appendChild(trafficTable("Favourite tabs", data.tabs || [], "Tab", "Loads", (label) => label || "unknown"));
+      grid.appendChild(trafficTable("View mix", data.views || [], "View", "Loads", (label) => label || "unknown"));
+      grid.appendChild(
+        trafficTable("Clicks", data.clicks || [], "Click", "Count", (label) =>
+          String(label).replace(":", " · ")
+        )
+      );
+      grid.appendChild(trafficTable("Referrers", data.referrers || [], "Source", "Views"));
+      grid.appendChild(trafficTable("Countries", data.countries || [], "Country", "Views"));
+      grid.appendChild(trafficTable("Devices", data.devices || [], "Device", "Views"));
+      body.appendChild(grid);
+      if (data.truncated) {
+        body.appendChild(card("Partial data", ["The batch cap was reached; totals cover the newest batches only."]));
+      }
+      body.appendChild(card("Collection note", [data.note || ""]));
+    }
+
+    async function loadTraffic(days) {
+      trafficDays = days;
+      document.querySelectorAll("#traffic-range button").forEach((button) => {
+        const active = Number(button.dataset.days) === days;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+      const kpis = document.getElementById("traffic-kpis");
+      const body = document.getElementById("traffic-body");
+      if (!kpis || !body) return;
+      kpis.innerHTML = "";
+      body.innerHTML = "";
+      if (!trafficToken) {
+        body.appendChild(reauthCard("Traffic is protected by the Google admin token. Sign in again to load it."));
+        return;
+      }
+      body.appendChild(card("Loading traffic…", [`Range: ${days} days`]));
+      try {
+        const res = await fetch(`${TRAFFIC_API}?days=${days}&t=${Date.now()}`, {
+          headers: { Authorization: `Bearer ${trafficToken}` },
+          cache: "no-store",
+        });
+        if (res.status === 401) {
+          trafficToken = "";
+          sessionStorage.removeItem("nfl_admin_token");
+          body.innerHTML = "";
+          body.appendChild(reauthCard("The Google token has expired. Sign in again."));
+          return;
+        }
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        renderTraffic(await res.json());
+      } catch (error) {
+        body.innerHTML = "";
+        body.appendChild(card("Traffic unavailable", [String(error)]));
+      }
     }
 
     async function load() {
@@ -603,9 +770,12 @@
       } catch (e) {
         document.getElementById("shap-global").appendChild(card("SHAP report unavailable", [String(e)]));
       }
+
+      loadTraffic(trafficDays);
     }
 
     function initAuth() {
+      trafficToken = sessionStorage.getItem("nfl_admin_token") || "";
       if (sessionStorage.getItem("nfl_admin_email") === ADMIN_EMAIL) {
         showAdmin();
         load();
@@ -633,7 +803,14 @@
 
     document.getElementById("signout-btn").addEventListener("click", () => {
       sessionStorage.removeItem("nfl_admin_email");
+      sessionStorage.removeItem("nfl_admin_token");
       location.reload();
+    });
+
+    document.querySelectorAll("#traffic-range button").forEach((button) => {
+      button.addEventListener("click", () => {
+        loadTraffic(Number(button.dataset.days) || 7);
+      });
     });
 
     window.addEventListener("load", initAuth);

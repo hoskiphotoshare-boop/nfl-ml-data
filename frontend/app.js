@@ -1292,6 +1292,7 @@ function openGamePlayers(gameId) {
   const game = state.gamesById.get(gameId);
   if (!game) return;
   if (!(state.players || []).some((player) => player.game_id === gameId)) return;
+  window.nflTrack?.('game_open', `${game.away_team}@${game.home_team}`);
   state.playersGame = gameId;
   const gameSelect = $('#players-game-filter');
   if (gameSelect) gameSelect.value = gameId;
@@ -1843,6 +1844,7 @@ function normalizePlayerSort() {
 }
 
 function setPlayerSort(key) {
+  window.nflTrack?.('sort_change', `players:${key}`);
   nextSort(state.playersSort, key, PLAYER_ASC_KEYS);
   normalizePlayerSort();
   renderSortState(state.playersSort, '#players-sort', {
@@ -2077,6 +2079,12 @@ function renderPlayers() {
     );
     tr.title = isOpen ? 'Hide last six games' : 'Show last six games';
     const toggleRow = () => {
+      if (!isOpen) {
+        window.nflTrack?.(
+          'player_open',
+          `${player.team}:${player.position}:${player.name}`
+        );
+      }
       state.selectedPlayerId = isOpen ? null : playerId;
       renderPlayers();
     };
@@ -2263,6 +2271,7 @@ function playoffSortValue(team, key) {
 }
 
 function setPlayoffSort(key) {
+  window.nflTrack?.('sort_change', `playoffs:${key}`);
   nextSort(state.playoffsSort, key, PLAYOFF_ASC_KEYS);
   renderSortState(state.playoffsSort, '#playoffs-sort', {
     rank: 'sb',
@@ -2643,6 +2652,7 @@ function rebuildGamesSort() {
 }
 
 function setGamesView(view) {
+  window.nflTrack?.('view_change', view);
   state.gamesView = view;
   document.querySelectorAll('#games-view-seg button').forEach((btn) => {
     const active = btn.dataset.view === view;
@@ -2720,14 +2730,24 @@ function setGamesView(view) {
 
 function setupFilters() {
   const rerenderGames = () => renderGames();
-  $('#games-week-filter')?.addEventListener('change', rerenderGames);
-  $('#games-team-filter')?.addEventListener('change', rerenderGames);
-  $('#games-sort')?.addEventListener('change', rerenderGames);
+  $('#games-week-filter')?.addEventListener('change', (event) => {
+    window.nflTrack?.('filter_change', `week:${event.target.value}`);
+    rerenderGames();
+  });
+  $('#games-team-filter')?.addEventListener('change', (event) => {
+    window.nflTrack?.('filter_change', `team:${event.target.value || 'all'}`);
+    rerenderGames();
+  });
+  $('#games-sort')?.addEventListener('change', (event) => {
+    window.nflTrack?.('filter_change', `sort:${event.target.value}`);
+    rerenderGames();
+  });
   document.querySelectorAll('#games-view-seg button').forEach((btn) => {
     btn.addEventListener('click', () => setGamesView(btn.dataset.view));
   });
 
   $('#players-team-filter')?.addEventListener('change', (event) => {
+    window.nflTrack?.('filter_change', `players-team:${event.target.value || 'all'}`);
     const game = $('#players-game-filter');
     if (game) game.value = 'all';
     state.playersGame = 'all';
@@ -2735,6 +2755,7 @@ function setupFilters() {
     renderPlayers();
   });
   $('#players-game-filter')?.addEventListener('change', (event) => {
+    window.nflTrack?.('filter_change', `players-game:${event.target.value}`);
     state.playersGame = event.target.value;
     const team = $('#players-team-filter');
     if (team) team.value = '';
@@ -2745,16 +2766,24 @@ function setupFilters() {
     renderPlayers();
   });
   $('#players-sort')?.addEventListener('change', (event) => {
+    window.nflTrack?.('filter_change', `players-sort:${event.target.value}`);
     const key = event.target.value;
     state.playersSort = { key, dir: key === 'depth' ? 'asc' : 'desc' };
     renderPlayers();
   });
   document.querySelectorAll('#players-pos-seg button').forEach((btn) => {
-    btn.addEventListener('click', () => setPosition(btn.dataset.pos));
+    btn.addEventListener('click', () => {
+      window.nflTrack?.('filter_change', `pos:${btn.dataset.pos}`);
+      setPosition(btn.dataset.pos);
+    });
   });
 
-  $('#playoffs-team-filter')?.addEventListener('change', renderPlayoffs);
+  $('#playoffs-team-filter')?.addEventListener('change', (event) => {
+    window.nflTrack?.('filter_change', `playoffs-team:${event.target.value || 'all'}`);
+    renderPlayoffs();
+  });
   $('#playoffs-sort')?.addEventListener('change', (event) => {
+    window.nflTrack?.('filter_change', `playoffs-sort:${event.target.value}`);
     const key =
       {
         sb: 'super_bowl',
@@ -2768,7 +2797,10 @@ function setupFilters() {
     renderPlayoffs();
   });
   document.querySelectorAll('#playoffs-conf-seg button').forEach((btn) => {
-    btn.addEventListener('click', () => setConference(btn.dataset.conf));
+    btn.addEventListener('click', () => {
+      window.nflTrack?.('filter_change', `conf:${btn.dataset.conf}`);
+      setConference(btn.dataset.conf);
+    });
   });
 }
 
@@ -2794,6 +2826,7 @@ function setConference(conf) {
 }
 
 function activateTab(name, focus = false) {
+  window.nflTrack?.('tab_view', name);
   const tabs = document.querySelectorAll('.tab');
   const panels = document.querySelectorAll('.tab-panel');
   const bottom = document.querySelectorAll('.bottomnav button');
@@ -2852,6 +2885,8 @@ function setupTabs() {
     // The hash matches a section id, so the browser jumps to it on load.
     // Reset to the top so the sticky header does not cover the panel heading.
     requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'auto' }));
+  } else {
+    window.nflTrack?.('tab_view', 'games');
   }
 
   document.addEventListener('visibilitychange', () => {

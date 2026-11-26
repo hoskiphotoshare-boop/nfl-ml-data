@@ -30,7 +30,9 @@
     var button = document.getElementById('theme-toggle');
     if (button) {
       button.addEventListener('click', function () {
-        apply(current() === 'dark' ? 'light' : 'dark');
+        var next = current() === 'dark' ? 'light' : 'dark';
+        apply(next);
+        if (window.nflTrack) window.nflTrack('theme_toggle', next);
       });
     }
   });

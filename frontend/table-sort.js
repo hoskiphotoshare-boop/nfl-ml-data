@@ -70,6 +70,7 @@
           compare(cellValue(a, index), cellValue(b, index), direction)
         );
         rows.forEach((row) => body.appendChild(row));
+        if (window.nflTrack) window.nflTrack('sort_change', label);
       });
     });
   });

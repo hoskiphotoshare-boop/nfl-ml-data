@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy and analytics disclosure for NFL ML Predictions: first-party, cookie-free counts and how to opt out." />
+  <link rel="canonical" href="https://nfl-ml-data.pages.dev/privacy" />
+  <meta name="theme-color" content="#f3f6fb" />
+  <title>Privacy &amp; Analytics — NFL ML Predictions</title>
+  <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/icons/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="appbar">
+    <div class="appbar-inner">
+      <div class="brand-row">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4.5 19.5 19.5 4.5" />
+              <path d="M7.8 4.9 19.1 16.2" />
+              <path d="M4.9 7.8 16.2 19.1" />
+            </svg>
+          </span>
+          <div class="brand-text">
+            <h1 class="brand-title">NFL <span>ML Predictions</span></h1>
+            <p class="brand-sub">Model odds · player projections · playoff chances</p>
+          </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="topbar-meta"><a class="chip" href="/">← All games</a></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="tab-panel active">
+      <div class="panel-head">
+        <div>
+          <h2>Privacy &amp; analytics</h2>
+          <p>Short version: no cookies, no accounts, no IP addresses, no cross-site tracking.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>What is counted</h3>
+        <p>The site records aggregate, first-party usage so the admin can see which pages, tabs and features are used:</p>
+        <ul>
+          <li>the page path (for example <code>/teams/KC</code>),</li>
+          <li>event names and short labels: tab loads, Schedule/Edges/Results views, game-card opens, player opens, team links, filter and sort changes, theme toggles,</li>
+          <li>the referrer hostname (not its path or query),</li>
+          <li>the country and device class reported by Cloudflare,</li>
+          <li>a visitor value: a <strong>daily-salted SHA-256 hash</strong> of your IP address and user agent, truncated to 64 bits.</li>
+        </ul>
+        <p>The raw IP address and user agent are never written to storage, and the visitor value changes every UTC day, so it cannot be used to follow you across days or sites.</p>
+      </div>
+
+      <div class="card">
+        <h3>What is not collected</h3>
+        <p>No cookies, no login, no advertising identifiers, no precise location, no cross-site pixels, and no third-party analytics script. The browser only calls this site's own <code>/api/analytics/collect</code> endpoint.</p>
+      </div>
+
+      <div class="card">
+        <h3>Retention</h3>
+        <p>Raw event batches expire after 365 days. The admin only reads aggregate counts; individual batches are not shown in the UI.</p>
+      </div>
+
+      <div class="card">
+        <h3>Opting out</h3>
+        <p>Collection is disabled automatically when your browser sends <strong>Do Not Track</strong> or <strong>Global Privacy Control</strong>. You can also disable it for this browser by running this in the console:</p>
+        <pre><code>localStorage.setItem('nfl_no_analytics', '1')</code></pre>
+        <p>To turn it back on: <code>localStorage.removeItem('nfl_no_analytics')</code>.</p>
+      </div>
+
+      <div class="card">
+        <h3>Data attribution</h3>
+        <p>Predictions use nflverse open data (CC-BY 4.0; FTN/participation CC-BY-SA 4.0), Open-Meteo weather (CC BY 4.0) and ESPN's public scoreboard/boxscore endpoints for live display. Model outputs are not betting advice.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="foot-row"><a href="/">Games</a> · <a href="/teams/">Team directory</a></div>
+    <div class="foot-row"><span>Data: nflverse (CC-BY 4.0)</span></div>
+  </footer>
+
+  <script src="/analytics.js"></script>
+  <script src="/theme.js"></script>
+</body>
+</html>

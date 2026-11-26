@@ -2492,3 +2492,50 @@ html {
 html.standalone .appbar {
   padding-top: env(safe-area-inset-top, 0px);
 }
+
+/* ---------- admin traffic & engagement ---------- */
+.traffic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.traffic-block {
+  min-width: 0;
+}
+
+.traffic-block h3 {
+  margin: 0.85rem 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+}
+
+.traffic-value {
+  margin: 0.15rem 0;
+  font-size: 1.55rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+#traffic-kpis {
+  margin-top: 0.75rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1000px) {
+  #traffic-kpis {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  #traffic-kpis {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
