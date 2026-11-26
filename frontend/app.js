@@ -1010,9 +1010,10 @@ function archivedMarket(game) {
 }
 
 function marketFor(game) {
-  // Archived finals must grade and display against the lines that were priced
-  // when the call was made, not today's (possibly moved) market.
-  if (game && game.final && game.markets) return archivedMarket(game);
+  // Once a game is final, grade and display the lines that were priced when
+  // the call was made. Archived picks are frozen at first sight; today's
+  // market may have moved or disappeared.
+  if (game && game.markets && completedScore(game.game_id)) return archivedMarket(game);
   return state.marketById.get(game?.game_id) || archivedMarket(game);
 }
 
