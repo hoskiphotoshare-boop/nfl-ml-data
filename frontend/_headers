@@ -9,9 +9,11 @@
 
 /admin
   X-Robots-Tag: noindex
+  Cache-Control: no-store
 
 /admin.html
   X-Robots-Tag: noindex
+  Cache-Control: no-store
 
 /icons/*
   Cache-Control: public, max-age=604800

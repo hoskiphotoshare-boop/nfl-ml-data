@@ -56,6 +56,7 @@
     </section>
 
     <div id="admin-content" style="display: none">
+      <p class="subtitle"><a href="#diagnostics-section">Jump to model diagnostics (research)</a></p>
       <div class="filters" style="justify-content: flex-end">
         <button id="signout-btn" class="pick-btn" type="button">Sign out</button>
       </div>
@@ -87,7 +88,7 @@
         <div id="scorecard"></div>
       </section>
 
-      <section>
+      <section id="diagnostics-section">
         <h2>Model diagnostics (research)</h2>
         <div id="diagnostics" class="card-grid"></div>
       </section>
@@ -723,9 +724,12 @@
         const elm = document.getElementById("diagnostics");
         elm.innerHTML = "";
         if (practice) {
+          const coverage = practice.coverage || {};
+          const ci = practice.delta?.log_loss_ci95 || [];
           elm.appendChild(card("Practice participation", [
             `log loss ${practice.baseline?.log_loss ?? "—"} → ${practice.with_practice?.log_loss ?? "—"}`,
-            `Δ ${practice.delta?.log_loss ?? "—"} · accuracy ${practice.delta?.accuracy ?? "—"}`,
+            `Δ ${practice.delta?.log_loss ?? "—"} · 95% CI ${ci.length ? `[${ci[0]}, ${ci[1]}]` : "—"}`,
+            `coverage ${coverage.home_missing_rate != null ? `${((1 - coverage.home_missing_rate) * 100).toFixed(1)}%` : "—"} of 2022+ team-games`,
             practice.accepted ? "gate passed · research only" : "gate not met · not promoted",
           ]));
         }

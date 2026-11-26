@@ -166,6 +166,7 @@ def main() -> None:
 
     results = {"baseline": {}, "with_practice": {}}
     pooled = {"baseline": [], "with_practice": []}
+    paired = {"y": [], "baseline": [], "practice": []}
     for season in seasons[1:]:
         train = df.filter((pl.col("season") < season) & pl.col("home_win").is_not_null())
         test = df.filter((pl.col("season") == season) & pl.col("home_win").is_not_null())
@@ -188,6 +189,11 @@ def main() -> None:
             result["season"] = season
             results[label][season] = result
             pooled[label].append(result)
+            if label == "baseline":
+                paired["y"].extend(y_test.tolist())
+                paired["baseline"].extend(prob.tolist())
+            else:
+                paired["practice"].extend(prob.tolist())
 
     if not pooled["baseline"] or not pooled["with_practice"]:
         print("Not enough seasons for a walk-forward practice test.")
@@ -210,17 +216,48 @@ def main() -> None:
         "auc": round(with_practice["auc"] - base["auc"], 4),
     }
     accepted = delta["log_loss"] >= 0.005 and delta["accuracy"] >= -0.002
+    covered = df.filter(pl.col("season") >= 2022)
     coverage = {
         "team_weeks": int(practice.height),
-        "games": int(df.height),
+        "games": int(covered.height),
         "home_missing_rate": round(
-            float(df["home_practice_missing"].mean() or 0.0), 4
+            float(covered["home_practice_missing"].mean() or 0.0), 4
         ),
         "away_missing_rate": round(
-            float(df["away_practice_missing"].mean() or 0.0), 4
+            float(covered["away_practice_missing"].mean() or 0.0), 4
         ),
         "seasons": [int(x) for x in sorted(practice["season"].unique().to_list())],
+        "by_season": {
+            str(int(season)): round(
+                float(
+                    covered.filter(pl.col("season") == season)[
+                        "home_practice_missing"
+                    ].mean()
+                    or 0.0
+                ),
+                4,
+            )
+            for season in sorted(covered["season"].unique().to_list())
+        },
     }
+
+    # Paired bootstrap over test games: is the log-loss gain distinguishable
+    # from zero? Positive = practice model better.
+    y_all = np.asarray(paired["y"], dtype=float)
+    p_base = np.clip(np.asarray(paired["baseline"], dtype=float), 1e-6, 1 - 1e-6)
+    p_prac = np.clip(np.asarray(paired["practice"], dtype=float), 1e-6, 1 - 1e-6)
+    loss_base = -(y_all * np.log(p_base) + (1 - y_all) * np.log(1 - p_base))
+    loss_prac = -(y_all * np.log(p_prac) + (1 - y_all) * np.log(1 - p_prac))
+    per_game_delta = loss_base - loss_prac
+    rng = np.random.default_rng(42)
+    boot = [
+        float(np.mean(per_game_delta[rng.integers(0, len(per_game_delta), len(per_game_delta))]))
+        for _ in range(2000)
+    ]
+    delta["log_loss_ci95"] = [
+        round(float(np.quantile(boot, 0.025)), 4),
+        round(float(np.quantile(boot, 0.975)), 4),
+    ]
 
     payload = {
         "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -233,6 +270,7 @@ def main() -> None:
         "accepted": bool(accepted),
         "gate": "accept only if log loss improves by >= 0.005 and accuracy does not drop by > 0.002",
         "per_season": results,
+        "point_in_time": "Uses the final weekly injury report; a rigorous version would filter date_modified < kickoff per game.",
         "note": "Research only. The shipped match model is unchanged; this report gates promotion.",
     }
     os.makedirs("reports", exist_ok=True)
