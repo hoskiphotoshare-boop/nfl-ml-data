@@ -30,6 +30,7 @@ POSITION_GROUPS = {
     "TE": ["TE"],
     "K": ["K"],
 }
+TREND_COLS = ["fantasy_points", "targets", "carries", "offense_pct"]
 ROLL_COLS = [
     "fantasy_points",
     "targets",
@@ -166,12 +167,21 @@ def build_rolling(df: pl.DataFrame) -> tuple[pl.DataFrame, str]:
         pl.int_range(1, pl.len() + 1).over(id_col).alias("game_num")
     )
     out = df.with_columns(exprs)
+    for col in TREND_COLS:
+        if f"roll_{col}" in out.columns:
+            out = out.with_columns(
+                (
+                    pl.col(col).cast(pl.Float64, strict=False).fill_null(0.0).shift(1).over(id_col)
+                    - pl.col(f"roll_{col}")
+                ).alias(f"trend_{col}")
+            )
     out = out.with_columns((pl.col("game_num") - 1).alias("games_played"))
     return out, id_col
 
 
 def feature_cols(df: pl.DataFrame) -> list[str]:
     cols = [c for c in df.columns if c.startswith("roll_")]
+    cols += [c for c in df.columns if c.startswith("trend_")]
     # Weather columns are kept in the feature table for display, but the
     # current schedules have too many null forecasts to improve the models.
     for extra in ["is_home", "rest_days", "opp_def_rating", "div_game"]:
