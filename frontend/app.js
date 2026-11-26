@@ -63,6 +63,11 @@ const state = {
   marketById: new Map(),
   gamesById: new Map(),
   scoresById: new Map(),
+  resultGames: [],
+  pickById: new Map(),
+  lastFinalIds: new Set(),
+  finalsInitialized: false,
+  weekFilterBeforeResults: null,
   scoresUpdatedAt: null,
   scoresUnavailable: false,
   scoreTimer: null,
@@ -647,7 +652,7 @@ function edgeGrid(market, best, game) {
   const finalScore = game ? completedScore(game.game_id) : null;
   ['ml', 'spread', 'total'].forEach((key) => {
     const entry = market.markets ? market.markets[key] : null;
-    const grade = finalScore ? gradeCall(key, entry, finalScore) : null;
+    const grade = finalScore ? gradeFor(game, key) : null;
     if (!entry) {
       const empty = el('div', 'edge-cell empty');
       empty.appendChild(el('div', 'k', MARKET_LABEL[key]));
@@ -720,6 +725,9 @@ function scoreLabel(score) {
 }
 
 function updateScoreNode(node, gameId) {
+  // Archived finals are the durable source of truth; never let a live poll or
+  // an ESPN rollover replace or duplicate them.
+  if (node.dataset.finalLocked === '1') return;
   const score = state.scoresById.get(gameId);
   const label = scoreLabel(score);
   node.hidden = !label;
@@ -734,9 +742,41 @@ function applyLiveScores() {
   document.querySelectorAll("[data-live-score]").forEach((node) => {
     updateScoreNode(node, node.dataset.liveScore);
   });
+  const nowFinal = new Set();
+  state.scoresById.forEach((score, id) => {
+    if (score && score.status && (score.status.completed || score.status.state === "post")) {
+      nowFinal.add(id);
+    }
+  });
+  state.pickById.forEach((pick, id) => {
+    if (pick && pick.final) nowFinal.add(id);
+  });
+  if (!state.finalsInitialized) {
+    state.lastFinalIds = nowFinal;
+    state.finalsInitialized = true;
+    return;
+  }
+  let hasNew = false;
+  for (const id of nowFinal) {
+    if (!state.lastFinalIds.has(id)) {
+      hasNew = true;
+      break;
+    }
+  }
+  if (hasNew) {
+    state.lastFinalIds = nowFinal;
+    syncResultGames();
+    renderGames();
+  }
 }
 
 function completedScore(gameId) {
+  const archived = state.pickById.get(gameId);
+  if (archived && archived.final) {
+    const home = Number(archived.final.home);
+    const away = Number(archived.final.away);
+    if (Number.isFinite(home) && Number.isFinite(away)) return { home, away };
+  }
   const score = state.scoresById.get(gameId);
   if (!score || !score.status) return null;
   const finished = score.status.completed || score.status.state === "post";
@@ -745,6 +785,25 @@ function completedScore(gameId) {
   const away = score.away ? score.away.score : null;
   if (!Number.isFinite(home) || !Number.isFinite(away)) return null;
   return { home, away };
+}
+
+function gradeFor(game, key) {
+  const archived = state.pickById.get(game?.game_id);
+  const archivedGrade = archived?.grades?.[key];
+  if (archivedGrade !== undefined && archivedGrade !== null) return archivedGrade;
+  const finalScore = completedScore(game?.game_id);
+  const market = marketFor(game);
+  const entry = market?.markets?.[key];
+  return finalScore ? gradeCall(key, entry, finalScore) : null;
+}
+
+// Results uses the durable archive, plus any archived game whose final has
+// already reached the live feed. The ESPN bridge keeps this week's games
+// visible until the next pipeline run writes the final score to the archive.
+function syncResultGames() {
+  state.resultGames = [...state.pickById.values()].filter(
+    (game) => game && (game.final || completedScore(game.game_id))
+  );
 }
 
 function gradeCall(key, entry, final) {
@@ -787,7 +846,9 @@ async function loadScores() {
       (data.games || []).map((game) => [game.game_id, game])
     );
     state.scoresUpdatedAt = data.updated_at || null;
+    syncResultGames();
     applyLiveScores();
+    if (state.gamesView === "results") renderGames();
   } catch (error) {
     state.scoresUnavailable = true;
     // Live scores are best-effort; predictions remain usable without them.
@@ -944,9 +1005,21 @@ function scheduleScorePoll() {
   }, hasLive ? 30000 : 60000);
 }
 
+function archivedMarket(game) {
+  return { markets: game?.markets || {}, outlier: false };
+}
+
+function marketFor(game) {
+  // Archived finals must grade and display against the lines that were priced
+  // when the call was made, not today's (possibly moved) market.
+  if (game && game.final && game.markets) return archivedMarket(game);
+  return state.marketById.get(game?.game_id) || archivedMarket(game);
+}
+
 function gameCard(game, rank) {
   const card = el('article', 'game-card');
-  const market = state.marketById.get(game.game_id);
+  card.dataset.gameId = game.game_id;
+  const market = marketFor(game);
   const best = bestMarket(market);
   const { home, away } = probsFor(game);
   const homeFav = home !== null && home >= 0.5;
@@ -974,7 +1047,16 @@ function gameCard(game, rank) {
   const liveScore = el('span', 'live-score');
   liveScore.dataset.liveScore = game.game_id;
   liveScore.hidden = true;
-  updateScoreNode(liveScore, game.game_id);
+  const archivedFinal = completedScore(game.game_id);
+  if (archivedFinal) {
+    // Durable final: lock the node so live polls cannot overwrite or duplicate it.
+    liveScore.dataset.finalLocked = '1';
+    liveScore.hidden = false;
+    liveScore.classList.add('final');
+    liveScore.textContent = `Final · ${teamAbbr(game.away_team)} ${archivedFinal.away}–${archivedFinal.home} ${teamAbbr(game.home_team)}`;
+  } else {
+    updateScoreNode(liveScore, game.game_id);
+  }
   top.appendChild(liveScore);
   top.appendChild(el('span', 'spacer'));
   if (game.div_game) {
@@ -986,10 +1068,7 @@ function gameCard(game, rank) {
   const finalScore = completedScore(game.game_id);
   const callGrades = finalScore
     ? Object.fromEntries(
-        ["ml", "spread", "total"].map((key) => [
-          key,
-          gradeCall(key, market?.markets?.[key], finalScore),
-        ])
+        ["ml", "spread", "total"].map((key) => [key, gradeFor(game, key)])
       )
     : {};
   if (finalScore) {
@@ -1155,40 +1234,48 @@ function gameCard(game, rank) {
     }
   }
 
-  const buttons = el('div', 'pick-buttons');
-  [
-    { side: 'away', team: game.away_team },
-    { side: 'home', team: game.home_team },
-  ].forEach(({ side, team }) => {
-    const btn = el('button', 'pick-btn', `Pick ${teamAbbr(team)}`);
-    btn.type = 'button';
-    btn.title = `${teamAbbr(team)} to win outright`;
-    btn.setAttribute('aria-pressed', String(state.picks[game.game_id] === side));
-    if (state.picks[game.game_id] === side) btn.classList.add('selected');
-    btn.addEventListener('click', () => setPick(game.game_id, side));
-    buttons.appendChild(btn);
-  });
-  card.appendChild(buttons);
-  card.appendChild(el('div', 'card-hint', 'View players →'));
+  const hasPlayers = (state.players || []).some((p) => p.game_id === game.game_id);
+  const isFinal = Boolean(game.final || completedScore(game.game_id));
+  if (!isFinal) {
+    const buttons = el('div', 'pick-buttons');
+    [
+      { side: 'away', team: game.away_team },
+      { side: 'home', team: game.home_team },
+    ].forEach(({ side, team }) => {
+      const btn = el('button', 'pick-btn', `Pick ${teamAbbr(team)}`);
+      btn.type = 'button';
+      btn.title = `${teamAbbr(team)} to win outright`;
+      btn.setAttribute('aria-pressed', String(state.picks[game.game_id] === side));
+      if (state.picks[game.game_id] === side) btn.classList.add('selected');
+      btn.addEventListener('click', () => setPick(game.game_id, side));
+      buttons.appendChild(btn);
+    });
+    card.appendChild(buttons);
+  }
+  if (!isFinal || hasPlayers) {
+    card.appendChild(el('div', 'card-hint', 'View players →'));
+  }
 
-  card.classList.add('clickable');
-  card.tabIndex = 0;
-  card.setAttribute('role', 'link');
-  card.setAttribute(
-    'aria-label',
-    `View players in ${teamAbbr(game.away_team)} at ${teamAbbr(game.home_team)}`
-  );
-  const openPlayers = () => openGamePlayers(game.game_id);
-  card.addEventListener('click', (event) => {
-    if (event.target.closest('button, a, select, input, label, details, summary')) return;
-    openPlayers();
-  });
-  card.addEventListener('keydown', (event) => {
-    if (event.key !== 'Enter' && event.key !== ' ') return;
-    if (event.target.closest('button, a, select, input, label')) return;
-    event.preventDefault();
-    openPlayers();
-  });
+  if (!isFinal || hasPlayers) {
+    card.classList.add('clickable');
+    card.tabIndex = 0;
+    card.setAttribute('role', 'link');
+    card.setAttribute(
+      'aria-label',
+      `View players in ${teamAbbr(game.away_team)} at ${teamAbbr(game.home_team)}`
+    );
+    const openPlayers = () => openGamePlayers(game.game_id);
+    card.addEventListener('click', (event) => {
+      if (event.target.closest('button, a, select, input, label, details, summary')) return;
+      openPlayers();
+    });
+    card.addEventListener('keydown', (event) => {
+      if (event.key !== 'Enter' && event.key !== ' ') return;
+      if (event.target.closest('button, a, select, input, label')) return;
+      event.preventDefault();
+      openPlayers();
+    });
+  }
 
   return card;
 }
@@ -1281,7 +1368,33 @@ function filteredGames() {
   const team = ($('#games-team-filter')?.value || '').trim();
   const sort = $('#games-sort')?.value || 'kickoff';
 
-  let list = state.games.filter((g) => {
+  let list;
+  if (state.gamesView === 'results') {
+    list = (state.resultGames || []).filter((g) => {
+      const weekOk = week === 'all' || String(g.week) === week;
+      const teamOk = !team || g.home_team === team || g.away_team === team;
+      return weekOk && teamOk;
+    });
+    // newest first by gameday/gametime/kickoff, ties by game_id
+    list.sort((a, b) => {
+      const ak = `${a.gameday || ''}${a.gametime || ''}${a.kickoff || ''}`;
+      const bk = `${b.gameday || ''}${b.gametime || ''}${b.kickoff || ''}`;
+      if (sort === 'won' || sort === 'missed') {
+        const wanted = sort === 'won' ? 'win' : 'loss';
+        const count = (g) =>
+          ['ml', 'spread', 'total'].filter((key) => gradeFor(g, key) === wanted).length;
+        const am = count(a);
+        const bm = count(b);
+        if (bm !== am) return bm - am;
+      }
+      const cmp = bk.localeCompare(ak);
+      if (cmp !== 0) return cmp;
+      return String(a.game_id || '').localeCompare(String(b.game_id || ''));
+    });
+    return list;
+  }
+
+  list = state.games.filter((g) => {
     const weekOk = week === 'all' || String(g.week) === week;
     const teamOk = !team || g.home_team === team || g.away_team === team;
     return weekOk && teamOk;
@@ -1324,6 +1437,56 @@ function renderGameStats(list) {
   const row = $('#games-stats');
   if (!row) return;
   clear(row);
+
+  if (state.gamesView === 'results') {
+    let callsTotal = 0;
+    let callsWon = 0;
+    let pushes = 0;
+    list.forEach((g) => {
+      ['ml', 'spread', 'total'].forEach((key) => {
+        const gr = gradeFor(g, key);
+        if (gr === 'win' || gr === 'loss' || gr === 'push') callsTotal += 1;
+        if (gr === 'win') callsWon += 1;
+        if (gr === 'push') pushes += 1;
+      });
+    });
+    const decided = callsTotal - pushes;
+    const winRate = decided ? (callsWon / decided) * 100 : null;
+    row.appendChild(
+      statTile({
+        label: 'Games graded',
+        value: list.length,
+        sub: 'in current filter',
+        title: 'Graded games in the current filter.',
+      })
+    );
+    row.appendChild(
+      statTile({
+        label: 'Calls won',
+        value: `${callsWon}/${callsTotal}`,
+        sub: 'winning model calls',
+        cls: callsWon > 0 ? 'good' : '',
+        title: 'Model calls graded as wins out of all graded calls.',
+      })
+    );
+    row.appendChild(
+      statTile({
+        label: 'Win rate',
+        value: winRate !== null ? `${winRate.toFixed(1)}%` : '—',
+        sub: `${decided} decided`,
+        title: 'Win rate on decided calls (excluding pushes).',
+      })
+    );
+    row.appendChild(
+      statTile({
+        label: 'Pushes',
+        value: pushes,
+        sub: 'pushed calls',
+        title: 'Calls that pushed.',
+      })
+    );
+    return;
+  }
 
   const ranked = list
     .map((game) => ({ game, market: state.marketById.get(game.game_id) }))
@@ -1474,15 +1637,30 @@ function renderGames() {
 
   const count = $('#games-count');
   if (count) {
-    count.textContent = `${list.length} ${view === 'edges' ? 'priced game' : 'game'}${
-      list.length === 1 ? '' : 's'
-    }`;
+    if (view === 'results') {
+      count.textContent = `${list.length} graded game${list.length === 1 ? '' : 's'}`;
+    } else {
+      count.textContent = `${list.length} ${view === 'edges' ? 'priced game' : 'game'}${
+        list.length === 1 ? '' : 's'
+      }`;
+    }
   }
 
   const title = $('#games-title');
+  const sub = $('#games-sub');
+  if (sub) {
+    sub.textContent =
+      view === 'results'
+        ? 'Archived model picks graded against the final score. ✓ correct, ✗ missed, = push. Tracking persists after a game leaves the schedule.'
+        : view === 'edges'
+        ? 'Every priced game ranked by the model’s edge against vig-free market probabilities, with the best decimal price for each pick.'
+        : 'Win probability, model spread and total for every remaining game, with the model’s edge on each market. Click any card to see the players in that game.';
+  }
   const week = $('#games-week-filter')?.value || 'all';
   if (title) {
-    if (view === 'edges') {
+    if (view === 'results') {
+      title.textContent = 'Results · graded model calls';
+    } else if (view === 'edges') {
       title.textContent =
         week === 'all' ? 'Model edges · all priced games' : `Model edges · Week ${week}`;
     } else {
@@ -1494,6 +1672,16 @@ function renderGames() {
 
   clear(container);
   if (!list.length) {
+    if (view === 'results') {
+      container.appendChild(
+        emptyState({
+          icon: '📋',
+          title: 'No graded games yet',
+          message: 'Calls are archived before kickoff and graded after the final whistle.',
+        })
+      );
+      return;
+    }
     container.appendChild(
       view === 'edges'
         ? emptyState({
@@ -2423,6 +2611,11 @@ const SORT_OPTIONS = {
     ['ev', 'Best price (EV)'],
     ['kickoff', 'Kickoff order'],
   ],
+  results: [
+    ['recent', 'Most recent'],
+    ['won', 'Most calls won'],
+    ['missed', 'Most calls missed'],
+  ],
 };
 
 function rebuildGamesSort() {
@@ -2450,6 +2643,57 @@ function setGamesView(view) {
   rebuildGamesSort();
   const sortSelect = $('#games-sort');
   if (sortSelect) sortSelect.value = (SORT_OPTIONS[view] || SORT_OPTIONS.schedule)[0][0];
+
+  const weekSelect = $('#games-week-filter');
+  if (view === 'results') {
+    if (state.weekFilterBeforeResults === null) {
+      state.weekFilterBeforeResults = weekSelect ? weekSelect.value : 'all';
+    }
+    const weeks = [...new Set((state.resultGames || []).map((g) => g.week))]
+      .filter((w) => w !== undefined && w !== null)
+      .sort((a, b) => Number(a) - Number(b));
+    if (weekSelect) {
+      weekSelect.innerHTML = '';
+      const allOpt = document.createElement('option');
+      allOpt.value = 'all';
+      allOpt.textContent = 'All results';
+      weekSelect.appendChild(allOpt);
+      weeks.forEach((w) => {
+        const opt = document.createElement('option');
+        opt.value = String(w);
+        opt.textContent = `Week ${w}`;
+        weekSelect.appendChild(opt);
+      });
+      weekSelect.value = 'all';
+    }
+  } else {
+    // restore upcoming-week options
+    const gameWeeks = [...new Set(state.games.map((g) => g.week))]
+      .filter((w) => w !== undefined && w !== null)
+      .sort((a, b) => Number(a) - Number(b));
+    if (weekSelect) {
+      weekSelect.innerHTML = '';
+      const allOpt = document.createElement('option');
+      allOpt.value = 'all';
+      allOpt.textContent = 'All weeks';
+      weekSelect.appendChild(allOpt);
+      gameWeeks.forEach((w) => {
+        const opt = document.createElement('option');
+        opt.value = String(w);
+        opt.textContent = `Week ${w}`;
+        weekSelect.appendChild(opt);
+      });
+      const saved = state.weekFilterBeforeResults;
+      if (saved && [...weekSelect.options].some((o) => o.value === saved)) {
+        weekSelect.value = saved;
+      } else if (gameWeeks.length) {
+        weekSelect.value = String(gameWeeks[0]);
+      } else {
+        weekSelect.value = 'all';
+      }
+    }
+    state.weekFilterBeforeResults = null;
+  }
 
   if (view === 'edges') {
     const oddsWeeks = [...new Set((state.market?.games || []).map((g) => g.week))]
@@ -2624,8 +2868,9 @@ async function fetchReport(name) {
   return res.json();
 }
 
-function populateSelect(select, values, label, format = (v) => `Week ${v}`) {
-  if (!select || select.options.length > 1) return;
+function populateSelect(select, values, label, format = (v) => `Week ${v}`, force = false) {
+  if (!select) return;
+  if (!force && select.options.length > 1) return;
   values.forEach((value) => {
     const opt = document.createElement('option');
     opt.value = String(value);
@@ -2738,7 +2983,7 @@ async function loadAll() {
   setupFilters();
 
   try {
-    const [games, players, playoffs, market, futures, explanations, meta] = await Promise.all([
+    const [games, players, playoffs, market, futures, explanations, meta, gamePicks] = await Promise.all([
       loadGames(),
       fetchJSON('players_week.json'),
       fetchJSON('playoffs.json'),
@@ -2746,6 +2991,7 @@ async function loadAll() {
       fetchReport('futures_comparison.json').catch(() => null),
       fetchReport('model_explanations.json').catch(() => null),
       fetchJSON('meta.json').catch(() => null),
+      fetchJSON('game_picks.json').catch(() => ({ games: [] })),
     ]);
 
     state.games = games || [];
@@ -2762,6 +3008,15 @@ async function loadAll() {
     );
     state.marketById = new Map((market?.games || []).map((g) => [g.game_id, g]));
     state.gamesById = new Map(state.games.map((g) => [g.game_id, g]));
+    const archivedGames = gamePicks?.games || [];
+    state.pickById = new Map(archivedGames.map((g) => [g.game_id, g]));
+    state.resultGames = archivedGames.filter((g) => g && g.final && g.grades);
+    // Extend gamesById with archived entries so drilldown/picks resolve.
+    archivedGames.forEach((g) => {
+      if (g && g.game_id && !state.gamesById.has(g.game_id)) {
+        state.gamesById.set(g.game_id, g);
+      }
+    });
     populateTeamFilters();
     populateGameFilters();
     applyMeta(meta);
@@ -2804,16 +3059,26 @@ async function loadAll() {
   } catch (err) {
     console.error(err);
     const container = $('#games-list');
+    const offline = navigator.onLine === false;
     if (container) {
       container.innerHTML = '';
       container.appendChild(
-        emptyState({
-          icon: '⚠️',
-          title: 'Could not load predictions',
-          message: 'The data pipeline may still be running. Refresh in a few minutes.',
-          actionLabel: 'Retry',
-          onAction: () => window.location.reload(),
-        })
+        emptyState(
+          offline
+            ? {
+                icon: '📡',
+                title: 'You’re offline',
+                message:
+                  'The app is installed on this device. Predictions and live scores will load when you reconnect.',
+              }
+            : {
+                icon: '⚠️',
+                title: 'Could not load predictions',
+                message: 'The data pipeline may still be running. Refresh in a few minutes.',
+                actionLabel: 'Retry',
+                onAction: () => window.location.reload(),
+              }
+        )
       );
     }
   }

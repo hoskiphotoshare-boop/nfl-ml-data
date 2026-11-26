@@ -5,14 +5,21 @@ One primary call per game is snapshotted from the best available market edge
 before kickoff. Closing prices/lines are refreshed while the call is open, and
 the call is graded once final scores are available.
 
+Also archives every priced game's three model picks (ml/spread/total) into
+predictions/game_picks.json so grades stay durable after a game leaves the
+upcoming list.
+
 Outputs:
   predictions/calls_history.json
+  predictions/game_picks.json
   reports/calls_scoreboard.json
 """
 
 from __future__ import annotations
 
+import copy
 import json
+import math
 import os
 from datetime import datetime, timezone
 
@@ -23,6 +30,7 @@ UPCOMING = "predictions/upcoming_games.json"
 SCHEDULES = "data/schedules.parquet"
 CALLS = "predictions/calls_history.json"
 SCOREBOARD = "reports/calls_scoreboard.json"
+PICKS = "predictions/game_picks.json"
 MIN_EDGE = 0.02
 
 
@@ -57,6 +65,45 @@ def side_matches(call: dict, entry: dict) -> bool:
     if call["market"] == "total":
         return entry.get("side") == call["side"]
     return entry.get("side") == call["side"] and entry.get("team") == call.get("team")
+
+
+def grade_market(market, side, line, home, away):
+    """Return 'win' | 'loss' | 'push' | None for a market pick.
+
+    Shared by the call ledger and the archived pick grading so rules cannot
+    diverge. Moneyline ties are pushes; spread uses the line; total uses
+    over/under; a missing line yields None.
+    """
+    if market == "ml":
+        if home == away:
+            return "push"
+        picked_home = side == "home"
+        home_won = home > away
+        return "win" if picked_home == home_won else "loss"
+    if line is None:
+        return None
+    try:
+        line_value = float(line)
+    except (TypeError, ValueError):
+        return None
+    if not math.isfinite(line_value):
+        return None
+    if market == "spread":
+        team_score = home if side == "home" else away
+        opp_score = away if side == "home" else home
+        margin = team_score - opp_score + line_value
+        if margin == 0:
+            return "push"
+        return "win" if margin > 0 else "loss"
+    if market == "total":
+        total = home + away
+        if total == line_value:
+            return "push"
+        over = total > line_value
+        if side == "over":
+            return "win" if over else "loss"
+        return "win" if not over else "loss"
+    return None
 
 
 def snapshot_calls(games: list[dict], existing: dict, now: datetime) -> int:
@@ -155,10 +202,13 @@ def final_scores() -> dict[tuple, dict]:
     }
 
 
-def grade_calls(existing: dict, now: datetime) -> int:
-    scores = final_scores()
+def grade_calls(existing: dict, now: datetime, scores=None) -> int:
+    if scores is None:
+        scores = final_scores()
     graded = 0
     for call in existing.values():
+        if not isinstance(call, dict):
+            continue
         if call.get("status") != "open":
             continue
         key = (
@@ -173,26 +223,9 @@ def grade_calls(existing: dict, now: datetime) -> int:
         home_score = int(row["home_score"])
         away_score = int(row["away_score"])
         total = home_score + away_score
-        result = None
-        if call["market"] == "ml":
-            team_score = home_score if call["side"] == "home" else away_score
-            opp_score = away_score if call["side"] == "home" else home_score
-            result = "push" if team_score == opp_score else (
-                "win" if team_score > opp_score else "loss"
-            )
-        elif call["market"] == "spread":
-            team_score = home_score if call["side"] == "home" else away_score
-            opp_score = away_score if call["side"] == "home" else home_score
-            margin = team_score - opp_score + float(call.get("line") or 0)
-            result = "push" if margin == 0 else ("win" if margin > 0 else "loss")
-        elif call["market"] == "total":
-            line = float(call.get("line") or 0)
-            if total == line:
-                result = "push"
-            elif call["side"] == "over":
-                result = "win" if total > line else "loss"
-            else:
-                result = "win" if total < line else "loss"
+        result = grade_market(
+            call.get("market"), call.get("side"), call.get("line"), home_score, away_score
+        )
         if result is None:
             continue
         price = float(call.get("price") or 0)
@@ -202,6 +235,8 @@ def grade_calls(existing: dict, now: datetime) -> int:
         )
         call["status"] = "graded"
         call["graded_at"] = now.isoformat()
+        call["final_home_score"] = home_score
+        call["final_away_score"] = away_score
         graded += 1
     return graded
 
@@ -264,13 +299,116 @@ def summarize(calls: list[dict]) -> dict:
     }
 
 
+def _copy(value):
+    return copy.deepcopy(value)
+
+
+def _upcoming_source(upcoming_by_id, game_id):
+    source = upcoming_by_id.get(game_id)
+    return source if isinstance(source, dict) else None
+
+
+def build_pick_entry(game, upcoming_by_id, now, odds_fetched_at):
+    source = _upcoming_source(upcoming_by_id, game.get("game_id"))
+    season = game.get("season")
+    if source and source.get("season") is not None:
+        season = source.get("season")
+    week = game.get("week")
+    if source and source.get("week") is not None:
+        week = source.get("week")
+    away_team = game.get("away_team")
+    if source and source.get("away_team"):
+        away_team = source.get("away_team")
+    home_team = game.get("home_team")
+    if source and source.get("home_team"):
+        home_team = source.get("home_team")
+    commence = game.get("commence_time")
+    if source and source.get("commence_time"):
+        commence = source.get("commence_time")
+
+    if source:
+        gameday = source.get("gameday")
+        gametime = source.get("gametime")
+    else:
+        gameday = None
+        gametime = None
+    if gameday is None and commence:
+        gameday = str(commence)[:10]
+    if gametime is None and commence and len(str(commence)) >= 16:
+        gametime = str(commence)[11:16]
+
+    if source and source.get("home_win_prob") is not None:
+        home_win_prob = source.get("home_win_prob")
+    elif game.get("model_home_win_prob") is not None:
+        home_win_prob = game.get("model_home_win_prob")
+    else:
+        home_win_prob = None
+
+    if source and source.get("spread") is not None:
+        spread = source.get("spread")
+    elif game.get("model_spread") is not None:
+        spread = game.get("model_spread")
+    else:
+        spread = None
+
+    if source and source.get("total") is not None:
+        total = source.get("total")
+    elif game.get("model_total") is not None:
+        total = game.get("model_total")
+    else:
+        total = None
+
+    def _src(key):
+        return source.get(key) if source else None
+
+    entry = {
+        "game_id": game.get("game_id"),
+        "season": season,
+        "week": week,
+        "away_team": away_team,
+        "home_team": home_team,
+        "gameday": gameday,
+        "gametime": gametime,
+        "kickoff": commence,
+        "home_win_prob": home_win_prob,
+        "spread": spread,
+        "total": total,
+        "home_record": _src("home_record"),
+        "away_record": _src("away_record"),
+        "home_form": _src("home_form"),
+        "away_form": _src("away_form"),
+        "stadium": _src("stadium"),
+        "roof": _src("roof"),
+        "surface": _src("surface"),
+        "location": _src("location"),
+        "div_game": _src("div_game"),
+        "temp": _src("temp"),
+        "wind": _src("wind"),
+        "markets": _copy(game.get("markets") or {}),
+        "source_fetched_at": odds_fetched_at,
+        "snapshot_at": now.isoformat(),
+        "final": None,
+        "grades": None,
+        "graded_at": None,
+    }
+    return entry
+
+
 def main() -> None:
-    games = load(MARKETS, {}).get("games", [])
+    market_doc = load(MARKETS, {})
+    if not isinstance(market_doc, dict):
+        market_doc = {}
+    games = market_doc.get("games", [])
+    if not isinstance(games, list):
+        games = []
     upcoming = load(UPCOMING, [])
-    upcoming_by_id = {game.get("game_id"): game for game in upcoming}
+    if not isinstance(upcoming, list):
+        upcoming = []
+    upcoming_by_id = {g.get("game_id"): g for g in upcoming if isinstance(g, dict)}
+
     # Ensure the market report carries kickoff times where possible.
     for game in games:
-        if not game.get("commence_time"):
+        if isinstance(game, dict) and not game.get("commence_time"):
             source = upcoming_by_id.get(game.get("game_id"))
             if source:
                 game["commence_time"] = source.get("gameday")
@@ -278,29 +416,130 @@ def main() -> None:
     history = load(CALLS, [])
     if not isinstance(history, list):
         history = []
-    existing = {call.get("call_id"): call for call in history}
+    existing_calls = {call.get("call_id"): call for call in history if isinstance(call, dict)}
     now = datetime.now(timezone.utc)
 
-    added = snapshot_calls(games, existing, now)
-    updated = update_closing(games, existing, now)
-    graded = grade_calls(existing, now)
+    added_calls = snapshot_calls(games, existing_calls, now)
+    updated_calls = update_closing(games, existing_calls, now)
+    scores = final_scores()
+    graded_calls = grade_calls(existing_calls, now, scores)
 
-    calls = sorted(
-        existing.values(),
-        key=lambda call: (call.get("kickoff") or "", call.get("call_id") or ""),
-    )
+    # Archive picks.
+    picks_doc = load(PICKS, {"version": 1, "generated_at": None, "games": []})
+    if not isinstance(picks_doc, dict):
+        picks_doc = {"version": 1, "generated_at": None, "games": []}
+    if not isinstance(picks_doc.get("games"), list):
+        picks_doc["games"] = []
+    existing_picks = {}
+    for g in picks_doc["games"]:
+        if isinstance(g, dict) and g.get("game_id"):
+            existing_picks[g["game_id"]] = g
+
+    new_archived = 0
+    for game in games:
+        if not isinstance(game, dict):
+            continue
+        game_id = game.get("game_id")
+        if not game_id:
+            continue
+        markets = game.get("markets")
+        if not isinstance(markets, dict) or not markets:
+            continue
+
+        pick = existing_picks.get(game_id)
+        if pick is None:
+            pick = build_pick_entry(game, upcoming_by_id, now, market_doc.get("odds_fetched_at"))
+            existing_picks[game_id] = pick
+            new_archived += 1
+        else:
+            if not isinstance(pick.get("markets"), dict):
+                pick["markets"] = {}
+            for key, entry in markets.items():
+                if key not in pick["markets"]:
+                    pick["markets"][key] = _copy(entry)
+
+        season = pick.get("season")
+        week = pick.get("week")
+        away_team = pick.get("away_team")
+        home_team = pick.get("home_team")
+
+        if pick.get("final") is None:
+            key = (int(season or 0), int(week or 0), away_team, home_team)
+            row = scores.get(key)
+            if row:
+                home_score = int(row["home_score"])
+                away_score = int(row["away_score"])
+                pick["final"] = {"home": home_score, "away": away_score}
+                grades = {}
+                for mkey, entry in (pick.get("markets") or {}).items():
+                    grades[mkey] = grade_market(
+                        mkey,
+                        (entry or {}).get("side"),
+                        (entry or {}).get("line"),
+                        home_score,
+                        away_score,
+                    )
+                pick["grades"] = grades
+                pick["graded_at"] = now.isoformat()
+        else:
+            if not isinstance(pick.get("grades"), dict):
+                final = pick.get("final") or {}
+                home_score = int(final.get("home"))
+                away_score = int(final.get("away"))
+                grades = {}
+                for mkey, entry in (pick.get("markets") or {}).items():
+                    grades[mkey] = grade_market(
+                        mkey,
+                        (entry or {}).get("side"),
+                        (entry or {}).get("line"),
+                        home_score,
+                        away_score,
+                    )
+                pick["grades"] = grades
+                if not pick.get("graded_at"):
+                    pick["graded_at"] = now.isoformat()
+
+    all_picks = list(existing_picks.values())
+    seasons = [
+        int(p["season"])
+        for p in all_picks
+        if isinstance(p.get("season"), (int, float))
+    ]
+    for game in games:
+        if isinstance(game, dict) and isinstance(game.get("season"), (int, float)):
+            seasons.append(int(game["season"]))
+    latest_season = max(seasons, default=datetime.now(timezone.utc).year)
+    allowed_seasons = {latest_season, latest_season - 1}
+    filtered = [p for p in all_picks if p.get("season") in allowed_seasons]
+    filtered.sort(key=lambda p: (p.get("kickoff") or "", p.get("game_id") or ""))
+
+    picks_doc["version"] = 1
+    picks_doc["generated_at"] = now.isoformat()
+    picks_doc["games"] = filtered
+
     os.makedirs("predictions", exist_ok=True)
     os.makedirs("reports", exist_ok=True)
+    with open(PICKS, "w", encoding="utf-8") as handle:
+        json.dump(picks_doc, handle, indent=2)
+
+    calls = sorted(
+        existing_calls.values(),
+        key=lambda call: (call.get("kickoff") or "", call.get("call_id") or ""),
+    )
     with open(CALLS, "w", encoding="utf-8") as handle:
         json.dump(calls, handle, indent=2)
     scoreboard = summarize(calls)
     with open(SCOREBOARD, "w", encoding="utf-8") as handle:
         json.dump(scoreboard, handle, indent=2)
+    graded_total = sum(
+        1 for p in filtered if p.get("final") and isinstance(p.get("grades"), dict)
+    )
     print(
         f"Calls: {scoreboard['calls']} total · {scoreboard['open']} open · "
-        f"{scoreboard['graded']} graded · {added} new · {updated} closing updates · "
-        f"{graded} newly graded"
+        f"{scoreboard['graded']} graded · {added_calls} new · {updated_calls} closing updates · "
+        f"{graded_calls} newly graded"
     )
+    print(f"Picks: {len(filtered)} archived · {graded_total} graded · {new_archived} new")
 
 
 if __name__ == "__main__":
