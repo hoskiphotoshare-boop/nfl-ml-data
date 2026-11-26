@@ -44,10 +44,8 @@
     "roof": null,
     "surface": "matrixturf",
     "div_game": 1,
-    "temp": 52.2,
-    "wind": 12.6,
-    "precip": 0.0,
-    "precip_mm": 0.0
+    "temp": null,
+    "wind": null
   },
   {
     "game_id": "2026_12_KC_BUF",
@@ -70,10 +68,8 @@
     "roof": "outdoors",
     "surface": "a_turf",
     "div_game": 0,
-    "temp": 35.6,
-    "wind": 18.1,
-    "precip": 100.0,
-    "precip_mm": 6.8
+    "temp": null,
+    "wind": null
   },
   {
     "game_id": "2026_12_DEN_PIT",
@@ -96,10 +92,8 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 41.7,
-    "wind": 11.7,
-    "precip": 56.0,
-    "precip_mm": 0.4
+    "temp": null,
+    "wind": null
   },
   {
     "game_id": "2026_12_NO_CIN",
@@ -122,10 +116,8 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 50.6,
-    "wind": 9.4,
-    "precip": 53.0,
-    "precip_mm": 3.2
+    "temp": null,
+    "wind": null
   },
   {
     "game_id": "2026_12_BAL_HOU",
@@ -148,10 +140,8 @@
     "roof": null,
     "surface": "astroturf",
     "div_game": 0,
-    "temp": 67.5,
-    "wind": 15.7,
-    "precip": 1.0,
-    "precip_mm": 0.0
+    "temp": null,
+    "wind": null
   },
   {
     "game_id": "2026_12_NYG_IND",
@@ -174,10 +164,8 @@
     "roof": null,
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 45.5,
-    "wind": 5.1,
-    "precip": 89.0,
-    "precip_mm": 2.7
+    "temp": null,
+    "wind": null
   },
   {
     "game_id": "2026_12_TEN_JAX",
@@ -200,10 +188,8 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": 66.1,
-    "wind": 9.0,
-    "precip": 1.0,
-    "precip_mm": 0.0
+    "temp": null,
+    "wind": null
   },
   {
     "game_id": "2026_12_NYJ_MIA",
@@ -228,7 +214,7 @@
     "div_game": 1,
     "temp": 77.8,
     "wind": 8.8,
-    "precip": 3.0,
+    "precip": 5.0,
     "precip_mm": 0.0
   },
   {
@@ -328,7 +314,7 @@
     "div_game": 1,
     "temp": 64.6,
     "wind": 10.4,
-    "precip": 69.0,
+    "precip": 76.0,
     "precip_mm": 0.0
   },
   {
@@ -354,7 +340,7 @@
     "div_game": 0,
     "temp": 49.9,
     "wind": 14.3,
-    "precip": 96.0,
+    "precip": 98.0,
     "precip_mm": 0.4
   },
   {
@@ -380,7 +366,7 @@
     "div_game": 1,
     "temp": 64.2,
     "wind": 7.4,
-    "precip": 38.0,
+    "precip": 40.0,
     "precip_mm": 0.6
   },
   {
@@ -430,7 +416,7 @@
     "div_game": 0,
     "temp": 62.8,
     "wind": 9.7,
-    "precip": 10.0,
+    "precip": 15.0,
     "precip_mm": 0.0
   },
   {
@@ -456,7 +442,7 @@
     "div_game": 0,
     "temp": 46.9,
     "wind": 8.4,
-    "precip": 12.0,
+    "precip": 8.0,
     "precip_mm": 0.0
   },
   {
@@ -482,7 +468,7 @@
     "div_game": 1,
     "temp": 45.5,
     "wind": 14.8,
-    "precip": 10.0,
+    "precip": 7.0,
     "precip_mm": 0.0
   },
   {
@@ -532,7 +518,7 @@
     "div_game": 0,
     "temp": 57.0,
     "wind": 16.2,
-    "precip": 20.0,
+    "precip": 19.0,
     "precip_mm": 0.0
   },
   {
@@ -558,7 +544,7 @@
     "div_game": 0,
     "temp": 83.2,
     "wind": 6.8,
-    "precip": 6.0,
+    "precip": 7.0,
     "precip_mm": 0.1
   },
   {
@@ -584,7 +570,7 @@
     "div_game": 0,
     "temp": 54.2,
     "wind": 6.0,
-    "precip": 18.0,
+    "precip": 16.0,
     "precip_mm": 0.0
   },
   {
@@ -610,7 +596,7 @@
     "div_game": 0,
     "temp": 44.2,
     "wind": 15.4,
-    "precip": 15.0,
+    "precip": 18.0,
     "precip_mm": 0.6
   },
   {
@@ -636,7 +622,7 @@
     "div_game": 0,
     "temp": 48.2,
     "wind": 2.1,
-    "precip": 16.0,
+    "precip": 12.0,
     "precip_mm": 0.0
   },
   {
@@ -686,7 +672,7 @@
     "div_game": 1,
     "temp": 43.2,
     "wind": 18.3,
-    "precip": 17.0,
+    "precip": 18.0,
     "precip_mm": 0.1
   },
   {
@@ -712,7 +698,7 @@
     "div_game": 0,
     "temp": 42.6,
     "wind": 3.7,
-    "precip": 10.0,
+    "precip": 8.0,
     "precip_mm": 0.0
   },
   {
@@ -738,7 +724,7 @@
     "div_game": 0,
     "temp": 40.8,
     "wind": 4.1,
-    "precip": 33.0,
+    "precip": 25.0,
     "precip_mm": 0.0
   },
   {
@@ -764,7 +750,7 @@
     "div_game": 0,
     "temp": 36.2,
     "wind": 8.9,
-    "precip": 17.0,
+    "precip": 13.0,
     "precip_mm": 0.0
   },
   {
@@ -852,7 +838,7 @@
     "home_form": "WWWWW",
     "away_form": "WLLLL",
     "spread": 12.1,
-    "total": 56.3,
+    "total": 57.3,
     "gameday": "2026-12-13",
     "gametime": "13:00",
     "location": "Home",
@@ -1788,7 +1774,7 @@
     "home_form": "LWLLL",
     "away_form": "WLLLL",
     "spread": -0.8,
-    "total": 51.5,
+    "total": 52.5,
     "gameday": "2026-12-27",
     "gametime": "16:05",
     "location": "Home",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T18:36:40.204306+00:00",
+  "generated_at": "2026-11-26T21:10:21.203988+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -31,8 +31,8 @@
     "max_abs_edge": 0.2602
   },
   "futures": {
-    "mean_abs_edge": 0.0076,
-    "max_abs_edge": 0.0379,
+    "mean_abs_edge": 0.0082,
+    "max_abs_edge": 0.0393,
     "teams_matched": 32
   },
   "calls": {
@@ -96,7 +96,7 @@
     "active": 250
   },
   "weather": {
-    "games_with_forecast": 24,
+    "games_with_forecast": 17,
     "games": 108
   },
   "injuries": {
