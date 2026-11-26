@@ -33,6 +33,7 @@ var NFL_SLOTS = [
   { id: "odds_sun_1430", days: [7], hour: 14, minute: 30, workflow: "odds-refresh.yml", inputs: { force: false } },
   { id: "odds_sun_1515", days: [7], hour: 15, minute: 15, workflow: "odds-refresh.yml", inputs: { force: false } },
   { id: "odds_sun_1950", days: [7], hour: 19, minute: 50, workflow: "odds-refresh.yml", inputs: { force: false } },
+  { id: "odds_thu_1200", days: [4], hour: 12, minute: 0, workflow: "odds-refresh.yml", inputs: { force: false } },
   { id: "odds_thu_1845", days: [4], hour: 18, minute: 45, workflow: "odds-refresh.yml", inputs: { force: false } },
   { id: "odds_mon_1845", days: [1], hour: 18, minute: 45, workflow: "odds-refresh.yml", inputs: { force: false } }
 ];

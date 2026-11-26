@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T21:10:21.203988+00:00",
+  "generated_at": "2026-11-26T22:30:04.801288+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -15,11 +15,9 @@
     "n": 1298
   },
   "market": {
-    "games": 27,
-    "outliers": 8,
+    "games": 25,
+    "outliers": 6,
     "outlier_games": [
-      "2026_12_PHI_DAL",
-      "2026_12_KC_BUF",
       "2026_12_TEN_JAX",
       "2026_12_ATL_MIN",
       "2026_12_WAS_ARI",
@@ -27,8 +25,9 @@
       "2026_13_HOU_PIT",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.0874,
-    "max_abs_edge": 0.2602
+    "mean_abs_edge": 0.0875,
+    "max_abs_edge": 0.2602,
+    "blend_conflicts": 0
   },
   "futures": {
     "mean_abs_edge": 0.0082,
@@ -36,16 +35,37 @@
     "teams_matched": 32
   },
   "calls": {
-    "graded": 0,
-    "open": 29,
+    "graded": 1,
+    "open": 28,
     "wins": 0,
-    "losses": 0,
+    "losses": 1,
     "pushes": 0,
-    "win_rate": null,
-    "roi": null,
-    "profit": 0,
-    "by_market": {},
-    "by_edge": {}
+    "win_rate": 0.0,
+    "roi": -1.0,
+    "profit": -1.0,
+    "mean_edge_delta": -0.0103,
+    "by_market": {
+      "spread": {
+        "n": 1,
+        "wins": 0,
+        "losses": 1,
+        "pushes": 0,
+        "profit": -1.0,
+        "roi": -1.0,
+        "win_rate": 0.0
+      }
+    },
+    "by_edge": {
+      "10%+": {
+        "n": 1,
+        "wins": 0,
+        "losses": 1,
+        "pushes": 0,
+        "profit": -1.0,
+        "roi": -1.0,
+        "win_rate": 0.0
+      }
+    }
   },
   "score_models": {
     "margin": 13.381,
@@ -96,7 +116,7 @@
     "active": 250
   },
   "weather": {
-    "games_with_forecast": 17,
+    "games_with_forecast": 0,
     "games": 108
   },
   "injuries": {
@@ -108,8 +128,8 @@
       2026
     ],
     "latest_season": 2026,
-    "latest_week": 12,
-    "rows": 27348
+    "latest_week": 11,
+    "rows": 27045
   },
   "odds": {
     "fetched_at": "2026-11-26T18:36:34.533833+00:00",
@@ -135,5 +155,12 @@
       "mean_abs_total_move": 0.467,
       "max_abs_total_move": 2.0
     }
+  },
+  "integrity": {
+    "market_started": [],
+    "open_calls_past_kickoff_6h": [],
+    "final_picks_ungraded": [],
+    "final_picks_missing_source": [],
+    "blend_conflicts": 0
   }
 }

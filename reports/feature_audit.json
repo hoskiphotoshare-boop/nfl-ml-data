@@ -1,0 +1,78 @@
+{
+  "generated_at": "2026-11-26T22:25:19.272423+00:00",
+  "method": "logistic C=0.03 train 2022-2025, permutation importance on 2026",
+  "baseline_2026": {
+    "log_loss": 0.6135,
+    "accuracy": 0.681,
+    "auc": 0.7266,
+    "n": 163
+  },
+  "features": {
+    "blend_diff_diff": {
+      "mean_delta_log_loss": 0.05052,
+      "std": 0.0142,
+      "coef": 0.0522
+    },
+    "home_blend_diff": {
+      "mean_delta_log_loss": 0.01229,
+      "std": 0.00513,
+      "coef": 0.0226
+    },
+    "home_qb_starts": {
+      "mean_delta_log_loss": 0.01056,
+      "std": 0.00586,
+      "coef": 0.068
+    },
+    "away_qb_starts": {
+      "mean_delta_log_loss": 0.00964,
+      "std": 0.00384,
+      "coef": -0.0556
+    },
+    "away_prior_games": {
+      "mean_delta_log_loss": 0.00554,
+      "std": 0.0047,
+      "coef": 0.0467
+    },
+    "home_prior_games": {
+      "mean_delta_log_loss": 0.0045,
+      "std": 0.00396,
+      "coef": -0.0458
+    },
+    "home_passing_epa": {
+      "mean_delta_log_loss": 0.00283,
+      "std": 0.00339,
+      "coef": 0.0243
+    },
+    "home_inj_impact": {
+      "mean_delta_log_loss": 0.00232,
+      "std": 0.00256,
+      "coef": -0.0057
+    },
+    "away_passing_epa": {
+      "mean_delta_log_loss": 0.00185,
+      "std": 0.0024,
+      "coef": -0.0295
+    },
+    "away_blend_diff": {
+      "mean_delta_log_loss": 0.00167,
+      "std": 0.00535,
+      "coef": -0.0296
+    },
+    "away_inj_impact": {
+      "mean_delta_log_loss": 0.00049,
+      "std": 0.00206,
+      "coef": 0.0034
+    },
+    "away_win_pct": {
+      "mean_delta_log_loss": -0.00015,
+      "std": 0.00127,
+      "coef": -0.1291
+    },
+    "home_win_pct": {
+      "mean_delta_log_loss": -0.00212,
+      "std": 0.00097,
+      "coef": -0.0923
+    }
+  },
+  "note": "Positive mean delta = shuffling the feature hurts log loss, i.e. the model used it. Diagnostic only."
+}

@@ -1,0 +1,115 @@
+{
+  "generated_at": "2026-11-26T22:24:35.846828+00:00",
+  "study": "walk-forward match-model ablation: injury practice participation",
+  "features": [
+    "home_practice_dnp_rate",
+    "away_practice_dnp_rate",
+    "practice_dnp_diff",
+    "home_practice_out_rate",
+    "away_practice_out_rate",
+    "practice_out_diff",
+    "home_practice_qb_dnp",
+    "away_practice_qb_dnp",
+    "home_practice_ol_dnp",
+    "away_practice_ol_dnp",
+    "home_practice_def_dnp",
+    "away_practice_def_dnp",
+    "home_practice_missing",
+    "away_practice_missing"
+  ],
+  "coverage": {
+    "team_weeks": 2597,
+    "games": 7424,
+    "home_missing_rate": 0.8264,
+    "away_missing_rate": 0.8262,
+    "seasons": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ]
+  },
+  "baseline": {
+    "n": 1017,
+    "log_loss": 0.6306,
+    "accuracy": 0.6608,
+    "auc": 0.7046
+  },
+  "with_practice": {
+    "n": 1017,
+    "log_loss": 0.6284,
+    "accuracy": 0.6716,
+    "auc": 0.7082
+  },
+  "delta": {
+    "log_loss": 0.0022,
+    "accuracy": 0.0108,
+    "auc": 0.0036
+  },
+  "accepted": false,
+  "gate": "accept only if log loss improves by >= 0.005 and accuracy does not drop by > 0.002",
+  "per_season": {
+    "baseline": {
+      "2023": {
+        "n": 285,
+        "log_loss": 0.6807,
+        "accuracy": 0.6351,
+        "auc": 0.648,
+        "season": 2023
+      },
+      "2024": {
+        "n": 285,
+        "log_loss": 0.5861,
+        "accuracy": 0.6947,
+        "auc": 0.7573,
+        "season": 2024
+      },
+      "2025": {
+        "n": 284,
+        "log_loss": 0.6285,
+        "accuracy": 0.6514,
+        "auc": 0.7062,
+        "season": 2025
+      },
+      "2026": {
+        "n": 163,
+        "log_loss": 0.6246,
+        "accuracy": 0.6626,
+        "auc": 0.7089,
+        "season": 2026
+      }
+    },
+    "with_practice": {
+      "2023": {
+        "n": 285,
+        "log_loss": 0.6788,
+        "accuracy": 0.6421,
+        "auc": 0.6521,
+        "season": 2023
+      },
+      "2024": {
+        "n": 285,
+        "log_loss": 0.5806,
+        "accuracy": 0.7158,
+        "auc": 0.7623,
+        "season": 2024
+      },
+      "2025": {
+        "n": 284,
+        "log_loss": 0.6317,
+        "accuracy": 0.6479,
+        "auc": 0.7044,
+        "season": 2025
+      },
+      "2026": {
+        "n": 163,
+        "log_loss": 0.6184,
+        "accuracy": 0.6871,
+        "auc": 0.7185,
+        "season": 2026
+      }
+    }
+  },
+  "note": "Research only. The shipped match model is unchanged; this report gates promotion."
+}

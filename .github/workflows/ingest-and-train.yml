@@ -105,6 +105,11 @@ jobs:
       # Feature-group ablation study.
       - run: python scripts/feature_ablation.py || true
 
+      # Research diagnostics: practice participation, total errors, feature use.
+      - run: python scripts/ablate_practice.py || true
+      - run: python scripts/audit_total_errors.py || true
+      - run: python scripts/audit_feature_stability.py || true
+
       - run: python scripts/build_health_report.py || true
       - run: python scripts/build_model_scorecard.py || true
 

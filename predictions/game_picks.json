@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-26T21:10:14.716304+00:00",
+  "generated_at": "2026-11-26T22:21:49.984292+00:00",
   "games": [
     {
       "game_id": "2026_12_GB_LA",
@@ -126,9 +126,17 @@
       },
       "source_fetched_at": "2026-11-25T23:11:58.681470+00:00",
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
-      "final": null,
-      "grades": null,
-      "graded_at": null
+      "final": {
+        "home": 35,
+        "away": 39
+      },
+      "grades": {
+        "ml": "loss",
+        "spread": "loss",
+        "total": "loss"
+      },
+      "graded_at": "2026-11-26T22:21:38.627994+00:00",
+      "final_source": "espn"
     },
     {
       "game_id": "2026_12_PHI_DAL",
@@ -256,7 +264,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.697,
+        "spread": 6.9,
+        "total": 49.9,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_DEN_PIT",
@@ -320,7 +334,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.458,
+        "spread": -1.4,
+        "total": 38.2,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_ATL_MIN",
@@ -384,7 +404,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.473,
+        "spread": -0.9,
+        "total": 42.9,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_BAL_HOU",
@@ -448,7 +474,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.674,
+        "spread": 6.0,
+        "total": 49.6,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_NO_CIN",
@@ -512,7 +544,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.75,
+        "spread": 9.0,
+        "total": 51.1,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_NYG_IND",
@@ -576,7 +614,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.313,
+        "spread": -6.5,
+        "total": 36.0,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_NYJ_MIA",
@@ -640,7 +684,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.407,
+        "spread": -3.2,
+        "total": 45.0,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_TEN_JAX",
@@ -704,7 +754,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.853,
+        "spread": 14.1,
+        "total": 58.7,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_NE_LAC",
@@ -768,7 +824,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.418,
+        "spread": -2.8,
+        "total": 34.3,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_SEA_SF",
@@ -832,7 +894,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.757,
+        "spread": 9.3,
+        "total": 42.8,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_WAS_ARI",
@@ -896,7 +964,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.344,
+        "spread": -5.4,
+        "total": 50.2,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_LV_CLE",
@@ -960,7 +1034,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.662,
+        "spread": 5.6,
+        "total": 43.0,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_12_CAR_TB",
@@ -1024,7 +1104,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.605,
+        "spread": 3.6,
+        "total": 40.6,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_KC_LA",
@@ -1088,7 +1174,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.595,
+        "spread": 3.2,
+        "total": 47.5,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_CIN_CLE",
@@ -1152,7 +1244,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.371,
+        "spread": -4.4,
+        "total": 41.8,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_DET_ATL",
@@ -1280,7 +1378,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.35,
+        "spread": -5.2,
+        "total": 46.8,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_JAX_CHI",
@@ -1408,7 +1512,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.728,
+        "spread": 8.1,
+        "total": 38.6,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_MIA_DEN",
@@ -1472,7 +1582,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.834,
+        "spread": 13.0,
+        "total": 45.2,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_SF_NYG",
@@ -1536,7 +1652,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.338,
+        "spread": -5.6,
+        "total": 49.2,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_WAS_TEN",
@@ -1600,7 +1722,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.494,
+        "spread": -0.2,
+        "total": 49.9,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_PHI_ARI",
@@ -1664,7 +1792,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.386,
+        "spread": -3.9,
+        "total": 44.5,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_BUF_NE",
@@ -1728,7 +1862,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.251,
+        "spread": -9.0,
+        "total": 41.9,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_CAR_MIN",
@@ -1792,7 +1932,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.548,
+        "spread": 1.6,
+        "total": 45.1,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_HOU_PIT",
@@ -1856,7 +2002,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.554,
+        "spread": 1.8,
+        "total": 38.0,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     },
     {
       "game_id": "2026_13_DAL_SEA",
@@ -1920,7 +2072,13 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "pregame_model": {
+        "home_win_prob": 0.551,
+        "spread": 1.7,
+        "total": 41.2,
+        "at": "2026-11-26T22:21:49.984292+00:00"
+      }
     }
   ]
 }

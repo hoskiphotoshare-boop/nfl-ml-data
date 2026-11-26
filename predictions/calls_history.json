@@ -20,10 +20,13 @@
     "closing_line": 1.5,
     "closing_price": 1.96,
     "closing_at": "2026-11-26T12:01:12.090864+00:00",
-    "status": "open",
-    "result": null,
-    "profit": null,
-    "graded_at": null
+    "status": "graded",
+    "result": "loss",
+    "profit": -1.0,
+    "graded_at": "2026-11-26T22:21:38.627994+00:00",
+    "final_home_score": 35,
+    "final_away_score": 39,
+    "final_source": "espn"
   },
   {
     "call_id": "2026_12_PHI_DAL_best",
@@ -71,11 +74,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 45.5,
     "closing_price": 1.91,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.0937,
+    "closing_model_prob": 0.7289,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.2289,
+    "edge_delta": 0.1352
   },
   {
     "call_id": "2026_12_DEN_PIT_best",
@@ -97,11 +105,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": null,
     "closing_price": 2.94,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1449,
+    "closing_model_prob": 0.464,
+    "closing_market_prob": 0.3326,
+    "closing_edge": 0.1314,
+    "edge_delta": -0.0135
   },
   {
     "call_id": "2026_12_ATL_MIN_best",
@@ -123,11 +136,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": null,
     "closing_price": 3.67,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.2472,
+    "closing_model_prob": 0.527,
+    "closing_market_prob": 0.2668,
+    "closing_edge": 0.2602,
+    "edge_delta": 0.013
   },
   {
     "call_id": "2026_12_BAL_HOU_best",
@@ -149,11 +167,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": null,
     "closing_price": 3.8,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1233,
+    "closing_model_prob": 0.326,
+    "closing_market_prob": 0.2754,
+    "closing_edge": 0.0506,
+    "edge_delta": -0.0727
   },
   {
     "call_id": "2026_12_NO_CIN_best",
@@ -175,11 +198,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": null,
     "closing_price": 5.35,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1025,
+    "closing_model_prob": 0.25,
+    "closing_market_prob": 0.1835,
+    "closing_edge": 0.0665,
+    "edge_delta": -0.036
   },
   {
     "call_id": "2026_12_NYG_IND_best",
@@ -201,11 +229,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 42.5,
     "closing_price": 1.83,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.2123,
+    "closing_model_prob": 0.6794,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.1794,
+    "edge_delta": -0.0329
   },
   {
     "call_id": "2026_12_NYJ_MIA_best",
@@ -227,11 +260,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 39.5,
     "closing_price": 1.85,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1509,
+    "closing_model_prob": 0.6534,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.1534,
+    "edge_delta": 0.0025
   },
   {
     "call_id": "2026_12_TEN_JAX_best",
@@ -253,11 +291,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 49.0,
     "closing_price": 1.93,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1693,
+    "closing_model_prob": 0.7567,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.2567,
+    "edge_delta": 0.0874
   },
   {
     "call_id": "2026_12_NE_LAC_best",
@@ -305,11 +348,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": -2.5,
     "closing_price": 1.83,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.2417,
+    "closing_model_prob": 0.6943,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.1943,
+    "edge_delta": -0.0474
   },
   {
     "call_id": "2026_12_WAS_ARI_best",
@@ -331,11 +379,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 41.5,
     "closing_price": 1.93,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1267,
+    "closing_model_prob": 0.7337,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.2337,
+    "edge_delta": 0.107
   },
   {
     "call_id": "2026_12_LV_CLE_best",
@@ -409,11 +462,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 1.5,
     "closing_price": 1.95,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.0827,
+    "closing_model_prob": 0.5974,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.0974,
+    "edge_delta": 0.0147
   },
   {
     "call_id": "2026_13_CIN_CLE_best",
@@ -435,11 +493,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 47.5,
     "closing_price": 1.87,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.2724,
+    "closing_model_prob": 0.6586,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.1586,
+    "edge_delta": -0.1138
   },
   {
     "call_id": "2026_13_DET_ATL_best",
@@ -487,11 +550,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 45.5,
     "closing_price": 1.95,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.0797,
+    "closing_model_prob": 0.5963,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.0963,
+    "edge_delta": 0.0166
   },
   {
     "call_id": "2026_13_JAX_CHI_best",
@@ -565,11 +633,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 38.5,
     "closing_price": 1.87,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.2724,
+    "closing_model_prob": 0.6846,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.1846,
+    "edge_delta": -0.0878
   },
   {
     "call_id": "2026_13_SF_NYG_best",
@@ -591,11 +664,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": null,
     "closing_price": 3.7,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.0972,
+    "closing_model_prob": 0.338,
+    "closing_market_prob": 0.2782,
+    "closing_edge": 0.0598,
+    "edge_delta": -0.0374
   },
   {
     "call_id": "2026_13_WAS_TEN_best",
@@ -617,11 +695,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": null,
     "closing_price": 2.92,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1444,
+    "closing_model_prob": 0.494,
+    "closing_market_prob": 0.3396,
+    "closing_edge": 0.1544,
+    "edge_delta": 0.01
   },
   {
     "call_id": "2026_13_PHI_ARI_best",
@@ -643,11 +726,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": -2.5,
     "closing_price": 1.91,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1509,
+    "closing_model_prob": 0.5594,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.0594,
+    "edge_delta": -0.0915
   },
   {
     "call_id": "2026_13_BUF_NE_best",
@@ -669,11 +757,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 13.5,
     "closing_price": 1.95,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1001,
+    "closing_model_prob": 0.6089,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.1089,
+    "edge_delta": 0.0088
   },
   {
     "call_id": "2026_13_CAR_MIN_best",
@@ -695,11 +788,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": null,
     "closing_price": 3.1,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.1587,
+    "closing_model_prob": 0.452,
+    "closing_market_prob": 0.3303,
+    "closing_edge": 0.1217,
+    "edge_delta": -0.037
   },
   {
     "call_id": "2026_13_HOU_PIT_best",
@@ -721,11 +819,16 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": null,
     "closing_price": 2.84,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.2554,
+    "closing_model_prob": 0.554,
+    "closing_market_prob": 0.3396,
+    "closing_edge": 0.2144,
+    "edge_delta": -0.041
   },
   {
     "call_id": "2026_13_DAL_SEA_best",
@@ -747,10 +850,15 @@
     "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
     "closing_line": 50.5,
     "closing_price": 1.93,
-    "closing_at": "2026-11-26T21:10:14.716304+00:00",
+    "closing_at": "2026-11-26T22:21:49.984292+00:00",
     "status": "open",
     "result": null,
     "profit": null,
-    "graded_at": null
+    "graded_at": null,
+    "edge_first": 0.2172,
+    "closing_model_prob": 0.7169,
+    "closing_market_prob": 0.5,
+    "closing_edge": 0.2169,
+    "edge_delta": -0.0003
   }
 ]

@@ -1,15 +1,66 @@
 {
-  "generated_at": "2026-11-26T21:10:14.759444+00:00",
+  "generated_at": "2026-11-26T22:21:50.156003+00:00",
   "calls": 29,
-  "graded": 0,
-  "open": 29,
+  "graded": 1,
+  "open": 28,
   "wins": 0,
-  "losses": 0,
+  "losses": 1,
   "pushes": 0,
-  "win_rate": null,
-  "roi": null,
-  "profit": 0,
-  "by_market": {},
-  "by_edge": {},
-  "recent": []
+  "win_rate": 0.0,
+  "roi": -1.0,
+  "profit": -1.0,
+  "mean_edge_delta": -0.0103,
+  "by_market": {
+    "spread": {
+      "n": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "profit": -1.0,
+      "roi": -1.0,
+      "win_rate": 0.0
+    }
+  },
+  "by_edge": {
+    "10%+": {
+      "n": 1,
+      "wins": 0,
+      "losses": 1,
+      "pushes": 0,
+      "profit": -1.0,
+      "roi": -1.0,
+      "win_rate": 0.0
+    }
+  },
+  "recent": [
+    {
+      "call_id": "2026_12_CHI_DET_best",
+      "game_id": "2026_12_CHI_DET",
+      "season": 2026,
+      "week": 12,
+      "away_team": "CHI",
+      "home_team": "DET",
+      "market": "spread",
+      "side": "home",
+      "team": "DET",
+      "line": 1.5,
+      "price": 1.93,
+      "bookmaker": "betrivers",
+      "model_prob": 0.67,
+      "market_prob": 0.5,
+      "edge": 0.17,
+      "kickoff": "2026-11-26T18:00:00Z",
+      "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
+      "closing_line": 1.5,
+      "closing_price": 1.96,
+      "closing_at": "2026-11-26T12:01:12.090864+00:00",
+      "status": "graded",
+      "result": "loss",
+      "profit": -1.0,
+      "graded_at": "2026-11-26T22:21:38.627994+00:00",
+      "final_home_score": 35,
+      "final_away_score": 39,
+      "final_source": "espn"
+    }
+  ]
 }

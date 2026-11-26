@@ -13,7 +13,7 @@ import math
 import os
 import statistics
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 
 try:
     from nflreadpy import load_teams
@@ -101,6 +101,14 @@ def team_name_map() -> dict[str, str]:
     return names
 
 
+def is_blend_conflict(blend_diff, model_prob) -> bool:
+    """Strength blend favours the opponent while the final home prob is high."""
+    try:
+        return blend_diff is not None and float(blend_diff) < -1.5 and float(model_prob) >= 0.60
+    except (TypeError, ValueError):
+        return False
+
+
 def main() -> None:
     predictions = load_json("predictions/upcoming_games.json") or load_json(
         "predictions/games_week.json"
@@ -114,6 +122,13 @@ def main() -> None:
         return
 
     names = team_name_map()
+    now = datetime.now(timezone.utc)
+    explanations = load_json("reports/model_explanations.json") or {}
+    blend_diff = {}
+    for explained in (explanations.get("match") or {}).get("games", []):
+        for driver in explained.get("drivers", []):
+            if driver.get("feature") == "blend_diff_diff" and driver.get("value") is not None:
+                blend_diff[explained.get("game_id")] = float(driver["value"])
     # Index odds by (home_full, away_full) -> list of events.
     odds_index = {}
     for event in odds:
@@ -171,6 +186,16 @@ def main() -> None:
         event = choose_event(candidates, game)
         if event is None:
             continue
+        # A started game is no longer a pregame edge. This also keeps live
+        # in-game lines out of the call ledger and the game cards.
+        try:
+            kickoff = datetime.fromisoformat(
+                str(event.get("commence_time", "")).replace("Z", "+00:00")
+            )
+            if kickoff <= now:
+                continue
+        except Exception:
+            pass
 
         model_prob = game.get("home_win_prob")
         market_prob = event.get("market_home_win_prob")
@@ -371,6 +396,10 @@ def main() -> None:
                 "outlier_edge": round(outlier_edge, 4),
                 "outlier_market": outlier_market,
                 "best_team": markets[best_market]["team"] if best_market else None,
+                "blend_diff": blend_diff.get(game.get("game_id")),
+                "blend_conflict": is_blend_conflict(
+                    blend_diff.get(game.get("game_id")), model_prob
+                ),
                 "model_spread": game.get("spread"),
                 "market_spread": market_spread,
                 "spread_edge": round(spread_edge, 2) if spread_edge is not None else None,
@@ -401,6 +430,7 @@ def main() -> None:
         "mean_best_edge": round(statistics.mean(best_edges), 4) if best_edges else None,
         "max_best_edge": round(max(best_edges), 4) if best_edges else None,
         "strong_edges": sum(1 for e in best_edges if e >= 0.05),
+        "blend_conflicts": sum(1 for c in comparisons if c.get("blend_conflict")),
         "best_market_counts": {
             key: sum(1 for c in comparisons if c.get("best_market") == key)
             for key in ("ml", "spread", "total")

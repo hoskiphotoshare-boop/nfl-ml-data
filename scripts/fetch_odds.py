@@ -283,6 +283,18 @@ def summarise_event(event: dict) -> dict:
     }
 
 
+def is_upcoming(event: dict, now: datetime) -> bool:
+    """Keep pregame lines only; never let live/in-game prices become edges."""
+    value = event.get("commence_time")
+    if not value:
+        return True
+    try:
+        kickoff = datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+    except Exception:
+        return True
+    return kickoff > now
+
+
 def compact(event: dict) -> dict:
     """Small snapshot record used for line-movement history."""
     return {
@@ -318,8 +330,12 @@ def main() -> None:
         print(f"Odds API error: {exc}")
         return
 
-    events = [summarise_event(e) for e in data]
     now = datetime.now(timezone.utc)
+    events = [summarise_event(e) for e in data]
+    events = [event for event in events if is_upcoming(event, now)]
+    if not events:
+        print("No upcoming games in the odds response; keeping the previous snapshot.")
+        return
     os.makedirs("market", exist_ok=True)
     with open("market/odds_latest.json", "w", encoding="utf-8") as f:
         json.dump(events, f, indent=2)

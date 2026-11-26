@@ -88,7 +88,7 @@ def test_snapshot_append_only_and_fill_missing(tmp_path, monkeypatch):
     monkeypatch.setattr(update_calls, "SCOREBOARD", "reports/calls_scoreboard.json")
     monkeypatch.setattr(update_calls, "PICKS", "predictions/game_picks.json")
     monkeypatch.setattr(update_calls, "SCHEDULES", "data/missing.parquet")
-    monkeypatch.setattr(update_calls, "final_scores", lambda: {})
+    monkeypatch.setattr(update_calls, "merged_final_scores", lambda: {})
 
     update_calls.main()
 
@@ -151,8 +151,12 @@ def test_pick_grading_sets_final_and_grades(tmp_path, monkeypatch):
     monkeypatch.setattr(update_calls, "SCOREBOARD", "reports/calls_scoreboard.json")
     monkeypatch.setattr(update_calls, "PICKS", "predictions/game_picks.json")
     monkeypatch.setattr(update_calls, "SCHEDULES", "data/missing.parquet")
-    monkeypatch.setattr(update_calls, "final_scores", lambda: {
-        (2026, 12, "GB", "LA"): {"home_score": 24, "away_score": 17}
+    monkeypatch.setattr(update_calls, "merged_final_scores", lambda: {
+        (2026, 12, "GB", "LA"): {
+            "home_score": 24,
+            "away_score": 17,
+            "source": "espn",
+        }
     })
 
     update_calls.main()
@@ -167,11 +171,92 @@ def test_pick_grading_sets_final_and_grades(tmp_path, monkeypatch):
     assert graded_at is not None
 
     # second run with different final must not overwrite
-    monkeypatch.setattr(update_calls, "final_scores", lambda: {
-        (2026, 12, "GB", "LA"): {"home_score": 30, "away_score": 30}
+    monkeypatch.setattr(update_calls, "merged_final_scores", lambda: {
+        (2026, 12, "GB", "LA"): {
+            "home_score": 30,
+            "away_score": 30,
+            "source": "espn",
+        }
     })
     update_calls.main()
     doc2 = json.load(open("predictions/game_picks.json", encoding="utf-8"))
     entry2 = doc2["games"][0]
     assert entry2["final"] == {"home": 24, "away": 17}
     assert entry2["graded_at"] == graded_at
+
+
+def test_merged_scores_prefers_schedules(monkeypatch):
+    key = (2026, 12, "CHI", "DET")
+    monkeypatch.setattr(
+        update_calls,
+        "final_scores",
+        lambda: {key: {"home_score": 35, "away_score": 39}},
+    )
+    monkeypatch.setattr(
+        update_calls,
+        "espn_final_scores",
+        lambda: {key: {"home_score": 99, "away_score": 0, "source": "espn"}},
+    )
+    merged = update_calls.merged_final_scores()
+    assert merged[key]["home_score"] == 35
+    assert merged[key]["source"] == "schedules"
+
+
+def test_merged_scores_uses_espn_fallback(monkeypatch):
+    key = (2026, 12, "CHI", "DET")
+    monkeypatch.setattr(update_calls, "final_scores", lambda: {})
+    monkeypatch.setattr(
+        update_calls,
+        "espn_final_scores",
+        lambda: {key: {"home_score": 35, "away_score": 39, "source": "espn"}},
+    )
+    merged = update_calls.merged_final_scores()
+    assert merged[key]["away_score"] == 39
+    assert merged[key]["source"] == "espn"
+
+
+def test_closing_updates_model_probability_and_edge(monkeypatch):
+    call = {
+        "call_id": "x",
+        "game_id": "g",
+        "status": "open",
+        "kickoff": "2026-11-26T18:00:00+00:00",
+        "market": "spread",
+        "side": "home",
+        "team": "DET",
+        "edge": 0.10,
+        "edge_first": 0.10,
+    }
+    existing = {"x": call}
+    games = [
+        {
+            "game_id": "g",
+            "markets": {
+                "spread": {
+                    "side": "home",
+                    "team": "DET",
+                    "line": 1.5,
+                    "price": 1.96,
+                    "model_prob": 0.58,
+                    "market_prob": 0.5,
+                    "edge": 0.08,
+                }
+            },
+        }
+    ]
+    now = update_calls.datetime(2026, 11, 26, 12, 0, tzinfo=update_calls.timezone.utc)
+    monkeypatch.setattr(update_calls, "parse_time", lambda value: now)
+    # parse_time is also used for the kickoff; a fixed kickoff after now keeps
+    # the call open.
+    monkeypatch.setattr(
+        update_calls,
+        "parse_time",
+        lambda value: update_calls.datetime(
+            2026, 11, 26, 18, 0, tzinfo=update_calls.timezone.utc
+        ),
+    )
+    updated = update_calls.update_closing(games, existing, now)
+    assert updated == 1
+    assert call["closing_model_prob"] == 0.58
+    assert call["closing_edge"] == 0.08
+    assert call["edge_delta"] == -0.02

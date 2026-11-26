@@ -1018,13 +1018,23 @@ function archivedMarket(game) {
 
 function marketFor(game) {
   // Once a game is final, grade and display the lines that were priced when
-  // the call was made. Archived picks are frozen at first sight; today's
-  // market may have moved or disappeared.
-  if (game && game.markets && completedScore(game.game_id)) return archivedMarket(game);
-  return state.marketById.get(game?.game_id) || archivedMarket(game);
+  // the call was made. The upcoming row has no markets, so look the archive up
+  // by game_id rather than relying on the object passed in.
+  const archived = game && state.pickById.get(game.game_id);
+  if (archived && archived.markets && completedScore(game.game_id)) {
+    return archivedMarket(archived);
+  }
+  return state.marketById.get(game?.game_id) || archivedMarket(archived || game);
 }
 
 function gameCard(game, rank) {
+  // Final games must render from the pre-kickoff archive, not from the current
+  // upcoming row or a live/post-game market snapshot. This keeps Schedule and
+  // Results identical for the same game.
+  const archived = state.pickById.get(game.game_id);
+  if (archived && archived.markets && completedScore(game.game_id)) {
+    game = archived;
+  }
   const card = el('article', 'game-card');
   card.dataset.gameId = game.game_id;
   const market = marketFor(game);
@@ -1072,6 +1082,12 @@ function gameCard(game, rank) {
     divTag.title =
       'Division game — lower-scoring on average and a smaller home-field advantage.';
     top.appendChild(divTag);
+  }
+  if (market && market.blend_conflict) {
+    const conflict = el('span', 'tag amber', 'Blend conflict');
+    conflict.title =
+      'The model’s blended team strength favours the opponent, but its final home probability is still 60%+. Treat this edge with extra caution.';
+    top.appendChild(conflict);
   }
   const finalScore = completedScore(game.game_id);
   const callGrades = finalScore

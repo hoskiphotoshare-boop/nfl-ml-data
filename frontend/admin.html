@@ -88,6 +88,11 @@
       </section>
 
       <section>
+        <h2>Model diagnostics (research)</h2>
+        <div id="diagnostics" class="card-grid"></div>
+      </section>
+
+      <section>
         <h2>Match backtest</h2>
         <div id="match-backtest" class="card-grid"></div>
       </section>
@@ -557,6 +562,11 @@
               ? `${(calls.roi * 100).toFixed(1)}%`
               : "—"
           } · profit ${calls.profit ?? "—"}u`,
+          `mean edge drift ${
+            calls.mean_edge_delta !== null && calls.mean_edge_delta !== undefined
+              ? `${(calls.mean_edge_delta * 100).toFixed(2)} pp`
+              : "—"
+          } (closing − first sight)`,
         ]));
         elm.appendChild(card("Futures board", [
           `mean |edge| ${((futures.mean_abs_edge ?? 0) * 100).toFixed(1)} pp`,
@@ -606,6 +616,19 @@
           `${movement.snapshots ?? 0} snapshots`,
           `${movement.games ?? 0} games`,
           `mean |spread| ${movement.summary?.mean_abs_spread_move ?? "—"}`,
+        ]));
+        const integrity = h.integrity || {};
+        const dirty =
+          (integrity.market_started || []).length +
+          (integrity.open_calls_past_kickoff_6h || []).length +
+          (integrity.final_picks_ungraded || []).length +
+          (integrity.final_picks_missing_source || []).length;
+        elm.appendChild(card(dirty ? "Data integrity ⚠" : "Data integrity", [
+          `market games already started at fetch: ${(integrity.market_started || []).length}`,
+          `open calls 6h past kickoff: ${(integrity.open_calls_past_kickoff_6h || []).length}`,
+          `final picks ungraded: ${(integrity.final_picks_ungraded || []).length}`,
+          `final picks missing source: ${(integrity.final_picks_missing_source || []).length}`,
+          `blend conflicts: ${integrity.blend_conflicts ?? 0}`,
         ]));
       } catch (e) {
         document.getElementById("health").appendChild(card("Health report unavailable", [String(e)]));
@@ -688,6 +711,42 @@
         }
       } catch (e) {
         document.getElementById("scorecard").appendChild(card("Scorecard unavailable", [String(e)]));
+      }
+
+      // Research diagnostics
+      try {
+        const [practice, total, feature] = await Promise.all([
+          getJSON(`${R}/practice_ablation.json`).catch(() => null),
+          getJSON(`${R}/total_errors.json`).catch(() => null),
+          getJSON(`${R}/feature_audit.json`).catch(() => null),
+        ]);
+        const elm = document.getElementById("diagnostics");
+        elm.innerHTML = "";
+        if (practice) {
+          elm.appendChild(card("Practice participation", [
+            `log loss ${practice.baseline?.log_loss ?? "—"} → ${practice.with_practice?.log_loss ?? "—"}`,
+            `Δ ${practice.delta?.log_loss ?? "—"} · accuracy ${practice.delta?.accuracy ?? "—"}`,
+            practice.accepted ? "gate passed · research only" : "gate not met · not promoted",
+          ]));
+        }
+        if (total) {
+          const all = total.all || {};
+          elm.appendChild(card("Total errors (walk-forward)", [
+            `MAE ${all.mae ?? "—"} · RMSE ${all.rmse ?? "—"}`,
+            `p90 ${all.abs_p90 ?? "—"} · p95 ${all.abs_p95 ?? "—"}`,
+            `${((all.share_over_20 ?? 0) * 100).toFixed(1)}% of games >20 pts`,
+          ]));
+        }
+        if (feature) {
+          const top = Object.entries(feature.features || {})[0];
+          elm.appendChild(card("Feature use (2026 permutation)", [
+            `top ${top ? top[0] : "—"}`,
+            top ? `ΔLL ${top[1].mean_delta_log_loss} · coef ${top[1].coef}` : "—",
+            `baseline LL ${feature.baseline_2026?.log_loss ?? "—"}`,
+          ]));
+        }
+      } catch (e) {
+        document.getElementById("diagnostics").appendChild(card("Diagnostics unavailable", [String(e)]));
       }
 
       // Match backtest

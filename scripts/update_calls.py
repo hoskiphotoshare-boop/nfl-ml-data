@@ -21,6 +21,7 @@ import copy
 import json
 import math
 import os
+import urllib.request
 from datetime import datetime, timezone
 
 import polars as pl
@@ -32,6 +33,8 @@ CALLS = "predictions/calls_history.json"
 SCOREBOARD = "reports/calls_scoreboard.json"
 PICKS = "predictions/game_picks.json"
 MIN_EDGE = 0.02
+ESPN_SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+TEAM_ALIASES = {"LAR": "LA", "WSH": "WAS", "JAC": "JAX"}
 
 
 def load(path: str, default):
@@ -146,6 +149,11 @@ def snapshot_calls(games: list[dict], existing: dict, now: datetime) -> int:
             "closing_line": None,
             "closing_price": None,
             "closing_at": None,
+            "edge_first": edge,
+            "closing_model_prob": None,
+            "closing_market_prob": None,
+            "closing_edge": None,
+            "edge_delta": None,
             "status": "open",
             "result": None,
             "profit": None,
@@ -169,10 +177,32 @@ def update_closing(games: list[dict], existing: dict, now: datetime) -> int:
         entry = ((game or {}).get("markets") or {}).get(call.get("market"))
         if not side_matches(call, entry):
             continue
+        changed = False
+        if call.get("edge_first") is None and call.get("edge") is not None:
+            call["edge_first"] = call.get("edge")
         if entry.get("line") is not None:
             call["closing_line"] = entry.get("line")
+            changed = True
         if entry.get("price") is not None:
             call["closing_price"] = entry.get("price")
+            changed = True
+        if entry.get("model_prob") is not None:
+            call["closing_model_prob"] = entry.get("model_prob")
+            changed = True
+        if entry.get("market_prob") is not None:
+            call["closing_market_prob"] = entry.get("market_prob")
+            changed = True
+        if entry.get("edge") is not None:
+            call["closing_edge"] = entry.get("edge")
+            changed = True
+        if (
+            call.get("closing_edge") is not None
+            and call.get("edge_first") is not None
+        ):
+            call["edge_delta"] = round(
+                float(call["closing_edge"]) - float(call["edge_first"]), 4
+            )
+        if changed:
             call["closing_at"] = now.isoformat()
             updated += 1
     return updated
@@ -200,6 +230,64 @@ def final_scores() -> dict[tuple, dict]:
         ): row
         for row in played.iter_rows(named=True)
     }
+
+
+def espn_final_scores() -> dict[tuple, dict]:
+    """Completed games from ESPN, used while nflverse schedules lag."""
+    try:
+        request = urllib.request.Request(
+            ESPN_SCOREBOARD,
+            headers={
+                "User-Agent": "nfl-ml-calls/1.0",
+                "Accept": "application/json",
+            },
+        )
+        with urllib.request.urlopen(request, timeout=15) as response:
+            payload = json.load(response)
+    except Exception as exc:  # pragma: no cover - network best effort
+        print(f"ESPN grading unavailable: {exc}")
+        return {}
+
+    scores = {}
+    for event in payload.get("events", []) or []:
+        competition = (event.get("competitions") or [{}])[0]
+        status = competition.get("status") or event.get("status") or {}
+        kind = status.get("type") or {}
+        if not (kind.get("completed") or kind.get("state") == "post"):
+            continue
+        season = (event.get("season") or {}).get("year")
+        week = (event.get("week") or {}).get("number")
+        competitors = competition.get("competitors") or []
+        home = next((c for c in competitors if c.get("homeAway") == "home"), None)
+        away = next((c for c in competitors if c.get("homeAway") == "away"), None)
+        if not (season and week and home and away):
+            continue
+        def abbr(competitor):
+            team = (competitor.get("team") or {}).get("abbreviation")
+            return TEAM_ALIASES.get(team, team)
+        home_team, away_team = abbr(home), abbr(away)
+        home_score, away_score = home.get("score"), away.get("score")
+        if not (home_team and away_team and home_score is not None and away_score is not None):
+            continue
+        try:
+            scores[(int(season), int(week), away_team, home_team)] = {
+                "home_score": int(home_score),
+                "away_score": int(away_score),
+                "source": "espn",
+            }
+        except (TypeError, ValueError):
+            continue
+    return scores
+
+
+def merged_final_scores() -> dict[tuple, dict]:
+    scores = {
+        key: {**row, "source": "schedules"}
+        for key, row in final_scores().items()
+    }
+    for key, row in espn_final_scores().items():
+        scores.setdefault(key, row)
+    return scores
 
 
 def grade_calls(existing: dict, now: datetime, scores=None) -> int:
@@ -237,6 +325,7 @@ def grade_calls(existing: dict, now: datetime, scores=None) -> int:
         call["graded_at"] = now.isoformat()
         call["final_home_score"] = home_score
         call["final_away_score"] = away_score
+        call["final_source"] = row.get("source", "schedules")
         graded += 1
     return graded
 
@@ -279,6 +368,12 @@ def summarize(calls: list[dict]) -> dict:
             row["win_rate"] = round(row["wins"] / decisions, 4) if decisions else None
             row["profit"] = round(row["profit"], 4)
 
+    deltas = [
+        float(call["closing_edge"]) - float(call["edge_first"])
+        for call in calls
+        if call.get("closing_edge") is not None
+        and call.get("edge_first") is not None
+    ]
     recent = sorted(
         graded, key=lambda call: call.get("graded_at") or "", reverse=True
     )[:12]
@@ -293,6 +388,7 @@ def summarize(calls: list[dict]) -> dict:
         "win_rate": round(wins / decided, 4) if decided else None,
         "roi": round(profit / len(graded), 4) if graded else None,
         "profit": round(profit, 4),
+        "mean_edge_delta": round(sum(deltas) / len(deltas), 4) if deltas else None,
         "by_market": by_market,
         "by_edge": by_edge,
         "recent": recent,
@@ -390,6 +486,8 @@ def build_pick_entry(game, upcoming_by_id, now, odds_fetched_at):
         "final": None,
         "grades": None,
         "graded_at": None,
+        "final_source": None,
+        "pregame_model": None,
     }
     return entry
 
@@ -421,7 +519,7 @@ def main() -> None:
 
     added_calls = snapshot_calls(games, existing_calls, now)
     updated_calls = update_closing(games, existing_calls, now)
-    scores = final_scores()
+    scores = merged_final_scores()
     graded_calls = grade_calls(existing_calls, now, scores)
 
     # Archive picks.
@@ -464,6 +562,16 @@ def main() -> None:
         home_team = pick.get("home_team")
 
         if pick.get("final") is None:
+            kickoff = parse_time(pick.get("kickoff"))
+            if kickoff and kickoff > now:
+                source = _upcoming_source(upcoming_by_id, game_id)
+                if source:
+                    pick["pregame_model"] = {
+                        "home_win_prob": source.get("home_win_prob"),
+                        "spread": source.get("spread"),
+                        "total": source.get("total"),
+                        "at": now.isoformat(),
+                    }
             key = (int(season or 0), int(week or 0), away_team, home_team)
             row = scores.get(key)
             if row:
@@ -481,6 +589,7 @@ def main() -> None:
                     )
                 pick["grades"] = grades
                 pick["graded_at"] = now.isoformat()
+                pick["final_source"] = row.get("source", "schedules")
         else:
             if not isinstance(pick.get("grades"), dict):
                 final = pick.get("final") or {}

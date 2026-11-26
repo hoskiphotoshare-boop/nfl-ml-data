@@ -13,11 +13,31 @@ import os
 import sys
 from datetime import datetime, timezone
 from statistics import NormalDist
+from zoneinfo import ZoneInfo
 
 sys.path.insert(0, os.path.dirname(__file__) + "/../")
 
 import joblib
 import polars as pl
+
+
+ET = ZoneInfo("America/New_York")
+
+
+def kickoff_utc(gameday, gametime) -> datetime | None:
+    """Convert a schedule gameday/gametime (ET) to an aware UTC timestamp."""
+    try:
+        day = datetime.strptime(str(gameday)[:10], "%Y-%m-%d")
+    except Exception:
+        return None
+    hour = minute = 0
+    if gametime:
+        try:
+            parts = str(gametime).strip().split(":")
+            hour, minute = int(parts[0]), int(parts[1])
+        except Exception:
+            hour = minute = 0
+    return day.replace(hour=hour, minute=minute, tzinfo=ET).astimezone(timezone.utc)
 
 
 def load_schedules() -> pl.DataFrame | None:
@@ -408,9 +428,40 @@ def main() -> None:
             return 7
         return max(0, min(21, (game_day - prior[-1]).days))
 
+    now = datetime.now(timezone.utc)
+    previous_by_id: dict[str, dict] = {}
+    previous_vectors: dict[str, dict] = {}
+    if os.path.exists("predictions/upcoming_games.json"):
+        try:
+            with open("predictions/upcoming_games.json", encoding="utf-8") as f:
+                for game in json.load(f):
+                    if isinstance(game, dict) and game.get("game_id"):
+                        previous_by_id[str(game["game_id"])] = game
+        except Exception:
+            previous_by_id = {}
+    if os.path.exists("models/upcoming_feature_vectors.json"):
+        try:
+            with open("models/upcoming_feature_vectors.json", encoding="utf-8") as f:
+                previous_vectors = (json.load(f) or {}).get("games", {})
+        except Exception:
+            previous_vectors = {}
+
     prediction_rows = []
     feature_vectors: dict[str, dict] = {}
     for row in upcoming.iter_rows(named=True):
+        game_id = str(row.get("game_id"))
+        # A started game must keep its last pre-kickoff prediction. Rebuilding
+        # features after kickoff risks using the game itself and makes the card
+        # disagree with the archived call.
+        kickoff = kickoff_utc(row.get("gameday"), row.get("gametime"))
+        if kickoff is not None and kickoff <= now:
+            locked = previous_by_id.get(game_id)
+            if locked:
+                prediction_rows.append(locked)
+                if game_id in previous_vectors:
+                    feature_vectors[game_id] = previous_vectors[game_id]
+            continue
+
         home = row["home_team"]
         away = row["away_team"]
         week = int(row["week"])

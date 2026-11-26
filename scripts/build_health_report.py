@@ -26,6 +26,8 @@ def main() -> None:
     playoff = load("reports/playoff_backtest.json", {})
     player_backtest = load("reports/player_backtest.json", {})
     calls = load("reports/calls_scoreboard.json", {})
+    calls_history = load("predictions/calls_history.json", [])
+    picks = load("predictions/game_picks.json", {})
     players = load("predictions/players_week.json", [])
     upcoming = load("predictions/upcoming_games.json", [])
     platt = load("models/platt.json", {})
@@ -35,6 +37,41 @@ def main() -> None:
     market_summary = market.get("summary", {})
     outliers = [g for g in market.get("games", []) if g.get("outlier")]
     futures_summary = futures.get("summary", {})
+
+    def parse(value):
+        if not value:
+            return None
+        try:
+            return datetime.fromisoformat(str(value).replace("Z", "+00:00"))
+        except Exception:
+            return None
+
+    now = datetime.now(timezone.utc)
+    fetched = parse(market.get("odds_fetched_at"))
+    market_started = [
+        game.get("game_id")
+        for game in market.get("games", [])
+        if fetched and parse(game.get("commence_time")) and parse(game.get("commence_time")) <= fetched
+    ]
+    open_calls_past = [
+        call.get("call_id")
+        for call in calls_history
+        if isinstance(call, dict)
+        and call.get("status") == "open"
+        and parse(call.get("kickoff"))
+        and parse(call.get("kickoff")).timestamp() + 6 * 3600 < now.timestamp()
+    ]
+    pick_games = picks.get("games", []) if isinstance(picks, dict) else []
+    final_ungraded = [
+        game.get("game_id")
+        for game in pick_games
+        if game.get("final") and not isinstance(game.get("grades"), dict)
+    ]
+    final_no_source = [
+        game.get("game_id")
+        for game in pick_games
+        if game.get("final") and not game.get("final_source")
+    ]
 
     sigma = {}
     if os.path.exists("models/score_models.joblib"):
@@ -90,6 +127,7 @@ def main() -> None:
             "outlier_games": [g.get("game_id") for g in outliers],
             "mean_abs_edge": market_summary.get("mean_abs_edge"),
             "max_abs_edge": market_summary.get("max_abs_edge"),
+            "blend_conflicts": market_summary.get("blend_conflicts"),
         },
         "futures": {
             "mean_abs_edge": futures_summary.get("mean_abs_edge"),
@@ -105,6 +143,7 @@ def main() -> None:
             "win_rate": calls.get("win_rate"),
             "roi": calls.get("roi"),
             "profit": calls.get("profit"),
+            "mean_edge_delta": calls.get("mean_edge_delta"),
             "by_market": calls.get("by_market", {}),
             "by_edge": calls.get("by_edge", {}),
         },
@@ -152,6 +191,13 @@ def main() -> None:
             "snapshots": len(movement.get("snapshots", [])),
             "games": movement.get("games"),
             "summary": movement.get("summary", {}),
+        },
+        "integrity": {
+            "market_started": market_started,
+            "open_calls_past_kickoff_6h": open_calls_past,
+            "final_picks_ungraded": final_ungraded,
+            "final_picks_missing_source": final_no_source,
+            "blend_conflicts": market_summary.get("blend_conflicts", 0),
         },
     }
 
