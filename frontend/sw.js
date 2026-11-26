@@ -8,7 +8,7 @@
  * deletes every older `nfl-ml-shell-*` cache.
  */
 
-const CACHE_VERSION = 'nfl-ml-v3';
+const CACHE_VERSION = 'nfl-ml-v4';
 const SHELL_CACHE = `nfl-ml-shell-${CACHE_VERSION}`;
 
 const PRECACHE_URLS = [
