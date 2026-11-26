@@ -458,6 +458,12 @@ def predict_latest(
             except Exception:
                 pass
 
+        # Quantile crossing can still happen when the point model has no
+        # usable feature vector or the conditional models disagree. The
+        # displayed floor/ceiling must bracket the point projection.
+        floor = min(floor, fantasy)
+        ceiling = max(ceiling, fantasy)
+
         recent_row = recent_map.get(stats.get(id_col)) or {}
         recent_stats = {}
         for col in recent_cols:
@@ -570,6 +576,8 @@ def apply_injury_adjustments(records: list[dict]) -> list[dict]:
             "projected_fantasy_points",
             "projected_pass_yards",
             "projected_pass_tds",
+            "floor_fantasy_points",
+            "ceiling_fantasy_points",
         ]
         for record in records:
             status = status_map.get(record.get("player_id"))
@@ -585,6 +593,21 @@ def apply_injury_adjustments(records: list[dict]) -> list[dict]:
         )
     except Exception as exc:  # pragma: no cover
         print(f"Injury adjustment skipped: {exc}")
+    return records
+
+
+def clamp_ranges(records: list[dict]) -> list[dict]:
+    """Keep the displayed 80% range bracketing the point projection."""
+    for record in records:
+        proj = record.get("projected_fantasy_points")
+        if proj is None:
+            continue
+        floor = record.get("floor_fantasy_points")
+        ceiling = record.get("ceiling_fantasy_points")
+        if floor is not None:
+            record["floor_fantasy_points"] = round(min(float(floor), float(proj)), 1)
+        if ceiling is not None:
+            record["ceiling_fantasy_points"] = round(max(float(ceiling), float(proj)), 1)
     return records
 
 
@@ -615,6 +638,8 @@ def apply_depth_chart_adjustments(records: list[dict]) -> list[dict]:
             "projected_fantasy_points",
             "projected_pass_yards",
             "projected_pass_tds",
+            "floor_fantasy_points",
+            "ceiling_fantasy_points",
         ]
         for record in records:
             rank = rank_map.get(record.get("player_id"))
@@ -699,6 +724,7 @@ def predict_only() -> None:
     records = apply_depth_chart_adjustments(records)
     records = apply_injury_adjustments(records)
     records = apply_roster_status(records)
+    records = clamp_ranges(records)
     records = [r for r in records if r["projected_fantasy_points"] > 0][:250]
 
     os.makedirs("predictions", exist_ok=True)
@@ -754,6 +780,7 @@ def main() -> None:
     records = apply_depth_chart_adjustments(records)
     records = apply_injury_adjustments(records)
     records = apply_roster_status(records)
+    records = clamp_ranges(records)
     records = [r for r in records if r["projected_fantasy_points"] > 0][:250]
 
     os.makedirs("predictions", exist_ok=True)

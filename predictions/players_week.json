@@ -150,14 +150,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "2577417",
-    "opponent": "PHI",
-    "matchup": "vs PHI",
-    "home_away": "home",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036442",
@@ -310,14 +303,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3915511",
-    "opponent": "NO",
-    "matchup": "vs NO",
-    "home_away": "home",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039163",
@@ -470,14 +456,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4432577",
-    "opponent": "BAL",
-    "matchup": "vs BAL",
-    "home_away": "home",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036971",
@@ -630,14 +609,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4360310",
-    "opponent": "TEN",
-    "matchup": "vs TEN",
-    "home_away": "home",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039139",
@@ -790,14 +762,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4429795",
-    "opponent": "CHI",
-    "matchup": "vs CHI",
-    "home_away": "home",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0029604",
@@ -950,14 +915,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "14880",
-    "opponent": "ATL",
-    "matchup": "vs ATL",
-    "home_away": "home",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034857",
@@ -1110,14 +1068,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3918298",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037834",
@@ -1270,14 +1221,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4361741",
-    "opponent": "SEA",
-    "matchup": "vs SEA",
-    "home_away": "home",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0019596",
@@ -1429,14 +1373,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "2330",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039361",
@@ -1589,14 +1526,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4596448",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033280",
@@ -1749,14 +1679,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3117251",
-    "opponent": "SEA",
-    "matchup": "vs SEA",
-    "home_away": "home",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040743",
@@ -1909,14 +1832,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4360689",
-    "opponent": "CIN",
-    "matchup": "@ CIN",
-    "home_away": "away",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035261",
@@ -2069,14 +1985,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3916148",
-    "opponent": "JAX",
-    "matchup": "@ JAX",
-    "home_away": "away",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039910",
@@ -2229,14 +2138,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4426348",
-    "opponent": "ARI",
-    "matchup": "@ ARI",
-    "home_away": "away",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033537",
@@ -2389,14 +2291,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3122840",
-    "opponent": "LV",
-    "matchup": "vs LV",
-    "home_away": "home",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033106",
@@ -2549,14 +2444,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3046779",
-    "opponent": "CHI",
-    "matchup": "vs CHI",
-    "home_away": "home",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033873",
@@ -2709,14 +2597,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3139477",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038543",
@@ -2869,14 +2750,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4430878",
-    "opponent": "SF",
-    "matchup": "@ SF",
-    "home_away": "away",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039732",
@@ -3029,14 +2903,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4426338",
-    "opponent": "PIT",
-    "matchup": "@ PIT",
-    "home_away": "away",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038542",
@@ -3189,14 +3056,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4430807",
-    "opponent": "MIN",
-    "matchup": "@ MIN",
-    "home_away": "away",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036264",
@@ -3209,7 +3069,7 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 15.5,
     "floor_fantasy_points": 7.1,
-    "ceiling_fantasy_points": 27.4,
+    "ceiling_fantasy_points": 27.5,
     "projected_pass_yards": 288.5,
     "projected_pass_tds": 2.25,
     "projected_interceptions": 0.75,
@@ -3349,10 +3209,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4036378",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040715",
@@ -3505,14 +3362,160 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4696981",
-    "opponent": "IND",
-    "matchup": "@ IND",
-    "home_away": "away",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0038134",
+    "name": "K.Walker",
+    "team": "KC",
+    "position": "RB",
+    "projected_targets": 3.5,
+    "projected_receptions": 2.8,
+    "projected_yards": 12.2,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 15.3,
+    "floor_fantasy_points": 9.3,
+    "ceiling_fantasy_points": 27.7,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      20.3,
+      30.4,
+      26.9,
+      7.7,
+      10.4,
+      34.3
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        20.3,
+        30.4,
+        26.9,
+        7.7,
+        10.4,
+        34.3
+      ],
+      "targets": [
+        2.0,
+        1.0,
+        3.0,
+        5.0,
+        5.0,
+        4.0
+      ],
+      "receptions": [
+        2.0,
+        1.0,
+        2.0,
+        4.0,
+        4.0,
+        4.0
+      ],
+      "yards": [
+        3.0,
+        2.0,
+        11.0,
+        21.0,
+        15.0,
+        41.0
+      ],
+      "touchdowns": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        70.0,
+        177.0,
+        128.0,
+        36.0,
+        69.0,
+        102.0
+      ],
+      "rushing_tds": [
+        1.0,
+        2.0,
+        2.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038597",
@@ -3665,14 +3668,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4362238",
-    "opponent": "NO",
-    "matchup": "vs NO",
-    "home_away": "home",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0026498",
@@ -3825,10 +3821,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "12483",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036963",
@@ -3981,14 +3974,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4374302",
-    "opponent": "CHI",
-    "matchup": "vs CHI",
-    "home_away": "home",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040719",
@@ -4141,14 +4127,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4882093",
-    "opponent": "TEN",
-    "matchup": "vs TEN",
-    "home_away": "home",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039918",
@@ -4301,14 +4280,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4431611",
-    "opponent": "DET",
-    "matchup": "@ DET",
-    "home_away": "away",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039923",
@@ -4461,14 +4433,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4433970",
-    "opponent": "IND",
-    "matchup": "@ IND",
-    "home_away": "away",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037248",
@@ -4621,14 +4586,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4379399",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036900",
@@ -4781,14 +4739,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4362628",
-    "opponent": "NO",
-    "matchup": "vs NO",
-    "home_away": "home",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036912",
@@ -4941,14 +4892,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4241478",
-    "opponent": "DAL",
-    "matchup": "@ DAL",
-    "home_away": "away",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040676",
@@ -5101,14 +5045,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4688380",
-    "opponent": "JAX",
-    "matchup": "@ JAX",
-    "home_away": "away",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036355",
@@ -5261,14 +5198,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4038941",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040735",
@@ -5421,14 +5351,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4685278",
-    "opponent": "DET",
-    "matchup": "@ DET",
-    "home_away": "away",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034869",
@@ -5581,14 +5504,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3912547",
-    "opponent": "SF",
-    "matchup": "@ SF",
-    "home_away": "away",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033119",
@@ -5741,14 +5657,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "2578570",
-    "opponent": "HOU",
-    "matchup": "@ HOU",
-    "home_away": "away",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039150",
@@ -5901,14 +5810,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4685720",
-    "opponent": "TB",
-    "matchup": "@ TB",
-    "home_away": "away",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040014",
@@ -5997,14 +5899,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4433971",
-    "opponent": "NYJ",
-    "matchup": "vs NYJ",
-    "home_away": "home",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036275",
@@ -6157,14 +6052,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4259545",
-    "opponent": "DET",
-    "matchup": "@ DET",
-    "home_away": "away",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036555",
@@ -6317,14 +6205,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4241416",
-    "opponent": "TB",
-    "matchup": "@ TB",
-    "home_away": "away",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040198",
@@ -6477,14 +6358,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4711533",
-    "opponent": "NYJ",
-    "matchup": "vs NYJ",
-    "home_away": "home",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039917",
@@ -6637,14 +6511,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4360423",
-    "opponent": "MIN",
-    "matchup": "@ MIN",
-    "home_away": "away",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036358",
@@ -6797,14 +6664,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4241389",
-    "opponent": "PHI",
-    "matchup": "vs PHI",
-    "home_away": "home",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037263",
@@ -6957,14 +6817,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4373626",
-    "opponent": "WAS",
-    "matchup": "vs WAS",
-    "home_away": "home",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036223",
@@ -7117,14 +6970,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4242335",
-    "opponent": "NYG",
-    "matchup": "vs NYG",
-    "home_away": "home",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036875",
@@ -7277,14 +7123,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4569173",
-    "opponent": "LAC",
-    "matchup": "@ LAC",
-    "home_away": "away",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041496",
@@ -7437,14 +7276,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4702555",
-    "opponent": "PIT",
-    "matchup": "@ PIT",
-    "home_away": "away",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037238",
@@ -7597,14 +7429,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4426502",
-    "opponent": "MIN",
-    "matchup": "@ MIN",
-    "home_away": "away",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037740",
@@ -7757,14 +7582,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4569618",
-    "opponent": "MIA",
-    "matchup": "@ MIA",
-    "home_away": "away",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037838",
@@ -7917,14 +7735,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4361050",
-    "opponent": "IND",
-    "matchup": "@ IND",
-    "home_away": "away",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033288",
@@ -8077,14 +7888,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3040151",
-    "opponent": "SEA",
-    "matchup": "vs SEA",
-    "home_away": "home",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036322",
@@ -8237,14 +8041,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4262921",
-    "opponent": "ATL",
-    "matchup": "vs ATL",
-    "home_away": "home",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036997",
@@ -8397,14 +8194,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4361579",
-    "opponent": "PHI",
-    "matchup": "vs PHI",
-    "home_away": "home",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039337",
@@ -8557,14 +8347,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4595348",
-    "opponent": "IND",
-    "matchup": "@ IND",
-    "home_away": "away",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034855",
@@ -8717,14 +8500,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3052587",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037228",
@@ -8877,14 +8653,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4569987",
-    "opponent": "DEN",
-    "matchup": "vs DEN",
-    "home_away": "home",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039338",
@@ -9037,14 +8806,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4432665",
-    "opponent": "CLE",
-    "matchup": "@ CLE",
-    "home_away": "away",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041438",
@@ -9197,14 +8959,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4871023",
-    "opponent": "JAX",
-    "matchup": "@ JAX",
-    "home_away": "away",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032764",
@@ -9357,14 +9112,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3043078",
-    "opponent": "HOU",
-    "matchup": "@ HOU",
-    "home_away": "away",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037744",
@@ -9517,14 +9265,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4361307",
-    "opponent": "WAS",
-    "matchup": "vs WAS",
-    "home_away": "home",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040129",
@@ -9677,14 +9418,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4567750",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035640",
@@ -9837,14 +9571,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4047650",
-    "opponent": "DEN",
-    "matchup": "vs DEN",
-    "home_away": "home",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038120",
@@ -9997,14 +9724,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4427366",
-    "opponent": "MIA",
-    "matchup": "@ MIA",
-    "home_away": "away",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038124",
@@ -10017,7 +9737,7 @@
     "projected_tds": 0.25,
     "projected_fantasy_points": 10.7,
     "floor_fantasy_points": 5.7,
-    "ceiling_fantasy_points": 20.3,
+    "ceiling_fantasy_points": 20.2,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -10157,10 +9877,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4248528",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035228",
@@ -10172,8 +9889,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 10.64,
-    "floor_fantasy_points": 6.8,
-    "ceiling_fantasy_points": 26.4,
+    "floor_fantasy_points": 4.8,
+    "ceiling_fantasy_points": 18.5,
     "projected_pass_yards": 138.95,
     "projected_pass_tds": 0.52,
     "projected_interceptions": 0.25,
@@ -10313,14 +10030,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3917315",
-    "opponent": "ATL",
-    "matchup": "vs ATL",
-    "home_away": "home",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037525",
@@ -10473,14 +10183,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4360569",
-    "opponent": "ATL",
-    "matchup": "vs ATL",
-    "home_away": "home",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040666",
@@ -10633,14 +10336,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4685382",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040126",
@@ -10793,14 +10489,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4723086",
-    "opponent": "DET",
-    "matchup": "@ DET",
-    "home_away": "away",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034844",
@@ -10953,14 +10642,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3929630",
-    "opponent": "DAL",
-    "matchup": "@ DAL",
-    "home_away": "away",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038400",
@@ -10972,8 +10654,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 10.36,
-    "floor_fantasy_points": 6.4,
-    "ceiling_fantasy_points": 26.1,
+    "floor_fantasy_points": 4.5,
+    "ceiling_fantasy_points": 18.3,
     "projected_pass_yards": 116.76,
     "projected_pass_tds": 0.52,
     "projected_interceptions": 0.5,
@@ -11113,14 +10795,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4685201",
-    "opponent": "DAL",
-    "matchup": "@ DAL",
-    "home_away": "away",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036554",
@@ -11273,14 +10948,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4258173",
-    "opponent": "BAL",
-    "matchup": "vs BAL",
-    "home_away": "home",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040122",
@@ -11433,14 +11101,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4890973",
-    "opponent": "CLE",
-    "matchup": "@ CLE",
-    "home_away": "away",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041562",
@@ -11545,14 +11206,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4837248",
-    "opponent": "CLE",
-    "matchup": "@ CLE",
-    "home_away": "away",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039064",
@@ -11705,14 +11359,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4429615",
-    "opponent": "HOU",
-    "matchup": "@ HOU",
-    "home_away": "away",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040784",
@@ -11865,14 +11512,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4685702",
-    "opponent": "LV",
-    "matchup": "vs LV",
-    "home_away": "home",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041251",
@@ -11884,8 +11524,8 @@
     "projected_yards": -0.56,
     "projected_tds": 0.0,
     "projected_fantasy_points": 10.01,
-    "floor_fantasy_points": 5.9,
-    "ceiling_fantasy_points": 25.6,
+    "floor_fantasy_points": 4.1,
+    "ceiling_fantasy_points": 17.9,
     "projected_pass_yards": 87.64,
     "projected_pass_tds": 0.52,
     "projected_interceptions": 1.25,
@@ -12009,14 +11649,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4596472",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041037",
@@ -12169,14 +11802,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4832800",
-    "opponent": "LV",
-    "matchup": "vs LV",
-    "home_away": "home",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037239",
@@ -12329,14 +11955,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4361370",
-    "opponent": "CIN",
-    "matchup": "@ CIN",
-    "home_away": "away",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034351",
@@ -12489,14 +12108,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3121023",
-    "opponent": "DAL",
-    "matchup": "@ DAL",
-    "home_away": "away",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039398",
@@ -12649,14 +12261,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4360698",
-    "opponent": "DAL",
-    "matchup": "@ DAL",
-    "home_away": "away",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040242",
@@ -12809,14 +12414,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4575131",
-    "opponent": "ARI",
-    "matchup": "@ ARI",
-    "home_away": "away",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039165",
@@ -12969,14 +12567,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4426385",
-    "opponent": "SF",
-    "matchup": "@ SF",
-    "home_away": "away",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039880",
@@ -13129,14 +12720,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4569603",
-    "opponent": "NYJ",
-    "matchup": "vs NYJ",
-    "home_away": "home",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035704",
@@ -13148,8 +12732,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 9.66,
-    "floor_fantasy_points": 5.4,
-    "ceiling_fantasy_points": 25.0,
+    "floor_fantasy_points": 3.8,
+    "ceiling_fantasy_points": 17.5,
     "projected_pass_yards": 104.44,
     "projected_pass_tds": 0.88,
     "projected_interceptions": 0.0,
@@ -13289,14 +12873,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3924327",
-    "opponent": "SF",
-    "matchup": "@ SF",
-    "home_away": "away",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038129",
@@ -13449,14 +13026,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4243331",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032268",
@@ -13468,8 +13038,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 9.52,
-    "floor_fantasy_points": 5.2,
-    "ceiling_fantasy_points": 24.8,
+    "floor_fantasy_points": 3.6,
+    "ceiling_fantasy_points": 17.4,
     "projected_pass_yards": 105.0,
     "projected_pass_tds": 0.88,
     "projected_interceptions": 0.0,
@@ -13609,14 +13179,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "2576980",
-    "opponent": "ARI",
-    "matchup": "@ ARI",
-    "home_away": "away",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038579",
@@ -13628,8 +13191,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 9.45,
-    "floor_fantasy_points": 5.1,
-    "ceiling_fantasy_points": 24.7,
+    "floor_fantasy_points": 3.6,
+    "ceiling_fantasy_points": 17.3,
     "projected_pass_yards": 142.94,
     "projected_pass_tds": 0.7,
     "projected_interceptions": 0.5,
@@ -13769,14 +13332,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4260394",
-    "opponent": "CLE",
-    "matchup": "@ CLE",
-    "home_away": "away",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040128",
@@ -13929,14 +13485,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4431459",
-    "opponent": "NYG",
-    "matchup": "vs NYG",
-    "home_away": "home",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0030565",
@@ -14089,14 +13638,160 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "15864",
-    "opponent": "MIA",
-    "matchup": "@ MIA",
-    "home_away": "away",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0040667",
+    "name": "M.Golden",
+    "team": "GB",
+    "position": "WR",
+    "projected_targets": 7.7,
+    "projected_receptions": 4.9,
+    "projected_yards": 61.6,
+    "projected_tds": 0.35,
+    "projected_fantasy_points": 9.24,
+    "floor_fantasy_points": 5.7,
+    "ceiling_fantasy_points": 15.9,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      19.4,
+      6.9,
+      17.4,
+      27.4,
+      9.5,
+      4.4
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        19.4,
+        6.9,
+        17.4,
+        27.4,
+        9.5,
+        4.4
+      ],
+      "targets": [
+        13.0,
+        12.0,
+        13.0,
+        10.0,
+        9.0,
+        5.0
+      ],
+      "receptions": [
+        6.0,
+        6.0,
+        7.0,
+        10.0,
+        5.0,
+        1.0
+      ],
+      "yards": [
+        104.0,
+        39.0,
+        79.0,
+        164.0,
+        70.0,
+        39.0
+      ],
+      "touchdowns": [
+        1.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 2,
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0029701",
@@ -14248,14 +13943,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "14876",
-    "opponent": "JAX",
-    "matchup": "@ JAX",
-    "home_away": "away",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031588",
@@ -14408,14 +14096,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "2976212",
-    "opponent": "ARI",
-    "matchup": "@ ARI",
-    "home_away": "away",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037840",
@@ -14428,7 +14109,7 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 9.2,
     "floor_fantasy_points": 3.3,
-    "ceiling_fantasy_points": 19.2,
+    "ceiling_fantasy_points": 19.4,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -14568,10 +14249,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4430737",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038606",
@@ -14724,14 +14402,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4432620",
-    "opponent": "TEN",
-    "matchup": "vs TEN",
-    "home_away": "home",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040663",
@@ -14884,14 +14555,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "5083076",
-    "opponent": "LV",
-    "matchup": "vs LV",
-    "home_away": "home",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037247",
@@ -14903,8 +14567,8 @@
     "projected_yards": 56.56,
     "projected_tds": 0.7,
     "projected_fantasy_points": 9.03,
-    "floor_fantasy_points": 8.0,
-    "ceiling_fantasy_points": 22.1,
+    "floor_fantasy_points": 5.6,
+    "ceiling_fantasy_points": 15.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -15044,14 +14708,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4426354",
-    "opponent": "PHI",
-    "matchup": "vs PHI",
-    "home_away": "home",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040234",
@@ -15063,8 +14720,8 @@
     "projected_yards": -1.05,
     "projected_tds": 0.0,
     "projected_fantasy_points": 9.03,
-    "floor_fantasy_points": 4.4,
-    "ceiling_fantasy_points": 24.1,
+    "floor_fantasy_points": 3.1,
+    "ceiling_fantasy_points": 16.9,
     "projected_pass_yards": 108.85,
     "projected_pass_tds": 0.52,
     "projected_interceptions": 0.75,
@@ -15188,14 +14845,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4889929",
-    "opponent": "TEN",
-    "matchup": "vs TEN",
-    "home_away": "home",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031408",
@@ -15348,14 +14998,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "16737",
-    "opponent": "SEA",
-    "matchup": "vs SEA",
-    "home_away": "home",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038996",
@@ -15508,10 +15151,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4572680",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039409",
@@ -15664,14 +15304,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4686361",
-    "opponent": "TEN",
-    "matchup": "vs TEN",
-    "home_away": "home",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039067",
@@ -15824,14 +15457,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4428331",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040124",
@@ -15984,170 +15610,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4685472",
-    "opponent": "TB",
-    "matchup": "@ TB",
-    "home_away": "away",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
-  },
-  {
-    "player_id": "00-0040667",
-    "name": "M.Golden",
-    "team": "GB",
-    "position": "WR",
-    "projected_targets": 7.7,
-    "projected_receptions": 4.9,
-    "projected_yards": 61.6,
-    "projected_tds": 0.35,
-    "projected_fantasy_points": 8.68,
-    "floor_fantasy_points": 7.5,
-    "ceiling_fantasy_points": 22.7,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      19.4,
-      6.9,
-      17.4,
-      27.4,
-      9.5,
-      4.4
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        19.4,
-        6.9,
-        17.4,
-        27.4,
-        9.5,
-        4.4
-      ],
-      "targets": [
-        13.0,
-        12.0,
-        13.0,
-        10.0,
-        9.0,
-        5.0
-      ],
-      "receptions": [
-        6.0,
-        6.0,
-        7.0,
-        10.0,
-        5.0,
-        1.0
-      ],
-      "yards": [
-        104.0,
-        39.0,
-        79.0,
-        164.0,
-        70.0,
-        39.0
-      ],
-      "touchdowns": [
-        1.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4701936",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040583",
@@ -16159,8 +15622,8 @@
     "projected_yards": 11.76,
     "projected_tds": 0.0,
     "projected_fantasy_points": 8.61,
-    "floor_fantasy_points": 6.3,
-    "ceiling_fantasy_points": 20.9,
+    "floor_fantasy_points": 4.4,
+    "ceiling_fantasy_points": 14.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -16300,14 +15763,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4429059",
-    "opponent": "BAL",
-    "matchup": "vs BAL",
-    "home_away": "home",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032058",
@@ -16395,14 +15851,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "2979477",
-    "opponent": "SEA",
-    "matchup": "vs SEA",
-    "home_away": "home",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035120",
@@ -16490,14 +15939,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "3120980",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036973",
@@ -16650,14 +16092,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4239996",
-    "opponent": "CIN",
-    "matchup": "@ CIN",
-    "home_away": "away",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034184",
@@ -16809,14 +16244,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "3051926",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036212",
@@ -16828,8 +16256,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 8.47,
-    "floor_fantasy_points": 3.7,
-    "ceiling_fantasy_points": 23.4,
+    "floor_fantasy_points": 2.6,
+    "ceiling_fantasy_points": 16.4,
     "projected_pass_yards": 123.9,
     "projected_pass_tds": 0.52,
     "projected_interceptions": 0.5,
@@ -16969,14 +16397,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4241479",
-    "opponent": "MIN",
-    "matchup": "@ MIN",
-    "home_away": "away",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036898",
@@ -16988,8 +16409,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 8.33,
-    "floor_fantasy_points": 3.5,
-    "ceiling_fantasy_points": 23.2,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 16.2,
     "projected_pass_yards": 132.16,
     "projected_pass_tds": 0.88,
     "projected_interceptions": 0.25,
@@ -17129,14 +16550,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4242546",
-    "opponent": "BAL",
-    "matchup": "vs BAL",
-    "home_away": "home",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041029",
@@ -17148,8 +16562,8 @@
     "projected_yards": 38.5,
     "projected_tds": 0.0,
     "projected_fantasy_points": 8.33,
-    "floor_fantasy_points": 6.9,
-    "ceiling_fantasy_points": 20.7,
+    "floor_fantasy_points": 4.8,
+    "ceiling_fantasy_points": 14.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -17241,14 +16655,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4880281",
-    "opponent": "CIN",
-    "matchup": "@ CIN",
-    "home_away": "away",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0026300",
@@ -17260,8 +16667,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 8.26,
-    "floor_fantasy_points": 3.4,
-    "ceiling_fantasy_points": 23.0,
+    "floor_fantasy_points": 2.4,
+    "ceiling_fantasy_points": 16.1,
     "projected_pass_yards": 67.9,
     "projected_pass_tds": 0.17,
     "projected_interceptions": 0.5,
@@ -17401,14 +16808,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "11394",
-    "opponent": "WAS",
-    "matchup": "vs WAS",
-    "home_away": "home",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036410",
@@ -17420,8 +16820,8 @@
     "projected_yards": 70.14,
     "projected_tds": 0.88,
     "projected_fantasy_points": 8.26,
-    "floor_fantasy_points": 6.8,
-    "ceiling_fantasy_points": 19.4,
+    "floor_fantasy_points": 4.8,
+    "ceiling_fantasy_points": 13.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -17561,14 +16961,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4239993",
-    "opponent": "NO",
-    "matchup": "vs NO",
-    "home_away": "home",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034827",
@@ -17721,14 +17114,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3915416",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039065",
@@ -17881,14 +17267,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4430027",
-    "opponent": "CHI",
-    "matchup": "vs CHI",
-    "home_away": "home",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039738",
@@ -17899,9 +17278,9 @@
     "projected_receptions": 0.7,
     "projected_yards": 4.76,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 8.05,
-    "floor_fantasy_points": 5.6,
-    "ceiling_fantasy_points": 20.6,
+    "projected_fantasy_points": 7.98,
+    "floor_fantasy_points": 3.8,
+    "ceiling_fantasy_points": 14.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -18041,10 +17420,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4429096",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037692",
@@ -18197,14 +17573,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3953687",
-    "opponent": "PHI",
-    "matchup": "vs PHI",
-    "home_away": "home",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038563",
@@ -18357,14 +17726,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4428718",
-    "opponent": "CLE",
-    "matchup": "@ CLE",
-    "home_away": "away",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039172",
@@ -18517,14 +17879,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4689936",
-    "opponent": "CHI",
-    "matchup": "vs CHI",
-    "home_away": "home",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0030506",
@@ -18677,14 +18032,160 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "15847",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0029822",
+    "name": "B.McManus",
+    "team": "LA",
+    "position": "K",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 7.7,
+    "floor_fantasy_points": 3.2,
+    "ceiling_fantasy_points": 12.8,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": 1.2,
+    "projected_fg_att": 1.2,
+    "projected_xp": 3.5,
+    "recent_fantasy_points": [
+      3.0,
+      5.0,
+      6.0,
+      8.0,
+      10.0,
+      14.0
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        3.0,
+        5.0,
+        6.0,
+        8.0,
+        10.0,
+        14.0
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "fg_att": [
+        2.0,
+        0.0,
+        1.0,
+        2.0,
+        2.0,
+        4.0
+      ],
+      "pat_made": [
+        3.0,
+        5.0,
+        3.0,
+        2.0,
+        4.0,
+        2.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036854",
@@ -18837,14 +18338,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4360234",
-    "opponent": "NO",
-    "matchup": "vs NO",
-    "home_away": "home",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0023853",
@@ -18996,14 +18490,7 @@
         3.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "11122",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040200",
@@ -19156,170 +18643,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4569923",
-    "opponent": "LAC",
-    "matchup": "@ LAC",
-    "home_away": "away",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
-  },
-  {
-    "player_id": "00-0029822",
-    "name": "B.McManus",
-    "team": "LA",
-    "position": "K",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 7.4,
-    "floor_fantasy_points": 2.9,
-    "ceiling_fantasy_points": 12.5,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": 1.2,
-    "projected_fg_att": 1.2,
-    "projected_xp": 3.5,
-    "recent_fantasy_points": [
-      3.0,
-      5.0,
-      6.0,
-      8.0,
-      10.0,
-      14.0
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        3.0,
-        5.0,
-        6.0,
-        8.0,
-        10.0,
-        14.0
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        1.0,
-        2.0,
-        2.0,
-        4.0
-      ],
-      "fg_att": [
-        2.0,
-        0.0,
-        1.0,
-        2.0,
-        2.0,
-        4.0
-      ],
-      "pat_made": [
-        3.0,
-        5.0,
-        3.0,
-        2.0,
-        4.0,
-        2.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "16339",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038428",
@@ -19472,82 +18796,75 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4258620",
-    "opponent": "LV",
-    "matchup": "vs LV",
-    "home_away": "home",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
-    "player_id": "00-0040899",
-    "name": "T.Smack",
+    "player_id": "00-0035700",
+    "name": "J.Jacobs",
     "team": "GB",
-    "position": "K",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 7.4,
+    "position": "RB",
+    "projected_targets": 3.15,
+    "projected_receptions": 2.4,
+    "projected_yards": 13.35,
+    "projected_tds": 0.38,
+    "projected_fantasy_points": 7.35,
     "floor_fantasy_points": 2.9,
-    "ceiling_fantasy_points": 12.7,
+    "ceiling_fantasy_points": 14.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 1.2,
-    "projected_fg_att": 2.0,
-    "projected_xp": 2.5,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
     "recent_fantasy_points": [
-      11.0,
-      5.0,
-      3.0,
-      13.0,
-      4.0,
-      7.0
+      3.8,
+      0.8,
+      6.3,
+      17.6,
+      20.2,
+      0.5
     ],
     "recent_stats": {
       "fantasy_points": [
-        11.0,
-        5.0,
-        3.0,
-        13.0,
-        4.0,
-        7.0
+        3.8,
+        0.8,
+        6.3,
+        17.6,
+        20.2,
+        0.5
       ],
       "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
+        2.0,
+        1.0,
+        3.0,
+        7.0,
+        6.0,
         0.0
       ],
       "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
+        2.0,
+        1.0,
+        1.0,
+        5.0,
+        6.0,
         0.0
       ],
       "yards": [
+        12.0,
         0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
+        3.0,
+        55.0,
+        13.0,
         0.0
       ],
       "touchdowns": [
         0.0,
         0.0,
         0.0,
-        0.0,
-        0.0,
+        1.0,
+        1.0,
         0.0
       ],
       "passing_yards": [
@@ -19591,51 +18908,49 @@
         0.0
       ],
       "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
+        36.0,
+        3.0,
+        55.0,
+        36.0,
+        39.0,
+        5.0
       ],
       "rushing_tds": [
         0.0,
         0.0,
         0.0,
         0.0,
-        0.0,
+        1.0,
         0.0
       ],
       "fg_made": [
-        3.0,
-        1.0,
         0.0,
-        3.0,
-        1.0,
-        2.0
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "fg_att": [
-        3.0,
-        3.0,
         0.0,
-        3.0,
-        2.0,
-        2.0
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ],
       "pat_made": [
-        2.0,
-        2.0,
-        3.0,
-        4.0,
-        1.0,
-        1.0
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4869461",
-    "opponent": null,
-    "matchup": null
+    "injury_status": "questionable",
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033303",
@@ -19788,14 +19103,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3055899",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039404",
@@ -19948,14 +19256,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4567104",
-    "opponent": "ATL",
-    "matchup": "vs ATL",
-    "home_away": "home",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034753",
@@ -20108,14 +19409,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3116365",
-    "opponent": "HOU",
-    "matchup": "@ HOU",
-    "home_away": "away",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035358",
@@ -20268,14 +19562,160 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3150744",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0040899",
+    "name": "T.Smack",
+    "team": "GB",
+    "position": "K",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 7.2,
+    "floor_fantasy_points": 2.8,
+    "ceiling_fantasy_points": 12.7,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": 1.2,
+    "projected_fg_att": 2.0,
+    "projected_xp": 2.5,
+    "recent_fantasy_points": [
+      11.0,
+      5.0,
+      3.0,
+      13.0,
+      4.0,
+      7.0
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        11.0,
+        5.0,
+        3.0,
+        13.0,
+        4.0,
+        7.0
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        3.0,
+        1.0,
+        0.0,
+        3.0,
+        1.0,
+        2.0
+      ],
+      "fg_att": [
+        3.0,
+        3.0,
+        0.0,
+        3.0,
+        2.0,
+        2.0
+      ],
+      "pat_made": [
+        2.0,
+        2.0,
+        3.0,
+        4.0,
+        1.0,
+        1.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039851",
@@ -20287,8 +19727,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 7.16,
-    "floor_fantasy_points": 9.5,
-    "ceiling_fantasy_points": 29.2,
+    "floor_fantasy_points": 3.8,
+    "ceiling_fantasy_points": 11.7,
     "projected_pass_yards": 105.4,
     "projected_pass_tds": 1.0,
     "projected_interceptions": 1.0,
@@ -20428,14 +19868,7 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT",
-    "espn_id": "4431452",
-    "opponent": "LAC",
-    "matchup": "@ LAC",
-    "home_away": "away",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038994",
@@ -20447,8 +19880,8 @@
     "projected_yards": 39.9,
     "projected_tds": 0.17,
     "projected_fantasy_points": 7.14,
-    "floor_fantasy_points": 5.3,
-    "ceiling_fantasy_points": 18.7,
+    "floor_fantasy_points": 3.7,
+    "ceiling_fantasy_points": 13.1,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -20588,14 +20021,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4429205",
-    "opponent": "ATL",
-    "matchup": "vs ATL",
-    "home_away": "home",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032569",
@@ -20748,14 +20174,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "2985659",
-    "opponent": "PIT",
-    "matchup": "@ PIT",
-    "home_away": "away",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035192",
@@ -20908,14 +20327,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3124084",
-    "opponent": "JAX",
-    "matchup": "@ JAX",
-    "home_away": "away",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037224",
@@ -21068,14 +20480,160 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4362081",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0038933",
+    "name": "D.Kincaid",
+    "team": "BUF",
+    "position": "TE",
+    "projected_targets": 4.8,
+    "projected_receptions": 3.8,
+    "projected_yards": 39.8,
+    "projected_tds": 0.25,
+    "projected_fantasy_points": 7.1,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 14.8,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      1.2,
+      1.2,
+      7.3,
+      16.6,
+      4.3,
+      6.8
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        1.2,
+        1.2,
+        7.3,
+        16.6,
+        4.3,
+        6.8
+      ],
+      "targets": [
+        2.0,
+        2.0,
+        8.0,
+        6.0,
+        3.0,
+        3.0
+      ],
+      "receptions": [
+        1.0,
+        1.0,
+        7.0,
+        4.0,
+        3.0,
+        2.0
+      ],
+      "yards": [
+        7.0,
+        7.0,
+        38.0,
+        86.0,
+        28.0,
+        58.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041182",
@@ -21228,14 +20786,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "5081335",
-    "opponent": "ARI",
-    "matchup": "@ ARI",
-    "home_away": "away",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0025580",
@@ -21387,14 +20938,159 @@
         3.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "10636",
-    "opponent": "IND",
-    "matchup": "@ IND",
-    "home_away": "away",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0030332",
+    "name": "B.Maher",
+    "team": "LA",
+    "position": "K",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 7.0,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 12.1,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": 1.2,
+    "projected_fg_att": 1.8,
+    "projected_xp": 1.2,
+    "recent_fantasy_points": [
+      11.0,
+      2.0,
+      14.0,
+      3.0,
+      1.0,
+      11.0
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        11.0,
+        2.0,
+        14.0,
+        3.0,
+        1.0,
+        11.0
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        3.0,
+        0.0,
+        4.0,
+        1.0,
+        0.0,
+        3.0
+      ],
+      "fg_att": [
+        5.0,
+        0.0,
+        4.0,
+        3.0,
+        0.0,
+        3.0
+      ],
+      "pat_made": [
+        2.0,
+        2.0,
+        2.0,
+        0.0,
+        1.0,
+        2.0
+      ]
+    },
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032726",
@@ -21547,14 +21243,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "2971573",
-    "opponent": "BAL",
-    "matchup": "vs BAL",
-    "home_away": "home",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033923",
@@ -21706,14 +21395,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "3059915",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034084",
@@ -21865,14 +21547,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "3123052",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034173",
@@ -22025,14 +21700,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4034949",
-    "opponent": "SEA",
-    "matchup": "vs SEA",
-    "home_away": "home",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036162",
@@ -22185,14 +21853,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3917232",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038562",
@@ -22345,14 +22006,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4372066",
-    "opponent": "MIN",
-    "matchup": "@ MIN",
-    "home_away": "away",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039229",
@@ -22505,14 +22159,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "5208518",
-    "opponent": "CIN",
-    "matchup": "@ CIN",
-    "home_away": "away",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040279",
@@ -22665,14 +22312,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4568263",
-    "opponent": "TB",
-    "matchup": "@ TB",
-    "home_away": "away",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039794",
@@ -22684,8 +22324,8 @@
     "projected_yards": 11.06,
     "projected_tds": 0.0,
     "projected_fantasy_points": 6.93,
-    "floor_fantasy_points": 4.0,
-    "ceiling_fantasy_points": 20.6,
+    "floor_fantasy_points": 2.8,
+    "ceiling_fantasy_points": 14.4,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -22825,14 +22465,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4685247",
-    "opponent": "MIA",
-    "matchup": "@ MIA",
-    "home_away": "away",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031492",
@@ -22985,14 +22618,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "2473037",
-    "opponent": "SF",
-    "matchup": "@ SF",
-    "home_away": "away",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036816",
@@ -23145,14 +22771,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4243371",
-    "opponent": "HOU",
-    "matchup": "@ HOU",
-    "home_away": "away",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038935",
@@ -23305,14 +22924,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4430539",
-    "opponent": "TEN",
-    "matchup": "vs TEN",
-    "home_away": "home",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040736",
@@ -23465,14 +23077,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4808766",
-    "opponent": "MIA",
-    "matchup": "@ MIA",
-    "home_away": "away",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037240",
@@ -23484,8 +23089,8 @@
     "projected_yards": 42.35,
     "projected_tds": 0.52,
     "projected_fantasy_points": 6.86,
-    "floor_fantasy_points": 4.8,
-    "ceiling_fantasy_points": 18.4,
+    "floor_fantasy_points": 3.4,
+    "ceiling_fantasy_points": 12.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -23625,169 +23230,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4426388",
-    "opponent": "CHI",
-    "matchup": "vs CHI",
-    "home_away": "home",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
-  },
-  {
-    "player_id": "00-0030332",
-    "name": "B.Maher",
-    "team": "LA",
-    "position": "K",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 6.8,
-    "floor_fantasy_points": 2.3,
-    "ceiling_fantasy_points": 12.0,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": 1.2,
-    "projected_fg_att": 1.8,
-    "projected_xp": 1.2,
-    "recent_fantasy_points": [
-      11.0,
-      2.0,
-      14.0,
-      3.0,
-      1.0,
-      11.0
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        11.0,
-        2.0,
-        14.0,
-        3.0,
-        1.0,
-        11.0
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        3.0,
-        0.0,
-        4.0,
-        1.0,
-        0.0,
-        3.0
-      ],
-      "fg_att": [
-        5.0,
-        0.0,
-        4.0,
-        3.0,
-        0.0,
-        3.0
-      ],
-      "pat_made": [
-        2.0,
-        2.0,
-        2.0,
-        0.0,
-        1.0,
-        2.0
-      ]
-    },
-    "roster_status": "ACT",
-    "espn_id": "16486",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031136",
@@ -23940,14 +23383,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "17372",
-    "opponent": "DEN",
-    "matchup": "vs DEN",
-    "home_away": "home",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037809",
@@ -24100,14 +23536,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4360635",
-    "opponent": "ARI",
-    "matchup": "@ ARI",
-    "home_away": "away",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038567",
@@ -24260,14 +23689,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4363538",
-    "opponent": "WAS",
-    "matchup": "vs WAS",
-    "home_away": "home",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041523",
@@ -24279,8 +23701,8 @@
     "projected_yards": 44.45,
     "projected_tds": 0.35,
     "projected_fantasy_points": 6.72,
-    "floor_fantasy_points": 4.6,
-    "ceiling_fantasy_points": 18.7,
+    "floor_fantasy_points": 3.2,
+    "ceiling_fantasy_points": 13.1,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -24420,14 +23842,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4869645",
-    "opponent": "NYJ",
-    "matchup": "vs NYJ",
-    "home_away": "home",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035676",
@@ -24580,14 +23995,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4047646",
-    "opponent": "LAC",
-    "matchup": "@ LAC",
-    "home_away": "away",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039576",
@@ -24740,14 +24148,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4571557",
-    "opponent": "NYG",
-    "matchup": "vs NYG",
-    "home_away": "home",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041145",
@@ -24900,14 +24301,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "5082424",
-    "opponent": "IND",
-    "matchup": "@ IND",
-    "home_away": "away",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036139",
@@ -24919,8 +24313,8 @@
     "projected_yards": 10.85,
     "projected_tds": 0.0,
     "projected_fantasy_points": 6.65,
-    "floor_fantasy_points": 3.6,
-    "ceiling_fantasy_points": 18.0,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 12.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -25060,14 +24454,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4038815",
-    "opponent": "DEN",
-    "matchup": "vs DEN",
-    "home_away": "home",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031203",
@@ -25220,14 +24607,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "17427",
-    "opponent": "DET",
-    "matchup": "@ DET",
-    "home_away": "away",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035269",
@@ -25380,14 +24760,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4249087",
-    "opponent": "CLE",
-    "matchup": "@ CLE",
-    "home_away": "away",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039915",
@@ -25540,14 +24913,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4612826",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034383",
@@ -25700,14 +25066,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3117256",
-    "opponent": "BAL",
-    "matchup": "vs BAL",
-    "home_away": "home",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035229",
@@ -25860,14 +25219,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4036133",
-    "opponent": "ATL",
-    "matchup": "vs ATL",
-    "home_away": "home",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038416",
@@ -25879,8 +25231,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 6.44,
-    "floor_fantasy_points": 0.8,
-    "ceiling_fantasy_points": 20.5,
+    "floor_fantasy_points": 0.6,
+    "ceiling_fantasy_points": 14.3,
     "projected_pass_yards": 64.54,
     "projected_pass_tds": 0.0,
     "projected_interceptions": 0.25,
@@ -26020,14 +25372,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4434153",
-    "opponent": "DET",
-    "matchup": "@ DET",
-    "home_away": "away",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039919",
@@ -26039,8 +25384,8 @@
     "projected_yards": 44.66,
     "projected_tds": 0.17,
     "projected_fantasy_points": 6.44,
-    "floor_fantasy_points": 4.2,
-    "ceiling_fantasy_points": 18.5,
+    "floor_fantasy_points": 2.9,
+    "ceiling_fantasy_points": 12.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -26180,14 +25525,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4431299",
-    "opponent": "DET",
-    "matchup": "@ DET",
-    "home_away": "away",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039164",
@@ -26340,14 +25678,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4429084",
-    "opponent": "NYG",
-    "matchup": "vs NYG",
-    "home_away": "home",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041013",
@@ -26359,8 +25690,8 @@
     "projected_yards": 37.66,
     "projected_tds": 0.52,
     "projected_fantasy_points": 6.37,
-    "floor_fantasy_points": 3.1,
-    "ceiling_fantasy_points": 21.3,
+    "floor_fantasy_points": 2.2,
+    "ceiling_fantasy_points": 14.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -26500,14 +25831,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4832955",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041547",
@@ -26519,8 +25843,8 @@
     "projected_yards": 50.4,
     "projected_tds": 0.17,
     "projected_fantasy_points": 6.37,
-    "floor_fantasy_points": 4.2,
-    "ceiling_fantasy_points": 19.4,
+    "floor_fantasy_points": 2.9,
+    "ceiling_fantasy_points": 13.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -26660,14 +25984,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4870653",
-    "opponent": "LV",
-    "matchup": "vs LV",
-    "home_away": "home",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033357",
@@ -26819,14 +26136,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "2468609",
-    "opponent": "CIN",
-    "matchup": "@ CIN",
-    "home_away": "away",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041489",
@@ -26838,8 +26148,8 @@
     "projected_yards": 25.2,
     "projected_tds": 0.17,
     "projected_fantasy_points": 6.23,
-    "floor_fantasy_points": 4.0,
-    "ceiling_fantasy_points": 16.6,
+    "floor_fantasy_points": 2.8,
+    "ceiling_fantasy_points": 11.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -26979,14 +26289,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4685261",
-    "opponent": "DEN",
-    "matchup": "vs DEN",
-    "home_away": "home",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0023252",
@@ -27138,14 +26441,7 @@
         1.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "9354",
-    "opponent": "SEA",
-    "matchup": "vs SEA",
-    "home_away": "home",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0027948",
@@ -27249,14 +26545,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "13987",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035282",
@@ -27268,8 +26557,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 6.2,
-    "floor_fantasy_points": 7.1,
-    "ceiling_fantasy_points": 26.8,
+    "floor_fantasy_points": 2.8,
+    "ceiling_fantasy_points": 10.7,
     "projected_pass_yards": 87.12,
     "projected_pass_tds": 0.3,
     "projected_interceptions": 0.25,
@@ -27393,14 +26682,7 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT",
-    "espn_id": "3120590",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036970",
@@ -27553,14 +26835,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4360248",
-    "opponent": "MIN",
-    "matchup": "@ MIN",
-    "home_away": "away",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033787",
@@ -27713,14 +26988,160 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3050478",
-    "opponent": "DAL",
-    "matchup": "@ DAL",
-    "home_away": "away",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0038041",
+    "name": "J.Ferguson",
+    "team": "DAL",
+    "position": "TE",
+    "projected_targets": 3.5,
+    "projected_receptions": 2.0,
+    "projected_yards": 10.8,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 6.1,
+    "floor_fantasy_points": 1.5,
+    "ceiling_fantasy_points": 12.2,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      7.8,
+      2.6,
+      3.4,
+      2.3,
+      0.0,
+      9.1
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        7.8,
+        2.6,
+        3.4,
+        2.3,
+        0.0,
+        9.1
+      ],
+      "targets": [
+        5.0,
+        4.0,
+        6.0,
+        3.0,
+        1.0,
+        2.0
+      ],
+      "receptions": [
+        3.0,
+        3.0,
+        3.0,
+        2.0,
+        0.0,
+        2.0
+      ],
+      "yards": [
+        23.0,
+        11.0,
+        19.0,
+        13.0,
+        0.0,
+        21.0
+      ],
+      "touchdowns": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039890",
@@ -27732,8 +27153,8 @@
     "projected_yards": 35.14,
     "projected_tds": 0.17,
     "projected_fantasy_points": 6.09,
-    "floor_fantasy_points": 3.7,
-    "ceiling_fantasy_points": 17.3,
+    "floor_fantasy_points": 2.6,
+    "ceiling_fantasy_points": 12.1,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -27873,14 +27294,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4597500",
-    "opponent": "MIA",
-    "matchup": "@ MIA",
-    "home_away": "away",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037256",
@@ -27892,8 +27306,8 @@
     "projected_yards": 14.14,
     "projected_tds": 0.17,
     "projected_fantasy_points": 6.02,
-    "floor_fantasy_points": 2.7,
-    "ceiling_fantasy_points": 18.1,
+    "floor_fantasy_points": 1.9,
+    "ceiling_fantasy_points": 12.7,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -28033,14 +27447,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4697815",
-    "opponent": "ARI",
-    "matchup": "@ ARI",
-    "home_away": "away",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040162",
@@ -28052,8 +27459,8 @@
     "projected_yards": 21.14,
     "projected_tds": 0.0,
     "projected_fantasy_points": 6.02,
-    "floor_fantasy_points": 2.7,
-    "ceiling_fantasy_points": 18.5,
+    "floor_fantasy_points": 1.9,
+    "ceiling_fantasy_points": 12.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -28193,14 +27600,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "5081397",
-    "opponent": "LV",
-    "matchup": "vs LV",
-    "home_away": "home",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0026968",
@@ -28352,14 +27752,7 @@
         2.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "12731",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039793",
@@ -28512,14 +27905,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4576297",
-    "opponent": "SF",
-    "matchup": "@ SF",
-    "home_away": "away",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034960",
@@ -28531,8 +27917,8 @@
     "projected_yards": 36.05,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.88,
-    "floor_fantasy_points": 3.5,
-    "ceiling_fantasy_points": 17.0,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 11.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -28672,14 +28058,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3916433",
-    "opponent": "TEN",
-    "matchup": "vs TEN",
-    "home_away": "home",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037157",
@@ -28691,8 +28070,8 @@
     "projected_yards": 7.56,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.88,
-    "floor_fantasy_points": 2.4,
-    "ceiling_fantasy_points": 17.8,
+    "floor_fantasy_points": 1.7,
+    "ceiling_fantasy_points": 12.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -28832,14 +28211,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4427728",
-    "opponent": "WAS",
-    "matchup": "vs WAS",
-    "home_away": "home",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036919",
@@ -28851,8 +28223,8 @@
     "projected_yards": 11.76,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.81,
-    "floor_fantasy_points": 2.3,
-    "ceiling_fantasy_points": 16.0,
+    "floor_fantasy_points": 1.6,
+    "ceiling_fantasy_points": 11.2,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -28992,14 +28364,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4371733",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031376",
@@ -29151,14 +28516,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "16782",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033925",
@@ -29310,14 +28668,160 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "3125116",
-    "opponent": "LV",
-    "matchup": "vs LV",
-    "home_away": "home",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0033110",
+    "name": "T.Higbee",
+    "team": "LA",
+    "position": "TE",
+    "projected_targets": 3.5,
+    "projected_receptions": 1.8,
+    "projected_yards": 14.5,
+    "projected_tds": 0.25,
+    "projected_fantasy_points": 5.6,
+    "floor_fantasy_points": 0.9,
+    "ceiling_fantasy_points": 11.6,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      2.2,
+      2.4,
+      1.9,
+      1.8,
+      9.2,
+      1.9
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        2.2,
+        2.4,
+        1.9,
+        1.8,
+        9.2,
+        1.9
+      ],
+      "targets": [
+        4.0,
+        3.0,
+        2.0,
+        5.0,
+        4.0,
+        3.0
+      ],
+      "receptions": [
+        4.0,
+        2.0,
+        1.0,
+        1.0,
+        3.0,
+        1.0
+      ],
+      "yards": [
+        22.0,
+        14.0,
+        14.0,
+        13.0,
+        17.0,
+        14.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034348",
@@ -29329,8 +28833,8 @@
     "projected_yards": 28.35,
     "projected_tds": 0.17,
     "projected_fantasy_points": 5.6,
-    "floor_fantasy_points": 3.1,
-    "ceiling_fantasy_points": 17.0,
+    "floor_fantasy_points": 2.2,
+    "ceiling_fantasy_points": 11.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -29470,14 +28974,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3128429",
-    "opponent": "PIT",
-    "matchup": "@ PIT",
-    "home_away": "away",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040584",
@@ -29630,14 +29127,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4686728",
-    "opponent": "JAX",
-    "matchup": "@ JAX",
-    "home_away": "away",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041052",
@@ -29649,8 +29139,8 @@
     "projected_yards": 2.1,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.6,
-    "floor_fantasy_points": 2.0,
-    "ceiling_fantasy_points": 16.6,
+    "floor_fantasy_points": 1.4,
+    "ceiling_fantasy_points": 11.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -29790,14 +29280,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4696044",
-    "opponent": "SEA",
-    "matchup": "vs SEA",
-    "home_away": "home",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035719",
@@ -29809,8 +29292,8 @@
     "projected_yards": 27.65,
     "projected_tds": 0.52,
     "projected_fantasy_points": 5.53,
-    "floor_fantasy_points": 2.9,
-    "ceiling_fantasy_points": 17.9,
+    "floor_fantasy_points": 2.0,
+    "ceiling_fantasy_points": 12.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -29950,14 +29433,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3126486",
-    "opponent": "SEA",
-    "matchup": "vs SEA",
-    "home_away": "home",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0026544",
@@ -30061,170 +29537,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "12471",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
-  },
-  {
-    "player_id": "00-0033110",
-    "name": "T.Higbee",
-    "team": "LA",
-    "position": "TE",
-    "projected_targets": 3.5,
-    "projected_receptions": 1.8,
-    "projected_yards": 14.5,
-    "projected_tds": 0.25,
-    "projected_fantasy_points": 5.5,
-    "floor_fantasy_points": 0.8,
-    "ceiling_fantasy_points": 11.5,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      2.2,
-      2.4,
-      1.9,
-      1.8,
-      9.2,
-      1.9
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        2.2,
-        2.4,
-        1.9,
-        1.8,
-        9.2,
-        1.9
-      ],
-      "targets": [
-        4.0,
-        3.0,
-        2.0,
-        5.0,
-        4.0,
-        3.0
-      ],
-      "receptions": [
-        4.0,
-        2.0,
-        1.0,
-        1.0,
-        3.0,
-        1.0
-      ],
-      "yards": [
-        22.0,
-        14.0,
-        14.0,
-        13.0,
-        17.0,
-        14.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "2573401",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0028986",
@@ -30236,8 +29549,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.48,
-    "floor_fantasy_points": 5.3,
-    "ceiling_fantasy_points": 25.0,
+    "floor_fantasy_points": 2.1,
+    "ceiling_fantasy_points": 10.0,
     "projected_pass_yards": 54.6,
     "projected_pass_tds": 0.3,
     "projected_interceptions": 0.75,
@@ -30377,14 +29690,7 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT",
-    "espn_id": "15168",
-    "opponent": "DET",
-    "matchup": "@ DET",
-    "home_away": "away",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033293",
@@ -30396,8 +29702,8 @@
     "projected_yards": 5.46,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.46,
-    "floor_fantasy_points": 1.9,
-    "ceiling_fantasy_points": 15.5,
+    "floor_fantasy_points": 1.3,
+    "ceiling_fantasy_points": 10.8,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -30537,14 +29843,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3042519",
-    "opponent": "ATL",
-    "matchup": "vs ATL",
-    "home_away": "home",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034771",
@@ -30697,14 +29996,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3116407",
-    "opponent": "DEN",
-    "matchup": "vs DEN",
-    "home_away": "home",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033555",
@@ -30716,8 +30008,8 @@
     "projected_yards": 33.95,
     "projected_tds": 0.17,
     "projected_fantasy_points": 5.39,
-    "floor_fantasy_points": 2.7,
-    "ceiling_fantasy_points": 16.2,
+    "floor_fantasy_points": 1.9,
+    "ceiling_fantasy_points": 11.3,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -30857,14 +30149,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "2991662",
-    "opponent": "LAC",
-    "matchup": "@ LAC",
-    "home_away": "away",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041042",
@@ -30876,8 +30161,8 @@
     "projected_yards": 35.7,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.39,
-    "floor_fantasy_points": 2.7,
-    "ceiling_fantasy_points": 16.2,
+    "floor_fantasy_points": 1.9,
+    "ceiling_fantasy_points": 11.3,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -31017,14 +30302,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4682648",
-    "opponent": "IND",
-    "matchup": "@ IND",
-    "home_away": "away",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037261",
@@ -31036,8 +30314,8 @@
     "projected_yards": 31.85,
     "projected_tds": 0.17,
     "projected_fantasy_points": 5.32,
-    "floor_fantasy_points": 2.7,
-    "ceiling_fantasy_points": 15.8,
+    "floor_fantasy_points": 1.9,
+    "ceiling_fantasy_points": 11.1,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -31177,175 +30455,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4373678",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
-  },
-  {
-    "player_id": "00-0038933",
-    "name": "D.Kincaid",
-    "team": "BUF",
-    "position": "TE",
-    "projected_targets": 3.6,
-    "projected_receptions": 2.85,
-    "projected_yards": 29.85,
-    "projected_tds": 0.19,
-    "projected_fantasy_points": 5.32,
-    "floor_fantasy_points": 2.5,
-    "ceiling_fantasy_points": 14.8,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      1.2,
-      1.2,
-      7.3,
-      16.6,
-      4.3,
-      6.8
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        1.2,
-        1.2,
-        7.3,
-        16.6,
-        4.3,
-        6.8
-      ],
-      "targets": [
-        2.0,
-        2.0,
-        8.0,
-        6.0,
-        3.0,
-        3.0
-      ],
-      "receptions": [
-        1.0,
-        1.0,
-        7.0,
-        4.0,
-        3.0,
-        2.0
-      ],
-      "yards": [
-        7.0,
-        7.0,
-        38.0,
-        86.0,
-        28.0,
-        58.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "injury_status": "questionable",
-    "roster_status": "ACT",
-    "espn_id": "4385690",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040236",
@@ -31357,8 +30467,8 @@
     "projected_yards": 6.86,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.32,
-    "floor_fantasy_points": 3.5,
-    "ceiling_fantasy_points": 16.5,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 11.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -31498,14 +30608,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4608686",
-    "opponent": "DET",
-    "matchup": "@ DET",
-    "home_away": "away",
-    "game_id": "2026_12_CHI_DET",
-    "gameday": "2026-11-26",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041040",
@@ -31517,8 +30620,8 @@
     "projected_yards": 29.96,
     "projected_tds": 0.17,
     "projected_fantasy_points": 5.32,
-    "floor_fantasy_points": 2.6,
-    "ceiling_fantasy_points": 15.3,
+    "floor_fantasy_points": 1.8,
+    "ceiling_fantasy_points": 10.7,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -31658,14 +30761,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "5081432",
-    "opponent": "ARI",
-    "matchup": "@ ARI",
-    "home_away": "away",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032951",
@@ -31818,14 +30914,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3051889",
-    "opponent": "NYG",
-    "matchup": "vs NYG",
-    "home_away": "home",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033090",
@@ -31978,14 +31067,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3046439",
-    "opponent": "LAC",
-    "matchup": "@ LAC",
-    "home_away": "away",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038046",
@@ -32138,14 +31220,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4241263",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039894",
@@ -32157,8 +31232,8 @@
     "projected_yards": 12.6,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.25,
-    "floor_fantasy_points": 2.5,
-    "ceiling_fantasy_points": 15.1,
+    "floor_fantasy_points": 1.8,
+    "ceiling_fantasy_points": 10.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -32298,14 +31373,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4683062",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033881",
@@ -32458,14 +31526,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3051876",
-    "opponent": "PIT",
-    "matchup": "@ PIT",
-    "home_away": "away",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034794",
@@ -32618,14 +31679,160 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3124679",
-    "opponent": "MIA",
-    "matchup": "@ MIA",
-    "home_away": "away",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0036244",
+    "name": "C.Parkinson",
+    "team": "LA",
+    "position": "TE",
+    "projected_targets": 3.15,
+    "projected_receptions": 2.8,
+    "projected_yards": 18.06,
+    "projected_tds": 0.17,
+    "projected_fantasy_points": 5.11,
+    "floor_fantasy_points": 1.9,
+    "ceiling_fantasy_points": 10.3,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      0.8,
+      11.6,
+      7.3,
+      3.3,
+      2.1,
+      0.9
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        0.8,
+        11.6,
+        7.3,
+        3.3,
+        2.1,
+        0.9
+      ],
+      "targets": [
+        2.0,
+        6.0,
+        6.0,
+        4.0,
+        2.0,
+        2.0
+      ],
+      "receptions": [
+        1.0,
+        5.0,
+        5.0,
+        4.0,
+        2.0,
+        2.0
+      ],
+      "yards": [
+        3.0,
+        31.0,
+        48.0,
+        13.0,
+        11.0,
+        -1.0
+      ],
+      "touchdowns": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 2,
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038618",
@@ -32637,8 +31844,8 @@
     "projected_yards": 19.95,
     "projected_tds": 0.52,
     "projected_fantasy_points": 5.11,
-    "floor_fantasy_points": 2.4,
-    "ceiling_fantasy_points": 15.0,
+    "floor_fantasy_points": 1.7,
+    "ceiling_fantasy_points": 10.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -32778,14 +31985,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4686422",
-    "opponent": "BAL",
-    "matchup": "vs BAL",
-    "home_away": "home",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032436",
@@ -32937,14 +32137,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "2574630",
-    "opponent": "LV",
-    "matchup": "vs LV",
-    "home_away": "home",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037005",
@@ -33097,14 +32290,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4372780",
-    "opponent": "TB",
-    "matchup": "@ TB",
-    "home_away": "away",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034975",
@@ -33116,8 +32302,8 @@
     "projected_yards": 15.26,
     "projected_tds": 0.0,
     "projected_fantasy_points": 5.04,
-    "floor_fantasy_points": 1.4,
-    "ceiling_fantasy_points": 14.9,
+    "floor_fantasy_points": 1.0,
+    "ceiling_fantasy_points": 10.4,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -33257,14 +32443,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4038441",
-    "opponent": "HOU",
-    "matchup": "@ HOU",
-    "home_away": "away",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034829",
@@ -33417,14 +32596,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "3116164",
-    "opponent": "NO",
-    "matchup": "vs NO",
-    "home_away": "home",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035685",
@@ -33577,14 +32749,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4035538",
-    "opponent": "BAL",
-    "matchup": "vs BAL",
-    "home_away": "home",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031288",
@@ -33672,170 +32837,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "16810",
-    "opponent": "NO",
-    "matchup": "vs NO",
-    "home_away": "home",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
-  },
-  {
-    "player_id": "00-0036244",
-    "name": "C.Parkinson",
-    "team": "LA",
-    "position": "TE",
-    "projected_targets": 3.15,
-    "projected_receptions": 2.8,
-    "projected_yards": 18.06,
-    "projected_tds": 0.17,
-    "projected_fantasy_points": 4.9,
-    "floor_fantasy_points": 2.4,
-    "ceiling_fantasy_points": 14.4,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      0.8,
-      11.6,
-      7.3,
-      3.3,
-      2.1,
-      0.9
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        0.8,
-        11.6,
-        7.3,
-        3.3,
-        2.1,
-        0.9
-      ],
-      "targets": [
-        2.0,
-        6.0,
-        6.0,
-        4.0,
-        2.0,
-        2.0
-      ],
-      "receptions": [
-        1.0,
-        5.0,
-        5.0,
-        4.0,
-        2.0,
-        2.0
-      ],
-      "yards": [
-        3.0,
-        31.0,
-        48.0,
-        13.0,
-        11.0,
-        -1.0
-      ],
-      "touchdowns": [
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4242557",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040398",
@@ -33848,7 +32850,7 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.9,
     "floor_fantasy_points": 0.0,
-    "ceiling_fantasy_points": 18.3,
+    "ceiling_fantasy_points": 12.8,
     "projected_pass_yards": 118.86,
     "projected_pass_tds": 0.17,
     "projected_interceptions": 1.75,
@@ -33972,14 +32974,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4429435",
-    "opponent": "MIA",
-    "matchup": "@ MIA",
-    "home_away": "away",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035662",
@@ -34131,14 +33126,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "4241372",
-    "opponent": "DAL",
-    "matchup": "@ DAL",
-    "home_away": "away",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037252",
@@ -34291,14 +33279,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4367209",
-    "opponent": "NYJ",
-    "matchup": "vs NYJ",
-    "home_away": "home",
-    "game_id": "2026_12_NYJ_MIA",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038476",
@@ -34451,14 +33432,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4240391",
-    "opponent": "LAC",
-    "matchup": "@ LAC",
-    "home_away": "away",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033869",
@@ -34471,7 +33445,7 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.76,
     "floor_fantasy_points": 0.0,
-    "ceiling_fantasy_points": 18.0,
+    "ceiling_fantasy_points": 12.6,
     "projected_pass_yards": 9.45,
     "projected_pass_tds": 0.0,
     "projected_interceptions": 0.0,
@@ -34611,14 +33585,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3039707",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039376",
@@ -34631,7 +33598,7 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.76,
     "floor_fantasy_points": 0.0,
-    "ceiling_fantasy_points": 18.3,
+    "ceiling_fantasy_points": 12.8,
     "projected_pass_yards": 143.64,
     "projected_pass_tds": 0.52,
     "projected_interceptions": 1.0,
@@ -34771,14 +33738,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4426339",
-    "opponent": "CIN",
-    "matchup": "@ CIN",
-    "home_away": "away",
-    "game_id": "2026_12_NO_CIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037077",
@@ -34790,8 +33750,8 @@
     "projected_yards": 0.7,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.55,
-    "floor_fantasy_points": 0.3,
-    "ceiling_fantasy_points": 19.7,
+    "floor_fantasy_points": 0.2,
+    "ceiling_fantasy_points": 13.8,
     "projected_pass_yards": 84.0,
     "projected_pass_tds": 0.52,
     "projected_interceptions": 1.75,
@@ -34931,14 +33891,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4426875",
-    "opponent": "SF",
-    "matchup": "@ SF",
-    "home_away": "away",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0039066",
@@ -34950,8 +33903,8 @@
     "projected_yards": 24.15,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.55,
-    "floor_fantasy_points": 1.9,
-    "ceiling_fantasy_points": 13.3,
+    "floor_fantasy_points": 1.3,
+    "ceiling_fantasy_points": 9.3,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -35091,14 +34044,160 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4429086",
-    "opponent": "CLE",
-    "matchup": "@ CLE",
-    "home_away": "away",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
+  },
+  {
+    "player_id": "00-0040590",
+    "name": "K.Mumpfield",
+    "team": "LA",
+    "position": "WR",
+    "projected_targets": 2.5,
+    "projected_receptions": 1.5,
+    "projected_yards": 29.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 4.5,
+    "floor_fantasy_points": 0.0,
+    "ceiling_fantasy_points": 12.2,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      2.5,
+      2.0,
+      0.0,
+      3.0,
+      9.6,
+      8.9
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        2.5,
+        2.0,
+        0.0,
+        3.0,
+        9.6,
+        8.9
+      ],
+      "targets": [
+        3.0,
+        2.0,
+        2.0,
+        2.0,
+        4.0,
+        5.0
+      ],
+      "receptions": [
+        2.0,
+        1.0,
+        0.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "yards": [
+        15.0,
+        15.0,
+        0.0,
+        20.0,
+        81.0,
+        69.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 1,
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033921",
@@ -35110,8 +34209,8 @@
     "projected_yards": 14.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.48,
-    "floor_fantasy_points": 1.5,
-    "ceiling_fantasy_points": 14.1,
+    "floor_fantasy_points": 1.1,
+    "ceiling_fantasy_points": 9.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -35251,14 +34350,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3116165",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035264",
@@ -35271,7 +34363,7 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.48,
     "floor_fantasy_points": 0.0,
-    "ceiling_fantasy_points": 17.6,
+    "ceiling_fantasy_points": 12.3,
     "projected_pass_yards": 47.6,
     "projected_pass_tds": 0.17,
     "projected_interceptions": 0.25,
@@ -35411,14 +34503,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3892775",
-    "opponent": "PIT",
-    "matchup": "@ PIT",
-    "home_away": "away",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037741",
@@ -35430,8 +34515,8 @@
     "projected_yards": 35.7,
     "projected_tds": 0.17,
     "projected_fantasy_points": 4.41,
-    "floor_fantasy_points": 1.3,
-    "ceiling_fantasy_points": 13.9,
+    "floor_fantasy_points": 0.9,
+    "ceiling_fantasy_points": 9.7,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -35571,14 +34656,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4361409",
-    "opponent": "MIN",
-    "matchup": "@ MIN",
-    "home_away": "away",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0029608",
@@ -35714,14 +34792,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "14924",
-    "opponent": "PHI",
-    "matchup": "vs PHI",
-    "home_away": "home",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036613",
@@ -35874,170 +34945,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4372016",
-    "opponent": "PIT",
-    "matchup": "@ PIT",
-    "home_away": "away",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
-  },
-  {
-    "player_id": "00-0040590",
-    "name": "K.Mumpfield",
-    "team": "LA",
-    "position": "WR",
-    "projected_targets": 2.5,
-    "projected_receptions": 1.5,
-    "projected_yards": 29.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 4.4,
-    "floor_fantasy_points": 0.0,
-    "ceiling_fantasy_points": 12.0,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      2.5,
-      2.0,
-      0.0,
-      3.0,
-      9.6,
-      8.9
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        2.5,
-        2.0,
-        0.0,
-        3.0,
-        9.6,
-        8.9
-      ],
-      "targets": [
-        3.0,
-        2.0,
-        2.0,
-        2.0,
-        4.0,
-        5.0
-      ],
-      "receptions": [
-        2.0,
-        1.0,
-        0.0,
-        2.0,
-        3.0,
-        4.0
-      ],
-      "yards": [
-        15.0,
-        15.0,
-        0.0,
-        20.0,
-        81.0,
-        69.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4710855",
-    "opponent": null,
-    "matchup": null
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041125",
@@ -36049,8 +34957,8 @@
     "projected_yards": -0.14,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.34,
-    "floor_fantasy_points": 0.7,
-    "ceiling_fantasy_points": 14.1,
+    "floor_fantasy_points": 0.5,
+    "ceiling_fantasy_points": 9.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -36190,14 +35098,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4686468",
-    "opponent": "NYG",
-    "matchup": "vs NYG",
-    "home_away": "home",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041512",
@@ -36209,8 +35110,8 @@
     "projected_yards": 13.44,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.34,
-    "floor_fantasy_points": 1.1,
-    "ceiling_fantasy_points": 15.1,
+    "floor_fantasy_points": 0.8,
+    "ceiling_fantasy_points": 10.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -36350,14 +35251,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4685512",
-    "opponent": "SF",
-    "matchup": "@ SF",
-    "home_away": "away",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036879",
@@ -36369,8 +35263,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.32,
-    "floor_fantasy_points": 2.3,
-    "ceiling_fantasy_points": 22.0,
+    "floor_fantasy_points": 0.9,
+    "ceiling_fantasy_points": 8.8,
     "projected_pass_yards": 48.52,
     "projected_pass_tds": 0.13,
     "projected_interceptions": 0.33,
@@ -36478,14 +35372,7 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT",
-    "espn_id": "4241820",
-    "opponent": "NYG",
-    "matchup": "vs NYG",
-    "home_away": "home",
-    "game_id": "2026_12_NYG_IND",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032211",
@@ -36637,14 +35524,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "2577327",
-    "opponent": "CLE",
-    "matchup": "@ CLE",
-    "home_away": "away",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031610",
@@ -36656,8 +35536,8 @@
     "projected_yards": 30.66,
     "projected_tds": 0.35,
     "projected_fantasy_points": 4.27,
-    "floor_fantasy_points": 1.5,
-    "ceiling_fantasy_points": 13.1,
+    "floor_fantasy_points": 1.1,
+    "ceiling_fantasy_points": 9.2,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -36797,14 +35677,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "2576925",
-    "opponent": "TB",
-    "matchup": "@ TB",
-    "home_away": "away",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040867",
@@ -36816,8 +35689,8 @@
     "projected_yards": 20.4,
     "projected_tds": 0.1,
     "projected_fantasy_points": 4.24,
-    "floor_fantasy_points": 5.7,
-    "ceiling_fantasy_points": 19.3,
+    "floor_fantasy_points": 2.3,
+    "ceiling_fantasy_points": 7.7,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -36957,14 +35830,7 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT",
-    "espn_id": "4870795",
-    "opponent": "DAL",
-    "matchup": "@ DAL",
-    "home_away": "away",
-    "game_id": "2026_12_PHI_DAL",
-    "gameday": "2026-11-26",
-    "gametime": "16:30"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0033857",
@@ -37116,14 +35982,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "3120348",
-    "opponent": "BUF",
-    "matchup": "@ BUF",
-    "home_away": "away",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0034777",
@@ -37275,14 +36134,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "3115394",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0038544",
@@ -37294,8 +36146,8 @@
     "projected_yards": 27.65,
     "projected_tds": 0.17,
     "projected_fantasy_points": 4.13,
-    "floor_fantasy_points": 1.0,
-    "ceiling_fantasy_points": 13.8,
+    "floor_fantasy_points": 0.7,
+    "ceiling_fantasy_points": 9.7,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -37435,14 +36287,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4429025",
-    "opponent": "NE",
-    "matchup": "vs NE",
-    "home_away": "home",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0040878",
@@ -37454,8 +36299,8 @@
     "projected_yards": 0.7,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.13,
-    "floor_fantasy_points": 1.1,
-    "ceiling_fantasy_points": 13.6,
+    "floor_fantasy_points": 0.8,
+    "ceiling_fantasy_points": 9.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -37595,14 +36440,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4686658",
-    "opponent": "CLE",
-    "matchup": "@ CLE",
-    "home_away": "away",
-    "game_id": "2026_12_LV_CLE",
-    "gameday": "2026-11-29",
-    "gametime": "20:20"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0041395",
@@ -37614,8 +36452,8 @@
     "projected_yards": 21.7,
     "projected_tds": 0.17,
     "projected_fantasy_points": 4.13,
-    "floor_fantasy_points": 1.3,
-    "ceiling_fantasy_points": 12.0,
+    "floor_fantasy_points": 0.9,
+    "ceiling_fantasy_points": 8.4,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -37755,14 +36593,7 @@
       ]
     },
     "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4831959",
-    "opponent": "LAC",
-    "matchup": "@ LAC",
-    "home_away": "away",
-    "game_id": "2026_12_NE_LAC",
-    "gameday": "2026-11-29",
-    "gametime": "16:05"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031273",
@@ -37914,14 +36745,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "17453",
-    "opponent": "CAR",
-    "matchup": "vs CAR",
-    "home_away": "home",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0031325",
@@ -38073,14 +36897,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "16725",
-    "opponent": "HOU",
-    "matchup": "@ HOU",
-    "home_away": "away",
-    "game_id": "2026_12_BAL_HOU",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032434",
@@ -38216,14 +37033,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "2574511",
-    "opponent": "JAX",
-    "matchup": "@ JAX",
-    "home_away": "away",
-    "game_id": "2026_12_TEN_JAX",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0035860",
@@ -38375,14 +37185,7 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "4046676",
-    "opponent": "WAS",
-    "matchup": "vs WAS",
-    "home_away": "home",
-    "game_id": "2026_12_WAS_ARI",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0036894",
@@ -38535,14 +37338,7 @@
       ]
     },
     "depth_rank": 1,
-    "roster_status": "ACT",
-    "espn_id": "4361411",
-    "opponent": "DEN",
-    "matchup": "vs DEN",
-    "home_away": "home",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0032950",
@@ -38554,8 +37350,8 @@
     "projected_yards": 0.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.0,
-    "floor_fantasy_points": 2.1,
-    "ceiling_fantasy_points": 21.2,
+    "floor_fantasy_points": 0.8,
+    "ceiling_fantasy_points": 8.5,
     "projected_pass_yards": 50.08,
     "projected_pass_tds": 0.4,
     "projected_interceptions": 0.75,
@@ -38695,14 +37491,7 @@
       ]
     },
     "depth_rank": 3,
-    "roster_status": "ACT",
-    "espn_id": "2573079",
-    "opponent": "ATL",
-    "matchup": "vs ATL",
-    "home_away": "home",
-    "game_id": "2026_12_ATL_MIN",
-    "gameday": "2026-11-29",
-    "gametime": "13:00"
+    "roster_status": "ACT"
   },
   {
     "player_id": "00-0037429",
@@ -38854,489 +37643,6 @@
         0.0
       ]
     },
-    "roster_status": "ACT",
-    "espn_id": "4259308",
-    "opponent": "TB",
-    "matchup": "@ TB",
-    "home_away": "away",
-    "game_id": "2026_12_CAR_TB",
-    "gameday": "2026-11-30",
-    "gametime": "20:15"
-  },
-  {
-    "player_id": "00-0035689",
-    "name": "D.Knox",
-    "team": "BUF",
-    "position": "TE",
-    "projected_targets": 1.96,
-    "projected_receptions": 1.26,
-    "projected_yards": 8.75,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 3.99,
-    "floor_fantasy_points": 1.0,
-    "ceiling_fantasy_points": 12.2,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      1.1,
-      0.5,
-      1.1,
-      5.7,
-      1.2,
-      4.1
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        1.1,
-        0.5,
-        1.1,
-        5.7,
-        1.2,
-        4.1
-      ],
-      "targets": [
-        3.0,
-        1.0,
-        2.0,
-        5.0,
-        3.0,
-        3.0
-      ],
-      "receptions": [
-        1.0,
-        1.0,
-        1.0,
-        4.0,
-        1.0,
-        2.0
-      ],
-      "yards": [
-        6.0,
-        0.0,
-        6.0,
-        37.0,
-        7.0,
-        31.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "3930086",
-    "opponent": "KC",
-    "matchup": "vs KC",
-    "home_away": "home",
-    "game_id": "2026_12_KC_BUF",
-    "gameday": "2026-11-26",
-    "gametime": "20:20"
-  },
-  {
-    "player_id": "00-0040142",
-    "name": "K.Johnson",
-    "team": "GB",
-    "position": "RB",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 3.99,
-    "floor_fantasy_points": 0.6,
-    "ceiling_fantasy_points": 13.4,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      2.2,
-      2.6,
-      -0.2,
-      12.8,
-      4.2,
-      3.7
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        2.2,
-        2.6,
-        -0.2,
-        12.8,
-        4.2,
-        3.7
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        2.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        19.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        42.0,
-        26.0,
-        -2.0,
-        68.0,
-        42.0,
-        13.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 2,
-    "roster_status": "ACT",
-    "espn_id": "4819231",
-    "opponent": null,
-    "matchup": null
-  },
-  {
-    "player_id": "00-0038797",
-    "name": "E.Wilson",
-    "team": "SEA",
-    "position": "RB",
-    "projected_targets": 0.72,
-    "projected_receptions": 0.48,
-    "projected_yards": 5.0,
-    "projected_tds": 0.1,
-    "projected_fantasy_points": 3.96,
-    "floor_fantasy_points": 4.0,
-    "ceiling_fantasy_points": 19.6,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      9.2,
-      1.4,
-      25.5,
-      12.2,
-      5.2,
-      18.0
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        9.2,
-        1.4,
-        25.5,
-        12.2,
-        5.2,
-        18.0
-      ],
-      "targets": [
-        1.0,
-        0.0,
-        4.0,
-        2.0,
-        1.0,
-        1.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        3.0,
-        2.0,
-        0.0,
-        1.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        39.0,
-        11.0,
-        0.0,
-        15.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        92.0,
-        14.0,
-        81.0,
-        61.0,
-        52.0,
-        100.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0,
-        1.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 3,
-    "roster_status": "ACT",
-    "espn_id": "4887558",
-    "opponent": "SF",
-    "matchup": "@ SF",
-    "home_away": "away",
-    "game_id": "2026_12_SEA_SF",
-    "gameday": "2026-11-29",
-    "gametime": "16:25"
+    "roster_status": "ACT"
   }
 ]
