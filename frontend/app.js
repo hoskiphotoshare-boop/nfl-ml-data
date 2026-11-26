@@ -554,7 +554,7 @@ const GLOSSARY = {
     ['Standard scoring', '4 points per passing TD, 6 per rushing/receiving TD, no points per reception.'],
     [
       'Green ✓',
-      'When a game is final, the actual stat appears under each projection. It turns green with ✓ when it met the projection (higher is better; interceptions are graded lower-is-better); otherwise it stays muted.',
+      'While a game is live, a stat turns green with ✓ as soon as it reaches the projection (higher is better; interceptions are graded lower-is-better) and can revert if the number moves back. Once the game is final, the tick is locked in.',
     ],
   ],
   playoffs: [
@@ -853,6 +853,12 @@ function liveStatValue(record, statKey) {
     return parseLiveNumber(statKey === "fg_att" ? attempts : made);
   }
   return parseLiveNumber(raw);
+}
+
+function projectedMet(column, actual, projected) {
+  const value = Number(projected);
+  if (!Number.isFinite(value) || value <= 0) return false;
+  return column.lowerBetter ? actual <= value : actual >= value;
 }
 
 function statGames() {
@@ -1695,16 +1701,21 @@ function renderPlayers() {
     const gameNote = selectedGame
       ? ` Showing ${teamAbbr(selectedGame.away_team)} @ ${teamAbbr(selectedGame.home_team)}.`
       : '';
-    const liveNote = statGames().some((entry) => entry.status.state === 'in')
-      ? ' Live numbers refresh every 30 seconds.'
-      : '';
-    const finalNote = statGames().some(
+    const hasLiveGames = statGames().some((entry) => entry.status.state === 'in');
+    const hasFinalGames = statGames().some(
       (entry) => entry.status.completed || entry.status.state === 'post'
-    )
-      ? ' Green ✓ = final stat met the projection.'
-      : '';
+    );
+    const liveNote = hasLiveGames ? ' Live numbers refresh every 30 seconds.' : '';
+    const gradeNote =
+      hasLiveGames && hasFinalGames
+        ? ' Green ✓ = met the projection (locked in once final).'
+        : hasLiveGames
+        ? ' Green ✓ = already met the projection.'
+        : hasFinalGames
+        ? ' Green ✓ = final stat met the projection.'
+        : '';
     sub.textContent = state.players.length
-      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}.${gameNote} ${historyNote}${liveNote}${finalNote}`
+      ? `Projected fantasy points and stat lines${state.meta?.week ? ` for week ${state.meta.week}` : ''}.${gameNote} ${historyNote}${liveNote}${gradeNote}`
       : 'Projected fantasy points and stat lines for this week’s matchups.';
   }
 
@@ -1968,20 +1979,11 @@ function renderPlayers() {
           const text = Number(live)
             .toFixed(digits)
             .replace(/\.0+$/, '');
+          const met = projectedMet(column, live, stat.value);
+          const projectedText = fmtStat(stat.value, false, digits);
           if (isFinal) {
-            const projected = Number(stat.value);
-            const comparable = Number.isFinite(projected) && projected > 0;
-            const met = comparable
-              ? column.lowerBetter
-                ? live <= projected
-                : live >= projected
-              : false;
             const node = el('div', `final-val${met ? ' met' : ''}`, met ? `${text} ✓` : text);
-            node.title = `Final ${column.label.toLowerCase()}: ${text} vs projected ${fmtStat(
-              stat.value,
-              false,
-              digits
-            )} — ${
+            node.title = `Final ${column.label.toLowerCase()}: ${text} vs projected ${projectedText} — ${
               met
                 ? 'met the projection'
                 : column.lowerBetter
@@ -1990,8 +1992,10 @@ function renderPlayers() {
             }`;
             td.appendChild(node);
           } else {
-            const node = el('div', 'live-val', text);
-            node.title = `Live ${column.label.toLowerCase()}`;
+            const node = el('div', `live-val${met ? ' met' : ''}`, met ? `${text} ✓` : text);
+            node.title = met
+              ? `Live ${column.label.toLowerCase()}: ${text} — already met the ${projectedText} projection`
+              : `Live ${column.label.toLowerCase()}: ${text} vs projected ${projectedText}`;
             td.appendChild(node);
           }
         }

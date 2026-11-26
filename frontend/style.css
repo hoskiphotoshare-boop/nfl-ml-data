@@ -801,6 +801,10 @@ h2 {
   color: var(--red);
 }
 
+.live-val.met {
+  color: var(--green);
+}
+
 .live-val::before {
   content: '●';
   margin-right: 0.18rem;
