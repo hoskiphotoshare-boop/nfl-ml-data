@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T20:18:26.893445+00:00",
+  "generated_at": "2026-11-27T20:23:37.232062+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -16,23 +16,21 @@
   },
   "market": {
     "games": 25,
-    "outliers": 6,
+    "outliers": 4,
     "outlier_games": [
       "2026_12_NYJ_MIA",
       "2026_12_ATL_MIN",
       "2026_12_WAS_ARI",
-      "2026_13_PHI_ARI",
-      "2026_13_MIA_DEN",
-      "2026_13_BUF_NE"
+      "2026_13_PHI_ARI"
     ],
-    "mean_abs_edge": 0.072,
+    "mean_abs_edge": 0.0749,
     "max_abs_edge": 0.2602,
     "blend_conflicts": 0
   },
   "futures": {
-    "mean_abs_edge": null,
-    "max_abs_edge": null,
-    "teams_matched": 0
+    "mean_abs_edge": 0.0096,
+    "max_abs_edge": 0.0413,
+    "teams_matched": 32
   },
   "calls": {
     "graded": 3,
@@ -43,7 +41,7 @@
     "win_rate": 0.3333,
     "roi": -0.38,
     "profit": -1.14,
-    "mean_edge_delta": -0.0346,
+    "mean_edge_delta": -0.0379,
     "by_market": {
       "spread": {
         "n": 1,
@@ -146,8 +144,8 @@
       2026
     ],
     "latest_season": 2026,
-    "latest_week": 11,
-    "rows": 27045
+    "latest_week": 12,
+    "rows": 27388
   },
   "odds": {
     "fetched_at": "2026-11-27T05:21:28.253346+00:00",

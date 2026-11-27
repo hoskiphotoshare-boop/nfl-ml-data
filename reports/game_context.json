@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T19:27:17.542355+00:00",
+  "generated_at": "2026-11-27T20:23:03.748135+00:00",
   "season": 2026,
   "week": 12,
   "games": {
@@ -8,14 +8,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 36.7,
-        "wind": 12.9,
-        "gust": 30.2,
-        "precip": 41.0,
-        "precip_mm": 0.7,
-        "snow": 0.1,
-        "weather_code": 71.0,
-        "humidity": 93.0
+        "temp": 37.0,
+        "wind": 12.8,
+        "gust": 29.3,
+        "precip": 42.0,
+        "precip_mm": 0.4,
+        "snow": 0.0,
+        "weather_code": 51.0,
+        "humidity": 90.0
       },
       "home": {
         "team": "PIT",
@@ -234,14 +234,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 53.2,
-        "wind": 11.4,
-        "gust": 34.4,
+        "temp": 52.5,
+        "wind": 12.4,
+        "gust": 35.0,
         "precip": 80.0,
-        "precip_mm": 0.2,
+        "precip_mm": 0.1,
         "snow": 0.0,
-        "weather_code": 51.0,
-        "humidity": 85.0
+        "weather_code": 3.0,
+        "humidity": 86.0
       },
       "home": {
         "team": "CIN",
@@ -250,7 +250,7 @@
           "name": "J.Burrow",
           "status": null,
           "depth_rank": 1,
-          "projected": 19.5
+          "projected": 19.1
         },
         "injuries": [
           {
@@ -328,7 +328,7 @@
           "name": "T.Shough",
           "status": null,
           "depth_rank": 1,
-          "projected": 16.6
+          "projected": 16.3
         },
         "injuries": [
           {
@@ -416,14 +416,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 67.5,
-        "wind": 17.3,
-        "gust": 23.3,
+        "temp": 66.2,
+        "wind": 17.2,
+        "gust": 24.4,
         "precip": 1.0,
         "precip_mm": 0.0,
         "snow": 0.0,
         "weather_code": 3.0,
-        "humidity": 37.0
+        "humidity": 39.0
       },
       "home": {
         "team": "HOU",
@@ -432,7 +432,7 @@
           "name": "C.Stroud",
           "status": null,
           "depth_rank": 1,
-          "projected": 19.1
+          "projected": 19.2
         },
         "injuries": [
           {
@@ -620,7 +620,7 @@
           "name": "J.Brissett",
           "status": null,
           "depth_rank": 1,
-          "projected": 13.6
+          "projected": 13.7
         },
         "injuries": [
           {
@@ -752,11 +752,11 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 46.1,
-        "wind": 6.4,
-        "gust": 24.4,
+        "temp": 46.6,
+        "wind": 7.2,
+        "gust": 23.7,
         "precip": 99.0,
-        "precip_mm": 4.3,
+        "precip_mm": 5.0,
         "snow": 0.0,
         "weather_code": 63.0,
         "humidity": 98.0
@@ -768,7 +768,7 @@
           "name": "A.Richardson",
           "status": null,
           "depth_rank": 1,
-          "projected": 6.4
+          "projected": 6.2
         },
         "injuries": [
           {
@@ -901,7 +901,7 @@
           "name": "J.McCarthy",
           "status": null,
           "depth_rank": 1,
-          "projected": 14.7
+          "projected": 13.9
         },
         "injuries": [
           {
@@ -989,14 +989,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 68.8,
-        "wind": 6.5,
-        "gust": 10.7,
+        "temp": 68.1,
+        "wind": 6.8,
+        "gust": 11.4,
         "precip": 3.0,
         "precip_mm": 0.0,
         "snow": 0.0,
         "weather_code": 3.0,
-        "humidity": 53.0
+        "humidity": 61.0
       },
       "home": {
         "team": "JAX",
@@ -1005,7 +1005,7 @@
           "name": "T.Lawrence",
           "status": null,
           "depth_rank": 1,
-          "projected": 17.8
+          "projected": 17.7
         },
         "injuries": [
           {
@@ -1171,7 +1171,7 @@
           "name": "C.Ward",
           "status": null,
           "depth_rank": 1,
-          "projected": 14.5
+          "projected": 14.4
         },
         "injuries": [
           {
@@ -1303,14 +1303,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 77.6,
-        "wind": 9.8,
-        "gust": 12.1,
+        "temp": 75.6,
+        "wind": 8.2,
+        "gust": 10.1,
         "precip": 1.0,
         "precip_mm": 0.0,
         "snow": 0.0,
         "weather_code": 3.0,
-        "humidity": 70.0
+        "humidity": 76.0
       },
       "home": {
         "team": "MIA",
@@ -1319,7 +1319,7 @@
           "name": "K.McCord",
           "status": null,
           "depth_rank": 1,
-          "projected": 13.6
+          "projected": 13.7
         },
         "injuries": [
           {
@@ -1452,7 +1452,7 @@
           "name": "G.Smith",
           "status": null,
           "depth_rank": 1,
-          "projected": 9.3
+          "projected": 9.5
         },
         "injuries": [
           {
@@ -2046,7 +2046,7 @@
           "name": "J.Johnson",
           "status": null,
           "depth_rank": 2,
-          "projected": 8.26
+          "projected": 8.2
         },
         "injuries": [
           {
@@ -2179,7 +2179,7 @@
           "name": "J.Daniels",
           "status": "Full",
           "depth_rank": 1,
-          "projected": 16.5,
+          "projected": 16.4,
           "injury": "Elbow"
         },
         "injuries": [
@@ -2328,7 +2328,7 @@
           "name": "B.Purdy",
           "status": "DNP",
           "depth_rank": 1,
-          "projected": 17.4,
+          "projected": 16.9,
           "injury": "Ankle"
         },
         "injuries": [
@@ -2506,7 +2506,7 @@
           "name": "S.Darnold",
           "status": "Full",
           "depth_rank": 1,
-          "projected": 13.8,
+          "projected": 13.3,
           "injury": "Quadricep"
         },
         "injuries": [
@@ -2699,7 +2699,7 @@
           "name": "D.Watson",
           "status": null,
           "depth_rank": 1,
-          "projected": 16.0
+          "projected": 15.0
         },
         "injuries": [
           {
@@ -2821,7 +2821,7 @@
           "name": "F.Mendoza",
           "status": null,
           "depth_rank": 1,
-          "projected": 10.3
+          "projected": 9.9
         },
         "injuries": [
           {
