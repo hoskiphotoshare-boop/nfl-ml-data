@@ -29,3 +29,6 @@ __pycache__/
 .wrangler/
 frontend.zip
 predictions/.players_weather_state.json
+
+# Local-only operator docs
+worker/README.md
