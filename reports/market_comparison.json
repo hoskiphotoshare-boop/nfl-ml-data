@@ -4,7 +4,7 @@
     "mean_edge": -0.01,
     "mean_abs_edge": 0.0749,
     "max_abs_edge": 0.2602,
-    "mean_best_edge": 0.1038,
+    "mean_best_edge": 0.104,
     "max_best_edge": 0.2602,
     "strong_edges": 23,
     "blend_conflicts": 0,
@@ -23,8 +23,8 @@
     "n": 25,
     "over": 14,
     "under": 11,
-    "mean_edge": 0.1146,
-    "mean_total_minus_market": 1.47
+    "mean_edge": 0.1148,
+    "mean_total_minus_market": 1.48
   },
   "odds_fetched_at": "2026-11-27T05:21:28.253346+00:00",
   "odds_events": 26,
@@ -303,9 +303,9 @@
           "side": "over",
           "team": "Over",
           "line": 47.0,
-          "model_prob": 0.5816,
+          "model_prob": 0.5871,
           "market_prob": 0.5,
-          "edge": 0.0816,
+          "edge": 0.0871,
           "price": 1.91,
           "bookmaker": "betus",
           "movement": {
@@ -324,14 +324,14 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0816,
+          "actionable_edge": 0.0871,
           "edge_capped": false,
           "edge_suppressed": null,
-          "ev": 11.09
+          "ev": 12.14
         }
       },
       "best_market": "total",
-      "best_edge": 0.0816,
+      "best_edge": 0.0871,
       "market_movement": {
         "commence_time": "2026-11-29T18:00:00Z",
         "snapshots": 8,
@@ -349,7 +349,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.0816,
+      "outlier_edge": 0.0871,
       "outlier_market": "total",
       "best_team": "Over",
       "blend_diff": 6.9683,
@@ -357,11 +357,11 @@
       "model_spread": 6.0,
       "market_spread": -6.5,
       "spread_edge": -12.5,
-      "model_total": 49.9,
+      "model_total": 50.1,
       "market_total": 47.0,
       "model_home_win_prob_pure": 0.674,
       "model_spread_pure": 6.0,
-      "model_total_pure": 49.9,
+      "model_total_pure": 50.1,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -382,7 +382,7 @@
         "spread_move": 0.5,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 2.9,
+      "total_edge": 3.1,
       "best_home_ml": {
         "price": 1.34,
         "bookmaker": "fanduel"
