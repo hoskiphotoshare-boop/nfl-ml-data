@@ -1,0 +1,11 @@
+#!/bin/sh
+# Block commits that add GitHub credentials. Installed via scripts/install_hooks.py.
+set -e
+if command -v python3 >/dev/null 2>&1; then
+  PY=python3
+elif command -v python >/dev/null 2>&1; then
+  PY=python
+else
+  exit 0
+fi
+exec "$PY" scripts/check_credentials.py --quiet
