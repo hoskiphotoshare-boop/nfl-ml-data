@@ -57,23 +57,27 @@ function nflHeaders_(token) {
  * Informational only: a false result never triggers a second dispatch.
  */
 function nflVerifyDispatch_(workflow, token, sinceIso) {
-  try {
-    var url = "https://api.github.com/repos/" + NFL_CONFIG.owner + "/" + NFL_CONFIG.repo +
-      "/actions/workflows/" + encodeURIComponent(workflow) +
-      "/runs?event=workflow_dispatch&per_page=5";
-    var response = UrlFetchApp.fetch(url, {
-      method: "get",
-      muteHttpExceptions: true,
-      headers: nflHeaders_(token)
-    });
-    if (response.getResponseCode() !== 200) return false;
-    var runs = (JSON.parse(response.getContentText()).workflow_runs) || [];
-    var since = new Date(sinceIso).getTime() - 120000; // allow clock skew
-    for (var i = 0; i < runs.length; i++) {
-      if (new Date(runs[i].created_at).getTime() >= since) return true;
+  var url = "https://api.github.com/repos/" + NFL_CONFIG.owner + "/" + NFL_CONFIG.repo +
+    "/actions/workflows/" + encodeURIComponent(workflow) +
+    "/runs?event=workflow_dispatch&per_page=5";
+  var since = new Date(sinceIso).getTime() - 120000; // allow clock skew
+  // The runs list lags the dispatch by a few seconds; poll briefly.
+  for (var attempt = 0; attempt < 3; attempt++) {
+    if (attempt > 0) Utilities.sleep(2000);
+    try {
+      var response = UrlFetchApp.fetch(url, {
+        method: "get",
+        muteHttpExceptions: true,
+        headers: nflHeaders_(token)
+      });
+      if (response.getResponseCode() !== 200) continue;
+      var runs = (JSON.parse(response.getContentText()).workflow_runs) || [];
+      for (var i = 0; i < runs.length; i++) {
+        if (new Date(runs[i].created_at).getTime() >= since) return true;
+      }
+    } catch (e) {
+      /* try again */
     }
-  } catch (e) {
-    return false;
   }
   return false;
 }
@@ -99,7 +103,6 @@ function nflDispatchWorkflow_(workflow, inputs, token) {
       if (code === 204 || (code >= 200 && code < 300)) {
         // Give the runs endpoint a moment, then look for the run. A miss is
         // recorded as verified:false; it must never cause a re-dispatch.
-        Utilities.sleep(1000);
         return {
           ok: true,
           statusCode: code,
