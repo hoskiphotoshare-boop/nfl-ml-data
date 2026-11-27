@@ -53,3 +53,22 @@ def test_add_team_rolling_features_uses_prior_games_only():
     week2 = out.filter(pl.col("week") == 2)["home_test_passing_epa"][0]
     assert week1 == 0.0
     assert week2 == 1.0
+
+
+def test_weather_requests_are_batched_and_skip_domes():
+    import os
+    import sys
+    from datetime import datetime, timezone
+
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), "scripts"))
+    from fetch_weather import collect_requests
+
+    now = datetime(2026, 11, 27, 5, 0, tzinfo=timezone.utc)
+    games = [
+        {"home_team": "BUF", "gameday": "2026-11-27", "gametime": "15:00", "roof": "outdoors"},
+        {"home_team": "KC", "gameday": "2026-11-27", "gametime": "16:25", "roof": "outdoors"},
+        {"home_team": "DET", "gameday": "2026-11-27", "gametime": "15:00", "roof": "dome"},
+    ]
+    requests = collect_requests(games, now)
+    assert set(requests) == {"2026-11-27"}
+    assert len(requests["2026-11-27"]) == 2

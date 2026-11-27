@@ -101,6 +101,58 @@ def fetch_forecast(team: str, day: str, cache: dict) -> dict | None:
         return None
 
 
+def collect_requests(games: list[dict], now: datetime) -> dict[str, set[tuple]]:
+    """Unique stadium coordinates needed per UTC forecast day."""
+    by_day: dict[str, set[tuple]] = {}
+    for game in games:
+        if (game.get("roof") or "").lower() in {"dome", "closed"}:
+            continue
+        kickoff = kickoff_utc(game)
+        if kickoff is None:
+            continue
+        if kickoff < now - timedelta(hours=6) or kickoff > now + timedelta(days=FORECAST_DAYS):
+            continue
+        coords = STADIUMS.get(game.get("home_team", ""))
+        if not coords:
+            continue
+        by_day.setdefault(kickoff.strftime("%Y-%m-%d"), set()).add(coords)
+    return by_day
+
+
+def prefetch_forecasts(games: list[dict], now: datetime, cache: dict) -> None:
+    """Batch one request per day instead of one request per game."""
+    for day, coords_set in collect_requests(games, now).items():
+        coords_list = sorted(coords_set)
+        for start in range(0, len(coords_list), 25):
+            chunk = coords_list[start : start + 25]
+            query = urllib.parse.urlencode(
+                {
+                    "latitude": ",".join(str(c[0]) for c in chunk),
+                    "longitude": ",".join(str(c[1]) for c in chunk),
+                    "hourly": "temperature_2m,relative_humidity_2m,wind_speed_10m,"
+                    "wind_gusts_10m,precipitation,precipitation_probability,"
+                    "snowfall,weather_code",
+                    "start_date": day,
+                    "end_date": day,
+                    "timezone": "UTC",
+                    "temperature_unit": "fahrenheit",
+                    "wind_speed_unit": "mph",
+                }
+            )
+            url = f"https://api.open-meteo.com/v1/forecast?{query}"
+            try:
+                with urllib.request.urlopen(url, timeout=30) as response:
+                    data = json.load(response)
+            except Exception:
+                continue  # per-game fetch retries this coordinate below
+            if isinstance(data, dict):
+                data = [data]
+            for coords, payload in zip(chunk, data):
+                hourly = payload.get("hourly") if isinstance(payload, dict) else None
+                if hourly:
+                    cache[(coords, day)] = hourly
+
+
 def hourly_value(hourly: dict, key: str, timestamp: datetime) -> float | None:
     times = hourly.get("time") or []
     values = hourly.get(key) or []
@@ -129,6 +181,7 @@ def main() -> None:
     games = json.load(open(PREDICTIONS, encoding="utf-8"))
     now = datetime.now(timezone.utc)
     cache: dict = {}
+    prefetch_forecasts(games, now, cache)
     updated = 0
 
     for game in games:
