@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T05:14:45.416064+00:00",
+  "generated_at": "2026-11-27T05:21:30.853930+00:00",
   "calls": 29,
   "graded": 3,
   "open": 26,
@@ -9,7 +9,7 @@
   "win_rate": 0.3333,
   "roi": -0.38,
   "profit": -1.14,
-  "mean_edge_delta": -0.0136,
+  "mean_edge_delta": -0.0157,
   "by_market": {
     "spread": {
       "n": 1,

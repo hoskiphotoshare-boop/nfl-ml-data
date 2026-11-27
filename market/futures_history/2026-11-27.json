@@ -1,0 +1,162 @@
+[
+  {
+    "team": "San Francisco 49ers",
+    "market_prob": 0.161,
+    "best_price": 5.3
+  },
+  {
+    "team": "Buffalo Bills",
+    "market_prob": 0.1463,
+    "best_price": 5.9
+  },
+  {
+    "team": "Chicago Bears",
+    "market_prob": 0.0867,
+    "best_price": 11.0
+  },
+  {
+    "team": "Kansas City Chiefs",
+    "market_prob": 0.0805,
+    "best_price": 12.0
+  },
+  {
+    "team": "Cincinnati Bengals",
+    "market_prob": 0.0768,
+    "best_price": 12.0
+  },
+  {
+    "team": "Jacksonville Jaguars",
+    "market_prob": 0.0768,
+    "best_price": 12.0
+  },
+  {
+    "team": "Los Angeles Rams",
+    "market_prob": 0.065,
+    "best_price": 14.0
+  },
+  {
+    "team": "Denver Broncos",
+    "market_prob": 0.0528,
+    "best_price": 17.0
+  },
+  {
+    "team": "Seattle Seahawks",
+    "market_prob": 0.0497,
+    "best_price": 23.0
+  },
+  {
+    "team": "Detroit Lions",
+    "market_prob": 0.0423,
+    "best_price": 23.0
+  },
+  {
+    "team": "Minnesota Vikings",
+    "market_prob": 0.0403,
+    "best_price": 23.0
+  },
+  {
+    "team": "Houston Texans",
+    "market_prob": 0.022,
+    "best_price": 51.0
+  },
+  {
+    "team": "New York Giants",
+    "market_prob": 0.0174,
+    "best_price": 67.0
+  },
+  {
+    "team": "Green Bay Packers",
+    "market_prob": 0.0127,
+    "best_price": 81.0
+  },
+  {
+    "team": "Tampa Bay Buccaneers",
+    "market_prob": 0.0115,
+    "best_price": 101.0
+  },
+  {
+    "team": "Carolina Panthers",
+    "market_prob": 0.0111,
+    "best_price": 101.0
+  },
+  {
+    "team": "Washington Commanders",
+    "market_prob": 0.0074,
+    "best_price": 126.0
+  },
+  {
+    "team": "Cleveland Browns",
+    "market_prob": 0.0068,
+    "best_price": 126.0
+  },
+  {
+    "team": "New England Patriots",
+    "market_prob": 0.0067,
+    "best_price": 251.0
+  },
+  {
+    "team": "Dallas Cowboys",
+    "market_prob": 0.0067,
+    "best_price": 151.0
+  },
+  {
+    "team": "Pittsburgh Steelers",
+    "market_prob": 0.0056,
+    "best_price": 251.0
+  },
+  {
+    "team": "Atlanta Falcons",
+    "market_prob": 0.0034,
+    "best_price": 251.0
+  },
+  {
+    "team": "Baltimore Ravens",
+    "market_prob": 0.0019,
+    "best_price": 501.0
+  },
+  {
+    "team": "New Orleans Saints",
+    "market_prob": 0.0014,
+    "best_price": 751.0
+  },
+  {
+    "team": "Las Vegas Raiders",
+    "market_prob": 0.0011,
+    "best_price": 801.0
+  },
+  {
+    "team": "Tennessee Titans",
+    "market_prob": 0.0008,
+    "best_price": 4001.0
+  },
+  {
+    "team": "Arizona Cardinals",
+    "market_prob": 0.0008,
+    "best_price": 2501.0
+  },
+  {
+    "team": "Indianapolis Colts",
+    "market_prob": 0.0008,
+    "best_price": 2501.0
+  },
+  {
+    "team": "Los Angeles Chargers",
+    "market_prob": 0.0008,
+    "best_price": 2001.0
+  },
+  {
+    "team": "New York Jets",
+    "market_prob": 0.0008,
+    "best_price": 3001.0
+  },
+  {
+    "team": "Miami Dolphins",
+    "market_prob": 0.0008,
+    "best_price": 5001.0
+  },
+  {
+    "team": "Philadelphia Eagles",
+    "market_prob": 0.0008,
+    "best_price": 1001.0
+  }
+]

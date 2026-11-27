@@ -1,802 +1,8 @@
 {
-  "generated_at": "2026-11-27T05:14:42.690085+00:00",
+  "generated_at": "2026-11-27T05:20:27.755796+00:00",
   "season": 2026,
   "week": 12,
   "games": {
-    "2026_12_CHI_DET": {
-      "game_id": "2026_12_CHI_DET",
-      "season": 2026,
-      "week": 12,
-      "weather": {},
-      "home": {
-        "team": "DET",
-        "qb": {
-          "player_id": "00-0033106",
-          "name": "J.Goff",
-          "status": null,
-          "depth_rank": 1,
-          "projected": 15.9
-        },
-        "injuries": [
-          {
-            "player_id": "00-0039862",
-            "name": "Ennis Rakestraw Jr.",
-            "position": "CB",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Shoulder",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0036335",
-            "name": "DJ Wonnum",
-            "position": "DE",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Back",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0041447",
-            "name": "Skyler Gill-Howard",
-            "position": "DT",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0033294",
-            "name": "Chuck Clark",
-            "position": "S",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Hamstring",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0034384",
-            "name": "D.J. Reed",
-            "position": "CB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Hip",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0036124",
-            "name": "Khalil Dorsey",
-            "position": "CB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Wrist",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0039065",
-            "name": "Sam LaPorta",
-            "position": "TE",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          }
-        ]
-      },
-      "away": {
-        "team": "CHI",
-        "qb": {
-          "player_id": "00-0039918",
-          "name": "C.Williams",
-          "status": null,
-          "depth_rank": 1,
-          "projected": 14.8
-        },
-        "injuries": [
-          {
-            "player_id": "00-0038111",
-            "name": "Kyler Gordon",
-            "position": "CB",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Shoulder",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0039021",
-            "name": "Roschon Johnson",
-            "position": "RB",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0037096",
-            "name": "Elijah Hicks",
-            "position": "S",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Concussion",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0037271",
-            "name": "D'Marco Jackson",
-            "position": "LB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Elbow",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0039459",
-            "name": "Theo Benedet",
-            "position": "T",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Quadricep",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          }
-        ]
-      }
-    },
-    "2026_12_PHI_DAL": {
-      "game_id": "2026_12_PHI_DAL",
-      "season": 2026,
-      "week": 12,
-      "weather": {},
-      "home": {
-        "team": "DAL",
-        "qb": {
-          "player_id": "00-0033077",
-          "name": "D.Prescott",
-          "status": "Full",
-          "depth_rank": 1,
-          "projected": 20.0,
-          "injury": "Hand"
-        },
-        "injuries": [
-          {
-            "player_id": "00-0040007",
-            "name": "Tyler Booker",
-            "position": "G",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0038041",
-            "name": "Jake Ferguson",
-            "position": "TE",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0039062",
-            "name": "Jonathan Mingo",
-            "position": "WR",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0038625",
-            "name": "Dee Winters",
-            "position": "LB",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0040872",
-            "name": "Jaishawn Barham",
-            "position": "LB",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Hip",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0035227",
-            "name": "P.J. Locke",
-            "position": "S",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Concussion",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0037839",
-            "name": "Cobie Durant",
-            "position": "CB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Neck",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0040875",
-            "name": "Devin Moore",
-            "position": "CB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Hip",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0039167",
-            "name": "Joey Porter Jr.",
-            "position": "CB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Foot",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0037270",
-            "name": "Otito Ogbonnia",
-            "position": "DE",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0040725",
-            "name": "Donovan Ezeiruaku",
-            "position": "LB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0033077",
-            "name": "Dak Prescott",
-            "position": "QB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Hand",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0035705",
-            "name": "Jalen Thompson",
-            "position": "S",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Hamstring",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          }
-        ]
-      },
-      "away": {
-        "team": "PHI",
-        "qb": {
-          "player_id": "00-0039398",
-          "name": "J.Milton",
-          "status": null,
-          "depth_rank": 1,
-          "projected": 9.8
-        },
-        "injuries": [
-          {
-            "player_id": "00-0032580",
-            "name": "Jonathan Jones",
-            "position": "CB",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0038116",
-            "name": "Arnold Ebiketie",
-            "position": "LB",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Oblique",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0039888",
-            "name": "Quinyon Mitchell",
-            "position": "CB",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Hamstring",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0040013",
-            "name": "Smael Mondon Jr.",
-            "position": "LB",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0039746",
-            "name": "Will Shipley",
-            "position": "RB",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Foot",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0039140",
-            "name": "Kelee Ringo",
-            "position": "CB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Neck",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0036501",
-            "name": "Michael Carter II",
-            "position": "CB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Abdomen",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0038386",
-            "name": "Jalen Carter",
-            "position": "DT",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Quadricep",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0036224",
-            "name": "Jonathan Greenard",
-            "position": "LB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0038400",
-            "name": "Tanner McKee",
-            "position": "QB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Rib",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0034844",
-            "name": "Saquon Barkley",
-            "position": "RB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Neck",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0034351",
-            "name": "Dallas Goedert",
-            "position": "TE",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Shin",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0037132",
-            "name": "Britain Covey",
-            "position": "WR",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0036912",
-            "name": "DeVonta Smith",
-            "position": "WR",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Hamstring",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          }
-        ]
-      }
-    },
-    "2026_12_KC_BUF": {
-      "game_id": "2026_12_KC_BUF",
-      "season": 2026,
-      "week": 12,
-      "weather": {
-        "temp": 33.5,
-        "wind": 13.8,
-        "gust": 40.5,
-        "precip": 100.0,
-        "precip_mm": 23.8,
-        "snow": 2.9,
-        "weather_code": 75.0,
-        "humidity": 89.0
-      },
-      "home": {
-        "team": "BUF",
-        "qb": {
-          "player_id": "00-0034857",
-          "name": "J.Allen",
-          "status": null,
-          "depth_rank": 1,
-          "projected": 17.6
-        },
-        "injuries": [
-          {
-            "player_id": "00-0037288",
-            "name": "Christian Benford",
-            "position": "CB",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Groin",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0040724",
-            "name": "T.J. Sanders",
-            "position": "DE",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Shoulder",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0038548",
-            "name": "O'Cyrus Torrence",
-            "position": "G",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0038557",
-            "name": "Dorian Williams",
-            "position": "LB",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Calf",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0038933",
-            "name": "Dalton Kincaid",
-            "position": "TE",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Thumb",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0035679",
-            "name": "Connor McGovern",
-            "position": "C",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Neck",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0035230",
-            "name": "Ed Oliver",
-            "position": "DE",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Oblique",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0036914",
-            "name": "Greg Rousseau",
-            "position": "LB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Back",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0035537",
-            "name": "Ty Johnson",
-            "position": "RB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0035632",
-            "name": "Amani Hooker",
-            "position": "S",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0039872",
-            "name": "Cole Bishop",
-            "position": "S",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Shoulder",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0036888",
-            "name": "Damar Hamlin",
-            "position": "S",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Toe",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0036976",
-            "name": "Spencer Brown",
-            "position": "T",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Back",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0040194",
-            "name": "Jackson Hawes",
-            "position": "TE",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Shoulder",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          }
-        ]
-      },
-      "away": {
-        "team": "KC",
-        "qb": {
-          "player_id": "00-0033873",
-          "name": "P.Mahomes",
-          "status": "Full",
-          "depth_rank": 1,
-          "projected": 15.8,
-          "injury": "Knee"
-        },
-        "injuries": [
-          {
-            "player_id": "00-0038489",
-            "name": "Ben VanSumeren",
-            "position": "FB",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0036557",
-            "name": "Jaylon Moore",
-            "position": "T",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
-            "injury": "Ankle",
-            "report_status": null,
-            "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0040748",
-            "name": "Omarr Norman-Lott",
-            "position": "DT",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0038134",
-            "name": "Kenneth Walker III",
-            "position": "RB",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Groin",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
-          },
-          {
-            "player_id": "00-0041543",
-            "name": "Mansoor Delane",
-            "position": "CB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Shoulder",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0041545",
-            "name": "Peter Woods",
-            "position": "DT",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Neck",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0036660",
-            "name": "Trey Smith",
-            "position": "G",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Concussion",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0033873",
-            "name": "Patrick Mahomes",
-            "position": "QB",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0036637",
-            "name": "Noah Gray",
-            "position": "TE",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Rib",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          },
-          {
-            "player_id": "00-0039067",
-            "name": "Rashee Rice",
-            "position": "WR",
-            "status": "Full",
-            "kind": "full",
-            "severity": 5,
-            "injury": "Knee",
-            "report_status": null,
-            "practice_status": "Full Participation in Practice"
-          }
-        ]
-      }
-    },
     "2026_12_DEN_PIT": {
       "game_id": "2026_12_DEN_PIT",
       "season": 2026,
@@ -822,6 +28,17 @@
         },
         "injuries": [
           {
+            "player_id": "00-0027969",
+            "name": "Cameron Heyward",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
             "player_id": "00-0036333",
             "name": "Alex Highsmith",
             "position": "LB",
@@ -829,6 +46,17 @@
             "kind": "DNP",
             "severity": 3,
             "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0023459",
+            "name": "Aaron Rodgers",
+            "position": "QB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - personal matter",
             "report_status": null,
             "practice_status": "Did Not Participate In Practice"
           },
@@ -844,6 +72,17 @@
             "practice_status": "Did Not Participate In Practice"
           },
           {
+            "player_id": "00-0035286",
+            "name": "Cole Holcomb",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Heel",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
             "player_id": "00-0038577",
             "name": "Nick Herbig",
             "position": "LB",
@@ -851,6 +90,17 @@
             "kind": "Limited",
             "severity": 4,
             "injury": "Hip",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0034277",
+            "name": "DeShon Elliott",
+            "position": "S",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
             "report_status": null,
             "practice_status": "Limited Participation in Practice"
           },
@@ -892,12 +142,23 @@
             "player_id": "00-0040153",
             "name": "Sai'vion Jones",
             "position": "DE",
-            "status": "DNP",
-            "kind": "DNP",
-            "severity": 3,
+            "status": "Out",
+            "kind": "Out",
+            "severity": 0,
             "injury": "Hamstring",
-            "report_status": null,
+            "report_status": "Out",
             "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0035663",
+            "name": "Taylor Rapp",
+            "position": "S",
+            "status": "Out",
+            "kind": "Out",
+            "severity": 0,
+            "injury": "Quadricep",
+            "report_status": "Out",
+            "practice_status": "Limited Participation in Practice"
           },
           {
             "player_id": "00-0036158",
@@ -909,17 +170,6 @@
             "injury": "Not injury related - personal matter",
             "report_status": null,
             "practice_status": "Did Not Participate In Practice"
-          },
-          {
-            "player_id": "00-0035663",
-            "name": "Taylor Rapp",
-            "position": "S",
-            "status": "Limited",
-            "kind": "Limited",
-            "severity": 4,
-            "injury": "Quadricep",
-            "report_status": null,
-            "practice_status": "Limited Participation in Practice"
           },
           {
             "player_id": "00-0037085",
@@ -1002,7 +252,63 @@
           "depth_rank": 1,
           "projected": 19.5
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0033523",
+            "name": "Jonathan Allen",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0035702",
+            "name": "Dalton Risner",
+            "position": "G",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0034446",
+            "name": "Jalen Davis",
+            "position": "CB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0037193",
+            "name": "Bryan Cook",
+            "position": "S",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0038619",
+            "name": "Andrei Iosivas",
+            "position": "WR",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Thumb",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       },
       "away": {
         "team": "NO",
@@ -1013,7 +319,85 @@
           "depth_rank": 1,
           "projected": 16.6
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0036040",
+            "name": "Juwan Johnson",
+            "position": "TE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0035242",
+            "name": "Erik McCoy",
+            "position": "C",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Biceps",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0035668",
+            "name": "David Edwards",
+            "position": "G",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036927",
+            "name": "Pete Werner",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0038601",
+            "name": "Asim Richards",
+            "position": "T",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0039339",
+            "name": "Taliese Fuaga",
+            "position": "T",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0037250",
+            "name": "Martin Emerson",
+            "position": "CB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Concussion",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_BAL_HOU": {
@@ -1039,7 +423,162 @@
           "depth_rank": 1,
           "projected": 19.1
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0031565",
+            "name": "Danielle Hunter",
+            "position": "DE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0032759",
+            "name": "Sheldon Rankins",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041532",
+            "name": "Keylan Rutledge",
+            "position": "G",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Neck",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036556",
+            "name": "Brevin Jordan",
+            "position": "TE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Finger",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038608",
+            "name": "Kayshon Boutte",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hip",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038127",
+            "name": "Logan Hall",
+            "position": "DE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hip",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0037633",
+            "name": "Jacob Hummel",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Abdomen",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0039849",
+            "name": "Marvin Harrison Jr.",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0039343",
+            "name": "Kamari Lassiter",
+            "position": "CB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Wrist",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0037457",
+            "name": "Jake Hansen",
+            "position": "LB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Elbow",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0040583",
+            "name": "Woody Marks",
+            "position": "RB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Concussion",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0037130",
+            "name": "Reed Blankenship",
+            "position": "S",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Hand",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0039857",
+            "name": "Blake Fisher",
+            "position": "T",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Thumb",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0032071",
+            "name": "Trent Brown",
+            "position": "T",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Wrist",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       },
       "away": {
         "team": "BAL",
@@ -1050,7 +589,107 @@
           "depth_rank": 1,
           "projected": 13.6
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0026190",
+            "name": "Calais Campbell",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036130",
+            "name": "Nnamdi Madubuike",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036302",
+            "name": "Jaylinn Hawkins",
+            "position": "S",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0040076",
+            "name": "Aeneas Peebles",
+            "position": "DT",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Elbow",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036369",
+            "name": "John Simpson",
+            "position": "G",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Groin",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040722",
+            "name": "Mike Green",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0032764",
+            "name": "Derrick Henry",
+            "position": "RB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Concussion",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036550",
+            "name": "Rashod Bateman",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Groin",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0039064",
+            "name": "Zay Flowers",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_NYG_IND": {
@@ -1076,7 +715,118 @@
           "depth_rank": 1,
           "projected": 6.4
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0034573",
+            "name": "Charvarius Ward",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0035674",
+            "name": "Jerry Tillery",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Calf",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041125",
+            "name": "Seth McGowan",
+            "position": "RB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0040163",
+            "name": "Jalen Travis",
+            "position": "T",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0037292",
+            "name": "Andrew Ogletree",
+            "position": "TE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038394",
+            "name": "Will Mallory",
+            "position": "TE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041132",
+            "name": "Deion Burks",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - personal matter",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0037753",
+            "name": "Cam Taylor-Britt",
+            "position": "CB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Groin",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0037190",
+            "name": "Sauce Gardner",
+            "position": "CB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Calf",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0037757",
+            "name": "Bernhard Raimann",
+            "position": "T",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Concussion",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       },
       "away": {
         "team": "NYG",
@@ -1087,7 +837,74 @@
           "depth_rank": 1,
           "projected": 14.7
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0039821",
+            "name": "Andru Phillips",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Illness",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0031270",
+            "name": "Shelby Harris",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Illness",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0040677",
+            "name": "Abdul Carter",
+            "position": "LB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041509",
+            "name": "Arvell Reese",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Back",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0037838",
+            "name": "Isaiah Likely",
+            "position": "TE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Groin",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036998",
+            "name": "Jevon Holland",
+            "position": "S",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Elbow",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_TEN_JAX": {
@@ -1113,7 +930,151 @@
           "depth_rank": 1,
           "projected": 17.8
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0040719",
+            "name": "Bhayshul Tuten",
+            "position": "RB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0040227",
+            "name": "Jonah Monheim",
+            "position": "C",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036985",
+            "name": "Robert Hainsey",
+            "position": "C",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040342",
+            "name": "Danny Striggow",
+            "position": "DE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Concussion",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0034657",
+            "name": "Matt Dickerson",
+            "position": "DT",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Neck",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0035112",
+            "name": "Patrick Mekari",
+            "position": "G",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Back",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0034473",
+            "name": "Dennis Gardeck",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Neck",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036655",
+            "name": "Cole Van Lanen",
+            "position": "T",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036975",
+            "name": "Walker Little",
+            "position": "T",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0034960",
+            "name": "Jakobi Meyers",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0039353",
+            "name": "Jarrian Jones",
+            "position": "CB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Chest",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0040329",
+            "name": "BJ Green II",
+            "position": "DE",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Forearm",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0038611",
+            "name": "Chris Rodriguez Jr.",
+            "position": "RB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Hand",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       },
       "away": {
         "team": "TEN",
@@ -1124,7 +1085,107 @@
           "depth_rank": 1,
           "projected": 14.5
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0037758",
+            "name": "Cordale Flott",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Neck",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036421",
+            "name": "Terrell Burgess",
+            "position": "S",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036869",
+            "name": "Dan Moore Jr.",
+            "position": "T",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0034805",
+            "name": "John Franklin-Myers",
+            "position": "DE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Back",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040881",
+            "name": "Fernando Carmona",
+            "position": "G",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0040141",
+            "name": "Kevin Winston Jr.",
+            "position": "S",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0037155",
+            "name": "Tony Adams",
+            "position": "S",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Illness",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0036876",
+            "name": "Kylen Granson",
+            "position": "TE",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0041438",
+            "name": "Carnell Tate",
+            "position": "WR",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_NYJ_MIA": {
@@ -1150,7 +1211,129 @@
           "depth_rank": 1,
           "projected": 13.6
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0039156",
+            "name": "Julius Brents",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Neck",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0032065",
+            "name": "Bradley Pinion",
+            "position": "P",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Groin",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038728",
+            "name": "Jared Wayne",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Quadricep",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041159",
+            "name": "Rodney McGraw",
+            "position": "DE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040066",
+            "name": "Jackson Woodard",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hand",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0034779",
+            "name": "Ronnie Harrison",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040182",
+            "name": "Dante Trader Jr.",
+            "position": "S",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036248",
+            "name": "Austin Jackson",
+            "position": "T",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Elbow",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0039383",
+            "name": "Jaylin Simpson",
+            "position": "CB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0041522",
+            "name": "Jacob Rodriguez",
+            "position": "LB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0037686",
+            "name": "Tucker Addington",
+            "position": "LS",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       },
       "away": {
         "team": "NYJ",
@@ -1161,7 +1344,85 @@
           "depth_rank": 1,
           "projected": 9.3
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0034782",
+            "name": "Harrison Phillips",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041511",
+            "name": "Omar Cooper Jr.",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036902",
+            "name": "Joseph Ossai",
+            "position": "DE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0037255",
+            "name": "Dylan Parham",
+            "position": "G",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0039451",
+            "name": "Isaiah Williams",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ribs",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0033051",
+            "name": "David Onyemata",
+            "position": "DT",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Abdomen",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0039886",
+            "name": "T'Vondre Sweat",
+            "position": "DT",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_ATL_MIN": {
@@ -1178,7 +1439,96 @@
           "depth_rank": 1,
           "projected": 17.6
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0036222",
+            "name": "Isaiah Rodgers",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Thigh",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038778",
+            "name": "Jalen Redmond",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0029606",
+            "name": "Harrison Smith",
+            "position": "S",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Thigh",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036616",
+            "name": "Christian Darrisaw",
+            "position": "T",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038994",
+            "name": "Jordan Addison",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Thumb",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0035228",
+            "name": "Kyler Murray",
+            "position": "QB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040506",
+            "name": "Myles Price",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040154",
+            "name": "Tai Felton",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hip",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          }
+        ]
       },
       "away": {
         "team": "ATL",
@@ -1189,7 +1539,85 @@
           "depth_rank": 1,
           "projected": 12.8
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0040156",
+            "name": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0031576",
+            "name": "Za'Darius Smith",
+            "position": "DE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0039048",
+            "name": "Matthew Bergeron",
+            "position": "G",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Back",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038628",
+            "name": "DeMarcco Hellams",
+            "position": "S",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Foot",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0037741",
+            "name": "Jahan Dotson",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041044",
+            "name": "Zachariah Branch",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0040578",
+            "name": "James Pearce Jr.",
+            "position": "DE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Back",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_NE_LAC": {
@@ -1202,11 +1630,156 @@
         "qb": {
           "player_id": "00-0036355",
           "name": "J.Herbert",
-          "status": null,
+          "status": "DNP",
           "depth_rank": 1,
-          "projected": 14.4
+          "projected": 14.4,
+          "injury": "Concussion"
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0037320",
+            "name": "Deane Leonard",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Groin",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0039366",
+            "name": "Tarheeb Still",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041544",
+            "name": "Akheem Mesidor",
+            "position": "DE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0031040",
+            "name": "Khalil Mack",
+            "position": "DE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0039111",
+            "name": "Tuli Tuipulotu",
+            "position": "DE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0033546",
+            "name": "Dalvin Tomlinson",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036181",
+            "name": "Teair Tart",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038553",
+            "name": "Daiyan Henley",
+            "position": "LB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036355",
+            "name": "Justin Herbert",
+            "position": "QB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Concussion",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038454",
+            "name": "Keaton Mitchell",
+            "position": "RB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038414",
+            "name": "Kendall Williamson",
+            "position": "S",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Calf",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0033885",
+            "name": "David Njoku",
+            "position": "TE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041550",
+            "name": "Brenen Thompson",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          }
+        ]
       },
       "away": {
         "team": "NE",
@@ -1217,7 +1790,96 @@
           "depth_rank": 1,
           "projected": 4.8
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0034778",
+            "name": "Carlton Davis III",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0039851",
+            "name": "Drake Maye",
+            "position": "QB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Fibula",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0039828",
+            "name": "Walter Rouse",
+            "position": "T",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Concussion",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0035676",
+            "name": "A.J. Brown",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036187",
+            "name": "Reggie Gilliam",
+            "position": "FB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036979",
+            "name": "Alijah Vera-Tucker",
+            "position": "G",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0037816",
+            "name": "Romeo Doubs",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0037413",
+            "name": "Ben Brown",
+            "position": "C",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_WAS_ARI": {
@@ -1243,18 +1905,241 @@
           "depth_rank": 2,
           "projected": 8.26
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0035258",
+            "name": "Hjalte Froholdt",
+            "position": "C",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0032954",
+            "name": "Isaac Seumalo",
+            "position": "G",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038571",
+            "name": "Jon Gaines II",
+            "position": "G",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0034381",
+            "name": "Josh Sweat",
+            "position": "LB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041561",
+            "name": "Carson Beck",
+            "position": "QB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Back",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0033890",
+            "name": "Budda Baker",
+            "position": "S",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0040645",
+            "name": "Cody Simon",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Calf",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0035144",
+            "name": "Mack Wilson",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0037804",
+            "name": "Zachary Carter",
+            "position": "DT",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       },
       "away": {
         "team": "WAS",
         "qb": {
           "player_id": "00-0039910",
           "name": "J.Daniels",
-          "status": null,
+          "status": "Full",
           "depth_rank": 1,
-          "projected": 16.5
+          "projected": 16.5,
+          "injury": "Elbow"
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0036375",
+            "name": "Amik Robertson",
+            "position": "CB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0031588",
+            "name": "Stefon Diggs",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - personal matter",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0035279",
+            "name": "Charles Omenihu",
+            "position": "DE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Rib",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0037742",
+            "name": "Treylon Burks",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Foot",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0041028",
+            "name": "Sonny Styles",
+            "position": "LB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0039910",
+            "name": "Jayden Daniels",
+            "position": "QB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Elbow",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0037256",
+            "name": "Rachaad White",
+            "position": "RB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Heel",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0039149",
+            "name": "Quan Martin",
+            "position": "S",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0033831",
+            "name": "Andrew Wylie",
+            "position": "T",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Hip",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0039686",
+            "name": "Colson Yankoff",
+            "position": "TE",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0036628",
+            "name": "John Bates",
+            "position": "TE",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_SEA_SF": {
@@ -1276,22 +2161,345 @@
         "qb": {
           "player_id": "00-0037834",
           "name": "B.Purdy",
-          "status": null,
+          "status": "DNP",
           "depth_rank": 1,
-          "projected": 17.4
+          "projected": 17.4,
+          "injury": "Ankle"
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0037834",
+            "name": "Brock Purdy",
+            "position": "QB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0033280",
+            "name": "Christian McCaffrey",
+            "position": "RB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0034391",
+            "name": "Siran Neal",
+            "position": "S",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0027857",
+            "name": "Trent Williams",
+            "position": "T",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0040172",
+            "name": "Jordan Watkins",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Groin",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0031408",
+            "name": "Mike Evans",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Achilles",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0036563",
+            "name": "Deommodore Lenoir",
+            "position": "CB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Foot",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040152",
+            "name": "Upton Stout",
+            "position": "CB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0041061",
+            "name": "Carver Willis",
+            "position": "G",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Illness",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0034982",
+            "name": "Dre Greenlaw",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Neck",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0035829",
+            "name": "Austen Pleasants",
+            "position": "T",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0030279",
+            "name": "Keenan Allen",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Not injury related - resting player",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036341",
+            "name": "Khalid Kareem",
+            "position": "DE",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0040660",
+            "name": "Mykel Williams",
+            "position": "DE",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Hand",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0041556",
+            "name": "Romello Height",
+            "position": "DE",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Hand",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       },
       "away": {
         "team": "SEA",
         "qb": {
           "player_id": "00-0034869",
           "name": "S.Darnold",
-          "status": null,
+          "status": "Full",
           "depth_rank": 1,
-          "projected": 13.8
+          "projected": 13.8,
+          "injury": "Quadricep"
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0032387",
+            "name": "Jarran Reed",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Toe",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0034342",
+            "name": "Quenton Nelson",
+            "position": "G",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0031411",
+            "name": "DeMarcus Lawrence",
+            "position": "LB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Shoulder",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0040673",
+            "name": "Jalen Milroe",
+            "position": "QB",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Illness",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0037812",
+            "name": "Abraham Lucas",
+            "position": "T",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0031933",
+            "name": "Leonard Williams",
+            "position": "DT",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Stinger",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0039020",
+            "name": "Anthony Bradford",
+            "position": "G",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036994",
+            "name": "Ernest Jones",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0035704",
+            "name": "Drew Lock",
+            "position": "QB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Elbow",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0037821",
+            "name": "Charles Cross",
+            "position": "T",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040058",
+            "name": "Nick Kallerup",
+            "position": "TE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0038543",
+            "name": "Jaxon Smith-Njigba",
+            "position": "WR",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0038764",
+            "name": "Patrick O'Connell",
+            "position": "LB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Toe",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0034869",
+            "name": "Sam Darnold",
+            "position": "QB",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Quadricep",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_LV_CLE": {
@@ -1317,7 +2525,118 @@
           "depth_rank": 1,
           "projected": 16.0
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0033876",
+            "name": "Derek Barnett",
+            "position": "DE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Hamstring",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0038574",
+            "name": "Isaiah McGuire",
+            "position": "DE",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Calf",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041049",
+            "name": "Austin Barber",
+            "position": "G",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041037",
+            "name": "Denzel Boston",
+            "position": "WR",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Quadricep",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0035526",
+            "name": "Elgton Jenkins",
+            "position": "C",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0035680",
+            "name": "Quincy Williams",
+            "position": "LB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040466",
+            "name": "Raheim Sanders",
+            "position": "RB",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hip",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0038710",
+            "name": "Blake Whiteheart",
+            "position": "TE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Hip",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0040663",
+            "name": "Harold Fannin Jr.",
+            "position": "TE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Groin",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0038715",
+            "name": "Ronnie Hickman Jr.",
+            "position": "S",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Concussion",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       },
       "away": {
         "team": "LV",
@@ -1328,7 +2647,96 @@
           "depth_rank": 1,
           "projected": 10.3
         },
-        "injuries": []
+        "injuries": [
+          {
+            "player_id": "00-0033381",
+            "name": "Adam Butler",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Concussion",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0041534",
+            "name": "Tim Keenan III",
+            "position": "DT",
+            "status": "DNP",
+            "kind": "DNP",
+            "severity": 3,
+            "injury": "Knee",
+            "report_status": null,
+            "practice_status": "Did Not Participate In Practice"
+          },
+          {
+            "player_id": "00-0040169",
+            "name": "Tonka Hemingway",
+            "position": "DT",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Stinger",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0039338",
+            "name": "Brock Bowers",
+            "position": "TE",
+            "status": "Limited",
+            "kind": "Limited",
+            "severity": 4,
+            "injury": "Ankle",
+            "report_status": null,
+            "practice_status": "Limited Participation in Practice"
+          },
+          {
+            "player_id": "00-0036922",
+            "name": "Patrick Johnson",
+            "position": "DE",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Stinger",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0040199",
+            "name": "JJ Pegues",
+            "position": "DT",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Elbow",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0039066",
+            "name": "Michael Mayer",
+            "position": "TE",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Back",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          },
+          {
+            "player_id": "00-0037093",
+            "name": "Dareke Young",
+            "position": "WR",
+            "status": "Full",
+            "kind": "full",
+            "severity": 5,
+            "injury": "Stinger",
+            "report_status": null,
+            "practice_status": "Full Participation in Practice"
+          }
+        ]
       }
     },
     "2026_12_CAR_TB": {
