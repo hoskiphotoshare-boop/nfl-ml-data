@@ -249,19 +249,22 @@ def score_explanations() -> dict | None:
     if not os.path.exists("models/score_models.joblib"):
         return None
     bundle = joblib.load("models/score_models.joblib")
-    features = bundle["features"]
+    total_features = bundle.get("total_features", bundle.get("features"))
+    margin_features = bundle.get("margin_features", bundle.get("features"))
+    feature_map = {"margin": margin_features, "total": total_features}
     frame = load_match_features()
     if frame is None:
         return None
-    matrix = np.nan_to_num(frame.select(features).to_numpy(), nan=0.0)
-    sample = matrix[-250:]
-    output = {"features": features, "global": {}, "games": []}
+    output = {"features": total_features, "global": {}, "games": []}
 
     explainers = {}
     for key in ("margin", "total"):
         model = bundle.get(f"{key}_model")
         if model is None:
             continue
+        feats = feature_map[key]
+        matrix = np.nan_to_num(frame.select(feats).to_numpy(), nan=0.0)
+        sample = matrix[-250:]
         explainer = shap.TreeExplainer(model)
         values = np.asarray(explainer.shap_values(sample, check_additivity=False))
         mean_abs = np.abs(values).mean(axis=0)
@@ -270,15 +273,15 @@ def score_explanations() -> dict | None:
         order = [i for i in np.argsort(mean_abs)[::-1] if mean_abs[i] > 1e-9][:20]
         output["global"][key] = [
             {
-                "feature": features[i],
-                "label": score_label(features[i]),
+                "feature": feats[i],
+                "label": score_label(feats[i]),
                 "mean_abs_shap": round(float(mean_abs[i]), 4),
                 "mean_shap": round(float(mean_signed[i]), 4),
                 "share": round(float(mean_abs[i] / total), 4),
             }
             for i in order
         ]
-        explainers[key] = (model, explainer)
+        explainers[key] = (model, explainer, feats)
 
     upcoming = (
         json.load(open(PREDICTIONS, encoding="utf-8"))
@@ -289,42 +292,63 @@ def score_explanations() -> dict | None:
     if not upcoming or not explainers:
         return output
 
+    stored_total = {}
+    try:
+        with open(INFERENCE_VECTORS, encoding="utf-8") as _f:
+            _iv = json.load(_f)
+        stored_total = _iv.get("total_vectors", {}) or {}
+    except Exception:
+        stored_total = {}
+
     stats = {}
-    rows = []
-    stored = load_inference_vectors(INFERENCE_VECTORS)
+    rows_by_key = {key: [] for key in explainers}
     for game in upcoming:
-        vector = stored.get(str(game.get("game_id")))
-        if vector:
-            rows.append([float(vector.get(feature, 0.0)) for feature in features])
-            continue
-        for team in (game["home_team"], game["away_team"]):
-            if team not in stats:
-                stats[team] = team_stats_from_row(team_latest_row(frame, team), team)
-        stats[game["home_team"]]["div_game"] = int(game.get("div_game") or 0)
-        stats[game["away_team"]]["div_game"] = int(game.get("div_game") or 0)
-        rows.append(
-            build_feature_vector(
-                features,
-                stats[game["home_team"]],
-                stats[game["away_team"]],
-                int(game.get("week") or 0),
-                int(game.get("season") or 0),
+        for key, (model, explainer, feats) in explainers.items():
+            vector = None
+            if key == "total":
+                vector = stored_total.get(str(game.get("game_id")))
+            if vector:
+                rows_by_key[key].append(
+                    [float(vector.get(feature, 0.0)) for feature in feats]
+                )
+                continue
+            if game["home_team"] not in stats:
+                stats[game["home_team"]] = team_stats_from_row(
+                    team_latest_row(frame, game["home_team"]), game["home_team"]
+                )
+            if game["away_team"] not in stats:
+                stats[game["away_team"]] = team_stats_from_row(
+                    team_latest_row(frame, game["away_team"]), game["away_team"]
+                )
+            stats[game["home_team"]]["div_game"] = int(game.get("div_game") or 0)
+            stats[game["away_team"]]["div_game"] = int(game.get("div_game") or 0)
+            rows_by_key[key].append(
+                build_feature_vector(
+                    feats,
+                    stats[game["home_team"]],
+                    stats[game["away_team"]],
+                    int(game.get("week") or 0),
+                    int(game.get("season") or 0),
+                )
             )
-        )
-    matrix_games = np.asarray(rows)
-    for game, row in zip(upcoming, matrix_games):
+
+    # Align rows: rows_by_key[key] should have same count/order as upcoming
+    for game_index, game in enumerate(upcoming):
         entry = {
             "game_id": game.get("game_id"),
             "matchup": f"{game['away_team']} @ {game['home_team']}",
             "week": game.get("week"),
         }
-        for key, (model, explainer) in explainers.items():
-            values = np.asarray(explainer.shap_values(np.asarray([row]), check_additivity=False))[0]
+        for key, (model, explainer, feats) in explainers.items():
+            row = rows_by_key[key][game_index]
+            values = np.asarray(
+                explainer.shap_values(np.asarray([row]), check_additivity=False)
+            )[0]
             entry[key] = {
                 "prediction": round(float(model.predict([row])[0]), 2),
                 "base": round(float(np.asarray(explainer.expected_value).ravel()[0]), 2),
                 "drivers": short_features(
-                    features, np.asarray(row), values, score_label
+                    feats, np.asarray(row), values, score_label
                 ),
             }
         output["games"].append(entry)

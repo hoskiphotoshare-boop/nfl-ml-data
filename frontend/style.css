@@ -2657,15 +2657,14 @@ html.standalone .appbar {
 
 .edge-cell.moved .edge-val {
   color: var(--muted);
-  text-decoration: line-through;
 }
 
-.edge-cell.weather-risk {
-  border-color: var(--amber);
-  background: var(--amber-soft);
-}
-
-.edge-cell.weather-risk .edge-val {
+.stat-profile {
+  font-size: 0.78rem;
   color: var(--muted);
-  text-decoration: line-through;
+  margin: 6px 0 2px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
 }

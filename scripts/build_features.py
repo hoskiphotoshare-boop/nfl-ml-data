@@ -177,6 +177,14 @@ def main() -> None:
             ftn_raw = load_table("ftn_charting_latest")
             match_features = add_ftn_features(match_features, ftn_raw, pbp)
 
+            try:
+                import sys as _sys
+                _sys.path.insert(0, os.path.dirname(__file__))
+                from weather_features import attach_weather as _attach_wx
+                match_features = _attach_wx(match_features, source="actual")
+            except Exception as _exc:
+                print(f"Weather attach skipped: {_exc}")
+
             match_features.write_parquet("features/match_features.parquet")
             print(f"Wrote features/match_features.parquet ({match_features.height} rows)")
         except Exception as exc:  # pragma: no cover – defensive
@@ -226,6 +234,8 @@ def main() -> None:
             print(f"Could not build player features: {exc}")
 
     print("Feature build complete.")
+    print("WARNING: match context (QB/injury/records) is added by scripts/add_match_context.py; "
+          "run it before train_models.py or the match model will train on 24 features.")
 
 
 if __name__ == "__main__":

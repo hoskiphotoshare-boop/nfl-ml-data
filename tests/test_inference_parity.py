@@ -40,16 +40,23 @@ def test_match_vectors_reproduce_predictions():
 
 def test_score_vectors_reproduce_totals():
     bundle = joblib.load("models/score_models.joblib")
-    vectors = load("models/upcoming_feature_vectors.json")["games"]
+    vectors_doc = load("models/upcoming_feature_vectors.json")
+    vectors = vectors_doc.get("total_vectors") or vectors_doc.get("games", {})
+    total_features = bundle.get("total_features", bundle.get("features"))
     games = {game["game_id"]: game for game in load("predictions/upcoming_games.json")}
     worst = 0.0
     for game_id, vector in vectors.items():
         game = games.get(game_id)
-        if not game or game.get("total") is None:
+        target = game.get("model_total_direct") if game else None
+        if target is None:
+            target = game.get("model_total") if game else None
+        if target is None:
+            target = game.get("total") if game else None
+        if not game or target is None:
             continue
-        row = [float(vector.get(feature, 0.0)) for feature in bundle["features"]]
+        row = [float(vector.get(feature, 0.0)) for feature in total_features]
         total = float(bundle["total_model"].predict([row])[0])
-        worst = max(worst, abs(total - game["total"]))
+        worst = max(worst, abs(total - target))
     assert worst < 0.15, f"total vector mismatch {worst:.3f}"
 
 
@@ -59,16 +66,24 @@ def test_shap_predictions_match_live_predictions():
     worst_match = 0.0
     for game in explanations.get("match", {}).get("games", []):
         live = games.get(game.get("game_id"))
-        if live and live.get("home_win_prob") is not None:
-            worst_match = max(worst_match, abs(game["prediction"] - live["home_win_prob"]))
+        target = live.get("model_home_win_prob") if live else None
+        if target is None and live:
+            target = live.get("home_win_prob")
+        if live and target is not None:
+            worst_match = max(worst_match, abs(game["prediction"] - target))
     assert worst_match < 0.002, f"match SHAP mismatch {worst_match:.4f}"
 
     worst_total = 0.0
     for game in explanations.get("score", {}).get("games", []):
         live = games.get(game.get("game_id"))
-        if live and live.get("total") is not None:
+        target = live.get("model_total_direct") if live else None
+        if target is None and live:
+            target = live.get("model_total")
+        if target is None and live:
+            target = live.get("total")
+        if live and target is not None:
             worst_total = max(
-                worst_total, abs(game["total"]["prediction"] - live["total"])
+                worst_total, abs(game["total"]["prediction"] - target)
             )
     assert worst_total < 0.15, f"total SHAP mismatch {worst_total:.3f}"
 

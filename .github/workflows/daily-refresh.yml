@@ -34,6 +34,7 @@ jobs:
       - run: python scripts/train_player_models.py --predict-only || true
 
       - run: python scripts/predict_upcoming.py || true
+      - run: python scripts/adjust_player_weather.py || true
       - run: python scripts/add_player_matchups.py || true
       - run: python scripts/fetch_weather.py || true
       - run: python scripts/build_game_context.py || true

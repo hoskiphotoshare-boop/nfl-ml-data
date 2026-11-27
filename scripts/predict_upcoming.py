@@ -20,6 +20,19 @@ sys.path.insert(0, os.path.dirname(__file__) + "/../")
 import joblib
 import polars as pl
 
+try:
+    import fetch_weather as _fw
+except Exception:
+    _fw = None
+try:
+    import weather_features as _wf
+except Exception:
+    _wf = None
+try:
+    import market_adjust as _ma
+except Exception:
+    _ma = None
+
 
 ET = ZoneInfo("America/New_York")
 
@@ -96,6 +109,30 @@ def apply_platt(prob: float, platt: dict | None) -> float:
 
 def load_score_models():
     path = "models/score_models.joblib"
+    if not os.path.exists(path):
+        return None
+    try:
+        import joblib
+
+        return joblib.load(path)
+    except Exception:
+        return None
+
+
+def load_component_models():
+    path = "models/component_models.joblib"
+    if not os.path.exists(path):
+        return None
+    try:
+        import joblib
+
+        return joblib.load(path)
+    except Exception:
+        return None
+
+
+def load_scoring_bridge():
+    path = "models/scoring_bridge.joblib"
     if not os.path.exists(path):
         return None
     try:
@@ -366,7 +403,7 @@ def season_records(schedules: pl.DataFrame, season: int) -> dict[str, dict]:
     return out
 
 
-def build_feature_vector(features: list[str], home_stats: dict, away_stats: dict, week: int, season: int) -> list[float]:
+def build_feature_vector(features: list[str], home_stats: dict, away_stats: dict, week: int, season: int, weather: dict | None = None) -> list[float]:
     values = []
     for feat in features:
         if feat == "week":
@@ -383,12 +420,16 @@ def build_feature_vector(features: list[str], home_stats: dict, away_stats: dict
             values.append(float(home_stats.get(feat[5:]) or 0.0))
         elif feat.startswith("away_"):
             values.append(float(away_stats.get(feat[5:]) or 0.0))
+        elif feat.startswith("wx_"):
+            source = weather if weather is not None else home_stats
+            values.append(float((source or {}).get(feat, 0.0) or 0.0))
         elif feat.endswith("_diff"):
             base = feat[: -len("_diff")]
             values.append(
                 float(home_stats.get(base) or 0.0) - float(away_stats.get(base) or 0.0)
             )
         else:
+            # Unknown feature: fill explicitly with 0.0 (documented default).
             values.append(0.0)
     return values
 
@@ -418,6 +459,45 @@ def main() -> None:
     if upcoming.height == 0:
         print("No upcoming games found.")
         return
+
+    # Batch-fetch forecasts for upcoming games (reuse fetch_weather helpers).
+    game_weather: dict[str, dict] = {}
+    upcoming_dicts = upcoming.to_dicts()
+    _weather_cache: dict = {}
+    if _fw is not None:
+        try:
+            _fw.prefetch_forecasts(upcoming_dicts, datetime.now(timezone.utc), _weather_cache)
+        except Exception:
+            _weather_cache = {}
+    for rd in upcoming_dicts:
+        gid = str(rd.get("game_id"))
+        try:
+            if _wf is None:
+                game_weather[gid] = {}
+                continue
+            roof = rd.get("roof")
+            if str(roof or "").lower() in {"dome", "closed"}:
+                game_weather[gid] = _wf.forecast_weather(roof=roof)
+                continue
+            kickoff = kickoff_utc(rd.get("gameday"), rd.get("gametime"))
+            if kickoff is None or _fw is None:
+                game_weather[gid] = _wf.forecast_weather(roof=roof)
+                continue
+            day = kickoff.strftime("%Y-%m-%d")
+            hourly = _fw.fetch_forecast(rd.get("home_team"), day, _weather_cache)
+            if not hourly:
+                game_weather[gid] = _wf.forecast_weather(roof=roof)
+                continue
+            temp = _fw.hourly_value(hourly, "temperature_2m", kickoff)
+            wind = _fw.hourly_value(hourly, "wind_speed_10m", kickoff)
+            gust = _fw.hourly_value(hourly, "wind_gusts_10m", kickoff)
+            snow = _fw.hourly_value(hourly, "snowfall", kickoff)
+            precip_mm = _fw.hourly_value(hourly, "precipitation", kickoff)
+            game_weather[gid] = _wf.forecast_weather(
+                temp=temp, wind=wind, gust=gust, snow=snow, precip_mm=precip_mm, roof=roof
+            )
+        except Exception:
+            game_weather[gid] = _wf.forecast_weather(roof=rd.get("roof")) if _wf else {}
 
     stats_cache: dict[str, dict] = {}
     records = season_records(schedules, current_season)
@@ -475,6 +555,7 @@ def main() -> None:
 
     prediction_rows = []
     feature_vectors: dict[str, dict] = {}
+    total_feature_vectors: dict[str, dict] = {}
     for row in upcoming.iter_rows(named=True):
         game_id = str(row.get("game_id"))
         # A started game must keep its last pre-kickoff prediction. Rebuilding
@@ -557,16 +638,101 @@ def main() -> None:
         except Exception:
             pass
 
+        direct_total = None
         if score_bundle:
             try:
+                _total_features = score_bundle.get("total_features") or score_bundle.get("features")
+                # Use copies so stats_cache is not polluted with game weather.
+                home_total_stats = dict(stats_cache[home])
+                away_total_stats = dict(stats_cache[away])
+                gw = game_weather.get(str(row.get("game_id")), {})
+                for key, value in (gw or {}).items():
+                    home_total_stats[key] = value
+                    away_total_stats[key] = value
                 sx = build_feature_vector(
-                    score_bundle["features"],
+                    _total_features,
+                    home_total_stats,
+                    away_total_stats,
+                    week,
+                    current_season,
+                    weather=gw,
+                )
+                direct_total = float(score_bundle["total_model"].predict([sx])[0])
+                total = direct_total
+                total_feature_vectors[str(row.get("game_id"))] = {
+                    name: float(value) for name, value in zip(_total_features, sx)
+                }
+            except Exception:
+                direct_total = total
+
+        # Component models -> reconstructed total + stat projection.
+        stat_projection = None
+        total_from_components = None
+        component_bundle = load_component_models()
+        bridge = load_scoring_bridge()
+        gw = game_weather.get(str(row.get("game_id")), {})
+        if component_bundle is not None and bridge is not None:
+            try:
+                import component_models as cm
+                comps = cm.predict_components_from_stats(
                     stats_cache[home],
                     stats_cache[away],
                     week,
                     current_season,
+                    weather=gw,
+                    neutral=False,
                 )
-                total = float(score_bundle["total_model"].predict([sx])[0])
+                neutral_comps = comps.get("_neutral_components", {})
+                att40 = comps.get("c_fg_att_40p", 0.0)
+                fg_make_prob_40p = comps.get("fg_make_prob_40p", 0.75)
+                fg_points = comps.get("fg_points", 0.0)
+                bridge_x = [comps[t] for t in bridge["features"]]
+                total_from_components_raw = float(bridge["model"].predict([bridge_x])[0])
+                # neutral total
+                neutral_bridge_x = [neutral_comps.get(t, comps[t]) for t in bridge["features"]]
+                total_neutral_raw = float(bridge["model"].predict([neutral_bridge_x])[0])
+                delta_total = total_from_components_raw - total_neutral_raw
+                total_delta_clamped = False
+                if abs(delta_total) > 5.0:
+                    scale = 5.0 / abs(delta_total)
+                    total_from_components_raw = total_neutral_raw + delta_total * scale
+                    total_delta_clamped = True
+                total_from_components = total_from_components_raw
+                if component_bundle.get("bias_correction_applied"):
+                    total_from_components -= float(component_bundle.get("bias_correction_value", 0.0))
+                total_neutral = total_neutral_raw
+                if component_bundle.get("bias_correction_applied"):
+                    total_neutral -= float(component_bundle.get("bias_correction_value", 0.0))
+                gate_passed = bool(component_bundle.get("gate", {}).get("passed", False))
+                if gate_passed:
+                    total = total_from_components
+                    source = "components"
+                else:
+                    source = "gate_fallback"
+                clamped = bool(comps.get("weather_delta_clamped", False) or total_delta_clamped)
+                # ratios for player adjustments
+                def _r(a, n, lo, hi):
+                    if n is None or abs(n) < 1e-9:
+                        return 1.0
+                    return min(max(a / n, lo), hi)
+                pass_ratio = _r(comps["c_pass_yds"], neutral_comps.get("c_pass_yds", comps["c_pass_yds"]), 0.90, 1.10)
+                rush_ratio = _r(comps["c_rush_yds"], neutral_comps.get("c_rush_yds", comps["c_rush_yds"]), 0.90, 1.10)
+                fg_ratio = _r(fg_points, (3.0 * (neutral_comps.get("c_fg_att_short", comps["c_fg_att_short"]) * comps.get("fg_make_prob_short", 0.9) + neutral_comps.get("c_fg_att_40p", comps["c_fg_att_40p"]) * comps.get("fg_make_prob_40p", 0.75))), 0.85, 1.10)
+                stat_projection = {
+                    "pass_att": round(comps["c_pass_att"], 1),
+                    "rush_att": round(comps["c_rush_att"], 1),
+                    "pass_yds": round(comps["c_pass_yds"], 1),
+                    "rush_yds": round(comps["c_rush_yds"], 1),
+                    "fg_att_40p": round(comps["c_fg_att_40p"], 2),
+                    "fg_make_prob_40p": round(fg_make_prob_40p, 3),
+                    "fg_points": round(fg_points, 1),
+                    "total_from_components": round(total_from_components, 1),
+                    "stat_projection_source": source,
+                    "weather_delta_clamped": clamped,
+                    "pass_ratio": round(pass_ratio, 4),
+                    "rush_ratio": round(rush_ratio, 4),
+                    "fg_ratio": round(fg_ratio, 4),
+                }
             except Exception:
                 pass
 
@@ -586,6 +752,9 @@ def main() -> None:
                 "away_form": records.get(away, {}).get("form"),
                 "spread": round(spread, 1) if spread is not None else None,
                 "total": round(total, 1) if total is not None else None,
+                "model_total": round(total, 1) if total is not None else None,
+                "model_total_direct": round(direct_total, 1) if direct_total is not None else None,
+                "stat_projection": stat_projection,
                 "gameday": str(row.get("gameday")) if row.get("gameday") is not None else None,
                 "gametime": str(row.get("gametime")) if row.get("gametime") is not None else None,
                 "location": row.get("location"),
@@ -597,10 +766,19 @@ def main() -> None:
             }
         )
 
+    try:
+        if _ma is not None:
+            _ma.apply_market_adjustment(prediction_rows, datetime.now(timezone.utc))
+    except Exception as _exc:
+        print(f"Market adjustment skipped: {_exc}")
+
     os.makedirs("predictions", exist_ok=True)
     with open("predictions/upcoming_games.json", "w", encoding="utf-8") as f:
         json.dump(prediction_rows, f, indent=2)
     os.makedirs("models", exist_ok=True)
+    _total_features = None
+    if score_bundle:
+        _total_features = score_bundle.get("total_features") or score_bundle.get("features")
     with open("models/upcoming_feature_vectors.json", "w", encoding="utf-8") as f:
         json.dump(
             {
@@ -608,6 +786,8 @@ def main() -> None:
                 "season": current_season,
                 "features": feature_names,
                 "games": feature_vectors,
+                "total_features": _total_features,
+                "total_vectors": total_feature_vectors,
             },
             f,
             indent=2,

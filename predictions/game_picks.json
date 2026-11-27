@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-27T05:41:02.664090+00:00",
+  "generated_at": "2026-11-27T18:30:28.263661+00:00",
   "games": [
     {
       "game_id": "2026_12_GB_LA",
@@ -426,10 +426,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.464,
-        "spread": -1.2,
-        "total": 38.2,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.417,
+        "spread": -2.8,
+        "total": 38.4,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 31.5,
       "precip": 47.0,
@@ -505,8 +505,8 @@
       "pregame_model": {
         "home_win_prob": 0.473,
         "spread": -0.9,
-        "total": 42.9,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 40.5,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       }
     },
     {
@@ -575,8 +575,8 @@
       "pregame_model": {
         "home_win_prob": 0.674,
         "spread": 6.0,
-        "total": 49.6,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 49.8,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 20.8,
       "precip": 1.0,
@@ -652,8 +652,8 @@
       "pregame_model": {
         "home_win_prob": 0.75,
         "spread": 9.0,
-        "total": 51.1,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 51.0,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 23.5,
       "precip": 78.0,
@@ -727,10 +727,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.313,
+        "home_win_prob": 0.312,
         "spread": -6.5,
-        "total": 36.0,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 40.1,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 19.7,
       "precip": 97.0,
@@ -804,10 +804,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.407,
-        "spread": -3.2,
-        "total": 45.0,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.386,
+        "spread": -3.9,
+        "total": 47.3,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 10.1,
       "precip": 5.0,
@@ -883,8 +883,8 @@
       "pregame_model": {
         "home_win_prob": 0.853,
         "spread": 14.1,
-        "total": 58.7,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 51.6,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 9.2,
       "precip": 2.0,
@@ -958,10 +958,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.418,
-        "spread": -2.8,
-        "total": 34.3,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.424,
+        "spread": -2.6,
+        "total": 40.3,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       }
     },
     {
@@ -1028,10 +1028,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.757,
-        "spread": 9.3,
-        "total": 42.8,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.72,
+        "spread": 7.8,
+        "total": 43.2,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 20.1,
       "precip": 80.0,
@@ -1107,8 +1107,8 @@
       "pregame_model": {
         "home_win_prob": 0.344,
         "spread": -5.4,
-        "total": 50.2,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 50.9,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 5.6,
       "precip": 0.0,
@@ -1182,10 +1182,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.662,
-        "spread": 5.6,
-        "total": 43.0,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.661,
+        "spread": 5.5,
+        "total": 42.7,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 19.2,
       "precip": 98.0,
@@ -1259,10 +1259,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.605,
-        "spread": 3.6,
-        "total": 40.6,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.604,
+        "spread": 3.5,
+        "total": 42.8,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 9.4,
       "precip": 15.0,
@@ -1336,10 +1336,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.516,
-        "spread": 0.5,
-        "total": 50.7,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.533,
+        "spread": 1.1,
+        "total": 48.5,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       }
     },
     {
@@ -1406,10 +1406,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.371,
+        "home_win_prob": 0.372,
         "spread": -4.4,
-        "total": 41.8,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 42.0,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 9.6,
       "precip": 11.0,
@@ -1490,10 +1490,10 @@
       "humidity": 51.0,
       "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00",
       "pregame_model": {
-        "home_win_prob": 0.332,
-        "spread": -5.8,
-        "total": 49.4,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.349,
+        "spread": -5.2,
+        "total": 51.1,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       }
     },
     {
@@ -1560,10 +1560,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.285,
-        "spread": -7.6,
-        "total": 48.9,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.356,
+        "spread": -4.9,
+        "total": 45.6,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       }
     },
     {
@@ -1637,10 +1637,10 @@
       "humidity": 39.0,
       "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00",
       "pregame_model": {
-        "home_win_prob": 0.418,
-        "spread": -2.8,
-        "total": 44.3,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.462,
+        "spread": -1.3,
+        "total": 46.8,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       }
     },
     {
@@ -1707,10 +1707,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.728,
+        "home_win_prob": 0.727,
         "spread": 8.1,
-        "total": 38.6,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 43.2,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 2.0,
       "precip": 8.0,
@@ -1784,10 +1784,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.829,
-        "spread": 12.7,
-        "total": 45.2,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.833,
+        "spread": 12.9,
+        "total": 47.2,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 6.9,
       "precip": 9.0,
@@ -1861,10 +1861,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.338,
-        "spread": -5.6,
-        "total": 49.2,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.34,
+        "spread": -5.5,
+        "total": 50.3,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 23.0,
       "precip": 17.0,
@@ -1940,8 +1940,8 @@
       "pregame_model": {
         "home_win_prob": 0.494,
         "spread": -0.2,
-        "total": 49.9,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 46.2,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 11.9,
       "precip": 14.0,
@@ -2015,10 +2015,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.375,
-        "spread": -4.3,
-        "total": 47.1,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.392,
+        "spread": -3.7,
+        "total": 47.0,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 15.2,
       "precip": 19.0,
@@ -2092,10 +2092,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.212,
-        "spread": -10.7,
-        "total": 40.4,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.216,
+        "spread": -10.5,
+        "total": 34.2,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 28.6,
       "precip": 19.0,
@@ -2169,10 +2169,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.548,
+        "home_win_prob": 0.549,
         "spread": 1.6,
-        "total": 45.1,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "total": 41.8,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       }
     },
     {
@@ -2239,10 +2239,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.554,
-        "spread": 1.8,
-        "total": 38.0,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.49,
+        "spread": -0.3,
+        "total": 38.4,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 19.9,
       "precip": 12.0,
@@ -2316,10 +2316,10 @@
       "grades": null,
       "graded_at": null,
       "pregame_model": {
-        "home_win_prob": 0.535,
-        "spread": 1.2,
-        "total": 42.5,
-        "at": "2026-11-27T05:41:02.664090+00:00"
+        "home_win_prob": 0.56,
+        "spread": 2.0,
+        "total": 44.7,
+        "at": "2026-11-27T18:30:28.263661+00:00"
       },
       "gust": 34.4,
       "precip": 27.0,

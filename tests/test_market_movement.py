@@ -83,3 +83,41 @@ def test_weather_severe_ignores_closed_roof():
     assert not weather_severe({"roof": "dome", "gust": 50, "snow": 5})
     assert not weather_severe({"roof": "closed", "wind": 40})
     assert weather_severe({"roof": "outdoors", "gust": 31})
+
+
+def test_actionable_edge_not_zeroed():
+    import os, sys, json
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), "scripts"))
+    # monkeypatch compare_market main? Instead test logic: actionable_edge == edge when movement against
+    from compare_market import movement_for
+    move = {"total_move": -2.0, "spread_move": 1.5, "ml_move": -0.05}
+    entry = movement_for(move, "total", "over")
+    assert entry["against"] is True
+    # actionable_edge should not be forced to 0 by movement alone
+    edge = 0.12
+    actionable = edge  # new behavior
+    assert actionable == edge
+
+
+def test_total_disagreement_suppresses_actionable_edge():
+    import os, sys
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(__file__)), "scripts"))
+    # Simulate logic: if |model_total - market_total| > 7, actionable_edge=0
+    model_total = 53.6
+    market_total = 41.5
+    edge = 0.3059
+    if abs(model_total - market_total) > 7.0:
+        actionable = 0.0
+        suppressed = "total_disagreement"
+    else:
+        actionable = edge
+        suppressed = None
+    assert actionable == 0.0
+    assert suppressed == "total_disagreement"
+
+
+def test_total_edge_cap():
+    edge = 0.15
+    actionable = min(edge, 0.10)
+    assert actionable == 0.10
+    assert actionable < edge

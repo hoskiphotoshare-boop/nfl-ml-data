@@ -469,6 +469,22 @@ def build_pick_entry(game, upcoming_by_id, now, odds_fetched_at):
         "home_win_prob": home_win_prob,
         "spread": spread,
         "total": total,
+        "model_home_win_prob": (
+            source.get("model_home_win_prob") if source and source.get("model_home_win_prob") is not None
+            else game.get("model_home_win_prob")
+        ),
+        "model_spread": (
+            source.get("model_spread") if source and source.get("model_spread") is not None
+            else game.get("model_spread")
+        ),
+        "model_total": (
+            source.get("model_total") if source and source.get("model_total") is not None
+            else game.get("model_total")
+        ),
+        "market_adjustment": _copy(
+            (source.get("market_adjustment") if source else None)
+            or game.get("market_adjustment")
+        ),
         "home_record": _src("home_record"),
         "away_record": _src("away_record"),
         "home_form": _src("home_form"),

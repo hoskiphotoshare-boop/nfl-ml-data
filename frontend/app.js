@@ -677,26 +677,19 @@ function edgeGrid(market, best, game) {
     }
     const isBest = !finalScore && best && best.key === key;
     const moved = Boolean(entry.movement && entry.movement.against);
-    const weatherRisk = Boolean(entry.weather_risk);
     const cell = el(
       'div',
       `edge-cell${isBest ? ' best' : ''}${grade === 'win' ? ' call-win' : ''}${
         moved ? ' moved' : ''
-      }${weatherRisk ? ' weather-risk' : ''}`
+      }`
     );
     const label = el('div', 'k', MARKET_LABEL[key]);
     if (moved) {
       const movedBadge = el('span', 'moved-badge', 'Moved');
       movedBadge.title = `Market moved against this pick since the first tracked snapshot: ${
         entry.movement.reason || 'line moved'
-      }. The edge is not actionable.`;
+      }. The movement is already incorporated into the model output.`;
       label.appendChild(movedBadge);
-    }
-    if (weatherRisk) {
-      const weatherBadge = el('span', 'moved-badge', 'Weather');
-      weatherBadge.title =
-        'Severe forecast at kickoff; a model over total is not treated as actionable until weather is a model input.';
-      label.appendChild(weatherBadge);
     }
     if (grade) {
       label.appendChild(
@@ -736,11 +729,7 @@ function edgeGrid(market, best, game) {
         : ''
     }${
       moved
-        ? `\nMarket moved against this pick since the first tracked snapshot (${entry.movement.reason || 'line moved'}); the edge is not actionable.`
-        : ''
-    }${
-      weatherRisk
-        ? '\nSevere weather at kickoff; an over-total edge is not actionable until weather is a model input.'
+        ? `\nMarket moved against this pick since the first tracked snapshot (${entry.movement.reason || 'line moved'}); the movement is already incorporated into the model output.`
         : ''
     }`;
     grid.appendChild(cell);
@@ -1059,6 +1048,7 @@ function archivedMarket(game) {
     movement_against_any: Boolean(game?.movement_against_any),
     weather_risk: Boolean(game?.weather_risk),
     blend_conflict: Boolean(game?.blend_conflict),
+    market_adjustment: game?.market_adjustment || null,
   };
 }
 
@@ -1140,7 +1130,7 @@ function gameCard(game, rank) {
   if (severeWeather) {
     const severe = el('span', 'tag amber', 'Severe weather');
     severe.title =
-      'Forecast at kickoff is outside normal playing conditions. The model does not yet use weather as an input; treat weather-sensitive edges with extra caution.';
+      'Forecast at kickoff is outside normal playing conditions. Weather is now a model input; treat weather-sensitive edges with appropriate caution.';
     top.appendChild(severe);
   }
   const liveScore = el('span', 'live-score');
@@ -1173,15 +1163,20 @@ function gameCard(game, rank) {
   if (market && market.movement_against_any) {
     const moved = el('span', 'tag amber', 'Market moved');
     moved.title =
-      'At least one market moved against the model pick after the first tracked snapshot. Those edges are discounted and cannot be the best pick.';
+      'At least one market moved against the model pick after the first tracked snapshot. The movement is already incorporated into the model output.';
     top.appendChild(moved);
   }
-  if (market && market.weather_risk) {
-    const wxRisk = el('span', 'tag amber', 'Weather risk');
-    wxRisk.title =
-      'Severe weather at kickoff. The model does not yet use weather as an input, so an over-total edge is not actionable.';
-    top.appendChild(wxRisk);
+  if (game.market_adjustment && game.market_adjustment.applied) {
+    const ma = game.market_adjustment;
+    const badge = el('span', 'tag amber', 'Market-adjusted');
+    const parts = [];
+    if (ma.ml_move !== null && ma.ml_move !== undefined) parts.push(`ML move ${ma.ml_move} (w ${Math.round((ma.w_ml || 0) * 100)}%)`);
+    if (ma.spread_move !== null && ma.spread_move !== undefined) parts.push(`spread move ${ma.spread_move} (w ${Math.round((ma.w_spread || 0) * 100)}%)`);
+    if (ma.total_move !== null && ma.total_move !== undefined) parts.push(`total move ${ma.total_move} (w ${Math.round((ma.w_total || 0) * 100)}%)`);
+    badge.title = `Market-adjusted output. ${parts.join('; ')}.`;
+    top.appendChild(badge);
   }
+
   const finalScore = completedScore(game.game_id);
   const callGrades = finalScore
     ? Object.fromEntries(
@@ -1329,6 +1324,15 @@ function gameCard(game, rank) {
   card.appendChild(meta);
 
   if (market && market.markets) card.appendChild(edgeGrid(market, best, game));
+
+  const sp = game.stat_projection;
+  if (sp) {
+    const profile = el('div', 'stat-profile', `Proj: ${sp.pass_yds} pass · ${sp.rush_yds} rush · ${Math.round((sp.fg_make_prob_40p || 0) * 100)}% FG40+`);
+    if (sp.fg_make_prob_40p !== null && sp.fg_make_prob_40p !== undefined && sp.fg_make_prob_40p < 0.65) {
+      profile.appendChild(el('span', 'tag amber', 'FG risk'));
+    }
+    card.appendChild(profile);
+  }
 
   if (context) {
     const homeInjuries = context.home?.injuries || [];

@@ -67,7 +67,7 @@ def main() -> None:
     import joblib
 
     bundle = joblib.load(BUNDLE)
-    features = bundle["features"]
+    features = bundle.get("total_features", bundle.get("features"))
     match = pl.read_parquet(MATCH).filter(
         pl.col("home_score").is_not_null() & pl.col("away_score").is_not_null()
     )

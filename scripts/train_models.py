@@ -62,6 +62,18 @@ NG_FEATURES = (
 )
 
 
+REQUIRED_MATCH_CONTEXT = [
+    "home_prior_games", "away_prior_games", "home_win_pct", "away_win_pct",
+    "home_diff_pg", "away_diff_pg", "win_pct_diff", "diff_pg_diff",
+    "home_blend_diff", "away_blend_diff", "blend_diff_diff",
+    "home_blend_win", "away_blend_win", "blend_win_diff",
+    "home_qb_prior_epa", "away_qb_prior_epa", "home_qb_starts", "away_qb_starts",
+    "home_qb_changed", "away_qb_changed", "home_qb_missing", "away_qb_missing",
+    "home_inj_impact", "away_inj_impact", "inj_impact_diff",
+    "home_inj_missing", "away_inj_missing",
+]
+
+
 def load_features() -> pl.DataFrame | None:
     path = "features/match_features.parquet"
     if not os.path.exists(path):
@@ -151,6 +163,13 @@ def prepare_match_matrix(df: pl.DataFrame):
 
 
 def train_match_model(df: pl.DataFrame):
+    missing = [c for c in REQUIRED_MATCH_CONTEXT if c not in df.columns]
+    if missing:
+        print("FATAL: match context columns missing; refusing to train match model:")
+        for c in missing:
+            print(f"  - {c}")
+        print("Run scripts/add_match_context.py after build_features.py.")
+        return None, []
     X, y, feature_cols = prepare_match_matrix(df)
     if X is None or len(X) < 20 or not SKLEARN_AVAILABLE:
         print("Not enough data (or sklearn missing) – using heuristic match predictions.")
@@ -212,7 +231,7 @@ def train_match_model(df: pl.DataFrame):
     print(f"Selected model: {best_name} (log loss {best_loss:.3f})")
     os.makedirs("models", exist_ok=True)
     joblib.dump(
-        {"model": best_model, "features": feature_cols, "name": best_name},
+        {"model": best_model, "features": feature_cols, "name": best_name, "n_features": len(feature_cols)},
         "models/match_model.joblib",
     )
     print("Saved models/match_model.joblib")
@@ -231,6 +250,12 @@ def train_score_models(df: pl.DataFrame, feature_cols: list[str]) -> None:
     if not required.issubset(set(df.columns)):
         return
 
+    try:
+        sys.path.insert(0, os.path.dirname(__file__))
+        from weather_features import WEATHER_FEATURES as _WX
+    except Exception:
+        _WX = []
+
     played = df.filter(
         pl.col("home_score").is_not_null()
         & pl.col("away_score").is_not_null()
@@ -240,8 +265,17 @@ def train_score_models(df: pl.DataFrame, feature_cols: list[str]) -> None:
         print("Not enough recent games for score models; skipping.")
         return
 
-    X = played.select(
-        [pl.col(c).cast(pl.Float64, strict=False).fill_null(0.0) for c in feature_cols]
+    margin_features = [c for c in feature_cols if c in played.columns]
+    total_features = [c for c in feature_cols + _WX if c in played.columns]
+    # de-dupe preserving order
+    seen = set()
+    total_features = [c for c in total_features if not (c in seen or seen.add(c))]
+
+    X_margin = played.select(
+        [pl.col(c).cast(pl.Float64, strict=False).fill_null(0.0) for c in margin_features]
+    ).to_numpy()
+    X_total = played.select(
+        [pl.col(c).cast(pl.Float64, strict=False).fill_null(0.0) for c in total_features]
     ).to_numpy()
     margin = (played["home_score"] - played["away_score"]).to_numpy()
     total = (played["home_score"] + played["away_score"]).to_numpy()
@@ -256,14 +290,14 @@ def train_score_models(df: pl.DataFrame, feature_cols: list[str]) -> None:
             continue
         margin_model = HistGradientBoostingRegressor(
             max_iter=300, learning_rate=0.05, max_depth=3, random_state=42
-        ).fit(X[train], margin[train])
+        ).fit(X_margin[train], margin[train])
         total_model = HistGradientBoostingRegressor(
             max_iter=300, learning_rate=0.05, max_depth=3, random_state=42
-        ).fit(X[train], total[train])
-        oof_margin.extend(margin_model.predict(X[test]) - margin[test])
-        oof_total.extend(total_model.predict(X[test]) - total[test])
-        mae_m = np.mean(np.abs(margin_model.predict(X[test]) - margin[test]))
-        mae_t = np.mean(np.abs(total_model.predict(X[test]) - total[test]))
+        ).fit(X_total[train], total[train])
+        oof_margin.extend(margin_model.predict(X_margin[test]) - margin[test])
+        oof_total.extend(total_model.predict(X_total[test]) - total[test])
+        mae_m = np.mean(np.abs(margin_model.predict(X_margin[test]) - margin[test]))
+        mae_t = np.mean(np.abs(total_model.predict(X_total[test]) - total[test]))
         print(
             f"Score models {test_season}: margin MAE={mae_m:.2f}, "
             f"total MAE={mae_t:.2f}"
@@ -276,16 +310,18 @@ def train_score_models(df: pl.DataFrame, feature_cols: list[str]) -> None:
 
     final_margin = HistGradientBoostingRegressor(
         max_iter=300, learning_rate=0.05, max_depth=3, random_state=42
-    ).fit(X, margin)
+    ).fit(X_margin, margin)
     final_total = HistGradientBoostingRegressor(
         max_iter=300, learning_rate=0.05, max_depth=3, random_state=42
-    ).fit(X, total)
+    ).fit(X_total, total)
 
     joblib.dump(
         {
             "margin_model": final_margin,
             "total_model": final_total,
             "features": feature_cols,
+            "margin_features": margin_features,
+            "total_features": total_features,
             "sigma_margin": round(sigma_margin, 3),
             "sigma_total": round(sigma_total, 3),
         },

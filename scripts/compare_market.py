@@ -236,6 +236,47 @@ def movement_for(movement: dict | None, market: str, side: str) -> dict | None:
     return {**movement, "against": against, "reason": reason}
 
 
+def event_date(event):
+    try:
+        return datetime.fromisoformat(
+            event["commence_time"].replace("Z", "+00:00")
+        ).date()
+    except Exception:
+        return None
+
+
+def game_date(game):
+    try:
+        if game.get("gameday"):
+            return datetime.strptime(game["gameday"], "%Y-%m-%d").date()
+    except Exception:
+        pass
+    return None
+
+
+def choose_event(candidates, game):
+    if not candidates:
+        return None
+    gd = game_date(game)
+    if gd is None:
+        return candidates[0]
+    best = None
+    best_diff = None
+    for ev in candidates:
+        ed = event_date(ev)
+        if ed is None:
+            continue
+        diff = abs((ed - gd).days)
+        if best_diff is None or diff < best_diff:
+            best = ev
+            best_diff = diff
+    if best is None:
+        return candidates[0]
+    if best_diff is not None and best_diff > 2:
+        return None
+    return best
+
+
 def is_blend_conflict(blend_diff, model_prob) -> bool:
     """Strength blend favours the opponent while the final home prob is high."""
     try:
@@ -270,44 +311,6 @@ def main() -> None:
     for event in odds:
         key = (event.get("home_team"), event.get("away_team"))
         odds_index.setdefault(key, []).append(event)
-
-    def event_date(event):
-        try:
-            return datetime.fromisoformat(
-                event["commence_time"].replace("Z", "+00:00")
-            ).date()
-        except Exception:
-            return None
-
-    def game_date(game):
-        try:
-            if game.get("gameday"):
-                return datetime.strptime(game["gameday"], "%Y-%m-%d").date()
-        except Exception:
-            pass
-        return None
-
-    def choose_event(candidates, game):
-        if not candidates:
-            return None
-        gd = game_date(game)
-        if gd is None:
-            return candidates[0]
-        best = None
-        best_diff = None
-        for ev in candidates:
-            ed = event_date(ev)
-            if ed is None:
-                continue
-            diff = abs((ed - gd).days)
-            if best_diff is None or diff < best_diff:
-                best = ev
-                best_diff = diff
-        if best is None:
-            return candidates[0]
-        if best_diff is not None and best_diff > 2:
-            return None
-        return best
 
     comparisons = []
     for game in predictions:
@@ -493,11 +496,33 @@ def main() -> None:
                 severe_weather and key == "total" and market.get("side") == "over"
             )
             market["weather_risk"] = weather_risk
-            market["actionable_edge"] = (
-                0.0
-                if (movement_entry and movement_entry.get("against")) or weather_risk
-                else market.get("edge")
-            )
+            if key == "total":
+                edge_val = market.get("edge")
+                suppressed = False
+                capped = False
+                mt = game.get("total")
+                if mt is not None and market_total is not None:
+                    try:
+                        if abs(float(mt) - float(market_total)) > 7.0:
+                            suppressed = True
+                    except (TypeError, ValueError):
+                        suppressed = False
+                if suppressed:
+                    market["actionable_edge"] = 0.0
+                    market["edge_suppressed"] = "total_disagreement"
+                else:
+                    if edge_val is not None and edge_val > 0.10:
+                        market["actionable_edge"] = 0.10
+                        market["edge_capped"] = True
+                    else:
+                        market["actionable_edge"] = edge_val
+                        market["edge_capped"] = False
+                if not suppressed:
+                    market["edge_suppressed"] = None
+            else:
+                market["actionable_edge"] = market.get("edge")
+                market["edge_suppressed"] = None
+                market["edge_capped"] = False
             price = market.get("price")
             market["ev"] = (
                 round((float(market["model_prob"]) * float(price) - 1.0) * 100.0, 2)
@@ -579,6 +604,10 @@ def main() -> None:
                 "spread_edge": round(spread_edge, 2) if spread_edge is not None else None,
                 "model_total": game.get("total"),
                 "market_total": market_total,
+                "model_home_win_prob_pure": game.get("model_home_win_prob"),
+                "model_spread_pure": game.get("model_spread"),
+                "model_total_pure": game.get("model_total"),
+                "market_adjustment": game.get("market_adjustment"),
                 "total_edge": round(total_edge, 2) if total_edge is not None else None,
                 "best_home_ml": best_home_ml,
                 "best_away_ml": best_away_ml,
@@ -607,6 +636,16 @@ def main() -> None:
         "blend_conflicts": sum(1 for c in comparisons if c.get("blend_conflict")),
         "movement_flags": sum(1 for c in comparisons if c.get("movement_against_any")),
         "weather_flags": sum(1 for c in comparisons if c.get("weather_risk")),
+        "edge_suppressed_total_disagreement": sum(
+            1 for c in comparisons
+            for m in (c.get("markets", {}) or {}).values()
+            if m.get("edge_suppressed") == "total_disagreement"
+        ),
+        "edge_capped": sum(
+            1 for c in comparisons
+            for m in (c.get("markets", {}) or {}).values()
+            if m.get("edge_capped")
+        ),
         "suppressed_edges": sum(len(c.get("suppressed_edges", [])) for c in comparisons),
         "best_market_counts": {
             key: sum(1 for c in comparisons if c.get("best_market") == key)
@@ -622,8 +661,32 @@ def main() -> None:
         except Exception:
             odds_meta = {}
 
+    total_edges = []
+    over_count = 0
+    under_count = 0
+    for c in comparisons:
+        t = (c.get("markets", {}) or {}).get("total", {})
+        edge = t.get("edge")
+        if edge is not None:
+            total_edges.append(float(edge))
+            side = t.get("side")
+            if side == "over":
+                over_count += 1
+            elif side == "under":
+                under_count += 1
+    total_calibration = {
+        "n": len(total_edges),
+        "over": over_count,
+        "under": under_count,
+        "mean_edge": round(statistics.mean(total_edges), 4) if total_edges else None,
+        "mean_total_minus_market": round(
+            statistics.mean([float(c.get("total_edge") or 0) for c in comparisons]), 2
+        ) if comparisons else None,
+    }
+
     report = {
         "summary": summary,
+        "total_calibration": total_calibration,
         "odds_fetched_at": odds_meta.get("fetched_at"),
         "odds_events": odds_meta.get("events"),
         "odds_requests_remaining": odds_meta.get("requests_remaining"),

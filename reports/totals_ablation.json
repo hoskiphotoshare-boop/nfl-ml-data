@@ -1,49 +1,49 @@
 {
-  "best": "base+pass_rate",
+  "best": "base+plays+rate",
   "results": {
     "base": {
-      "total_mae": 11.078,
-      "margin_mae": 10.2525,
+      "total_mae": 10.9946,
+      "margin_mae": 10.8859,
       "per_season_total": [
-        10.821,
-        11.32,
-        11.106
+        10.689,
+        11.27,
+        11.05
       ]
     },
     "base+plays": {
-      "total_mae": 11.0439,
-      "margin_mae": 10.2748,
+      "total_mae": 10.9969,
+      "margin_mae": 10.9518,
       "per_season_total": [
-        10.803,
-        11.287,
-        11.042
+        10.64,
+        11.277,
+        11.134
       ]
     },
     "base+pass_rate": {
-      "total_mae": 11.0373,
-      "margin_mae": 10.2809,
+      "total_mae": 11.0245,
+      "margin_mae": 10.8758,
       "per_season_total": [
-        10.76,
-        11.301,
-        11.064
+        10.752,
+        11.244,
+        11.118
       ]
     },
     "base+plays+rate": {
-      "total_mae": 11.0494,
-      "margin_mae": 10.2748,
+      "total_mae": 10.9361,
+      "margin_mae": 10.9354,
       "per_season_total": [
-        10.776,
-        11.334,
-        11.032
+        10.601,
+        11.221,
+        11.026
       ]
     },
     "base+plays+rate+turnovers": {
-      "total_mae": 11.0767,
-      "margin_mae": 10.3015,
+      "total_mae": 10.9387,
+      "margin_mae": 10.8905,
       "per_season_total": [
-        10.805,
-        11.333,
-        11.106
+        10.633,
+        11.202,
+        11.015
       ]
     }
   }

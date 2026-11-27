@@ -240,7 +240,7 @@ def totals_and_margin() -> dict:
         (pl.col("home_score") + pl.col("away_score")).alias("total_points"),
         (pl.col("home_score") - pl.col("away_score")).alias("margin"),
     )
-    base = joblib.load("models/score_models.joblib")["features"]
+    base = joblib.load("models/score_models.joblib").get("total_features", joblib.load("models/score_models.joblib").get("features"))
     output = {"total": {}, "margin": {}}
     for source in ("actual", "forecast"):
         data = attach_weather(played, source)

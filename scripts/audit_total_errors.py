@@ -31,7 +31,8 @@ def main() -> None:
     import joblib
 
     bundle = joblib.load(MODEL)
-    features = [c for c in bundle["features"] if c in pl.read_parquet_schema(MATCH)]
+    _tf = bundle.get("total_features", bundle.get("features"))
+    features = [c for c in _tf if c in pl.read_parquet_schema(MATCH)]
     frame = pl.read_parquet(MATCH).filter(
         pl.col("home_score").is_not_null()
         & pl.col("away_score").is_not_null()
