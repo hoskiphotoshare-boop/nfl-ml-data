@@ -687,7 +687,7 @@ function edgeGrid(market, best, game) {
     const label = el('div', 'k', MARKET_LABEL[key]);
     if (moved) {
       const movedBadge = el('span', 'moved-badge', 'Moved');
-      movedBadge.title = `Market moved against this pick since opening: ${
+      movedBadge.title = `Market moved against this pick since the first tracked snapshot: ${
         entry.movement.reason || 'line moved'
       }. The edge is not actionable.`;
       label.appendChild(movedBadge);
@@ -736,7 +736,7 @@ function edgeGrid(market, best, game) {
         : ''
     }${
       moved
-        ? `\nMarket moved against this pick since opening (${entry.movement.reason || 'line moved'}); the edge is not actionable.`
+        ? `\nMarket moved against this pick since the first tracked snapshot (${entry.movement.reason || 'line moved'}); the edge is not actionable.`
         : ''
     }${
       weatherRisk
@@ -1136,9 +1136,7 @@ function gameCard(game, rank) {
   const severeWeather =
     (wx.gust !== null && wx.gust !== undefined && wx.gust >= 30) ||
     (wx.wind !== null && wx.wind !== undefined && wx.wind >= 20) ||
-    (wx.snow !== null && wx.snow !== undefined && wx.snow > 0) ||
-    (wx.temp !== null && wx.temp !== undefined && wx.temp <= 32) ||
-    (wx.precip !== null && wx.precip !== undefined && wx.precip >= 60);
+    (wx.snow !== null && wx.snow !== undefined && wx.snow > 0);
   if (severeWeather) {
     const severe = el('span', 'tag amber', 'Severe weather');
     severe.title =
@@ -1175,7 +1173,7 @@ function gameCard(game, rank) {
   if (market && market.movement_against_any) {
     const moved = el('span', 'tag amber', 'Market moved');
     moved.title =
-      'At least one market moved against the model pick after opening. Those edges are discounted and cannot be the best pick.';
+      'At least one market moved against the model pick after the first tracked snapshot. Those edges are discounted and cannot be the best pick.';
     top.appendChild(moved);
   }
   if (market && market.weather_risk) {
