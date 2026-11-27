@@ -28,7 +28,7 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 89.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_12_NO_CIN",
@@ -59,7 +59,7 @@
     "snow": 0.0,
     "weather_code": 63.0,
     "humidity": 96.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_12_BAL_HOU",
@@ -90,7 +90,7 @@
     "snow": 0.0,
     "weather_code": 1.0,
     "humidity": 34.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_12_NYG_IND",
@@ -121,7 +121,7 @@
     "snow": 0.0,
     "weather_code": 63.0,
     "humidity": 98.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_12_TEN_JAX",
@@ -152,7 +152,7 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 76.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_12_NYJ_MIA",
@@ -183,7 +183,7 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 67.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_12_ATL_MIN",
@@ -258,7 +258,7 @@
     "snow": 0.0,
     "weather_code": 2.0,
     "humidity": 17.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_12_SEA_SF",
@@ -289,7 +289,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 66.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_12_LV_CLE",
@@ -320,7 +320,7 @@
     "snow": 0.0,
     "weather_code": 61.0,
     "humidity": 95.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_12_CAR_TB",
@@ -351,7 +351,7 @@
     "snow": 0.0,
     "weather_code": 51.0,
     "humidity": 94.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_KC_LA",
@@ -404,7 +404,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 19.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_JAX_CHI",
@@ -435,7 +435,7 @@
     "snow": 0.0,
     "weather_code": 1.0,
     "humidity": 36.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_CIN_CLE",
@@ -466,7 +466,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 49.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_GB_NO",
@@ -519,7 +519,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 38.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_LAC_TB",
@@ -550,7 +550,7 @@
     "snow": 0.0,
     "weather_code": 2.0,
     "humidity": 60.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_WAS_TEN",
@@ -581,7 +581,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 36.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_PHI_ARI",
@@ -612,7 +612,7 @@
     "snow": 0.0,
     "weather_code": 2.0,
     "humidity": 44.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_MIA_DEN",
@@ -643,7 +643,7 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 36.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_CAR_MIN",
@@ -696,7 +696,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 59.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_HOU_PIT",
@@ -727,7 +727,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 60.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_13_DAL_SEA",
@@ -758,7 +758,7 @@
     "snow": 0.0,
     "weather_code": 51.0,
     "humidity": 84.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_14_MIN_NE",
@@ -789,7 +789,7 @@
     "snow": 0.0,
     "weather_code": 51.0,
     "humidity": 94.0,
-    "weather_fetched_at": "2026-11-27T05:35:39.077837+00:00"
+    "weather_fetched_at": "2026-11-27T05:40:12.410573+00:00"
   },
   {
     "game_id": "2026_14_TB_BAL",
