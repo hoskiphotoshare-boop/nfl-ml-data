@@ -16,12 +16,12 @@ jobs:
         with:
           python-version: "3.13"
 
-      - run: pip install -r requirements-ci.txt || true
+      - run: pip install -r requirements-ci.txt
 
       - run: python scripts/download_data.py || true
       - run: python scripts/build_features.py || true
       - run: python scripts/train_player_models.py || true
-      - run: python scripts/add_player_matchups.py || true
+      - run: python scripts/add_player_matchups.py
       - run: python scripts/build_game_context.py || true
       - run: python scripts/explain_models.py || true
       - run: python scripts/build_health_report.py || true

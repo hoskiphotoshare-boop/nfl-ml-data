@@ -56,10 +56,10 @@ jobs:
           python scripts/add_match_context.py || true
           python scripts/add_player_context.py || true
           python scripts/build_predictions.py || true
-          python scripts/train_player_models.py --predict-only || true
-          python scripts/predict_upcoming.py || true
-          python scripts/adjust_player_weather.py || true
-          python scripts/add_player_matchups.py || true
+          python scripts/train_player_models.py --predict-only
+          python scripts/predict_upcoming.py
+          python scripts/adjust_player_weather.py
+          python scripts/add_player_matchups.py
           python scripts/fetch_weather.py || true
           python scripts/build_game_context.py || true
           python scripts/explain_models.py || true
@@ -77,8 +77,8 @@ jobs:
 
       - name: Refresh predictions with fresh odds
         run: |
-          python scripts/predict_upcoming.py || true
-          python scripts/adjust_player_weather.py || true
+          python scripts/predict_upcoming.py
+          python scripts/adjust_player_weather.py
           python scripts/fetch_weather.py || true
 
       - name: Check for new odds

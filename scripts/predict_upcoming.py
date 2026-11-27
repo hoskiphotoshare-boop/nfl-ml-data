@@ -538,6 +538,7 @@ def main() -> None:
     now = datetime.now(timezone.utc)
     previous_by_id: dict[str, dict] = {}
     previous_vectors: dict[str, dict] = {}
+    previous_total_vectors: dict[str, dict] = {}
     if os.path.exists("predictions/upcoming_games.json"):
         try:
             with open("predictions/upcoming_games.json", encoding="utf-8") as f:
@@ -549,9 +550,12 @@ def main() -> None:
     if os.path.exists("models/upcoming_feature_vectors.json"):
         try:
             with open("models/upcoming_feature_vectors.json", encoding="utf-8") as f:
-                previous_vectors = (json.load(f) or {}).get("games", {})
+                previous_payload = json.load(f) or {}
+                previous_vectors = previous_payload.get("games", {})
+                previous_total_vectors = previous_payload.get("total_vectors", {})
         except Exception:
             previous_vectors = {}
+            previous_total_vectors = {}
 
     prediction_rows = []
     feature_vectors: dict[str, dict] = {}
@@ -568,6 +572,8 @@ def main() -> None:
                 prediction_rows.append(locked)
                 if game_id in previous_vectors:
                     feature_vectors[game_id] = previous_vectors[game_id]
+                if game_id in previous_total_vectors:
+                    total_feature_vectors[game_id] = previous_total_vectors[game_id]
             continue
 
         home = row["home_team"]

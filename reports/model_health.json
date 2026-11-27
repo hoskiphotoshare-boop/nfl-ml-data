@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T20:09:30.489493+00:00",
+  "generated_at": "2026-11-27T20:18:26.893445+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -16,15 +16,16 @@
   },
   "market": {
     "games": 25,
-    "outliers": 5,
+    "outliers": 6,
     "outlier_games": [
       "2026_12_NYJ_MIA",
       "2026_12_ATL_MIN",
       "2026_12_WAS_ARI",
       "2026_13_PHI_ARI",
-      "2026_13_MIA_DEN"
+      "2026_13_MIA_DEN",
+      "2026_13_BUF_NE"
     ],
-    "mean_abs_edge": 0.0749,
+    "mean_abs_edge": 0.072,
     "max_abs_edge": 0.2602,
     "blend_conflicts": 0
   },
@@ -42,7 +43,7 @@
     "win_rate": 0.3333,
     "roi": -0.38,
     "profit": -1.14,
-    "mean_edge_delta": -0.0366,
+    "mean_edge_delta": -0.0346,
     "by_market": {
       "spread": {
         "n": 1,
@@ -84,7 +85,10 @@
       }
     }
   },
-  "score_models": {},
+  "score_models": {
+    "margin": 13.37,
+    "total": 14.08
+  },
   "playoff_backtest": {
     "playoff": {
       "brier": 0.1299,
@@ -125,17 +129,25 @@
     }
   },
   "players": {
-    "count": 2,
-    "with_ranges": 0,
-    "active": 0
+    "count": 250,
+    "with_ranges": 250,
+    "active": 250
   },
   "weather": {
     "games_with_forecast": 22,
     "games": 105
   },
   "injuries": {
-    "seasons": [],
-    "latest_week": null
+    "seasons": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "latest_season": 2026,
+    "latest_week": 11,
+    "rows": 27045
   },
   "odds": {
     "fetched_at": "2026-11-27T05:21:28.253346+00:00",

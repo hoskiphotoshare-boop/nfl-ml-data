@@ -23,7 +23,7 @@ jobs:
         with:
           python-version: "3.13"
 
-      - run: pip install -r requirements-ci.txt || true
+      - run: pip install -r requirements-ci.txt
 
       # Refresh current data and context, but keep the trained model weights.
       - run: python scripts/download_data.py || true
@@ -31,11 +31,11 @@ jobs:
       - run: python scripts/add_match_context.py || true
       - run: python scripts/add_player_context.py || true
       - run: python scripts/build_predictions.py || true
-      - run: python scripts/train_player_models.py --predict-only || true
+      - run: python scripts/train_player_models.py --predict-only
 
-      - run: python scripts/predict_upcoming.py || true
-      - run: python scripts/adjust_player_weather.py || true
-      - run: python scripts/add_player_matchups.py || true
+      - run: python scripts/predict_upcoming.py
+      - run: python scripts/adjust_player_weather.py
+      - run: python scripts/add_player_matchups.py
       - run: python scripts/fetch_weather.py || true
       - run: python scripts/build_game_context.py || true
       - run: python scripts/explain_models.py || true
