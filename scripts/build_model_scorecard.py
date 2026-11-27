@@ -34,8 +34,18 @@ def load(path: str, default):
         return default
 
 
+def num(value, default: float = 0.0) -> float:
+    """Coerce JSON values to a float; None, strings and missing keys use default."""
+    if value is None:
+        return default
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return default
+
+
 def fmt(value, digits=3) -> str:
-    return f"{value:.{digits}f}"
+    return f"{num(value):.{digits}f}"
 
 
 def match_numbers() -> dict:
@@ -43,10 +53,10 @@ def match_numbers() -> dict:
     per = report.get("per_season", [])
     if not per:
         return {}
-    games = sum(r["games"] for r in per)
+    games = sum(num(r.get("games")) for r in per) or 1
     pooled = report.get("pooled", {})
-    baseline_acc = sum(r.get("home_baseline_accuracy", 0) * r["games"] for r in per) / games
-    baseline_ll = sum(r.get("home_baseline_log_loss", 0) * r["games"] for r in per) / games
+    baseline_acc = sum(num(r.get("home_baseline_accuracy")) * num(r.get("games")) for r in per) / games
+    baseline_ll = sum(num(r.get("home_baseline_log_loss")) * num(r.get("games")) for r in per) / games
     latest = per[-1]
     return {
         "season": latest.get("season"),
@@ -135,10 +145,10 @@ def main() -> None:
     players = player_numbers()
     scores = score_numbers()
     per_position = load("reports/player_backtest.json", {})
-    playoff = load("reports/playoff_backtest.json", {}).get("pooled", {})
-    futures = load("reports/futures_comparison.json", {}).get("summary", {})
+    playoff = (load("reports/playoff_backtest.json", {}) or {}).get("pooled") or {}
+    futures = (load("reports/futures_comparison.json", {}) or {}).get("summary") or {}
     health = load("reports/model_health.json", {})
-    market = health.get("market", {})
+    market = health.get("market") or {}
 
     rows = []
     if match:
@@ -157,7 +167,7 @@ def main() -> None:
                 "grade": "B",
                 "primary": f"2022–26: {fmt(match['pooled_acc'], 3)} acc · {fmt(match['pooled_ll'], 3)} log loss · {fmt(match['pooled_auc'], 3)} AUC",
                 "baseline": f"Home team: {fmt(match['baseline_acc'], 3)} acc · {fmt(match['baseline_ll'], 3)} log loss",
-                "note": f"{match['games']} games; 95% accuracy interval roughly ±2.6 pp.",
+                "note": f"{int(num(match.get('games')))} games; 95% accuracy interval roughly ±2.6 pp.",
             }
         )
 
@@ -166,8 +176,8 @@ def main() -> None:
             {
                 "model": "Margin",
                 "grade": "C+",
-                "primary": f"2026 MAE {scores['margin_mae']:.2f} pts",
-                "baseline": f"Train mean {scores['margin_naive']:.2f}",
+                "primary": f"2026 MAE {num(scores.get('margin_mae')):.2f} pts",
+                "baseline": f"Train mean {num(scores.get('margin_naive')):.2f}",
                 "note": "Modest skill; the displayed spread is derived from win probability.",
             }
         )
@@ -175,8 +185,8 @@ def main() -> None:
             {
                 "model": "Total",
                 "grade": "C",
-                "primary": f"2026 MAE {scores['total_mae']:.2f} pts",
-                "baseline": f"Train mean {scores['total_naive']:.2f}",
+                "primary": f"2026 MAE {num(scores.get('total_mae')):.2f} pts",
+                "baseline": f"Train mean {num(scores.get('total_naive')):.2f}",
                 "note": "Small edge over a constant; still shares the match feature set.",
             }
         )
@@ -196,15 +206,15 @@ def main() -> None:
             {
                 "model": f"Player · {group}",
                 "grade": grade,
-                "primary": f"2026 MAE {model.get('mae', 0):.2f} (n={base['rows']})",
-                "baseline": f"Persistence {base['persistence']:.2f} · position mean {base['position_mean']:.2f}",
+                "primary": f"2026 MAE {num(model.get('mae')):.2f} (n={int(num(base.get('rows')))})",
+                "baseline": f"Persistence {num(base.get('persistence')):.2f} · position mean {num(base.get('position_mean')):.2f}",
                 "note": note,
             }
         )
 
     if per_position:
         coverage = [
-            f"{g} {per_position[g].get('coverage_80', 0) * 100:.0f}→{per_position[g].get('coverage_80_adj', 0) * 100:.0f}%"
+            f"{g} {num(per_position[g].get('coverage_80')) * 100:.0f}→{num(per_position[g].get('coverage_80_adj')) * 100:.0f}%"
             for g in ("QB", "RB", "WR", "TE", "K")
             if g in per_position
         ]
@@ -223,7 +233,7 @@ def main() -> None:
             {
                 "model": "Playoff bracket",
                 "grade": "B−",
-                "primary": f"Brier playoff {playoff.get('playoff', {}).get('brier', 0):.3f} · conf {playoff.get('conf', {}).get('brier', 0):.3f} · SB {playoff.get('sb', {}).get('brier', 0):.3f}",
+                "primary": f"Brier playoff {num((playoff.get('playoff') or {}).get('brier')):.3f} · conf {num((playoff.get('conf') or {}).get('brier')):.3f} · SB {num((playoff.get('sb') or {}).get('brier')):.3f}",
                 "baseline": "SRS-only bracket",
                 "note": "Structure validated; Super Bowl skill is near the uniform prior.",
             }
@@ -234,7 +244,7 @@ def main() -> None:
             {
                 "model": "SB futures",
                 "grade": "D",
-                "primary": f"Mean |edge| {futures.get('mean_abs_edge', 0) * 100:.1f} pp",
+                "primary": f"Mean |edge| {num(futures.get('mean_abs_edge')) * 100:.1f} pp",
                 "baseline": "Uniform prior",
                 "note": "Near-uniform skill; treat futures edges as low confidence.",
             }
@@ -242,7 +252,7 @@ def main() -> None:
 
     caveats = [
         "No historical closing odds, so market log loss and CLV are unmeasured.",
-        f"Market board: mean |edge| {market.get('mean_abs_edge', 0) * 100:.1f} pp, {market.get('outliers', 0)} games at 20+ pp — signal or overconfidence is unknown.",
+        f"Market board: mean |edge| {num(market.get('mean_abs_edge')) * 100:.1f} pp, {int(num(market.get('outliers')))} games at 20+ pp — signal or overconfidence is unknown.",
         "2026 is 162 games; pooled 2022–26 (1,298) is the more reliable sample.",
         "The call ledger is 0 graded and CLV is 0 until odds move before kickoff.",
         "Kicker projections and SB futures are the weakest outputs; total is close to a constant.",
@@ -264,7 +274,4 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    try:
-        main()
-    except Exception as exc:  # pragma: no cover - keep the workflow alive
-        print(f"Scorecard error: {exc}")
+    main()
