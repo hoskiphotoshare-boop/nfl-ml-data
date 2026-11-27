@@ -89,7 +89,7 @@ export async function onRequestGet(context) {
   } catch (error) {
     if (cached) return cached;
     return new Response(
-      JSON.stringify({ error: String(error), games: [] }),
+      JSON.stringify({ error: "upstream_unavailable", games: [] }),
       {
         status: 502,
         headers: { "content-type": "application/json; charset=utf-8" },

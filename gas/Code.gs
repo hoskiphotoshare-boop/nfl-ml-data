@@ -125,7 +125,7 @@ function nflSetupTriggers(githubToken) {
       removed++;
     }
   }
-  var created = ScriptApp.newTrigger("nflCronTick").timeBased().everyMinutes(1).create();
+  var created = ScriptApp.newTrigger("nflCronTick").timeBased().everyMinutes(5).create();
   return { ok: true, removedOldTriggers: removed, triggerId: created.getUniqueId(), hasToken: Boolean(nflGetToken_(props)), slots: NFL_SLOTS.length };
 }
 

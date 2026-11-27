@@ -8,7 +8,7 @@
  * deletes every older `nfl-ml-shell-*` cache.
  */
 
-const CACHE_VERSION = 'nfl-ml-v5';
+const CACHE_VERSION = 'nfl-ml-v6';
 const SHELL_CACHE = `nfl-ml-shell-${CACHE_VERSION}`;
 
 const PRECACHE_URLS = [
@@ -17,6 +17,7 @@ const PRECACHE_URLS = [
   '/style.css',
   '/app.js',
   '/theme.js',
+  '/theme-init.js',
   '/table-sort.js',
   '/pwa.js',
   '/analytics.js',

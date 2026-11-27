@@ -85,7 +85,7 @@ export async function onRequestGet(context) {
   } catch (error) {
     if (cached) return cached;
     return json(
-      { error: String(error), event_id: eventId, teams: {} },
+      { error: "upstream_unavailable", event_id: eventId, teams: {} },
       502
     );
   }

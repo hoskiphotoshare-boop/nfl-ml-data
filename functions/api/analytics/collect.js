@@ -36,7 +36,9 @@ function clean(value, max) {
 }
 
 function allowedOrigin(origin) {
-  if (!origin) return true;
+  // Browsers always send Origin on a cross-origin or same-origin POST. Requiring
+  // it blocks naive server-side writes; the bot check is not a security control.
+  if (!origin) return false;
   if (origin === PROD_ORIGIN) return true;
   if (/^https:\/\/[a-z0-9-]+\.nfl-ml-data\.pages\.dev$/.test(origin)) return true;
   if (/^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/.test(origin)) return true;
@@ -108,6 +110,10 @@ export async function onRequestPost(context) {
     if (!allowedOrigin(request.headers.get("origin"))) {
       return new Response("forbidden", { status: 403 });
     }
+    const fetchSite = request.headers.get("sec-fetch-site");
+    if (fetchSite && fetchSite !== "same-origin" && fetchSite !== "same-site") {
+      return new Response("forbidden", { status: 403 });
+    }
 
     const ua = request.headers.get("user-agent") || "";
     if (BOT_RE.test(ua)) return noContent();
@@ -137,6 +143,16 @@ export async function onRequestPost(context) {
     const ip = request.headers.get("cf-connecting-ip") || "";
     const visitor = await visitorHash(env, day, ip, ua);
     if (!visitor) return noContent();
+
+    // One accepted batch per visitor per minute. KV is eventually consistent, so
+    // this is abuse mitigation rather than an exact rate limiter.
+    const seenKey = `seen:${visitor}`;
+    try {
+      if (await env.ANALYTICS_KV.get(seenKey)) return noContent();
+      await env.ANALYTICS_KV.put(seenKey, "1", { expirationTtl: 60 });
+    } catch {
+      return noContent();
+    }
 
     let path = clean(body.path || "/", 120);
     if (!path.startsWith("/")) path = "/" + path;

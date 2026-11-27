@@ -17,13 +17,13 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: "3.11"
 
-      - run: pip install polars nflreadpy scikit-learn joblib shap || true
+      - run: pip install -r requirements-ci.txt || true
 
       # Refresh current data and context, but keep the trained model weights.
       - run: python scripts/download_data.py || true
@@ -63,4 +63,4 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          npx wrangler pages deploy frontend --project-name nfl-ml-data --commit-dirty=true
+          npx --yes wrangler@4.169.0 pages deploy frontend --project-name nfl-ml-data --commit-dirty=true

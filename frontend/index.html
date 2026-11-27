@@ -6,16 +6,7 @@
   <meta name="description" content="NFL game predictions, player projections, playoff odds and model-vs-market edges, refreshed automatically." />
   <link rel="canonical" href="https://nfl-ml-data.pages.dev/" />
   <meta name="theme-color" content="#f3f6fb" />
-  <script>
-    (function () {
-      try {
-        var saved = localStorage.getItem('nfl_theme');
-        document.documentElement.dataset.theme = saved === 'dark' ? 'dark' : 'light';
-      } catch (e) {
-        document.documentElement.dataset.theme = 'light';
-      }
-    })();
-  </script>
+  <script src="/theme-init.js"></script>
   <title>NFL ML Predictions — Model odds, projections &amp; playoff chances</title>
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
