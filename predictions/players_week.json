@@ -10,9 +10,9 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 19.0,
     "floor_fantasy_points": 11.1,
-    "ceiling_fantasy_points": 29.9,
-    "projected_pass_yards": 347.9,
-    "projected_pass_tds": 3.88,
+    "ceiling_fantasy_points": 30.0,
+    "projected_pass_yards": 348.7,
+    "projected_pass_tds": 3.89,
     "projected_interceptions": 0.75,
     "projected_rush_yards": 9.2,
     "projected_rush_tds": 0.5,
@@ -152,10 +152,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.9737,
+      "fantasy_ratio": 0.9757,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -1445,9 +1445,9 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 16.2,
     "floor_fantasy_points": 8.7,
-    "ceiling_fantasy_points": 27.3,
-    "projected_pass_yards": 284.7,
-    "projected_pass_tds": 2.85,
+    "ceiling_fantasy_points": 27.4,
+    "projected_pass_yards": 286.0,
+    "projected_pass_tds": 2.86,
     "projected_interceptions": 0.25,
     "projected_rush_yards": 9.2,
     "projected_rush_tds": 0.5,
@@ -1587,10 +1587,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9506,
+      "pass_ratio": 0.9548,
       "rush_ratio": 1.0004,
-      "fg_ratio": 0.9435,
-      "fantasy_ratio": 0.9576,
+      "fg_ratio": 0.9447,
+      "fantasy_ratio": 0.9612,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -1810,7 +1810,7 @@
     "projected_fantasy_points": 16.2,
     "floor_fantasy_points": 8.0,
     "ceiling_fantasy_points": 27.2,
-    "projected_pass_yards": 212.0,
+    "projected_pass_yards": 212.5,
     "projected_pass_tds": 1.46,
     "projected_interceptions": 0.5,
     "projected_rush_yards": 28.8,
@@ -1951,10 +1951,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.977,
+      "fantasy_ratio": 0.9787,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -2505,7 +2505,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.9371,
       "applied": true,
       "base": {
@@ -2730,7 +2730,7 @@
     "projected_fantasy_points": 15.2,
     "floor_fantasy_points": 7.1,
     "ceiling_fantasy_points": 26.0,
-    "projected_pass_yards": 244.1,
+    "projected_pass_yards": 243.9,
     "projected_pass_tds": 1.68,
     "projected_interceptions": 1.25,
     "projected_rush_yards": 11.5,
@@ -2871,10 +2871,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9619,
-      "rush_ratio": 1.0015,
-      "fg_ratio": 0.9319,
-      "fantasy_ratio": 0.9644,
+      "pass_ratio": 0.9608,
+      "rush_ratio": 1.0014,
+      "fg_ratio": 0.9362,
+      "fantasy_ratio": 0.9634,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -3052,9 +3052,9 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
-      "fantasy_ratio": 0.9332,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
+      "fantasy_ratio": 0.9331,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -3255,13 +3255,13 @@
     "name": "J.Gibbs",
     "team": "DET",
     "position": "RB",
-    "projected_targets": 4.3,
-    "projected_receptions": 3.1,
+    "projected_targets": 4.2,
+    "projected_receptions": 3.0,
     "projected_yards": 33.5,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 15.3,
-    "floor_fantasy_points": 9.5,
-    "ceiling_fantasy_points": 30.3,
+    "projected_fantasy_points": 15.2,
+    "floor_fantasy_points": 9.4,
+    "ceiling_fantasy_points": 30.1,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -3403,10 +3403,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9543,
-      "rush_ratio": 0.9991,
-      "fg_ratio": 0.9978,
-      "fantasy_ratio": 0.9772,
+      "pass_ratio": 0.9427,
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.9671,
+      "fantasy_ratio": 0.9715,
       "applied": true,
       "base": {
         "projected_targets": 4.5,
@@ -3749,7 +3749,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9634,
       "applied": true,
       "base": {
@@ -3777,189 +3777,6 @@
     "game_id": "2026_12_NYG_IND",
     "gameday": "2026-11-29",
     "gametime": "13:00"
-  },
-  {
-    "player_id": "00-0023459",
-    "name": "A.Rodgers",
-    "team": "PIT",
-    "position": "QB",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 14.0,
-    "floor_fantasy_points": 6.3,
-    "ceiling_fantasy_points": 24.4,
-    "projected_pass_yards": 178.4,
-    "projected_pass_tds": 1.14,
-    "projected_interceptions": 0.5,
-    "projected_rush_yards": 1.0,
-    "projected_rush_tds": 0.0,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      22.0,
-      16.0,
-      13.1,
-      4.9,
-      13.6,
-      16.0
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        22.0,
-        16.0,
-        13.1,
-        4.9,
-        13.6,
-        16.0
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        235.0,
-        253.0,
-        212.0,
-        172.0,
-        143.0,
-        227.0
-      ],
-      "passing_tds": [
-        3.0,
-        2.0,
-        1.0,
-        0.0,
-        2.0,
-        1.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        1.0,
-        0.0,
-        1.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        22.0,
-        33.0,
-        19.0,
-        13.0,
-        15.0,
-        30.0
-      ],
-      "attempts": [
-        31.0,
-        49.0,
-        30.0,
-        25.0,
-        29.0,
-        44.0
-      ],
-      "rushing_yards": [
-        6.0,
-        -1.0,
-        6.0,
-        0.0,
-        -1.0,
-        29.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "roster_status": "ACT",
-    "weather_adjustment": {
-      "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
-      "fantasy_ratio": 0.9157,
-      "applied": true,
-      "base": {
-        "projected_targets": 0.0,
-        "projected_receptions": 0.0,
-        "projected_yards": 0.0,
-        "projected_tds": 0.0,
-        "projected_fantasy_points": 15.3,
-        "floor_fantasy_points": 6.9,
-        "ceiling_fantasy_points": 26.6,
-        "projected_pass_yards": 195.0,
-        "projected_pass_tds": 1.25,
-        "projected_interceptions": 0.5,
-        "projected_rush_yards": 1.0,
-        "projected_rush_tds": 0.0,
-        "projected_fg": null,
-        "projected_fg_att": null,
-        "projected_xp": null
-      }
-    },
-    "espn_id": "8439",
-    "opponent": "DEN",
-    "matchup": "vs DEN",
-    "home_away": "home",
-    "game_id": "2026_12_DEN_PIT",
-    "gameday": "2026-11-27",
-    "gametime": "15:00"
   },
   {
     "player_id": "00-0038597",
@@ -4114,10 +3931,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.985,
+      "fantasy_ratio": 0.9861,
       "applied": true,
       "base": {
         "projected_targets": 6.5,
@@ -4648,7 +4465,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9429,
       "applied": true,
       "base": {
@@ -4682,13 +4499,13 @@
     "name": "J.Chase",
     "team": "CIN",
     "position": "WR",
-    "projected_targets": 11.8,
+    "projected_targets": 11.9,
     "projected_receptions": 8.9,
-    "projected_yards": 142.8,
+    "projected_yards": 143.2,
     "projected_tds": 0.73,
     "projected_fantasy_points": 14.1,
     "floor_fantasy_points": 9.2,
-    "ceiling_fantasy_points": 21.4,
+    "ceiling_fantasy_points": 21.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -4830,10 +4647,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.9704,
+      "fantasy_ratio": 0.9727,
       "applied": true,
       "base": {
         "projected_targets": 12.2,
@@ -5368,7 +5185,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
+      "fg_ratio": 0.9395,
       "fantasy_ratio": 0.938,
       "applied": true,
       "base": {
@@ -5954,10 +5771,10 @@
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 13.5,
+    "projected_fantasy_points": 13.4,
     "floor_fantasy_points": 5.1,
     "ceiling_fantasy_points": 24.6,
-    "projected_pass_yards": 205.0,
+    "projected_pass_yards": 204.2,
     "projected_pass_tds": 0.0,
     "projected_interceptions": 0.0,
     "projected_rush_yards": 4.0,
@@ -6034,10 +5851,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.9892,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9868,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -6256,11 +6073,11 @@
     "position": "WR",
     "projected_targets": 12.4,
     "projected_receptions": 8.4,
-    "projected_yards": 108.6,
-    "projected_tds": 0.71,
-    "projected_fantasy_points": 12.7,
+    "projected_yards": 109.0,
+    "projected_tds": 0.72,
+    "projected_fantasy_points": 12.8,
     "floor_fantasy_points": 8.0,
-    "ceiling_fantasy_points": 21.9,
+    "ceiling_fantasy_points": 22.0,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -6402,10 +6219,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9506,
+      "pass_ratio": 0.9548,
       "rush_ratio": 1.0004,
-      "fg_ratio": 0.9435,
-      "fantasy_ratio": 0.9506,
+      "fg_ratio": 0.9447,
+      "fantasy_ratio": 0.9548,
       "applied": true,
       "base": {
         "projected_targets": 13.0,
@@ -6438,11 +6255,11 @@
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 12.6,
-    "floor_fantasy_points": 4.5,
-    "ceiling_fantasy_points": 23.9,
-    "projected_pass_yards": 221.4,
-    "projected_pass_tds": 1.43,
+    "projected_fantasy_points": 12.5,
+    "floor_fantasy_points": 4.4,
+    "ceiling_fantasy_points": 23.6,
+    "projected_pass_yards": 218.7,
+    "projected_pass_tds": 1.41,
     "projected_interceptions": 1.0,
     "projected_rush_yards": 5.0,
     "projected_rush_tds": 0.0,
@@ -6582,10 +6399,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9543,
-      "rush_ratio": 0.9991,
-      "fg_ratio": 0.9978,
-      "fantasy_ratio": 0.9557,
+      "pass_ratio": 0.9427,
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.9671,
+      "fantasy_ratio": 0.9445,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -6764,7 +6581,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
+      "fg_ratio": 0.9395,
       "fantasy_ratio": 0.9465,
       "applied": true,
       "base": {
@@ -6794,13 +6611,13 @@
     "name": "O.Gordon",
     "team": "MIA",
     "position": "RB",
-    "projected_targets": 2.5,
+    "projected_targets": 2.4,
     "projected_receptions": 1.5,
     "projected_yards": 12.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 12.9,
+    "projected_fantasy_points": 12.8,
     "floor_fantasy_points": 7.0,
-    "ceiling_fantasy_points": 22.5,
+    "ceiling_fantasy_points": 22.4,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -6942,10 +6759,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.9894,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9871,
       "applied": true,
       "base": {
         "projected_targets": 2.5,
@@ -6978,13 +6795,13 @@
     "name": "D.Smith",
     "team": "PHI",
     "position": "WR",
-    "projected_targets": 11.2,
+    "projected_targets": 11.1,
     "projected_receptions": 6.6,
-    "projected_yards": 70.6,
+    "projected_yards": 69.9,
     "projected_tds": 0.47,
-    "projected_fantasy_points": 12.1,
-    "floor_fantasy_points": 7.4,
-    "ceiling_fantasy_points": 23.3,
+    "projected_fantasy_points": 12.0,
+    "floor_fantasy_points": 7.3,
+    "ceiling_fantasy_points": 23.1,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -7126,10 +6943,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9481,
+      "pass_ratio": 0.9383,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9711,
-      "fantasy_ratio": 0.9481,
+      "fg_ratio": 0.9616,
+      "fantasy_ratio": 0.9383,
       "applied": true,
       "base": {
         "projected_targets": 11.8,
@@ -7474,10 +7291,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9619,
-      "rush_ratio": 1.0015,
-      "fg_ratio": 0.9319,
-      "fantasy_ratio": 0.9829,
+      "pass_ratio": 0.9608,
+      "rush_ratio": 1.0014,
+      "fg_ratio": 0.9362,
+      "fantasy_ratio": 0.9823,
       "applied": true,
       "base": {
         "projected_targets": 2.5,
@@ -7840,7 +7657,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9577,
       "applied": true,
       "base": {
@@ -8190,10 +8007,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9506,
+      "pass_ratio": 0.9548,
       "rush_ratio": 1.0004,
-      "fg_ratio": 0.9435,
-      "fantasy_ratio": 0.9785,
+      "fg_ratio": 0.9447,
+      "fantasy_ratio": 0.9803,
       "applied": true,
       "base": {
         "projected_targets": 2.8,
@@ -8371,8 +8188,8 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
       "fantasy_ratio": 0.9573,
       "applied": true,
       "base": {
@@ -8742,9 +8559,9 @@
     "projected_receptions": 0.8,
     "projected_yards": 8.2,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 11.1,
-    "floor_fantasy_points": 5.3,
-    "ceiling_fantasy_points": 20.9,
+    "projected_fantasy_points": 11.0,
+    "floor_fantasy_points": 5.2,
+    "ceiling_fantasy_points": 20.8,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -8886,10 +8703,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9481,
+      "pass_ratio": 0.9383,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9711,
-      "fantasy_ratio": 0.9739,
+      "fg_ratio": 0.9616,
+      "fantasy_ratio": 0.969,
       "applied": true,
       "base": {
         "projected_targets": 1.0,
@@ -8920,11 +8737,11 @@
     "position": "WR",
     "projected_targets": 8.6,
     "projected_receptions": 4.7,
-    "projected_yards": 63.6,
+    "projected_yards": 63.3,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 11.2,
+    "projected_fantasy_points": 11.1,
     "floor_fantasy_points": 6.3,
-    "ceiling_fantasy_points": 19.9,
+    "ceiling_fantasy_points": 19.8,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -9066,10 +8883,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.981,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9768,
       "applied": true,
       "base": {
         "projected_targets": 8.8,
@@ -9252,7 +9069,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9322,
       "applied": true,
       "base": {
@@ -9788,7 +9605,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9322,
       "applied": true,
       "base": {
@@ -10155,9 +9972,9 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
-      "fantasy_ratio": 0.9527,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
+      "fantasy_ratio": 0.9526,
       "applied": true,
       "base": {
         "projected_targets": 4.0,
@@ -10340,7 +10157,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -11259,8 +11076,8 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -11299,7 +11116,7 @@
     "projected_yards": 44.8,
     "projected_tds": 0.0,
     "projected_fantasy_points": 10.6,
-    "floor_fantasy_points": 4.8,
+    "floor_fantasy_points": 4.7,
     "ceiling_fantasy_points": 20.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
@@ -11442,10 +11259,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.9912,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9893,
       "applied": true,
       "base": {
         "projected_targets": 4.0,
@@ -11960,7 +11777,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
+      "fg_ratio": 0.9395,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -12660,7 +12477,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.9596,
       "applied": true,
       "base": {
@@ -12796,7 +12613,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.9592,
       "applied": true,
       "base": {
@@ -13164,7 +12981,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.945,
       "applied": true,
       "base": {
@@ -13516,7 +13333,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -13550,13 +13367,13 @@
     "name": "A.St. Brown",
     "team": "DET",
     "position": "WR",
-    "projected_targets": 6.9,
+    "projected_targets": 6.8,
     "projected_receptions": 5.7,
-    "projected_yards": 63.7,
-    "projected_tds": 0.72,
-    "projected_fantasy_points": 9.4,
-    "floor_fantasy_points": 4.7,
-    "ceiling_fantasy_points": 18.6,
+    "projected_yards": 63.0,
+    "projected_tds": 0.71,
+    "projected_fantasy_points": 9.3,
+    "floor_fantasy_points": 4.6,
+    "ceiling_fantasy_points": 18.4,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -13698,10 +13515,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9543,
-      "rush_ratio": 0.9991,
-      "fg_ratio": 0.9978,
-      "fantasy_ratio": 0.9543,
+      "pass_ratio": 0.9427,
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.9671,
+      "fantasy_ratio": 0.9427,
       "applied": true,
       "base": {
         "projected_targets": 7.2,
@@ -13732,11 +13549,11 @@
     "position": "WR",
     "projected_targets": 8.0,
     "projected_receptions": 4.9,
-    "projected_yards": 55.1,
+    "projected_yards": 55.2,
     "projected_tds": 0.24,
     "projected_fantasy_points": 9.6,
     "floor_fantasy_points": 4.9,
-    "ceiling_fantasy_points": 19.2,
+    "ceiling_fantasy_points": 19.3,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -13878,10 +13695,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.9704,
+      "fantasy_ratio": 0.9727,
       "applied": true,
       "base": {
         "projected_targets": 8.2,
@@ -14284,11 +14101,11 @@
     "position": "WR",
     "projected_targets": 3.7,
     "projected_receptions": 3.1,
-    "projected_yards": 33.8,
-    "projected_tds": 0.25,
+    "projected_yards": 33.7,
+    "projected_tds": 0.24,
     "projected_fantasy_points": 9.5,
     "floor_fantasy_points": 4.6,
-    "ceiling_fantasy_points": 17.4,
+    "ceiling_fantasy_points": 17.3,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -14430,10 +14247,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.981,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9768,
       "applied": true,
       "base": {
         "projected_targets": 3.8,
@@ -15168,7 +14985,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.9326,
       "applied": true,
       "base": {
@@ -15352,7 +15169,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9322,
       "applied": true,
       "base": {
@@ -15388,7 +15205,7 @@
     "position": "WR",
     "projected_targets": 6.3,
     "projected_receptions": 4.0,
-    "projected_yards": 58.6,
+    "projected_yards": 58.8,
     "projected_tds": 0.84,
     "projected_fantasy_points": 8.9,
     "floor_fantasy_points": 5.5,
@@ -15534,10 +15351,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9506,
+      "pass_ratio": 0.9548,
       "rush_ratio": 1.0004,
-      "fg_ratio": 0.9435,
-      "fantasy_ratio": 0.9506,
+      "fg_ratio": 0.9447,
+      "fantasy_ratio": 0.9548,
       "applied": true,
       "base": {
         "projected_targets": 6.65,
@@ -15572,9 +15389,9 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 9.1,
     "floor_fantasy_points": 0.9,
-    "ceiling_fantasy_points": 20.2,
-    "projected_pass_yards": 218.3,
-    "projected_pass_tds": 1.23,
+    "ceiling_fantasy_points": 20.1,
+    "projected_pass_yards": 217.3,
+    "projected_pass_tds": 1.22,
     "projected_interceptions": 0.5,
     "projected_rush_yards": 3.0,
     "projected_rush_tds": 0.0,
@@ -15714,10 +15531,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.9814,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9773,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -16281,13 +16098,13 @@
     "name": "D.Goedert",
     "team": "PHI",
     "position": "TE",
-    "projected_targets": 4.3,
+    "projected_targets": 4.2,
     "projected_receptions": 3.6,
-    "projected_yards": 39.3,
+    "projected_yards": 38.9,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 8.6,
-    "floor_fantasy_points": 4.3,
-    "ceiling_fantasy_points": 16.0,
+    "projected_fantasy_points": 8.5,
+    "floor_fantasy_points": 4.2,
+    "ceiling_fantasy_points": 15.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -16429,10 +16246,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9481,
+      "pass_ratio": 0.9383,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9711,
-      "fantasy_ratio": 0.9481,
+      "fg_ratio": 0.9616,
+      "fantasy_ratio": 0.9383,
       "applied": true,
       "base": {
         "projected_targets": 4.5,
@@ -16649,9 +16466,9 @@
     "projected_receptions": 5.0,
     "projected_yards": 52.1,
     "projected_tds": 0.48,
-    "projected_fantasy_points": 8.8,
+    "projected_fantasy_points": 8.7,
     "floor_fantasy_points": 4.2,
-    "ceiling_fantasy_points": 16.0,
+    "ceiling_fantasy_points": 15.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -16793,10 +16610,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9619,
-      "rush_ratio": 1.0015,
-      "fg_ratio": 0.9319,
-      "fantasy_ratio": 0.9619,
+      "pass_ratio": 0.9608,
+      "rush_ratio": 1.0014,
+      "fg_ratio": 0.9362,
+      "fantasy_ratio": 0.9608,
       "applied": true,
       "base": {
         "projected_targets": 7.5,
@@ -16975,7 +16792,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -17713,10 +17530,10 @@
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 8.3,
-    "floor_fantasy_points": 2.8,
-    "ceiling_fantasy_points": 15.7,
-    "projected_pass_yards": 110.7,
+    "projected_fantasy_points": 8.2,
+    "floor_fantasy_points": 2.7,
+    "ceiling_fantasy_points": 15.6,
+    "projected_pass_yards": 109.6,
     "projected_pass_tds": 0.49,
     "projected_interceptions": 0.5,
     "projected_rush_yards": 0.5,
@@ -17857,10 +17674,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9481,
+      "pass_ratio": 0.9383,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9711,
-      "fantasy_ratio": 0.9485,
+      "fg_ratio": 0.9616,
+      "fantasy_ratio": 0.9387,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -17895,14 +17712,14 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 8.5,
     "floor_fantasy_points": 4.1,
-    "ceiling_fantasy_points": 13.6,
+    "ceiling_fantasy_points": 13.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 0.76,
-    "projected_fg_att": 0.76,
+    "projected_fg": 0.75,
+    "projected_fg_att": 0.75,
     "projected_xp": 3.8,
     "recent_fantasy_points": [
       8.0,
@@ -18038,8 +17855,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
-      "fantasy_ratio": 0.9817,
+      "fg_ratio": 0.9395,
+      "fantasy_ratio": 0.9766,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -18068,13 +17885,13 @@
     "name": "S.LaPorta",
     "team": "DET",
     "position": "TE",
-    "projected_targets": 4.8,
-    "projected_receptions": 2.7,
-    "projected_yards": 34.2,
+    "projected_targets": 4.7,
+    "projected_receptions": 2.6,
+    "projected_yards": 33.7,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 8.3,
+    "projected_fantasy_points": 8.2,
     "floor_fantasy_points": 3.9,
-    "ceiling_fantasy_points": 14.6,
+    "ceiling_fantasy_points": 14.4,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -18216,10 +18033,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9543,
-      "rush_ratio": 0.9991,
-      "fg_ratio": 0.9978,
-      "fantasy_ratio": 0.9543,
+      "pass_ratio": 0.9427,
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.9671,
+      "fantasy_ratio": 0.9427,
       "applied": true,
       "base": {
         "projected_targets": 5.0,
@@ -19007,8 +18824,8 @@
     "projected_yards": 17.8,
     "projected_tds": 0.0,
     "projected_fantasy_points": 8.4,
-    "floor_fantasy_points": 2.6,
-    "ceiling_fantasy_points": 18.5,
+    "floor_fantasy_points": 2.7,
+    "ceiling_fantasy_points": 18.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -19150,10 +18967,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.98,
+      "fantasy_ratio": 0.9816,
       "applied": true,
       "base": {
         "projected_targets": 4.5,
@@ -19353,9 +19170,9 @@
     "name": "L.Burden",
     "team": "CHI",
     "position": "WR",
-    "projected_targets": 6.3,
+    "projected_targets": 6.2,
     "projected_receptions": 4.8,
-    "projected_yards": 70.4,
+    "projected_yards": 70.3,
     "projected_tds": 0.72,
     "projected_fantasy_points": 8.2,
     "floor_fantasy_points": 3.4,
@@ -19501,10 +19318,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9619,
-      "rush_ratio": 1.0015,
-      "fg_ratio": 0.9319,
-      "fantasy_ratio": 0.9619,
+      "pass_ratio": 0.9608,
+      "rush_ratio": 1.0014,
+      "fg_ratio": 0.9362,
+      "fantasy_ratio": 0.9608,
       "applied": true,
       "base": {
         "projected_targets": 6.5,
@@ -19985,10 +19802,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.9704,
+      "fantasy_ratio": 0.9727,
       "applied": true,
       "base": {
         "projected_targets": 6.3,
@@ -20207,8 +20024,8 @@
     "position": "WR",
     "projected_targets": 5.1,
     "projected_receptions": 4.4,
-    "projected_yards": 68.1,
-    "projected_tds": 0.85,
+    "projected_yards": 68.2,
+    "projected_tds": 0.86,
     "projected_fantasy_points": 8.0,
     "floor_fantasy_points": 4.7,
     "ceiling_fantasy_points": 13.2,
@@ -20353,10 +20170,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.9704,
+      "fantasy_ratio": 0.9727,
       "applied": true,
       "base": {
         "projected_targets": 5.25,
@@ -20385,171 +20202,6 @@
     "gametime": "13:00"
   },
   {
-    "player_id": "00-0035700",
-    "name": "J.Jacobs",
-    "team": "GB",
-    "position": "RB",
-    "projected_targets": 3.15,
-    "projected_receptions": 2.4,
-    "projected_yards": 13.35,
-    "projected_tds": 0.38,
-    "projected_fantasy_points": 8.18,
-    "floor_fantasy_points": 3.7,
-    "ceiling_fantasy_points": 15.7,
-    "projected_pass_yards": null,
-    "projected_pass_tds": null,
-    "projected_interceptions": null,
-    "projected_rush_yards": null,
-    "projected_rush_tds": null,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      3.8,
-      0.8,
-      6.3,
-      17.6,
-      20.2,
-      0.5
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        3.8,
-        0.8,
-        6.3,
-        17.6,
-        20.2,
-        0.5
-      ],
-      "targets": [
-        2.0,
-        1.0,
-        3.0,
-        7.0,
-        6.0,
-        0.0
-      ],
-      "receptions": [
-        2.0,
-        1.0,
-        1.0,
-        5.0,
-        6.0,
-        0.0
-      ],
-      "yards": [
-        12.0,
-        0.0,
-        3.0,
-        55.0,
-        13.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        1.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "completions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "attempts": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "rushing_yards": [
-        36.0,
-        3.0,
-        55.0,
-        36.0,
-        39.0,
-        5.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 1,
-    "injury_status": "questionable",
-    "roster_status": "ACT",
-    "weather_adjustment": {
-      "pass_ratio": 1.0,
-      "rush_ratio": 1.0,
-      "fg_ratio": 1.0,
-      "fantasy_ratio": 1.0,
-      "applied": false,
-      "base": null
-    },
-    "espn_id": "4047365",
-    "opponent": null,
-    "matchup": null
-  },
-  {
     "player_id": "00-0031203",
     "name": "C.Santos",
     "team": "CHI",
@@ -20566,8 +20218,8 @@
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 2.05,
-    "projected_fg_att": 2.33,
+    "projected_fg": 2.06,
+    "projected_fg_att": 2.34,
     "projected_xp": 2.8,
     "recent_fantasy_points": [
       7.0,
@@ -20702,10 +20354,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9619,
-      "rush_ratio": 1.0015,
-      "fg_ratio": 0.9319,
-      "fantasy_ratio": 0.9522,
+      "pass_ratio": 0.9608,
+      "rush_ratio": 1.0014,
+      "fg_ratio": 0.9362,
+      "fantasy_ratio": 0.9552,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -21212,7 +20864,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -21416,14 +21068,14 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 7.5,
     "floor_fantasy_points": 3.2,
-    "ceiling_fantasy_points": 12.4,
+    "ceiling_fantasy_points": 12.3,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 1.43,
-    "projected_fg_att": 1.71,
+    "projected_fg": 1.41,
+    "projected_fg_att": 1.69,
     "projected_xp": 1.5,
     "recent_fantasy_points": [
       8.0,
@@ -21559,8 +21211,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
-      "fantasy_ratio": 0.9644,
+      "fg_ratio": 0.9395,
+      "fantasy_ratio": 0.9546,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -21593,16 +21245,16 @@
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 7.8,
-    "floor_fantasy_points": 3.6,
-    "ceiling_fantasy_points": 12.9,
+    "projected_fantasy_points": 7.6,
+    "floor_fantasy_points": 3.5,
+    "ceiling_fantasy_points": 12.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 1.8,
-    "projected_fg_att": 2.2,
+    "projected_fg": 1.74,
+    "projected_fg_att": 2.13,
     "projected_xp": 2.8,
     "recent_fantasy_points": [
       8.0,
@@ -21737,10 +21389,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9543,
-      "rush_ratio": 0.9991,
-      "fg_ratio": 0.9978,
-      "fantasy_ratio": 0.9986,
+      "pass_ratio": 0.9427,
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.9671,
+      "fantasy_ratio": 0.9783,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -21773,10 +21425,10 @@
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 7.6,
+    "projected_fantasy_points": 7.5,
     "floor_fantasy_points": 0.3,
-    "ceiling_fantasy_points": 18.6,
-    "projected_pass_yards": 93.4,
+    "ceiling_fantasy_points": 18.5,
+    "projected_pass_yards": 92.4,
     "projected_pass_tds": 0.0,
     "projected_interceptions": 0.25,
     "projected_rush_yards": 30.2,
@@ -21917,10 +21569,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9481,
+      "pass_ratio": 0.9383,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9711,
-      "fantasy_ratio": 0.9702,
+      "fg_ratio": 0.9616,
+      "fantasy_ratio": 0.9646,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -22097,7 +21749,7 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
       "fantasy_ratio": 0.9557,
@@ -22139,14 +21791,14 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 7.3,
     "floor_fantasy_points": 3.1,
-    "ceiling_fantasy_points": 12.4,
+    "ceiling_fantasy_points": 12.2,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 2.67,
-    "projected_fg_att": 2.86,
+    "projected_fg": 2.63,
+    "projected_fg_att": 2.82,
     "projected_xp": 2.8,
     "recent_fantasy_points": [
       15.0,
@@ -22283,8 +21935,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
-      "fantasy_ratio": 0.9644,
+      "fg_ratio": 0.9395,
+      "fantasy_ratio": 0.9546,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -22958,8 +22610,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
-      "fantasy_ratio": 0.8939,
+      "fg_ratio": 0.8734,
+      "fantasy_ratio": 0.8929,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -23472,10 +23124,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9619,
-      "rush_ratio": 1.0015,
-      "fg_ratio": 0.9319,
-      "fantasy_ratio": 0.9619,
+      "pass_ratio": 0.9608,
+      "rush_ratio": 1.0014,
+      "fg_ratio": 0.9362,
+      "fantasy_ratio": 0.9608,
       "applied": true,
       "base": {
         "projected_targets": 3.85,
@@ -23510,14 +23162,14 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 7.0,
     "floor_fantasy_points": 2.6,
-    "ceiling_fantasy_points": 12.0,
+    "ceiling_fantasy_points": 11.9,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 1.46,
-    "projected_fg_att": 1.75,
+    "projected_fg": 1.44,
+    "projected_fg_att": 1.73,
     "projected_xp": 1.2,
     "recent_fantasy_points": [
       2.0,
@@ -23652,10 +23304,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9481,
+      "pass_ratio": 0.9383,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9711,
-      "fantasy_ratio": 0.9772,
+      "fg_ratio": 0.9616,
+      "fantasy_ratio": 0.9697,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -24370,7 +24022,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
+      "fg_ratio": 0.9395,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -24572,16 +24224,16 @@
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 6.5,
-    "floor_fantasy_points": 2.4,
-    "ceiling_fantasy_points": 11.3,
+    "projected_fantasy_points": 6.7,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 11.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 1.77,
-    "projected_fg_att": 1.77,
+    "projected_fg": 1.85,
+    "projected_fg_att": 1.85,
     "projected_xp": 2.2,
     "recent_fantasy_points": [
       11.0,
@@ -24717,9 +24369,9 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
-      "fantasy_ratio": 0.9154,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
+      "fantasy_ratio": 0.9456,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -25300,7 +24952,7 @@
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 1.9,
+    "projected_fg": 1.91,
     "projected_fg_att": 2.38,
     "projected_xp": 2.2,
     "recent_fantasy_points": [
@@ -25437,8 +25089,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
-      "fantasy_ratio": 0.9651,
+      "fg_ratio": 0.9525,
+      "fantasy_ratio": 0.9652,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -26318,7 +25970,7 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
       "fantasy_ratio": 0.9092,
@@ -26686,10 +26338,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.9878,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9851,
       "applied": true,
       "base": {
         "projected_targets": 2.1,
@@ -27276,10 +26928,10 @@
     "position": "TE",
     "projected_targets": 4.1,
     "projected_receptions": 3.1,
-    "projected_yards": 27.5,
+    "projected_yards": 27.4,
     "projected_tds": 0.49,
-    "projected_fantasy_points": 6.8,
-    "floor_fantasy_points": 2.3,
+    "projected_fantasy_points": 6.7,
+    "floor_fantasy_points": 2.2,
     "ceiling_fantasy_points": 14.3,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
@@ -27422,10 +27074,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.981,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9768,
       "applied": true,
       "base": {
         "projected_targets": 4.2,
@@ -27462,16 +27114,16 @@
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 6.2,
+    "projected_fantasy_points": 6.4,
     "floor_fantasy_points": 2.4,
-    "ceiling_fantasy_points": 10.8,
+    "ceiling_fantasy_points": 11.2,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 2.21,
-    "projected_fg_att": 2.65,
+    "projected_fg": 2.31,
+    "projected_fg_att": 2.78,
     "projected_xp": 1.8,
     "recent_fantasy_points": [
       10.0,
@@ -27607,9 +27259,9 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
-      "fantasy_ratio": 0.9068,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
+      "fantasy_ratio": 0.9401,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -28010,13 +27662,13 @@
     "name": "C.Douglas",
     "team": "MIA",
     "position": "WR",
-    "projected_targets": 4.3,
+    "projected_targets": 4.2,
     "projected_receptions": 2.6,
-    "projected_yards": 43.6,
+    "projected_yards": 43.4,
     "projected_tds": 0.34,
     "projected_fantasy_points": 6.6,
     "floor_fantasy_points": 3.1,
-    "ceiling_fantasy_points": 12.9,
+    "ceiling_fantasy_points": 12.8,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -28158,10 +27810,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.981,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9768,
       "applied": true,
       "base": {
         "projected_targets": 4.34,
@@ -28510,10 +28162,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9506,
+      "pass_ratio": 0.9548,
       "rush_ratio": 1.0004,
-      "fg_ratio": 0.9435,
-      "fantasy_ratio": 0.9643,
+      "fg_ratio": 0.9447,
+      "fantasy_ratio": 0.9651,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -28692,8 +28344,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
-      "fantasy_ratio": 0.9682,
+      "fg_ratio": 0.9525,
+      "fantasy_ratio": 0.9683,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -28876,8 +28528,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
-      "fantasy_ratio": 0.967,
+      "fg_ratio": 0.9525,
+      "fantasy_ratio": 0.9671,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -29059,8 +28711,8 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
       "fantasy_ratio": 0.9451,
       "applied": true,
       "base": {
@@ -29100,7 +28752,7 @@
     "projected_tds": 0.0,
     "projected_fantasy_points": 6.0,
     "floor_fantasy_points": 2.2,
-    "ceiling_fantasy_points": 10.9,
+    "ceiling_fantasy_points": 10.8,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -29244,8 +28896,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
-      "fantasy_ratio": 0.9085,
+      "fg_ratio": 0.8734,
+      "fantasy_ratio": 0.9076,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -30112,7 +29764,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9712,
       "applied": true,
       "base": {
@@ -30296,7 +29948,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -30332,11 +29984,11 @@
     "position": "TE",
     "projected_targets": 1.9,
     "projected_receptions": 1.0,
-    "projected_yards": 8.7,
+    "projected_yards": 8.8,
     "projected_tds": 0.0,
     "projected_fantasy_points": 6.1,
     "floor_fantasy_points": 1.6,
-    "ceiling_fantasy_points": 11.9,
+    "ceiling_fantasy_points": 12.0,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -30477,10 +30129,10 @@
     },
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.9704,
+      "fantasy_ratio": 0.9727,
       "applied": true,
       "base": {
         "projected_targets": 2.0,
@@ -31018,11 +30670,11 @@
     "position": "WR",
     "projected_targets": 3.2,
     "projected_receptions": 2.1,
-    "projected_yards": 40.7,
+    "projected_yards": 40.3,
     "projected_tds": 0.33,
-    "projected_fantasy_points": 5.9,
-    "floor_fantasy_points": 2.6,
-    "ceiling_fantasy_points": 12.1,
+    "projected_fantasy_points": 5.8,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 12.0,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -31164,10 +30816,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9543,
-      "rush_ratio": 0.9991,
-      "fg_ratio": 0.9978,
-      "fantasy_ratio": 0.9543,
+      "pass_ratio": 0.9427,
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.9671,
+      "fantasy_ratio": 0.9427,
       "applied": true,
       "base": {
         "projected_targets": 3.36,
@@ -31196,13 +30848,13 @@
     "name": "A.Mitchell",
     "team": "NYJ",
     "position": "WR",
-    "projected_targets": 4.7,
+    "projected_targets": 4.6,
     "projected_receptions": 1.7,
-    "projected_yards": 34.5,
+    "projected_yards": 34.3,
     "projected_tds": 0.17,
-    "projected_fantasy_points": 6.0,
-    "floor_fantasy_points": 2.6,
-    "ceiling_fantasy_points": 11.9,
+    "projected_fantasy_points": 5.9,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 11.8,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -31344,10 +30996,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.981,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9768,
       "applied": true,
       "base": {
         "projected_targets": 4.76,
@@ -31528,10 +31180,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9619,
-      "rush_ratio": 1.0015,
-      "fg_ratio": 0.9319,
-      "fantasy_ratio": 0.9747,
+      "pass_ratio": 0.9608,
+      "rush_ratio": 1.0014,
+      "fg_ratio": 0.9362,
+      "fantasy_ratio": 0.9739,
       "applied": true,
       "base": {
         "projected_targets": 0.7,
@@ -31894,7 +31546,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.9571,
       "applied": true,
       "base": {
@@ -33159,7 +32811,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 1.0,
       "applied": true,
       "base": {
@@ -33342,8 +32994,8 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -34529,9 +34181,9 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
-      "fantasy_ratio": 0.9573,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
+      "fantasy_ratio": 0.9572,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -34882,7 +34534,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9322,
       "applied": true,
       "base": {
@@ -35250,7 +34902,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9322,
       "applied": true,
       "base": {
@@ -35769,8 +35421,8 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -35952,10 +35604,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.9446,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9435,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -35995,7 +35647,7 @@
     "projected_fantasy_points": 4.9,
     "floor_fantasy_points": 0.6,
     "ceiling_fantasy_points": 12.4,
-    "projected_pass_yards": 62.1,
+    "projected_pass_yards": 62.0,
     "projected_pass_tds": 0.0,
     "projected_interceptions": 0.25,
     "projected_rush_yards": 2.0,
@@ -36136,10 +35788,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9619,
-      "rush_ratio": 1.0015,
-      "fg_ratio": 0.9319,
-      "fantasy_ratio": 0.9647,
+      "pass_ratio": 0.9608,
+      "rush_ratio": 1.0014,
+      "fg_ratio": 0.9362,
+      "fantasy_ratio": 0.9637,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -36501,7 +36153,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.9538,
       "applied": true,
       "base": {
@@ -36905,7 +36557,7 @@
     "position": "TE",
     "projected_targets": 2.7,
     "projected_receptions": 1.9,
-    "projected_yards": 24.7,
+    "projected_yards": 24.8,
     "projected_tds": 0.49,
     "projected_fantasy_points": 4.9,
     "floor_fantasy_points": 0.4,
@@ -37051,10 +36703,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.9704,
+      "fantasy_ratio": 0.9727,
       "applied": true,
       "base": {
         "projected_targets": 2.8,
@@ -37422,7 +37074,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
+      "fg_ratio": 0.9395,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -37444,186 +37096,6 @@
       }
     },
     "espn_id": "4385690",
-    "opponent": null,
-    "matchup": null
-  },
-  {
-    "player_id": "00-0028986",
-    "name": "C.Keenum",
-    "team": "CHI",
-    "position": "QB",
-    "projected_targets": 0.0,
-    "projected_receptions": 0.0,
-    "projected_yards": 0.0,
-    "projected_tds": 0.0,
-    "projected_fantasy_points": 4.8,
-    "floor_fantasy_points": 1.6,
-    "ceiling_fantasy_points": 9.2,
-    "projected_pass_yards": 52.5,
-    "projected_pass_tds": 0.29,
-    "projected_interceptions": 0.75,
-    "projected_rush_yards": 1.2,
-    "projected_rush_tds": 0.25,
-    "projected_fg": null,
-    "projected_fg_att": null,
-    "projected_xp": null,
-    "recent_fantasy_points": [
-      0.2,
-      0.1,
-      11.3,
-      -1.5,
-      24.5,
-      0.7
-    ],
-    "recent_stats": {
-      "fantasy_points": [
-        0.2,
-        0.1,
-        11.3,
-        -1.5,
-        24.5,
-        0.7
-      ],
-      "targets": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "receptions": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "yards": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "touchdowns": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "passing_yards": [
-        0.0,
-        8.0,
-        229.0,
-        62.0,
-        247.0,
-        108.0
-      ],
-      "passing_tds": [
-        0.0,
-        0.0,
-        1.0,
-        0.0,
-        2.0,
-        0.0
-      ],
-      "passing_interceptions": [
-        0.0,
-        0.0,
-        1.0,
-        2.0,
-        0.0,
-        1.0
-      ],
-      "completions": [
-        0.0,
-        2.0,
-        23.0,
-        11.0,
-        24.0,
-        11.0
-      ],
-      "attempts": [
-        2.0,
-        5.0,
-        36.0,
-        17.0,
-        34.0,
-        19.0
-      ],
-      "rushing_yards": [
-        2.0,
-        -2.0,
-        1.0,
-        0.0,
-        6.0,
-        4.0
-      ],
-      "rushing_tds": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        1.0,
-        0.0
-      ],
-      "fg_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "fg_att": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      "pat_made": [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ]
-    },
-    "depth_rank": 3,
-    "roster_status": "ACT",
-    "weather_adjustment": {
-      "pass_ratio": 0.9619,
-      "rush_ratio": 1.0015,
-      "fg_ratio": 0.9319,
-      "fantasy_ratio": 0.9747,
-      "applied": true,
-      "base": {
-        "projected_targets": 0.0,
-        "projected_receptions": 0.0,
-        "projected_yards": 0.0,
-        "projected_tds": 0.0,
-        "projected_fantasy_points": 4.92,
-        "floor_fantasy_points": 1.6,
-        "ceiling_fantasy_points": 9.4,
-        "projected_pass_yards": 54.6,
-        "projected_pass_tds": 0.3,
-        "projected_interceptions": 0.75,
-        "projected_rush_yards": 1.2,
-        "projected_rush_tds": 0.25,
-        "projected_fg": null,
-        "projected_fg_att": null,
-        "projected_xp": null
-      }
-    },
-    "espn_id": "15168",
     "opponent": null,
     "matchup": null
   },
@@ -37715,7 +37187,7 @@
     },
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
       "fantasy_ratio": 1.0,
@@ -37922,7 +37394,7 @@
     "projected_fantasy_points": 4.8,
     "floor_fantasy_points": 0.0,
     "ceiling_fantasy_points": 12.6,
-    "projected_pass_yards": 116.6,
+    "projected_pass_yards": 116.1,
     "projected_pass_tds": 0.17,
     "projected_interceptions": 1.75,
     "projected_rush_yards": 10.5,
@@ -38047,10 +37519,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.9841,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9805,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -38085,11 +37557,11 @@
     "position": "TE",
     "projected_targets": 4.1,
     "projected_receptions": 2.7,
-    "projected_yards": 35.1,
+    "projected_yards": 35.0,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.7,
     "floor_fantasy_points": 0.2,
-    "ceiling_fantasy_points": 10.7,
+    "ceiling_fantasy_points": 10.6,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -38231,10 +37703,10 @@
     "depth_rank": 1,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.981,
+      "pass_ratio": 0.9768,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9377,
-      "fantasy_ratio": 0.981,
+      "fg_ratio": 0.9364,
+      "fantasy_ratio": 0.9768,
       "applied": true,
       "base": {
         "projected_targets": 4.2,
@@ -38439,11 +37911,11 @@
     "projected_receptions": 0.14,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 4.6,
+    "projected_fantasy_points": 4.7,
     "floor_fantasy_points": 0.0,
     "ceiling_fantasy_points": 12.5,
-    "projected_pass_yards": 139.4,
-    "projected_pass_tds": 0.5,
+    "projected_pass_yards": 139.7,
+    "projected_pass_tds": 0.51,
     "projected_interceptions": 1.0,
     "projected_rush_yards": 16.2,
     "projected_rush_tds": 0.0,
@@ -38583,10 +38055,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9704,
+      "pass_ratio": 0.9727,
       "rush_ratio": 0.999,
       "fg_ratio": 0.8672,
-      "fantasy_ratio": 0.9753,
+      "fantasy_ratio": 0.9772,
       "applied": true,
       "base": {
         "projected_targets": 0.14,
@@ -38621,11 +38093,11 @@
     "position": "WR",
     "projected_targets": 3.0,
     "projected_receptions": 1.7,
-    "projected_yards": 26.4,
+    "projected_yards": 26.1,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 4.5,
+    "projected_fantasy_points": 4.4,
     "floor_fantasy_points": 0.1,
-    "ceiling_fantasy_points": 11.7,
+    "ceiling_fantasy_points": 11.5,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -38766,10 +38238,10 @@
     },
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9481,
+      "pass_ratio": 0.9383,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9711,
-      "fantasy_ratio": 0.9481,
+      "fg_ratio": 0.9616,
+      "fantasy_ratio": 0.9383,
       "applied": true,
       "base": {
         "projected_targets": 3.2,
@@ -38948,7 +38420,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
+      "fg_ratio": 0.9395,
       "fantasy_ratio": 0.9022,
       "applied": true,
       "base": {
@@ -39312,7 +38784,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -39794,8 +39266,8 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
       "fantasy_ratio": 0.9196,
       "applied": true,
       "base": {
@@ -39829,13 +39301,13 @@
     "name": "D.Cooper",
     "team": "PHI",
     "position": "WR",
-    "projected_targets": 3.7,
-    "projected_receptions": 1.5,
-    "projected_yards": 19.9,
+    "projected_targets": 3.6,
+    "projected_receptions": 1.4,
+    "projected_yards": 19.7,
     "projected_tds": 0.0,
     "projected_fantasy_points": 4.2,
     "floor_fantasy_points": 0.9,
-    "ceiling_fantasy_points": 9.3,
+    "ceiling_fantasy_points": 9.2,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -39977,10 +39449,10 @@
     "depth_rank": 2,
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9481,
+      "pass_ratio": 0.9383,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9711,
-      "fantasy_ratio": 0.9481,
+      "fg_ratio": 0.9616,
+      "fantasy_ratio": 0.9383,
       "applied": true,
       "base": {
         "projected_targets": 3.85,
@@ -40003,6 +39475,190 @@
     "espn_id": "4715355",
     "opponent": null,
     "matchup": null
+  },
+  {
+    "player_id": "00-0036252",
+    "name": "M.Pittman",
+    "team": "PIT",
+    "position": "WR",
+    "projected_targets": 2.4,
+    "projected_receptions": 1.4,
+    "projected_yards": 16.1,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 4.0,
+    "floor_fantasy_points": 0.8,
+    "ceiling_fantasy_points": 8.9,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      5.2,
+      2.6,
+      2.1,
+      7.3,
+      2.6,
+      2.5
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        5.2,
+        2.6,
+        2.1,
+        7.3,
+        2.6,
+        2.5
+      ],
+      "targets": [
+        5.0,
+        3.0,
+        4.0,
+        3.0,
+        5.0,
+        4.0
+      ],
+      "receptions": [
+        4.0,
+        2.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0
+      ],
+      "yards": [
+        32.0,
+        16.0,
+        11.0,
+        58.0,
+        16.0,
+        15.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 2,
+    "roster_status": "ACT",
+    "weather_adjustment": {
+      "pass_ratio": 0.915,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
+      "fantasy_ratio": 0.915,
+      "applied": true,
+      "base": {
+        "projected_targets": 2.66,
+        "projected_receptions": 1.54,
+        "projected_yards": 17.64,
+        "projected_tds": 0.0,
+        "projected_fantasy_points": 4.41,
+        "floor_fantasy_points": 0.9,
+        "ceiling_fantasy_points": 9.7,
+        "projected_pass_yards": null,
+        "projected_pass_tds": null,
+        "projected_interceptions": null,
+        "projected_rush_yards": null,
+        "projected_rush_tds": null,
+        "projected_fg": null,
+        "projected_fg_att": null,
+        "projected_xp": null
+      }
+    },
+    "espn_id": "4035687",
+    "opponent": "DEN",
+    "matchup": "vs DEN",
+    "home_away": "home",
+    "game_id": "2026_12_DEN_PIT",
+    "gameday": "2026-11-27",
+    "gametime": "15:00"
   },
   {
     "player_id": "00-0037741",
@@ -40326,8 +39982,8 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -40675,7 +40331,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9294,
       "applied": true,
       "base": {
@@ -41011,7 +40667,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.9322,
       "rush_ratio": 1.0003,
-      "fg_ratio": 0.9523,
+      "fg_ratio": 0.9525,
       "fantasy_ratio": 0.9643,
       "applied": true,
       "base": {
@@ -41194,7 +40850,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -41738,6 +41394,190 @@
     "gametime": "16:05"
   },
   {
+    "player_id": "00-0035100",
+    "name": "J.Browning",
+    "team": "CIN",
+    "position": "QB",
+    "projected_targets": 0.0,
+    "projected_receptions": 0.0,
+    "projected_yards": 0.0,
+    "projected_tds": 0.0,
+    "projected_fantasy_points": 4.1,
+    "floor_fantasy_points": 0.8,
+    "ceiling_fantasy_points": 8.5,
+    "projected_pass_yards": 73.6,
+    "projected_pass_tds": 0.58,
+    "projected_interceptions": 2.0,
+    "projected_rush_yards": 9.8,
+    "projected_rush_tds": 0.25,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      -0.1,
+      17.7,
+      5.9,
+      5.4,
+      19.1,
+      0.6
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        -0.1,
+        17.7,
+        5.9,
+        5.4,
+        19.1,
+        0.6
+      ],
+      "targets": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        241.0,
+        140.0,
+        125.0,
+        251.0,
+        14.0
+      ],
+      "passing_tds": [
+        0.0,
+        2.0,
+        1.0,
+        0.0,
+        3.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        3.0,
+        2.0,
+        0.0,
+        3.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        21.0,
+        19.0,
+        14.0,
+        26.0,
+        1.0
+      ],
+      "attempts": [
+        0.0,
+        32.0,
+        27.0,
+        25.0,
+        40.0,
+        1.0
+      ],
+      "rushing_yards": [
+        -1.0,
+        1.0,
+        3.0,
+        4.0,
+        31.0,
+        0.0
+      ],
+      "rushing_tds": [
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 3,
+    "roster_status": "ACT",
+    "weather_adjustment": {
+      "pass_ratio": 0.9727,
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.8672,
+      "fantasy_ratio": 0.9809,
+      "applied": true,
+      "base": {
+        "projected_targets": 0.0,
+        "projected_receptions": 0.0,
+        "projected_yards": 0.0,
+        "projected_tds": 0.0,
+        "projected_fantasy_points": 4.16,
+        "floor_fantasy_points": 0.8,
+        "ceiling_fantasy_points": 8.7,
+        "projected_pass_yards": 75.68,
+        "projected_pass_tds": 0.6,
+        "projected_interceptions": 2.0,
+        "projected_rush_yards": 9.8,
+        "projected_rush_tds": 0.25,
+        "projected_fg": null,
+        "projected_fg_att": null,
+        "projected_xp": null
+      }
+    },
+    "espn_id": "3886812",
+    "opponent": "NO",
+    "matchup": "vs NO",
+    "home_away": "home",
+    "game_id": "2026_12_NO_CIN",
+    "gameday": "2026-11-29",
+    "gametime": "13:00"
+  },
+  {
     "player_id": "00-0038544",
     "name": "Q.Johnston",
     "team": "LAC",
@@ -42224,7 +42064,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8746,
+      "fg_ratio": 0.8734,
       "fantasy_ratio": 0.943,
       "applied": true,
       "base": {
@@ -43291,8 +43131,8 @@
     "roster_status": "ACT",
     "weather_adjustment": {
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.8844,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.9257,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -43476,7 +43316,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9526,
+      "fg_ratio": 0.9395,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -43508,11 +43348,11 @@
     "position": "WR",
     "projected_targets": 3.3,
     "projected_receptions": 2.1,
-    "projected_yards": 34.2,
+    "projected_yards": 34.4,
     "projected_tds": 0.0,
     "projected_fantasy_points": 3.8,
     "floor_fantasy_points": 0.5,
-    "ceiling_fantasy_points": 11.0,
+    "ceiling_fantasy_points": 11.1,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
@@ -43637,10 +43477,10 @@
     },
     "roster_status": "ACT",
     "weather_adjustment": {
-      "pass_ratio": 0.9506,
+      "pass_ratio": 0.9548,
       "rush_ratio": 1.0004,
-      "fg_ratio": 0.9435,
-      "fantasy_ratio": 0.9506,
+      "fg_ratio": 0.9447,
+      "fantasy_ratio": 0.9548,
       "applied": true,
       "base": {
         "projected_targets": 3.5,
@@ -44178,5 +44018,189 @@
     "espn_id": "4819231",
     "opponent": null,
     "matchup": null
+  },
+  {
+    "player_id": "00-0038797",
+    "name": "E.Wilson",
+    "team": "SEA",
+    "position": "RB",
+    "projected_targets": 0.7,
+    "projected_receptions": 0.5,
+    "projected_yards": 5.0,
+    "projected_tds": 0.1,
+    "projected_fantasy_points": 3.9,
+    "floor_fantasy_points": 1.6,
+    "ceiling_fantasy_points": 7.7,
+    "projected_pass_yards": null,
+    "projected_pass_tds": null,
+    "projected_interceptions": null,
+    "projected_rush_yards": null,
+    "projected_rush_tds": null,
+    "projected_fg": null,
+    "projected_fg_att": null,
+    "projected_xp": null,
+    "recent_fantasy_points": [
+      9.2,
+      1.4,
+      25.5,
+      12.2,
+      5.2,
+      18.0
+    ],
+    "recent_stats": {
+      "fantasy_points": [
+        9.2,
+        1.4,
+        25.5,
+        12.2,
+        5.2,
+        18.0
+      ],
+      "targets": [
+        1.0,
+        0.0,
+        4.0,
+        2.0,
+        1.0,
+        1.0
+      ],
+      "receptions": [
+        0.0,
+        0.0,
+        3.0,
+        2.0,
+        0.0,
+        1.0
+      ],
+      "yards": [
+        0.0,
+        0.0,
+        39.0,
+        11.0,
+        0.0,
+        15.0
+      ],
+      "touchdowns": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_yards": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_tds": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "passing_interceptions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "completions": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "attempts": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rushing_yards": [
+        92.0,
+        14.0,
+        81.0,
+        61.0,
+        52.0,
+        100.0
+      ],
+      "rushing_tds": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "fg_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "fg_att": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pat_made": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "depth_rank": 3,
+    "roster_status": "ACT",
+    "weather_adjustment": {
+      "pass_ratio": 0.9629,
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.9322,
+      "fantasy_ratio": 0.988,
+      "applied": true,
+      "base": {
+        "projected_targets": 0.72,
+        "projected_receptions": 0.48,
+        "projected_yards": 5.0,
+        "projected_tds": 0.1,
+        "projected_fantasy_points": 3.96,
+        "floor_fantasy_points": 1.6,
+        "ceiling_fantasy_points": 7.8,
+        "projected_pass_yards": null,
+        "projected_pass_tds": null,
+        "projected_interceptions": null,
+        "projected_rush_yards": null,
+        "projected_rush_tds": null,
+        "projected_fg": null,
+        "projected_fg_att": null,
+        "projected_xp": null
+      }
+    },
+    "espn_id": "4887558",
+    "opponent": "SF",
+    "matchup": "@ SF",
+    "home_away": "away",
+    "game_id": "2026_12_SEA_SF",
+    "gameday": "2026-11-29",
+    "gametime": "16:25"
   }
 ]

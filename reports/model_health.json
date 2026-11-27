@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T05:41:11.191376+00:00",
+  "generated_at": "2026-11-27T18:43:12.859341+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -16,22 +16,20 @@
   },
   "market": {
     "games": 26,
-    "outliers": 6,
+    "outliers": 4,
     "outlier_games": [
-      "2026_12_TEN_JAX",
+      "2026_12_NYJ_MIA",
       "2026_12_ATL_MIN",
       "2026_12_WAS_ARI",
-      "2026_13_PHI_ARI",
-      "2026_13_HOU_PIT",
-      "2026_13_DAL_SEA"
+      "2026_13_PHI_ARI"
     ],
-    "mean_abs_edge": 0.0835,
+    "mean_abs_edge": 0.0754,
     "max_abs_edge": 0.2602,
     "blend_conflicts": 0
   },
   "futures": {
-    "mean_abs_edge": 0.0094,
-    "max_abs_edge": 0.0387,
+    "mean_abs_edge": 0.0093,
+    "max_abs_edge": 0.0392,
     "teams_matched": 32
   },
   "calls": {
@@ -43,7 +41,7 @@
     "win_rate": 0.3333,
     "roi": -0.38,
     "profit": -1.14,
-    "mean_edge_delta": -0.0193,
+    "mean_edge_delta": -0.0376,
     "by_market": {
       "spread": {
         "n": 1,
@@ -86,8 +84,8 @@
     }
   },
   "score_models": {
-    "margin": 13.381,
-    "total": 13.944
+    "margin": 13.37,
+    "total": 14.08
   },
   "playoff_backtest": {
     "playoff": {
@@ -147,7 +145,7 @@
     ],
     "latest_season": 2026,
     "latest_week": 12,
-    "rows": 27348
+    "rows": 27388
   },
   "odds": {
     "fetched_at": "2026-11-27T05:21:28.253346+00:00",
