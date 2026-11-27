@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T22:13:31.566091+00:00",
+  "generated_at": "2026-11-27T22:19:31.018160+00:00",
   "headline": "Baseline-relative assessment. The market benchmark is still unverified.",
   "rows": [
     {
@@ -82,7 +82,7 @@
     {
       "model": "SB futures",
       "grade": "D",
-      "primary": "Mean |edge| 1.0 pp",
+      "primary": "Mean |edge| 0.9 pp",
       "baseline": "Uniform prior",
       "note": "Near-uniform skill; treat futures edges as low confidence."
     }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T22:13:30.188444+00:00",
+  "generated_at": "2026-11-27T22:19:29.013478+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -28,8 +28,8 @@
     "blend_conflicts": 0
   },
   "futures": {
-    "mean_abs_edge": 0.0096,
-    "max_abs_edge": 0.0404,
+    "mean_abs_edge": 0.0092,
+    "max_abs_edge": 0.0398,
     "teams_matched": 32
   },
   "calls": {
