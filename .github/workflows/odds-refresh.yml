@@ -60,8 +60,8 @@ jobs:
           python scripts/train_player_models.py --predict-only || true
           python scripts/predict_upcoming.py || true
           python scripts/add_player_matchups.py || true
-          python scripts/build_game_context.py || true
           python scripts/fetch_weather.py || true
+          python scripts/build_game_context.py || true
           python scripts/explain_models.py || true
           python scripts/simulate_playoffs.py || true
 

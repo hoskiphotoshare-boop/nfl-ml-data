@@ -260,3 +260,58 @@ def test_closing_updates_model_probability_and_edge(monkeypatch):
     assert call["closing_model_prob"] == 0.58
     assert call["closing_edge"] == 0.08
     assert call["edge_delta"] == -0.02
+
+
+def test_grade_pick_archived_game_not_in_market():
+    now = update_calls.datetime(2026, 11, 27, 5, 0, tzinfo=update_calls.timezone.utc)
+    pick = {
+        "game_id": "2026_12_KC_BUF",
+        "season": 2026,
+        "week": 12,
+        "away_team": "KC",
+        "home_team": "BUF",
+        "markets": {
+            "ml": {"side": "home", "team": "BUF", "line": None},
+            "spread": {"side": "home", "team": "BUF", "line": -2.5},
+            "total": {"side": "over", "line": 45.5},
+        },
+        "final": None,
+        "grades": None,
+        "graded_at": None,
+        "final_source": None,
+    }
+    scores = {
+        (2026, 12, "KC", "BUF"): {
+            "home_score": 13,
+            "away_score": 10,
+            "source": "espn",
+        }
+    }
+    assert update_calls.grade_pick(pick, scores, now)
+    assert pick["final"] == {"home": 13, "away": 10}
+    assert pick["final_source"] == "espn"
+    assert pick["grades"] == {"ml": "win", "spread": "win", "total": "loss"}
+
+
+def test_build_pick_entry_persists_market_guards():
+    now = update_calls.datetime(2026, 11, 26, 12, 0, tzinfo=update_calls.timezone.utc)
+    game = {
+        "game_id": "2026_12_KC_BUF",
+        "season": 2026,
+        "week": 12,
+        "away_team": "KC",
+        "home_team": "BUF",
+        "commence_time": "2026-11-27T01:20:00Z",
+        "markets": {"total": {"side": "over", "edge": 0.12, "actionable_edge": 0.0}},
+        "market_movement": {"total_move": -2.0},
+        "movement_against_any": True,
+        "weather_risk": True,
+        "blend_conflict": True,
+        "suppressed_edges": ["total"],
+    }
+    entry = update_calls.build_pick_entry(game, {}, now, "2026-11-26T12:00:00Z")
+    assert entry["movement_against_any"] is True
+    assert entry["weather_risk"] is True
+    assert entry["blend_conflict"] is True
+    assert entry["suppressed_edges"] == ["total"]
+    assert entry["market_movement"] == {"total_move": -2.0}

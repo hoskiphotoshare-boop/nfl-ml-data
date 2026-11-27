@@ -81,7 +81,7 @@ def fetch_forecast(team: str, day: str, cache: dict) -> tuple[float, float, floa
         {
             "latitude": coords[0],
             "longitude": coords[1],
-            "hourly": "temperature_2m,wind_speed_10m,precipitation,precipitation_probability",
+            "hourly": "temperature_2m,relative_humidity_2m,wind_speed_10m,wind_gusts_10m,precipitation,precipitation_probability,snowfall,weather_code",
             "start_date": day,
             "end_date": day,
             "timezone": "UTC",
@@ -135,7 +135,11 @@ def main() -> None:
         if (game.get("roof") or "").lower() in {"dome", "closed"}:
             continue
         kickoff = kickoff_utc(game)
-        if kickoff is None or kickoff < now or kickoff > now + timedelta(days=FORECAST_DAYS):
+        if kickoff is None:
+            continue
+        # Pre-kickoff for the model; allow a short post-kickoff window so live
+        # and recently finished cards still show the conditions at kickoff.
+        if kickoff < now - timedelta(hours=6) or kickoff > now + timedelta(days=FORECAST_DAYS):
             continue
         day = kickoff.strftime("%Y-%m-%d")
         hourly = fetch_forecast(game.get("home_team", ""), day, cache)
@@ -143,8 +147,13 @@ def main() -> None:
             continue
         game["temp"] = hourly_value(hourly, "temperature_2m", kickoff)
         game["wind"] = hourly_value(hourly, "wind_speed_10m", kickoff)
+        game["gust"] = hourly_value(hourly, "wind_gusts_10m", kickoff)
+        game["humidity"] = hourly_value(hourly, "relative_humidity_2m", kickoff)
         game["precip"] = hourly_value(hourly, "precipitation_probability", kickoff)
         game["precip_mm"] = hourly_value(hourly, "precipitation", kickoff)
+        game["snow"] = hourly_value(hourly, "snowfall", kickoff)
+        game["weather_code"] = hourly_value(hourly, "weather_code", kickoff)
+        game["weather_fetched_at"] = now.isoformat()
         if game.get("temp") is not None or game.get("wind") is not None:
             updated += 1
 

@@ -35,8 +35,8 @@ jobs:
 
       - run: python scripts/predict_upcoming.py || true
       - run: python scripts/add_player_matchups.py || true
-      - run: python scripts/build_game_context.py || true
       - run: python scripts/fetch_weather.py || true
+      - run: python scripts/build_game_context.py || true
       - run: python scripts/explain_models.py || true
       - run: python scripts/compare_market.py || true
       - run: python scripts/update_calls.py || true

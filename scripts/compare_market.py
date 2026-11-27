@@ -8,9 +8,11 @@ Reads ``predictions/upcoming_games.json`` (falling back to
 
 from __future__ import annotations
 
+import glob
 import json
 import math
 import os
+import re
 import statistics
 import sys
 from datetime import datetime, timezone
@@ -101,6 +103,137 @@ def team_name_map() -> dict[str, str]:
     return names
 
 
+MOVEMENT_TOTAL = 1.4
+MOVEMENT_SPREAD = 0.9
+MOVEMENT_ML = 0.03
+
+
+def implied_prob(price) -> float | None:
+    try:
+        value = float(price)
+    except (TypeError, ValueError):
+        return None
+    return 1.0 / value if value > 1 else None
+
+
+def pregame_history() -> dict[tuple, dict]:
+    """Opening/latest pre-kickoff compact snapshots, keyed by game."""
+    by_game: dict[tuple, list] = {}
+    for path in sorted(glob.glob("market/history/*.json")):
+        match = re.search(r"(\d{4}-\d{2}-\d{2})T(\d{2})(\d{2})Z", path)
+        if not match:
+            continue
+        try:
+            stamp = datetime.strptime(
+                f"{match.group(1)}T{match.group(2)}{match.group(3)}Z",
+                "%Y-%m-%dT%H%MZ",
+            ).replace(tzinfo=timezone.utc)
+        except ValueError:
+            continue
+        try:
+            with open(path, encoding="utf-8") as handle:
+                events = json.load(handle)
+        except Exception:
+            continue
+        for event in events:
+            try:
+                kickoff = datetime.fromisoformat(
+                    str(event.get("commence_time", "")).replace("Z", "+00:00")
+                )
+            except Exception:
+                kickoff = None
+            if kickoff is not None and stamp >= kickoff:
+                continue  # never use a live/post-kickoff price as movement
+            key = (
+                event.get("home_team"),
+                event.get("away_team"),
+                event.get("commence_time"),
+            )
+            by_game.setdefault(key, []).append((stamp, event))
+
+    movements = {}
+    for key, rows in by_game.items():
+        rows.sort(key=lambda item: item[0])
+        opening = rows[0][1]
+        latest = rows[-1][1]
+
+        def delta(field):
+            a, b = opening.get(field), latest.get(field)
+            return round(float(b) - float(a), 3) if a is not None and b is not None else None
+
+        open_ml = implied_prob(opening.get("home_moneyline"))
+        latest_ml = implied_prob(latest.get("home_moneyline"))
+        movements[key] = {
+            "commence_time": key[2],
+            "snapshots": len(rows),
+            "open_total": opening.get("total"),
+            "latest_total": latest.get("total"),
+            "total_move": delta("total"),
+            "open_home_spread": opening.get("home_spread"),
+            "latest_home_spread": latest.get("home_spread"),
+            "spread_move": delta("home_spread"),
+            "open_home_ml": opening.get("home_moneyline"),
+            "latest_home_ml": latest.get("home_moneyline"),
+            "ml_move": round(latest_ml - open_ml, 4)
+            if open_ml is not None and latest_ml is not None
+            else None,
+        }
+    return movements
+
+
+def weather_severe(game: dict) -> bool:
+    """Extreme conditions where a model over total is not actionable."""
+    gust = game.get("gust")
+    wind = game.get("wind")
+    snow = game.get("snow")
+    return bool(
+        (gust is not None and float(gust) >= 30)
+        or (wind is not None and float(wind) >= 20)
+        or (snow is not None and float(snow) > 0)
+    )
+
+
+def movement_for_event(
+    movements: dict, home: str, away: str, commence: str | None
+) -> dict | None:
+    """Match movement to the exact game, not just the team pair."""
+    if not commence:
+        return None
+    return movements.get((home, away, commence)) or movements.get(
+        (away, home, commence)
+    )
+
+
+def movement_for(movement: dict | None, market: str, side: str) -> dict | None:
+    """Return the movement and whether it moved against this pick."""
+    if not movement:
+        return None
+    against = False
+    reason = None
+    if market == "total":
+        move = movement.get("total_move")
+        if move is not None:
+            if side == "over" and move <= -MOVEMENT_TOTAL:
+                against, reason = True, f"total fell {abs(move):.1f}"
+            elif side == "under" and move >= MOVEMENT_TOTAL:
+                against, reason = True, f"total rose {move:.1f}"
+    elif market == "ml":
+        move = movement.get("ml_move")
+        if move is not None:
+            if side == "home" and move <= -MOVEMENT_ML:
+                against, reason = True, f"home price drifted {abs(move) * 100:.1f} pp"
+            elif side == "away" and move >= MOVEMENT_ML:
+                against, reason = True, f"away price drifted {move * 100:.1f} pp"
+    elif market == "spread":
+        move = movement.get("spread_move")
+        if move is not None:
+            if side == "home" and move >= MOVEMENT_SPREAD:
+                against, reason = True, f"home line moved {move:+.1f}"
+            elif side == "away" and move <= -MOVEMENT_SPREAD:
+                against, reason = True, f"away line moved {move:+.1f}"
+    return {**movement, "against": against, "reason": reason}
+
+
 def is_blend_conflict(blend_diff, model_prob) -> bool:
     """Strength blend favours the opponent while the final home prob is high."""
     try:
@@ -123,6 +256,7 @@ def main() -> None:
 
     names = team_name_map()
     now = datetime.now(timezone.utc)
+    movements = pregame_history()
     explanations = load_json("reports/model_explanations.json") or {}
     blend_diff = {}
     for explained in (explanations.get("match") or {}).get("games", []):
@@ -346,7 +480,22 @@ def main() -> None:
             if total_candidates:
                 markets["total"] = max(total_candidates, key=lambda m: m["edge"])
 
-        for market in markets.values():
+        movement = movement_for_event(
+            movements, home_full, away_full, event.get("commence_time")
+        )
+        severe_weather = weather_severe(game)
+        for key, market in markets.items():
+            movement_entry = movement_for(movement, key, market.get("side"))
+            market["movement"] = movement_entry
+            weather_risk = bool(
+                severe_weather and key == "total" and market.get("side") == "over"
+            )
+            market["weather_risk"] = weather_risk
+            market["actionable_edge"] = (
+                0.0
+                if (movement_entry and movement_entry.get("against")) or weather_risk
+                else market.get("edge")
+            )
             price = market.get("price")
             market["ev"] = (
                 round((float(market["model_prob"]) * float(price) - 1.0) * 100.0, 2)
@@ -356,9 +505,17 @@ def main() -> None:
 
         best_market = None
         if markets:
-            best_market = max(markets, key=lambda key: markets[key].get("edge", -1))
-        best_edge = markets[best_market]["edge"] if best_market else None
-        market_evs = [m["ev"] for m in markets.values() if m.get("ev") is not None]
+            best_market = max(
+                markets, key=lambda key: markets[key].get("actionable_edge", -1)
+            )
+            if (markets[best_market].get("actionable_edge") or 0) <= 0:
+                best_market = None
+        best_edge = markets[best_market]["actionable_edge"] if best_market else None
+        market_evs = [
+            m["ev"]
+            for m in markets.values()
+            if m.get("ev") is not None and (m.get("actionable_edge") or 0) > 0
+        ]
         best_market_ev = max(market_evs) if market_evs else None
 
         # Flag any market where the model and the price disagree by 20+ points,
@@ -392,6 +549,21 @@ def main() -> None:
                 "markets": markets,
                 "best_market": best_market,
                 "best_edge": best_edge,
+                "market_movement": movement,
+                "movement_against_any": any(
+                    bool((entry.get("movement") or {}).get("against"))
+                    for entry in markets.values()
+                ),
+                "weather_risk": bool(
+                    severe_weather
+                    and any(entry.get("weather_risk") for entry in markets.values())
+                ),
+                "suppressed_edges": [
+                    key
+                    for key, entry in markets.items()
+                    if (entry.get("movement") or {}).get("against")
+                    or entry.get("weather_risk")
+                ],
                 "outlier": outlier,
                 "outlier_edge": round(outlier_edge, 4),
                 "outlier_market": outlier_market,
@@ -431,6 +603,9 @@ def main() -> None:
         "max_best_edge": round(max(best_edges), 4) if best_edges else None,
         "strong_edges": sum(1 for e in best_edges if e >= 0.05),
         "blend_conflicts": sum(1 for c in comparisons if c.get("blend_conflict")),
+        "movement_flags": sum(1 for c in comparisons if c.get("movement_against_any")),
+        "weather_flags": sum(1 for c in comparisons if c.get("weather_risk")),
+        "suppressed_edges": sum(len(c.get("suppressed_edges", [])) for c in comparisons),
         "best_market_counts": {
             key: sum(1 for c in comparisons if c.get("best_market") == key)
             for key in ("ml", "spread", "total")

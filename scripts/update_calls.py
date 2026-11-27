@@ -122,7 +122,7 @@ def snapshot_calls(games: list[dict], existing: dict, now: datetime) -> int:
         best_entry = (game.get("markets") or {}).get(best_key)
         if not best_key or not best_entry:
             continue
-        edge = best_entry.get("edge")
+        edge = best_entry.get("actionable_edge", best_entry.get("edge"))
         price = best_entry.get("price")
         if edge is None or edge < MIN_EDGE or not price:
             continue
@@ -480,7 +480,19 @@ def build_pick_entry(game, upcoming_by_id, now, odds_fetched_at):
         "div_game": _src("div_game"),
         "temp": _src("temp"),
         "wind": _src("wind"),
+        "gust": _src("gust"),
+        "precip": _src("precip"),
+        "precip_mm": _src("precip_mm"),
+        "snow": _src("snow"),
+        "weather_code": _src("weather_code"),
+        "humidity": _src("humidity"),
+        "weather_fetched_at": _src("weather_fetched_at"),
         "markets": _copy(game.get("markets") or {}),
+        "market_movement": _copy(game.get("market_movement")),
+        "movement_against_any": bool(game.get("movement_against_any")),
+        "weather_risk": bool(game.get("weather_risk")),
+        "blend_conflict": bool(game.get("blend_conflict")),
+        "suppressed_edges": list(game.get("suppressed_edges") or []),
         "source_fetched_at": odds_fetched_at,
         "snapshot_at": now.isoformat(),
         "final": None,
@@ -490,6 +502,55 @@ def build_pick_entry(game, upcoming_by_id, now, odds_fetched_at):
         "pregame_model": None,
     }
     return entry
+
+
+def grade_pick(pick: dict, scores: dict, now: datetime) -> bool:
+    """Set final and grades for one archived pick exactly once."""
+    if not isinstance(pick, dict):
+        return False
+    if pick.get("final") is None:
+        key = (
+            int(pick.get("season") or 0),
+            int(pick.get("week") or 0),
+            pick.get("away_team"),
+            pick.get("home_team"),
+        )
+        row = scores.get(key)
+        if not row:
+            return False
+        home_score = int(row["home_score"])
+        away_score = int(row["away_score"])
+        pick["final"] = {"home": home_score, "away": away_score}
+        pick["grades"] = {
+            mkey: grade_market(
+                mkey,
+                (entry or {}).get("side"),
+                (entry or {}).get("line"),
+                home_score,
+                away_score,
+            )
+            for mkey, entry in (pick.get("markets") or {}).items()
+        }
+        pick["graded_at"] = now.isoformat()
+        pick["final_source"] = row.get("source", "schedules")
+        return True
+    if not isinstance(pick.get("grades"), dict):
+        final = pick.get("final") or {}
+        home_score = int(final.get("home"))
+        away_score = int(final.get("away"))
+        pick["grades"] = {
+            mkey: grade_market(
+                mkey,
+                (entry or {}).get("side"),
+                (entry or {}).get("line"),
+                home_score,
+                away_score,
+            )
+            for mkey, entry in (pick.get("markets") or {}).items()
+        }
+        if not pick.get("graded_at"):
+            pick["graded_at"] = now.isoformat()
+    return False
 
 
 def main() -> None:
@@ -572,41 +633,12 @@ def main() -> None:
                         "total": source.get("total"),
                         "at": now.isoformat(),
                     }
-            key = (int(season or 0), int(week or 0), away_team, home_team)
-            row = scores.get(key)
-            if row:
-                home_score = int(row["home_score"])
-                away_score = int(row["away_score"])
-                pick["final"] = {"home": home_score, "away": away_score}
-                grades = {}
-                for mkey, entry in (pick.get("markets") or {}).items():
-                    grades[mkey] = grade_market(
-                        mkey,
-                        (entry or {}).get("side"),
-                        (entry or {}).get("line"),
-                        home_score,
-                        away_score,
-                    )
-                pick["grades"] = grades
-                pick["graded_at"] = now.isoformat()
-                pick["final_source"] = row.get("source", "schedules")
-        else:
-            if not isinstance(pick.get("grades"), dict):
-                final = pick.get("final") or {}
-                home_score = int(final.get("home"))
-                away_score = int(final.get("away"))
-                grades = {}
-                for mkey, entry in (pick.get("markets") or {}).items():
-                    grades[mkey] = grade_market(
-                        mkey,
-                        (entry or {}).get("side"),
-                        (entry or {}).get("line"),
-                        home_score,
-                        away_score,
-                    )
-                pick["grades"] = grades
-                if not pick.get("graded_at"):
-                    pick["graded_at"] = now.isoformat()
+        grade_pick(pick, scores, now)
+
+    # A game leaves the market report when it kicks off, so grading must walk
+    # the archive rather than only the current market games.
+    for pick in existing_picks.values():
+        grade_pick(pick, scores, now)
 
     all_picks = list(existing_picks.values())
     seasons = [

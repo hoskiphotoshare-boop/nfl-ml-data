@@ -20,3 +20,25 @@ def test_kickoff_utc_handles_missing_time():
 
 def test_kickoff_utc_rejects_bad_date():
     assert kickoff_utc("not-a-date", "13:00") is None
+
+
+def test_merge_weather_keeps_previous_forecast():
+    from predict_upcoming import merge_weather
+
+    previous = {
+        "temp": 33.5,
+        "wind": 13.8,
+        "gust": 40.5,
+        "snow": 2.9,
+        "weather_fetched_at": "2026-11-27T05:00:00Z",
+    }
+    merged = merge_weather({"temp": None, "wind": None}, previous)
+    assert merged["temp"] == 33.5
+    assert merged["gust"] == 40.5
+    assert merged["snow"] == 2.9
+    assert merged["weather_fetched_at"] == "2026-11-27T05:00:00Z"
+
+    fresh = merge_weather({"temp": 40.0, "wind": 8.0}, previous)
+    assert fresh["temp"] == 40.0
+    assert fresh["wind"] == 8.0
+    assert fresh["gust"] == 40.5

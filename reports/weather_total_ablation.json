@@ -1,0 +1,321 @@
+{
+  "method": "walk-forward 2024-2026; base vs dome-only vs weather-only vs dome+weather vs gust/snow v2; Open-Meteo ERA5 (actual) and historical-forecast archive",
+  "weather_only_features": [
+    "temp",
+    "wind",
+    "precip",
+    "wind_15",
+    "cold_32",
+    "precip_any"
+  ],
+  "weather_v2_features": [
+    "temp",
+    "wind",
+    "precip",
+    "wind_15",
+    "cold_32",
+    "precip_any",
+    "gust",
+    "snow",
+    "humidity",
+    "gust_30",
+    "snow_any"
+  ],
+  "dome_feature": [
+    "is_dome"
+  ],
+  "totals_margin": {
+    "total": {
+      "actual": {
+        "variants": {
+          "base": {
+            "mae": 10.998,
+            "delta_vs_base": 0.0
+          },
+          "dome": {
+            "mae": 11.004,
+            "delta_vs_base": 0.006
+          },
+          "weather": {
+            "mae": 11.031,
+            "delta_vs_base": 0.033
+          },
+          "dome_weather": {
+            "mae": 11.022,
+            "delta_vs_base": 0.024
+          },
+          "weather_v2": {
+            "mae": 11.086,
+            "delta_vs_base": 0.088
+          },
+          "dome_weather_v2": {
+            "mae": 11.086,
+            "delta_vs_base": 0.088
+          }
+        },
+        "per_season": {
+          "base": {
+            "2024": 10.779,
+            "2025": 11.157,
+            "2026": 11.103
+          },
+          "dome": {
+            "2024": 10.797,
+            "2025": 11.153,
+            "2026": 11.107
+          },
+          "weather": {
+            "2024": 10.902,
+            "2025": 11.086,
+            "2026": 11.157
+          },
+          "dome_weather": {
+            "2024": 10.902,
+            "2025": 11.101,
+            "2026": 11.094
+          },
+          "weather_v2": {
+            "2024": 10.984,
+            "2025": 11.152,
+            "2026": 11.151
+          },
+          "dome_weather_v2": {
+            "2024": 10.984,
+            "2025": 11.152,
+            "2026": 11.151
+          }
+        },
+        "rows": 1299,
+        "weather_coverage": 0.999,
+        "buckets": {
+          "wind_15": {
+            "games_true": 25,
+            "games_false": 707,
+            "residual_true": -0.35,
+            "residual_false": -1.27
+          },
+          "cold_32": {
+            "games_true": 43,
+            "games_false": 689,
+            "residual_true": 0.44,
+            "residual_false": -1.34
+          },
+          "precip_any": {
+            "games_true": 87,
+            "games_false": 645,
+            "residual_true": 0.85,
+            "residual_false": -1.52
+          }
+        }
+      },
+      "forecast": {
+        "variants": {
+          "base": {
+            "mae": 10.998,
+            "delta_vs_base": 0.0
+          },
+          "dome": {
+            "mae": 11.004,
+            "delta_vs_base": 0.006
+          },
+          "weather": {
+            "mae": 10.927,
+            "delta_vs_base": -0.071
+          },
+          "dome_weather": {
+            "mae": 10.928,
+            "delta_vs_base": -0.07
+          },
+          "weather_v2": {
+            "mae": 10.883,
+            "delta_vs_base": -0.115
+          },
+          "dome_weather_v2": {
+            "mae": 10.884,
+            "delta_vs_base": -0.114
+          }
+        },
+        "per_season": {
+          "base": {
+            "2024": 10.779,
+            "2025": 11.157,
+            "2026": 11.103
+          },
+          "dome": {
+            "2024": 10.797,
+            "2025": 11.153,
+            "2026": 11.107
+          },
+          "weather": {
+            "2024": 10.732,
+            "2025": 11.004,
+            "2026": 11.135
+          },
+          "dome_weather": {
+            "2024": 10.732,
+            "2025": 11.005,
+            "2026": 11.135
+          },
+          "weather_v2": {
+            "2024": 10.455,
+            "2025": 11.057,
+            "2026": 11.33
+          },
+          "dome_weather_v2": {
+            "2024": 10.455,
+            "2025": 11.058,
+            "2026": 11.33
+          }
+        },
+        "rows": 1299,
+        "weather_coverage": 0.999,
+        "buckets": {
+          "wind_15": {
+            "games_true": 24,
+            "games_false": 708,
+            "residual_true": 2.28,
+            "residual_false": -1.36
+          },
+          "cold_32": {
+            "games_true": 35,
+            "games_false": 697,
+            "residual_true": 1.94,
+            "residual_false": -1.4
+          },
+          "precip_any": {
+            "games_true": 22,
+            "games_false": 710,
+            "residual_true": 2.16,
+            "residual_false": -1.34
+          }
+        }
+      }
+    },
+    "margin": {
+      "actual": {
+        "variants": {
+          "base": {
+            "mae": 10.615,
+            "delta_vs_base": 0.0
+          },
+          "dome": {
+            "mae": 10.614,
+            "delta_vs_base": -0.001
+          },
+          "weather": {
+            "mae": 10.724,
+            "delta_vs_base": 0.109
+          },
+          "dome_weather": {
+            "mae": 10.724,
+            "delta_vs_base": 0.109
+          },
+          "weather_v2": {
+            "mae": 10.756,
+            "delta_vs_base": 0.141
+          },
+          "dome_weather_v2": {
+            "mae": 10.756,
+            "delta_vs_base": 0.141
+          }
+        },
+        "per_season": {
+          "base": {
+            "2024": 10.65,
+            "2025": 10.822,
+            "2026": 10.193
+          },
+          "dome": {
+            "2024": 10.648,
+            "2025": 10.822,
+            "2026": 10.193
+          },
+          "weather": {
+            "2024": 10.995,
+            "2025": 10.798,
+            "2026": 10.119
+          },
+          "dome_weather": {
+            "2024": 10.995,
+            "2025": 10.798,
+            "2026": 10.119
+          },
+          "weather_v2": {
+            "2024": 11.044,
+            "2025": 10.725,
+            "2026": 10.307
+          },
+          "dome_weather_v2": {
+            "2024": 11.044,
+            "2025": 10.725,
+            "2026": 10.307
+          }
+        },
+        "rows": 1299,
+        "weather_coverage": 0.999
+      },
+      "forecast": {
+        "variants": {
+          "base": {
+            "mae": 10.615,
+            "delta_vs_base": 0.0
+          },
+          "dome": {
+            "mae": 10.614,
+            "delta_vs_base": -0.001
+          },
+          "weather": {
+            "mae": 10.709,
+            "delta_vs_base": 0.094
+          },
+          "dome_weather": {
+            "mae": 10.709,
+            "delta_vs_base": 0.094
+          },
+          "weather_v2": {
+            "mae": 10.785,
+            "delta_vs_base": 0.17
+          },
+          "dome_weather_v2": {
+            "mae": 10.785,
+            "delta_vs_base": 0.17
+          }
+        },
+        "per_season": {
+          "base": {
+            "2024": 10.65,
+            "2025": 10.822,
+            "2026": 10.193
+          },
+          "dome": {
+            "2024": 10.648,
+            "2025": 10.822,
+            "2026": 10.193
+          },
+          "weather": {
+            "2024": 10.981,
+            "2025": 10.752,
+            "2026": 10.158
+          },
+          "dome_weather": {
+            "2024": 10.981,
+            "2025": 10.752,
+            "2026": 10.158
+          },
+          "weather_v2": {
+            "2024": 11.025,
+            "2025": 10.895,
+            "2026": 10.174
+          },
+          "dome_weather_v2": {
+            "2024": 11.025,
+            "2025": 10.895,
+            "2026": 10.174
+          }
+        },
+        "rows": 1299,
+        "weather_coverage": 0.999
+      }
+    }
+  }
+}

@@ -182,10 +182,25 @@ def main() -> None:
                 "qb": qb,
                 "injuries": team_injuries,
             }
+        weather = {
+            key: game.get(key)
+            for key in (
+                "temp",
+                "wind",
+                "gust",
+                "precip",
+                "precip_mm",
+                "snow",
+                "weather_code",
+                "humidity",
+            )
+            if game.get(key) is not None
+        }
         games[str(game_id)] = {
             "game_id": game_id,
             "season": season,
             "week": week,
+            "weather": weather,
             **sides,
         }
 

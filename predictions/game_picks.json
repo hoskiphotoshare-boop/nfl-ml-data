@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-26T22:33:45.874827+00:00",
+  "generated_at": "2026-11-27T05:14:45.158804+00:00",
   "games": [
     {
       "game_id": "2026_12_GB_LA",
@@ -62,9 +62,17 @@
       },
       "source_fetched_at": "2026-11-25T23:11:58.681470+00:00",
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
-      "final": null,
-      "grades": null,
-      "graded_at": null
+      "final": {
+        "home": 26,
+        "away": 13
+      },
+      "grades": {
+        "ml": "win",
+        "spread": "win",
+        "total": "loss"
+      },
+      "graded_at": "2026-11-27T05:03:12.636392+00:00",
+      "final_source": "espn"
     },
     {
       "game_id": "2026_12_CHI_DET",
@@ -198,9 +206,17 @@
       },
       "source_fetched_at": "2026-11-25T23:11:58.681470+00:00",
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
-      "final": null,
-      "grades": null,
-      "graded_at": null
+      "final": {
+        "home": 38,
+        "away": 39
+      },
+      "grades": {
+        "ml": "win",
+        "spread": "win",
+        "total": "win"
+      },
+      "graded_at": "2026-11-27T05:03:12.636392+00:00",
+      "final_source": "espn"
     },
     {
       "game_id": "2026_12_KC_BUF",
@@ -223,8 +239,8 @@
       "surface": "a_turf",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 33.5,
+      "wind": 13.8,
       "markets": {
         "ml": {
           "side": "home",
@@ -235,7 +251,21 @@
           "edge": 0.1194,
           "price": 1.68,
           "bookmaker": "draftkings",
-          "ev": 17.1
+          "ev": 17.1,
+          "movement": {
+            "open_total": 47.5,
+            "latest_total": 45.5,
+            "total_move": -2.0,
+            "open_home_spread": -2.5,
+            "latest_home_spread": -3.0,
+            "spread_move": -0.5,
+            "open_home_ml": 1.67,
+            "latest_home_ml": 1.62,
+            "ml_move": 0.0185,
+            "against": false,
+            "reason": null
+          },
+          "actionable_edge": 0.1194
         },
         "spread": {
           "side": "home",
@@ -246,7 +276,21 @@
           "edge": 0.1289,
           "price": 1.83,
           "bookmaker": "fanduel",
-          "ev": 15.09
+          "ev": 15.09,
+          "movement": {
+            "open_total": 47.5,
+            "latest_total": 45.5,
+            "total_move": -2.0,
+            "open_home_spread": -2.5,
+            "latest_home_spread": -3.0,
+            "spread_move": -0.5,
+            "open_home_ml": 1.67,
+            "latest_home_ml": 1.62,
+            "ml_move": 0.0185,
+            "against": false,
+            "reason": null
+          },
+          "actionable_edge": 0.1289
         },
         "total": {
           "side": "over",
@@ -257,20 +301,66 @@
           "edge": 0.1238,
           "price": 1.87,
           "bookmaker": "lowvig",
-          "ev": 16.65
+          "ev": 16.65,
+          "movement": {
+            "open_total": 47.5,
+            "latest_total": 45.5,
+            "total_move": -2.0,
+            "open_home_spread": -2.5,
+            "latest_home_spread": -3.0,
+            "spread_move": -0.5,
+            "open_home_ml": 1.67,
+            "latest_home_ml": 1.62,
+            "ml_move": 0.0185,
+            "against": true,
+            "reason": "total fell 2.0"
+          },
+          "actionable_edge": 0.0,
+          "weather_risk": true
         }
       },
       "source_fetched_at": "2026-11-25T23:11:58.681470+00:00",
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
-      "final": null,
-      "grades": null,
-      "graded_at": null,
+      "final": {
+        "home": 13,
+        "away": 10
+      },
+      "grades": {
+        "ml": "win",
+        "spread": "win",
+        "total": "loss"
+      },
+      "graded_at": "2026-11-27T05:03:12.636392+00:00",
       "pregame_model": {
         "home_win_prob": 0.697,
         "spread": 6.9,
         "total": 49.9,
         "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+      },
+      "gust": 40.5,
+      "precip": 100.0,
+      "precip_mm": 23.8,
+      "snow": 2.9,
+      "weather_code": 75.0,
+      "humidity": 89.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00",
+      "market_movement": {
+        "open_total": 47.5,
+        "latest_total": 45.5,
+        "total_move": -2.0,
+        "open_home_spread": -2.5,
+        "latest_home_spread": -3.0,
+        "spread_move": -0.5,
+        "open_home_ml": 1.67,
+        "latest_home_ml": 1.62,
+        "ml_move": 0.0185
+      },
+      "movement_against_any": true,
+      "suppressed_edges": [
+        "total"
+      ],
+      "final_source": "espn",
+      "weather_risk": true
     },
     {
       "game_id": "2026_12_DEN_PIT",
@@ -293,8 +383,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 39.3,
+      "wind": 13.5,
       "markets": {
         "ml": {
           "side": "home",
@@ -339,8 +429,15 @@
         "home_win_prob": 0.458,
         "spread": -1.4,
         "total": 38.2,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 31.5,
+      "precip": 47.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 89.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_12_ATL_MIN",
@@ -409,7 +506,7 @@
         "home_win_prob": 0.473,
         "spread": -0.9,
         "total": 42.9,
-        "at": "2026-11-26T22:33:45.874827+00:00"
+        "at": "2026-11-27T05:14:45.158804+00:00"
       }
     },
     {
@@ -433,8 +530,8 @@
       "surface": "astroturf",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 69.9,
+      "wind": 16.0,
       "markets": {
         "ml": {
           "side": "away",
@@ -479,8 +576,15 @@
         "home_win_prob": 0.674,
         "spread": 6.0,
         "total": 49.6,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 20.8,
+      "precip": 1.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 0.0,
+      "humidity": 36.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_12_NO_CIN",
@@ -503,8 +607,8 @@
       "surface": "fieldturf",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 47.4,
+      "wind": 4.3,
       "markets": {
         "ml": {
           "side": "away",
@@ -549,8 +653,15 @@
         "home_win_prob": 0.75,
         "spread": 9.0,
         "total": 51.1,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 23.5,
+      "precip": 78.0,
+      "precip_mm": 2.6,
+      "snow": 0.0,
+      "weather_code": 63.0,
+      "humidity": 98.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_12_NYG_IND",
@@ -573,8 +684,8 @@
       "surface": "fieldturf",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 44.7,
+      "wind": 7.1,
       "markets": {
         "ml": {
           "side": "home",
@@ -619,8 +730,15 @@
         "home_win_prob": 0.313,
         "spread": -6.5,
         "total": 36.0,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 19.7,
+      "precip": 97.0,
+      "precip_mm": 3.5,
+      "snow": 0.0,
+      "weather_code": 63.0,
+      "humidity": 97.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_12_NYJ_MIA",
@@ -643,8 +761,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 1,
-      "temp": null,
-      "wind": null,
+      "temp": 76.6,
+      "wind": 8.5,
       "markets": {
         "ml": {
           "side": "home",
@@ -689,8 +807,15 @@
         "home_win_prob": 0.407,
         "spread": -3.2,
         "total": 45.0,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 10.1,
+      "precip": 5.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 67.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_12_TEN_JAX",
@@ -713,8 +838,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 1,
-      "temp": null,
-      "wind": null,
+      "temp": 61.9,
+      "wind": 3.0,
       "markets": {
         "ml": {
           "side": "away",
@@ -759,8 +884,15 @@
         "home_win_prob": 0.853,
         "spread": 14.1,
         "total": 58.7,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 9.2,
+      "precip": 2.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 68.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_12_NE_LAC",
@@ -829,7 +961,7 @@
         "home_win_prob": 0.418,
         "spread": -2.8,
         "total": 34.3,
-        "at": "2026-11-26T22:33:45.874827+00:00"
+        "at": "2026-11-27T05:14:45.158804+00:00"
       }
     },
     {
@@ -853,8 +985,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 1,
-      "temp": null,
-      "wind": null,
+      "temp": 65.9,
+      "wind": 10.8,
       "markets": {
         "ml": {
           "side": "home",
@@ -899,8 +1031,15 @@
         "home_win_prob": 0.757,
         "spread": 9.3,
         "total": 42.8,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 20.1,
+      "precip": 80.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 67.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_12_WAS_ARI",
@@ -923,8 +1062,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 74.4,
+      "wind": 5.1,
       "markets": {
         "ml": {
           "side": "home",
@@ -969,8 +1108,15 @@
         "home_win_prob": 0.344,
         "spread": -5.4,
         "total": 50.2,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 5.6,
+      "precip": 0.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 18.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_12_LV_CLE",
@@ -993,8 +1139,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 47.0,
+      "wind": 8.4,
       "markets": {
         "ml": {
           "side": "away",
@@ -1039,8 +1185,15 @@
         "home_win_prob": 0.662,
         "spread": 5.6,
         "total": 43.0,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 19.2,
+      "precip": 98.0,
+      "precip_mm": 2.2,
+      "snow": 0.0,
+      "weather_code": 61.0,
+      "humidity": 94.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_12_CAR_TB",
@@ -1063,8 +1216,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 1,
-      "temp": null,
-      "wind": null,
+      "temp": 67.8,
+      "wind": 5.3,
       "markets": {
         "ml": {
           "side": "home",
@@ -1109,8 +1262,15 @@
         "home_win_prob": 0.605,
         "spread": 3.6,
         "total": 40.6,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 9.4,
+      "precip": 15.0,
+      "precip_mm": 0.5,
+      "snow": 0.0,
+      "weather_code": 53.0,
+      "humidity": 95.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_KC_LA",
@@ -1179,7 +1339,7 @@
         "home_win_prob": 0.595,
         "spread": 3.2,
         "total": 47.5,
-        "at": "2026-11-26T22:33:45.874827+00:00"
+        "at": "2026-11-27T05:14:45.158804+00:00"
       }
     },
     {
@@ -1203,8 +1363,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 1,
-      "temp": null,
-      "wind": null,
+      "temp": 45.5,
+      "wind": 5.9,
       "markets": {
         "ml": {
           "side": "home",
@@ -1249,8 +1409,15 @@
         "home_win_prob": 0.371,
         "spread": -4.4,
         "total": 41.8,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 9.6,
+      "precip": 11.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 52.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_DET_ATL",
@@ -1273,8 +1440,8 @@
       "surface": "fieldturf",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 63.4,
+      "wind": 10.3,
       "markets": {
         "ml": {
           "side": "home",
@@ -1314,7 +1481,14 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "gust": 14.3,
+      "precip": 17.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 2.0,
+      "humidity": 51.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_GB_NO",
@@ -1383,7 +1557,7 @@
         "home_win_prob": 0.35,
         "spread": -5.2,
         "total": 46.8,
-        "at": "2026-11-26T22:33:45.874827+00:00"
+        "at": "2026-11-27T05:14:45.158804+00:00"
       }
     },
     {
@@ -1407,8 +1581,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 45.8,
+      "wind": 8.8,
       "markets": {
         "ml": {
           "side": "away",
@@ -1448,7 +1622,14 @@
       "snapshot_at": "2026-11-26T07:48:42.897699+00:00",
       "final": null,
       "grades": null,
-      "graded_at": null
+      "graded_at": null,
+      "gust": 17.2,
+      "precip": 6.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 39.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_LAC_TB",
@@ -1471,8 +1652,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 78.1,
+      "wind": 2.6,
       "markets": {
         "ml": {
           "side": "home",
@@ -1517,8 +1698,15 @@
         "home_win_prob": 0.728,
         "spread": 8.1,
         "total": 38.6,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 2.0,
+      "precip": 8.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 70.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_MIA_DEN",
@@ -1541,8 +1729,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 38.9,
+      "wind": 8.5,
       "markets": {
         "ml": {
           "side": "away",
@@ -1587,8 +1775,15 @@
         "home_win_prob": 0.834,
         "spread": 13.0,
         "total": 45.2,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 6.9,
+      "precip": 9.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 28.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_SF_NYG",
@@ -1611,8 +1806,8 @@
       "surface": "fieldturf",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 46.6,
+      "wind": 14.1,
       "markets": {
         "ml": {
           "side": "home",
@@ -1657,8 +1852,15 @@
         "home_win_prob": 0.338,
         "spread": -5.6,
         "total": 49.2,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 23.0,
+      "precip": 17.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 0.0,
+      "humidity": 35.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_WAS_TEN",
@@ -1681,8 +1883,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 60.4,
+      "wind": 5.4,
       "markets": {
         "ml": {
           "side": "home",
@@ -1727,8 +1929,15 @@
         "home_win_prob": 0.494,
         "spread": -0.2,
         "total": 49.9,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 11.9,
+      "precip": 14.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 68.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_PHI_ARI",
@@ -1751,8 +1960,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 71.1,
+      "wind": 10.5,
       "markets": {
         "ml": {
           "side": "away",
@@ -1797,8 +2006,15 @@
         "home_win_prob": 0.386,
         "spread": -3.9,
         "total": 44.5,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 15.2,
+      "precip": 19.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 0.0,
+      "humidity": 28.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_BUF_NE",
@@ -1821,8 +2037,8 @@
       "surface": "fieldturf",
       "location": "Home",
       "div_game": 1,
-      "temp": null,
-      "wind": null,
+      "temp": 36.8,
+      "wind": 12.6,
       "markets": {
         "ml": {
           "side": "home",
@@ -1867,8 +2083,15 @@
         "home_win_prob": 0.251,
         "spread": -9.0,
         "total": 41.9,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 28.6,
+      "precip": 19.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 0.0,
+      "humidity": 52.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_CAR_MIN",
@@ -1937,7 +2160,7 @@
         "home_win_prob": 0.548,
         "spread": 1.6,
         "total": 45.1,
-        "at": "2026-11-26T22:33:45.874827+00:00"
+        "at": "2026-11-27T05:14:45.158804+00:00"
       }
     },
     {
@@ -1961,8 +2184,8 @@
       "surface": "grass",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 43.3,
+      "wind": 6.3,
       "markets": {
         "ml": {
           "side": "home",
@@ -2007,8 +2230,15 @@
         "home_win_prob": 0.554,
         "spread": 1.8,
         "total": 38.0,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 19.9,
+      "precip": 12.0,
+      "precip_mm": 0.0,
+      "snow": 0.0,
+      "weather_code": 3.0,
+      "humidity": 54.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     },
     {
       "game_id": "2026_13_DAL_SEA",
@@ -2031,8 +2261,8 @@
       "surface": "fieldturf",
       "location": "Home",
       "div_game": 0,
-      "temp": null,
-      "wind": null,
+      "temp": 46.3,
+      "wind": 14.4,
       "markets": {
         "ml": {
           "side": "away",
@@ -2077,8 +2307,15 @@
         "home_win_prob": 0.551,
         "spread": 1.7,
         "total": 41.2,
-        "at": "2026-11-26T22:33:45.874827+00:00"
-      }
+        "at": "2026-11-27T05:14:45.158804+00:00"
+      },
+      "gust": 34.4,
+      "precip": 27.0,
+      "precip_mm": 1.1,
+      "snow": 0.0,
+      "weather_code": 55.0,
+      "humidity": 86.0,
+      "weather_fetched_at": "2026-11-27T05:00:11.694970+00:00"
     }
   ]
 }

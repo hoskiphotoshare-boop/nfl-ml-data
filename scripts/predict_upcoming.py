@@ -40,6 +40,33 @@ def kickoff_utc(gameday, gametime) -> datetime | None:
     return day.replace(hour=hour, minute=minute, tzinfo=ET).astimezone(timezone.utc)
 
 
+WEATHER_FIELDS = (
+    "temp",
+    "wind",
+    "gust",
+    "precip",
+    "precip_mm",
+    "snow",
+    "weather_code",
+    "humidity",
+    "weather_fetched_at",
+)
+
+
+def merge_weather(row: dict, previous: dict | None) -> dict:
+    """Keep the last fetched forecast when a prediction row is rebuilt."""
+    weather = {
+        field: previous.get(field)
+        for field in WEATHER_FIELDS
+        if previous and previous.get(field) is not None
+    }
+    if row.get("temp") is not None:
+        weather["temp"] = row["temp"]
+    if row.get("wind") is not None:
+        weather["wind"] = row["wind"]
+    return weather
+
+
 def load_schedules() -> pl.DataFrame | None:
     for path in ["data/schedules.parquet", "data/schedules.csv"]:
         if os.path.exists(path):
@@ -543,6 +570,7 @@ def main() -> None:
             except Exception:
                 pass
 
+        weather = merge_weather(row, previous_by_id.get(game_id))
         prediction_rows.append(
             {
                 "game_id": row.get("game_id"),
@@ -565,8 +593,7 @@ def main() -> None:
                 "roof": row.get("roof"),
                 "surface": row.get("surface"),
                 "div_game": row.get("div_game"),
-                "temp": row.get("temp"),
-                "wind": row.get("wind"),
+                **weather,
             }
         )
 

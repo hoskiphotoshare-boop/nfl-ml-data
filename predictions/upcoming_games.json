@@ -68,8 +68,15 @@
     "roof": "outdoors",
     "surface": "a_turf",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 33.5,
+    "wind": 13.8,
+    "gust": 40.5,
+    "humidity": 89.0,
+    "precip": 100.0,
+    "precip_mm": 23.8,
+    "snow": 2.9,
+    "weather_code": 75.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_DEN_PIT",
@@ -92,8 +99,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 39.3,
+    "wind": 13.5,
+    "gust": 31.5,
+    "precip": 47.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 89.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_NO_CIN",
@@ -116,8 +130,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 47.4,
+    "wind": 4.3,
+    "gust": 23.5,
+    "precip": 78.0,
+    "precip_mm": 2.6,
+    "snow": 0.0,
+    "weather_code": 63.0,
+    "humidity": 98.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_BAL_HOU",
@@ -140,8 +161,15 @@
     "roof": null,
     "surface": "astroturf",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 69.9,
+    "wind": 16.0,
+    "gust": 20.8,
+    "precip": 1.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 0.0,
+    "humidity": 36.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_NYG_IND",
@@ -164,8 +192,15 @@
     "roof": null,
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 44.7,
+    "wind": 7.1,
+    "gust": 19.7,
+    "precip": 97.0,
+    "precip_mm": 3.5,
+    "snow": 0.0,
+    "weather_code": 63.0,
+    "humidity": 97.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_TEN_JAX",
@@ -188,8 +223,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": null,
-    "wind": null
+    "temp": 61.9,
+    "wind": 3.0,
+    "gust": 9.2,
+    "precip": 2.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 68.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_NYJ_MIA",
@@ -212,8 +254,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": null,
-    "wind": null
+    "temp": 76.6,
+    "wind": 8.5,
+    "gust": 10.1,
+    "precip": 5.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 67.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_ATL_MIN",
@@ -235,9 +284,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_12_NE_LAC",
@@ -259,9 +306,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_12_WAS_ARI",
@@ -284,8 +329,15 @@
     "roof": null,
     "surface": "grass",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 74.4,
+    "wind": 5.1,
+    "gust": 5.6,
+    "precip": 0.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 18.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_SEA_SF",
@@ -308,8 +360,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": null,
-    "wind": null
+    "temp": 65.9,
+    "wind": 10.8,
+    "gust": 20.1,
+    "precip": 80.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 67.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_LV_CLE",
@@ -332,8 +391,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 47.0,
+    "wind": 8.4,
+    "gust": 19.2,
+    "precip": 98.0,
+    "precip_mm": 2.2,
+    "snow": 0.0,
+    "weather_code": 61.0,
+    "humidity": 94.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_12_CAR_TB",
@@ -356,8 +422,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": null,
-    "wind": null
+    "temp": 67.8,
+    "wind": 5.3,
+    "gust": 9.4,
+    "precip": 15.0,
+    "precip_mm": 0.5,
+    "snow": 0.0,
+    "weather_code": 53.0,
+    "humidity": 95.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_KC_LA",
@@ -379,9 +452,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_13_DET_ATL",
@@ -404,8 +475,15 @@
     "roof": null,
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 63.4,
+    "wind": 10.3,
+    "gust": 14.3,
+    "precip": 17.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 2.0,
+    "humidity": 51.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_JAX_CHI",
@@ -428,8 +506,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 45.8,
+    "wind": 8.8,
+    "gust": 17.2,
+    "precip": 6.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 39.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_CIN_CLE",
@@ -452,8 +537,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": null,
-    "wind": null
+    "temp": 45.5,
+    "wind": 5.9,
+    "gust": 9.6,
+    "precip": 11.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 52.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_GB_NO",
@@ -475,9 +567,7 @@
     "stadium": "Caesars Superdome",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_13_SF_NYG",
@@ -500,8 +590,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 46.6,
+    "wind": 14.1,
+    "gust": 23.0,
+    "precip": 17.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 0.0,
+    "humidity": 35.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_LAC_TB",
@@ -524,8 +621,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 78.1,
+    "wind": 2.6,
+    "gust": 2.0,
+    "precip": 8.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 70.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_WAS_TEN",
@@ -548,8 +652,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 60.4,
+    "wind": 5.4,
+    "gust": 11.9,
+    "precip": 14.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 68.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_PHI_ARI",
@@ -572,8 +683,15 @@
     "roof": null,
     "surface": "grass",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 71.1,
+    "wind": 10.5,
+    "gust": 15.2,
+    "precip": 19.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 0.0,
+    "humidity": 28.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_MIA_DEN",
@@ -596,8 +714,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 38.9,
+    "wind": 8.5,
+    "gust": 6.9,
+    "precip": 9.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 28.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_CAR_MIN",
@@ -619,9 +744,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_13_BUF_NE",
@@ -644,8 +767,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 1,
-    "temp": null,
-    "wind": null
+    "temp": 36.8,
+    "wind": 12.6,
+    "gust": 28.6,
+    "precip": 19.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 0.0,
+    "humidity": 52.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_HOU_PIT",
@@ -668,8 +798,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 43.3,
+    "wind": 6.3,
+    "gust": 19.9,
+    "precip": 12.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 54.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_13_DAL_SEA",
@@ -692,8 +829,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 46.3,
+    "wind": 14.4,
+    "gust": 34.4,
+    "precip": 27.0,
+    "precip_mm": 1.1,
+    "snow": 0.0,
+    "weather_code": 55.0,
+    "humidity": 86.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_14_MIN_NE",
@@ -716,8 +860,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": null,
-    "wind": null
+    "temp": 32.4,
+    "wind": 2.0,
+    "gust": 2.5,
+    "precip": 10.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 81.0,
+    "weather_fetched_at": "2026-11-27T05:14:25.885378+00:00"
   },
   {
     "game_id": "2026_14_TB_BAL",
@@ -739,9 +890,7 @@
     "stadium": "M&T Bank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_NO_CAR",
@@ -763,9 +912,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_14_ATL_CLE",
@@ -787,9 +934,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_TEN_DET",
@@ -811,9 +956,7 @@
     "stadium": "Ford Field",
     "roof": "dome",
     "surface": "fieldturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_CHI_MIA",
@@ -835,9 +978,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_DEN_NYJ",
@@ -859,9 +1000,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_IND_PHI",
@@ -883,9 +1022,7 @@
     "stadium": "Lincoln Financial Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_HOU_WAS",
@@ -907,9 +1044,7 @@
     "stadium": "Northwest Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_LAC_LV",
@@ -931,9 +1066,7 @@
     "stadium": "Allegiant Stadium",
     "roof": "dome",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_14_KC_CIN",
@@ -955,9 +1088,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_NYG_SEA",
@@ -979,9 +1110,7 @@
     "stadium": "Lumen Field",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_LA_SF",
@@ -1003,9 +1132,7 @@
     "stadium": "Levi's Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_14_BUF_GB",
@@ -1027,9 +1154,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_14_PIT_JAX",
@@ -1051,9 +1176,7 @@
     "stadium": "EverBank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_SF_LAC",
@@ -1075,9 +1198,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_SEA_PHI",
@@ -1099,9 +1220,7 @@
     "stadium": "Lincoln Financial Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_CHI_BUF",
@@ -1123,9 +1242,7 @@
     "stadium": "Highmark Stadium",
     "roof": "outdoors",
     "surface": "a_turf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_CIN_CAR",
@@ -1147,9 +1264,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_MIA_GB",
@@ -1171,9 +1286,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_JAX_HOU",
@@ -1195,9 +1308,7 @@
     "stadium": "Reliant Stadium",
     "roof": null,
     "surface": "astroturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_15_CLE_NYG",
@@ -1219,9 +1330,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_BAL_PIT",
@@ -1243,9 +1352,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_15_NO_TB",
@@ -1267,9 +1374,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_15_IND_TEN",
@@ -1291,9 +1396,7 @@
     "stadium": "Nissan Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_15_ATL_WAS",
@@ -1315,9 +1418,7 @@
     "stadium": "Northwest Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_NYJ_ARI",
@@ -1339,9 +1440,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_DAL_LA",
@@ -1363,9 +1462,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_15_DEN_LV",
@@ -1387,9 +1484,7 @@
     "stadium": "Allegiant Stadium",
     "roof": "dome",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_15_DET_MIN",
@@ -1411,9 +1506,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_15_NE_KC",
@@ -1435,9 +1528,7 @@
     "stadium": "GEHA Field at Arrowhead Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_HOU_PHI",
@@ -1459,9 +1550,7 @@
     "stadium": "Lincoln Financial Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_GB_CHI",
@@ -1483,9 +1572,7 @@
     "stadium": "Soldier Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_16_BUF_DEN",
@@ -1507,9 +1594,7 @@
     "stadium": "Empower Field at Mile High",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_LA_SEA",
@@ -1531,9 +1616,7 @@
     "stadium": "Lumen Field",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_16_TB_ATL",
@@ -1555,9 +1638,7 @@
     "stadium": "Mercedes-Benz Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_16_CLE_BAL",
@@ -1579,9 +1660,7 @@
     "stadium": "M&T Bank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_16_CIN_IND",
@@ -1603,9 +1682,7 @@
     "stadium": "Lucas Oil Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_LAC_MIA",
@@ -1627,9 +1704,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_WAS_MIN",
@@ -1651,9 +1726,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_ARI_NO",
@@ -1675,9 +1748,7 @@
     "stadium": "Caesars Superdome",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_NE_NYJ",
@@ -1699,9 +1770,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_16_CAR_PIT",
@@ -1723,9 +1792,7 @@
     "stadium": "Acrisure Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_TEN_LV",
@@ -1747,9 +1814,7 @@
     "stadium": "Allegiant Stadium",
     "roof": "dome",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_SF_KC",
@@ -1771,9 +1836,7 @@
     "stadium": "GEHA Field at Arrowhead Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_JAX_DAL",
@@ -1795,9 +1858,7 @@
     "stadium": "AT&T Stadium",
     "roof": null,
     "surface": "matrixturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_16_NYG_DET",
@@ -1819,9 +1880,7 @@
     "stadium": "Ford Field",
     "roof": "dome",
     "surface": "fieldturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_BAL_CIN",
@@ -1843,9 +1902,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_17_NO_ATL",
@@ -1867,9 +1924,7 @@
     "stadium": "Mercedes-Benz Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_17_SEA_CAR",
@@ -1891,9 +1946,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_IND_CLE",
@@ -1915,9 +1968,7 @@
     "stadium": "Huntington Bank Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_NYG_DAL",
@@ -1939,9 +1990,7 @@
     "stadium": "AT&T Stadium",
     "roof": null,
     "surface": "matrixturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_17_WAS_JAX",
@@ -1963,9 +2012,7 @@
     "stadium": "EverBank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_KC_LAC",
@@ -1987,9 +2034,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_17_BUF_MIA",
@@ -2011,9 +2056,7 @@
     "stadium": "Hard Rock Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_17_DEN_NE",
@@ -2035,9 +2078,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_MIN_NYJ",
@@ -2059,9 +2100,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_LA_TB",
@@ -2083,9 +2122,7 @@
     "stadium": "Raymond James Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_PIT_TEN",
@@ -2107,9 +2144,7 @@
     "stadium": "Nissan Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_LV_ARI",
@@ -2131,9 +2166,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_DET_CHI",
@@ -2155,9 +2188,7 @@
     "stadium": "Soldier Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_17_PHI_SF",
@@ -2179,9 +2210,7 @@
     "stadium": "Levi's Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_17_HOU_GB",
@@ -2203,9 +2232,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 0,
-    "temp": null,
-    "wind": null
+    "div_game": 0
   },
   {
     "game_id": "2026_18_SF_ARI",
@@ -2227,9 +2254,7 @@
     "stadium": "State Farm Stadium",
     "roof": null,
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_PIT_BAL",
@@ -2251,9 +2276,7 @@
     "stadium": "M&T Bank Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_NYJ_BUF",
@@ -2275,9 +2298,7 @@
     "stadium": "Highmark Stadium",
     "roof": "outdoors",
     "surface": "a_turf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_ATL_CAR",
@@ -2299,9 +2320,7 @@
     "stadium": "Bank of America Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_CLE_CIN",
@@ -2323,9 +2342,7 @@
     "stadium": "Paycor Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_LAC_DEN",
@@ -2347,9 +2364,7 @@
     "stadium": "Empower Field at Mile High",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_DET_GB",
@@ -2371,9 +2386,7 @@
     "stadium": "Lambeau Field",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_TEN_HOU",
@@ -2395,9 +2408,7 @@
     "stadium": "Reliant Stadium",
     "roof": null,
     "surface": "astroturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_JAX_IND",
@@ -2419,9 +2430,7 @@
     "stadium": "Lucas Oil Stadium",
     "roof": null,
     "surface": "fieldturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_LV_KC",
@@ -2443,9 +2452,7 @@
     "stadium": "GEHA Field at Arrowhead Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_SEA_LA",
@@ -2467,9 +2474,7 @@
     "stadium": "SoFi Stadium",
     "roof": "dome",
     "surface": "matrixturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_CHI_MIN",
@@ -2491,9 +2496,7 @@
     "stadium": "U.S. Bank Stadium",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_MIA_NE",
@@ -2515,9 +2518,7 @@
     "stadium": "Gillette Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_TB_NO",
@@ -2539,9 +2540,7 @@
     "stadium": "Caesars Superdome",
     "roof": "dome",
     "surface": "sportturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_PHI_NYG",
@@ -2563,9 +2562,7 @@
     "stadium": "MetLife Stadium",
     "roof": "outdoors",
     "surface": "fieldturf",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   },
   {
     "game_id": "2026_18_DAL_WAS",
@@ -2587,8 +2584,6 @@
     "stadium": "Northwest Stadium",
     "roof": "outdoors",
     "surface": "grass",
-    "div_game": 1,
-    "temp": null,
-    "wind": null
+    "div_game": 1
   }
 ]

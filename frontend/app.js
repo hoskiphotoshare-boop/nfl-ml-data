@@ -618,7 +618,21 @@ function bestMarket(market) {
   let best = null;
   Object.entries(market.markets).forEach(([key, entry]) => {
     if (!entry || entry.edge === undefined || entry.edge === null) return;
-    if (!best || entry.edge > best.market.edge) best = { key, market: entry };
+    const edge =
+      entry.actionable_edge !== undefined && entry.actionable_edge !== null
+        ? entry.actionable_edge
+        : entry.edge;
+    if (edge <= 0) return; // market moved against the pick; not actionable
+    if (!best) {
+      best = { key, market: entry };
+      return;
+    }
+    const bestEdge =
+      best.market.actionable_edge !== undefined &&
+      best.market.actionable_edge !== null
+        ? best.market.actionable_edge
+        : best.market.edge;
+    if (edge > bestEdge) best = { key, market: entry };
   });
   return best;
 }
@@ -662,11 +676,28 @@ function edgeGrid(market, best, game) {
       return;
     }
     const isBest = !finalScore && best && best.key === key;
+    const moved = Boolean(entry.movement && entry.movement.against);
+    const weatherRisk = Boolean(entry.weather_risk);
     const cell = el(
       'div',
-      `edge-cell${isBest ? ' best' : ''}${grade === 'win' ? ' call-win' : ''}`
+      `edge-cell${isBest ? ' best' : ''}${grade === 'win' ? ' call-win' : ''}${
+        moved ? ' moved' : ''
+      }${weatherRisk ? ' weather-risk' : ''}`
     );
     const label = el('div', 'k', MARKET_LABEL[key]);
+    if (moved) {
+      const movedBadge = el('span', 'moved-badge', 'Moved');
+      movedBadge.title = `Market moved against this pick since opening: ${
+        entry.movement.reason || 'line moved'
+      }. The edge is not actionable.`;
+      label.appendChild(movedBadge);
+    }
+    if (weatherRisk) {
+      const weatherBadge = el('span', 'moved-badge', 'Weather');
+      weatherBadge.title =
+        'Severe forecast at kickoff; a model over total is not treated as actionable until weather is a model input.';
+      label.appendChild(weatherBadge);
+    }
     if (grade) {
       label.appendChild(
         el(
@@ -702,6 +733,14 @@ function edgeGrid(market, best, game) {
     }${
       grade
         ? `\nFinal: ${grade === 'win' ? 'correct call' : grade === 'loss' ? 'missed call' : 'push'}.`
+        : ''
+    }${
+      moved
+        ? `\nMarket moved against this pick since opening (${entry.movement.reason || 'line moved'}); the edge is not actionable.`
+        : ''
+    }${
+      weatherRisk
+        ? '\nSevere weather at kickoff; an over-total edge is not actionable until weather is a model input.'
         : ''
     }`;
     grid.appendChild(cell);
@@ -1014,7 +1053,13 @@ function scheduleScorePoll() {
 }
 
 function archivedMarket(game) {
-  return { markets: game?.markets || {}, outlier: false };
+  return {
+    markets: game?.markets || {},
+    outlier: false,
+    movement_against_any: Boolean(game?.movement_against_any),
+    weather_risk: Boolean(game?.weather_risk),
+    blend_conflict: Boolean(game?.blend_conflict),
+  };
 }
 
 function marketFor(game) {
@@ -1053,16 +1098,52 @@ function gameCard(game, rank) {
     v.title = [game.roof, game.surface].filter(Boolean).join(' · ');
     top.appendChild(v);
   }
+  const contextWeather = context?.weather || {};
+  const wx = {
+    temp: game.temp ?? contextWeather.temp,
+    wind: game.wind ?? contextWeather.wind,
+    gust: game.gust ?? contextWeather.gust,
+    precip: game.precip ?? contextWeather.precip,
+    precip_mm: game.precip_mm ?? contextWeather.precip_mm,
+    snow: game.snow ?? contextWeather.snow,
+    weather_code: game.weather_code ?? contextWeather.weather_code,
+  };
   const weather = [
-    game.temp !== null && game.temp !== undefined ? `${game.temp}°F` : null,
-    game.wind !== null && game.wind !== undefined ? `${game.wind} mph` : null,
+    wx.temp !== null && wx.temp !== undefined ? `${wx.temp}°F` : null,
+    wx.wind !== null && wx.wind !== undefined ? `${wx.wind} mph` : null,
+    wx.gust !== null && wx.gust !== undefined ? `gusts ${wx.gust} mph` : null,
+    wx.snow !== null && wx.snow !== undefined && wx.snow > 0
+      ? `${wx.snow} cm snow`
+      : wx.precip_mm !== null && wx.precip_mm !== undefined && wx.precip_mm > 0
+      ? `${wx.precip_mm} mm rain`
+      : null,
   ]
     .filter(Boolean)
     .join(' · ');
   if (weather) {
     const w = el('span', 'venue', `· ${weather}`);
-    w.title = 'Forecast weather';
+    w.title = [
+      'Forecast at kickoff',
+      wx.weather_code !== null && wx.weather_code !== undefined
+        ? `weather code ${wx.weather_code}`
+        : null,
+      wx.precip !== null && wx.precip !== undefined ? `${wx.precip}% precipitation` : null,
+    ]
+      .filter(Boolean)
+      .join(' · ');
     top.appendChild(w);
+  }
+  const severeWeather =
+    (wx.gust !== null && wx.gust !== undefined && wx.gust >= 30) ||
+    (wx.wind !== null && wx.wind !== undefined && wx.wind >= 20) ||
+    (wx.snow !== null && wx.snow !== undefined && wx.snow > 0) ||
+    (wx.temp !== null && wx.temp !== undefined && wx.temp <= 32) ||
+    (wx.precip !== null && wx.precip !== undefined && wx.precip >= 60);
+  if (severeWeather) {
+    const severe = el('span', 'tag amber', 'Severe weather');
+    severe.title =
+      'Forecast at kickoff is outside normal playing conditions. The model does not yet use weather as an input; treat weather-sensitive edges with extra caution.';
+    top.appendChild(severe);
   }
   const liveScore = el('span', 'live-score');
   liveScore.dataset.liveScore = game.game_id;
@@ -1090,6 +1171,18 @@ function gameCard(game, rank) {
     conflict.title =
       'The model’s blended team strength favours the opponent, but its final home probability is still 60%+. Treat this edge with extra caution.';
     top.appendChild(conflict);
+  }
+  if (market && market.movement_against_any) {
+    const moved = el('span', 'tag amber', 'Market moved');
+    moved.title =
+      'At least one market moved against the model pick after opening. Those edges are discounted and cannot be the best pick.';
+    top.appendChild(moved);
+  }
+  if (market && market.weather_risk) {
+    const wxRisk = el('span', 'tag amber', 'Weather risk');
+    wxRisk.title =
+      'Severe weather at kickoff. The model does not yet use weather as an input, so an over-total edge is not actionable.';
+    top.appendChild(wxRisk);
   }
   const finalScore = completedScore(game.game_id);
   const callGrades = finalScore
@@ -1184,52 +1277,6 @@ function gameCard(game, rank) {
     card.appendChild(line);
   });
 
-  if (context) {
-    const homeInjuries = context.home?.injuries || [];
-    const awayInjuries = context.away?.injuries || [];
-    if (homeInjuries.length || awayInjuries.length) {
-      const details = el('details', 'card-injuries');
-      details.open = window.matchMedia('(min-width: 761px)').matches;
-      details.appendChild(
-        el(
-          'summary',
-          '',
-          `Injuries · ${teamAbbr(game.home_team)} ${homeInjuries.length} · ${teamAbbr(
-            game.away_team
-          )} ${awayInjuries.length}`
-        )
-      );
-      const list = el('div', 'injury-list');
-      [
-        ['home', game.home_team, homeInjuries],
-        ['away', game.away_team, awayInjuries],
-      ].forEach(([, team, injuries]) => {
-        if (!injuries.length) return;
-        list.appendChild(el('div', 'injury-team', teamAbbr(team)));
-        injuries.forEach((injury) => {
-          const row = el('div', 'injury-row');
-          row.appendChild(el('span', 'injury-name', injury.name));
-          row.appendChild(el('span', 'injury-pos', injury.position || '—'));
-          const status = el(
-            'span',
-            `injury-status ${String(injury.kind || '').toLowerCase()}`,
-            injury.status || '—'
-          );
-          status.title = [injury.report_status, injury.practice_status]
-            .filter(Boolean)
-            .join(' · ');
-          row.appendChild(status);
-          if (injury.injury) row.appendChild(el('span', 'injury-note', injury.injury));
-          list.appendChild(row);
-        });
-      });
-      details.appendChild(list);
-      card.appendChild(details);
-    } else {
-      card.appendChild(el('div', 'card-injuries empty', 'Injuries · none reported'));
-    }
-  }
-
   if (home !== null) {
     const bar = el('div', 'winbar');
     bar.setAttribute(
@@ -1284,6 +1331,53 @@ function gameCard(game, rank) {
   card.appendChild(meta);
 
   if (market && market.markets) card.appendChild(edgeGrid(market, best, game));
+
+  if (context) {
+    const homeInjuries = context.home?.injuries || [];
+    const awayInjuries = context.away?.injuries || [];
+    if (homeInjuries.length || awayInjuries.length) {
+      const details = el('details', 'card-injuries');
+      details.open = window.matchMedia('(min-width: 761px)').matches;
+      details.appendChild(
+        el(
+          'summary',
+          '',
+          `Injuries · ${teamAbbr(game.home_team)} ${homeInjuries.length} · ${teamAbbr(
+            game.away_team
+          )} ${awayInjuries.length}`
+        )
+      );
+      const list = el('div', 'injury-list');
+      [
+        ['home', game.home_team, homeInjuries],
+        ['away', game.away_team, awayInjuries],
+      ].forEach(([, team, injuries]) => {
+        if (!injuries.length) return;
+        list.appendChild(el('div', 'injury-team', teamAbbr(team)));
+        injuries.forEach((injury) => {
+          const row = el('div', 'injury-row');
+          row.appendChild(el('span', 'injury-name', injury.name));
+          row.appendChild(el('span', 'injury-pos', injury.position || '—'));
+          const status = el(
+            'span',
+            `injury-status ${String(injury.kind || '').toLowerCase()}`,
+            injury.status || '—'
+          );
+          status.title = [injury.report_status, injury.practice_status]
+            .filter(Boolean)
+            .join(' · ');
+          row.appendChild(status);
+          if (injury.injury) row.appendChild(el('span', 'injury-note', injury.injury));
+          list.appendChild(row);
+        });
+      });
+      details.appendChild(list);
+      card.appendChild(details);
+    } else {
+      card.appendChild(el('div', 'card-injuries empty', 'Injuries · none reported'));
+    }
+  }
+
   if (market && market.outlier) {
     const marketKey = market.outlier_market;
     let drivers = [];

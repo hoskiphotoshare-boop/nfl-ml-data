@@ -37,12 +37,21 @@ OUTPUT = "reports/weather_ablation.json"
 TEST_SEASONS = (2024, 2025, 2026)
 
 WEATHER_ONLY = ["temp", "wind", "precip", "wind_15", "cold_32", "precip_any"]
+WEATHER_V2 = WEATHER_ONLY + [
+    "gust",
+    "snow",
+    "humidity",
+    "gust_30",
+    "snow_any",
+]
 DOME = ["is_dome"]
 VARIANTS = {
     "base": [],
     "dome": DOME,
     "weather": WEATHER_ONLY,
     "dome_weather": DOME + WEATHER_ONLY,
+    "weather_v2": WEATHER_V2,
+    "dome_weather_v2": DOME + WEATHER_V2,
 }
 
 
@@ -96,6 +105,8 @@ def attach_weather(df: pl.DataFrame, source: str) -> pl.DataFrame:
             (pl.col("wind") >= 15).cast(pl.Int8).alias("wind_15"),
             (pl.col("temp") <= 32).cast(pl.Int8).alias("cold_32"),
             (pl.col("precip") > 0).cast(pl.Int8).alias("precip_any"),
+            (pl.col("gust") >= 30).cast(pl.Int8).alias("gust_30"),
+            (pl.col("snow") > 0).cast(pl.Int8).alias("snow_any"),
         ]
     )
     return out
@@ -282,22 +293,46 @@ def players() -> dict:
 
 
 def main() -> None:
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--totals-only",
+        action="store_true",
+        help="Run just the total/margin ablation into reports/weather_total_ablation.json",
+    )
+    args = parser.parse_args()
     if not os.path.exists(WEATHER):
         print("No historical weather yet; run scripts/fetch_weather_history.py.")
         return
-    report = {
-        "method": "walk-forward 2024-2026; base vs dome-only vs weather-only vs "
-        "dome+weather; Open-Meteo ERA5 (actual) and historical-forecast archive",
-        "weather_only_features": WEATHER_ONLY,
-        "dome_feature": DOME,
-        "totals_margin": totals_and_margin(),
-        "match": match_model(),
-        "players": players(),
-    }
+    if args.totals_only:
+        report = {
+            "method": "walk-forward 2024-2026; base vs dome-only vs weather-only vs "
+            "dome+weather vs gust/snow v2; Open-Meteo ERA5 (actual) and "
+            "historical-forecast archive",
+            "weather_only_features": WEATHER_ONLY,
+            "weather_v2_features": WEATHER_V2,
+            "dome_feature": DOME,
+            "totals_margin": totals_and_margin(),
+        }
+        output = "reports/weather_total_ablation.json"
+    else:
+        report = {
+            "method": "walk-forward 2024-2026; base vs dome-only vs weather-only vs "
+            "dome+weather vs gust/snow v2; Open-Meteo ERA5 (actual) and "
+            "historical-forecast archive",
+            "weather_only_features": WEATHER_ONLY,
+            "weather_v2_features": WEATHER_V2,
+            "dome_feature": DOME,
+            "totals_margin": totals_and_margin(),
+            "match": match_model(),
+            "players": players(),
+        }
+        output = OUTPUT
     os.makedirs("reports", exist_ok=True)
-    with open(OUTPUT, "w", encoding="utf-8") as handle:
+    with open(output, "w", encoding="utf-8") as handle:
         json.dump(report, handle, indent=2)
-    print(f"Wrote {OUTPUT}")
+    print(f"Wrote {output}")
     print(json.dumps(report, indent=2))
 
 

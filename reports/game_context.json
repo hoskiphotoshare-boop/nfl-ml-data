@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T23:24:44.433842+00:00",
+  "generated_at": "2026-11-27T05:14:42.690085+00:00",
   "season": 2026,
   "week": 12,
   "games": {
@@ -7,6 +7,7 @@
       "game_id": "2026_12_CHI_DET",
       "season": 2026,
       "week": 12,
+      "weather": {},
       "home": {
         "team": "DET",
         "qb": {
@@ -168,6 +169,7 @@
       "game_id": "2026_12_PHI_DAL",
       "season": 2026,
       "week": 12,
+      "weather": {},
       "home": {
         "team": "DAL",
         "qb": {
@@ -495,6 +497,16 @@
       "game_id": "2026_12_KC_BUF",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 33.5,
+        "wind": 13.8,
+        "gust": 40.5,
+        "precip": 100.0,
+        "precip_mm": 23.8,
+        "snow": 2.9,
+        "weather_code": 75.0,
+        "humidity": 89.0
+      },
       "home": {
         "team": "BUF",
         "qb": {
@@ -789,6 +801,16 @@
       "game_id": "2026_12_DEN_PIT",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 39.3,
+        "wind": 13.5,
+        "gust": 31.5,
+        "precip": 47.0,
+        "precip_mm": 0.0,
+        "snow": 0.0,
+        "weather_code": 3.0,
+        "humidity": 89.0
+      },
       "home": {
         "team": "PIT",
         "qb": {
@@ -961,6 +983,16 @@
       "game_id": "2026_12_NO_CIN",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 47.4,
+        "wind": 4.3,
+        "gust": 23.5,
+        "precip": 78.0,
+        "precip_mm": 2.6,
+        "snow": 0.0,
+        "weather_code": 63.0,
+        "humidity": 98.0
+      },
       "home": {
         "team": "CIN",
         "qb": {
@@ -988,6 +1020,16 @@
       "game_id": "2026_12_BAL_HOU",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 69.9,
+        "wind": 16.0,
+        "gust": 20.8,
+        "precip": 1.0,
+        "precip_mm": 0.0,
+        "snow": 0.0,
+        "weather_code": 0.0,
+        "humidity": 36.0
+      },
       "home": {
         "team": "HOU",
         "qb": {
@@ -1015,6 +1057,16 @@
       "game_id": "2026_12_NYG_IND",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 44.7,
+        "wind": 7.1,
+        "gust": 19.7,
+        "precip": 97.0,
+        "precip_mm": 3.5,
+        "snow": 0.0,
+        "weather_code": 63.0,
+        "humidity": 97.0
+      },
       "home": {
         "team": "IND",
         "qb": {
@@ -1042,6 +1094,16 @@
       "game_id": "2026_12_TEN_JAX",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 61.9,
+        "wind": 3.0,
+        "gust": 9.2,
+        "precip": 2.0,
+        "precip_mm": 0.0,
+        "snow": 0.0,
+        "weather_code": 3.0,
+        "humidity": 68.0
+      },
       "home": {
         "team": "JAX",
         "qb": {
@@ -1069,6 +1131,16 @@
       "game_id": "2026_12_NYJ_MIA",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 76.6,
+        "wind": 8.5,
+        "gust": 10.1,
+        "precip": 5.0,
+        "precip_mm": 0.0,
+        "snow": 0.0,
+        "weather_code": 3.0,
+        "humidity": 67.0
+      },
       "home": {
         "team": "MIA",
         "qb": {
@@ -1096,6 +1168,7 @@
       "game_id": "2026_12_ATL_MIN",
       "season": 2026,
       "week": 12,
+      "weather": {},
       "home": {
         "team": "MIN",
         "qb": {
@@ -1123,6 +1196,7 @@
       "game_id": "2026_12_NE_LAC",
       "season": 2026,
       "week": 12,
+      "weather": {},
       "home": {
         "team": "LAC",
         "qb": {
@@ -1150,6 +1224,16 @@
       "game_id": "2026_12_WAS_ARI",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 74.4,
+        "wind": 5.1,
+        "gust": 5.6,
+        "precip": 0.0,
+        "precip_mm": 0.0,
+        "snow": 0.0,
+        "weather_code": 3.0,
+        "humidity": 18.0
+      },
       "home": {
         "team": "ARI",
         "qb": {
@@ -1177,6 +1261,16 @@
       "game_id": "2026_12_SEA_SF",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 65.9,
+        "wind": 10.8,
+        "gust": 20.1,
+        "precip": 80.0,
+        "precip_mm": 0.0,
+        "snow": 0.0,
+        "weather_code": 3.0,
+        "humidity": 67.0
+      },
       "home": {
         "team": "SF",
         "qb": {
@@ -1204,6 +1298,16 @@
       "game_id": "2026_12_LV_CLE",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 47.0,
+        "wind": 8.4,
+        "gust": 19.2,
+        "precip": 98.0,
+        "precip_mm": 2.2,
+        "snow": 0.0,
+        "weather_code": 61.0,
+        "humidity": 94.0
+      },
       "home": {
         "team": "CLE",
         "qb": {
@@ -1231,6 +1335,16 @@
       "game_id": "2026_12_CAR_TB",
       "season": 2026,
       "week": 12,
+      "weather": {
+        "temp": 67.8,
+        "wind": 5.3,
+        "gust": 9.4,
+        "precip": 15.0,
+        "precip_mm": 0.5,
+        "snow": 0.0,
+        "weather_code": 53.0,
+        "humidity": 95.0
+      },
       "home": {
         "team": "TB",
         "qb": {

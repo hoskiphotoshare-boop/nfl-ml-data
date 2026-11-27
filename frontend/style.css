@@ -1005,6 +1005,10 @@ h2 {
 }
 
 .edge-cell .k {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.1rem 0.3rem;
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -2634,4 +2638,34 @@ html.standalone .appbar {
   margin-top: -0.12rem;
   color: var(--muted);
   font-size: 0.64rem;
+}
+
+/* ---------- odds movement guard ---------- */
+.edge-cell.moved {
+  border-color: var(--amber);
+  background: var(--amber-soft);
+}
+
+.moved-badge {
+  margin-left: 0;
+  color: var(--amber);
+  font-size: 0.54rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.edge-cell.moved .edge-val {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.edge-cell.weather-risk {
+  border-color: var(--amber);
+  background: var(--amber-soft);
+}
+
+.edge-cell.weather-risk .edge-val {
+  color: var(--muted);
+  text-decoration: line-through;
 }
