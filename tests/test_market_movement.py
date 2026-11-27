@@ -75,3 +75,11 @@ def test_movement_matches_exact_game_not_pair():
         )
         is None
     )
+
+
+def test_weather_severe_ignores_closed_roof():
+    from compare_market import weather_severe
+
+    assert not weather_severe({"roof": "dome", "gust": 50, "snow": 5})
+    assert not weather_severe({"roof": "closed", "wind": 40})
+    assert weather_severe({"roof": "outdoors", "gust": 31})

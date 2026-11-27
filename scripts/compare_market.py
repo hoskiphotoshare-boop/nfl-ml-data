@@ -183,6 +183,8 @@ def pregame_history() -> dict[tuple, dict]:
 
 def weather_severe(game: dict) -> bool:
     """Extreme conditions where a model over total is not actionable."""
+    if (game.get("roof") or "").lower() in {"dome", "closed"}:
+        return False
     gust = game.get("gust")
     wind = game.get("wind")
     snow = game.get("snow")

@@ -70,7 +70,7 @@ def kickoff_utc(game: dict) -> datetime | None:
     return local.astimezone(timezone.utc)
 
 
-def fetch_forecast(team: str, day: str, cache: dict) -> tuple[float, float, float] | None:
+def fetch_forecast(team: str, day: str, cache: dict) -> dict | None:
     coords = STADIUMS.get(team)
     if not coords:
         return None
