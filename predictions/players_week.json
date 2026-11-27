@@ -338,7 +338,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.006,
       "applied": true,
       "base": {
@@ -3053,7 +3053,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.9331,
       "applied": true,
       "base": {
@@ -5549,7 +5549,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0059,
       "applied": true,
       "base": {
@@ -8189,7 +8189,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.9573,
       "applied": true,
       "base": {
@@ -9973,7 +9973,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.9526,
       "applied": true,
       "base": {
@@ -10525,7 +10525,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.005,
       "applied": true,
       "base": {
@@ -11077,7 +11077,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -12293,7 +12293,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0063,
       "applied": true,
       "base": {
@@ -12797,7 +12797,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0063,
       "applied": true,
       "base": {
@@ -18563,7 +18563,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0035,
       "applied": true,
       "base": {
@@ -19668,7 +19668,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0048,
       "applied": true,
       "base": {
@@ -23486,7 +23486,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0063,
       "applied": true,
       "base": {
@@ -24224,16 +24224,16 @@
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 6.7,
+    "projected_fantasy_points": 6.8,
     "floor_fantasy_points": 2.5,
-    "ceiling_fantasy_points": 11.6,
+    "ceiling_fantasy_points": 11.7,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 1.85,
-    "projected_fg_att": 1.85,
+    "projected_fg": 1.87,
+    "projected_fg_att": 1.87,
     "projected_xp": 2.2,
     "recent_fantasy_points": [
       11.0,
@@ -24370,8 +24370,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
-      "fantasy_ratio": 0.9456,
+      "fg_ratio": 0.9354,
+      "fantasy_ratio": 0.9527,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -25273,8 +25273,8 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
-      "fantasy_ratio": 0.9624,
+      "fg_ratio": 0.9414,
+      "fantasy_ratio": 0.9618,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -26708,8 +26708,8 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
-      "fantasy_ratio": 0.9567,
+      "fg_ratio": 0.9414,
+      "fantasy_ratio": 0.956,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -27114,16 +27114,16 @@
     "projected_receptions": 0.0,
     "projected_yards": 0.0,
     "projected_tds": 0.0,
-    "projected_fantasy_points": 6.4,
-    "floor_fantasy_points": 2.4,
-    "ceiling_fantasy_points": 11.2,
+    "projected_fantasy_points": 6.5,
+    "floor_fantasy_points": 2.5,
+    "ceiling_fantasy_points": 11.3,
     "projected_pass_yards": null,
     "projected_pass_tds": null,
     "projected_interceptions": null,
     "projected_rush_yards": null,
     "projected_rush_tds": null,
-    "projected_fg": 2.31,
-    "projected_fg_att": 2.78,
+    "projected_fg": 2.34,
+    "projected_fg_att": 2.81,
     "projected_xp": 1.8,
     "recent_fantasy_points": [
       10.0,
@@ -27260,8 +27260,8 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
-      "fantasy_ratio": 0.9401,
+      "fg_ratio": 0.9354,
+      "fantasy_ratio": 0.9479,
       "applied": true,
       "base": {
         "projected_targets": 0.0,
@@ -28712,7 +28712,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.9451,
       "applied": true,
       "base": {
@@ -29248,7 +29248,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0063,
       "applied": true,
       "base": {
@@ -32995,7 +32995,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -34182,7 +34182,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.9572,
       "applied": true,
       "base": {
@@ -35422,7 +35422,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -35970,7 +35970,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0063,
       "applied": true,
       "base": {
@@ -36521,7 +36521,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.004,
       "applied": true,
       "base": {
@@ -36889,7 +36889,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0029,
       "applied": true,
       "base": {
@@ -39267,7 +39267,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.9196,
       "applied": true,
       "base": {
@@ -39631,7 +39631,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -39983,7 +39983,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {
@@ -42598,7 +42598,7 @@
     "weather_adjustment": {
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9423,
+      "fg_ratio": 0.9414,
       "fantasy_ratio": 1.0063,
       "applied": true,
       "base": {
@@ -43132,7 +43132,7 @@
     "weather_adjustment": {
       "pass_ratio": 0.915,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9257,
+      "fg_ratio": 0.9354,
       "fantasy_ratio": 0.915,
       "applied": true,
       "base": {

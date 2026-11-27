@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T18:43:12.859341+00:00",
+  "generated_at": "2026-11-27T19:06:09.594390+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -16,20 +16,21 @@
   },
   "market": {
     "games": 26,
-    "outliers": 4,
+    "outliers": 5,
     "outlier_games": [
       "2026_12_NYJ_MIA",
       "2026_12_ATL_MIN",
       "2026_12_WAS_ARI",
-      "2026_13_PHI_ARI"
+      "2026_13_PHI_ARI",
+      "2026_13_MIA_DEN"
     ],
     "mean_abs_edge": 0.0754,
     "max_abs_edge": 0.2602,
     "blend_conflicts": 0
   },
   "futures": {
-    "mean_abs_edge": 0.0093,
-    "max_abs_edge": 0.0392,
+    "mean_abs_edge": 0.0091,
+    "max_abs_edge": 0.043,
     "teams_matched": 32
   },
   "calls": {
@@ -41,7 +42,7 @@
     "win_rate": 0.3333,
     "roi": -0.38,
     "profit": -1.14,
-    "mean_edge_delta": -0.0376,
+    "mean_edge_delta": -0.0373,
     "by_market": {
       "spread": {
         "n": 1,

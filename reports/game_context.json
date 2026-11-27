@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T18:42:30.692163+00:00",
+  "generated_at": "2026-11-27T19:05:12.928702+00:00",
   "season": 2026,
   "week": 12,
   "games": {
@@ -8,14 +8,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 37.5,
-        "wind": 13.5,
-        "gust": 30.9,
+        "temp": 36.7,
+        "wind": 12.9,
+        "gust": 30.2,
         "precip": 41.0,
-        "precip_mm": 0.4,
-        "snow": 0.0,
-        "weather_code": 51.0,
-        "humidity": 90.0
+        "precip_mm": 0.7,
+        "snow": 0.1,
+        "weather_code": 71.0,
+        "humidity": 93.0
       },
       "home": {
         "team": "PIT",

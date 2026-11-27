@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T18:43:14.389126+00:00",
+  "generated_at": "2026-11-27T19:06:11.274953+00:00",
   "headline": "Baseline-relative assessment. The market benchmark is still unverified.",
   "rows": [
     {
@@ -89,7 +89,7 @@
   ],
   "caveats": [
     "No historical closing odds, so market log loss and CLV are unmeasured.",
-    "Market board: mean |edge| 7.5 pp, 4 games at 20+ pp \u2014 signal or overconfidence is unknown.",
+    "Market board: mean |edge| 7.5 pp, 5 games at 20+ pp \u2014 signal or overconfidence is unknown.",
     "2026 is 162 games; pooled 2022\u201326 (1,298) is the more reliable sample.",
     "The call ledger is 0 graded and CLV is 0 until odds move before kickoff.",
     "Kicker projections and SB futures are the weakest outputs; total is close to a constant."
