@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T19:06:09.594390+00:00",
+  "generated_at": "2026-11-27T19:28:08.351978+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -29,8 +29,8 @@
     "blend_conflicts": 0
   },
   "futures": {
-    "mean_abs_edge": 0.0091,
-    "max_abs_edge": 0.043,
+    "mean_abs_edge": 0.0096,
+    "max_abs_edge": 0.0423,
     "teams_matched": 32
   },
   "calls": {
@@ -42,7 +42,7 @@
     "win_rate": 0.3333,
     "roi": -0.38,
     "profit": -1.14,
-    "mean_edge_delta": -0.0373,
+    "mean_edge_delta": -0.0366,
     "by_market": {
       "spread": {
         "n": 1,

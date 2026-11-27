@@ -4,27 +4,27 @@
     "mean_edge": -0.0062,
     "mean_abs_edge": 0.0754,
     "max_abs_edge": 0.2602,
-    "mean_best_edge": 0.1033,
+    "mean_best_edge": 0.1079,
     "max_best_edge": 0.2602,
     "strong_edges": 24,
     "blend_conflicts": 0,
     "movement_flags": 5,
     "weather_flags": 2,
     "edge_suppressed_total_disagreement": 3,
-    "edge_capped": 9,
+    "edge_capped": 15,
     "suppressed_edges": 10,
     "best_market_counts": {
-      "ml": 9,
-      "spread": 4,
-      "total": 13
+      "ml": 7,
+      "spread": 5,
+      "total": 14
     }
   },
   "total_calibration": {
     "n": 26,
-    "over": 15,
-    "under": 11,
-    "mean_edge": 0.1122,
-    "mean_total_minus_market": 1.44
+    "over": 16,
+    "under": 10,
+    "mean_edge": 0.1225,
+    "mean_total_minus_market": 2.62
   },
   "odds_fetched_at": "2026-11-27T05:21:28.253346+00:00",
   "odds_events": 26,
@@ -111,9 +111,9 @@
           "side": "over",
           "team": "Over",
           "line": 36.5,
-          "model_prob": 0.5452,
+          "model_prob": 0.6254,
           "market_prob": 0.5,
-          "edge": 0.0452,
+          "edge": 0.1254,
           "price": 1.88,
           "bookmaker": "fanduel",
           "movement": {
@@ -132,14 +132,14 @@
             "reason": null
           },
           "weather_risk": true,
-          "actionable_edge": 0.0452,
-          "edge_capped": false,
+          "actionable_edge": 0.1,
+          "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 2.5
+          "ev": 17.58
         }
       },
-      "best_market": "ml",
-      "best_edge": 0.0877,
+      "best_market": "total",
+      "best_edge": 0.1,
       "market_movement": {
         "commence_time": "2026-11-27T20:00:00Z",
         "snapshots": 8,
@@ -161,19 +161,19 @@
         "total"
       ],
       "outlier": false,
-      "outlier_edge": 0.0877,
-      "outlier_market": "ml",
-      "best_team": "PIT",
+      "outlier_edge": 0.1254,
+      "outlier_market": "total",
+      "best_team": "Over",
       "blend_diff": 1.7971,
       "blend_conflict": false,
       "model_spread": -3.1,
       "market_spread": 5.0,
       "spread_edge": 8.1,
-      "model_total": 38.1,
+      "model_total": 41.0,
       "market_total": 37.0,
       "model_home_win_prob_pure": 0.447,
       "model_spread_pure": -1.8,
-      "model_total_pure": 38.1,
+      "model_total_pure": 41.0,
       "market_adjustment": {
         "applied": true,
         "weights": {
@@ -194,7 +194,7 @@
         "spread_move": 2.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 1.1,
+      "total_edge": 4.0,
       "best_home_ml": {
         "price": 3.1,
         "bookmaker": "betrivers"
@@ -305,9 +305,9 @@
           "side": "over",
           "team": "Over",
           "line": 49.0,
-          "model_prob": 0.5565,
+          "model_prob": 0.6145,
           "market_prob": 0.5,
-          "edge": 0.0565,
+          "edge": 0.1145,
           "price": 1.93,
           "bookmaker": "lowvig",
           "movement": {
@@ -326,14 +326,14 @@
             "reason": null
           },
           "weather_risk": true,
-          "actionable_edge": 0.0565,
-          "edge_capped": false,
+          "actionable_edge": 0.1,
+          "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 7.4
+          "ev": 18.6
         }
       },
-      "best_market": "ml",
-      "best_edge": 0.0665,
+      "best_market": "total",
+      "best_edge": 0.1,
       "market_movement": {
         "commence_time": "2026-11-29T18:00:00Z",
         "snapshots": 8,
@@ -353,19 +353,19 @@
         "total"
       ],
       "outlier": false,
-      "outlier_edge": 0.0665,
-      "outlier_market": "ml",
-      "best_team": "NO",
+      "outlier_edge": 0.1145,
+      "outlier_market": "total",
+      "best_team": "Over",
       "blend_diff": 9.5882,
       "blend_conflict": false,
       "model_spread": 9.0,
       "market_spread": -10.0,
       "spread_edge": -19.0,
-      "model_total": 51.0,
+      "model_total": 53.1,
       "market_total": 49.5,
       "model_home_win_prob_pure": 0.75,
       "model_spread_pure": 9.0,
-      "model_total_pure": 51.0,
+      "model_total_pure": 53.1,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -386,7 +386,7 @@
         "spread_move": 0.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 1.5,
+      "total_edge": 3.6,
       "best_home_ml": {
         "price": 1.18,
         "bookmaker": "draftkings"
@@ -497,9 +497,9 @@
           "side": "over",
           "team": "Over",
           "line": 47.0,
-          "model_prob": 0.5733,
+          "model_prob": 0.6091,
           "market_prob": 0.5,
-          "edge": 0.0733,
+          "edge": 0.1091,
           "price": 1.91,
           "bookmaker": "betus",
           "movement": {
@@ -518,14 +518,14 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0733,
-          "edge_capped": false,
+          "actionable_edge": 0.1,
+          "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 9.5
+          "ev": 16.34
         }
       },
       "best_market": "total",
-      "best_edge": 0.0733,
+      "best_edge": 0.1,
       "market_movement": {
         "commence_time": "2026-11-29T18:00:00Z",
         "snapshots": 8,
@@ -543,7 +543,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.0733,
+      "outlier_edge": 0.1091,
       "outlier_market": "total",
       "best_team": "Over",
       "blend_diff": 6.9683,
@@ -551,11 +551,11 @@
       "model_spread": 6.0,
       "market_spread": -6.5,
       "spread_edge": -12.5,
-      "model_total": 49.6,
+      "model_total": 50.9,
       "market_total": 47.0,
       "model_home_win_prob_pure": 0.674,
       "model_spread_pure": 6.0,
-      "model_total_pure": 49.6,
+      "model_total_pure": 50.9,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -576,7 +576,7 @@
         "spread_move": 0.5,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 2.6,
+      "total_edge": 3.9,
       "best_home_ml": {
         "price": 1.34,
         "bookmaker": "fanduel"
@@ -684,14 +684,14 @@
           "ev": -0.93
         },
         "total": {
-          "side": "under",
-          "team": "Under",
-          "line": 42.5,
-          "model_prob": 0.5677,
+          "side": "over",
+          "team": "Over",
+          "line": 40.5,
+          "model_prob": 0.5649,
           "market_prob": 0.5,
-          "edge": 0.0677,
-          "price": 1.83,
-          "bookmaker": "fanduel",
+          "edge": 0.0649,
+          "price": 1.85,
+          "bookmaker": "betrivers",
           "movement": {
             "commence_time": "2026-11-29T18:00:00Z",
             "snapshots": 8,
@@ -708,14 +708,14 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0677,
+          "actionable_edge": 0.0649,
           "edge_capped": false,
           "edge_suppressed": null,
-          "ev": 3.89
+          "ev": 4.51
         }
       },
       "best_market": "total",
-      "best_edge": 0.0677,
+      "best_edge": 0.0649,
       "market_movement": {
         "commence_time": "2026-11-29T18:00:00Z",
         "snapshots": 8,
@@ -733,19 +733,19 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.0677,
+      "outlier_edge": 0.0649,
       "outlier_market": "total",
-      "best_team": "Under",
+      "best_team": "Over",
       "blend_diff": -5.6845,
       "blend_conflict": false,
       "model_spread": -6.5,
       "market_spread": 6.0,
       "spread_edge": 12.5,
-      "model_total": 40.1,
+      "model_total": 42.8,
       "market_total": 41.5,
       "model_home_win_prob_pure": 0.312,
       "model_spread_pure": -6.5,
-      "model_total_pure": 40.1,
+      "model_total_pure": 42.8,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -766,7 +766,7 @@
         "spread_move": -0.5,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -1.4,
+      "total_edge": 1.3,
       "best_home_ml": {
         "price": 3.45,
         "bookmaker": "betrivers"
@@ -877,9 +877,9 @@
           "side": "over",
           "team": "Over",
           "line": 49.0,
-          "model_prob": 0.5733,
+          "model_prob": 0.6118,
           "market_prob": 0.5,
-          "edge": 0.0733,
+          "edge": 0.1118,
           "price": 1.93,
           "bookmaker": "lowvig",
           "movement": {
@@ -898,14 +898,14 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0733,
-          "edge_capped": false,
+          "actionable_edge": 0.1,
+          "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 10.65
+          "ev": 18.08
         }
       },
       "best_market": "total",
-      "best_edge": 0.0733,
+      "best_edge": 0.1,
       "market_movement": {
         "commence_time": "2026-11-29T18:00:00Z",
         "snapshots": 8,
@@ -923,7 +923,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.0733,
+      "outlier_edge": 0.1118,
       "outlier_market": "total",
       "best_team": "Over",
       "blend_diff": 20.0824,
@@ -931,11 +931,11 @@
       "model_spread": 14.1,
       "market_spread": -14.5,
       "spread_edge": -28.6,
-      "model_total": 51.6,
+      "model_total": 53.0,
       "market_total": 49.5,
       "model_home_win_prob_pure": 0.853,
       "model_spread_pure": 14.1,
-      "model_total_pure": 51.6,
+      "model_total_pure": 53.0,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -956,7 +956,7 @@
         "spread_move": 0.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 2.1,
+      "total_edge": 3.5,
       "best_home_ml": {
         "price": 1.09,
         "bookmaker": "betus"
@@ -1067,9 +1067,9 @@
           "side": "over",
           "team": "Over",
           "line": 39.5,
-          "model_prob": 0.7102,
+          "model_prob": 0.741,
           "market_prob": 0.5,
-          "edge": 0.2102,
+          "edge": 0.241,
           "price": 1.85,
           "bookmaker": "draftkings",
           "movement": {
@@ -1090,7 +1090,7 @@
           "weather_risk": false,
           "actionable_edge": 0.0,
           "edge_suppressed": "total_disagreement",
-          "ev": 31.39
+          "ev": 37.09
         }
       },
       "best_market": "ml",
@@ -1115,7 +1115,7 @@
         "spread"
       ],
       "outlier": true,
-      "outlier_edge": 0.2102,
+      "outlier_edge": 0.241,
       "outlier_market": "total",
       "best_team": "MIA",
       "blend_diff": -2.4075,
@@ -1123,11 +1123,11 @@
       "model_spread": -3.9,
       "market_spread": 5.0,
       "spread_edge": 8.9,
-      "model_total": 47.3,
+      "model_total": 48.6,
       "market_total": 40.0,
       "model_home_win_prob_pure": 0.407,
       "model_spread_pure": -3.2,
-      "model_total_pure": 47.3,
+      "model_total_pure": 48.6,
       "market_adjustment": {
         "applied": true,
         "weights": {
@@ -1148,7 +1148,7 @@
         "spread_move": 1.5,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 7.3,
+      "total_edge": 8.6,
       "best_home_ml": {
         "price": 3.1,
         "bookmaker": "fanduel"
@@ -1639,9 +1639,9 @@
           "side": "over",
           "team": "Over",
           "line": 41.5,
-          "model_prob": 0.7478,
+          "model_prob": 0.7699,
           "market_prob": 0.5,
-          "edge": 0.2478,
+          "edge": 0.2699,
           "price": 1.93,
           "bookmaker": "lowvig",
           "movement": {
@@ -1662,7 +1662,7 @@
           "weather_risk": false,
           "actionable_edge": 0.0,
           "edge_suppressed": "total_disagreement",
-          "ev": 44.33
+          "ev": 48.59
         }
       },
       "best_market": "ml",
@@ -1684,7 +1684,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": true,
-      "outlier_edge": 0.2478,
+      "outlier_edge": 0.2699,
       "outlier_market": "total",
       "best_team": "ARI",
       "blend_diff": -3.8473,
@@ -1692,11 +1692,11 @@
       "model_spread": -5.4,
       "market_spread": 6.5,
       "spread_edge": 11.9,
-      "model_total": 50.9,
+      "model_total": 51.9,
       "market_total": 41.5,
       "model_home_win_prob_pure": 0.344,
       "model_spread_pure": -5.4,
-      "model_total_pure": 50.9,
+      "model_total_pure": 51.9,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -1717,7 +1717,7 @@
         "spread_move": -0.5,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 9.4,
+      "total_edge": 10.4,
       "best_home_ml": {
         "price": 3.82,
         "bookmaker": "draftkings"
@@ -1828,9 +1828,9 @@
           "side": "under",
           "team": "Under",
           "line": 44.5,
-          "model_prob": 0.5368,
+          "model_prob": 0.5227,
           "market_prob": 0.5,
-          "edge": 0.0368,
+          "edge": 0.0227,
           "price": 1.83,
           "bookmaker": "fanduel",
           "movement": {
@@ -1849,10 +1849,10 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0368,
+          "actionable_edge": 0.0227,
           "edge_capped": false,
           "edge_suppressed": null,
-          "ev": -1.77
+          "ev": -4.35
         }
       },
       "best_market": "spread",
@@ -1884,11 +1884,11 @@
       "model_spread": 7.8,
       "market_spread": -3.0,
       "spread_edge": -10.8,
-      "model_total": 43.2,
+      "model_total": 43.7,
       "market_total": 43.5,
       "model_home_win_prob_pure": 0.756,
       "model_spread_pure": 9.3,
-      "model_total_pure": 43.1,
+      "model_total_pure": 43.7,
       "market_adjustment": {
         "applied": true,
         "weights": {
@@ -1909,7 +1909,7 @@
         "spread_move": 0.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -0.3,
+      "total_edge": 0.2,
       "best_home_ml": {
         "price": 1.68,
         "bookmaker": "betus"
@@ -1954,7 +1954,7 @@
       "ev_away_ml": 2.039,
       "best_ev": 2.039,
       "best_ev_side": "away",
-      "best_market_ev": 9.72,
+      "best_market_ev": 28.43,
       "markets": {
         "ml": {
           "side": "away",
@@ -2020,9 +2020,9 @@
           "side": "over",
           "team": "Over",
           "line": 39.5,
-          "model_prob": 0.5899,
+          "model_prob": 0.6905,
           "market_prob": 0.5,
-          "edge": 0.0899,
+          "edge": 0.1905,
           "price": 1.86,
           "bookmaker": "fanduel",
           "movement": {
@@ -2041,14 +2041,14 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0899,
-          "edge_capped": false,
+          "actionable_edge": 0.1,
+          "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 9.72
+          "ev": 28.43
         }
       },
       "best_market": "total",
-      "best_edge": 0.0899,
+      "best_edge": 0.1,
       "market_movement": {
         "commence_time": "2026-11-30T01:20:00Z",
         "snapshots": 8,
@@ -2066,7 +2066,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.0899,
+      "outlier_edge": 0.1905,
       "outlier_market": "total",
       "best_team": "Over",
       "blend_diff": null,
@@ -2074,11 +2074,11 @@
       "model_spread": 5.5,
       "market_spread": -4.5,
       "spread_edge": -10.0,
-      "model_total": 42.7,
+      "model_total": 46.5,
       "market_total": 40.0,
       "model_home_win_prob_pure": 0.661,
       "model_spread_pure": 5.5,
-      "model_total_pure": 42.7,
+      "model_total_pure": 46.5,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -2099,7 +2099,7 @@
         "spread_move": 0.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 2.7,
+      "total_edge": 6.5,
       "best_home_ml": {
         "price": 1.43,
         "bookmaker": "fanduel"
@@ -2210,9 +2210,9 @@
           "side": "under",
           "team": "Under",
           "line": 44.0,
-          "model_prob": 0.534,
+          "model_prob": 0.5198,
           "market_prob": 0.5,
-          "edge": 0.034,
+          "edge": 0.0198,
           "price": 1.89,
           "bookmaker": "bovada",
           "movement": {
@@ -2231,14 +2231,14 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.034,
+          "actionable_edge": 0.0198,
           "edge_capped": false,
           "edge_suppressed": null,
-          "ev": 0.93
+          "ev": -1.76
         }
       },
-      "best_market": "total",
-      "best_edge": 0.034,
+      "best_market": "spread",
+      "best_edge": 0.0298,
       "market_movement": {
         "commence_time": "2026-12-01T01:15:00Z",
         "snapshots": 8,
@@ -2256,19 +2256,19 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.034,
-      "outlier_market": "total",
-      "best_team": "Under",
+      "outlier_edge": 0.0298,
+      "outlier_market": "spread",
+      "best_team": "TB",
       "blend_diff": 5.1353,
       "blend_conflict": false,
       "model_spread": 3.5,
       "market_spread": -3.0,
       "spread_edge": -6.5,
-      "model_total": 42.8,
+      "model_total": 43.3,
       "market_total": 43.5,
       "model_home_win_prob_pure": 0.604,
       "model_spread_pure": 3.5,
-      "model_total_pure": 42.8,
+      "model_total_pure": 43.3,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -2289,7 +2289,7 @@
         "spread_move": 0.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -0.7,
+      "total_edge": -0.2,
       "best_home_ml": {
         "price": 1.68,
         "bookmaker": "betrivers"
@@ -2592,9 +2592,9 @@
           "side": "over",
           "team": "Over",
           "line": 49.5,
-          "model_prob": 0.5255,
+          "model_prob": 0.5537,
           "market_prob": 0.5,
-          "edge": 0.0255,
+          "edge": 0.0537,
           "price": 1.87,
           "bookmaker": "draftkings",
           "movement": {
@@ -2613,10 +2613,10 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0255,
+          "actionable_edge": 0.0537,
           "edge_capped": false,
           "edge_suppressed": null,
-          "ev": -1.73
+          "ev": 3.54
         }
       },
       "best_market": "spread",
@@ -2646,11 +2646,11 @@
       "model_spread": -5.8,
       "market_spread": 3.5,
       "spread_edge": 9.3,
-      "model_total": 50.4,
+      "model_total": 51.4,
       "market_total": 50.5,
       "model_home_win_prob_pure": 0.331,
       "model_spread_pure": -5.8,
-      "model_total_pure": 50.4,
+      "model_total_pure": 51.4,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -2671,7 +2671,7 @@
         "spread_move": 0.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -0.1,
+      "total_edge": 0.9,
       "best_home_ml": {
         "price": 2.76,
         "bookmaker": "fanduel"
@@ -2782,9 +2782,9 @@
           "side": "under",
           "team": "Under",
           "line": 50.5,
-          "model_prob": 0.6387,
+          "model_prob": 0.6091,
           "market_prob": 0.5,
-          "edge": 0.1387,
+          "edge": 0.1091,
           "price": 1.91,
           "bookmaker": "fanduel",
           "movement": {
@@ -2806,7 +2806,7 @@
           "actionable_edge": 0.1,
           "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 21.99
+          "ev": 16.34
         }
       },
       "best_market": "spread",
@@ -2836,11 +2836,11 @@
       "model_spread": -2.8,
       "market_spread": -2.5,
       "spread_edge": 0.3,
-      "model_total": 45.5,
+      "model_total": 46.6,
       "market_total": 50.5,
       "model_home_win_prob_pure": 0.418,
       "model_spread_pure": -2.8,
-      "model_total_pure": 45.5,
+      "model_total_pure": 46.6,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -2861,7 +2861,7 @@
         "spread_move": 0.5,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -5.0,
+      "total_edge": -3.9,
       "best_home_ml": {
         "price": 1.7,
         "bookmaker": "fanduel"
@@ -2906,7 +2906,7 @@
       "ev_away_ml": -10.824,
       "best_ev": 16.064,
       "best_ev_side": "home",
-      "best_market_ev": 25.79,
+      "best_market_ev": 16.44,
       "markets": {
         "ml": {
           "side": "home",
@@ -2972,9 +2972,9 @@
           "side": "under",
           "team": "Under",
           "line": 47.5,
-          "model_prob": 0.6727,
+          "model_prob": 0.6227,
           "market_prob": 0.5,
-          "edge": 0.1727,
+          "edge": 0.1227,
           "price": 1.87,
           "bookmaker": "betrivers",
           "movement": {
@@ -2996,7 +2996,7 @@
           "actionable_edge": 0.1,
           "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 25.79
+          "ev": 16.44
         }
       },
       "best_market": "total",
@@ -3018,7 +3018,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.1727,
+      "outlier_edge": 0.1227,
       "outlier_market": "total",
       "best_team": "Under",
       "blend_diff": -10.1588,
@@ -3026,11 +3026,11 @@
       "model_spread": -4.4,
       "market_spread": 5.0,
       "spread_edge": 9.4,
-      "model_total": 41.2,
+      "model_total": 43.1,
       "market_total": 46.5,
       "model_home_win_prob_pure": 0.372,
       "model_spread_pure": -4.4,
-      "model_total_pure": 41.2,
+      "model_total_pure": 43.1,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -3051,7 +3051,7 @@
         "spread_move": 0.5,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -5.3,
+      "total_edge": -3.4,
       "best_home_ml": {
         "price": 3.12,
         "bookmaker": "draftkings"
@@ -3352,9 +3352,9 @@
           "side": "over",
           "team": "Over",
           "line": 46.5,
-          "model_prob": 0.5844,
+          "model_prob": 0.6281,
           "market_prob": 0.5,
-          "edge": 0.0844,
+          "edge": 0.1281,
           "price": 1.93,
           "bookmaker": "lowvig",
           "movement": {
@@ -3373,14 +3373,14 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0844,
-          "edge_capped": false,
+          "actionable_edge": 0.1,
+          "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 12.79
+          "ev": 21.22
         }
       },
       "best_market": "total",
-      "best_edge": 0.0844,
+      "best_edge": 0.1,
       "market_movement": {
         "commence_time": "2026-12-06T18:00:00Z",
         "snapshots": 8,
@@ -3398,7 +3398,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.0844,
+      "outlier_edge": 0.1281,
       "outlier_market": "total",
       "best_team": "Over",
       "blend_diff": -7.9155,
@@ -3406,11 +3406,11 @@
       "model_spread": -5.5,
       "market_spread": 6.5,
       "spread_edge": 12.0,
-      "model_total": 49.5,
+      "model_total": 51.1,
       "market_total": 46.5,
       "model_home_win_prob_pure": 0.34,
       "model_spread_pure": -5.5,
-      "model_total_pure": 49.5,
+      "model_total_pure": 51.1,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -3431,7 +3431,7 @@
         "spread_move": 0.5,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 3.0,
+      "total_edge": 4.6,
       "best_home_ml": {
         "price": 3.7,
         "bookmaker": "betrivers"
@@ -3476,7 +3476,7 @@
       "ev_away_ml": -12.64,
       "best_ev": 1.78,
       "best_ev_side": "home",
-      "best_market_ev": 14.26,
+      "best_market_ev": 19.97,
       "markets": {
         "ml": {
           "side": "home",
@@ -3542,9 +3542,9 @@
           "side": "over",
           "team": "Over",
           "line": 39.5,
-          "model_prob": 0.5982,
+          "model_prob": 0.6281,
           "market_prob": 0.5,
-          "edge": 0.0982,
+          "edge": 0.1281,
           "price": 1.91,
           "bookmaker": "betus",
           "movement": {
@@ -3563,14 +3563,14 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0982,
-          "edge_capped": false,
+          "actionable_edge": 0.1,
+          "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 14.26
+          "ev": 19.97
         }
       },
       "best_market": "total",
-      "best_edge": 0.0982,
+      "best_edge": 0.1,
       "market_movement": {
         "commence_time": "2026-12-06T18:00:00Z",
         "snapshots": 8,
@@ -3588,7 +3588,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.0982,
+      "outlier_edge": 0.1281,
       "outlier_market": "total",
       "best_team": "Over",
       "blend_diff": 11.9686,
@@ -3596,11 +3596,11 @@
       "model_spread": 8.1,
       "market_spread": -5.5,
       "spread_edge": -13.6,
-      "model_total": 43.0,
+      "model_total": 44.1,
       "market_total": 40.5,
       "model_home_win_prob_pure": 0.727,
       "model_spread_pure": 8.1,
-      "model_total_pure": 43.0,
+      "model_total_pure": 44.1,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -3621,7 +3621,7 @@
         "spread_move": 0.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 2.5,
+      "total_edge": 3.6,
       "best_home_ml": {
         "price": 1.4,
         "bookmaker": "draftkings"
@@ -3732,9 +3732,9 @@
           "side": "under",
           "team": "Under",
           "line": 47.5,
-          "model_prob": 0.5396,
+          "model_prob": 0.5283,
           "market_prob": 0.5,
-          "edge": 0.0396,
+          "edge": 0.0283,
           "price": 1.91,
           "bookmaker": "draftkings",
           "movement": {
@@ -3753,10 +3753,10 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.0396,
+          "actionable_edge": 0.0283,
           "edge_capped": false,
           "edge_suppressed": null,
-          "ev": 3.06
+          "ev": 0.91
         }
       },
       "best_market": "ml",
@@ -3786,11 +3786,11 @@
       "model_spread": -0.2,
       "market_spread": 4.5,
       "spread_edge": 4.7,
-      "model_total": 46.1,
+      "model_total": 46.5,
       "market_total": 46.5,
       "model_home_win_prob_pure": 0.494,
       "model_spread_pure": -0.2,
-      "model_total_pure": 46.1,
+      "model_total_pure": 46.5,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -3811,7 +3811,7 @@
         "spread_move": 0.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -0.4,
+      "total_edge": 0.0,
       "best_home_ml": {
         "price": 2.91,
         "bookmaker": "draftkings"
@@ -3922,9 +3922,9 @@
           "side": "over",
           "team": "Over",
           "line": 37.5,
-          "model_prob": 0.7721,
+          "model_prob": 0.801,
           "market_prob": 0.5,
-          "edge": 0.2721,
+          "edge": 0.301,
           "price": 2.0,
           "bookmaker": "betrivers",
           "movement": {
@@ -3945,7 +3945,7 @@
           "weather_risk": false,
           "actionable_edge": 0.0,
           "edge_suppressed": "total_disagreement",
-          "ev": 54.42
+          "ev": 60.2
         }
       },
       "best_market": "spread",
@@ -3967,7 +3967,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": true,
-      "outlier_edge": 0.2721,
+      "outlier_edge": 0.301,
       "outlier_market": "total",
       "best_team": "PHI",
       "blend_diff": -2.2911,
@@ -3975,11 +3975,11 @@
       "model_spread": -4.2,
       "market_spread": 3.5,
       "spread_edge": 7.7,
-      "model_total": 48.0,
+      "model_total": 49.4,
       "market_total": 37.5,
       "model_home_win_prob_pure": 0.374,
       "model_spread_pure": -4.3,
-      "model_total_pure": 48.0,
+      "model_total_pure": 49.4,
       "market_adjustment": {
         "applied": true,
         "weights": {
@@ -4000,7 +4000,7 @@
         "spread_move": 1.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 10.5,
+      "total_edge": 11.9,
       "best_home_ml": {
         "price": 2.48,
         "bookmaker": "betrivers"
@@ -4111,9 +4111,9 @@
           "side": "over",
           "team": "Over",
           "line": 38.5,
-          "model_prob": 0.7053,
+          "model_prob": 0.715,
           "market_prob": 0.5,
-          "edge": 0.2053,
+          "edge": 0.215,
           "price": 1.87,
           "bookmaker": "fanduel",
           "movement": {
@@ -4135,7 +4135,7 @@
           "actionable_edge": 0.1,
           "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 31.89
+          "ev": 33.71
         }
       },
       "best_market": "total",
@@ -4157,7 +4157,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": true,
-      "outlier_edge": 0.2053,
+      "outlier_edge": 0.215,
       "outlier_market": "total",
       "best_team": "Over",
       "blend_diff": 9.9533,
@@ -4165,11 +4165,11 @@
       "model_spread": 11.8,
       "market_spread": -14.25,
       "spread_edge": -26.05,
-      "model_total": 46.1,
+      "model_total": 46.5,
       "market_total": 39.5,
       "model_home_win_prob_pure": 0.812,
       "model_spread_pure": 11.8,
-      "model_total_pure": 46.1,
+      "model_total_pure": 46.5,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -4190,7 +4190,7 @@
         "spread_move": -0.25,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": 6.6,
+      "total_edge": 7.0,
       "best_home_ml": {
         "price": 1.09,
         "bookmaker": "draftkings"
@@ -4491,9 +4491,9 @@
           "side": "under",
           "team": "Under",
           "line": 44.5,
-          "model_prob": 0.6753,
+          "model_prob": 0.6227,
           "market_prob": 0.5,
-          "edge": 0.1753,
+          "edge": 0.1227,
           "price": 1.91,
           "bookmaker": "draftkings",
           "movement": {
@@ -4515,7 +4515,7 @@
           "actionable_edge": 0.1,
           "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 28.98
+          "ev": 18.94
         }
       },
       "best_market": "total",
@@ -4537,7 +4537,7 @@
       "weather_risk": false,
       "suppressed_edges": [],
       "outlier": false,
-      "outlier_edge": 0.1753,
+      "outlier_edge": 0.1227,
       "outlier_market": "total",
       "best_team": "Under",
       "blend_diff": -5.1767,
@@ -4545,11 +4545,11 @@
       "model_spread": -11.2,
       "market_spread": 12.5,
       "spread_edge": 23.7,
-      "model_total": 38.1,
+      "model_total": 40.1,
       "market_total": 44.5,
       "model_home_win_prob_pure": 0.211,
       "model_spread_pure": -10.7,
-      "model_total_pure": 38.1,
+      "model_total_pure": 40.1,
       "market_adjustment": {
         "applied": true,
         "weights": {
@@ -4570,7 +4570,7 @@
         "spread_move": -1.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -6.4,
+      "total_edge": -4.4,
       "best_home_ml": {
         "price": 6.57,
         "bookmaker": "draftkings"
@@ -4681,9 +4681,9 @@
           "side": "under",
           "team": "Under",
           "line": 42.5,
-          "model_prob": 0.6254,
+          "model_prob": 0.5621,
           "market_prob": 0.5,
-          "edge": 0.1254,
+          "edge": 0.0621,
           "price": 1.91,
           "bookmaker": "betrivers",
           "movement": {
@@ -4702,10 +4702,10 @@
             "reason": null
           },
           "weather_risk": false,
-          "actionable_edge": 0.1,
-          "edge_capped": true,
+          "actionable_edge": 0.0621,
+          "edge_capped": false,
           "edge_suppressed": null,
-          "ev": 19.45
+          "ev": 7.36
         }
       },
       "best_market": "ml",
@@ -4730,19 +4730,19 @@
         "spread"
       ],
       "outlier": false,
-      "outlier_edge": 0.1254,
-      "outlier_market": "total",
+      "outlier_edge": 0.122,
+      "outlier_market": "ml",
       "best_team": "PIT",
       "blend_diff": null,
       "blend_conflict": false,
       "model_spread": -1.3,
       "market_spread": 4.5,
       "spread_edge": 5.8,
-      "model_total": 38.0,
+      "model_total": 40.3,
       "market_total": 42.0,
       "model_home_win_prob_pure": 0.513,
       "model_spread_pure": 0.4,
-      "model_total_pure": 37.2,
+      "model_total_pure": 40.0,
       "market_adjustment": {
         "applied": true,
         "weights": {
@@ -4763,7 +4763,7 @@
         "spread_move": 1.5,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -4.0,
+      "total_edge": -1.7,
       "best_home_ml": {
         "price": 2.86,
         "bookmaker": "draftkings"
@@ -4874,9 +4874,9 @@
           "side": "under",
           "team": "Under",
           "line": 51.5,
-          "model_prob": 0.6173,
+          "model_prob": 0.6145,
           "market_prob": 0.5,
-          "edge": 0.1173,
+          "edge": 0.1145,
           "price": 1.91,
           "bookmaker": "draftkings",
           "movement": {
@@ -4898,7 +4898,7 @@
           "actionable_edge": 0.1,
           "edge_capped": true,
           "edge_suppressed": null,
-          "ev": 17.9
+          "ev": 17.37
         }
       },
       "best_market": "ml",
@@ -4928,11 +4928,11 @@
       "model_spread": 1.2,
       "market_spread": -6.0,
       "spread_edge": -7.2,
-      "model_total": 47.3,
+      "model_total": 47.4,
       "market_total": 50.5,
       "model_home_win_prob_pure": 0.535,
       "model_spread_pure": 1.2,
-      "model_total_pure": 47.3,
+      "model_total_pure": 47.4,
       "market_adjustment": {
         "applied": false,
         "weights": {
@@ -4953,7 +4953,7 @@
         "spread_move": 0.0,
         "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
       },
-      "total_edge": -3.2,
+      "total_edge": -3.1,
       "best_home_ml": {
         "price": 1.37,
         "bookmaker": "draftkings"

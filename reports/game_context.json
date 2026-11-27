@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T19:05:12.928702+00:00",
+  "generated_at": "2026-11-27T19:27:17.542355+00:00",
   "season": 2026,
   "week": 12,
   "games": {
@@ -24,7 +24,7 @@
           "name": "M.Rudolph",
           "status": null,
           "depth_rank": 1,
-          "projected": 5.2
+          "projected": 5.4
         },
         "injuries": [
           {
@@ -135,7 +135,7 @@
           "name": "B.Nix",
           "status": null,
           "depth_rank": 1,
-          "projected": 14.7
+          "projected": 15.7
         },
         "injuries": [
           {
@@ -250,7 +250,7 @@
           "name": "J.Burrow",
           "status": null,
           "depth_rank": 1,
-          "projected": 19.0
+          "projected": 19.5
         },
         "injuries": [
           {
@@ -328,7 +328,7 @@
           "name": "T.Shough",
           "status": null,
           "depth_rank": 1,
-          "projected": 16.2
+          "projected": 16.6
         },
         "injuries": [
           {
@@ -432,7 +432,7 @@
           "name": "C.Stroud",
           "status": null,
           "depth_rank": 1,
-          "projected": 19.2
+          "projected": 19.1
         },
         "injuries": [
           {
@@ -620,7 +620,7 @@
           "name": "J.Brissett",
           "status": null,
           "depth_rank": 1,
-          "projected": 13.7
+          "projected": 13.6
         },
         "injuries": [
           {
@@ -768,7 +768,7 @@
           "name": "A.Richardson",
           "status": null,
           "depth_rank": 1,
-          "projected": 6.2
+          "projected": 6.4
         },
         "injuries": [
           {
@@ -901,7 +901,7 @@
           "name": "J.McCarthy",
           "status": null,
           "depth_rank": 1,
-          "projected": 13.9
+          "projected": 14.7
         },
         "injuries": [
           {
@@ -1005,7 +1005,7 @@
           "name": "T.Lawrence",
           "status": null,
           "depth_rank": 1,
-          "projected": 17.7
+          "projected": 17.8
         },
         "injuries": [
           {
@@ -1171,7 +1171,7 @@
           "name": "C.Ward",
           "status": null,
           "depth_rank": 1,
-          "projected": 14.4
+          "projected": 14.5
         },
         "injuries": [
           {
@@ -1319,7 +1319,7 @@
           "name": "K.McCord",
           "status": null,
           "depth_rank": 1,
-          "projected": 13.4
+          "projected": 13.6
         },
         "injuries": [
           {
@@ -1452,7 +1452,7 @@
           "name": "G.Smith",
           "status": null,
           "depth_rank": 1,
-          "projected": 9.1
+          "projected": 9.3
         },
         "injuries": [
           {
@@ -2046,7 +2046,7 @@
           "name": "J.Johnson",
           "status": null,
           "depth_rank": 2,
-          "projected": 8.2
+          "projected": 8.26
         },
         "injuries": [
           {
@@ -2179,7 +2179,7 @@
           "name": "J.Daniels",
           "status": "Full",
           "depth_rank": 1,
-          "projected": 16.4,
+          "projected": 16.5,
           "injury": "Elbow"
         },
         "injuries": [
@@ -2328,7 +2328,7 @@
           "name": "B.Purdy",
           "status": "DNP",
           "depth_rank": 1,
-          "projected": 16.9,
+          "projected": 17.4,
           "injury": "Ankle"
         },
         "injuries": [
@@ -2506,7 +2506,7 @@
           "name": "S.Darnold",
           "status": "Full",
           "depth_rank": 1,
-          "projected": 13.3,
+          "projected": 13.8,
           "injury": "Quadricep"
         },
         "injuries": [
@@ -2699,7 +2699,7 @@
           "name": "D.Watson",
           "status": null,
           "depth_rank": 1,
-          "projected": 15.0
+          "projected": 16.0
         },
         "injuries": [
           {
@@ -2821,7 +2821,7 @@
           "name": "F.Mendoza",
           "status": null,
           "depth_rank": 1,
-          "projected": 9.9
+          "projected": 10.3
         },
         "injuries": [
           {
