@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T05:30:13.625178+00:00",
+  "generated_at": "2026-11-27T05:35:40.056137+00:00",
   "season": 2026,
   "week": 12,
   "games": {
@@ -234,14 +234,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 47.4,
-        "wind": 4.3,
+        "temp": 50.2,
+        "wind": 9.6,
         "gust": 23.5,
         "precip": 78.0,
-        "precip_mm": 2.6,
+        "precip_mm": 5.6,
         "snow": 0.0,
         "weather_code": 63.0,
-        "humidity": 98.0
+        "humidity": 96.0
       },
       "home": {
         "team": "CIN",
@@ -405,14 +405,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 69.9,
-        "wind": 16.0,
+        "temp": 68.6,
+        "wind": 16.1,
         "gust": 20.8,
         "precip": 1.0,
         "precip_mm": 0.0,
         "snow": 0.0,
-        "weather_code": 0.0,
-        "humidity": 36.0
+        "weather_code": 1.0,
+        "humidity": 34.0
       },
       "home": {
         "team": "HOU",
@@ -697,14 +697,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 44.7,
-        "wind": 7.1,
+        "temp": 45.2,
+        "wind": 2.2,
         "gust": 19.7,
         "precip": 97.0,
-        "precip_mm": 3.5,
+        "precip_mm": 2.9,
         "snow": 0.0,
         "weather_code": 63.0,
-        "humidity": 97.0
+        "humidity": 98.0
       },
       "home": {
         "team": "IND",
@@ -912,14 +912,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 61.9,
-        "wind": 3.0,
+        "temp": 61.1,
+        "wind": 4.0,
         "gust": 9.2,
         "precip": 2.0,
         "precip_mm": 0.0,
         "snow": 0.0,
         "weather_code": 3.0,
-        "humidity": 68.0
+        "humidity": 76.0
       },
       "home": {
         "team": "JAX",
@@ -1193,8 +1193,8 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 76.6,
-        "wind": 8.5,
+        "temp": 77.9,
+        "wind": 7.8,
         "gust": 10.1,
         "precip": 5.0,
         "precip_mm": 0.0,
@@ -1887,14 +1887,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 74.4,
-        "wind": 5.1,
+        "temp": 74.9,
+        "wind": 5.8,
         "gust": 5.6,
         "precip": 0.0,
         "precip_mm": 0.0,
         "snow": 0.0,
-        "weather_code": 3.0,
-        "humidity": 18.0
+        "weather_code": 2.0,
+        "humidity": 17.0
       },
       "home": {
         "team": "ARI",
@@ -2147,14 +2147,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 65.9,
-        "wind": 10.8,
+        "temp": 65.8,
+        "wind": 9.7,
         "gust": 20.1,
         "precip": 80.0,
         "precip_mm": 0.0,
         "snow": 0.0,
-        "weather_code": 3.0,
-        "humidity": 67.0
+        "weather_code": 0.0,
+        "humidity": 66.0
       },
       "home": {
         "team": "SF",
@@ -2507,14 +2507,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 47.0,
-        "wind": 8.4,
+        "temp": 47.1,
+        "wind": 3.8,
         "gust": 19.2,
         "precip": 98.0,
-        "precip_mm": 2.2,
+        "precip_mm": 1.4,
         "snow": 0.0,
         "weather_code": 61.0,
-        "humidity": 94.0
+        "humidity": 95.0
       },
       "home": {
         "team": "CLE",
@@ -2744,14 +2744,14 @@
       "season": 2026,
       "week": 12,
       "weather": {
-        "temp": 67.8,
-        "wind": 5.3,
+        "temp": 66.0,
+        "wind": 6.9,
         "gust": 9.4,
         "precip": 15.0,
-        "precip_mm": 0.5,
+        "precip_mm": 0.1,
         "snow": 0.0,
-        "weather_code": 53.0,
-        "humidity": 95.0
+        "weather_code": 51.0,
+        "humidity": 94.0
       },
       "home": {
         "team": "TB",

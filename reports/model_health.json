@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T05:31:10.314248+00:00",
+  "generated_at": "2026-11-27T05:36:36.550283+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -25,13 +25,13 @@
       "2026_13_HOU_PIT",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.0853,
+    "mean_abs_edge": 0.0835,
     "max_abs_edge": 0.2602,
     "blend_conflicts": 0
   },
   "futures": {
-    "mean_abs_edge": 0.0104,
-    "max_abs_edge": 0.0542,
+    "mean_abs_edge": 0.0093,
+    "max_abs_edge": 0.0406,
     "teams_matched": 32
   },
   "calls": {
@@ -43,7 +43,7 @@
     "win_rate": 0.3333,
     "roi": -0.38,
     "profit": -1.14,
-    "mean_edge_delta": -0.0157,
+    "mean_edge_delta": -0.0193,
     "by_market": {
       "spread": {
         "n": 1,
