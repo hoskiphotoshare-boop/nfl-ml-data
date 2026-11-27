@@ -43,26 +43,84 @@ function nflGetToken_(props) {
   return p.getProperty(NFL_CONFIG.tokenProperty) || p.getProperty(NFL_CONFIG.fallbackTokenProperty) || "";
 }
 
+function nflHeaders_(token) {
+  return {
+    Authorization: "Bearer " + token,
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+    "User-Agent": "nfl-ml-gas-dispatcher"
+  };
+}
+
+/**
+ * Confirm a run was actually created for this workflow since `sinceIso`.
+ * Informational only: a false result never triggers a second dispatch.
+ */
+function nflVerifyDispatch_(workflow, token, sinceIso) {
+  try {
+    var url = "https://api.github.com/repos/" + NFL_CONFIG.owner + "/" + NFL_CONFIG.repo +
+      "/actions/workflows/" + encodeURIComponent(workflow) +
+      "/runs?event=workflow_dispatch&per_page=5";
+    var response = UrlFetchApp.fetch(url, {
+      method: "get",
+      muteHttpExceptions: true,
+      headers: nflHeaders_(token)
+    });
+    if (response.getResponseCode() !== 200) return false;
+    var runs = (JSON.parse(response.getContentText()).workflow_runs) || [];
+    var since = new Date(sinceIso).getTime() - 120000; // allow clock skew
+    for (var i = 0; i < runs.length; i++) {
+      if (new Date(runs[i].created_at).getTime() >= since) return true;
+    }
+  } catch (e) {
+    return false;
+  }
+  return false;
+}
+
 function nflDispatchWorkflow_(workflow, inputs, token) {
   var url = "https://api.github.com/repos/" + NFL_CONFIG.owner + "/" + NFL_CONFIG.repo +
     "/actions/workflows/" + encodeURIComponent(workflow) + "/dispatches";
   var payload = { ref: NFL_CONFIG.ref };
   if (inputs && Object.keys(inputs).length > 0) payload.inputs = inputs;
-  var response = UrlFetchApp.fetch(url, {
-    method: "post",
-    contentType: "application/json",
-    muteHttpExceptions: true,
-    headers: {
-      Authorization: "Bearer " + token,
-      Accept: "application/vnd.github+json",
-      "X-GitHub-Api-Version": "2022-11-28",
-      "User-Agent": "nfl-ml-gas-dispatcher"
-    },
-    payload: JSON.stringify(payload)
-  });
-  var code = response.getResponseCode();
-  if (code === 204 || (code >= 200 && code < 300)) return { ok: true, statusCode: code };
-  return { ok: false, statusCode: code, error: "HTTP " + code + ": " + response.getContentText().slice(0, 400) };
+
+  var last = { ok: false, statusCode: 0, error: "not attempted", attempts: 0 };
+  for (var attempt = 1; attempt <= 3; attempt++) {
+    var startedAt = new Date().toISOString();
+    try {
+      var response = UrlFetchApp.fetch(url, {
+        method: "post",
+        contentType: "application/json",
+        muteHttpExceptions: true,
+        headers: nflHeaders_(token),
+        payload: JSON.stringify(payload)
+      });
+      var code = response.getResponseCode();
+      if (code === 204 || (code >= 200 && code < 300)) {
+        // Give the runs endpoint a moment, then look for the run. A miss is
+        // recorded as verified:false; it must never cause a re-dispatch.
+        Utilities.sleep(1000);
+        return {
+          ok: true,
+          statusCode: code,
+          attempts: attempt,
+          verified: nflVerifyDispatch_(workflow, token, startedAt)
+        };
+      }
+      last = {
+        ok: false,
+        statusCode: code,
+        error: "HTTP " + code + ": " + response.getContentText().slice(0, 300),
+        attempts: attempt
+      };
+      // Auth/config errors will not improve on retry.
+      if (code !== 429 && code < 500) return last;
+    } catch (err) {
+      last = { ok: false, statusCode: 0, error: String(err).slice(0, 300), attempts: attempt };
+    }
+    if (attempt < 3) Utilities.sleep(attempt * 1500);
+  }
+  return last;
 }
 
 function nflCronTick() {
@@ -98,13 +156,22 @@ function nflCronTick() {
       var res = nflDispatchWorkflow_(s.workflow, s.inputs, token);
       if (res.ok) {
         props.setProperty(propKey, dateStr);
-        var record = { slotId: s.id, workflow: s.workflow, inputs: s.inputs, status: "dispatched", statusCode: res.statusCode, etTime: etLabel };
+        var record = {
+          slotId: s.id, workflow: s.workflow, inputs: s.inputs, status: "dispatched",
+          statusCode: res.statusCode, attempts: res.attempts, verified: res.verified === true,
+          etTime: etLabel
+        };
         props.setProperty(NFL_CONFIG.lastDispatchProperty, JSON.stringify(record));
         Logger.log("Dispatched " + s.id + " -> " + s.workflow + " (" + res.statusCode + ") at " + etLabel);
         actions.push(record);
       } else {
+        var failure = {
+          slotId: s.id, workflow: s.workflow, inputs: s.inputs, status: "dispatch_error",
+          statusCode: res.statusCode, attempts: res.attempts, error: res.error, etTime: etLabel
+        };
+        props.setProperty("NFL_LAST_ERROR", JSON.stringify(failure));
         Logger.log("Failed " + s.id + " -> " + s.workflow + ": " + res.error);
-        actions.push({ slotId: s.id, workflow: s.workflow, status: "dispatch_error", error: res.error });
+        actions.push(failure);
       }
     }
     return { ok: true, etTime: etLabel, dispatched: actions };
