@@ -45,7 +45,7 @@
     "snow": 0.0,
     "weather_code": 53.0,
     "humidity": 89.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.447,
     "model_spread": -1.8,
     "market_home_prob": null,
@@ -72,7 +72,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -88,7 +88,7 @@
     "home_form": "WWWWL",
     "away_form": "WLWLL",
     "spread": 9.0,
-    "total": 51.0,
+    "total": 50.5,
     "model_total": 51.0,
     "model_total_direct": 46.9,
     "stat_projection": {
@@ -121,34 +121,34 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 86.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.75,
     "model_spread": 9.0,
     "market_home_prob": 0.8165,
-    "market_total": 49.5,
+    "market_total": 48.5,
     "market_spread": -10.0,
     "ml_move": -0.0072,
-    "total_move": -1.0,
+    "total_move": -2.0,
     "spread_move": 0.0,
     "market_adjustment": {
-      "applied": false,
+      "applied": true,
       "weights": {
         "ml": 0.0,
-        "total": 0.0,
+        "total": 0.2143,
         "spread": 0.0,
         "prob": 0.0
       },
       "w_ml": 0.0,
-      "w_total": 0.0,
+      "w_total": 0.2143,
       "w_spread": 0.0,
       "w_prob": 0.0,
       "market_home_prob": 0.8165,
-      "market_total": 49.5,
+      "market_total": 48.5,
       "market_spread": -10.0,
       "ml_move": -0.0072,
-      "total_move": -1.0,
+      "total_move": -2.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -164,23 +164,23 @@
     "home_form": "WLWLW",
     "away_form": "LLLLL",
     "spread": 6.0,
-    "total": 49.9,
-    "model_total": 49.9,
+    "total": 50.1,
+    "model_total": 50.1,
     "model_total_direct": 45.6,
     "stat_projection": {
       "pass_att": 70.3,
       "rush_att": 51.0,
       "pass_yds": 519.0,
       "rush_yds": 257.0,
-      "fg_att_40p": 2.48,
+      "fg_att_40p": 2.56,
       "fg_make_prob_40p": 0.786,
-      "fg_points": 11.3,
-      "total_from_components": 49.9,
+      "fg_points": 11.5,
+      "total_from_components": 50.1,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
       "pass_ratio": 1.0063,
       "rush_ratio": 1.0001,
-      "fg_ratio": 0.9681
+      "fg_ratio": 0.9686
     },
     "gameday": "2026-11-29",
     "gametime": "13:00",
@@ -197,13 +197,13 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 39.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.674,
     "model_spread": 6.0,
-    "market_home_prob": 0.7246,
+    "market_home_prob": 0.7267,
     "market_total": 47.0,
     "market_spread": -6.5,
-    "ml_move": -0.0086,
+    "ml_move": -0.0029,
     "total_move": 0.0,
     "spread_move": 0.5,
     "market_adjustment": {
@@ -218,13 +218,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.7246,
+      "market_home_prob": 0.7267,
       "market_total": 47.0,
       "market_spread": -6.5,
-      "ml_move": -0.0086,
+      "ml_move": -0.0029,
       "total_move": 0.0,
       "spread_move": 0.5,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -233,13 +233,13 @@
     "week": 12,
     "home_team": "IND",
     "away_team": "NYG",
-    "home_win_prob": 0.312,
+    "home_win_prob": 0.309,
     "raw_home_win_prob": 0.312,
     "home_record": "3-8",
     "away_record": "6-3-1",
     "home_form": "LLLWL",
     "away_form": "LWWLW",
-    "spread": -6.5,
+    "spread": -6.7,
     "total": 40.5,
     "model_total": 40.5,
     "model_total_direct": 30.5,
@@ -273,34 +273,34 @@
     "snow": 0.0,
     "weather_code": 63.0,
     "humidity": 98.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.312,
     "model_spread": -6.5,
-    "market_home_prob": 0.2918,
+    "market_home_prob": 0.295,
     "market_total": 41.5,
-    "market_spread": 6.0,
-    "ml_move": 0.0189,
+    "market_spread": 5.5,
+    "ml_move": 0.0236,
     "total_move": 0.0,
-    "spread_move": -0.5,
+    "spread_move": -1.0,
     "market_adjustment": {
-      "applied": false,
+      "applied": true,
       "weights": {
         "ml": 0.0,
         "total": 0.0,
-        "spread": 0.0,
-        "prob": 0.0
+        "spread": 0.1667,
+        "prob": 0.1667
       },
       "w_ml": 0.0,
       "w_total": 0.0,
-      "w_spread": 0.0,
-      "w_prob": 0.0,
-      "market_home_prob": 0.2918,
+      "w_spread": 0.1667,
+      "w_prob": 0.1667,
+      "market_home_prob": 0.295,
       "market_total": 41.5,
-      "market_spread": 6.0,
-      "ml_move": 0.0189,
+      "market_spread": 5.5,
+      "ml_move": 0.0236,
       "total_move": 0.0,
-      "spread_move": -0.5,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "spread_move": -1.0,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -349,15 +349,15 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 61.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.853,
     "model_spread": 14.1,
-    "market_home_prob": 0.8813,
-    "market_total": 49.5,
-    "market_spread": -14.5,
-    "ml_move": -0.0085,
-    "total_move": 1.0,
-    "spread_move": 0.0,
+    "market_home_prob": 0.8737,
+    "market_total": 48.5,
+    "market_spread": -14.0,
+    "ml_move": -0.0168,
+    "total_move": 0.0,
+    "spread_move": 0.5,
     "market_adjustment": {
       "applied": false,
       "weights": {
@@ -370,13 +370,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.8813,
-      "market_total": 49.5,
-      "market_spread": -14.5,
-      "ml_move": -0.0085,
-      "total_move": 1.0,
-      "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "market_home_prob": 0.8737,
+      "market_total": 48.5,
+      "market_spread": -14.0,
+      "ml_move": -0.0168,
+      "total_move": 0.0,
+      "spread_move": 0.5,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -385,13 +385,13 @@
     "week": 12,
     "home_team": "MIA",
     "away_team": "NYJ",
-    "home_win_prob": 0.386,
+    "home_win_prob": 0.381,
     "raw_home_win_prob": 0.407,
     "home_record": "1-9",
     "away_record": "3-8",
     "home_form": "WLLLL",
     "away_form": "LLLLW",
-    "spread": -3.9,
+    "spread": -4.1,
     "total": 47.4,
     "model_total": 47.4,
     "model_total_direct": 44.2,
@@ -425,34 +425,34 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 76.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.407,
     "model_spread": -3.2,
-    "market_home_prob": 0.3213,
+    "market_home_prob": 0.3197,
     "market_total": 40.0,
-    "market_spread": 5.0,
+    "market_spread": 5.5,
     "ml_move": -0.0391,
     "total_move": -0.5,
-    "spread_move": 1.5,
+    "spread_move": 2.0,
     "market_adjustment": {
       "applied": true,
       "weights": {
         "ml": 0.1955,
         "total": 0.0,
-        "spread": 0.25,
-        "prob": 0.25
+        "spread": 0.3,
+        "prob": 0.3
       },
       "w_ml": 0.1955,
       "w_total": 0.0,
-      "w_spread": 0.25,
-      "w_prob": 0.25,
-      "market_home_prob": 0.3213,
+      "w_spread": 0.3,
+      "w_prob": 0.3,
+      "market_home_prob": 0.3197,
       "market_total": 40.0,
-      "market_spread": 5.0,
+      "market_spread": 5.5,
       "ml_move": -0.0391,
       "total_move": -0.5,
-      "spread_move": 1.5,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "spread_move": 2.0,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -519,7 +519,7 @@
       "ml_move": 0.0,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -528,13 +528,13 @@
     "week": 12,
     "home_team": "LAC",
     "away_team": "NE",
-    "home_win_prob": 0.424,
+    "home_win_prob": 0.417,
     "raw_home_win_prob": 0.414,
     "home_record": "1-9",
     "away_record": "5-5",
     "home_form": "LLLWL",
     "away_form": "WLWLL",
-    "spread": -2.6,
+    "spread": -2.8,
     "total": 40.3,
     "model_total": 40.3,
     "model_total_direct": 37.5,
@@ -562,12 +562,12 @@
     "div_game": 0,
     "model_home_win_prob": 0.414,
     "model_spread": -2.9,
-    "market_home_prob": 0.4473,
-    "market_total": 35.5,
-    "market_spread": 2.0,
-    "ml_move": -0.0668,
-    "total_move": 0.0,
-    "spread_move": 2.75,
+    "market_home_prob": 0.4224,
+    "market_total": 35.0,
+    "market_spread": 2.75,
+    "ml_move": -0.0914,
+    "total_move": -0.5,
+    "spread_move": 3.5,
     "market_adjustment": {
       "applied": true,
       "weights": {
@@ -580,13 +580,13 @@
       "w_total": 0.0,
       "w_spread": 0.3,
       "w_prob": 0.3,
-      "market_home_prob": 0.4473,
-      "market_total": 35.5,
-      "market_spread": 2.0,
-      "ml_move": -0.0668,
-      "total_move": 0.0,
-      "spread_move": 2.75,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "market_home_prob": 0.4224,
+      "market_total": 35.0,
+      "market_spread": 2.75,
+      "ml_move": -0.0914,
+      "total_move": -0.5,
+      "spread_move": 3.5,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -635,7 +635,7 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 18.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.344,
     "model_spread": -5.4,
     "market_home_prob": 0.26,
@@ -662,7 +662,7 @@
       "ml_move": 0.0132,
       "total_move": 0.0,
       "spread_move": -0.5,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -671,14 +671,14 @@
     "week": 12,
     "home_team": "SF",
     "away_team": "SEA",
-    "home_win_prob": 0.72,
+    "home_win_prob": 0.678,
     "raw_home_win_prob": 0.756,
     "home_record": "9-1",
     "away_record": "6-4",
     "home_form": "WLWWW",
     "away_form": "LWLWW",
-    "spread": 7.8,
-    "total": 43.2,
+    "spread": 6.2,
+    "total": 42.9,
     "model_total": 43.1,
     "model_total_direct": 44.6,
     "stat_projection": {
@@ -711,34 +711,34 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 60.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.756,
     "model_spread": 9.3,
-    "market_home_prob": 0.5747,
-    "market_total": 43.5,
-    "market_spread": -3.0,
-    "ml_move": -0.0397,
-    "total_move": -1.5,
-    "spread_move": 0.0,
+    "market_home_prob": 0.4948,
+    "market_total": 42.5,
+    "market_spread": 1.0,
+    "ml_move": -0.1168,
+    "total_move": -2.5,
+    "spread_move": 4.0,
     "market_adjustment": {
       "applied": true,
       "weights": {
-        "ml": 0.1985,
-        "total": 0.1607,
-        "spread": 0.0,
-        "prob": 0.1985
+        "ml": 0.3,
+        "total": 0.2679,
+        "spread": 0.3,
+        "prob": 0.3
       },
-      "w_ml": 0.1985,
-      "w_total": 0.1607,
-      "w_spread": 0.0,
-      "w_prob": 0.1985,
-      "market_home_prob": 0.5747,
-      "market_total": 43.5,
-      "market_spread": -3.0,
-      "ml_move": -0.0397,
-      "total_move": -1.5,
-      "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "w_ml": 0.3,
+      "w_total": 0.2679,
+      "w_spread": 0.3,
+      "w_prob": 0.3,
+      "market_home_prob": 0.4948,
+      "market_total": 42.5,
+      "market_spread": 1.0,
+      "ml_move": -0.1168,
+      "total_move": -2.5,
+      "spread_move": 4.0,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -787,14 +787,14 @@
     "snow": 0.0,
     "weather_code": 61.0,
     "humidity": 90.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.661,
     "model_spread": 5.5,
-    "market_home_prob": 0.6728,
-    "market_total": 40.0,
+    "market_home_prob": 0.6697,
+    "market_total": 39.5,
     "market_spread": -4.5,
     "ml_move": 0.0,
-    "total_move": -0.75,
+    "total_move": -1.25,
     "spread_move": 0.0,
     "market_adjustment": {
       "applied": false,
@@ -808,13 +808,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.6728,
-      "market_total": 40.0,
+      "market_home_prob": 0.6697,
+      "market_total": 39.5,
       "market_spread": -4.5,
       "ml_move": 0.0,
-      "total_move": -0.75,
+      "total_move": -1.25,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -863,10 +863,10 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 94.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.604,
     "model_spread": 3.5,
-    "market_home_prob": 0.593,
+    "market_home_prob": 0.5919,
     "market_total": 43.5,
     "market_spread": -3.0,
     "ml_move": 0.0112,
@@ -884,13 +884,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.593,
+      "market_home_prob": 0.5919,
       "market_total": 43.5,
       "market_spread": -3.0,
       "ml_move": 0.0112,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -899,14 +899,14 @@
     "week": 13,
     "home_team": "LA",
     "away_team": "KC",
-    "home_win_prob": 0.512,
+    "home_win_prob": 0.511,
     "raw_home_win_prob": 0.516,
     "home_record": "7-4",
     "away_record": "8-3",
     "home_form": "WWWWW",
     "away_form": "LWWWL",
     "spread": 0.4,
-    "total": 51.2,
+    "total": 50.0,
     "model_total": 51.2,
     "model_total_direct": 47.4,
     "stat_projection": {
@@ -933,31 +933,31 @@
     "div_game": 0,
     "model_home_win_prob": 0.516,
     "model_spread": 0.5,
-    "market_home_prob": 0.5013,
-    "market_total": 44.5,
-    "market_spread": -1.5,
-    "ml_move": 0.0132,
-    "total_move": -1.0,
-    "spread_move": -1.5,
+    "market_home_prob": 0.4967,
+    "market_total": 44.0,
+    "market_spread": 1.5,
+    "ml_move": 0.0119,
+    "total_move": -1.5,
+    "spread_move": 1.5,
     "market_adjustment": {
       "applied": true,
       "weights": {
         "ml": 0.0,
-        "total": 0.0,
+        "total": 0.1607,
         "spread": 0.25,
         "prob": 0.25
       },
       "w_ml": 0.0,
-      "w_total": 0.0,
+      "w_total": 0.1607,
       "w_spread": 0.25,
       "w_prob": 0.25,
-      "market_home_prob": 0.5013,
-      "market_total": 44.5,
-      "market_spread": -1.5,
-      "ml_move": 0.0132,
-      "total_move": -1.0,
-      "spread_move": -1.5,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "market_home_prob": 0.4967,
+      "market_total": 44.0,
+      "market_spread": 1.5,
+      "ml_move": 0.0119,
+      "total_move": -1.5,
+      "spread_move": 1.5,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1006,7 +1006,7 @@
     "snow": 0.0,
     "weather_code": 1.0,
     "humidity": 36.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.331,
     "model_spread": -5.8,
     "market_home_prob": 0.3614,
@@ -1033,7 +1033,7 @@
       "ml_move": -0.008,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1082,15 +1082,15 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 59.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.418,
     "model_spread": -2.8,
-    "market_home_prob": 0.567,
-    "market_total": 50.5,
-    "market_spread": -2.5,
-    "ml_move": -0.0036,
-    "total_move": 0.5,
-    "spread_move": 0.5,
+    "market_home_prob": 0.5884,
+    "market_total": 50.0,
+    "market_spread": -3.0,
+    "ml_move": 0.0147,
+    "total_move": 0.0,
+    "spread_move": 0.0,
     "market_adjustment": {
       "applied": false,
       "weights": {
@@ -1103,13 +1103,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.567,
-      "market_total": 50.5,
-      "market_spread": -2.5,
-      "ml_move": -0.0036,
-      "total_move": 0.5,
-      "spread_move": 0.5,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "market_home_prob": 0.5884,
+      "market_total": 50.0,
+      "market_spread": -3.0,
+      "ml_move": 0.0147,
+      "total_move": 0.0,
+      "spread_move": 0.0,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1158,7 +1158,7 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 64.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.372,
     "model_spread": -4.4,
     "market_home_prob": 0.3197,
@@ -1185,7 +1185,7 @@
       "ml_move": 0.0055,
       "total_move": -1.0,
       "spread_move": 0.5,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1252,7 +1252,7 @@
       "ml_move": 0.0093,
       "total_move": -0.5,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1301,14 +1301,14 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 60.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.34,
     "model_spread": -5.5,
     "market_home_prob": 0.2782,
-    "market_total": 46.5,
+    "market_total": 46.25,
     "market_spread": 6.5,
     "ml_move": 0.0041,
-    "total_move": -1.0,
+    "total_move": -1.25,
     "spread_move": 0.5,
     "market_adjustment": {
       "applied": false,
@@ -1323,12 +1323,12 @@
       "w_spread": 0.0,
       "w_prob": 0.0,
       "market_home_prob": 0.2782,
-      "market_total": 46.5,
+      "market_total": 46.25,
       "market_spread": 6.5,
       "ml_move": 0.0041,
-      "total_move": -1.0,
+      "total_move": -1.25,
       "spread_move": 0.5,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1377,7 +1377,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 45.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.727,
     "model_spread": 8.1,
     "market_home_prob": 0.6954,
@@ -1404,7 +1404,7 @@
       "ml_move": 0.0,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1453,7 +1453,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 52.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.494,
     "model_spread": -0.2,
     "market_home_prob": 0.3396,
@@ -1480,7 +1480,7 @@
       "ml_move": 0.0081,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1529,7 +1529,7 @@
     "snow": 0.0,
     "weather_code": 53.0,
     "humidity": 51.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.374,
     "model_spread": -4.3,
     "market_home_prob": 0.3896,
@@ -1556,7 +1556,7 @@
       "ml_move": -0.0236,
       "total_move": 1.0,
       "spread_move": 1.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1605,15 +1605,15 @@
     "snow": 0.0,
     "weather_code": 1.0,
     "humidity": 29.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.812,
     "model_spread": 11.8,
-    "market_home_prob": 0.8937,
-    "market_total": 39.5,
-    "market_spread": -14.25,
-    "ml_move": 0.0087,
-    "total_move": 0.0,
-    "spread_move": -0.25,
+    "market_home_prob": null,
+    "market_total": null,
+    "market_spread": null,
+    "ml_move": null,
+    "total_move": null,
+    "spread_move": null,
     "market_adjustment": {
       "applied": false,
       "weights": {
@@ -1626,13 +1626,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.8937,
-      "market_total": 39.5,
-      "market_spread": -14.25,
-      "ml_move": 0.0087,
-      "total_move": 0.0,
-      "spread_move": -0.25,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "market_home_prob": null,
+      "market_total": null,
+      "market_spread": null,
+      "ml_move": null,
+      "total_move": null,
+      "spread_move": null,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1699,7 +1699,7 @@
       "ml_move": -0.0074,
       "total_move": 0.25,
       "spread_move": -0.25,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1708,13 +1708,13 @@
     "week": 13,
     "home_team": "NE",
     "away_team": "BUF",
-    "home_win_prob": 0.2,
+    "home_win_prob": 0.211,
     "raw_home_win_prob": 0.211,
     "home_record": "5-5",
     "away_record": "10-1",
     "home_form": "WLWLL",
     "away_form": "WWWWW",
-    "spread": -11.2,
+    "spread": -10.7,
     "total": 38.1,
     "model_total": 38.1,
     "model_total_direct": 37.5,
@@ -1748,34 +1748,34 @@
     "snow": 0.0,
     "weather_code": 51.0,
     "humidity": 88.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.211,
     "model_spread": -10.7,
-    "market_home_prob": 0.1468,
+    "market_home_prob": 0.1458,
     "market_total": 44.5,
-    "market_spread": 12.5,
-    "ml_move": 0.005,
+    "market_spread": 13.0,
+    "ml_move": 0.0053,
     "total_move": 0.0,
-    "spread_move": -1.0,
+    "spread_move": -0.5,
     "market_adjustment": {
-      "applied": true,
+      "applied": false,
       "weights": {
         "ml": 0.0,
         "total": 0.0,
-        "spread": 0.1667,
-        "prob": 0.1667
+        "spread": 0.0,
+        "prob": 0.0
       },
       "w_ml": 0.0,
       "w_total": 0.0,
-      "w_spread": 0.1667,
-      "w_prob": 0.1667,
-      "market_home_prob": 0.1468,
+      "w_spread": 0.0,
+      "w_prob": 0.0,
+      "market_home_prob": 0.1458,
       "market_total": 44.5,
-      "market_spread": 12.5,
-      "ml_move": 0.005,
+      "market_spread": 13.0,
+      "ml_move": 0.0053,
       "total_move": 0.0,
-      "spread_move": -1.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "spread_move": -0.5,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1784,14 +1784,14 @@
     "week": 13,
     "home_team": "PIT",
     "away_team": "HOU",
-    "home_win_prob": 0.46,
+    "home_win_prob": 0.513,
     "raw_home_win_prob": 0.513,
     "home_record": "6-4",
     "away_record": "4-6",
     "home_form": "WWWLL",
     "away_form": "WLWLW",
-    "spread": -1.3,
-    "total": 38.0,
+    "spread": 0.4,
+    "total": 37.2,
     "model_total": 37.2,
     "model_total_direct": 32.5,
     "stat_projection": {
@@ -1824,34 +1824,34 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 73.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.513,
     "model_spread": 0.4,
-    "market_home_prob": 0.338,
-    "market_total": 42.0,
-    "market_spread": 4.5,
-    "ml_move": -0.0789,
-    "total_move": -1.5,
-    "spread_move": 1.5,
+    "market_home_prob": null,
+    "market_total": null,
+    "market_spread": null,
+    "ml_move": null,
+    "total_move": null,
+    "spread_move": null,
     "market_adjustment": {
-      "applied": true,
+      "applied": false,
       "weights": {
-        "ml": 0.3,
-        "total": 0.1607,
-        "spread": 0.25,
-        "prob": 0.3
+        "ml": 0.0,
+        "total": 0.0,
+        "spread": 0.0,
+        "prob": 0.0
       },
-      "w_ml": 0.3,
-      "w_total": 0.1607,
-      "w_spread": 0.25,
-      "w_prob": 0.3,
-      "market_home_prob": 0.338,
-      "market_total": 42.0,
-      "market_spread": 4.5,
-      "ml_move": -0.0789,
-      "total_move": -1.5,
-      "spread_move": 1.5,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "w_ml": 0.0,
+      "w_total": 0.0,
+      "w_spread": 0.0,
+      "w_prob": 0.0,
+      "market_home_prob": null,
+      "market_total": null,
+      "market_spread": null,
+      "ml_move": null,
+      "total_move": null,
+      "spread_move": null,
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1900,14 +1900,14 @@
     "snow": 0.0,
     "weather_code": 1.0,
     "humidity": 79.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.535,
     "model_spread": 1.2,
     "market_home_prob": 0.7143,
-    "market_total": 50.5,
+    "market_total": 51.0,
     "market_spread": -6.0,
     "ml_move": 0.0242,
-    "total_move": 0.0,
+    "total_move": 0.5,
     "spread_move": 0.0,
     "market_adjustment": {
       "applied": false,
@@ -1922,12 +1922,12 @@
       "w_spread": 0.0,
       "w_prob": 0.0,
       "market_home_prob": 0.7143,
-      "market_total": 50.5,
+      "market_total": 51.0,
       "market_spread": -6.0,
       "ml_move": 0.0242,
-      "total_move": 0.0,
+      "total_move": 0.5,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -1976,7 +1976,7 @@
     "snow": 0.0,
     "weather_code": 0.0,
     "humidity": 59.0,
-    "weather_fetched_at": "2026-11-27T22:18:27.068438+00:00",
+    "weather_fetched_at": "2026-11-27T22:34:39.500746+00:00",
     "model_home_win_prob": 0.516,
     "model_spread": 0.5,
     "market_home_prob": null,
@@ -2003,7 +2003,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2070,7 +2070,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2137,7 +2137,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2204,7 +2204,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2271,7 +2271,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2338,7 +2338,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2405,7 +2405,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2472,7 +2472,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2539,7 +2539,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2606,7 +2606,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2673,7 +2673,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2740,7 +2740,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2807,7 +2807,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2874,7 +2874,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -2941,7 +2941,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3008,7 +3008,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3075,7 +3075,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3142,7 +3142,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3209,7 +3209,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3276,7 +3276,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3292,18 +3292,18 @@
     "home_form": "WLWLW",
     "away_form": "LWWWL",
     "spread": -6.3,
-    "total": 55.5,
-    "model_total": 55.5,
+    "total": 55.7,
+    "model_total": 55.7,
     "model_total_direct": 49.7,
     "stat_projection": {
       "pass_att": 75.8,
       "rush_att": 47.6,
       "pass_yds": 540.3,
       "rush_yds": 207.7,
-      "fg_att_40p": 2.7,
+      "fg_att_40p": 2.78,
       "fg_make_prob_40p": 0.905,
-      "fg_points": 14.0,
-      "total_from_components": 55.5,
+      "fg_points": 14.3,
+      "total_from_components": 55.7,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
       "pass_ratio": 1.0,
@@ -3343,7 +3343,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3410,7 +3410,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3477,7 +3477,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3544,7 +3544,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3611,7 +3611,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3678,7 +3678,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3745,7 +3745,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3812,7 +3812,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3879,7 +3879,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -3946,7 +3946,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4013,7 +4013,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4080,7 +4080,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4147,7 +4147,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4214,7 +4214,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4281,7 +4281,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4348,7 +4348,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4415,7 +4415,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4482,7 +4482,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4549,7 +4549,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4616,7 +4616,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4683,7 +4683,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4750,7 +4750,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4817,7 +4817,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4884,7 +4884,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -4951,7 +4951,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5018,7 +5018,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5085,7 +5085,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5152,7 +5152,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5219,7 +5219,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5286,7 +5286,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5353,7 +5353,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5420,7 +5420,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5487,7 +5487,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5554,7 +5554,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5621,7 +5621,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5688,7 +5688,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5755,7 +5755,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5822,7 +5822,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5889,7 +5889,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -5956,7 +5956,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6023,7 +6023,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6090,7 +6090,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6157,7 +6157,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6224,7 +6224,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6291,7 +6291,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6358,7 +6358,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6425,7 +6425,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6492,7 +6492,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6559,7 +6559,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6626,7 +6626,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6642,18 +6642,18 @@
     "home_form": "WLWLW",
     "away_form": "WLLLL",
     "spread": 6.2,
-    "total": 53.6,
-    "model_total": 53.6,
+    "total": 53.8,
+    "model_total": 53.8,
     "model_total_direct": 50.7,
     "stat_projection": {
       "pass_att": 73.8,
       "rush_att": 51.6,
       "pass_yds": 513.3,
       "rush_yds": 231.8,
-      "fg_att_40p": 1.94,
+      "fg_att_40p": 2.02,
       "fg_make_prob_40p": 0.905,
-      "fg_points": 9.6,
-      "total_from_components": 53.6,
+      "fg_points": 9.8,
+      "total_from_components": 53.8,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
       "pass_ratio": 1.0,
@@ -6693,7 +6693,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6760,7 +6760,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6827,7 +6827,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6894,7 +6894,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -6961,7 +6961,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -7028,7 +7028,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -7095,7 +7095,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -7162,7 +7162,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   },
   {
@@ -7229,7 +7229,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T05:21:28.253346+00:00"
+      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
     }
   }
 ]

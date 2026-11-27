@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T22:19:29.013478+00:00",
+  "generated_at": "2026-11-27T22:34:45.866020+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -15,21 +15,22 @@
     "n": 1298
   },
   "market": {
-    "games": 25,
-    "outliers": 4,
+    "games": 23,
+    "outliers": 5,
     "outlier_games": [
       "2026_12_NYJ_MIA",
       "2026_12_ATL_MIN",
       "2026_12_WAS_ARI",
+      "2026_12_SEA_SF",
       "2026_13_PHI_ARI"
     ],
-    "mean_abs_edge": 0.0749,
+    "mean_abs_edge": 0.0743,
     "max_abs_edge": 0.2602,
     "blend_conflicts": 0
   },
   "futures": {
-    "mean_abs_edge": 0.0092,
-    "max_abs_edge": 0.0398,
+    "mean_abs_edge": 0.0091,
+    "max_abs_edge": 0.0422,
     "teams_matched": 32
   },
   "calls": {
@@ -41,7 +42,7 @@
     "win_rate": 0.3333,
     "roi": -0.38,
     "profit": -1.14,
-    "mean_edge_delta": -0.0379,
+    "mean_edge_delta": -0.0303,
     "by_market": {
       "spread": {
         "n": 1,
@@ -148,11 +149,11 @@
     "rows": 27388
   },
   "odds": {
-    "fetched_at": "2026-11-27T05:21:28.253346+00:00",
-    "events": 26,
+    "fetched_at": "2026-11-27T22:33:56.341583+00:00",
+    "events": 23,
     "credits": 3,
-    "requests_used": 41,
-    "requests_remaining": 459
+    "requests_used": 45,
+    "requests_remaining": 455
   },
   "futures_api": {
     "fetched_at": "2026-11-27T05:21:28.497984+00:00",
@@ -162,14 +163,14 @@
     "requests_remaining": 458
   },
   "line_movement": {
-    "snapshots": 8,
+    "snapshots": 9,
     "games": 30,
     "summary": {
       "games_with_movement": 30,
-      "mean_abs_spread_move": 0.55,
-      "max_abs_spread_move": 2.75,
-      "mean_abs_total_move": 0.533,
-      "max_abs_total_move": 2.0
+      "mean_abs_spread_move": 0.725,
+      "max_abs_spread_move": 4.0,
+      "mean_abs_total_move": 0.625,
+      "max_abs_total_move": 2.5
     }
   },
   "integrity": {
