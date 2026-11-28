@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T22:34:45.866020+00:00",
+  "generated_at": "2026-11-28T11:03:32.628029+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -18,31 +18,31 @@
     "games": 23,
     "outliers": 5,
     "outlier_games": [
-      "2026_12_NYJ_MIA",
-      "2026_12_ATL_MIN",
       "2026_12_WAS_ARI",
-      "2026_12_SEA_SF",
-      "2026_13_PHI_ARI"
+      "2026_13_CIN_CLE",
+      "2026_13_WAS_TEN",
+      "2026_13_PHI_ARI",
+      "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.0743,
-    "max_abs_edge": 0.2602,
+    "mean_abs_edge": 0.0703,
+    "max_abs_edge": 0.1932,
     "blend_conflicts": 0
   },
   "futures": {
-    "mean_abs_edge": 0.0091,
-    "max_abs_edge": 0.0422,
+    "mean_abs_edge": 0.0096,
+    "max_abs_edge": 0.054,
     "teams_matched": 32
   },
   "calls": {
-    "graded": 3,
-    "open": 26,
-    "wins": 1,
+    "graded": 4,
+    "open": 25,
+    "wins": 2,
     "losses": 2,
     "pushes": 0,
-    "win_rate": 0.3333,
-    "roi": -0.38,
-    "profit": -1.14,
-    "mean_edge_delta": -0.0303,
+    "win_rate": 0.5,
+    "roi": 0.165,
+    "profit": 0.66,
+    "mean_edge_delta": -0.0373,
     "by_market": {
       "spread": {
         "n": 1,
@@ -61,17 +61,26 @@
         "profit": -0.14,
         "roi": -0.07,
         "win_rate": 0.5
+      },
+      "ml": {
+        "n": 1,
+        "wins": 1,
+        "losses": 0,
+        "pushes": 0,
+        "profit": 1.8,
+        "roi": 1.8,
+        "win_rate": 1.0
       }
     },
     "by_edge": {
       "10%+": {
-        "n": 2,
-        "wins": 1,
+        "n": 3,
+        "wins": 2,
         "losses": 1,
         "pushes": 0,
-        "profit": -0.14,
-        "roi": -0.07,
-        "win_rate": 0.5
+        "profit": 1.66,
+        "roi": 0.5533,
+        "win_rate": 0.6667
       },
       "5\u201310%": {
         "n": 1,
@@ -133,8 +142,8 @@
     "active": 250
   },
   "weather": {
-    "games_with_forecast": 22,
-    "games": 105
+    "games_with_forecast": 31,
+    "games": 104
   },
   "injuries": {
     "seasons": [
@@ -146,7 +155,7 @@
     ],
     "latest_season": 2026,
     "latest_week": 12,
-    "rows": 27388
+    "rows": 27397
   },
   "odds": {
     "fetched_at": "2026-11-27T22:33:56.341583+00:00",

@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-27T22:34:41.973317+00:00",
+  "generated_at": "2026-11-28T11:03:26.765374+00:00",
   "calls": 29,
-  "graded": 3,
-  "open": 26,
-  "wins": 1,
+  "graded": 4,
+  "open": 25,
+  "wins": 2,
   "losses": 2,
   "pushes": 0,
-  "win_rate": 0.3333,
-  "roi": -0.38,
-  "profit": -1.14,
-  "mean_edge_delta": -0.0303,
+  "win_rate": 0.5,
+  "roi": 0.165,
+  "profit": 0.66,
+  "mean_edge_delta": -0.0373,
   "by_market": {
     "spread": {
       "n": 1,
@@ -28,17 +28,26 @@
       "profit": -0.14,
       "roi": -0.07,
       "win_rate": 0.5
+    },
+    "ml": {
+      "n": 1,
+      "wins": 1,
+      "losses": 0,
+      "pushes": 0,
+      "profit": 1.8,
+      "roi": 1.8,
+      "win_rate": 1.0
     }
   },
   "by_edge": {
     "10%+": {
-      "n": 2,
-      "wins": 1,
+      "n": 3,
+      "wins": 2,
       "losses": 1,
       "pushes": 0,
-      "profit": -0.14,
-      "roi": -0.07,
-      "win_rate": 0.5
+      "profit": 1.66,
+      "roi": 0.5533,
+      "win_rate": 0.6667
     },
     "5\u201310%": {
       "n": 1,
@@ -51,6 +60,40 @@
     }
   },
   "recent": [
+    {
+      "call_id": "2026_12_DEN_PIT_best",
+      "game_id": "2026_12_DEN_PIT",
+      "season": 2026,
+      "week": 12,
+      "away_team": "DEN",
+      "home_team": "PIT",
+      "market": "ml",
+      "side": "home",
+      "team": "PIT",
+      "line": null,
+      "price": 2.8,
+      "bookmaker": "betonlineag",
+      "model_prob": 0.499,
+      "market_prob": 0.3541,
+      "edge": 0.1449,
+      "kickoff": "2026-11-27T20:00:00Z",
+      "snapshot_at": "2026-11-26T01:37:54.763435+00:00",
+      "closing_line": null,
+      "closing_price": 3.1,
+      "closing_at": "2026-11-27T19:28:01.633781+00:00",
+      "status": "graded",
+      "result": "win",
+      "profit": 1.8,
+      "graded_at": "2026-11-28T11:03:26.338491+00:00",
+      "edge_first": 0.1449,
+      "closing_model_prob": 0.409,
+      "closing_market_prob": 0.3213,
+      "closing_edge": 0.0877,
+      "edge_delta": -0.0572,
+      "final_home_score": 27,
+      "final_away_score": 5,
+      "final_source": "schedules"
+    },
     {
       "call_id": "2026_12_PHI_DAL_best",
       "game_id": "2026_12_PHI_DAL",
