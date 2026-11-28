@@ -4,290 +4,291 @@
   "commence_time": "2027-02-14T23:35:00Z",
   "bookmakers": [
     "betmgm",
+    "betonlineag",
     "betrivers",
     "bovada",
     "draftkings",
     "fanduel",
     "lowvig"
   ],
-  "overround": 0.183,
+  "overround": 0.1762,
   "teams": [
     {
       "team": "San Francisco 49ers",
-      "best_price": 5.3,
+      "best_price": 5.6,
       "best_bookmaker": "fanduel",
-      "median_price": 5.25,
-      "books": 6,
-      "raw_implied": 0.19048,
-      "market_prob": 0.161
+      "median_price": 5.3,
+      "books": 7,
+      "raw_implied": 0.18868,
+      "market_prob": 0.1604
     },
     {
       "team": "Buffalo Bills",
-      "best_price": 5.9,
-      "best_bookmaker": "lowvig",
-      "median_price": 5.78,
-      "books": 6,
-      "raw_implied": 0.17301,
-      "market_prob": 0.1463
+      "best_price": 6.25,
+      "best_bookmaker": "bovada",
+      "median_price": 5.75,
+      "books": 7,
+      "raw_implied": 0.17391,
+      "market_prob": 0.1479
     },
     {
       "team": "Chicago Bears",
-      "best_price": 11.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 9.75,
-      "books": 6,
-      "raw_implied": 0.10256,
-      "market_prob": 0.0867
-    },
-    {
-      "team": "Kansas City Chiefs",
-      "best_price": 12.0,
-      "best_bookmaker": "fanduel",
-      "median_price": 10.5,
-      "books": 6,
-      "raw_implied": 0.09524,
-      "market_prob": 0.0805
+      "best_price": 10.0,
+      "best_bookmaker": "betonlineag",
+      "median_price": 9.25,
+      "books": 7,
+      "raw_implied": 0.10811,
+      "market_prob": 0.0919
     },
     {
       "team": "Cincinnati Bengals",
       "best_price": 12.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 11.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.09091,
-      "market_prob": 0.0768
+      "market_prob": 0.0773
     },
     {
       "team": "Jacksonville Jaguars",
       "best_price": 12.0,
       "best_bookmaker": "bovada",
       "median_price": 11.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.09091,
-      "market_prob": 0.0768
+      "market_prob": 0.0773
+    },
+    {
+      "team": "Kansas City Chiefs",
+      "best_price": 13.0,
+      "best_bookmaker": "bovada",
+      "median_price": 11.0,
+      "books": 7,
+      "raw_implied": 0.09091,
+      "market_prob": 0.0773
     },
     {
       "team": "Los Angeles Rams",
       "best_price": 14.0,
       "best_bookmaker": "betrivers",
       "median_price": 13.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.07692,
-      "market_prob": 0.065
-    },
-    {
-      "team": "Denver Broncos",
-      "best_price": 17.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 16.0,
-      "books": 6,
-      "raw_implied": 0.0625,
-      "market_prob": 0.0528
+      "market_prob": 0.0654
     },
     {
       "team": "Seattle Seahawks",
-      "best_price": 23.0,
-      "best_bookmaker": "lowvig",
+      "best_price": 21.0,
+      "best_bookmaker": "betonlineag",
       "median_price": 17.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.05882,
-      "market_prob": 0.0497
+      "market_prob": 0.05
+    },
+    {
+      "team": "Denver Broncos",
+      "best_price": 21.0,
+      "best_bookmaker": "betonlineag",
+      "median_price": 18.0,
+      "books": 7,
+      "raw_implied": 0.05556,
+      "market_prob": 0.0472
     },
     {
       "team": "Detroit Lions",
       "best_price": 23.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 20.0,
-      "books": 6,
-      "raw_implied": 0.05,
-      "market_prob": 0.0423
+      "best_bookmaker": "betonlineag",
+      "median_price": 21.0,
+      "books": 7,
+      "raw_implied": 0.04762,
+      "market_prob": 0.0405
     },
     {
       "team": "Minnesota Vikings",
       "best_price": 23.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "fanduel",
       "median_price": 21.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.04762,
-      "market_prob": 0.0403
+      "market_prob": 0.0405
     },
     {
       "team": "Houston Texans",
       "best_price": 51.0,
       "best_bookmaker": "betmgm",
-      "median_price": 38.5,
-      "books": 6,
-      "raw_implied": 0.02597,
-      "market_prob": 0.022
+      "median_price": 36.0,
+      "books": 7,
+      "raw_implied": 0.02778,
+      "market_prob": 0.0236
     },
     {
       "team": "New York Giants",
       "best_price": 67.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 48.5,
-      "books": 6,
-      "raw_implied": 0.02062,
-      "market_prob": 0.0174
+      "best_bookmaker": "betonlineag",
+      "median_price": 51.0,
+      "books": 7,
+      "raw_implied": 0.01961,
+      "market_prob": 0.0167
     },
     {
       "team": "Green Bay Packers",
       "best_price": 81.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 66.5,
-      "books": 6,
-      "raw_implied": 0.01504,
-      "market_prob": 0.0127
+      "best_bookmaker": "betonlineag",
+      "median_price": 66.0,
+      "books": 7,
+      "raw_implied": 0.01515,
+      "market_prob": 0.0129
     },
     {
       "team": "Tampa Bay Buccaneers",
       "best_price": 101.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 73.5,
-      "books": 6,
-      "raw_implied": 0.01361,
-      "market_prob": 0.0115
+      "best_bookmaker": "betonlineag",
+      "median_price": 76.0,
+      "books": 7,
+      "raw_implied": 0.01316,
+      "market_prob": 0.0112
     },
     {
       "team": "Carolina Panthers",
       "best_price": 101.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 76.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.01316,
-      "market_prob": 0.0111
+      "market_prob": 0.0112
     },
     {
-      "team": "Washington Commanders",
+      "team": "Pittsburgh Steelers",
       "best_price": 126.0,
-      "best_bookmaker": "draftkings",
-      "median_price": 113.5,
-      "books": 6,
-      "raw_implied": 0.00881,
-      "market_prob": 0.0074
+      "best_bookmaker": "betrivers",
+      "median_price": 101.0,
+      "books": 7,
+      "raw_implied": 0.0099,
+      "market_prob": 0.0084
     },
     {
       "team": "Cleveland Browns",
       "best_price": 126.0,
-      "best_bookmaker": "betrivers",
-      "median_price": 123.5,
-      "books": 6,
-      "raw_implied": 0.0081,
-      "market_prob": 0.0068
+      "best_bookmaker": "betonlineag",
+      "median_price": 126.0,
+      "books": 7,
+      "raw_implied": 0.00794,
+      "market_prob": 0.0067
     },
     {
       "team": "New England Patriots",
       "best_price": 251.0,
-      "best_bookmaker": "betmgm",
+      "best_bookmaker": "betonlineag",
       "median_price": 126.0,
-      "books": 6,
+      "books": 7,
+      "raw_implied": 0.00794,
+      "market_prob": 0.0067
+    },
+    {
+      "team": "Washington Commanders",
+      "best_price": 126.0,
+      "best_bookmaker": "betonlineag",
+      "median_price": 126.0,
+      "books": 7,
       "raw_implied": 0.00794,
       "market_prob": 0.0067
     },
     {
       "team": "Dallas Cowboys",
-      "best_price": 151.0,
-      "best_bookmaker": "lowvig",
+      "best_price": 176.0,
+      "best_bookmaker": "fanduel",
       "median_price": 126.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.00794,
       "market_prob": 0.0067
     },
     {
-      "team": "Pittsburgh Steelers",
-      "best_price": 251.0,
-      "best_bookmaker": "betmgm",
-      "median_price": 151.0,
-      "books": 6,
-      "raw_implied": 0.00662,
-      "market_prob": 0.0056
-    },
-    {
       "team": "Atlanta Falcons",
-      "best_price": 251.0,
-      "best_bookmaker": "fanduel",
+      "best_price": 301.0,
+      "best_bookmaker": "betonlineag",
       "median_price": 251.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.00398,
       "market_prob": 0.0034
     },
     {
       "team": "Baltimore Ravens",
       "best_price": 501.0,
-      "best_bookmaker": "fanduel",
-      "median_price": 451.0,
-      "books": 6,
-      "raw_implied": 0.00222,
-      "market_prob": 0.0019
+      "best_bookmaker": "betonlineag",
+      "median_price": 501.0,
+      "books": 7,
+      "raw_implied": 0.002,
+      "market_prob": 0.0017
     },
     {
       "team": "New Orleans Saints",
       "best_price": 751.0,
-      "best_bookmaker": "betmgm",
-      "median_price": 601.0,
-      "books": 6,
-      "raw_implied": 0.00166,
-      "market_prob": 0.0014
+      "best_bookmaker": "betonlineag",
+      "median_price": 701.0,
+      "books": 7,
+      "raw_implied": 0.00143,
+      "market_prob": 0.0012
     },
     {
       "team": "Las Vegas Raiders",
       "best_price": 801.0,
       "best_bookmaker": "draftkings",
       "median_price": 751.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.00133,
       "market_prob": 0.0011
     },
     {
       "team": "Tennessee Titans",
       "best_price": 4001.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.001,
       "market_prob": 0.0008
     },
     {
       "team": "Arizona Cardinals",
       "best_price": 2501.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.001,
       "market_prob": 0.0008
     },
     {
       "team": "Indianapolis Colts",
       "best_price": 2501.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.001,
       "market_prob": 0.0008
     },
     {
       "team": "Los Angeles Chargers",
-      "best_price": 2001.0,
-      "best_bookmaker": "betmgm",
+      "best_price": 2501.0,
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.001,
       "market_prob": 0.0008
     },
     {
       "team": "New York Jets",
       "best_price": 3001.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.001,
       "market_prob": 0.0008
     },
     {
       "team": "Miami Dolphins",
       "best_price": 5001.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.001,
       "market_prob": 0.0008
     },
@@ -296,10 +297,10 @@
       "best_price": 1001.0,
       "best_bookmaker": "fanduel",
       "median_price": 1001.0,
-      "books": 6,
+      "books": 7,
       "raw_implied": 0.001,
       "market_prob": 0.0008
     }
   ],
-  "fetched_at": "2026-11-27T05:21:28.497984+00:00"
+  "fetched_at": "2026-11-28T12:03:18.210895+00:00"
 }

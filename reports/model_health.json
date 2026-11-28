@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-28T11:03:32.628029+00:00",
+  "generated_at": "2026-11-28T12:04:02.597862+00:00",
   "match_backtest": {
     "accuracy": 0.6633281972265023,
     "log_loss": 0.6251109143324759,
@@ -15,22 +15,21 @@
     "n": 1298
   },
   "market": {
-    "games": 23,
-    "outliers": 5,
+    "games": 22,
+    "outliers": 4,
     "outlier_games": [
       "2026_12_WAS_ARI",
-      "2026_13_CIN_CLE",
       "2026_13_WAS_TEN",
       "2026_13_PHI_ARI",
       "2026_13_DAL_SEA"
     ],
-    "mean_abs_edge": 0.0703,
+    "mean_abs_edge": 0.0688,
     "max_abs_edge": 0.1932,
     "blend_conflicts": 0
   },
   "futures": {
-    "mean_abs_edge": 0.0096,
-    "max_abs_edge": 0.054,
+    "mean_abs_edge": 0.0101,
+    "max_abs_edge": 0.0505,
     "teams_matched": 32
   },
   "calls": {
@@ -42,7 +41,7 @@
     "win_rate": 0.5,
     "roi": 0.165,
     "profit": 0.66,
-    "mean_edge_delta": -0.0373,
+    "mean_edge_delta": -0.037,
     "by_market": {
       "spread": {
         "n": 1,
@@ -158,27 +157,27 @@
     "rows": 27397
   },
   "odds": {
-    "fetched_at": "2026-11-27T22:33:56.341583+00:00",
-    "events": 23,
+    "fetched_at": "2026-11-28T12:03:18.071192+00:00",
+    "events": 22,
     "credits": 3,
-    "requests_used": 45,
-    "requests_remaining": 455
+    "requests_used": 48,
+    "requests_remaining": 452
   },
   "futures_api": {
-    "fetched_at": "2026-11-27T05:21:28.497984+00:00",
+    "fetched_at": "2026-11-28T12:03:18.210895+00:00",
     "teams": 32,
     "credits": 1,
-    "requests_used": 42,
-    "requests_remaining": 458
+    "requests_used": 49,
+    "requests_remaining": 451
   },
   "line_movement": {
-    "snapshots": 9,
+    "snapshots": 10,
     "games": 30,
     "summary": {
       "games_with_movement": 30,
-      "mean_abs_spread_move": 0.725,
-      "max_abs_spread_move": 4.0,
-      "mean_abs_total_move": 0.625,
+      "mean_abs_spread_move": 0.733,
+      "max_abs_spread_move": 4.5,
+      "mean_abs_total_move": 0.667,
       "max_abs_total_move": 2.5
     }
   },

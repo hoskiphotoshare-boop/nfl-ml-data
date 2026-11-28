@@ -1,303 +1,303 @@
 {
-  "updated_at": "2026-11-27T05:21:28.497984+00:00",
+  "updated_at": "2026-11-28T12:03:18.210895+00:00",
   "sport": "americanfootball_nfl_super_bowl_winner",
   "market_teams": 32,
   "summary": {
     "teams_matched": 32,
-    "mean_abs_edge": 0.0096,
-    "max_abs_edge": 0.054,
-    "best_edge_team": "BUF",
-    "best_edge": 0.054,
+    "mean_abs_edge": 0.0101,
+    "max_abs_edge": 0.0505,
+    "best_edge_team": "JAX",
+    "best_edge": 0.0505,
     "market_favourite": "SF",
-    "market_favourite_prob": 0.161,
-    "overround": 0.183
+    "market_favourite_prob": 0.1604,
+    "overround": 0.1762
   },
   "teams": [
     {
       "team": "BUF",
       "conference": "AFC",
-      "model_sb_prob": 0.2003,
-      "market_sb_prob": 0.1463,
-      "edge": 0.054,
-      "best_price": 5.9,
-      "best_bookmaker": "lowvig",
-      "median_price": 5.78,
-      "books": 6
+      "model_sb_prob": 0.1898,
+      "market_sb_prob": 0.1479,
+      "edge": 0.0419,
+      "best_price": 6.25,
+      "best_bookmaker": "bovada",
+      "median_price": 5.75,
+      "books": 7
     },
     {
       "team": "SF",
       "conference": "NFC",
-      "model_sb_prob": 0.1711,
-      "market_sb_prob": 0.161,
-      "edge": 0.0101,
-      "best_price": 5.3,
+      "model_sb_prob": 0.1737,
+      "market_sb_prob": 0.1604,
+      "edge": 0.0133,
+      "best_price": 5.6,
       "best_bookmaker": "fanduel",
-      "median_price": 5.25,
-      "books": 6
+      "median_price": 5.3,
+      "books": 7
     },
     {
       "team": "JAX",
       "conference": "AFC",
-      "model_sb_prob": 0.119,
-      "market_sb_prob": 0.0768,
-      "edge": 0.0422,
+      "model_sb_prob": 0.1278,
+      "market_sb_prob": 0.0773,
+      "edge": 0.0505,
       "best_price": 12.0,
       "best_bookmaker": "bovada",
       "median_price": 11.0,
-      "books": 6
+      "books": 7
     },
     {
       "team": "KC",
       "conference": "AFC",
-      "model_sb_prob": 0.0753,
-      "market_sb_prob": 0.0805,
-      "edge": -0.0052,
-      "best_price": 12.0,
-      "best_bookmaker": "fanduel",
-      "median_price": 10.5,
-      "books": 6
+      "model_sb_prob": 0.0814,
+      "market_sb_prob": 0.0773,
+      "edge": 0.0041,
+      "best_price": 13.0,
+      "best_bookmaker": "bovada",
+      "median_price": 11.0,
+      "books": 7
     },
     {
       "team": "DET",
       "conference": "NFC",
-      "model_sb_prob": 0.0701,
-      "market_sb_prob": 0.0423,
-      "edge": 0.0278,
+      "model_sb_prob": 0.08,
+      "market_sb_prob": 0.0405,
+      "edge": 0.0395,
       "best_price": 23.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 20.0,
-      "books": 6
-    },
-    {
-      "team": "CHI",
-      "conference": "NFC",
-      "model_sb_prob": 0.0607,
-      "market_sb_prob": 0.0867,
-      "edge": -0.026,
-      "best_price": 11.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 9.75,
-      "books": 6
+      "best_bookmaker": "betonlineag",
+      "median_price": 21.0,
+      "books": 7
     },
     {
       "team": "CIN",
       "conference": "AFC",
-      "model_sb_prob": 0.0561,
-      "market_sb_prob": 0.0768,
-      "edge": -0.0207,
+      "model_sb_prob": 0.0587,
+      "market_sb_prob": 0.0773,
+      "edge": -0.0186,
       "best_price": 12.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 11.0,
-      "books": 6
+      "books": 7
+    },
+    {
+      "team": "CHI",
+      "conference": "NFC",
+      "model_sb_prob": 0.0566,
+      "market_sb_prob": 0.0919,
+      "edge": -0.0353,
+      "best_price": 10.0,
+      "best_bookmaker": "betonlineag",
+      "median_price": 9.25,
+      "books": 7
     },
     {
       "team": "LA",
       "conference": "NFC",
-      "model_sb_prob": 0.0515,
-      "market_sb_prob": 0.065,
-      "edge": -0.0135,
+      "model_sb_prob": 0.0493,
+      "market_sb_prob": 0.0654,
+      "edge": -0.0161,
       "best_price": 14.0,
       "best_bookmaker": "betrivers",
       "median_price": 13.0,
-      "books": 6
+      "books": 7
     },
     {
       "team": "DEN",
       "conference": "AFC",
-      "model_sb_prob": 0.0352,
-      "market_sb_prob": 0.0528,
-      "edge": -0.0176,
-      "best_price": 17.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 16.0,
-      "books": 6
-    },
-    {
-      "team": "MIN",
-      "conference": "NFC",
-      "model_sb_prob": 0.0275,
-      "market_sb_prob": 0.0403,
-      "edge": -0.0128,
-      "best_price": 23.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 21.0,
-      "books": 6
+      "model_sb_prob": 0.0342,
+      "market_sb_prob": 0.0472,
+      "edge": -0.013,
+      "best_price": 21.0,
+      "best_bookmaker": "betonlineag",
+      "median_price": 18.0,
+      "books": 7
     },
     {
       "team": "SEA",
       "conference": "NFC",
-      "model_sb_prob": 0.0244,
-      "market_sb_prob": 0.0497,
-      "edge": -0.0253,
-      "best_price": 23.0,
-      "best_bookmaker": "lowvig",
+      "model_sb_prob": 0.0249,
+      "market_sb_prob": 0.05,
+      "edge": -0.0251,
+      "best_price": 21.0,
+      "best_bookmaker": "betonlineag",
       "median_price": 17.0,
-      "books": 6
+      "books": 7
+    },
+    {
+      "team": "MIN",
+      "conference": "NFC",
+      "model_sb_prob": 0.024,
+      "market_sb_prob": 0.0405,
+      "edge": -0.0165,
+      "best_price": 23.0,
+      "best_bookmaker": "fanduel",
+      "median_price": 21.0,
+      "books": 7
     },
     {
       "team": "GB",
       "conference": "NFC",
-      "model_sb_prob": 0.0228,
-      "market_sb_prob": 0.0127,
-      "edge": 0.0101,
+      "model_sb_prob": 0.0192,
+      "market_sb_prob": 0.0129,
+      "edge": 0.0063,
       "best_price": 81.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 66.5,
-      "books": 6
+      "best_bookmaker": "betonlineag",
+      "median_price": 66.0,
+      "books": 7
     },
     {
       "team": "NYG",
       "conference": "NFC",
-      "model_sb_prob": 0.0166,
-      "market_sb_prob": 0.0174,
-      "edge": -0.0008,
+      "model_sb_prob": 0.017,
+      "market_sb_prob": 0.0167,
+      "edge": 0.0003,
       "best_price": 67.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 48.5,
-      "books": 6
-    },
-    {
-      "team": "HOU",
-      "conference": "AFC",
-      "model_sb_prob": 0.0154,
-      "market_sb_prob": 0.022,
-      "edge": -0.0066,
-      "best_price": 51.0,
-      "best_bookmaker": "betmgm",
-      "median_price": 38.5,
-      "books": 6
+      "best_bookmaker": "betonlineag",
+      "median_price": 51.0,
+      "books": 7
     },
     {
       "team": "PIT",
       "conference": "AFC",
-      "model_sb_prob": 0.0135,
-      "market_sb_prob": 0.0056,
-      "edge": 0.0079,
-      "best_price": 251.0,
-      "best_bookmaker": "betmgm",
-      "median_price": 151.0,
-      "books": 6
+      "model_sb_prob": 0.0128,
+      "market_sb_prob": 0.0084,
+      "edge": 0.0044,
+      "best_price": 126.0,
+      "best_bookmaker": "betrivers",
+      "median_price": 101.0,
+      "books": 7
     },
     {
-      "team": "TB",
-      "conference": "NFC",
-      "model_sb_prob": 0.0088,
-      "market_sb_prob": 0.0115,
-      "edge": -0.0027,
-      "best_price": 101.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 73.5,
-      "books": 6
+      "team": "HOU",
+      "conference": "AFC",
+      "model_sb_prob": 0.0123,
+      "market_sb_prob": 0.0236,
+      "edge": -0.0113,
+      "best_price": 51.0,
+      "best_bookmaker": "betmgm",
+      "median_price": 36.0,
+      "books": 7
     },
     {
       "team": "NE",
       "conference": "AFC",
-      "model_sb_prob": 0.0078,
+      "model_sb_prob": 0.0082,
       "market_sb_prob": 0.0067,
-      "edge": 0.0011,
+      "edge": 0.0015,
       "best_price": 251.0,
-      "best_bookmaker": "betmgm",
+      "best_bookmaker": "betonlineag",
       "median_price": 126.0,
-      "books": 6
+      "books": 7
     },
     {
-      "team": "CAR",
+      "team": "TB",
       "conference": "NFC",
-      "model_sb_prob": 0.0071,
-      "market_sb_prob": 0.0111,
-      "edge": -0.004,
+      "model_sb_prob": 0.0081,
+      "market_sb_prob": 0.0112,
+      "edge": -0.0031,
       "best_price": 101.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 76.0,
-      "books": 6
-    },
-    {
-      "team": "CLE",
-      "conference": "AFC",
-      "model_sb_prob": 0.0047,
-      "market_sb_prob": 0.0068,
-      "edge": -0.0021,
-      "best_price": 126.0,
-      "best_bookmaker": "betrivers",
-      "median_price": 123.5,
-      "books": 6
+      "books": 7
     },
     {
       "team": "DAL",
       "conference": "NFC",
-      "model_sb_prob": 0.0047,
+      "model_sb_prob": 0.0061,
       "market_sb_prob": 0.0067,
-      "edge": -0.002,
-      "best_price": 151.0,
-      "best_bookmaker": "lowvig",
+      "edge": -0.0006,
+      "best_price": 176.0,
+      "best_bookmaker": "fanduel",
       "median_price": 126.0,
-      "books": 6
+      "books": 7
+    },
+    {
+      "team": "CAR",
+      "conference": "NFC",
+      "model_sb_prob": 0.0055,
+      "market_sb_prob": 0.0112,
+      "edge": -0.0057,
+      "best_price": 101.0,
+      "best_bookmaker": "betonlineag",
+      "median_price": 76.0,
+      "books": 7
+    },
+    {
+      "team": "CLE",
+      "conference": "AFC",
+      "model_sb_prob": 0.0041,
+      "market_sb_prob": 0.0067,
+      "edge": -0.0026,
+      "best_price": 126.0,
+      "best_bookmaker": "betonlineag",
+      "median_price": 126.0,
+      "books": 7
     },
     {
       "team": "WAS",
       "conference": "NFC",
-      "model_sb_prob": 0.0043,
-      "market_sb_prob": 0.0074,
-      "edge": -0.0031,
+      "model_sb_prob": 0.0024,
+      "market_sb_prob": 0.0067,
+      "edge": -0.0043,
       "best_price": 126.0,
-      "best_bookmaker": "draftkings",
-      "median_price": 113.5,
-      "books": 6
+      "best_bookmaker": "betonlineag",
+      "median_price": 126.0,
+      "books": 7
     },
     {
       "team": "ATL",
       "conference": "NFC",
-      "model_sb_prob": 0.001,
+      "model_sb_prob": 0.0013,
       "market_sb_prob": 0.0034,
-      "edge": -0.0024,
-      "best_price": 251.0,
-      "best_bookmaker": "fanduel",
+      "edge": -0.0021,
+      "best_price": 301.0,
+      "best_bookmaker": "betonlineag",
       "median_price": 251.0,
-      "books": 6
+      "books": 7
     },
     {
       "team": "LV",
       "conference": "AFC",
-      "model_sb_prob": 0.0007,
+      "model_sb_prob": 0.0011,
       "market_sb_prob": 0.0011,
-      "edge": -0.0004,
+      "edge": 0.0,
       "best_price": 801.0,
       "best_bookmaker": "draftkings",
       "median_price": 751.0,
-      "books": 6
-    },
-    {
-      "team": "BAL",
-      "conference": "AFC",
-      "model_sb_prob": 0.0005,
-      "market_sb_prob": 0.0019,
-      "edge": -0.0014,
-      "best_price": 501.0,
-      "best_bookmaker": "fanduel",
-      "median_price": 451.0,
-      "books": 6
+      "books": 7
     },
     {
       "team": "NO",
       "conference": "NFC",
-      "model_sb_prob": 0.0004,
-      "market_sb_prob": 0.0014,
-      "edge": -0.001,
+      "model_sb_prob": 0.0007,
+      "market_sb_prob": 0.0012,
+      "edge": -0.0005,
       "best_price": 751.0,
-      "best_bookmaker": "betmgm",
-      "median_price": 601.0,
-      "books": 6
+      "best_bookmaker": "betonlineag",
+      "median_price": 701.0,
+      "books": 7
+    },
+    {
+      "team": "BAL",
+      "conference": "AFC",
+      "model_sb_prob": 0.0004,
+      "market_sb_prob": 0.0017,
+      "edge": -0.0013,
+      "best_price": 501.0,
+      "best_bookmaker": "betonlineag",
+      "median_price": 501.0,
+      "books": 7
     },
     {
       "team": "PHI",
       "conference": "NFC",
-      "model_sb_prob": 0.0003,
+      "model_sb_prob": 0.0002,
       "market_sb_prob": 0.0008,
-      "edge": -0.0005,
+      "edge": -0.0006,
       "best_price": 1001.0,
       "best_bookmaker": "fanduel",
       "median_price": 1001.0,
-      "books": 6
+      "books": 7
     },
     {
       "team": "NYJ",
@@ -306,9 +306,9 @@
       "market_sb_prob": 0.0008,
       "edge": -0.0006,
       "best_price": 3001.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6
+      "books": 7
     },
     {
       "team": "IND",
@@ -317,9 +317,9 @@
       "market_sb_prob": 0.0008,
       "edge": -0.0008,
       "best_price": 2501.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6
+      "books": 7
     },
     {
       "team": "ARI",
@@ -328,20 +328,9 @@
       "market_sb_prob": 0.0008,
       "edge": -0.0008,
       "best_price": 2501.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6
-    },
-    {
-      "team": "TEN",
-      "conference": "AFC",
-      "model_sb_prob": 0.0,
-      "market_sb_prob": 0.0008,
-      "edge": -0.0008,
-      "best_price": 4001.0,
-      "best_bookmaker": "lowvig",
-      "median_price": 1001.0,
-      "books": 6
+      "books": 7
     },
     {
       "team": "MIA",
@@ -350,9 +339,20 @@
       "market_sb_prob": 0.0008,
       "edge": -0.0008,
       "best_price": 5001.0,
-      "best_bookmaker": "lowvig",
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6
+      "books": 7
+    },
+    {
+      "team": "TEN",
+      "conference": "AFC",
+      "model_sb_prob": 0.0,
+      "market_sb_prob": 0.0008,
+      "edge": -0.0008,
+      "best_price": 4001.0,
+      "best_bookmaker": "betonlineag",
+      "median_price": 1001.0,
+      "books": 7
     },
     {
       "team": "LAC",
@@ -360,10 +360,10 @@
       "model_sb_prob": 0.0,
       "market_sb_prob": 0.0008,
       "edge": -0.0008,
-      "best_price": 2001.0,
-      "best_bookmaker": "betmgm",
+      "best_price": 2501.0,
+      "best_bookmaker": "betonlineag",
       "median_price": 1001.0,
-      "books": 6
+      "books": 7
     }
   ]
 }

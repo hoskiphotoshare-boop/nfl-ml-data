@@ -40,15 +40,15 @@
     "temp": 47.8,
     "wind": 10.9,
     "gust": 28.2,
-    "precip": 75.0,
+    "precip": 76.0,
     "precip_mm": 0.0,
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 92.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.724,
     "model_spread": 8.0,
-    "market_home_prob": 0.8165,
+    "market_home_prob": 0.8153,
     "market_total": 48.5,
     "market_spread": -10.0,
     "ml_move": -0.0072,
@@ -66,13 +66,13 @@
       "w_total": 0.2143,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.8165,
+      "market_home_prob": 0.8153,
       "market_total": 48.5,
       "market_spread": -10.0,
       "ml_move": -0.0072,
       "total_move": -2.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -121,10 +121,10 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 46.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.69,
     "model_spread": 6.6,
-    "market_home_prob": 0.7267,
+    "market_home_prob": 0.7261,
     "market_total": 47.0,
     "market_spread": -6.5,
     "ml_move": -0.0029,
@@ -142,13 +142,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.7267,
+      "market_home_prob": 0.7261,
       "market_total": 47.0,
       "market_spread": -6.5,
       "ml_move": -0.0029,
       "total_move": 0.0,
       "spread_move": 0.5,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -157,13 +157,13 @@
     "week": 12,
     "home_team": "IND",
     "away_team": "NYG",
-    "home_win_prob": 0.329,
+    "home_win_prob": 0.331,
     "raw_home_win_prob": 0.336,
     "home_record": "3-8",
     "away_record": "6-3-1",
     "home_form": "LLLWL",
     "away_form": "LWWLW",
-    "spread": -5.9,
+    "spread": -5.8,
     "total": 40.8,
     "model_total": 40.8,
     "model_total_direct": 34.9,
@@ -192,39 +192,39 @@
     "temp": 44.6,
     "wind": 6.8,
     "gust": 17.0,
-    "precip": 64.0,
+    "precip": 65.0,
     "precip_mm": 0.0,
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 96.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.336,
     "model_spread": -5.7,
-    "market_home_prob": 0.295,
+    "market_home_prob": 0.3111,
     "market_total": 41.5,
     "market_spread": 5.5,
-    "ml_move": 0.0236,
+    "ml_move": 0.0385,
     "total_move": 0.0,
     "spread_move": -1.0,
     "market_adjustment": {
       "applied": true,
       "weights": {
-        "ml": 0.0,
+        "ml": 0.1925,
         "total": 0.0,
         "spread": 0.1667,
-        "prob": 0.1667
+        "prob": 0.1925
       },
-      "w_ml": 0.0,
+      "w_ml": 0.1925,
       "w_total": 0.0,
       "w_spread": 0.1667,
-      "w_prob": 0.1667,
-      "market_home_prob": 0.295,
+      "w_prob": 0.1925,
+      "market_home_prob": 0.3111,
       "market_total": 41.5,
       "market_spread": 5.5,
-      "ml_move": 0.0236,
+      "ml_move": 0.0385,
       "total_move": 0.0,
       "spread_move": -1.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -268,19 +268,19 @@
     "temp": 64.7,
     "wind": 4.3,
     "gust": 10.7,
-    "precip": 4.0,
+    "precip": 3.0,
     "precip_mm": 0.0,
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 90.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.825,
     "model_spread": 12.5,
     "market_home_prob": 0.8737,
-    "market_total": 48.5,
+    "market_total": 48.0,
     "market_spread": -14.0,
     "ml_move": -0.0168,
-    "total_move": 0.0,
+    "total_move": -0.5,
     "spread_move": 0.5,
     "market_adjustment": {
       "applied": false,
@@ -295,12 +295,12 @@
       "w_spread": 0.0,
       "w_prob": 0.0,
       "market_home_prob": 0.8737,
-      "market_total": 48.5,
+      "market_total": 48.0,
       "market_spread": -14.0,
       "ml_move": -0.0168,
-      "total_move": 0.0,
+      "total_move": -0.5,
       "spread_move": 0.5,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -309,7 +309,7 @@
     "week": 12,
     "home_team": "MIA",
     "away_team": "NYJ",
-    "home_win_prob": 0.365,
+    "home_win_prob": 0.366,
     "raw_home_win_prob": 0.385,
     "home_record": "1-9",
     "away_record": "3-8",
@@ -344,15 +344,15 @@
     "temp": 76.0,
     "wind": 7.0,
     "gust": 12.5,
-    "precip": 6.0,
+    "precip": 7.0,
     "precip_mm": 0.0,
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 83.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.385,
     "model_spread": -3.9,
-    "market_home_prob": 0.3197,
+    "market_home_prob": 0.3213,
     "market_total": 40.0,
     "market_spread": 5.5,
     "ml_move": -0.0391,
@@ -370,13 +370,13 @@
       "w_total": 0.0,
       "w_spread": 0.3,
       "w_prob": 0.3,
-      "market_home_prob": 0.3197,
+      "market_home_prob": 0.3213,
       "market_total": 40.0,
       "market_spread": 5.5,
       "ml_move": -0.0391,
       "total_move": -0.5,
       "spread_move": 2.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -443,7 +443,7 @@
       "ml_move": 0.0,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -452,13 +452,13 @@
     "week": 12,
     "home_team": "LAC",
     "away_team": "NE",
-    "home_win_prob": 0.391,
+    "home_win_prob": 0.388,
     "raw_home_win_prob": 0.377,
     "home_record": "1-9",
     "away_record": "5-5",
     "home_form": "LLLWL",
     "away_form": "WLWLL",
-    "spread": -3.7,
+    "spread": -3.8,
     "total": 41.7,
     "model_total": 41.7,
     "model_total_direct": 40.6,
@@ -486,12 +486,12 @@
     "div_game": 0,
     "model_home_win_prob": 0.377,
     "model_spread": -4.2,
-    "market_home_prob": 0.4224,
+    "market_home_prob": 0.4151,
     "market_total": 35.0,
-    "market_spread": 2.75,
-    "ml_move": -0.0914,
+    "market_spread": 3.0,
+    "ml_move": -0.1018,
     "total_move": -0.5,
-    "spread_move": 3.5,
+    "spread_move": 3.75,
     "market_adjustment": {
       "applied": true,
       "weights": {
@@ -504,13 +504,13 @@
       "w_total": 0.0,
       "w_spread": 0.3,
       "w_prob": 0.3,
-      "market_home_prob": 0.4224,
+      "market_home_prob": 0.4151,
       "market_total": 35.0,
-      "market_spread": 2.75,
-      "ml_move": -0.0914,
+      "market_spread": 3.0,
+      "ml_move": -0.1018,
       "total_move": -0.5,
-      "spread_move": 3.5,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "spread_move": 3.75,
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -559,7 +559,7 @@
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 20.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.284,
     "model_spread": -7.6,
     "market_home_prob": 0.26,
@@ -586,7 +586,7 @@
       "ml_move": 0.0132,
       "total_move": 0.0,
       "spread_move": -0.5,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -595,13 +595,13 @@
     "week": 12,
     "home_team": "SF",
     "away_team": "SEA",
-    "home_win_prob": 0.619,
+    "home_win_prob": 0.614,
     "raw_home_win_prob": 0.672,
     "home_record": "9-1",
     "away_record": "6-4",
     "home_form": "WLWWW",
     "away_form": "LWLWW",
-    "spread": 4.0,
+    "spread": 3.9,
     "total": 41.2,
     "model_total": 40.7,
     "model_total_direct": 42.9,
@@ -630,20 +630,20 @@
     "temp": 61.2,
     "wind": 10.7,
     "gust": 21.7,
-    "precip": 23.0,
+    "precip": 20.0,
     "precip_mm": 0.0,
     "snow": 0.0,
     "weather_code": 3.0,
     "humidity": 87.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.672,
     "model_spread": 6.0,
-    "market_home_prob": 0.4948,
+    "market_home_prob": 0.4772,
     "market_total": 42.5,
-    "market_spread": 1.0,
-    "ml_move": -0.1168,
+    "market_spread": 1.5,
+    "ml_move": -0.1362,
     "total_move": -2.5,
-    "spread_move": 4.0,
+    "spread_move": 4.5,
     "market_adjustment": {
       "applied": true,
       "weights": {
@@ -656,13 +656,13 @@
       "w_total": 0.2679,
       "w_spread": 0.3,
       "w_prob": 0.3,
-      "market_home_prob": 0.4948,
+      "market_home_prob": 0.4772,
       "market_total": 42.5,
-      "market_spread": 1.0,
-      "ml_move": -0.1168,
+      "market_spread": 1.5,
+      "ml_move": -0.1362,
       "total_move": -2.5,
-      "spread_move": 4.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "spread_move": 4.5,
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -711,34 +711,34 @@
     "snow": 0.0,
     "weather_code": 63.0,
     "humidity": 90.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.708,
     "model_spread": 7.3,
     "market_home_prob": 0.6697,
-    "market_total": 39.5,
+    "market_total": 39.0,
     "market_spread": -4.5,
     "ml_move": 0.0,
-    "total_move": -1.25,
+    "total_move": -1.75,
     "spread_move": 0.0,
     "market_adjustment": {
-      "applied": false,
+      "applied": true,
       "weights": {
         "ml": 0.0,
-        "total": 0.0,
+        "total": 0.1875,
         "spread": 0.0,
         "prob": 0.0
       },
       "w_ml": 0.0,
-      "w_total": 0.0,
+      "w_total": 0.1875,
       "w_spread": 0.0,
       "w_prob": 0.0,
       "market_home_prob": 0.6697,
-      "market_total": 39.5,
+      "market_total": 39.0,
       "market_spread": -4.5,
       "ml_move": 0.0,
-      "total_move": -1.25,
+      "total_move": -1.75,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -754,23 +754,23 @@
     "home_form": "LWWLL",
     "away_form": "LLLWW",
     "spread": 3.5,
-    "total": 42.5,
-    "model_total": 42.5,
+    "total": 42.3,
+    "model_total": 42.3,
     "model_total_direct": 41.3,
     "stat_projection": {
       "pass_att": 67.3,
       "rush_att": 55.3,
-      "pass_yds": 472.8,
-      "rush_yds": 235.4,
-      "fg_att_40p": 2.62,
-      "fg_make_prob_40p": 0.798,
-      "fg_points": 12.1,
-      "total_from_components": 42.5,
+      "pass_yds": 473.7,
+      "rush_yds": 235.5,
+      "fg_att_40p": 2.53,
+      "fg_make_prob_40p": 0.834,
+      "fg_points": 12.2,
+      "total_from_components": 42.3,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9981,
-      "rush_ratio": 0.9992,
-      "fg_ratio": 0.971
+      "pass_ratio": 1.0,
+      "rush_ratio": 0.9997,
+      "fg_ratio": 0.9537
     },
     "gameday": "2026-11-30",
     "gametime": "20:15",
@@ -779,18 +779,18 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": 66.5,
-    "wind": 7.9,
-    "gust": 12.1,
+    "temp": 67.8,
+    "wind": 6.3,
+    "gust": 9.2,
     "precip": 12.0,
     "precip_mm": 0.0,
     "snow": 0.0,
     "weather_code": 3.0,
-    "humidity": 89.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "humidity": 87.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.604,
     "model_spread": 3.5,
-    "market_home_prob": 0.5919,
+    "market_home_prob": 0.595,
     "market_total": 43.5,
     "market_spread": -3.0,
     "ml_move": 0.0112,
@@ -808,13 +808,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.5919,
+      "market_home_prob": 0.595,
       "market_total": 43.5,
       "market_spread": -3.0,
       "ml_move": 0.0112,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -881,7 +881,7 @@
       "ml_move": 0.0119,
       "total_move": -1.5,
       "spread_move": 1.5,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -901,9 +901,9 @@
     "model_total": 53.5,
     "model_total_direct": 49.9,
     "stat_projection": {
-      "pass_att": 71.7,
+      "pass_att": 71.8,
       "rush_att": 50.1,
-      "pass_yds": 490.7,
+      "pass_yds": 495.7,
       "rush_yds": 235.1,
       "fg_att_40p": 1.69,
       "fg_make_prob_40p": 0.797,
@@ -911,9 +911,9 @@
       "total_from_components": 53.5,
       "stat_projection_source": "components",
       "weather_delta_clamped": true,
-      "pass_ratio": 0.9672,
+      "pass_ratio": 0.9771,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9469
+      "fg_ratio": 0.9471
     },
     "gameday": "2026-12-06",
     "gametime": "13:00",
@@ -922,21 +922,21 @@
     "roof": null,
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 60.3,
-    "wind": 8.9,
-    "gust": 13.2,
+    "temp": 61.9,
+    "wind": 9.3,
+    "gust": 12.5,
     "precip": 13.0,
     "precip_mm": 0.0,
     "snow": 0.0,
-    "weather_code": 2.0,
-    "humidity": 40.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_code": 1.0,
+    "humidity": 49.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.274,
     "model_spread": -8.0,
-    "market_home_prob": 0.3614,
+    "market_home_prob": 0.3589,
     "market_total": 50.5,
     "market_spread": 3.5,
-    "ml_move": -0.008,
+    "ml_move": -0.0122,
     "total_move": 0.0,
     "spread_move": 0.0,
     "market_adjustment": {
@@ -951,13 +951,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.3614,
+      "market_home_prob": 0.3589,
       "market_total": 50.5,
       "market_spread": 3.5,
-      "ml_move": -0.008,
+      "ml_move": -0.0122,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -973,23 +973,23 @@
     "home_form": "WWWWW",
     "away_form": "LWWWL",
     "spread": -1.5,
-    "total": 46.0,
-    "model_total": 46.0,
-    "model_total_direct": 42.8,
+    "total": 45.9,
+    "model_total": 45.9,
+    "model_total_direct": 40.0,
     "stat_projection": {
       "pass_att": 74.6,
       "rush_att": 50.3,
       "pass_yds": 480.3,
       "rush_yds": 229.4,
-      "fg_att_40p": 3.16,
-      "fg_make_prob_40p": 0.784,
-      "fg_points": 14.0,
-      "total_from_components": 46.0,
+      "fg_att_40p": 3.1,
+      "fg_make_prob_40p": 0.775,
+      "fg_points": 13.8,
+      "total_from_components": 45.9,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
       "pass_ratio": 0.9611,
       "rush_ratio": 0.9995,
-      "fg_ratio": 0.9448
+      "fg_ratio": 0.9353
     },
     "gameday": "2026-12-06",
     "gametime": "13:00",
@@ -998,15 +998,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 42.8,
-    "wind": 5.8,
-    "gust": 6.7,
+    "temp": 43.6,
+    "wind": 6.9,
+    "gust": 8.9,
     "precip": 3.0,
     "precip_mm": 0.0,
     "snow": 0.0,
     "weather_code": 2.0,
-    "humidity": 60.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "humidity": 56.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.456,
     "model_spread": -1.5,
     "market_home_prob": 0.5884,
@@ -1033,7 +1033,7 @@
       "ml_move": 0.0147,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1049,23 +1049,23 @@
     "home_form": "WWLLW",
     "away_form": "WWWWL",
     "spread": -6.4,
-    "total": 39.8,
-    "model_total": 39.8,
-    "model_total_direct": 43.7,
+    "total": 40.3,
+    "model_total": 40.3,
+    "model_total_direct": 44.0,
     "stat_projection": {
       "pass_att": 72.1,
       "rush_att": 49.3,
-      "pass_yds": 417.5,
+      "pass_yds": 415.2,
       "rush_yds": 219.6,
-      "fg_att_40p": 1.8,
-      "fg_make_prob_40p": 0.642,
-      "fg_points": 6.7,
-      "total_from_components": 39.8,
+      "fg_att_40p": 1.86,
+      "fg_make_prob_40p": 0.719,
+      "fg_points": 7.3,
+      "total_from_components": 40.3,
       "stat_projection_source": "components",
-      "weather_delta_clamped": false,
-      "pass_ratio": 0.9876,
+      "weather_delta_clamped": true,
+      "pass_ratio": 0.9822,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.8998
+      "fg_ratio": 0.91
     },
     "gameday": "2026-12-06",
     "gametime": "13:00",
@@ -1074,15 +1074,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
-    "temp": 39.7,
-    "wind": 11.7,
-    "gust": 14.8,
+    "temp": 42.6,
+    "wind": 9.9,
+    "gust": 13.0,
     "precip": 6.0,
     "precip_mm": 0.0,
     "snow": 0.0,
-    "weather_code": 1.0,
-    "humidity": 64.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_code": 0.0,
+    "humidity": 59.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.317,
     "model_spread": -6.4,
     "market_home_prob": 0.3197,
@@ -1109,7 +1109,7 @@
       "ml_move": 0.0055,
       "total_move": -1.0,
       "spread_move": 0.5,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1176,7 +1176,7 @@
       "ml_move": 0.0093,
       "total_move": -0.5,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1194,21 +1194,21 @@
     "spread": -4.5,
     "total": 49.1,
     "model_total": 49.1,
-    "model_total_direct": 48.9,
+    "model_total_direct": 50.0,
     "stat_projection": {
       "pass_att": 68.6,
       "rush_att": 49.5,
-      "pass_yds": 517.7,
-      "rush_yds": 230.4,
+      "pass_yds": 516.5,
+      "rush_yds": 228.2,
       "fg_att_40p": 2.73,
-      "fg_make_prob_40p": 0.413,
-      "fg_points": 7.4,
+      "fg_make_prob_40p": 0.501,
+      "fg_points": 8.3,
       "total_from_components": 49.1,
       "stat_projection_source": "components",
       "weather_delta_clamped": true,
-      "pass_ratio": 0.9208,
+      "pass_ratio": 0.9187,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9433
+      "fg_ratio": 0.9389
     },
     "gameday": "2026-12-06",
     "gametime": "13:00",
@@ -1217,23 +1217,23 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 44.3,
-    "wind": 21.6,
-    "gust": 44.1,
+    "temp": 45.4,
+    "wind": 21.7,
+    "gust": 34.0,
     "precip": 11.0,
     "precip_mm": 0.0,
     "snow": 0.0,
     "weather_code": 1.0,
-    "humidity": 48.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "humidity": 49.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.369,
     "model_spread": -4.5,
-    "market_home_prob": 0.2782,
-    "market_total": 46.25,
-    "market_spread": 6.5,
-    "ml_move": 0.0041,
-    "total_move": -1.25,
-    "spread_move": 0.5,
+    "market_home_prob": null,
+    "market_total": null,
+    "market_spread": null,
+    "ml_move": null,
+    "total_move": null,
+    "spread_move": null,
     "market_adjustment": {
       "applied": false,
       "weights": {
@@ -1246,13 +1246,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.2782,
-      "market_total": 46.25,
-      "market_spread": 6.5,
-      "ml_move": 0.0041,
-      "total_move": -1.25,
-      "spread_move": 0.5,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "market_home_prob": null,
+      "market_total": null,
+      "market_spread": null,
+      "ml_move": null,
+      "total_move": null,
+      "spread_move": null,
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1268,23 +1268,23 @@
     "home_form": "LWWLL",
     "away_form": "LLLWL",
     "spread": 9.4,
-    "total": 43.3,
-    "model_total": 43.3,
-    "model_total_direct": 42.2,
+    "total": 43.7,
+    "model_total": 43.7,
+    "model_total_direct": 42.8,
     "stat_projection": {
       "pass_att": 66.2,
       "rush_att": 53.7,
-      "pass_yds": 453.1,
-      "rush_yds": 238.1,
-      "fg_att_40p": 2.08,
-      "fg_make_prob_40p": 0.837,
-      "fg_points": 11.3,
-      "total_from_components": 43.3,
+      "pass_yds": 439.7,
+      "rush_yds": 238.3,
+      "fg_att_40p": 2.09,
+      "fg_make_prob_40p": 0.87,
+      "fg_points": 11.6,
+      "total_from_components": 43.7,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9942,
-      "rush_ratio": 0.999,
-      "fg_ratio": 0.9584
+      "pass_ratio": 0.9647,
+      "rush_ratio": 0.9999,
+      "fg_ratio": 0.9601
     },
     "gameday": "2026-12-06",
     "gametime": "13:00",
@@ -1293,15 +1293,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 78.3,
-    "wind": 6.4,
-    "gust": 6.3,
+    "temp": 83.5,
+    "wind": 3.9,
+    "gust": 3.6,
     "precip": 9.0,
-    "precip_mm": 0.0,
+    "precip_mm": 0.1,
     "snow": 0.0,
-    "weather_code": 0.0,
-    "humidity": 46.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_code": 51.0,
+    "humidity": 61.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.759,
     "model_spread": 9.4,
     "market_home_prob": 0.6954,
@@ -1328,7 +1328,7 @@
       "ml_move": 0.0,
       "total_move": 0.0,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1346,21 +1346,21 @@
     "spread": -0.2,
     "total": 40.1,
     "model_total": 40.1,
-    "model_total_direct": 43.3,
+    "model_total_direct": 43.4,
     "stat_projection": {
       "pass_att": 69.6,
       "rush_att": 54.1,
-      "pass_yds": 415.7,
+      "pass_yds": 422.4,
       "rush_yds": 229.8,
-      "fg_att_40p": 2.92,
-      "fg_make_prob_40p": 0.76,
-      "fg_points": 11.9,
+      "fg_att_40p": 2.91,
+      "fg_make_prob_40p": 0.794,
+      "fg_points": 12.2,
       "total_from_components": 40.1,
       "stat_projection_source": "components",
       "weather_delta_clamped": true,
-      "pass_ratio": 0.9691,
+      "pass_ratio": 0.9849,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.957
+      "fg_ratio": 0.9555
     },
     "gameday": "2026-12-06",
     "gametime": "13:00",
@@ -1369,22 +1369,22 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 50.5,
-    "wind": 8.0,
-    "gust": 14.1,
+    "temp": 52.9,
+    "wind": 8.9,
+    "gust": 15.4,
     "precip": 8.0,
     "precip_mm": 0.0,
     "snow": 0.0,
-    "weather_code": 2.0,
-    "humidity": 49.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_code": 1.0,
+    "humidity": 51.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.493,
     "model_spread": -0.2,
     "market_home_prob": 0.3396,
-    "market_total": 46.5,
+    "market_total": 47.0,
     "market_spread": 4.5,
     "ml_move": 0.0081,
-    "total_move": 0.0,
+    "total_move": 0.5,
     "spread_move": 0.0,
     "market_adjustment": {
       "applied": false,
@@ -1399,12 +1399,12 @@
       "w_spread": 0.0,
       "w_prob": 0.0,
       "market_home_prob": 0.3396,
-      "market_total": 46.5,
+      "market_total": 47.0,
       "market_spread": 4.5,
       "ml_move": 0.0081,
-      "total_move": 0.0,
+      "total_move": 0.5,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1420,23 +1420,23 @@
     "home_form": "LWLLL",
     "away_form": "LLLWW",
     "spread": -5.8,
-    "total": 52.7,
-    "model_total": 52.7,
-    "model_total_direct": 41.8,
+    "total": 53.6,
+    "model_total": 53.6,
+    "model_total_direct": 43.6,
     "stat_projection": {
-      "pass_att": 69.3,
-      "rush_att": 54.7,
+      "pass_att": 70.1,
+      "rush_att": 54.0,
       "pass_yds": 436.6,
       "rush_yds": 265.8,
-      "fg_att_40p": 1.96,
-      "fg_make_prob_40p": 0.54,
-      "fg_points": 7.3,
-      "total_from_components": 52.7,
+      "fg_att_40p": 1.9,
+      "fg_make_prob_40p": 0.543,
+      "fg_points": 7.1,
+      "total_from_components": 53.6,
       "stat_projection_source": "components",
       "weather_delta_clamped": true,
       "pass_ratio": 0.915,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9293
+      "fg_ratio": 0.9138
     },
     "gameday": "2026-12-06",
     "gametime": "16:05",
@@ -1445,22 +1445,22 @@
     "roof": null,
     "surface": "grass",
     "div_game": 0,
-    "temp": 54.6,
-    "wind": 24.6,
-    "gust": 26.6,
+    "temp": 59.4,
+    "wind": 20.3,
+    "gust": 29.5,
     "precip": 22.0,
-    "precip_mm": 0.9,
+    "precip_mm": 0.2,
     "snow": 0.0,
-    "weather_code": 53.0,
-    "humidity": 75.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_code": 51.0,
+    "humidity": 36.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.32,
     "model_spread": -6.2,
     "market_home_prob": 0.3896,
-    "market_total": 37.5,
+    "market_total": 37.25,
     "market_spread": 3.5,
     "ml_move": -0.0236,
-    "total_move": 1.0,
+    "total_move": 0.75,
     "spread_move": 1.0,
     "market_adjustment": {
       "applied": true,
@@ -1475,12 +1475,12 @@
       "w_spread": 0.1667,
       "w_prob": 0.1667,
       "market_home_prob": 0.3896,
-      "market_total": 37.5,
+      "market_total": 37.25,
       "market_spread": 3.5,
       "ml_move": -0.0236,
-      "total_move": 1.0,
+      "total_move": 0.75,
       "spread_move": 1.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1496,23 +1496,23 @@
     "home_form": "WWWWL",
     "away_form": "WLLLL",
     "spread": 11.7,
-    "total": 43.0,
-    "model_total": 43.0,
-    "model_total_direct": 44.0,
+    "total": 42.9,
+    "model_total": 42.9,
+    "model_total_direct": 43.5,
     "stat_projection": {
       "pass_att": 67.3,
       "rush_att": 51.4,
-      "pass_yds": 457.9,
+      "pass_yds": 454.5,
       "rush_yds": 239.0,
-      "fg_att_40p": 2.59,
-      "fg_make_prob_40p": 0.832,
-      "fg_points": 11.7,
-      "total_from_components": 43.0,
+      "fg_att_40p": 2.58,
+      "fg_make_prob_40p": 0.766,
+      "fg_points": 11.1,
+      "total_from_components": 42.9,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 1.005,
-      "rush_ratio": 1.0007,
-      "fg_ratio": 0.9671
+      "pass_ratio": 0.9975,
+      "rush_ratio": 1.0006,
+      "fg_ratio": 0.9642
     },
     "gameday": "2026-12-06",
     "gametime": "16:05",
@@ -1521,15 +1521,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 53.9,
-    "wind": 4.9,
-    "gust": 8.9,
+    "temp": 51.0,
+    "wind": 7.3,
+    "gust": 9.8,
     "precip": 6.0,
     "precip_mm": 0.0,
     "snow": 0.0,
     "weather_code": 0.0,
-    "humidity": 26.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "humidity": 30.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.809,
     "model_spread": 11.7,
     "market_home_prob": null,
@@ -1556,7 +1556,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1623,7 +1623,7 @@
       "ml_move": -0.0074,
       "total_move": 0.25,
       "spread_move": -0.25,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1641,21 +1641,21 @@
     "spread": -11.2,
     "total": 43.0,
     "model_total": 43.0,
-    "model_total_direct": 41.7,
+    "model_total_direct": 40.4,
     "stat_projection": {
       "pass_att": 62.0,
-      "rush_att": 56.9,
+      "rush_att": 56.0,
       "pass_yds": 385.4,
-      "rush_yds": 249.8,
+      "rush_yds": 249.6,
       "fg_att_40p": 1.4,
-      "fg_make_prob_40p": 0.448,
-      "fg_points": 8.5,
+      "fg_make_prob_40p": 0.623,
+      "fg_points": 9.4,
       "total_from_components": 43.0,
       "stat_projection_source": "components",
       "weather_delta_clamped": true,
       "pass_ratio": 0.915,
-      "rush_ratio": 0.9998,
-      "fg_ratio": 0.9653
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.9569
     },
     "gameday": "2026-12-06",
     "gametime": "16:25",
@@ -1664,23 +1664,23 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 1,
-    "temp": 35.9,
-    "wind": 18.8,
-    "gust": 41.4,
+    "temp": 35.7,
+    "wind": 15.4,
+    "gust": 30.9,
     "precip": 14.0,
-    "precip_mm": 0.1,
+    "precip_mm": 0.0,
     "snow": 0.0,
-    "weather_code": 51.0,
-    "humidity": 74.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_code": 1.0,
+    "humidity": 76.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.202,
     "model_spread": -11.2,
-    "market_home_prob": 0.1458,
+    "market_home_prob": 0.1462,
     "market_total": 44.5,
-    "market_spread": 13.0,
-    "ml_move": 0.0053,
+    "market_spread": 13.5,
+    "ml_move": 0.0057,
     "total_move": 0.0,
-    "spread_move": -0.5,
+    "spread_move": 0.0,
     "market_adjustment": {
       "applied": false,
       "weights": {
@@ -1693,13 +1693,13 @@
       "w_total": 0.0,
       "w_spread": 0.0,
       "w_prob": 0.0,
-      "market_home_prob": 0.1458,
+      "market_home_prob": 0.1462,
       "market_total": 44.5,
-      "market_spread": 13.0,
-      "ml_move": 0.0053,
+      "market_spread": 13.5,
+      "ml_move": 0.0057,
       "total_move": 0.0,
-      "spread_move": -0.5,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "spread_move": 0.0,
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1715,23 +1715,23 @@
     "home_form": "WWLLW",
     "away_form": "WLWLW",
     "spread": -1.8,
-    "total": 45.0,
-    "model_total": 45.0,
+    "total": 45.1,
+    "model_total": 45.1,
     "model_total_direct": 41.7,
     "stat_projection": {
-      "pass_att": 77.2,
-      "rush_att": 48.7,
+      "pass_att": 77.9,
+      "rush_att": 48.9,
       "pass_yds": 516.9,
-      "rush_yds": 194.1,
+      "rush_yds": 194.2,
       "fg_att_40p": 2.16,
-      "fg_make_prob_40p": 0.713,
-      "fg_points": 11.3,
-      "total_from_components": 45.0,
+      "fg_make_prob_40p": 0.76,
+      "fg_points": 11.7,
+      "total_from_components": 45.1,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
       "pass_ratio": 1.0058,
-      "rush_ratio": 1.0008,
-      "fg_ratio": 0.916
+      "rush_ratio": 1.0015,
+      "fg_ratio": 0.9137
     },
     "gameday": "2026-12-06",
     "gametime": "20:20",
@@ -1740,15 +1740,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
-    "temp": 37.9,
-    "wind": 5.4,
-    "gust": 11.6,
+    "temp": 40.8,
+    "wind": 4.0,
+    "gust": 9.4,
     "precip": 7.0,
     "precip_mm": 0.0,
     "snow": 0.0,
-    "weather_code": 1.0,
-    "humidity": 57.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_code": 0.0,
+    "humidity": 58.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.447,
     "model_spread": -1.8,
     "market_home_prob": null,
@@ -1775,7 +1775,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1791,23 +1791,23 @@
     "home_form": "LWLWW",
     "away_form": "LWLWL",
     "spread": 3.2,
-    "total": 43.7,
-    "model_total": 43.7,
-    "model_total_direct": 40.4,
+    "total": 42.8,
+    "model_total": 42.8,
+    "model_total_direct": 40.2,
     "stat_projection": {
       "pass_att": 72.4,
       "rush_att": 50.1,
-      "pass_yds": 471.3,
+      "pass_yds": 477.7,
       "rush_yds": 208.8,
-      "fg_att_40p": 2.99,
-      "fg_make_prob_40p": 0.794,
+      "fg_att_40p": 3.01,
+      "fg_make_prob_40p": 0.788,
       "fg_points": 12.4,
-      "total_from_components": 43.7,
+      "total_from_components": 42.8,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9599,
-      "rush_ratio": 1.0,
-      "fg_ratio": 0.9533
+      "pass_ratio": 0.973,
+      "rush_ratio": 1.0004,
+      "fg_ratio": 0.9569
     },
     "gameday": "2026-12-07",
     "gametime": "20:15",
@@ -1816,15 +1816,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 42.6,
-    "wind": 3.6,
-    "gust": 7.2,
+    "temp": 40.8,
+    "wind": 2.8,
+    "gust": 2.2,
     "precip": 20.0,
     "precip_mm": 0.0,
     "snow": 0.0,
-    "weather_code": 3.0,
-    "humidity": 71.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_code": 2.0,
+    "humidity": 87.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.594,
     "model_spread": 3.2,
     "market_home_prob": 0.7143,
@@ -1851,7 +1851,7 @@
       "ml_move": 0.0242,
       "total_move": 0.5,
       "spread_move": 0.0,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1867,23 +1867,23 @@
     "home_form": "WLWLL",
     "away_form": "WLLWL",
     "spread": -0.2,
-    "total": 46.4,
-    "model_total": 46.4,
-    "model_total_direct": 32.6,
+    "total": 47.4,
+    "model_total": 47.4,
+    "model_total_direct": 37.6,
     "stat_projection": {
-      "pass_att": 69.1,
-      "rush_att": 53.1,
-      "pass_yds": 425.1,
-      "rush_yds": 218.6,
+      "pass_att": 69.5,
+      "rush_att": 53.2,
+      "pass_yds": 425.0,
+      "rush_yds": 219.0,
       "fg_att_40p": 3.0,
-      "fg_make_prob_40p": 0.681,
-      "fg_points": 11.9,
-      "total_from_components": 46.4,
+      "fg_make_prob_40p": 0.744,
+      "fg_points": 12.5,
+      "total_from_components": 47.4,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9715,
-      "rush_ratio": 0.999,
-      "fg_ratio": 0.9533
+      "pass_ratio": 0.9713,
+      "rush_ratio": 1.0007,
+      "fg_ratio": 0.9506
     },
     "gameday": "2026-12-10",
     "gametime": "20:15",
@@ -1892,15 +1892,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
-    "temp": 37.2,
-    "wind": 9.1,
-    "gust": 23.7,
+    "temp": 36.5,
+    "wind": 3.4,
+    "gust": 11.0,
     "precip": 16.0,
     "precip_mm": 0.0,
     "snow": 0.0,
-    "weather_code": 0.0,
-    "humidity": 76.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00",
+    "weather_code": 3.0,
+    "humidity": 84.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.494,
     "model_spread": -0.2,
     "market_home_prob": null,
@@ -1927,7 +1927,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -1943,23 +1943,23 @@
     "home_form": "LLLLL",
     "away_form": "LWWLL",
     "spread": -2.8,
-    "total": 45.0,
-    "model_total": 45.0,
-    "model_total_direct": 44.9,
+    "total": 43.8,
+    "model_total": 43.8,
+    "model_total_direct": 42.8,
     "stat_projection": {
-      "pass_att": 70.2,
-      "rush_att": 53.2,
-      "pass_yds": 424.0,
+      "pass_att": 69.3,
+      "rush_att": 53.3,
+      "pass_yds": 409.2,
       "rush_yds": 233.0,
-      "fg_att_40p": 2.35,
-      "fg_make_prob_40p": 0.76,
-      "fg_points": 12.6,
-      "total_from_components": 45.0,
+      "fg_att_40p": 2.16,
+      "fg_make_prob_40p": 0.744,
+      "fg_points": 12.0,
+      "total_from_components": 43.8,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9678,
+      "pass_ratio": 0.9339,
       "rush_ratio": 0.9999,
-      "fg_ratio": 0.9777
+      "fg_ratio": 0.9445
     },
     "gameday": "2026-12-13",
     "gametime": "13:00",
@@ -1968,6 +1968,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
+    "temp": 45.1,
+    "wind": 9.8,
+    "gust": 15.9,
+    "precip": 10.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 1.0,
+    "humidity": 37.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.417,
     "model_spread": -2.8,
     "market_home_prob": null,
@@ -1994,17 +2003,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 49.4,
-    "wind": 7.7,
-    "gust": 12.3,
-    "humidity": 46.0,
-    "precip": 10.0,
-    "precip_mm": 0.0,
-    "snow": 0.0,
-    "weather_code": 0.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_NO_CAR",
@@ -2019,23 +2019,23 @@
     "home_form": "LLLWW",
     "away_form": "WLWLL",
     "spread": 0.4,
-    "total": 46.2,
-    "model_total": 46.2,
-    "model_total_direct": 42.6,
+    "total": 46.5,
+    "model_total": 46.5,
+    "model_total_direct": 42.8,
     "stat_projection": {
-      "pass_att": 68.8,
+      "pass_att": 68.7,
       "rush_att": 54.1,
-      "pass_yds": 470.7,
+      "pass_yds": 464.7,
       "rush_yds": 258.7,
-      "fg_att_40p": 2.24,
-      "fg_make_prob_40p": 0.794,
-      "fg_points": 11.4,
-      "total_from_components": 46.2,
+      "fg_att_40p": 2.26,
+      "fg_make_prob_40p": 0.784,
+      "fg_points": 11.5,
+      "total_from_components": 46.5,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9863,
+      "pass_ratio": 0.9736,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9685
+      "fg_ratio": 0.9743
     },
     "gameday": "2026-12-13",
     "gametime": "13:00",
@@ -2044,6 +2044,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
+    "temp": 50.1,
+    "wind": 5.9,
+    "gust": 9.6,
+    "precip": 10.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 53.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.513,
     "model_spread": 0.4,
     "market_home_prob": null,
@@ -2070,17 +2079,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 53.1,
-    "wind": 10.0,
-    "gust": 15.2,
-    "humidity": 45.0,
-    "precip": 10.0,
-    "precip_mm": 0.0,
-    "snow": 0.0,
-    "weather_code": 0.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_ATL_CLE",
@@ -2095,23 +2095,23 @@
     "home_form": "WWLLW",
     "away_form": "LWLLL",
     "spread": 1.5,
-    "total": 36.3,
-    "model_total": 36.3,
-    "model_total_direct": 38.1,
+    "total": 36.1,
+    "model_total": 36.1,
+    "model_total_direct": 39.2,
     "stat_projection": {
-      "pass_att": 67.2,
+      "pass_att": 66.3,
       "rush_att": 54.5,
-      "pass_yds": 347.4,
+      "pass_yds": 346.6,
       "rush_yds": 287.2,
-      "fg_att_40p": 2.39,
-      "fg_make_prob_40p": 0.76,
-      "fg_points": 9.4,
-      "total_from_components": 36.3,
+      "fg_att_40p": 2.31,
+      "fg_make_prob_40p": 0.686,
+      "fg_points": 8.7,
+      "total_from_components": 36.1,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9895,
+      "pass_ratio": 0.9873,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.972
+      "fg_ratio": 0.9561
     },
     "gameday": "2026-12-13",
     "gametime": "13:00",
@@ -2120,6 +2120,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
+    "temp": 37.1,
+    "wind": 8.8,
+    "gust": 13.2,
+    "precip": 19.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 60.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.543,
     "model_spread": 1.5,
     "market_home_prob": null,
@@ -2146,17 +2155,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 45.2,
-    "wind": 7.2,
-    "gust": 11.4,
-    "humidity": 52.0,
-    "precip": 19.0,
-    "precip_mm": 0.0,
-    "snow": 0.0,
-    "weather_code": 2.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_TEN_DET",
@@ -2222,7 +2222,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -2238,23 +2238,23 @@
     "home_form": "WLLLL",
     "away_form": "WWWWW",
     "spread": -9.0,
-    "total": 40.7,
-    "model_total": 40.7,
-    "model_total_direct": 39.9,
+    "total": 41.0,
+    "model_total": 41.0,
+    "model_total_direct": 40.1,
     "stat_projection": {
       "pass_att": 62.9,
       "rush_att": 56.7,
-      "pass_yds": 376.0,
-      "rush_yds": 257.5,
-      "fg_att_40p": 1.71,
-      "fg_make_prob_40p": 0.803,
-      "fg_points": 10.0,
-      "total_from_components": 40.7,
+      "pass_yds": 383.8,
+      "rush_yds": 257.1,
+      "fg_att_40p": 1.74,
+      "fg_make_prob_40p": 0.798,
+      "fg_points": 9.9,
+      "total_from_components": 41.0,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9239,
-      "rush_ratio": 1.001,
-      "fg_ratio": 0.9612
+      "pass_ratio": 0.9431,
+      "rush_ratio": 0.9997,
+      "fg_ratio": 0.969
     },
     "gameday": "2026-12-13",
     "gametime": "13:00",
@@ -2263,6 +2263,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
+    "temp": 73.4,
+    "wind": 10.8,
+    "gust": 12.3,
+    "precip": 13.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 72.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.25,
     "model_spread": -9.0,
     "market_home_prob": null,
@@ -2289,17 +2298,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 77.8,
-    "wind": 11.1,
-    "gust": 14.3,
-    "humidity": 51.0,
-    "precip": 13.0,
-    "precip_mm": 0.0,
-    "snow": 0.0,
-    "weather_code": 1.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_DEN_NYJ",
@@ -2314,23 +2314,23 @@
     "home_form": "LLLLW",
     "away_form": "WWWWL",
     "spread": -4.4,
-    "total": 48.1,
-    "model_total": 48.1,
-    "model_total_direct": 49.4,
+    "total": 47.0,
+    "model_total": 47.0,
+    "model_total_direct": 46.2,
     "stat_projection": {
-      "pass_att": 70.9,
-      "rush_att": 50.3,
-      "pass_yds": 438.6,
+      "pass_att": 70.6,
+      "rush_att": 50.4,
+      "pass_yds": 409.3,
       "rush_yds": 222.6,
-      "fg_att_40p": 2.49,
-      "fg_make_prob_40p": 0.76,
-      "fg_points": 12.2,
-      "total_from_components": 48.1,
+      "fg_att_40p": 2.28,
+      "fg_make_prob_40p": 0.736,
+      "fg_points": 11.5,
+      "total_from_components": 47.0,
       "stat_projection_source": "components",
       "weather_delta_clamped": true,
-      "pass_ratio": 0.9919,
+      "pass_ratio": 0.9255,
       "rush_ratio": 0.999,
-      "fg_ratio": 0.9677
+      "fg_ratio": 0.9304
     },
     "gameday": "2026-12-13",
     "gametime": "13:00",
@@ -2339,6 +2339,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
+    "temp": 45.0,
+    "wind": 11.9,
+    "gust": 18.3,
+    "precip": 10.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 0.0,
+    "humidity": 40.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.371,
     "model_spread": -4.4,
     "market_home_prob": null,
@@ -2365,17 +2374,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 48.0,
-    "wind": 8.1,
-    "gust": 10.7,
-    "humidity": 42.0,
-    "precip": 10.0,
-    "precip_mm": 0.0,
-    "snow": 0.0,
-    "weather_code": 0.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_IND_PHI",
@@ -2390,23 +2390,23 @@
     "home_form": "LLLWW",
     "away_form": "LLLWL",
     "spread": 7.1,
-    "total": 42.4,
-    "model_total": 42.4,
-    "model_total_direct": 38.5,
+    "total": 40.1,
+    "model_total": 40.1,
+    "model_total_direct": 34.0,
     "stat_projection": {
-      "pass_att": 64.2,
-      "rush_att": 58.0,
-      "pass_yds": 364.4,
+      "pass_att": 63.5,
+      "rush_att": 58.2,
+      "pass_yds": 351.1,
       "rush_yds": 246.2,
-      "fg_att_40p": 2.62,
-      "fg_make_prob_40p": 0.746,
-      "fg_points": 11.8,
-      "total_from_components": 42.4,
+      "fg_att_40p": 2.15,
+      "fg_make_prob_40p": 0.709,
+      "fg_points": 10.5,
+      "total_from_components": 40.1,
       "stat_projection_source": "components",
-      "weather_delta_clamped": false,
-      "pass_ratio": 0.9499,
-      "rush_ratio": 0.9996,
-      "fg_ratio": 0.9731
+      "weather_delta_clamped": true,
+      "pass_ratio": 0.915,
+      "rush_ratio": 0.9995,
+      "fg_ratio": 0.8895
     },
     "gameday": "2026-12-13",
     "gametime": "13:00",
@@ -2415,6 +2415,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
+    "temp": 43.0,
+    "wind": 11.7,
+    "gust": 17.0,
+    "precip": 6.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 0.0,
+    "humidity": 42.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.703,
     "model_spread": 7.1,
     "market_home_prob": null,
@@ -2441,17 +2450,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 49.1,
-    "wind": 8.8,
-    "gust": 12.1,
-    "humidity": 42.0,
-    "precip": 6.0,
-    "precip_mm": 0.0,
-    "snow": 0.0,
-    "weather_code": 0.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_HOU_WAS",
@@ -2466,23 +2466,23 @@
     "home_form": "LWLWW",
     "away_form": "WLWLW",
     "spread": 0.3,
-    "total": 47.1,
-    "model_total": 47.1,
-    "model_total_direct": 43.4,
+    "total": 47.0,
+    "model_total": 47.0,
+    "model_total_direct": 43.7,
     "stat_projection": {
       "pass_att": 76.2,
       "rush_att": 51.5,
-      "pass_yds": 503.9,
+      "pass_yds": 499.7,
       "rush_yds": 239.7,
-      "fg_att_40p": 2.67,
-      "fg_make_prob_40p": 0.768,
-      "fg_points": 12.8,
-      "total_from_components": 47.1,
+      "fg_att_40p": 2.65,
+      "fg_make_prob_40p": 0.746,
+      "fg_points": 12.7,
+      "total_from_components": 47.0,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9849,
+      "pass_ratio": 0.9767,
       "rush_ratio": 0.9996,
-      "fg_ratio": 0.9732
+      "fg_ratio": 0.9698
     },
     "gameday": "2026-12-13",
     "gametime": "13:00",
@@ -2491,6 +2491,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 0,
+    "temp": 46.1,
+    "wind": 7.5,
+    "gust": 13.4,
+    "precip": 10.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 0.0,
+    "humidity": 34.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.508,
     "model_spread": 0.3,
     "market_home_prob": null,
@@ -2517,17 +2526,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 48.8,
-    "wind": 6.8,
-    "gust": 10.5,
-    "humidity": 47.0,
-    "precip": 10.0,
-    "precip_mm": 0.0,
-    "snow": 0.0,
-    "weather_code": 1.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_LAC_LV",
@@ -2593,7 +2593,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -2609,23 +2609,23 @@
     "home_form": "WWWWL",
     "away_form": "LWWWL",
     "spread": 1.0,
-    "total": 57.0,
-    "model_total": 57.0,
-    "model_total_direct": 50.6,
+    "total": 56.5,
+    "model_total": 56.5,
+    "model_total_direct": 50.2,
     "stat_projection": {
-      "pass_att": 73.2,
+      "pass_att": 72.6,
       "rush_att": 51.1,
-      "pass_yds": 529.1,
-      "rush_yds": 227.9,
-      "fg_att_40p": 2.51,
-      "fg_make_prob_40p": 0.751,
-      "fg_points": 11.4,
-      "total_from_components": 57.0,
+      "pass_yds": 525.6,
+      "rush_yds": 228.2,
+      "fg_att_40p": 2.27,
+      "fg_make_prob_40p": 0.718,
+      "fg_points": 10.6,
+      "total_from_components": 56.5,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 0.9418,
-      "rush_ratio": 0.9993,
-      "fg_ratio": 0.9728
+      "pass_ratio": 0.9357,
+      "rush_ratio": 1.0005,
+      "fg_ratio": 0.928
     },
     "gameday": "2026-12-13",
     "gametime": "16:25",
@@ -2634,6 +2634,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
+    "temp": 40.8,
+    "wind": 5.7,
+    "gust": 17.0,
+    "precip": 8.0,
+    "precip_mm": 0.0,
+    "snow": 0.0,
+    "weather_code": 3.0,
+    "humidity": 88.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.53,
     "model_spread": 1.0,
     "market_home_prob": null,
@@ -2660,17 +2669,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 48.6,
-    "wind": 6.3,
-    "gust": 15.2,
-    "humidity": 57.0,
-    "precip": 8.0,
-    "precip_mm": 0.0,
-    "snow": 0.0,
-    "weather_code": 3.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_NYG_SEA",
@@ -2685,23 +2685,23 @@
     "home_form": "LWLWW",
     "away_form": "LWWLW",
     "spread": 4.5,
-    "total": 39.0,
-    "model_total": 39.0,
-    "model_total_direct": 33.7,
+    "total": 37.0,
+    "model_total": 37.0,
+    "model_total_direct": 29.0,
     "stat_projection": {
-      "pass_att": 73.1,
-      "rush_att": 49.7,
-      "pass_yds": 438.6,
-      "rush_yds": 204.0,
-      "fg_att_40p": 2.41,
-      "fg_make_prob_40p": 0.674,
-      "fg_points": 10.3,
-      "total_from_components": 39.0,
+      "pass_att": 73.9,
+      "rush_att": 49.6,
+      "pass_yds": 414.4,
+      "rush_yds": 203.7,
+      "fg_att_40p": 2.2,
+      "fg_make_prob_40p": 0.7,
+      "fg_points": 10.0,
+      "total_from_components": 37.0,
       "stat_projection_source": "components",
-      "weather_delta_clamped": false,
-      "pass_ratio": 0.9683,
-      "rush_ratio": 1.0007,
-      "fg_ratio": 0.9683
+      "weather_delta_clamped": true,
+      "pass_ratio": 0.915,
+      "rush_ratio": 0.999,
+      "fg_ratio": 0.9258
     },
     "gameday": "2026-12-13",
     "gametime": "16:25",
@@ -2710,6 +2710,15 @@
     "roof": "outdoors",
     "surface": "fieldturf",
     "div_game": 0,
+    "temp": 40.8,
+    "wind": 11.0,
+    "gust": 27.3,
+    "precip": 33.0,
+    "precip_mm": 0.3,
+    "snow": 0.0,
+    "weather_code": 51.0,
+    "humidity": 90.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.632,
     "model_spread": 4.5,
     "market_home_prob": null,
@@ -2736,17 +2745,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 36.0,
-    "wind": 3.7,
-    "gust": 2.7,
-    "humidity": 81.0,
-    "precip": 33.0,
-    "precip_mm": 0.3,
-    "snow": 0.1,
-    "weather_code": 71.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_LA_SF",
@@ -2761,23 +2761,23 @@
     "home_form": "WLWWW",
     "away_form": "WWWWW",
     "spread": 3.6,
-    "total": 49.5,
-    "model_total": 49.5,
-    "model_total_direct": 47.2,
+    "total": 49.1,
+    "model_total": 49.1,
+    "model_total_direct": 44.4,
     "stat_projection": {
-      "pass_att": 70.5,
+      "pass_att": 70.1,
       "rush_att": 49.8,
-      "pass_yds": 489.8,
-      "rush_yds": 238.3,
-      "fg_att_40p": 1.62,
-      "fg_make_prob_40p": 0.883,
-      "fg_points": 8.2,
-      "total_from_components": 49.5,
+      "pass_yds": 446.3,
+      "rush_yds": 238.6,
+      "fg_att_40p": 1.51,
+      "fg_make_prob_40p": 0.754,
+      "fg_points": 7.3,
+      "total_from_components": 49.1,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
-      "pass_ratio": 1.0095,
-      "rush_ratio": 1.0,
-      "fg_ratio": 0.9923
+      "pass_ratio": 0.9199,
+      "rush_ratio": 1.0009,
+      "fg_ratio": 0.9594
     },
     "gameday": "2026-12-13",
     "gametime": "16:25",
@@ -2786,6 +2786,15 @@
     "roof": "outdoors",
     "surface": "grass",
     "div_game": 1,
+    "temp": 48.9,
+    "wind": 5.4,
+    "gust": 13.2,
+    "precip": 8.0,
+    "precip_mm": 0.5,
+    "snow": 0.0,
+    "weather_code": 53.0,
+    "humidity": 90.0,
+    "weather_fetched_at": "2026-11-28T12:03:56.092340+00:00",
     "model_home_win_prob": 0.607,
     "model_spread": 3.6,
     "market_home_prob": null,
@@ -2812,17 +2821,8 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
-    },
-    "temp": 53.5,
-    "wind": 2.1,
-    "gust": 1.8,
-    "humidity": 42.0,
-    "precip": 8.0,
-    "precip_mm": 0.0,
-    "snow": 0.0,
-    "weather_code": 1.0,
-    "weather_fetched_at": "2026-11-28T11:02:55.352208+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
+    }
   },
   {
     "game_id": "2026_14_BUF_GB",
@@ -2888,7 +2888,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -2955,7 +2955,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3022,7 +3022,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3089,7 +3089,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3156,7 +3156,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3223,7 +3223,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3290,7 +3290,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3357,7 +3357,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3380,7 +3380,7 @@
       "pass_att": 74.4,
       "rush_att": 54.3,
       "pass_yds": 488.1,
-      "rush_yds": 244.5,
+      "rush_yds": 242.3,
       "fg_att_40p": 2.62,
       "fg_make_prob_40p": 0.905,
       "fg_points": 13.7,
@@ -3424,7 +3424,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3491,7 +3491,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3558,7 +3558,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3625,7 +3625,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3641,8 +3641,8 @@
     "home_form": "LWLWW",
     "away_form": "LWLLL",
     "spread": 3.3,
-    "total": 46.0,
-    "model_total": 46.0,
+    "total": 46.1,
+    "model_total": 46.1,
     "model_total_direct": 44.9,
     "stat_projection": {
       "pass_att": 66.4,
@@ -3652,7 +3652,7 @@
       "fg_att_40p": 2.82,
       "fg_make_prob_40p": 0.905,
       "fg_points": 13.5,
-      "total_from_components": 46.0,
+      "total_from_components": 46.1,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
       "pass_ratio": 1.0,
@@ -3692,7 +3692,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3759,7 +3759,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3826,7 +3826,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3893,7 +3893,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -3960,7 +3960,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4027,7 +4027,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4094,7 +4094,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4161,7 +4161,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4228,7 +4228,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4295,7 +4295,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4362,7 +4362,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4429,7 +4429,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4496,7 +4496,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4563,7 +4563,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4630,7 +4630,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4697,7 +4697,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4764,7 +4764,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4831,7 +4831,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4898,7 +4898,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -4965,7 +4965,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5032,7 +5032,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5099,7 +5099,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5166,7 +5166,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5233,7 +5233,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5300,7 +5300,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5367,7 +5367,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5434,7 +5434,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5501,7 +5501,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5568,7 +5568,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5635,7 +5635,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5702,7 +5702,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5769,7 +5769,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5836,7 +5836,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5903,7 +5903,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -5970,7 +5970,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6037,7 +6037,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6104,7 +6104,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6171,7 +6171,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6238,7 +6238,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6305,7 +6305,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6372,7 +6372,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6439,7 +6439,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6506,7 +6506,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6573,7 +6573,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6640,7 +6640,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6707,7 +6707,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6774,7 +6774,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6841,7 +6841,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6908,7 +6908,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -6975,7 +6975,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -7042,7 +7042,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -7109,7 +7109,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -7132,7 +7132,7 @@
       "pass_att": 73.4,
       "rush_att": 54.5,
       "pass_yds": 515.8,
-      "rush_yds": 250.2,
+      "rush_yds": 247.1,
       "fg_att_40p": 2.46,
       "fg_make_prob_40p": 0.905,
       "fg_points": 11.2,
@@ -7176,7 +7176,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   },
   {
@@ -7192,8 +7192,8 @@
     "home_form": "LWLWW",
     "away_form": "LWLWL",
     "spread": -0.0,
-    "total": 50.1,
-    "model_total": 50.1,
+    "total": 50.2,
+    "model_total": 50.2,
     "model_total_direct": 49.4,
     "stat_projection": {
       "pass_att": 71.1,
@@ -7202,8 +7202,8 @@
       "rush_yds": 256.8,
       "fg_att_40p": 3.54,
       "fg_make_prob_40p": 0.905,
-      "fg_points": 15.4,
-      "total_from_components": 50.1,
+      "fg_points": 15.5,
+      "total_from_components": 50.2,
       "stat_projection_source": "components",
       "weather_delta_clamped": false,
       "pass_ratio": 1.0,
@@ -7243,7 +7243,7 @@
       "ml_move": null,
       "total_move": null,
       "spread_move": null,
-      "source_timestamp": "2026-11-27T22:33:56.341583+00:00"
+      "source_timestamp": "2026-11-28T12:03:18.071192+00:00"
     }
   }
 ]
